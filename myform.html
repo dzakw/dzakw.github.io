@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>052119940000029 - Iqbal Dzakwan Imaduddin</title> <!-- judul halaman -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- bootstrap CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  <!-- bootstrap CDN -->
+    <style>
+        .label { 
+            float: left;
+            width: 120px;
+            color:rgb(255, 255, 255)
+        }
+
+        .infobox {
+            width: 200px;
+        }
+
+        .error {
+            color: rgb(223, 5, 5);
+            padding-left: 10px;
+        }
+
+        .success {
+            color:rgb(12, 223, 5);
+            padding-left: 10px;
+        }
+
+        .submit {
+            margin-left: 125px;
+            margin-top: 10px;
+        }
+
+    </style> <!-- style yang digunakan pada tiap tiap item -->
+</head>
+
+<body style="background-color:#000090"> <!-- mengatur background color menggunakan hex -->
+<div class="container"> <!-- fixed-width container -->
+    <div class="jumbotron text-center jumbotron-fluid" style="background-color:rgb(83, 112, 238);"> <!-- membuat jumbotron dengan background color rgb -->
+        <h2>Tugas JQuery 4.2</h2>
+        <p>Iqbal Dzakwan Imaduddin - 05211940000029</p>
+    </div>
+    <div>
+        <form id="telp" method="post" action=""> <!-- membuat form dengan id "telp", method post, dan action blank-->
+            <div>
+                <span class="label">Masukkan No. Telepon </span>
+                <input type="text" class="infobox" name="no" /> <!-- membuat kotak input dengan nama "no" dan style yang sebelumnya dideskripsikan -->
+                <span class="error"> Hanya boleh angka</span> <!-- pesan error -->
+            </div>
+            <input class="submit btn btn-primary" type="submit" value="Submit"> <!-- button dengan fungsi dan style nya -->
+        </form>
+    </div>
+</div>
+    <script> //perintah memulai script
+        $(document).ready(function() { //menyatakan bahwa DOM telah dimuat
+            $('.error').hide(); //perintah menyembunyikan class "error"
+            $('.submit').click(function(event){ //mendefinisikan apa yang terjadi saat class submit diklik
+                var data=$('.infobox').val(); //membaca nilai dari input pada class "infobox" dan disimpan kedalam variabel "data"
+                var len=data.length; //mencari panjang dari variabel "data" dan menyimpan kedalam variabel "len"
+                var c=0; //inisiasi var "c" sebagai angka
+                var no=0; //inisiasi var "no" sebagai angka
+                var flag=0; //inisiasi var flag sebagai angka
+                for(var i=0;i<len;i++) { //mulai loop dimana i sebagai indikator karakter
+                    c=data.charAt(i).charCodeAt(0); //membaca karakter pada index ke i dalam urutan unicode dan hasilnya akan mengupdate nilai variabel "c", dimana i dimulai dari nol dan i increment
+                    if(c <48 || c >57){ //pada unicode, angka 0 sampai 9 adalah pada kode ke 48 sampai 57
+                        $('.error').show(); //perintah untuk menampilkan class "error"
+                        flag=1;
+                        event.preventDefault(); //mencegah data tersubmit apabila if statement diatas bernilai true
+                        break; //digunakan untuk keluar loop apabila if statement diatas bernilai true
+                    }
+                    else{
+                        $('.error').hide(); //apabila if statement diatas bernilai false, maka class error akan tetap dihide
+                    }
+                }
+                if(flag==0) {
+                    no=parseInt(data); //mengubah isi variabel "data" menjadi integer
+                    n=data.charCodeAt(0) //mengambil data terkait karakter pertama yang diinput
+                    m=data.charCodeAt(1) //mengambil data terkait karakter kedua yang diinput
+                        if(len<10 || len>12){ //memastikan panjang karakter yang dimasukkan antara 10 sampai 12 karakter
+                            $('.error').show();
+                            $('.error').text('Masukkan nomor telepon yang valid'); //text error yang akan ditampilkan
+                            event.preventDefault();
+                        }
+                        if(n!=48 && m!=56){ //mengecek 2 digit pertama input dan memastikan agar nilainya 08
+                            $('.error').show();
+                            $('.error').text('Masukkan nomor telepon yang valid');
+                            event.preventDefault();
+                        }
+                        else {
+                            alert("Nomor Telepon berhasil disimpan") //menampilkan kotak alert pada browser apabila if statement diatas tidak terpenuhi (nomor telpon yang dimasukkan sesuai format)
+                        }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
