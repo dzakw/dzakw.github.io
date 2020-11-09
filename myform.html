@@ -79,7 +79,7 @@
                             $('.error').text('Masukkan nomor telepon yang valid'); //text error yang akan ditampilkan
                             event.preventDefault();
                         }
-                        if(n!=48 && m!=56){ //mengecek 2 digit pertama input dan memastikan agar nilainya 08
+                        if(n!=48 || m!=56){ //mengecek 2 digit pertama input dan memastikan agar nilainya 08
                             $('.error').show();
                             $('.error').text('Masukkan nomor telepon yang valid');
                             event.preventDefault();
