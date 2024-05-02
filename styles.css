@@ -1,0 +1,32 @@
+/* This is how to use external CSS style */
+body {
+  background-color: gainsboro;
+  font-family: sans-serif;
+  margin-left: 100px;
+  margin-right: 100px;
+  color:#414141;
+}
+pre {
+  background-color: #171717;
+  padding: 10px;
+  color: honeydew;
+  text-align: left;
+  display: flex;
+  overflow-x: auto;
+  width: fit-content;
+}
+.roboto {
+  font-family: 'Roboto';
+}
+
+@media (max-width: 768px) {
+  body {
+      margin-left: 50px;
+      margin-right: 50px;}
+}
+
+@media (max-width: 480px) {
+  body {
+      margin-left: 20px;
+      margin-right: 20px;}
+}

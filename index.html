@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World</title> <!-- This is how to write comment in HTML -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Learn Frontend</title> <!-- This is how to write comment in HTML -->
+    <link rel="stylesheet" href="styles.css"> <!-- This is how to link external css file -->
+    <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
+    
+    <!-- This is how to use internal css style -->
+    <style>
+        h1 {
+            color:teal;
+            font-size: 300%;            
+        }
+        h3 {
+            color: #171717;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="font-family: sans-serif; font-size: 500%">This is heading h1</h1>
-    <h2 style="font-family: verdana"><i>This section</i> will use <b>inline CSS</b> to style the elements</h2>
-    <h3 style="text-align:center">This is heading h3</h3>
-    <h4 style="background-color: black; color: whitesmoke; text-align:center">This is heading h4</h4>
+    <a href=""><img src="/eternal tsingshan.png" alt="Eternal Tsingshan" width="100px" height="100px"></a>
+    <h1 style="font-family: sans-serif; font-size: 300%" >Frontend learning</h1> <!-- This is how to use inline css style -->
+    <h2 style="background-color: black; color: whitesmoke; text-align:center">Section 1: HTML</h2>
+    <h3>This is heading h3</h3>
+    <h4>This is heading h4</h4>
     <h5>This is heading h5</h5>
     <h6>This is heading h6</h6>
 
-    <div style="font-family: roboto;">
+    <div class="roboto">
         <h3>HTML Formatting</h3>
-        <p>
-            Inline styles have the <b>highest specificity</b>, <strong>overriding</strong> any other styles defined in <em>internal or external stylesheets</em>.
-            <i>&lt;i&gt;</i> tag is used when you want to <i>italicize</i> the text.<br>
-            <b>&lt;b&gt;</b> tag is used when you want to <b>bold</b> the text.<br>
-            <strong>&lt;strong&gt;</strong> tag is used when aside from making the text <strong>bold</strong>, you also want to <strong>emphasize</strong> it.<br>
-            <em>&lt;em&gt;</em> tag is used when you aside from making the text <em>italic</em>, you also want to <em>emphasize</em> it.<br>
-            <del>&lt;del&gt;</del> tag is used to <del>delete</del> the text, as if it was there but then it was removed, while the <s>&lt;s&gt;</s> tag is used to just <s>strike</s> the text.<br>
-            <ins>&lt;ins&gt;</ins> tag is used to <ins>insert</ins> the text, as if it was not there but then it was added, while the <u>&lt;u&gt;</u> tag is used to just <u>underline</u> the text.<br>
-            <mark>&lt;mark&gt;</mark> tag is used to <mark>highlight</mark> the text.<br>
-        </p>
+        <ul>
+            <li>Inline styles have the <b>highest specificity</b>, <strong>overriding</strong> any other styles defined in <em>internal or external stylesheets</em>.</li>
+            <li><i>&lt;i&gt;</i> tag is used when you want to <i>italicize</i> the text.</li>
+            <li><b>&lt;b&gt;</b> tag is used when you want to <b>bold</b> the text.</li>
+            <li><strong>&lt;strong&gt;</strong> tag is used when aside from making the text <strong>bold</strong>, you also want to <strong>emphasize</strong> it.</li>
+            <li><em>&lt;em&gt;</em> tag is used when you aside from making the text <em>italic</em>, you also want to <em>emphasize</em> it.</li>
+            <li><del>&lt;del&gt;</del> tag is used to <del>delete</del> the text, as if it was there but then it was removed, while the <s>&lt;s&gt;</s> tag is used to just <s>strike</s> the text.</li>
+            <li><ins>&lt;ins&gt;</ins> tag is used to <ins>insert</ins> the text, as if it was not there but then it was added, while the <u>&lt;u&gt;</u> tag is used to just <u>underline</u> the text.</li>
+            <li><mark>&lt;mark&gt;</mark> tag is used to <mark>highlight</mark> the text.</li>
+        </ul>
         <hr>
-        <p>
-            &lt;q&gt; tag is used to make a short <q>quote</q> (usually browser will use the quotation mark ").<br>
-            &lt;blockquote&gt; tag is used to quote paragraph from other source. <blockquote>usually shown inside of a blockquote (which will be indented)</blockquote>
-            <abbr title="abbreviation">&lt;abbr&gt;</abbr> tag is used to make the text <abbr title="abbreviated">abbr</abbr>.<br>
-            &amp;lt; is used to display the <strong>less than (&lt;)</strong> sign.<br>
-            &amp;gt; is used to display the <strong>greater than (&gt;)</strong> sign.<br>
-            &amp;amp; is used to display the <strong>ampersand (&amp;)</strong> sign.<br>
-            &amp;nbsp; is used to display a <strong>non-breaking space </strong>(like when you type people's name that contain space, it wont break into new line).<br>
-        </p>
+                
+        <ul>
+            <li>&lt;q&gt; tag is used to make a short <q>quote</q> (usually browser will use the quotation mark ").</li>
+            <li>&lt;blockquote&gt; tag is used to quote paragraph from other source. <blockquote>usually shown inside of a blockquote (which will be indented)</blockquote></li>
+            <li><abbr title="abbreviation">&lt;abbr&gt;</abbr> tag is used to make the text <abbr title="abbreviated">abbr</abbr>.</li>
+            <li>&amp;lt; is used to display the <strong>less than (&lt;)</strong> sign.</li>
+            <li>&amp;gt; is used to display the <strong>greater than (&gt;)</strong> sign.</li>
+            <li>&amp;amp; is used to display the <strong>ampersand (&amp;)</strong> sign.</li>
+            <li>&amp;nbsp; is used to display a <strong>non-breaking space </strong>(like when you type people's name that contain space, it wont break into new line).</li>
+        </ul>
+
         <hr>
-        <p>
-            <small>This is a small text</small>.<br>
-            however, the <big>&lt;big&gt;</big> tag is <big>strongly discouraged</big> to be used in HTML5, use css styling instead.<br>
-            <sub>&lt;sub&gt;</sub> tag is used to make the text <sub>subscript</sub>.<br>
-            <sup>&lt;sup&gt;</sup> tag is used to make the text <sup>superscript</sup>.<br>
-        </p>
+        
+        <ul>
+            <li><small>This is a small text</small>.</li>
+            <li>However, the <big>&lt;big&gt;</big> tag is <big>strongly discouraged</big> to be used in HTML5, use CSS styling instead.</li>
+            <li><sub>&lt;sub&gt;</sub> tag is used to make the text <sub>subscript</sub>.</li>
+            <li><sup>&lt;sup&gt;</sup> tag is used to make the text <sup>superscript</sup>.</li>
+        </ul>
+        
         <hr>
-        <p>
-            &lt;address&gt; tag is used to define the contact information of the author/owner of a document or an article like this:<br>
+        <ul>
+            <li>&lt;address&gt; tag is used to define the contact information of the author/owner of a document or an article like this:<br>
             <blockquote>
                 <address>
                     Written by John Doe.<br>
@@ -52,34 +69,83 @@
                     Box 564, Disneyland<br>
                     USA
                 </address>
-            </blockquote>
-        </p>
+            </blockquote></li>
+        </ul>
         <hr>
-        <p>
-            &lt;cite&gt; tag is used to define the title of a work, usually written in italic<br>
-            Example: <cite>Harry Potter and the Deathly Hallows</cite> by J.K. Rowling<br>
-            &lt;bdo&gt; tag is used to override the current text direction, the <q>dir</q> attribute can be filled with <u>rtl</u> for right to left, or <u>ltr</u> for left to right<br>
-            Example: <bdo dir="rtl">This text will be written from right to left</bdo><br>
-
-        </p>
+        <ul>
+            <li>&lt;cite&gt; tag is used to define the title of a work, usually written in italic<br>
+            Example: <cite>Harry Potter and the Deathly Hallows</cite> by J.K. Rowling<br></li>
+            <li>&lt;bdo&gt; tag is used to override the current text direction, the <q>dir</q> attribute can be filled with <u>rtl</u> for right to left, or <u>ltr</u> for left to right<br>
+            Example: <bdo dir="rtl">This text will be written from right to left</bdo><br></li>
+        </ul>
         <hr>
 
         <h3>HTML Color</h3>
-        <p>
-            In HTML, a color can be specified using a color name, an RGB value, or a HEX value.<br>
-            It is possible to modify <span style="background-color: tomato;">background color</span>, <span style="color: blue;">text color</span>, and <span style="border: 2px solid violet;">border color</span>.<br>
-            This is how to use <span style="color: #ff0000;">HEX value</span> or <span style="color: rgb(255, 0, 0);">RGB value</span> to specify the color.<br>
-            HSL value can also be used to specify the color, such as <span style="color: hsla(261, 90%, 53%, 0.692);">HSL value</span>.<br>
-        </p>
+        <ul>
+            <li>In HTML, a color can be specified using a color name, an RGB value, or a HEX value.</li>
+            <li>There are 140 color names that can be used to specify the color, such as <span style="color: darkorange;">darkorange</span> or <span style="color: darkslategray;">darkslategray</span>.</li>
+            <li><b><a href="https://www.w3schools.com/colors/colors_names.asp">The complete list can be accessed here</a></b>.</li>
+            <li>It is possible to modify <span style="background-color: tomato;">background color</span>, <span style="color: blue;">text color</span>, and <span style="border: 2px solid violet;">border color</span>.</li>
+            <li>This is how to use <span style="color: #ff0000;">HEX value</span> or <span style="color: rgb(255, 0, 0);">RGB value</span> to specify the color.</li>
+            <li>HSL value can also be used to specify the color, such as <span style="color: hsla(261, 90%, 53%, 0.692);">HSL value</span>.</li>
+        </ul>
         <hr>
     </div>
 
-    <div style="font-family: roboto;">
+    <div class="roboto">
         <h3>HTML Links</h3>
-        <p>
-            <a href="https://dzakw.github.io/">This is link</a><br>
-        </p>
-        <img src="/eternal tsingshan.png" alt="Eternal Tsingshan" width="250" height="250px">
+        <ul>
+            <li>&lt;a&gt; tag is used to create a hyperlink, the <q>href</q> attribute is used to specify the URL of the page the link goes to.</li>
+            <li>Like in this example: <a href="https://github.com/dzakw" target="_blank">Visit our HTML tutorial</a></li>
+            <li>Notes: the <q>target</q> attribute is used to specify where to open the link,</li>
+            <li>The value <q>_blank</q> <a href="" target="_blank">will open the link in a new tab.</a></li>
+            <li>The value <q>_self</q> <a href="" target="_self">will open the link in the same frame as it was clicked (default behavior).</a></li>
+            <li>Other value of target (like <q>_parent</q> or <q>_top</q>) can be used to open the link in different frame or window, which are quite obsolete in the modern websites</li>
+            <li>Images and icon can also be used as a link, like this:</li>
+            <a href="https://github.com/dzakw" target="_blank">
+                <i class="fa-brands fa-github" style="color: #28433a; font-size:100px"></i> <!--Fontawesome icon are treated like text, so the way to manipulate them are similar to manipulating text-->
+            </a>
+            the syntax are as follows:<br>
+<pre>
+    <div class="code-wrapper"><code>&lt;a href="https:github.com/dzakw" target="_blank"&gt; &lt;i class="fa-brands fa-github" style="color: #28433a; font-size:100px"&gt;&lt;/i&gt;&lt;/a&gt;</code></div>
+</pre>
+            <li>links can be absolute URLs and relative URLs</li>
+                        <li>Absolute URLs are URLs that include the full URL of the page, like <a href="https://github.com/dzakw" target="_blank">this is link</a><br>
+                        the syntax are as follows:<br></li>
+            <pre>
+                <div class="code-wrapper"><code>&lt;a href="https://github.com/dzakw"&gt;this is link&lt;/a&gt;</code></div>
+            </pre>
+                        <li>Relative URLs are URLs that only include the path to the page, like <a href="page1.html" target="_blank">this is link</a><br>
+                        the syntax are as follows:<br></li>
+            <pre>
+                <div class="code-wrapper"><code>&lt;a href="page1.html"&gt;this is link&lt;/a&gt;</code></div>
+            </pre>
+                        <li>A link can also styled as a button like this one:</li><br>
+                        <a href="page1.html" target="_blank" style="background-color: teal; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Button to Page1</a>
+                    </ul>
+                    <hr>
+                </div>
+
+
+    <h2 style="background-color: black; color: whitesmoke; text-align:center">Section 2: CSS</h2>
+    <div style="font-family:roboto">
+        <h3>CSS Syntax</h3>
+        <ul>
+            <li>As mentioned before, CSS can be used in 3 ways: inline, internal, and external.<br>
+            The syntax of CSS is as follows:<br></li>
+<pre>
+<div class="code-wrapper"><code>selector {
+    property1: value1;
+    property2: value2;
+    propertyN: valueN;
+    }</code>
+</div>
+</pre>
+        <li>to link to external CSS file, use the &lt;link&gt; tag in the &lt;head&gt; section of the HTML file, like this:<br>
+<pre>
+<div class="code-wrapper"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></div>
+</pre></li>
+        </ul>
         <hr>
     </div>
 </body>
