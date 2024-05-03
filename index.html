@@ -3,6 +3,7 @@
 <head>
     <title>Learn Frontend</title> <!-- This is how to write comment in HTML -->
     <link rel="stylesheet" href="css\styles.css"> <!-- This is how to link external css file -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAuwAAAAAAAADdAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERARERERERERAgERERERERAjIBERERERAjIyARERERAjICMgERERAjIBAjIBERECIBEQIyAREQABERECMgERERERERAjIBEREREREQIyARERERERECMgERERERERAiAREREREREQABERERERERERERERERERERH//wAA+/8AAPH/AADg/wAAwH8AAIA/AAAEHwAADg8AAB8HAAD/gwAA/8EAAP/gAAD/8AAA//gAAP//AAD//wAA" rel="icon" type="image/x-icon"> <!-- This is how to add favicon -->
     <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
     
     <!-- This is how to use internal css style -->
@@ -11,142 +12,634 @@
             color:teal;
             font-size: 300%;            
         }
-        h3 {
-            color: #171717;
-        }
     </style>
 </head>
+
 <body>
-    <a href=""><img src="/eternal tsingshan.png" alt="Eternal Tsingshan" width="100px" height="100px"></a>
+    <a href=""><img src="media/eternal tsingshan.png" alt="Eternal Tsingshan" style="width: 100px; height: 100px;"></a>
     <h1 style="font-family: sans-serif; font-size: 300%" >Frontend learning</h1> <!-- This is how to use inline css style -->
-    <h2 style="background-color: black; color: whitesmoke; text-align:center">Section 1: HTML</h2>
-    <h3>This is heading h3</h3>
-    <h4>This is heading h4</h4>
-    <h5>This is heading h5</h5>
-    <h6>This is heading h6</h6>
+    <hr>
+    <h3>List of Content:</h3>
+    <ul class="content-list" style="list-style-type: none">
+        <li><a href="#section1" onclick="openSection('section1')">Section 1: HTML</a></li>
+        <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
+    </ul>
+    <hr>
 
-    <div class="roboto">
-        <h3>HTML Formatting</h3>
-        <ul>
-            <li>Inline styles have the <b>highest specificity</b>, <strong>overriding</strong> any other styles defined in <em>internal or external stylesheets</em>.</li>
-            <li><i>&lt;i&gt;</i> tag is used when you want to <i>italicize</i> the text.</li>
-            <li><b>&lt;b&gt;</b> tag is used when you want to <b>bold</b> the text.</li>
-            <li><strong>&lt;strong&gt;</strong> tag is used when aside from making the text <strong>bold</strong>, you also want to <strong>emphasize</strong> it.</li>
-            <li><em>&lt;em&gt;</em> tag is used when you aside from making the text <em>italic</em>, you also want to <em>emphasize</em> it.</li>
-            <li><del>&lt;del&gt;</del> tag is used to <del>delete</del> the text, as if it was there but then it was removed, while the <s>&lt;s&gt;</s> tag is used to just <s>strike</s> the text.</li>
-            <li><ins>&lt;ins&gt;</ins> tag is used to <ins>insert</ins> the text, as if it was not there but then it was added, while the <u>&lt;u&gt;</u> tag is used to just <u>underline</u> the text.</li>
-            <li><mark>&lt;mark&gt;</mark> tag is used to <mark>highlight</mark> the text.</li>
-        </ul>
-        <hr>
-                
-        <ul>
-            <li>&lt;q&gt; tag is used to make a short <q>quote</q> (usually browser will use the quotation mark ").</li>
-            <li>&lt;blockquote&gt; tag is used to quote paragraph from other source. <blockquote>usually shown inside of a blockquote (which will be indented)</blockquote></li>
-            <li><abbr title="abbreviation">&lt;abbr&gt;</abbr> tag is used to make the text <abbr title="abbreviated">abbr</abbr>.</li>
-            <li>&amp;lt; is used to display the <strong>less than (&lt;)</strong> sign.</li>
-            <li>&amp;gt; is used to display the <strong>greater than (&gt;)</strong> sign.</li>
-            <li>&amp;amp; is used to display the <strong>ampersand (&amp;)</strong> sign.</li>
-            <li>&amp;nbsp; is used to display a <strong>non-breaking space </strong>(like when you type people's name that contain space, it wont break into new line).</li>
-        </ul>
+    <h2 class="section" id="section1" onclick="toggleSection('section1')">Section 1: HTML</h2>
+    <div id="section1Content" style="display: none;">
+        <h3>This is heading h3</h3>
+        <h4>This is heading h4</h4>
+        <h5>This is heading h5</h5>
+        <h6>This is heading h6</h6>
 
-        <hr>
-        
-        <ul>
-            <li><small>This is a small text</small>.</li>
-            <li>However, the <big>&lt;big&gt;</big> tag is <big>strongly discouraged</big> to be used in HTML5, use CSS styling instead.</li>
-            <li><sub>&lt;sub&gt;</sub> tag is used to make the text <sub>subscript</sub>.</li>
-            <li><sup>&lt;sup&gt;</sup> tag is used to make the text <sup>superscript</sup>.</li>
-        </ul>
-        
-        <hr>
-        <ul>
-            <li>&lt;address&gt; tag is used to define the contact information of the author/owner of a document or an article like this:<br>
-            <blockquote>
-                <address>
-                    Written by John Doe.<br>
-                    Visit us at:<br>
-                    Example.com<br>
-                    Box 564, Disneyland<br>
-                    USA
-                </address>
-            </blockquote></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>&lt;cite&gt; tag is used to define the title of a work, usually written in italic<br>
-            Example: <cite>Harry Potter and the Deathly Hallows</cite> by J.K. Rowling<br></li>
-            <li>&lt;bdo&gt; tag is used to override the current text direction, the <q>dir</q> attribute can be filled with <u>rtl</u> for right to left, or <u>ltr</u> for left to right<br>
-            Example: <bdo dir="rtl">This text will be written from right to left</bdo><br></li>
-        </ul>
+        <div class="roboto">
+            <h3>HTML Formatting</h3>
+            <ul>
+                <li>Inline styles have the <b>highest specificity</b>, <strong>overriding</strong> any other styles defined in <em>internal or external stylesheets</em>.</li>
+                <li><i>&lt;i&gt;</i> tag is used when you want to <i>italicize</i> the text.</li>
+                <li><b>&lt;b&gt;</b> tag is used when you want to <b>bold</b> the text.</li>
+                <li><strong>&lt;strong&gt;</strong> tag is used when aside from making the text <strong>bold</strong>, you also want to <strong>emphasize</strong> it.</li>
+                <li><em>&lt;em&gt;</em> tag is used when you aside from making the text <em>italic</em>, you also want to <em>emphasize</em> it.</li>
+                <li><del>&lt;del&gt;</del> tag is used to <del>delete</del> the text, as if it was there but then it was removed, while the <s>&lt;s&gt;</s> tag is used to just <s>strike</s> the text.</li>
+                <li><ins>&lt;ins&gt;</ins> tag is used to <ins>insert</ins> the text, as if it was not there but then it was added, while the <u>&lt;u&gt;</u> tag is used to just <u>underline</u> the text.</li>
+                <li><mark>&lt;mark&gt;</mark> tag is used to <mark>highlight</mark> the text.</li>
+            </ul>
+            <hr>
+                    
+            <ul>
+                <li>&lt;q&gt; tag is used to make a short <q>quote</q> (usually browser will use the quotation mark ").</li>
+                <li>&lt;blockquote&gt; tag is used to quote paragraph from other source. <blockquote>usually shown inside of a blockquote (which will be indented)</blockquote></li>
+                <li><abbr title="abbreviation">&lt;abbr&gt;</abbr> tag is used to make the text <abbr title="abbreviated">abbr</abbr>.</li>
+                <li>&amp;lt; is used to display the <strong>less than (&lt;)</strong> sign.</li>
+                <li>&amp;gt; is used to display the <strong>greater than (&gt;)</strong> sign.</li>
+                <li>&amp;amp; is used to display the <strong>ampersand (&amp;)</strong> sign.</li>
+                <li>&amp;nbsp; is used to display a <strong>non-breaking space </strong>(like when you type people's name that contain space, it wont break into new line).</li>
+            </ul>
+
+            <hr>
+            
+            <ul>
+                <li><small>This is a small text</small>.</li>
+                <li>However, the <big>&lt;big&gt;</big> tag is <big>strongly discouraged</big> to be used in HTML5, use CSS styling instead.</li>
+                <li><sub>&lt;sub&gt;</sub> tag is used to make the text <sub>subscript</sub>.</li>
+                <li><sup>&lt;sup&gt;</sup> tag is used to make the text <sup>superscript</sup>.</li>
+            </ul>
+            
+            <hr>
+            <ul>
+                <li>&lt;address&gt; tag is used to define the contact information of the author/owner of a document or an article like this:<br>
+                <blockquote>
+                    <address>
+                        Written by John Doe.<br>
+                        Visit us at:<br>
+                        Example.com<br>
+                        Box 564, Disneyland<br>
+                        USA
+                    </address>
+                </blockquote></li>
+            </ul>
+            <hr>
+            <ul>
+                <li>&lt;cite&gt; tag is used to define the title of a work, usually written in italic<br>
+                Example: <cite>Harry Potter and the Deathly Hallows</cite> by J.K. Rowling<br></li>
+                <li>&lt;bdo&gt; tag is used to override the current text direction, the <q>dir</q> attribute can be filled with <u>rtl</u> for right to left, or <u>ltr</u> for left to right<br>
+                Example: <bdo dir="rtl">This text will be written from right to left</bdo><br></li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="roboto">
+            <h3>HTML Color</h3>
+            <ul>
+                <li>In HTML, a color can be specified using a color name, an RGB value, or a HEX value.</li>
+                <li>There are 140 color names that can be used to specify the color, such as <span style="color: darkorange;">darkorange</span> or <span style="color: darkslategray;">darkslategray</span>.</li>
+                <li><b><a href="https://www.w3schools.com/colors/colors_names.asp">The complete list can be accessed here</a></b>.</li>
+                <li>It is possible to modify <span style="background-color: tomato;">background color</span>, <span style="color: blue;">text color</span>, and <span style="border: 2px solid violet;">border color</span>.</li>
+                <li>This is how to use <span style="color: #ff0000;">HEX value</span> or <span style="color: rgb(255, 0, 0);">RGB value</span> to specify the color.</li>
+                <li>HSL value can also be used to specify the color, such as <span style="color: hsla(261, 90%, 53%, 0.692);">HSL value</span>.</li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="roboto">
+            <h3>HTML Links</h3>
+            <ul>
+                <li>&lt;a&gt; tag is used to create a hyperlink, the <q>href</q> attribute is used to specify the URL of the page the link goes to.</li>
+                <li>Like in this example: <a href="https://github.com/dzakw" target="_blank">Visit our HTML tutorial</a></li>
+                <li>Notes: the <q>target</q> attribute is used to specify where to open the link,</li>
+                <li>The value <q>_blank</q> <a href="" target="_blank">will open the link in a new tab.</a></li>
+                <li>The value <q>_self</q> <a href="" target="_self">will open the link in the same frame as it was clicked (default behavior).</a></li>
+                <li>Other value of target (like <q>_parent</q> or <q>_top</q>) can be used to open the link in different frame or window, which are quite obsolete in the modern websites</li>
+                <li>Images and icon can also be used as a link, like this:</li>
+                <a href="https://github.com/dzakw" target="_blank">
+                    <i class="fa-brands fa-github" style="color: #28433a; font-size:100px"></i> <!--Fontawesome icon are treated like text, so the way to manipulate them are similar to manipulating text-->
+                </a><br>
+                the syntax are as follows:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;a href="https:github.com/dzakw" target="_blank"&gt; &lt;i class="fa-brands fa-github" style="color: #28433a; font-size:100px"&gt;&lt;/i&gt;&lt;/a&gt;</code></div>
+                </pre>
+                <li>links can be absolute URLs and relative URLs</li>
+                <li>Absolute URLs are URLs that include the full URL of the page, like <a href="https://github.com/dzakw" target="_blank">this is link</a><br>
+                the syntax are as follows:<br></li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;a href="https://github.com/dzakw"&gt;this is link&lt;/a&gt;</code></div>
+                </pre>
+                <li>Relative URLs are URLs that only include the path to the page, like <a href="page1.html" target="_blank">this is link</a><br>
+                the syntax are as follows:<br></li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;a href="page1.html"&gt;this is link&lt;/a&gt;</code></div>
+                </pre>
+                <li>A link can also styled as a button like this one:</li><br>
+                <a href="page1.html" target="_blank" style="background-color: teal; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Button to Page1</a>
+                </ul>
+                <hr>
+        </div>
+
+        <div class="roboto">
+            <h3>HTML Images</h3>
+            <ul>
+                <li>&lt;img&gt; tag is used to add an image into HTML page, the <q>src</q> attribute is used to specify the path to the image.</li>
+                <li>The <q>width</q> and <q>height</q> attributes are used to specify the width and height of an image.</li>
+                <li>Like in this example:<br> <img src="media/eternal tsingshan.png" alt="Eternal Tsingshan" style="width: 100px; height: 100px;"></li>
+                The code for above image are as follows:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;img src="media/eternal tsingshan.png" alt="Eternal Tsingshan" width="100px" height="100px"&gt;</code></div>
+                </pre>
+                <li>The <q>alt</q> attribute is used to specify an alternate text for an image, if the image cannot be displayed like in example below:</li>
+                <img src="media/eternal.png" alt="Eternal Tsingshan"><br>
+                <li>Images can also be used as a link, like this:</li>
+                <a href="page1.html" target="_blank">
+                    <img src="media/cc63dfd72735a912e64ec9279fb18ba23c06a21d-1177x589.webp" alt="Frieren" style="width: 200px; height: auto;">
+                </a><br>
+                <hr>
+                <li>With HTML image maps, certain parts or area of the image can be clicked</li>
+                <li>Image maps are defined with the &lt;map&gt; tag, and the shape of the clickable area is defined with the &lt;area&gt; tag</li>
+                <li>Example of image maps are as follows:</li>
+                <button id="mapIndo" onclick="toggleSection('mapIndo')" style="cursor: pointer;">Show/Hide Image Map</button>
+                <div id="mapIndoContent" style="display: none;">
+                <img src="media/id.svg" alt="Indonesia Map" usemap="#id-map"> <!--style="width: 1500px; height: auto;"-->
+                <map name="id-map">
+                    <area target="_blank" alt="Sumatra" title="Sumatra" href="https://en.wikipedia.org/wiki/Sumatra" coords="57,42,77,61,84,64,95,76,99,87,116,99,126,126,139,134,155,160,160,180,188,214,225,241,236,253,235,244,244,248,248,241,257,249,261,219,259,205,263,197,255,182,237,176,231,156,212,149,218,132,211,116,194,103,159,87,144,80,137,69,113,53,106,39,92,29,70,29,55,19,48,28" shape="poly">
+                    <area target="_blank" alt="Java" title="Java" href="https://en.wikipedia.org/wiki/Java" coords="248,266,261,271,272,273,267,281,311,289,326,286,343,293,369,301,390,298,406,299,434,311,428,301,429,287,415,281,409,288,399,283,392,275,380,267,368,266,358,260,348,273,317,268,306,257,284,251,263,251" shape="poly">
+                    <area target="_blank" alt="Kalimantan" title="Kalimantan" href="https://en.wikipedia.org/wiki/Kalimantan" coords="332,94,319,118,322,134,332,149,343,161,341,172,345,192,358,193,376,200,419,203,442,214,475,214,471,192,479,163,493,143,498,118,519,117,497,92,505,84,493,74,490,67,502,61,496,49,470,42,455,46,443,79,431,100,411,107,386,101,379,111,354,113,338,107" shape="poly">
+                    <area target="_blank" alt="Sulawesi" title="Sulawesi" href="https://en.wikipedia.org/wiki/Sulawesi" coords="642,98,621,114,598,116,572,111,555,107,549,115,538,125,532,149,525,169,514,189,516,202,528,204,531,217,527,242,534,246,546,246,549,228,549,208,544,190,558,189,556,205,567,215,570,226,576,243,589,246,597,245,606,240,605,223,602,211,591,205,587,198,589,189,580,186,567,172,585,168,595,156,610,154,607,142,593,145,579,147,565,151,555,158,548,151,541,137,546,127,558,127,576,128,602,127,622,127,634,121,640,111" shape="poly">
+                    <area target="_blank" alt="Bali" title="Bali" href="https://id.wikipedia.org/wiki/Bali" coords="429,298,437,300,442,305,445,309,451,305,457,297,451,292,441,292" shape="poly">
+                    <area target="_blank" alt="Madura" title="Madura" href="https://en.wikipedia.org/wiki/Madura_Island" coords="396,275,408,277,420,275,422,268,408,268,398,268" shape="poly">
+                    <area target="_blank" alt="Papua" title="Papua" href="https://en.wikipedia.org/wiki/New_Guinea" coords="756,131,743,137,748,159,764,169,787,182,811,180,777,187,791,202,796,224,812,214,824,215,852,226,876,234,898,247,904,264,908,276,890,290,888,298,886,306,902,303,917,302,934,301,947,312,956,316,952,182,897,164,873,168,854,181,845,192,840,197,832,186,819,170,824,158,817,148,789,137,773,141" shape="poly">
+                    <area target="_blank" alt="Maluku" title="Maluku" href="https://en.wikipedia.org/wiki/Maluku_(province)" coords="653,184,697,186,758,189,784,215,835,240,842,277,767,315,701,322,653,296,663,276,685,269,743,270,744,281,778,267,806,270,807,256,782,254,773,236,765,226,739,217,725,212,694,219,665,216,653,207" shape="poly">
+                    <area target="_blank" alt="North Maluku" title="North Maluku" href="https://en.wikipedia.org/wiki/North_Maluku" coords="622,180,670,180,711,166,720,155,720,124,720,82,716,68,689,80,679,114,675,146,672,160,650,162,624,160" shape="poly">
+                    <area target="_blank" alt="Lesser Sunda Islands" title="Lesser Sunda Islands" href="https://en.wikipedia.org/wiki/Lesser_Sunda_Islands" coords="466,290,509,288,558,286,619,288,642,289,653,305,651,333,617,351,583,357,524,345,488,319,459,315,446,315" shape="poly">
+                    <area target="_blank" alt="Riau Islands" title="Riau Islands" href="https://en.wikipedia.org/wiki/Riau_Islands" coords="209,102,220,132,224,147,242,144,254,128,246,111,258,85,270,88,299,85,323,87,334,78,318,50,303,28,289,51,285,65,262,56,240,67,242,84,233,95,220,101" shape="poly">
+                    <area target="_blank" alt="Bangka Belitung" title="Bangka Belitung" href="https://en.wikipedia.org/wiki/Bangka_Belitung_Islands" coords="242,160,260,160,274,168,287,174,308,179,315,195,300,203,278,202,269,202,258,181,242,175" shape="poly">                
+                </map>
+                </div>
+                <li>Here is website to map a complex images:</li>
+                <a href="https://www.image-map.net/" target="_blank">Image Map</a>
+                <hr>
+                <li>Image can also used as background image for an entire page or for a specific element</li>
+                <li>Below is the example for an image as a background for a paragraph element:</li>
+                <p style="background-image: url('media/bg image.jpg'); padding: 10px;"><b>This is a paragraph with background image</b></p>
+                <li>The code for above paragraph are as follows:<br></li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;p style="background-image: url('media/bg image.jpg'); padding: 10px;"&gt;&lt;b&gt;This is a paragraph with background image&lt;/b&gt;&lt;/p&gt;</code></div>
+                </pre>
+            </ul>
+        </div>
         <hr>
 
-        <h3>HTML Color</h3>
-        <ul>
-            <li>In HTML, a color can be specified using a color name, an RGB value, or a HEX value.</li>
-            <li>There are 140 color names that can be used to specify the color, such as <span style="color: darkorange;">darkorange</span> or <span style="color: darkslategray;">darkslategray</span>.</li>
-            <li><b><a href="https://www.w3schools.com/colors/colors_names.asp">The complete list can be accessed here</a></b>.</li>
-            <li>It is possible to modify <span style="background-color: tomato;">background color</span>, <span style="color: blue;">text color</span>, and <span style="border: 2px solid violet;">border color</span>.</li>
-            <li>This is how to use <span style="color: #ff0000;">HEX value</span> or <span style="color: rgb(255, 0, 0);">RGB value</span> to specify the color.</li>
-            <li>HSL value can also be used to specify the color, such as <span style="color: hsla(261, 90%, 53%, 0.692);">HSL value</span>.</li>
-        </ul>
-        <hr>
+        <div class="roboto">
+            <h3>HTML Tables</h3>
+            <ul>
+                <li>&lt;table&gt; tag is used to create a table, the &lt;tr&gt; tag is used to define a row, the &lt;td&gt; tag is used to define a cell, and the &lt;th&gt; tag is used to define a header cell.</li>
+                <li>Like in this example of province in Indonesia and it's capital:</li>
+                <button id="tableProvince" onclick="toggleSection('tableProvince')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="tableProvinceContent" style="display: none;"> 
+                    <table class="table-indo">
+                        <tr>
+                            <th>Province</th>
+                            <th>Capital</th>
+                        </tr>
+                        <tr>
+                            <td>Aceh</td>
+                            <td>Banda Aceh</td>
+                        </tr>
+                        <tr>
+                            <td>Bali</td>
+                            <td>Denpasar</td>
+                        </tr>
+                        <tr>
+                            <td>Banten</td>
+                            <td>Serang</td>
+                        </tr>
+                        <tr>
+                            <td>Bengkulu</td>
+                            <td>Bengkulu</td>
+                        </tr>
+                        <tr>
+                            <td>Daerah istimewa Yogyakarta</td>
+                            <td>Yogyakarta</td>
+                        </tr>
+                        <tr>
+                            <td>Daerah Khusus Ibukota Jakarta</td>
+                            <td>Jakarta</td>
+                        </tr>
+                        <tr>
+                            <td>Gorontalo</td>
+                            <td>Gorontalo</td>
+                        </tr>
+                        <tr>
+                            <td>Jambi</td>
+                            <td>Jambi</td>
+                        </tr>
+                        <tr>
+                            <td>Jawa Barat</td>
+                            <td>Bandung</td>
+                        </tr>
+                        <tr>
+                            <td>Jawa Tengah</td>
+                            <td>Semarang</td>
+                        </tr>
+                        <tr>
+                            <td>Jawa Timur</td>
+                            <td>Surabaya</td>
+                        </tr>
+                        <tr>
+                            <td>Kalimantan Barat</td>
+                            <td>Pontianak</td>
+                        </tr>
+                        <tr>
+                            <td>Kalimantan Selatan</td>
+                            <td>Banjarmasin</td>
+                        </tr>
+                        <tr>
+                            <td>Kalimantan Tengah</td>
+                            <td>Palangkaraya</td>
+                        </tr>
+                        <tr>
+                            <td>Kalimantan Timur</td>
+                            <td>Samarinda</td>
+                        </tr>
+                        <tr>
+                            <td>Kalimantan Utara</td>
+                            <td>Tanjung Selor</td>
+                        </tr>
+                        <tr>
+                            <td>Kepulauan Bangka Belitung</td>
+                            <td>Pangkal Pinang</td>
+                        </tr>
+                        <tr>
+                            <td>Kepulauan Riau</td>
+                            <td>Tanjung Pinang</td>
+                        </tr>
+                        <tr>
+                            <td>Lampung</td>
+                            <td>Bandar Lampung</td>
+                        </tr>
+                        <tr>
+                            <td>Maluku</td>
+                            <td>Ambon</td>
+                        </tr>
+                        <tr>
+                            <td>Maluku Utara</td>
+                            <td>Ternate</td>
+                        </tr>
+                        <tr>
+                            <td>Nusa Tenggara Barat</td>
+                            <td>Mataram</td>
+                        </tr>
+                        <tr>
+                            <td>Nusa Tenggara Timur</td>
+                            <td>Kupang</td>
+                        </tr>
+                        <tr>
+                            <td>Papua</td>
+                            <td>Jayapura</td>
+                        </tr>
+                        <tr>
+                            <td>Papua Barat</td>
+                            <td>Manokwari</td>
+                        </tr>
+                        <tr>
+                            <td>Papua Barat Daya</td>
+                            <td>Sorong</td>
+                        </tr>
+                        <tr>
+                            <td>Papua Pegunungan</td>
+                            <td>Jayawijaya</td>
+                        </tr>
+                        <tr>
+                            <td>Papua Selatan</td>
+                            <td>Merauke</td>
+                        </tr>
+                        <tr>
+                            <td>Papua Tengah</td>
+                            <td>Nabire</td>
+                        </tr>
+                        <tr>
+                            <td>Riau</td>
+                            <td>Pekanbaru</td>
+                        </tr>
+                        <tr>
+                            <td>Sulawesi Barat</td>
+                            <td>Mamuju</td>
+                        </tr>
+                        <tr>
+                            <td>Sulawesi Selatan</td>
+                            <td>Makassar</td>
+                        </tr>
+                        <tr>
+                            <td>Sulawesi Tengah</td>
+                            <td>Palu</td>
+                        </tr>
+                        <tr>
+                            <td>Sulawesi Tenggara</td>
+                            <td>Kendari</td>
+                        </tr>
+                        <tr>
+                            <td>Sulawesi Utara</td>
+                            <td>Manado</td>
+                        </tr>
+                        <tr>
+                            <td>Sumatera Barat</td>
+                            <td>Padang</td>
+                        </tr>
+                        <tr>
+                            <td>Sumatera Selatan</td>
+                            <td>Palembang</td>
+                        </tr>
+                        <tr>
+                            <td>Sumatera Utara</td>
+                            <td>Medan</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>Table can also stylized using CSS, like modifying borders style, border color, cell background color, table size, etc</li>
+                <li>Below is the example of rounded border with dashed border style and teal border color</li>
+                <button id="table-ie" onclick="toggleSection('table-ie')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-ieContent" style="display: none;">
+                    <table class="table-ie">
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                            <th>Header 4</th>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 2, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3, Cell 1</td>
+                            <td>Row 3, Cell 2</td>
+                            <td>Row 3, Cell 3</td>
+                            <td>Row 3, Cell 4</td>
+                    </table>
+                </div>
+                <li>It is also possible to make a table with vertical header, like table below</li>
+                <button id="table-norm" onclick="toggleSection('table-norm')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-normContent" style="display: none;">
+                    <table class="table-norm">
+                        <tr>
+                            <th>Header 1</th>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 3, Cell 1</td>
+                        </tr>
+                        <tr>
+                            <th>Header 2</th>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 3, Cell 2</td>
+                        </tr>
+                        <tr>
+                            <th>Header 3</th>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 3, Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th>Header 4</th>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 2, Cell 4</td>
+                            <td>Row 3, Cell 4</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>Other than that, it is also possible to add a caption to a table like below:</li>
+                <button id="table-caption" onclick="toggleSection('table-caption')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-captionContent" style="display: none;">
+                    <caption>This is a table with caption</caption>
+                    <table class="table-norm">
+                        <tr>
+                            <th>Header 1</th>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 3, Cell 1</td>
+                        </tr>
+                        <tr>
+                            <th>Header 2</th>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 3, Cell 2</td>
+                        </tr>
+                        <tr>
+                            <th>Header 3</th>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 3, Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th>Header 4</th>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 2, Cell 4</td>
+                            <td>Row 3, Cell 4</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>HTML tables can adjust <strong>the padding inside</strong> the cells, and also <strong>the spacing between</strong> the cells </li>
+                <li>Below is the example of table with padding and spacing:</li>
+                <button id="table-pad-spc" onclick="toggleSection('table-pad-spc')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-pad-spcContent" style="display: none;">
+                    <caption>This is a table with a padding</caption>
+                    <table class="table-pad">
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                            <th>Header 4</th>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 2, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3, Cell 1</td>
+                            <td>Row 3, Cell 2</td>
+                            <td>Row 3, Cell 3</td>
+                            <td>Row 3, Cell 4</td>
+                    </table>
+                    <br>
+                    <caption>This is a table with a spacing</caption>
+                    <table class="table-spc">
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                            <th>Header 4</th>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 2, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3, Cell 1</td>
+                            <td>Row 3, Cell 2</td>
+                            <td>Row 3, Cell 3</td>
+                            <td>Row 3, Cell 4</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>HTML tables can have cells that span over multiple rows and/or columns like below:</li>
+                <button id="table-span" onclick="toggleSection('table-span')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-spanContent" style="display: none;">
+                    <table class="table-span">
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                            <th>Header 4</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 2, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Row 3, Cell 1</td>
+                            <td>Row 3, Cell 2</td>
+                            <td>Row 3, Cell 3</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>HTML tables can be stylized to have zebra stripes (alternating color) using <q>:nth-child(even)</q> selector like this below example:</li>
+                <li>Alternating color at rows:</li>
+                <pre>
+                    <div class="code-wrapper"><code>.style-name tr:nth-child(even) {background-color: #f2f2f2;}</code></div>
+                </pre>
+                <li>Alternating color at columns:</li>
+                <pre>
+                    <div class="code-wrapper"><code>.style-name td:nth-child(even), th:nth-child(even) {background-color: #f2f2f2;}</code></div>
+                </pre>
+                <li>Below is the example of table with zebra stripes at the rows:</li>
+                <button id="table-stripe" onclick="toggleSection('table-stripe')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-stripeContent" style="display: none;">
+                    <table class="table-stripe">
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                            <th>Header 4</th>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 2, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3, Cell 1</td>
+                            <td>Row 3, Cell 2</td>
+                            <td>Row 3, Cell 3</td>
+                            <td>Row 3, Cell 4</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>Below is the example of table with vertical zebra stripes:</li>
+                <button id="table-stripe-v" onclick="toggleSection('table-stripe-v')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-stripe-vContent" style="display: none;">
+                    <table class="table-stripe-v">
+                        <tr>
+                            <th>Header 1</th>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 3, Cell 1</td>
+                        </tr>
+                        <tr>
+                            <th>Header 2</th>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 3, Cell 2</td>
+                        </tr>
+                        <tr>
+                            <th>Header 3</th>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 3, Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th>Header 4</th>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 2, Cell 4</td>
+                            <td>Row 3, Cell 4</td>
+                        </tr>
+                    </table>
+            </ul>
+        </div>
     </div>
 
-    <div class="roboto">
-        <h3>HTML Links</h3>
-        <ul>
-            <li>&lt;a&gt; tag is used to create a hyperlink, the <q>href</q> attribute is used to specify the URL of the page the link goes to.</li>
-            <li>Like in this example: <a href="https://github.com/dzakw" target="_blank">Visit our HTML tutorial</a></li>
-            <li>Notes: the <q>target</q> attribute is used to specify where to open the link,</li>
-            <li>The value <q>_blank</q> <a href="" target="_blank">will open the link in a new tab.</a></li>
-            <li>The value <q>_self</q> <a href="" target="_self">will open the link in the same frame as it was clicked (default behavior).</a></li>
-            <li>Other value of target (like <q>_parent</q> or <q>_top</q>) can be used to open the link in different frame or window, which are quite obsolete in the modern websites</li>
-            <li>Images and icon can also be used as a link, like this:</li>
-            <a href="https://github.com/dzakw" target="_blank">
-                <i class="fa-brands fa-github" style="color: #28433a; font-size:100px"></i> <!--Fontawesome icon are treated like text, so the way to manipulate them are similar to manipulating text-->
-            </a>
-            the syntax are as follows:<br>
-<pre>
-    <div class="code-wrapper"><code>&lt;a href="https:github.com/dzakw" target="_blank"&gt; &lt;i class="fa-brands fa-github" style="color: #28433a; font-size:100px"&gt;&lt;/i&gt;&lt;/a&gt;</code></div>
-</pre>
-            <li>links can be absolute URLs and relative URLs</li>
-                        <li>Absolute URLs are URLs that include the full URL of the page, like <a href="https://github.com/dzakw" target="_blank">this is link</a><br>
-                        the syntax are as follows:<br></li>
-            <pre>
-                <div class="code-wrapper"><code>&lt;a href="https://github.com/dzakw"&gt;this is link&lt;/a&gt;</code></div>
-            </pre>
-                        <li>Relative URLs are URLs that only include the path to the page, like <a href="page1.html" target="_blank">this is link</a><br>
-                        the syntax are as follows:<br></li>
-            <pre>
-                <div class="code-wrapper"><code>&lt;a href="page1.html"&gt;this is link&lt;/a&gt;</code></div>
-            </pre>
-                        <li>A link can also styled as a button like this one:</li><br>
-                        <a href="page1.html" target="_blank" style="background-color: teal; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Button to Page1</a>
-                    </ul>
-                    <hr>
-                </div>
-
-
-    <h2 style="background-color: black; color: whitesmoke; text-align:center">Section 2: CSS</h2>
-    <div style="font-family:roboto">
+    <h2 class="section" id="section2" onclick="toggleSection('section2')">Section 2: CSS</h2>
+    <div id="section2Content" style="display: none;">
+        <div class="roboto">
         <h3>CSS Syntax</h3>
         <ul>
             <li>As mentioned before, CSS can be used in 3 ways: inline, internal, and external.<br>
             The syntax of CSS is as follows:<br></li>
-<pre>
-<div class="code-wrapper"><code>selector {
-    property1: value1;
-    property2: value2;
-    propertyN: valueN;
-    }</code>
-</div>
-</pre>
-        <li>to link to external CSS file, use the &lt;link&gt; tag in the &lt;head&gt; section of the HTML file, like this:<br>
-<pre>
-<div class="code-wrapper"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></div>
-</pre></li>
+            <pre>
+                <div class="code-wrapper"><code>selector {property1: value1; property2: value2; propertyN: valueN;}</code></div>
+            </pre>
+            <li>to link to external CSS file, use the &lt;link&gt; tag in the &lt;head&gt; section of the HTML file, like this:<br>
+            <pre>
+                <div class="code-wrapper"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></div>
+            </pre></li>
         </ul>
         <hr>
+        </div>
     </div>
 </body>
+<script>
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        var sectionContent = document.getElementById(sectionId + "Content");
+        if (sectionContent.style.display === "none") {
+            sectionContent.style.display = "block";
+        } else {
+            sectionContent.style.display = "none";
+        }
+    }
+
+    function openSection(sectionId) {
+        var sectionContent = document.getElementById(sectionId + "Content");
+        if (sectionContent.style.display === "none") {
+            sectionContent.style.display = "block";
+        }
+    }
+    
+</script>
 </html>

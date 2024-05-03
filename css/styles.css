@@ -1,4 +1,14 @@
 /* This is how to use external CSS style */
+h2.section {
+  background-color: #171717;
+  color: gainsboro;
+  text-align:center;
+  cursor: pointer;
+}
+h3 {
+  color: #171717;
+}
+
 body {
   background-color: gainsboro;
   font-family: sans-serif;
@@ -18,6 +28,147 @@ pre {
 .roboto {
   font-family: 'Roboto';
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: gainsboro;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #414141;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #171717;
+}
+
+/* Reset default list styles */
+ul.content-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.content-list li {
+  margin-bottom: 10px;
+}
+
+ul.content-list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 10px; 
+  background-color: gainsboro;
+}
+
+ul.content-list li a:hover {
+  background-color: #171717;
+  color:gainsboro;
+}
+
+.table-ie, .table-ie th, .table-ie td {
+  border-radius: 5px;
+  border: 1px;
+  border-style: dashed;
+  border-color: teal;
+  border-collapse: collapse;
+  }
+
+.table-norm, .table-norm th, .table-norm td {
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: #171717;
+  border-collapse: collapse;
+  width: 500px;
+  }
+
+.table-norm th {
+  font-weight: bold;
+  text-align:left;
+  width: 120px;
+}
+
+.table-pad, .table-pad th, .table-pad td {
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: #171717;
+  }
+
+.table-pad th, .table-pad td {
+  padding: 10px;
+}
+
+.table-spc, .table-spc th, .table-spc td {
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: #171717;
+  border-spacing: 20px;
+  }
+
+.table-span, .table-span th, .table-span td {
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: #171717;
+  border-collapse: collapse;
+  }
+
+.table-stripe, .table-stripe th, .table-stripe td {
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: gainsboro;
+  border-collapse: collapse;
+  }
+
+  .table-stripe tr:nth-child(even) {
+    background-color: #130c35;
+    color: gainsboro;
+    border-color:rgb(255, 0, 0);
+  }
+
+  .table-stripe-v, .table-stripe-v tr {
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: gainsboro;
+    border-collapse: collapse;
+    border-style: solid;
+    }
+
+  .table-stripe-v td:nth-child(even), th:nth-child(even) {
+    background-color: #130c35;
+    color: gainsboro;
+  }
+
+.table-indo {
+  width: 300px;
+  border-collapse: collapse;
+}
+
+.table-indo th {
+  background-color: #171717;
+  color: gainsboro;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 120%;
+}
+
+.table-indo td {
+  padding: 10px;
+  border-bottom: 1px solid #171717;
+}
+
+.table-indo tr:hover {
+  background-color: #4b4949;
+  color: gainsboro;
+}
+
 
 @media (max-width: 768px) {
   body {
