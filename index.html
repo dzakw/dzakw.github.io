@@ -19,12 +19,15 @@
     <a href=""><img src="media/eternal tsingshan.png" alt="Eternal Tsingshan" style="width: 100px; height: 100px;"></a>
     <h1 style="font-family: sans-serif; font-size: 300%" >Frontend learning</h1> <!-- This is how to use inline css style -->
     <hr>
-    <h3>List of Content:</h3>
-    <ul class="content-list" style="list-style-type: none">
-        <li><a href="#section1" onclick="openSection('section1')">Section 1: HTML</a></li>
-        <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
-    </ul>
+
+    <h2 class="section" id="section0" onclick="toggleSection('section0')">List of Content</h2>
+    <div id="section0Content">
+        <ul class="content-list" style="list-style-type: none">
+            <li><a href="#section1" onclick="openSection('section1')">Section 1: HTML</a></li>
+            <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
+        </ul>
     <hr>
+    </div>
 
     <h2 class="section" id="section1" onclick="toggleSection('section1')">Section 1: HTML</h2>
     <div id="section1Content" style="display: none;">
