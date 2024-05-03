@@ -141,7 +141,7 @@ ul.content-list li a:hover {
     border-style: solid;
     }
 
-  .table-stripe-v td:nth-child(even), th:nth-child(even) {
+  .table-stripe-v td:nth-child(even), .table-stripe-v th:nth-child(even) {
     background-color: #130c35;
     color: gainsboro;
   }
