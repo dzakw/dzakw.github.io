@@ -126,25 +126,42 @@ ul.content-list li a:hover {
   border-collapse: collapse;
   }
 
-  .table-stripe tr:nth-child(even) {
-    background-color: #130c35;
-    color: gainsboro;
-    border-color:rgb(255, 0, 0);
+.table-stripe tr:nth-child(even) {
+  background-color: #130c35;
+  color: gainsboro;
+  border-color:rgb(255, 0, 0);
+}
+
+.table-stripe-v, .table-stripe-v tr {
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: gainsboro;
+  border-collapse: collapse;
+  border-style: solid;
   }
 
-  .table-stripe-v, .table-stripe-v tr {
-    border-radius: 5px;
-    border: 2px;
-    border-style: solid;
-    border-color: gainsboro;
-    border-collapse: collapse;
-    border-style: solid;
-    }
+.table-stripe-v td:nth-child(even), .table-stripe-v th:nth-child(even) {
+  background-color: #130c35;
+  color: gainsboro;
+}
 
-  .table-stripe-v td:nth-child(even), .table-stripe-v th:nth-child(even) {
-    background-color: #130c35;
-    color: gainsboro;
-  }
+.table-col {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+.table-col th {
+  background-color: #171717;
+  color: gainsboro;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.table-col td {
+  padding: 10px;
+  border-bottom: 1px solid #171717;
+}
 
 .table-indo {
   width: 300px;
@@ -169,6 +186,30 @@ ul.content-list li a:hover {
   color: gainsboro;
 }
 
+ul.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  width:fit-content;
+}
+
+li.horizontal {
+  float: left;
+}
+
+li.horizontal a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.horizontal a:hover {
+  background-color: #171717;
+}
 
 @media (max-width: 768px) {
   body {

@@ -193,6 +193,7 @@
 
         <div class="roboto">
             <h3>HTML Tables</h3>
+            <button id="toggleAll" onclick="toggleAllSections('tableProvince', 'table-ie', 'table-norm', 'table-caption', 'table-pad-spc', 'table-span', 'table-stripe', 'table-stripe-v', 'table-col', 'table-col2')" style="cursor: pointer;">Show/Hide All Tables</button>
             <ul>
                 <li>&lt;table&gt; tag is used to create a table, the &lt;tr&gt; tag is used to define a row, the &lt;td&gt; tag is used to define a cell, and the &lt;th&gt; tag is used to define a header cell.</li>
                 <li>Like in this example of province in Indonesia and it's capital:</li>
@@ -603,6 +604,150 @@
                             <td>Row 3, Cell 4</td>
                         </tr>
                     </table>
+                </div>
+                <li>The &lt;colgroup&gt; element can be used to style specific columns of a table</li>
+                <li>The syntax are as follows:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;table&gt;
+    &lt;colgroup&gt;
+        &lt;col span="specify how many columns that will get the stlye" style="insert style here"&gt;
+    &lt;/colgroup&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Sun&lt;/th&gt;
+        &lt;th&gt;Mon&lt;/th&gt;
+        &lt;th&gt;Tues&lt;/th&gt;
+    . . .</code></div>
+                </pre>
+                <li>Below is the example of using colgroup:</li>
+                <button id="table-col" onclick="toggleSection('table-col')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-colContent" style="display: none;">
+                    <table class="table-col">
+                        <colgroup>
+                            <col style="background-color: #f2f2f2;">
+                            <col style="background-color: #f2f2f2;">
+                            <col style="background-color: #f2f2f2;">
+                        </colgroup>
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                            <th>Header 4</th>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 2, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3, Cell 1</td>
+                            <td>Row 3, Cell 2</td>
+                            <td>Row 3, Cell 3</td>
+                            <td>Row 3, Cell 4</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>It is also possible to make multiple &lt;colgroup&gt;. Which will also used when inserting colgroup in the middle of table like this:</li>
+                <button id="table-col2" onclick="toggleSection('table-col2')" style="cursor: pointer;">Show/Hide Table</button>
+                <div id="table-col2Content" style="display: none;">
+                    <table class="table-col2">
+                        <colgroup>
+                            <col span="2">
+                            <col span="2" style="background-color: pink;">
+                        </colgroup>
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                            <th>Header 4</th>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 2, Cell 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3, Cell 1</td>
+                            <td>Row 3, Cell 2</td>
+                            <td>Row 3, Cell 3</td>
+                            <td>Row 3, Cell 4</td>
+                        </tr>
+                    </table>
+                </div>
+                <li>There are only some limited selection of CSS properties that can be used in colgroup, which are:</li>
+                <strong><em><ins>width</ins></em></strong> property, to set the width of the column<br>
+                <strong><em><ins>visibility</ins></em></strong> property, to hide or show some number of the columns<br>
+                <strong><em><ins>background</ins></em></strong> properties, to set the background color of the column<br>
+                <strong><em><ins>border</ins></em></strong> properties, to set the border of the column<br>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="roboto">
+            <h3>HTML Lists</h3>
+            <ul>
+                <li>First there is an unordered list, which is already used all around this page.</li>
+                Unordered list starts with <strong><em><ins>&lt;ul&gt</ins></em></strong> tag, and then each bullet starts with <strong><em><ins>&lt;li&gt;</ins></em></strong> tag.</li><br>
+                Items in unordered lists marked with a bullets, just like in this paragraphs.</li>
+                <li>Here is example of an unordered list:</li>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                </ul>
+                <li>To change list item marker in unordered list, the CSS <strong><em><ins>list-style-type</ins></em></strong> property can be used. it can have one of these following values:</li>
+                <ul style="list-style-type:disc">
+                    <li>disc - default value, filled circle</li>
+                </ul>
+                <ul style="list-style-type:circle">
+                    <li>circle - empty circle</li>
+                </ul>
+                <ul style="list-style-type:square">
+                    <li>square - filled square</li>
+                </ul>
+                <ul style="list-style-type:none">
+                    <li>none - no marker</li>
+                </ul>
+                <li>List can also nested too, just like shown all around this page.</li>
+                <li>It is also possible to make a stylized horizontal list, which usually used to create a navigation menu like this:</li>
+                <ul class="horizontal">
+                    <li class="horizontal"><a href="#">Home</a></li>
+                    <li class="horizontal"><a href="#">About</a></li>
+                    <li class="horizontal"><a href="#">Services</a></li>
+                    <li class="horizontal"><a href="#">Contact</a></li>
+                </ul>
+                <li>Then there is an ordered list, which starts with <strong><em><ins>&lt;ol&gt;</ins></em></strong> tag, and then each item starts with <strong><em><ins>&lt;li&gt;</ins></em></strong> tag.</li>
+                <li>Here is example of an ordered list:</li>
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                </ol>
+                <li>There is also a definition list, which starts with <strong><em><ins>&lt;dl&gt;</ins></em></strong> tag, and then each term starts with <strong><em><ins>&lt;dt&gt;</ins></em></strong> tag, and each definition starts with <strong><em><ins>&lt;dd&gt;</ins></em></strong> tag.</li><br>
+                This list would look like this:<br>
+                <dl>
+                    <dt>Term 1</dt>
+                    <dd>-Definition 1</dd>
+                    <dt>Term 2</dt>
+                    <dd>-Definition 2</dd>
+                    <dt>Term 3</dt>
+                    <dd>-Definition 3</dd>
+                </dl>
             </ul>
         </div>
     </div>
@@ -625,24 +770,59 @@
         <hr>
         </div>
     </div>
-</body>
-<script>
-    function toggleSection(sectionId) {
-        var section = document.getElementById(sectionId);
-        var sectionContent = document.getElementById(sectionId + "Content");
-        if (sectionContent.style.display === "none") {
-            sectionContent.style.display = "block";
-        } else {
-            sectionContent.style.display = "none";
-        }
-    }
 
-    function openSection(sectionId) {
-        var sectionContent = document.getElementById(sectionId + "Content");
-        if (sectionContent.style.display === "none") {
+    <script>
+        //most of the script below written by the help of AI which main purpose is to make the page easier to navigate
+
+        //this one open and close the section
+        function toggleSection(sectionId) {
+            var sectionContent = document.getElementById(sectionId + "Content");
+            if (sectionContent.style.display === "none") {
+                sectionContent.style.display = "block";
+            } else {
+                sectionContent.style.display = "none";
+            }
+        }
+
+        //this one only open the section, used for table of content
+        function openSection(sectionId) {
+            var sectionContent = document.getElementById(sectionId + "Content");
             sectionContent.style.display = "block";
         }
-    }
     
-</script>
+        //this one toggle all sections
+        function toggleAllSections(...sectionIds) {
+            var allOpen = true;
+            var allClosed = true;
+
+            // Check the current state of all sections
+            sectionIds.forEach(function(sectionId) {
+                var sectionContent = document.getElementById(sectionId + "Content");
+                if (sectionContent.style.display === "none") {
+                    allOpen = false; // If any section is closed, not all sections are open
+                } else {
+                    allClosed = false; // If any section is open, not all sections are closed
+                }
+            });
+
+            // Toggle the state of all sections based on the current state
+            if (allOpen || allClosed) {
+                // If all sections are open or all sections are closed, toggle them all
+                sectionIds.forEach(function(sectionId) {
+                    var sectionContent = document.getElementById(sectionId + "Content");
+                    sectionContent.style.display = allOpen ? "none" : "block"; // Toggle the display
+                });
+            } else {
+                // If some sections are open and some are closed, open them all
+                sectionIds.forEach(function(sectionId) {
+                    var sectionContent = document.getElementById(sectionId + "Content");
+                    sectionContent.style.display = "block"; // Open all sections
+                });
+            }
+        }
+
+    </script>
+    
+</body>
+
 </html>
