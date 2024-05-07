@@ -21,23 +21,32 @@
     <hr>
 
     <h2 class="section" id="section0" onclick="toggleSection('section0')">List of Content</h2>
-    <div id="section0Content">
-        <ul class="content-list" style="list-style-type: none">
-            <li><a href="#section1" onclick="openSection('section1')">Section 1: HTML</a></li>
-            <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
-        </ul>
-    <hr>
+    <div class="content-container">
+        <div id="section0Content">
+            <ul class="content-list" style="list-style-type: none">
+                <li><a href="#section1" onclick="openSection('section1')">Section 1: HTML</a></li>
+                <ul>
+                    <li><a href="#subsec11" onclick="openSection('subsec11'); openSection('section1')">HTML Formatting</a></li>
+                    <li><a href="#subsec12" onclick="openSection('subsec12'); openSection('section1')">HTML Color</a></li>
+                    <li><a href="#subsec13" onclick="openSection('subsec13'); openSection('section1')">HTML Links</a></li>
+                    <li><a href="#subsec14" onclick="openSection('subsec14'); openSection('section1')">HTML Images</a></li>
+                    <li><a href="#subsec15" onclick="openSection('subsec15'); openSection('section1')">HTML Tables</a></li>
+                    <li><a href="#subsec16" onclick="openSection('subsec16'); openSection('section1')">HTML Lists</a></li>
+                    <li><a href="#subsec17" onclick="openSection('subsec17'); openSection('section1')">HTML Block and Inline Elements</a></li>
+                    <li><a href="#subsec18" onclick="openSection('subsec18'); openSection('section1')">HTML Classes and Id</a></li>
+                </ul>
+                <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
+            </ul>
+        </div>
     </div>
+    <hr>
+    
 
     <h2 class="section" id="section1" onclick="toggleSection('section1')">Section 1: HTML</h2>
     <div id="section1Content" style="display: none;">
-        <h3>This is heading h3</h3>
-        <h4>This is heading h4</h4>
-        <h5>This is heading h5</h5>
-        <h6>This is heading h6</h6>
 
-        <div class="roboto">
-            <h3>HTML Formatting</h3>
+        <h3 class="subsection" id="subsec11" onclick="toggleSection('subsec11')">HTML Formatting</h3>
+        <div class="subsection" id="subsec11Content" style="display: none;">
             <ul>
                 <li>Inline styles have the <b>highest specificity</b>, <strong>overriding</strong> any other styles defined in <em>internal or external stylesheets</em>.</li>
                 <li><i>&lt;i&gt;</i> tag is used when you want to <i>italicize</i> the text.</li>
@@ -89,11 +98,12 @@
                 <li>&lt;bdo&gt; tag is used to override the current text direction, the <q>dir</q> attribute can be filled with <u>rtl</u> for right to left, or <u>ltr</u> for left to right<br>
                 Example: <bdo dir="rtl">This text will be written from right to left</bdo><br></li>
             </ul>
-            <hr>
         </div>
+        <hr>
 
-        <div class="roboto">
-            <h3>HTML Color</h3>
+        <h3 class="subsection" id="subsec12" onclick="toggleSection('subsec12')">HTML Color</h3>
+        <div class="subsection" id="subsec12Content" style="display: none;">
+        
             <ul>
                 <li>In HTML, a color can be specified using a color name, an RGB value, or a HEX value.</li>
                 <li>There are 140 color names that can be used to specify the color, such as <span style="color: darkorange;">darkorange</span> or <span style="color: darkslategray;">darkslategray</span>.</li>
@@ -102,11 +112,11 @@
                 <li>This is how to use <span style="color: #ff0000;">HEX value</span> or <span style="color: rgb(255, 0, 0);">RGB value</span> to specify the color.</li>
                 <li>HSL value can also be used to specify the color, such as <span style="color: hsla(261, 90%, 53%, 0.692);">HSL value</span>.</li>
             </ul>
-            <hr>
         </div>
+        <hr>
 
-        <div class="roboto">
-            <h3>HTML Links</h3>
+        <h3 class="subsection" id="subsec13" onclick="toggleSection('subsec13')">HTML Links</h3>
+        <div class="subsection" id="subsec13Content" style="display:none;">
             <ul>
                 <li>&lt;a&gt; tag is used to create a hyperlink, the <q>href</q> attribute is used to specify the URL of the page the link goes to.</li>
                 <li>Like in this example: <a href="https://github.com/dzakw" target="_blank">Visit our HTML tutorial</a></li>
@@ -136,11 +146,11 @@
                 <li>A link can also styled as a button like this one:</li><br>
                 <a href="page1.html" target="_blank" style="background-color: teal; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Button to Page1</a>
                 </ul>
-                <hr>
         </div>
+        <hr>
 
-        <div class="roboto">
-            <h3>HTML Images</h3>
+        <h3 class="subsection" id="subsec14" onclick="toggleSection('subsec14')">HTML Images</h3>
+        <div class="subsection" id="subsec14Content" style="display:none;">
             <ul>
                 <li>&lt;img&gt; tag is used to add an image into HTML page, the <q>src</q> attribute is used to specify the path to the image.</li>
                 <li>The <q>width</q> and <q>height</q> attributes are used to specify the width and height of an image.</li>
@@ -191,8 +201,8 @@
         </div>
         <hr>
 
-        <div class="roboto">
-            <h3>HTML Tables</h3>
+        <h3 class="subsection" id="subsec15" onclick="toggleSection('subsec15')">HTML Tables</h3>
+        <div class="subsection" id="subsec15Content" style="display:none;">
             <button id="toggleAll" onclick="toggleAllSections('tableProvince', 'table-ie', 'table-norm', 'table-caption', 'table-pad-spc', 'table-span', 'table-stripe', 'table-stripe-v', 'table-col', 'table-col2')" style="cursor: pointer;">Show/Hide All Tables</button>
             <ul>
                 <li>&lt;table&gt; tag is used to create a table, the &lt;tr&gt; tag is used to define a row, the &lt;td&gt; tag is used to define a cell, and the &lt;th&gt; tag is used to define a header cell.</li>
@@ -696,8 +706,8 @@
         </div>
         <hr>
 
-        <div class="roboto">
-            <h3>HTML Lists</h3>
+        <h3 class="subsection" id="subsec16" onclick="toggleSection('subsec16')">HTML Lists</h3>
+        <div class="subsection" id="subsec16Content" style="display:none;">
             <ul>
                 <li>First there is an unordered list, which is already used all around this page.</li>
                 Unordered list starts with <strong><em><ins>&lt;ul&gt</ins></em></strong> tag, and then each bullet starts with <strong><em><ins>&lt;li&gt;</ins></em></strong> tag.</li><br>
@@ -738,6 +748,37 @@
                     <li>Third item</li>
                     <li>Fourth item</li>
                 </ol>
+                <li>Ordered list can also have different type of list item marker, just like unordered list.</li>
+                This can be achieved by inserting the attribute <strong><em><ins>type</ins></em></strong> in the <strong><em><ins>&lt;ol&gt;</ins></em></strong> tag, with one of these following values:</li>
+                <ol type="1">
+                    <li>default value, numbers</li>
+                </ol>
+                <ol type="A">
+                    <li>uppercase alphabet</li>
+                </ol>
+                <ol type="a">
+                    <li>lowercase alphabet</li>
+                </ol>
+                <ol type="I">
+                    <li>uppercase roman numerals</li>
+                </ol>
+                <ol type="i">
+                    <li>lowercase roman numerals</li>
+                </ol>
+                <li>Ordered list can be started at specific count by using the <strong><em><ins>start</ins></em></strong> attribute lik below:</li>
+                <ol start="999">
+                    <li>Item 999</li>
+                    <li>Item 1000</li>
+                    <li>Item 1001</li>
+                    <li>Item 1002</li>
+                </ol>
+                <li>It is also possible to make the count reversed by using the <strong><em><ins>reversed</ins></em></strong> attribute like below:</li>
+                <ol type="I" reversed>
+                    <li>Item IV</li>
+                    <li>Item III</li>
+                    <li>Item II</li>
+                    <li>Item I</li>
+                </ol>
                 <li>There is also a definition list, which starts with <strong><em><ins>&lt;dl&gt;</ins></em></strong> tag, and then each term starts with <strong><em><ins>&lt;dt&gt;</ins></em></strong> tag, and each definition starts with <strong><em><ins>&lt;dd&gt;</ins></em></strong> tag.</li><br>
                 This list would look like this:<br>
                 <dl>
@@ -750,12 +791,1548 @@
                 </dl>
             </ul>
         </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec17" onclick="toggleSection('subsec17')">HTML Block and Inline Elements</h3>
+        <div class="subsection" id="subsec17Content" style="display:none;">
+            <ul>
+            <li>Block level elements are always start on a new line, and by default always take the full width available.<br>
+                &lt;div&gt; and &lt;p&gt; are examples of block level elements.<br></li>
+            <li>Here are the lists of block level elements:</li>
+                <ul class="threeColumn">
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example1')"> &lt;address&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example2')"> &lt;article&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example3')"> &lt;aside&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example4')"> &lt;blockquote&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example5')"> &lt;canvas&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example6')"> &lt;dd&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example7')"> &lt;div&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example8')"> &lt;dl&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example9')"> &lt;dt&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example10')"> &lt;fieldset&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example11')"> &lt;figcaption&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example12')"> &lt;figure&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example13')"> &lt;footer&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example14')"> &lt;form&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example15')"> &lt;h1&gt;-&lt;h6&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example16')"> &lt;header&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example17')"> &lt;hr&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example18')"> &lt;li&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example19')"> &lt;main&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example20')"> &lt;nav&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example21')"> &lt;noscript&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example22')"> &lt;ol&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example23')"> &lt;p&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example24')"> &lt;pre&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example25')"> &lt;section&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example26')"> &lt;table&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example27')"> &lt;tfoot&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example28')"> &lt;ul&gt;</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example29')"> &lt;video&gt;</a></li>
+                </ul>
+
+                <div>
+                                <!-- <address> -->
+                                <div>
+                                    <li id="example1" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;address&gt;</h3>
+                                        <ul>
+                                        <li>Used to define the contact information of the author/owner of a document or an article.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;address&gt;
+    Written by John Doe.&lt;br&gt;
+    Visit us at:&lt;br&gt;
+    Example.com&lt;br&gt;
+    Box 564, Disneyland&lt;br&gt;
+    USA
+&lt;/address&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <address>
+                                            Written by John Doe.<br>
+                                            Visit us at:<br>
+                                            Example.com<br>
+                                            Box 564, Disneyland<br>
+                                            USA
+                                        </address>
+                                    </li>
+                                </div>
+
+                                <!-- <article> -->
+                                <div>
+                                    <li id="example2" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;article&gt;</h3>
+                                        <ul>
+                                        <li>Used to define an independent, self-contained content.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;article&gt;
+    &lt;h1&gt;The Article Title&lt;/h1&gt;
+    &lt;p&gt;The article content...&lt;/p&gt;
+    &lt;/article&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <article>
+                                            <h1>The Article Title</h1>
+                                            <p>The article content...</p>
+                                        </article>
+                                    </li>
+                                </div>
+
+                                <!-- <aside> -->
+                                <div>
+                                    <li id="example3" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;aside&gt;</h3>
+                                        <ul>
+                                        <li>Used to define content aside from the content (like a sidebar).</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;aside&gt;
+    &lt;h2&gt;The Aside Title&lt;/h2&gt;
+    &lt;p&gt;The aside content...&lt;/p&gt;
+    &lt;/aside&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <aside>
+                                            <h2>The Aside Title</h2>
+                                            <p>The aside content...</p>
+                                        </aside>
+                                    </li>
+                                </div>
+
+                                <!-- <blockquote> -->
+                                <div>
+                                    <li id="example4" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;blockquote&gt;</h3>
+                                        <ul>
+                                        <li>Used to define a section that is quoted from another source.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;blockquote&gt;
+    &lt;p&gt;This is a blockquote&lt;/p&gt;
+    &lt;footer&gt;Author Name&lt;/footer&gt;
+&lt;/blockquote&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <blockquote>
+                                            <p>This is a blockquote</p>
+                                            <footer>Author Name</footer>
+                                        </blockquote>
+                                    </li>
+                                </div>
+
+                                <!-- <canvas> -->
+                                <div>
+                                    <li id="example5" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;canvas&gt;</h3>
+                                        <ul>
+                                            <li>Used to draw graphics, on the fly, via scripting (usually JavaScript).</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;canvas id="myCanvas" style="border:1px solid #000;"&gt;&lt;/canvas&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <canvas id="myCanvas" style="border:1px solid #000;"></canvas><br>
+                                        <button onclick="clearCanvas()">Clear Drawing</button><br>
+                                        *notes: The canvas element is only a container for graphics. To be able to draw graphics, need to write script.
+                                    </li>
+                                </div>
+                                    
+                                <!-- <dd> -->
+                                <div>
+                                    <li id="example6" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;dd&gt;</h3>
+                                        <ul>
+                                        <li>Used to define description of the term in a description list.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;dd&gt;Description of the term&lt;/dd&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <dd>Description of the term</dd>
+                                    </li>
+                                </div>
+
+                                <!-- <div> -->
+                                <div>
+                                    <li id="example7" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;div&gt;</h3>
+                                        <ul>
+                                        <li>Used as a container for HTML elements - which is used to group together HTML elements.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;div style="display: flex; height: 100px;"&gt;
+    &lt;div style="flex: 1; background-color: #f1f1f1;"&gt;Section 1&lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #e1e1e1;"&gt;Section 2&lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #d1d1d1;"&gt;Section 3&lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #c1c1c1;"&gt;Section 4&lt;/div&gt;
+&lt;/div&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <div style="display: flex; height: 100px;">
+                                            <div style="flex: 1; background-color: #f1f1f1;">Section 1</div>
+                                            <div style="flex: 1; background-color: #e1e1e1;">Section 2</div>
+                                            <div style="flex: 1; background-color: #d1d1d1;">Section 3</div>
+                                            <div style="flex: 1; background-color: #c1c1c1;">Section 4</div>
+                                        </div>
+                                        Below is how to center a &lt;div&gt;
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;div style="background-color: aqua; width: 300px; margin:auto;"&gt;
+    &lt;section&gt;Section 1&lt;/section&gt;
+    &lt;section&gt;Section 2&lt;/section&gt;
+    &lt;section&gt;Section 3&lt;/section&gt;
+&lt;/div&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <div style="background-color: aqua; width: 300px; margin:auto;">
+                                            <section>Section 1</section>
+                                            <section>Section 2</section>
+                                            <section>Section 3</section>
+                                        </div>
+                                        It is also possible to align div elements side by side like this:
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;div style="display: flex;"&gt;
+    &lt;div style="flex: 1; background-color: #f1f1f1;"&gt;
+        &lt;h2 style="margin-left:5px"&gt;Section 1&lt;/h2&gt;
+        &lt;p style="margin-left:5px"&gt;Content of section 1...&lt;/p&gt;
+        &lt;p style="margin-left:5px"&gt;Content of section 1...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #e1e1e1;"&gt;
+        &lt;h2 style="margin-left:5px"&gt;Section 2&lt;/h2&gt;
+        &lt;p style="margin-left:5px"&gt;Content of section 2...&lt;/p&gt;
+        &lt;p style="margin-left:5px"&gt;Content of section 2...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #d1d1d1;"&gt;
+        &lt;h2 style="margin-left:5px"&gt;Section 3&lt;/h2&gt;
+        &lt;p style="margin-left:5px"&gt;Content of section 3...&lt;/p&gt;
+        &lt;p style="margin-left:5px"&gt;Content of section 3...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <div style="display: flex;">
+                                            <div style="flex: 1; background-color: #f1f1f1;">
+                                                <h2 style="margin-left:5px">Section 1</h2>
+                                                <p style="margin-left:5px">Content of section 1...</p>
+                                                <p style="margin-left:5px">Content of section 1...</p>
+                                            </div>
+                                            <div style="flex: 1; background-color: #e1e1e1;">
+                                                <h2 style="margin-left:5px">Section 2</h2>
+                                                <p style="margin-left:5px">Content of section 2...</p>
+                                                <p style="margin-left:5px">Content of section 2...</p>
+                                            </div>
+                                            <div style="flex: 1; background-color: #d1d1d1;">
+                                                <h2 style="margin-left:5px">Section 3</h2>
+                                                <p style="margin-left:5px">Content of section 3...</p>
+                                                <p style="margin-left:5px">Content of section 3...</p>
+                                            </div>
+                                        </div>
+                                        As already mentioned before, the &lt;div&gt; element is block level element, so it will always start on a new line. However, it can be styled to be inline element by using the <strong><em><ins>display: inline;</ins></em></strong> property.<br>
+                                        This will make the &lt;div&gt; element to no longer add a line break before and after the element, and will be displayed side by side instead of on top of each other.<br>
+                                        <br>Below is the example of using &lt;div&gt; as inline element:
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;div style="display: inline; background-color: #f1f1f1;"&gt;Section 1&lt;/div&gt;
+&lt;div style="display: inline; background-color: #e1e1e1;"&gt;Section 2&lt;/div&gt;
+&lt;div style="display: inline; background-color: #d1d1d1;"&gt;Section 3&lt;/div&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <div style="display: inline-block; background-color: #f1f1f1;">Section 1</div>
+                                        <div style="display: inline-block; background-color: #e1e1e1;">Section 2</div>
+                                        <div style="display: inline-block; background-color: #d1d1d1;">Section 3</div>
+                                        <br>
+                                        There is flex and grid in CSS that can be utilized to manage the layout structure. Flex is used to make it easier to design flexible responsive layout structure without using float or positioning. Below is the example of using flex to make a responsive layout:<br>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;div style="display: flex; flex-wrap: wrap; width: 33%"&gt;
+    &lt;div style="flex: 1; background-color: #f1f1f1;"&gt;Section 1&lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #e1e1e1;"&gt;Section 2&lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #d1d1d1;"&gt;Section 3&lt;/div&gt;
+    &lt;div style="flex: 1; background-color: #c1c1c1;"&gt;Section 4&lt;/div&gt;
+&lt;/div&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <div style="display: flex; flex-wrap: wrap; width: 33%;">
+                                            <div style="flex: 1; background-color: #f1f1f1;">Section 1</div>
+                                            <div style="flex: 1; background-color: #e1e1e1;">Section 2</div>
+                                            <div style="flex: 1; background-color: #d1d1d1;">Section 3</div>
+                                            <div style="flex: 1; background-color: #c1c1c1;">Section 4</div>
+                                        </div><br>
+                                        The grid offer a grid based layout system, with rows and columns. Below is the example of using grid to make a responsive layout:<br>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;div style="display: grid; grid-template-columns: 5% 15% 25% 35%"&gt;
+    &lt;div style="background-color: #f1f1f1;"&gt;Section 1&lt;/div&gt;
+    &lt;div style="background-color: #e1e1e1;"&gt;Section 2&lt;/div&gt;
+    &lt;div style="background-color: #d1d1d1;"&gt;Section 3&lt;/div&gt;
+    &lt;div style="background-color: #c1c1c1;"&gt;Section 4&lt;/div&gt;
+&lt;/div&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <div style="display: grid; grid-template-columns: 5% 15% 25% 35%;">
+                                            <div style="background-color: #f1f1f1;">Section 1</div>
+                                            <div style="background-color: #e1e1e1;">Section 2</div>
+                                            <div style="background-color: #d1d1d1;">Section 3</div>
+                                            <div style="background-color: #c1c1c1;">Section 4</div>
+                                        </div>
+                                    </li>
+
+
+                                </div>
+
+                                <!-- <dl> -->
+                                <div>
+                                    <li id="example8" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;dl&gt;</h3>
+                                        <ul>
+                                        <li>Used to define description list.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;dl&gt;
+    &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;Definition&lt;/dd&gt;
+&lt;/dl&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <dl>
+                                            <dt>Term</dt>
+                                            <dd>Definition</dd>
+                                        </dl>
+                                    </li>
+                                </div>
+
+                                <!-- <dt> -->
+                                <div>
+                                    <li id="example9" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;dt&gt;</h3>
+                                        <ul>
+                                        <li>Used to define term in a description list.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;dt&gt;Term&lt;/dt&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <dt>Term</dt>
+                                    </li>
+                                </div>
+
+                                <!-- <fieldset> -->
+                                <div>
+                                    <li id="example10" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;fieldset&gt;</h3>
+                                        <ul>
+                                        <li>Used to group related elements in a form.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;fieldset&gt;
+    &lt;legend&gt;Fieldset&lt;/legend&gt;
+    &lt;p&gt;Fieldset content...&lt;/p&gt;
+&lt;/fieldset&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <fieldset>
+                                            <legend>Fieldset</legend>
+                                            <p>Fieldset content...</p>
+                                        </fieldset>
+                                    </li>
+                                </div>
+
+                                <!-- <figcaption> -->
+                                <div>
+                                    <li id="example11" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;figcaption&gt;</h3>
+                                        <ul>
+                                        <li>Used to define caption for the &lt;figure&gt; element.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;figure&gt;
+    &lt;img src="media/eternal tsingshan.png" style="width: 100px; height: 100px;" alt="tsingshan"&gt;
+    &lt;figcaption&gt;Figure Caption&lt;/figcaption&gt;
+&lt;/figure&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <figure>
+                                            <img src="media/eternal tsingshan.png" style="width: 100px; height: 100px;" alt="tsingshan">
+                                            <figcaption>Figure Caption</figcaption>
+                                        </figure>
+                                    </li>
+                                </div>
+
+                                <!-- <figure> -->
+                                <div>
+                                    <li id="example12" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;figure&gt;</h3>
+                                        <ul>
+                                        <li>Used to define self-contained content, like illustrations, diagrams, photos, code listings, etc.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;figure&gt;
+    &lt;img src="media/eternal tsingshan.png" style="width: 100px; height: 100px;" alt="tsingshan"&gt;
+&lt;/figure&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <figure>
+                                            <img src="media/eternal tsingshan.png" style="width: 100px; height: 100px;" alt="tsingshan">
+                                        </figure>
+                                    </li>
+                                </div>
+
+                                <!-- <footer> -->
+                                <div>
+                                    <li id="example13" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;footer&gt;</h3>
+                                        <ul>
+                                        <li>Used to define footer for a document or a section.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;footer&gt;Footer&lt;/footer&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <footer>Footer</footer>
+                                        <h4>Below is the usage example combining &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; elements:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <header>Header</header>
+                                        <nav>Navigation</nav>
+                                        <main>Main Content</main>
+                                        <footer>Footer</footer><br>
+                                        *notes: the usage of these elements used to make the page more semantically correct, and also to make it easier for search engine to understand the structure of the page.
+                                    </li>
+                                </div>
+
+                                <!-- <form> -->
+                                <div>
+                                    <li id="example14" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;form&gt;</h3>
+                                        <ul>
+                                        <li>Used to define an HTML form for user input.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;form&gt;
+    &lt;input type="text"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <form>
+                                            <input type="text">
+                                            <input type="submit">
+                                        </form>
+                                    </li>
+                                </div>
+
+                                <!-- <h1>-<h6> -->
+                                <div>
+                                    <li id="example15" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;h1&gt;-&lt;h6&gt;</h3>
+                                        <ul>
+                                        <li>Used to define HTML headings.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <h1>Heading 1</h1>
+                                        <h2>Heading 2</h2>
+                                        <h3>Heading 3</h3>
+                                        <h4>Heading 4</h4>
+                                        <h5>Heading 5</h5>
+                                        <h6>Heading 6</h6>
+                                    </li>
+                                </div>
+
+                                <!-- <header> -->
+                                <div>
+                                    <li id="example16" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;header&gt;</h3>
+                                        <ul>
+                                        <li>Used to define header for a document or a section.<br>
+                                        Inside a pages, it is semantically better to use &lt;header&gt; element as header, followed by &lt;nav&gt; element for navigation, &lt;main&gt; element for main content, and &lt;footer&gt; element for footer.
+                                        </li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;header&gt;Header&lt;/header&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <header>Header</header>
+                                        <h4>Below is the usage example combining &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; elements:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <header>Header</header>
+                                        <nav>Navigation</nav>
+                                        <main>Main Content</main>
+                                        <footer>Footer</footer><br>
+                                        *notes: the usage of these elements used to make the page more semantically correct, and also to make it easier for search engine to understand the structure of the page.
+                                    </li>
+                                </div>
+
+                                <!-- <hr> -->
+                                <div>
+                                    <li id="example17" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;hr&gt;</h3>
+                                        <ul>
+                                        <li>Used to define a break in an HTML page.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;hr&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <hr>
+                                    </li>
+                                </div>
+
+                                <!-- <li> -->
+                                <div>
+                                    <li id="example18" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;li&gt;</h3>
+                                        <ul>
+                                        <li>Used to start list item in an ordered list, an unordered list, or a menu list.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;ul&gt;
+    &lt;li&gt;List Item&lt;/li&gt;
+&lt;/ul&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <ul>
+                                        <li>List Item</li>
+                                        </ul>
+                                    </li>
+                                </div>
+
+                                <!-- <main> -->
+                                <div>
+                                    <li id="example19" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;main&gt;</h3>
+                                        <ul>
+                                        <li>Used to define the main content of a document.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;main&gt;Main Content&lt;/main&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <main>Main Content</main>
+                                        <h4>Below is the usage example combining &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; elements:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <header>Header</header>
+                                        <nav>Navigation</nav>
+                                        <main>Main Content</main>
+                                        <footer>Footer</footer><br>
+                                        *notes: the usage of these elements used to make the page more semantically correct, and also to make it easier for search engine to understand the structure of the page.
+                                    </li>
+                                </div>
+
+                                <!-- <nav> -->
+                                <div>
+                                    <li id="example20" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;nav&gt;</h3>
+                                        <ul>
+                                        <li>Used to define navigation links.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;nav&gt;Navigation&lt;/nav&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <nav>Navigation</nav>
+                                        <h4>Below is the usage example combining &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; elements:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <header>Header</header>
+                                        <nav>Navigation</nav>
+                                        <main>Main Content</main>
+                                        <footer>Footer</footer><br>
+                                        *notes: the usage of these elements used to make the page more semantically correct, and also to make it easier for search engine to understand the structure of the page.
+                                    </li>
+                                </div>
+
+                                <!-- <noscript> -->
+                                <div>
+                                    <li id="example21" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;noscript&gt;</h3>
+                                        <ul>
+                                        <li>Used to define content to be displayed if scripts are not supported, or if scripts are disabled in the browser (works like <em>&lt;alt&gt;</em> attribute).</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;noscript&gt;No Script&lt;/noscript&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <noscript>No Script</noscript><br>
+                                        *notes: The content inside the <em>&lt;noscript&gt;</em> element will only be displayed if scripts are not supported, or are disabled in the browser.<br>
+                                    </li>
+                                </div>
+
+                                <!-- <ol> -->
+                                <div>
+                                    <li id="example22" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;ol&gt;</h3>
+                                        <ul>
+                                        <li>Used to define an ordered list.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;ol&gt;
+    &lt;li&gt;List Item&lt;/li&gt;
+&lt;/ol&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <ol>
+                                            <li>List Item</li>
+                                        </ol>
+                                    </li>
+                                </div>
+
+                                <!-- <p> -->
+                                <div>
+                                    <li id="example23" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;p&gt;</h3>
+                                        <ul>
+                                        <li>Used to define a paragraph.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;p&gt;Paragraph&lt;/p&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <p>Paragraph</p>
+                                    </li>
+                                </div>
+
+                                <!-- <pre> -->
+                                <div>
+                                    <li id="example24" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;pre&gt;</h3>
+                                        <ul>
+                                        <li>Used to define preformatted text.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;pre&gt;Preformatted&lt;/pre&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <pre>Preformatted</pre>
+                                    </li>
+                                </div>
+
+                                <!-- <section> -->
+                                <div>
+                                    <li id="example25" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;section&gt;</h3>
+                                        <ul>
+                                        <li>Used to define a section in a document, just like the use of &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; elements, but it is more general.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;section&gt;Section&lt;/section&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <section>Section</section>
+                                    </li>
+                                </div>
+
+                                <!-- <table> -->
+                                <div>
+                                    <li id="example26" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;table&gt;</h3>
+                                        <ul>
+                                        <li>Used to define a table.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;table&gt;Table&lt;/table&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <table class="table-norm">
+                                            <tr>
+                                              <th>Column 1</th>
+                                              <th>Column 2</th>
+                                              <th>Column 3</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Row 1, Cell 1</td>
+                                              <td>Row 1, Cell 2</td>
+                                              <td>Row 1, Cell 3</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Row 2, Cell 1</td>
+                                              <td>Row 2, Cell 2</td>
+                                              <td>Row 2, Cell 3</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Row 3, Cell 1</td>
+                                              <td>Row 3, Cell 2</td>
+                                              <td>Row 3, Cell 3</td>
+                                            </tr>
+                                          </table>                                          
+                                    </li>
+                                </div>
+
+                                <!-- <tfoot> -->
+                                <div>
+                                    <li id="example27" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;tfoot&gt;</h3>
+                                        <ul>
+                                        <li>Used to define footer for a table.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;tfoot&gt;Table Footer&lt;/tfoot&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <tfoot>Table Footer</tfoot>
+                                    </li>
+                                </div>
+
+                                <!-- <ul> -->
+                                <div>
+                                    <li id="example28" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;ul&gt;</h3>
+                                        <ul>
+                                        <li>Used to define an unordered list.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;ul&gt;
+    &lt;li&gt;List Item&lt;/li&gt;
+&lt;/ul&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <ul>
+                                            <li>List Item</li>
+                                        </ul>
+                                    </li>
+                                </div>
+
+                                <!-- <video> -->
+                                <div>
+                                    <li id="example29" style="display:none;">
+                                        <hr>
+                                        <h3>&lt;video&gt;</h3>
+                                        <ul>
+                                        <li>Used to define video, such as a movie clip or other video streams.</li>
+                                        </ul>
+                                        <h4>Example:</h4>
+                                        <pre>
+                                            <div class="code-wrapper"><code>&lt;video src="media/vid1.mp4" width="320" height="auto" controls&gt;&lt;/video&gt;</code></div>
+                                        </pre>
+                                        Above code will be rendered as:<br>
+                                        <video src="media/vid1.mp4" width="320" height="auto" controls></video>
+                                    </li>
+                                </div>
+                                <hr>
+                </div><br>
+
+            <li>Inline elements does not start on a new line, and only takes up as much width as necessary.</li>
+            <li>Here are the list of inline elements</li>
+            <ul class="threeColumn">
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example30')"> &lt;a&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example31')"> &lt;abbr&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example32')"> &lt;acronym&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example33')"> &lt;b&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example34')"> &lt;bdo&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example35')"> &lt;big&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example36')"> &lt;br&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example37')"> &lt;button&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example38')"> &lt;cite&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example39')"> &lt;code&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example40')"> &lt;dfn&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example41')"> &lt;em&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example42')"> &lt;i&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example43')"> &lt;img&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example44')"> &lt;input&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example45')"> &lt;kbd&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example46')"> &lt;label&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example47')"> &lt;map&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example48')"> &lt;object&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example49')"> &lt;output&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example50')"> &lt;q&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example51')"> &lt;samp&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example52')"> &lt;script&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example53')"> &lt;select&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example54')"> &lt;small&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example55')"> &lt;span&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example56')"> &lt;strong&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example57')"> &lt;sub&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example58')"> &lt;sup&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example59')"> &lt;textarea&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example60')"> &lt;time&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example61')"> &lt;tt&gt;</a></li>
+                <li class="threeColumn"><a href="#" onclick="toggleExample('example62')"> &lt;var&gt;</a></li>
+            </ul>
+            <div>
+
+                <!-- <a> -->
+                <div>
+                    <li id="example30" style="display:none;">
+                        <hr>
+                        <h3>&lt;a&gt;</h3>
+                        <ul>
+                        <li>Used to define a hyperlink, which is used to link from one page to another.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <a href="https://www.google.com">Google</a>
+                    </li>
+                </div>
+
+                <!-- <abbr> -->
+                <div>
+                    <li id="example31" style="display:none;">
+                        <hr>
+                        <h3>&lt;abbr&gt;</h3>
+                        <ul>
+                        <li>Used to define an abbreviation or an acronym.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <abbr title="World Health Organization">WHO</abbr>
+                    </li>
+                </div>
+
+                <!-- <acronym> -->
+                <div>
+                    <li id="example32" style="display:none;">
+                        <hr>
+                        <h3>&lt;acronym&gt;</h3>
+                        <ul>
+                        <li>Used to define an acronym.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;acronym title="World Health Organization"&gt;WHO&lt;/acronym&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <acronym title="World Health Organization">WHO</acronym>
+                    </li>
+                </div> 
+
+                <!-- <b> -->
+                <div>
+                    <li id="example33" style="display:none;">
+                        <hr>
+                        <h3>&lt;b&gt;</h3>
+                        <ul>
+                        <li>Used to define bold text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;b&gt;Bold&lt;/b&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <b>Bold</b>
+                    </li>
+                </div>
+
+                <!-- <bdo> -->
+                <div>
+                    <li id="example34" style="display:none;">
+                        <hr>
+                        <h3>&lt;bdo&gt;</h3>
+                        <ul>
+                        <li>Used to define the direction of the text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;bdo dir="rtl"&gt;Right to Left&lt;/bdo&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <bdo dir="rtl">Right to Left</bdo>
+                    </li>
+                </div>
+
+                <!-- <big> -->
+                <div>
+                    <li id="example35" style="display:none;">
+                        <hr>
+                        <h3>&lt;big&gt;</h3>
+                        <ul>
+                        <li>Used to define big text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;big&gt;Big&lt;/big&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <big>Big</big><br>
+                        *notes: <em>&lt;big&gt;</em> element is not recomended to use in HTML5. Use CSS instead.
+                    </li>
+                </div>
+
+                <!-- <br> -->
+                <div>
+                    <li id="example36" style="display:none;">
+                        <hr>
+                        <h3>&lt;br&gt;</h3>
+                        <ul>
+                        <li>Used to define a line break.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>Line 1&lt;br&gt;Line 2</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        Line 1<br>Line 2
+                    </li>
+                </div>
+
+                <!-- <button> -->
+                <div>
+                    <li id="example37" style="display:none;">
+                        <hr>
+                        <h3>&lt;button&gt;</h3>
+                        <ul>
+                        <li>Used to define a clickable button.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;button&gt;Click Me&lt;/button&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <button>Click Me</button>
+                    </li>
+                </div>
+
+                <!-- <cite> -->
+                <div>
+                    <li id="example38" style="display:none;">
+                        <hr>
+                        <h3>&lt;cite&gt;</h3>
+                        <ul>
+                        <li>Used to define the title of a work.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;cite&gt;Title&lt;/cite&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <cite>Title</cite>
+                    </li>
+                </div>
+
+                <!-- <code> -->
+                <div>
+                    <li id="example39" style="display:none;">
+                        <hr>
+                        <h3>&lt;code&gt;</h3>
+                        <ul>
+                        <li>Used to define computer code text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;code&gt;Code&lt;/code&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <code>Code</code>
+                    </li>
+                </div>
+
+                <!-- <dfn> -->
+                <div>
+                    <li id="example40" style="display:none;">
+                        <hr>
+                        <h3>&lt;dfn&gt;</h3>
+                        <ul>
+                        <li>Used to define a definition term.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;dfn&gt;Definition&lt;/dfn&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <dfn>Definition</dfn>
+                    </li>
+                </div>
+
+                <!-- <em> -->
+                <div>
+                    <li id="example41" style="display:none;">
+                        <hr>
+                        <h3>&lt;em&gt;</h3>
+                        <ul>
+                        <li>Used to define emphasized text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;em&gt;Emphasized&lt;/em&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <em>Emphasized</em>
+                    </li>
+                </div>
+
+                <!-- <i> -->
+                <div>
+                    <li id="example42" style="display:none;">
+                        <hr>
+                        <h3>&lt;i&gt;</h3>
+                        <ul>
+                        <li>Used to define italic text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;i&gt;Italic&lt;/i&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <i>Italic</i>
+                    </li>
+                </div>
+
+                <!-- <img> -->
+                <div>
+                    <li id="example43" style="display:none;">
+                        <hr>
+                        <h3>&lt;img&gt;</h3>
+                        <ul>
+                        <li>Used to define an image.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;img src="media/id.svg" alt="Image"&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <img src="media/id.svg" alt="Image">
+                    </li>
+                </div>
+
+                <!-- <input> -->
+                <div>
+                    <li id="example44" style="display:none;">
+                        <hr>
+                        <h3>&lt;input&gt;</h3>
+                        <ul>
+                        <li>Used to define an input control.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;input type="text"&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <input type="text">
+                    </li>
+                </div>
+
+                <!-- <kbd> -->
+                <div>
+                    <li id="example45" style="display:none;">
+                        <hr>
+                        <h3>&lt;kbd&gt;</h3>
+                        <ul>
+                        <li>Used to define keyboard input.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;kbd&gt;Ctrl + C&lt;/kbd&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <kbd>Ctrl + C</kbd>
+                    </li>
+                </div>
+
+                <!-- <label> -->
+                <div>
+                    <li id="example46" style="display:none;">
+                        <hr>
+                        <h3>&lt;label&gt;</h3>
+                        <ul>
+                            <li>Used to associate a label with an input element.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                    </li>
+                </div>
+
+                <!-- <map> -->
+                <div>
+                    <li id="example47" style="display:none;">
+                        <hr>
+                        <h3>&lt;map&gt;</h3>
+                        <ul>
+                        <li>Used to define an image map.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;img src="media/img1.png" alt="Image" usemap="#image-map"&gt;
+&lt;map name="image-map"&gt;
+    &lt;area target="_blank" alt="Rectangle" title="Rectangle" href="https://en.wikipedia.org/wiki/Rectangle" coords="16,182,226,52" shape="rect"&gt;
+&lt;/map&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as (try to hover over the rectangle):<br>
+                        <img src="media/img1.png" alt="Image" usemap="#image-map">
+                        <map name="image-map">
+                            <area target="_blank" alt="Rectangle" title="Rectangle" href="https://en.wikipedia.org/wiki/Rectangle" coords="16,182,226,52" shape="rect">
+                        </map>
+                    </li>
+                </div>
+
+                <!-- <object> -->
+                <div>
+                    <li id="example48" style="display:none;">
+                        <hr>
+                        <h3>&lt;object&gt;</h3>
+                        <ul>
+                        <li>Used to define a container for generic embedded object, such as an image, audio, PDF, or video.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;object data="media/Aspiring Indonesian.pdf" style="width: 800px; height: 500px;"&gt;&lt;/object&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <object data="media/Aspiring Indonesian.pdf" style="width: 800px; height: 500px;"></object>
+                    </li>
+                </div>
+
+                <!-- <output> -->
+                <div>
+                    <li id="example49" style="display:none;">
+                        <hr>
+                        <h3>&lt;output&gt;</h3>
+                        <ul>
+                            <li>Used to define the result of a calculation or user interaction.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper">
+                                 <code>
+&lt;form&gt;
+    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num1" value="5"&gt; *
+    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num2" value="3"&gt; =
+    &lt;output id="result"&gt;&lt;/output&gt;
+    &lt;button type="button" onclick="calculate()"&gt;Calculate&lt;/button&gt;
+
+&lt;script&gt;
+function calculate() {
+    const num1 = parseInt(document.getElementById('num1').value);
+    const num2 = parseInt(document.getElementById('num2').value);
+    document.getElementById('result').value = num1 * num2; 
+}
+&lt;/script&gt;
+                                  </code>
+                             </div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <form>
+                            <input type="text" pattern="\d*" inputmode="numeric" id="num1" value="5"> *
+                            <input type="text" pattern="\d*" inputmode="numeric" id="num2" value="3"> =
+                            <output id="result"></output>
+                            <button type="button" onclick="calculate()">Calculate</button>
+                        </form>
+                    </li>
+                </div>
+
+                <!-- <q> -->
+                <div>
+                    <li id="example50" style="display:none;">
+                        <hr>
+                        <h3>&lt;q&gt;</h3>
+                        <ul>
+                        <li>Used to define a short quotation.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;q&gt;Quotation&lt;/q&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <q>Quotation</q>
+                    </li>
+                </div>
+
+                <!-- <samp> -->
+                <div>
+                    <li id="example51" style="display:none;">
+                        <hr>
+                        <h3>&lt;samp&gt;</h3>
+                        <ul>
+                        <li>Used to define sample output from a computer program.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;samp&gt;Sample Output&lt;/samp&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <samp>Sample Output</samp>
+                    </li>
+                </div>
+
+                <!-- <script> -->
+                <div>
+                    <li id="example52" style="display:none;">
+                        <hr>
+                        <h3>&lt;script&gt;</h3>
+                        <ul>
+                        <li>Used to define a client-side script, such as JavaScript.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;document.getElementById("demo").innerHTML = "Hello JavaScript!";&lt;/script&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <p id="demo"></p>
+                        <script>document.getElementById("demo").innerHTML = "Hello JavaScript!";</script>
+                    </li>
+                </div>
+
+                <!-- <select> -->
+                <div>
+                    <li id="example53" style="display:none;">
+                        <hr>
+                        <h3>&lt;select&gt;</h3>
+                        <ul>
+                        <li>Used to define a drop-down list.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;select&gt;
+    &lt;option value="1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="2"&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <select>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                    </li>
+                </div>
+
+                <!-- <small> -->
+                <div>
+                    <li id="example54" style="display:none;">
+                        <hr>
+                        <h3>&lt;small&gt;</h3>
+                        <ul>
+                        <li>Used to define small text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;small&gt;Small&lt;/small&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <small>Small</small>
+                    </li>
+                </div>
+
+                <!-- <span> -->
+                <div>
+                    <li id="example55" style="display:none;">
+                        <hr>
+                        <h3>&lt;span&gt;</h3>
+                        <ul>
+                        <li>Used to define a section in a document.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;p&gt;This &lt;span style="color:color:rgb(69, 28, 182)"&gt;Section&lt;/span&gt; use span to define the style for specific part&lt;/p&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <p>This <span style="color:rgb(69, 28, 182)">Section</span> use span to define the style for specific part</p>
+                    </li>
+                </div>
+
+                <!-- <strong> -->
+                <div>
+                    <li id="example56" style="display:none;">
+                        <hr>
+                        <h3>&lt;strong&gt;</h3>
+                        <ul>
+                        <li>Used to define important text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;strong&gt;Strong&lt;/strong&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <strong>Strong</strong>
+                    </li>
+                </div>
+
+                <!-- <sub> -->
+                <div>
+                    <li id="example57" style="display:none;">
+                        <hr>
+                        <h3>&lt;sub&gt;</h3>
+                        <ul>
+                        <li>Used to define subscripted text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;sub&gt;Subscript&lt;/sub&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <sub>Subscript</sub>
+                    </li>
+                </div>
+
+                <!-- <sup> -->
+                <div>
+                    <li id="example58" style="display:none;">
+                        <hr>
+                        <h3>&lt;sup&gt;</h3>
+                        <ul>
+                        <li>Used to define superscripted text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;sup&gt;Superscript&lt;/sup&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <sup>Superscript</sup>
+                    </li>
+                </div>
+
+                <!-- <textarea> -->
+                <div>
+                    <li id="example59" style="display:none;">
+                        <hr>
+                        <h3>&lt;textarea&gt;</h3>
+                        <ul>
+                        <li>Used to define a multi-line text input control.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;textarea&gt;Text&lt;/textarea&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <textarea>Text</textarea>
+                    </li>
+                </div>
+
+                <!-- <time> -->
+                <div> 
+                    <li id="example60" style="display:none;">
+                       <hr>   
+                       <h3>&lt;time&gt;</h3>
+                       <ul>
+                          <li>Represents a specific date and/or time in a machine-readable format.</li>
+                          <li>Improves accessibility for screen readers and search engine understanding of timestamps.</li>
+                          <li>Use the 'datetime' attribute to specify the machine-readable value.</li>
+                       </ul>
+                  
+                       <h4>Example:</h4>
+                       <p>The meeting will be held on <time datetime="2024-09-15 19:00">September 15th, 2024 at 7:00 PM</time>.</p> 
+                       
+                       <p><b>Explanation:</b> While the user sees "September 15th, 2024 at 7:00 PM", the <code>datetime="2024-09-15 19:00"</code> attribute provides a standardized format for browsers and search engines</p>
+                    </li>
+                </div>
+
+                <!-- <tt> -->
+                <div>
+                    <li id="example61" style="display:none;">
+                        <hr>
+                        <h3>&lt;tt&gt;</h3>
+                        <ul>
+                        <li>Used to define teletype text.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;tt&gt;Teletype&lt;/tt&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <tt>Teletype</tt><br>
+                        *notes: <em>&lt;tt&gt;</em> element is not recomended to use in HTML5. Consider using <em>&lt;kbd&gt;</em> element for keyboard input, <em>&lt;var&gt;</em> element for variables, <em>&lt;code&gt;</em> element for code snippets, <em>&lt;samp&gt;</em> element for sample output, or use CSS instead.
+                    </li>
+                </div>
+                
+                <!-- <var> -->
+                <div>
+                    <li id="example62" style="display:none;">
+                        <hr>
+                        <h3>&lt;var&gt;</h3>
+                        <ul>
+                        <li>Used to define a variable.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre>
+                            <div class="code-wrapper"><code>15&lt;var&gt;x&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt; + 6&lt;var&gt;x&lt;/var&gt; + 9 = 0</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        15<var>x</var><sup>2</sup> + 6<var>x</var> + 9 = 0
+                    </li>
+                </div>
+
+            </div>
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec18" onclick="toggleSection('subsec18')">HTML Classes and Id</h3>
+        <div class="subsection" id="subsec18Content" style="display:none;">
+            <ul>
+                <li>The <code>class</code> attribute is used to specify a class for an HTML element.<br>
+                Multiple HTML elements can share the same class.<br></li>
+                <li>Below is an example of how to use the <code>class</code> attribute:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;style&gt;
+.xmpl {
+  color: teal;
+  font-family: Helvetica;
+  font-size:25px;
+  font-weight: bold;
+}
+&lt;/style&gt;
+
+&lt;p class="example"&gt;This is an example paragraph with class xmpl.&lt;/p&gt;</code></div>
+                </pre>
+                The code above will be rendered as:<br>
+                <style>
+                    .xmpl {
+                        color: rgb(7, 59, 59);
+                        font-family: Helvetica;
+                        font-size:25px;
+                        font-weight: bold;
+                    }
+
+                    .y {
+                        background-color: rgb(197, 65, 65);
+                        width:40%;
+                    }
+                </style>
+                <p class="xmpl">This is an example paragraph with class xmpl.</p></li>
+                </li>
+                <li>It is also possible to use the <code>class</code> attribute inside a <code>&lt;span&gt;</code> like this:<br>
+                <pre>
+                    <div class="code-wrapper"><code>This is how to use class inside of &lt;span class="xmpl"&gt;Span&lt;/span&gt; element.</code></div>
+                </pre>
+                The code above will be rendered as:<br>
+                This is how to use class inside of <span class="xmpl">Span</span> element.<br>
+                It is also possible to have multiple classes for an element, like this:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;p class="xmpl y"&gt;This is an example paragraph with multiple classes.&lt;/p&gt;</code></div>
+                </pre>
+                The code above will be rendered as:
+                <p class="xmpl y">This is an example paragraph with multiple classes.</p>
+                The class name can also be used by JavaScript to perform certain actions by using the <code>.getElementsByClassName()</code> method which will be learned later on.
+                </li>
+                <br>
+
+                <li>The <code>id</code> attribute is used to specify a unique id for an HTML element.<br>
+                The id must be unique within the HTML document.<br></li>
+                <li>Below is an example of how to use the <code>id</code> attribute:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;style&gt;
+#xmple {
+  color: rgb(29, 126, 26);
+  font-family: sans-serif;
+  font-size:10px;
+  font-weight: bold;
+}
+&lt;/style&gt;
+&lt;p id="xmple"&gt;This is an example paragraph with id example.&lt;/p&gt;</code></div>
+                </pre>
+                The code above will be rendered as:<br>
+                <style>
+                    #xmple {
+                        color: rgb(29, 126, 26);
+                        font-family: sans-serif;
+                        font-size:10px;
+                        font-weight: bold;
+                    }
+                </style>
+                <p id="xmple">This is an example paragraph with id example.</p>
+                </li>
+                <li>The difference between <code>class</code> and <code>id</code> is that the <code>class</code> attribute can be used multiple times in the same document, while the <code>id</code> attribute can only be used once in the same document.</li>
+                <li><code>id</code> can also used to add HTML Bookmarks, which can be accessed by using the <code>#</code> symbol followed by the <code>id</code> name. For example:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;a href="#section0"&gt;Go to section0&lt;/a&gt;</code></div>
+                </pre>
+                The code above will be rendered as:<br>
+                <a href="#section0">Go to section0</a>
+                </li>
+                <li>The id name can also be used by JavaScript to perform certain actions by using the <code>document.getElementById()</code> method which will be learned later on.</li>
+            </ul>
+        </div>
+
     </div>
 
     <h2 class="section" id="section2" onclick="toggleSection('section2')">Section 2: CSS</h2>
     <div id="section2Content" style="display: none;">
-        <div class="roboto">
-        <h3>CSS Syntax</h3>
+
+        <h3 class="subsection" id="subsec21" onclick="toggleSection('subsec21')">CSS Syntax</h3>
+        <div class="subsection" id="subsec21Content" style="display:none;">
         <ul>
             <li>As mentioned before, CSS can be used in 3 ways: inline, internal, and external.<br>
             The syntax of CSS is as follows:<br></li>
@@ -767,8 +2344,9 @@
                 <div class="code-wrapper"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></div>
             </pre></li>
         </ul>
-        <hr>
         </div>
+        <hr>
+
     </div>
 
     <script>
@@ -821,6 +2399,73 @@
             }
         }
 
+        var lastOpenedExampleId = null; // Track the last opened example
+
+        function toggleExample(exampleId) {
+            event.preventDefault(); // Assuming you still want to prevent default behavior
+            var example = document.getElementById(exampleId);
+
+            // Close any currently open example (if it's not the current one)
+            if (lastOpenedExampleId !== null && lastOpenedExampleId !== exampleId) {
+                var lastOpenedExample = document.getElementById(lastOpenedExampleId);
+                lastOpenedExample.style.display = "none";
+            }
+
+            // Toggle the current example 
+            if (example.style.display !== "none") {
+                example.style.display = "none";
+            } else {
+                example.style.display = "block";
+            }
+
+            lastOpenedExampleId = example.style.display === "block" ? exampleId : null; // Update tracker
+        }
+
+        const canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d');
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+        
+        canvas.addEventListener('mousedown', (event) => {
+            isDrawing = true;
+            [lastX, lastY] = [event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top];
+        });
+
+        canvas.addEventListener('mousemove', (event) => {
+            if (isDrawing) {
+                const currentX = event.clientX - canvas.getBoundingClientRect().left;
+                const currentY = event.clientY - canvas.getBoundingClientRect().top;
+                draw(lastX, lastY, currentX, currentY);
+                [lastX, lastY] = [currentX, currentY];
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        function draw(startX, startY, endX, endY) {
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.lineJoin = 'round';
+            context.lineCap = 'round';
+            context.beginPath();
+            context.moveTo(startX, startY);
+            context.lineTo(endX, endY);
+            context.stroke();
+        }
+
+        function clearCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function calculate() {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            document.getElementById('result').value = num1 * num2; 
+        }
+        
     </script>
     
 </body>
