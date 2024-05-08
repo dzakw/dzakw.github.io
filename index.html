@@ -34,6 +34,8 @@
                     <li><a href="#subsec16" onclick="openSection('subsec16'); openSection('section1')">HTML Lists</a></li>
                     <li><a href="#subsec17" onclick="openSection('subsec17'); openSection('section1')">HTML Block and Inline Elements</a></li>
                     <li><a href="#subsec18" onclick="openSection('subsec18'); openSection('section1')">HTML Classes and Id</a></li>
+                    <li><a href="#subsec19" onclick="openSection('subsec19'); openSection('section1')">HTML Iframes</a></li>
+                    <li><a href="#subsec20" onclick="openSection('subsec20'); openSection('section1')">HTML Semantics</a></li>
                 </ul>
                 <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
             </ul>
@@ -97,6 +99,40 @@
                 Example: <cite>Harry Potter and the Deathly Hallows</cite> by J.K. Rowling<br></li>
                 <li>&lt;bdo&gt; tag is used to override the current text direction, the <q>dir</q> attribute can be filled with <u>rtl</u> for right to left, or <u>ltr</u> for left to right<br>
                 Example: <bdo dir="rtl">This text will be written from right to left</bdo><br></li>
+            </ul>
+            <hr>
+            <ul>
+                <li>A file path describes the location of a file in a web site's folder structure. It can be absolute or relative.</li>
+                <li>An absolute file path is the full URL to a file, like below example:<br>
+                <pre><code>&lt;img src="https://www.w3schools.com/images/picture.jpg" alt="Tiger" style="width:500px;height:600px"&gt;</code></li></pre>
+                Above code will display an image from the URL <a href="https://www.w3schools.com/images/picture.jpg" target="_blank">https://www.w3schools.com/images/picture.jpg</a></li>
+                <li>A relative file path points to a file <strong>relative</strong> to the current page, like below example:<br>
+                <pre><code>&lt;img src="media/img1.png" alt="Tiger" style="width:500px;height:600px"&gt;</code></li></pre>
+                Above code will display an image from the URL <a href="media/img1.png" target="_blank">media/img1.png</a> which is located in the same folder as the current page.</li><br>
+                Below is file path example:<br>
+                <table>
+                    <tr style="background-color: #c1c1c1;">
+                        <th>Path</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr style="background-color: #e4e4e4;">
+                        <td>&lt;img src="picture.jpg"&gt;</td>
+                        <td>The "picture.jpg" file is located in the same folder as the current page</td>
+                    </tr>
+                    <tr style="background-color: #e4e4e4;">
+                        <td>&lt;img src="images/picture.jpg"&gt;</td>
+                        <td>The "picture.jpg" file is located in the images folder in the current folder</td>
+                    </tr>
+                    <tr style="background-color: #e4e4e4;">
+                        <td>&lt;img src="/images/picture.jpg"&gt;</td>
+                        <td>The "picture.jpg" file is located in the images folder at the root of the current web</td>
+                    </tr>
+                    <tr style="background-color: #e4e4e4;">
+                        <td>&lt;img src="../picture.jpg"&gt;</td>
+                        <td>The "picture.jpg" file is located in the folder one level up from the current folder</td>
+                    </tr>
+                </table>
+                <li>The best practice is to use relative file path, because it will make the website more portable and easier to maintain.</li>
             </ul>
         </div>
         <hr>
@@ -2325,6 +2361,64 @@ function calculate() {
                 <li>The id name can also be used by JavaScript to perform certain actions by using the <code>document.getElementById()</code> method which will be learned later on.</li>
             </ul>
         </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec19" onclick="toggleSection('subsec19')">HTML Iframes</h3>
+        <div class="subsection" id="subsec19Content" style="display:none;">
+            <ul>
+                <li>
+                    The <code>&lt;iframe&gt;</code> tag is used to embed another webpage within the current page.<br>
+                    Below is the syntax of the <code>&lt;iframe&gt;</code> tag:<br>
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;iframe src="URL"&gt;&lt;/iframe&gt;</code></div>
+                    </pre>
+                    The <code>src</code> attribute specifies the URL of the page to embed.<br>
+                    The <code>width</code> and <code>height</code> attributes can be used to specify the size of the iframe.<br>
+                    It is recomended to use the <code>title</code> attribute to describe the content of the iframe for better accessibility.<br>
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" width="800" height="300" title="page2"&gt;&lt;/iframe&gt;</code></div>
+                    </pre>
+                    The code above will be rendered as:<br>
+                    <iframe src="page2.html" width="800" height="300" title="page2"></iframe><br>
+                    Just like regular HTML elements, the <code>&lt;iframe&gt;</code> width and height can also styled like this:<br>
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" style="width: 800px; height: 300px;" title="Google"&gt;&lt;/iframe&gt;</code></div>
+                    </pre>
+                    Other than this, it is also possible to remove the border of an iframe like this:<br>
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" style="border: none;" title="page2"&gt;&lt;/iframe&gt;</code></div>
+                    </pre>
+                    The code above will be rendered as:<br>
+                    <iframe src="page2.html" style="border: none;" title="page2"></iframe>
+                    It is also possible to change size, style and color of the border like this:<br>
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" style="border: 2px dashed red;" title="page2"&gt;&lt;/iframe&gt;</code></div>
+                    </pre>
+                    The code above will be rendered as:<br>
+                    <iframe src="page2.html" style="border: 2px dashed red;" title="page2"></iframe>
+                    An iframe can also used as target for a link, like this:<br>
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;a href="page2.html" target="iframe"&gt;Open page2 in iframe&lt;/a&gt;
+&lt;iframe name="iframe" title="iframe"&gt;&lt;/iframe&gt;</code></div>
+                    </pre>
+                    The code above will be rendered as:<br>
+                    <div style="display:flex; flex-wrap:wrap; width:fit-content;">
+                        <div style="flex: 1; margin-right: 10px"><a href="page1.html" target="iframe">Open page1 in iframe</a><br></div>
+                        <div style="flex: 1;"><a href="page2.html" target="iframe">Open page2 in iframe</a><br></div>
+                    </div>
+                    <iframe name="iframe" title="iframe"></iframe>
+                </li>
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec20" onclick="toggleSection('subsec20')">HTML Semantics</h3>
+        <div class="subsection" id="subsec20Content" style="display: none;">
+            <ul>
+                <li style="list-style-type: none;"><h4>HTML Head </h4></li>
+            </ul>
+        </div>
+        <hr>
 
     </div>
 
