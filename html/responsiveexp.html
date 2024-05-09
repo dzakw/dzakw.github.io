@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Example</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        font-family: Verdana;
+        }
+
+        .menu {
+            float: left;
+            width: 20%;
+        }        
+
+        .menuitem {
+            padding: 8px;
+            margin-top: 7px;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 18px;
+        }
+
+        .menuitem:hover {
+            background-color: #e5e5e5;
+        }
+
+        .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+        }
+
+        .right {
+            background-color: lightblue;
+            float: left;
+            width: 20%;
+            padding: 10px 15px;
+            margin-top: 7px;
+        }
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (max-width:800px) {
+            /* For tablets: */
+            .main {
+                width: 80%;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            /* For mobile phones: */
+            .menu, .main, .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #ffffff;">
+    <div style="background-color: #f1f1f1; padding: 15px;">
+        <h1>Responsive Website Mockup Example</h1>
+        <h3>Resize the width of this view</h3>
+    </div>
+    
+    <div style="overflow:auto">
+        <div class="menu">
+            <div class="menuitem">Menu 1</div>
+            <div class="menuitem">Menu 2</div>
+            <div class="menuitem">Menu 3</div>
+            <div class="menuitem">Menu 4</div>
+        </div>
+
+        <div class="main">
+            <h2>Indonesia</h2>
+            <p>Indonesia is a country in Southeast Asia and Oceania, between the Indian and Pacific oceans. It consists of more than seventeen thousand islands, including Sumatra, Java, Borneo, Sulawesi, and New Guinea. Indonesia is the world's largest island country and the 14th-largest country by land area, at 1,904,569 square kilometers (735,358 square miles). With over 267 million people, it is the world's 4th-most-populous country as well as the most-populous Muslim-majority country. Java, the world's most populous island, is home to more than half of the country's population.</p>
+            <div style="display:flex">
+                <div style="flex:1"><img src="../media/rendang.jpg" alt="Rendang"></div>
+                <div style="flex:1"><img src="../media/bali.jpg" alt="Bali"></div>
+                <div style="flex:1"><img src="../media/reog.jpg" alt="Reog Ponorogo"></div>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>Indonesia's Best Destination</h2>
+            <p>Bali, Lombok, Raja Ampat, Komodo Island, Borobudur Temple, Prambanan Temple, Mount Bromo, Bunaken, Tana Toraja</p>
+            <h2>Indonesia's Best Food</h2>
+            <p>Nasi Goreng, Sate, Rendang, Soto, Gado-Gado, Nasi Padang, Nasi Uduk, Nasi Kuning, Nasi Liwet, Nasi Tumpeng, Nasi Pecel</p>
+            <h2>Indonesia's Best Culture</h2>
+            <p>Wayang, Batik, Angklung, Reog, Kecak, Pencak Silat, Saman, Tor-Tor, Jaipong, Zapin, Tari Piring, Tari Topeng, Tari Kecak</p>
+        </div>
+    </div>
+</body>
+</html>

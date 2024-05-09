@@ -1,4 +1,14 @@
 /* This is how to use external CSS style */
+pre {
+  white-space: pre-wrap;       /* Allow long lines to wrap */
+  overflow-x: auto;            /* Add a horizontal scrollbar if needed */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 blockquote.headings {
   font-family: 'Roboto';
   font-size: 120%;

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Learn Frontend</title> <!-- This is how to write comment in HTML -->
     <link rel="stylesheet" href="css/styles.css"> <!-- This is how to link external css file -->
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAuwAAAAAAAADdAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERARERERERERAgERERERERAjIBERERERAjIyARERERAjICMgERERAjIBAjIBERECIBEQIyAREQABERECMgERERERERAjIBEREREREQIyARERERERECMgERERERERAiAREREREREQABERERERERERERERERERERH//wAA+/8AAPH/AADg/wAAwH8AAIA/AAAEHwAADg8AAB8HAAD/gwAA/8EAAP/gAAD/8AAA//gAAP//AAD//wAA" rel="icon" type="image/x-icon"> <!-- This is how to add favicon -->
@@ -36,6 +39,7 @@
                     <li><a href="#subsec18" onclick="openSection('subsec18'); openSection('section1')">HTML Classes and Id</a></li>
                     <li><a href="#subsec19" onclick="openSection('subsec19'); openSection('section1')">HTML Iframes</a></li>
                     <li><a href="#subsec20" onclick="openSection('subsec20'); openSection('section1')">HTML Semantics</a></li>
+                    <li><a href="#subsec21" onclick="openSection('subsec21'); openSection('section1')">HTML Responsive</a></li>
                 </ul>
                 <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
             </ul>
@@ -174,13 +178,13 @@
                 <pre>
                     <div class="code-wrapper"><code>&lt;a href="https://github.com/dzakw"&gt;this is link&lt;/a&gt;</code></div>
                 </pre>
-                <li>Relative URLs are URLs that only include the path to the page, like <a href="page1.html" target="_blank">this is link</a><br>
+                <li>Relative URLs are URLs that only include the path to the page, like <a href="html/page1.html" target="_blank">this is link</a><br>
                 the syntax are as follows:<br></li>
                 <pre>
-                    <div class="code-wrapper"><code>&lt;a href="page1.html"&gt;this is link&lt;/a&gt;</code></div>
+                    <div class="code-wrapper"><code>&lt;a href="html/page1.html"&gt;this is link&lt;/a&gt;</code></div>
                 </pre>
                 <li>A link can also styled as a button like this one:</li><br>
-                <a href="page1.html" target="_blank" style="background-color: teal; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Button to Page1</a>
+                <a href="html/page1.html" target="_blank" style="background-color: teal; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Button to Page1</a>
                 </ul>
         </div>
         <hr>
@@ -198,7 +202,7 @@
                 <li>The <q>alt</q> attribute is used to specify an alternate text for an image, if the image cannot be displayed like in example below:</li>
                 <img src="media/eternal.png" alt="Eternal Tsingshan"><br>
                 <li>Images can also be used as a link, like this:</li>
-                <a href="page1.html" target="_blank">
+                <a href="html/page1.html" target="_blank">
                     <img src="media/cc63dfd72735a912e64ec9279fb18ba23c06a21d-1177x589.webp" alt="Frieren" style="width: 200px; height: auto;">
                 </a><br>
                 <hr>
@@ -2376,35 +2380,35 @@ function calculate() {
                     The <code>width</code> and <code>height</code> attributes can be used to specify the size of the iframe.<br>
                     It is recomended to use the <code>title</code> attribute to describe the content of the iframe for better accessibility.<br>
                     <pre>
-                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" width="800" height="300" title="page2"&gt;&lt;/iframe&gt;</code></div>
+                        <div class="code-wrapper"><code>&lt;iframe src="html/page2.html" width="800" height="300" title="page2"&gt;&lt;/iframe&gt;</code></div>
                     </pre>
                     The code above will be rendered as:<br>
-                    <iframe src="page2.html" width="800" height="300" title="page2"></iframe><br>
+                    <iframe src="html/page2.html" width="800" height="300" title="page2"></iframe><br>
                     Just like regular HTML elements, the <code>&lt;iframe&gt;</code> width and height can also styled like this:<br>
                     <pre>
-                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" style="width: 800px; height: 300px;" title="Google"&gt;&lt;/iframe&gt;</code></div>
+                        <div class="code-wrapper"><code>&lt;iframe src="html/page2.html" style="width: 800px; height: 300px;" title="Google"&gt;&lt;/iframe&gt;</code></div>
                     </pre>
                     Other than this, it is also possible to remove the border of an iframe like this:<br>
                     <pre>
-                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" style="border: none;" title="page2"&gt;&lt;/iframe&gt;</code></div>
+                        <div class="code-wrapper"><code>&lt;iframe src="html/page2.html" style="border: none;" title="html/page2"&gt;&lt;/iframe&gt;</code></div>
                     </pre>
                     The code above will be rendered as:<br>
-                    <iframe src="page2.html" style="border: none;" title="page2"></iframe>
+                    <iframe src="html/page2.html" style="border: none;" title="page2"></iframe><br>
                     It is also possible to change size, style and color of the border like this:<br>
                     <pre>
-                        <div class="code-wrapper"><code>&lt;iframe src="page2.html" style="border: 2px dashed red;" title="page2"&gt;&lt;/iframe&gt;</code></div>
+                        <div class="code-wrapper"><code>&lt;iframe src="html/page2.html" style="border: 2px dashed red;" title="page2"&gt;&lt;/iframe&gt;</code></div>
                     </pre>
                     The code above will be rendered as:<br>
-                    <iframe src="page2.html" style="border: 2px dashed red;" title="page2"></iframe>
+                    <iframe src="html/page2.html" style="border: 2px dashed red;" title="page2"></iframe><br>
                     An iframe can also used as target for a link, like this:<br>
                     <pre>
-                        <div class="code-wrapper"><code>&lt;a href="page2.html" target="iframe"&gt;Open page2 in iframe&lt;/a&gt;
+                        <div class="code-wrapper"><code>&lt;a href="html/page2.html" target="iframe"&gt;Open page2 in iframe&lt;/a&gt;
 &lt;iframe name="iframe" title="iframe"&gt;&lt;/iframe&gt;</code></div>
                     </pre>
                     The code above will be rendered as:<br>
                     <div style="display:flex; flex-wrap:wrap; width:fit-content;">
-                        <div style="flex: 1; margin-right: 10px"><a href="page1.html" target="iframe">Open page1 in iframe</a><br></div>
-                        <div style="flex: 1;"><a href="page2.html" target="iframe">Open page2 in iframe</a><br></div>
+                        <div style="flex: 1; margin-right: 10px"><a href="html/page1.html" target="iframe">Open page1 in iframe</a><br></div>
+                        <div style="flex: 1;"><a href="html/page2.html" target="iframe">Open page2 in iframe</a><br></div>
                     </div>
                     <iframe name="iframe" title="iframe"></iframe>
                 </li>
@@ -2415,10 +2419,114 @@ function calculate() {
         <h3 class="subsection" id="subsec20" onclick="toggleSection('subsec20')">HTML Semantics</h3>
         <div class="subsection" id="subsec20Content" style="display: none;">
             <ul>
-                <li style="list-style-type: none;"><h4>HTML Head </h4></li>
+                <li style="list-style-type: none;"><h4>HTML <code>&lt;head&gt;</code> element </h4></li>
+                <li>The <code>&lt;head&gt;</code> element is a container for metadata (data about data) and is placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag.<br></li>
+                <li>Metadata is data about the HTML document. Metadata is not displayed, but will used by the browsers.</li>
+                <li>Metadata typically define the document title, character set, styles, scripts, and other meta information.</li>
+                <li>Below is some usage of the <code>&lt;meta&gt;</code> tag inside the <code>&lt;head&gt;</code> element:</li><br>
+                    <ul>
+                        <li style="list-style-type:none;">Define the character set used:</li>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;meta charset="UTF-8"&gt;</code></div>
+                        </pre>
+                        <li style="list-style-type:none;">Define keywords for search engines:</li>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;</code></div>
+                        </pre>
+                        <li style="list-style-type:none;">Define a description of your web page:</li>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;meta name="description" content="Learn Frontend"&gt;</code></div>
+                        </pre>
+                        <li style="list-style-type:none;">Define the author of a page:</li>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;meta name="author" content="Iqbal Dzakwan"&gt;</code></div>
+                        </pre>
+                        <li style="list-style-type:none;">Refresh document every 30 seconds:</li>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;meta http-equiv="refresh" content="30"&gt;</code></div>
+                        </pre>
+                        <li style="list-style-type:none;">Set the viewport to make your website look good on all devices:</li>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></div>
+                        </pre>
+                        <li style="list-style-type:none;">The viewport is the user's visible area of a web page. It should be included in every web page.</li>
+                    </ul>
+                    <br>
+                </li>
+                <li><code>&lt;head&gt;</code> element is a container for following elements:<br>
+                    <ul>
+                        <li><code>&lt;title&gt;</code> - defines a title for the document. It will display the title in the browser's title bar</li>
+                        <li><code>&lt;base&gt;</code> - specifies the base URL/target for all relative URLs in a document</li>
+                        <li><code>&lt;link&gt;</code> - defines the relationship between a document and an external resource (most used to link to stylesheets)</li>
+                        <li><code>&lt;meta&gt;</code> - provides metadata about the HTML document</li>
+                        <li><code>&lt;style&gt;</code> - defines the style information for a document</li>
+                        <li><code>&lt;script&gt;</code> - defines client-side JavaScript (only put critical script here, for less critical script, put before <code>&lt;/body&gt;</code>)</li>
+                        <li><code>&lt;noscript&gt;</code> - defines an alternate content for users that have disabled scripts in their browser</li>
+                    </ul>
+                </li>
+                <li style="list-style-type: none;"><h4>HTML Layout</h4></li>
+                <li>HTML has some semantics elements that can be used to define the structure of a web page.</li>
+                <li>Below is some usage of the HTML semantics elements:</li>
+                <div style="display:flex; flex-wrap: wrap; width: 100%;">
+                    <div style="flex: 1;">
+                        <img src="media/html layout.gif" alt="HTML5 Semantic Elements" style="width:250px; height: auto; margin-right: 1%;">
+                    </div>
+                    <div style="flex: 6;">
+                        <ul>
+                            <li><code>&lt;header&gt;</code> - defines a header for a document or a section</li>
+                            <li><code>&lt;nav&gt;</code> - defines navigation links</li>
+                            <li><code>&lt;section&gt;</code> - defines a section in a document</li>
+                            <li><code>&lt;article&gt;</code> - defines an article</li>
+                            <li><code>&lt;aside&gt;</code> - defines content aside from the page content</li>
+                            <li><code>&lt;footer&gt;</code> - defines a footer for a document or a section</li>
+                        </ul>
+                    </div>
+                </div>
+                <li>There are four different techniques to create a layout in HTML:<br>
+                <ul>
+                    <li>CSS Framework</li>
+                    <li>Float Property</li>
+                    <li>Flexbox</li>
+                    <li>Grid</li>
+                </ul>
+                </li>
+                <li>The fastest way is to use CSS Framework. CSS Framework is just like Bootstrap, There actually exist Bootstrap Vue. further detail can be accessed via <a href="https://bootstrap-vue.org/" target="_blank">Bootstrap Vue</a></li>
+                <li>Next is by using the float property. The float property is used for positioning and formatting content e.g. let an image float left to the text in a container.<br>
+                However, floating elements are tied to the document flow, which may harm the layout of the document.<br>
+                Below is an example of how to use the float property:<br>
+                </li>
+                <div>
+                    <iframe src="html/floatexp.html" width="1500" height="759" title="Float Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                </div><br>
+                <li>Next is by using Flexbox. Use of flexbox ensures that elements behave predictably when the page layout must accommodate different screen sizes and different display devices.<br>
+                Below is an example of how to use Flexbox:<br>
+                </li>
+                <div>
+                    <iframe src="html/flexboxexp.html" width="1500" height="759" title="Flexbox Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                </div><br>
+                <li>Lastly is by using Grid. Grid is a layout system that allows you to design web pages in a more organized way with a two-dimensional layout system.<br>
+                Below is an example of how to use Grid:<br>
+                </li>
+                <div>
+                    <iframe src="html/gridexp.html" width="1500" height="759" title="Grid Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                </div></br>
             </ul>
         </div>
         <hr>
+
+        <h3 class="subsection" id="subsec21" onclick="toggleSection('subsec21')">HTML Responsive</h3>
+        <div class="subsection" id="subsec21Content" style="display: none;">
+            <ul>
+                <li>Responsive web design makes your web page look good on all devices (desktops, tablets, and phones).</li>
+                <li>Responsive web design uses only HTML and CSS.</li>
+                <li>It is not recommended to use JavaScript for responsive design.</li>
+                <li>Below is an example of how to create a responsive web page:<br>
+                </li>
+                <div>
+                    <iframe src="html/responsiveexp.html" width="1500" height="759" title="Responsive Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                </div>
+            </ul>
+        </div>
 
     </div>
 
