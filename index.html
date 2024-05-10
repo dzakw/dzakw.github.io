@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- This is how to link external css file -->
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAuwAAAAAAAADdAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERARERERERERAgERERERERAjIBERERERAjIyARERERAjICMgERERAjIBAjIBERECIBEQIyAREQABERECMgERERERERAjIBEREREREQIyARERERERECMgERERERERAiAREREREREQABERERERERERERERERERERH//wAA+/8AAPH/AADg/wAAwH8AAIA/AAAEHwAADg8AAB8HAAD/gwAA/8EAAP/gAAD/8AAA//gAAP//AAD//wAA" rel="icon" type="image/x-icon"> <!-- This is how to add favicon -->
     <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script> <!-- This is how to link external javascript file -->
     
     <!-- This is how to use internal css style -->
     <style>
@@ -2522,7 +2523,8 @@ function calculate() {
                 <li>It is not recommended to use JavaScript for responsive design.</li>
                 <li>Below is an example of how to create a responsive web page:<br>
                 </li>
-                <div>
+                <button id="example65" onclick="toggleSection('example65')" style="cursor: pointer;">Show/Hide Example</button>
+                <div id="example65Content" style="display: none;">
                     <iframe src="html/responsiveexp.html" width="1400" height="759" title="Responsive Example" style="resize: horizontal; border: 2px dashed black"></iframe>
                 </div>
                 <li>It is also possible to create a responsive image by setting the <code>max-width</code> property to 100%. This will make the image to scale down when needed, but never scale up to be larger than its original size.<br>
@@ -2558,12 +2560,21 @@ function calculate() {
                 The code above will be rendered as:<br>
                 <div>
                     <iframe src="html/rspvtxt.html" width="1500" height="400" title="Responsive Text Size Example" style="resize: horizontal; border: 2px dashed black"></iframe>
-                </div>
-
+                </div><br>
+                <li style="list-style-type: none;"><h4>Bootstrap</h4></li>
+                <li>One of the infamous CSS framework is Bootstrap. it contain a lot of pre-made CSS classes that can be used to make a responsive web page.</li>
+                <li>Bootstrap can be accessed via <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+                <li>Below is an example of how to use Bootstrap to make a responsive web page:<br>
+                    <button id="example66" onclick="toggleSection('example66')" style="cursor: pointer;">Show/Hide Example</button>
+                    <div id="example66Content" style="display: none;">
+                        <iframe src="html/boot5.html" width="1500" height="705" title="Bootstrap Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                    </div>
+                </li>
             </ul>
         </div>
 
     </div>
+    <hr>
 
     <h2 class="section" id="section2" onclick="toggleSection('section2')">Section 2: CSS</h2>
     <div id="section2Content" style="display: none;">
@@ -2582,129 +2593,9 @@ function calculate() {
             </pre></li>
         </ul>
         </div>
-        <hr>
 
     </div>
+    <hr>
 
-    <script>
-        //most of the script below written by the help of AI which main purpose is to make the page easier to navigate
-
-        //this one open and close the section
-        function toggleSection(sectionId) {
-            var sectionContent = document.getElementById(sectionId + "Content");
-            if (sectionContent.style.display === "none") {
-                sectionContent.style.display = "block";
-            } else {
-                sectionContent.style.display = "none";
-            }
-        }
-
-        //this one only open the section, used for table of content
-        function openSection(sectionId) {
-            var sectionContent = document.getElementById(sectionId + "Content");
-            sectionContent.style.display = "block";
-        }
-    
-        //this one toggle all sections
-        function toggleAllSections(...sectionIds) {
-            var allOpen = true;
-            var allClosed = true;
-
-            // Check the current state of all sections
-            sectionIds.forEach(function(sectionId) {
-                var sectionContent = document.getElementById(sectionId + "Content");
-                if (sectionContent.style.display === "none") {
-                    allOpen = false; // If any section is closed, not all sections are open
-                } else {
-                    allClosed = false; // If any section is open, not all sections are closed
-                }
-            });
-
-            // Toggle the state of all sections based on the current state
-            if (allOpen || allClosed) {
-                // If all sections are open or all sections are closed, toggle them all
-                sectionIds.forEach(function(sectionId) {
-                    var sectionContent = document.getElementById(sectionId + "Content");
-                    sectionContent.style.display = allOpen ? "none" : "block"; // Toggle the display
-                });
-            } else {
-                // If some sections are open and some are closed, open them all
-                sectionIds.forEach(function(sectionId) {
-                    var sectionContent = document.getElementById(sectionId + "Content");
-                    sectionContent.style.display = "block"; // Open all sections
-                });
-            }
-        }
-
-        var lastOpenedExampleId = null; // Track the last opened example
-
-        function toggleExample(exampleId) {
-            event.preventDefault(); // Assuming you still want to prevent default behavior
-            var example = document.getElementById(exampleId);
-
-            // Close any currently open example (if it's not the current one)
-            if (lastOpenedExampleId !== null && lastOpenedExampleId !== exampleId) {
-                var lastOpenedExample = document.getElementById(lastOpenedExampleId);
-                lastOpenedExample.style.display = "none";
-            }
-
-            // Toggle the current example 
-            if (example.style.display !== "none") {
-                example.style.display = "none";
-            } else {
-                example.style.display = "block";
-            }
-
-            lastOpenedExampleId = example.style.display === "block" ? exampleId : null; // Update tracker
-        }
-
-        const canvas = document.getElementById('myCanvas');
-        const context = canvas.getContext('2d');
-        let isDrawing = false;
-        let lastX = 0;
-        let lastY = 0;
-        
-        canvas.addEventListener('mousedown', (event) => {
-            isDrawing = true;
-            [lastX, lastY] = [event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top];
-        });
-
-        canvas.addEventListener('mousemove', (event) => {
-            if (isDrawing) {
-                const currentX = event.clientX - canvas.getBoundingClientRect().left;
-                const currentY = event.clientY - canvas.getBoundingClientRect().top;
-                draw(lastX, lastY, currentX, currentY);
-                [lastX, lastY] = [currentX, currentY];
-            }
-        });
-
-        canvas.addEventListener('mouseup', () => {
-            isDrawing = false;
-        });
-
-        function draw(startX, startY, endX, endY) {
-            context.strokeStyle = 'black';
-            context.lineWidth = 2;
-            context.lineJoin = 'round';
-            context.lineCap = 'round';
-            context.beginPath();
-            context.moveTo(startX, startY);
-            context.lineTo(endX, endY);
-            context.stroke();
-        }
-
-        function clearCanvas() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-        }
-
-        function calculate() {
-            const num1 = parseInt(document.getElementById('num1').value);
-            const num2 = parseInt(document.getElementById('num2').value);
-            document.getElementById('result').value = num1 * num2; 
-        }
-        
-    </script>
-    
 </body>
-
 </html>
