@@ -2523,8 +2523,43 @@ function calculate() {
                 <li>Below is an example of how to create a responsive web page:<br>
                 </li>
                 <div>
-                    <iframe src="html/responsiveexp.html" width="1500" height="759" title="Responsive Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                    <iframe src="html/responsiveexp.html" width="1400" height="759" title="Responsive Example" style="resize: horizontal; border: 2px dashed black"></iframe>
                 </div>
+                <li>It is also possible to create a responsive image by setting the <code>max-width</code> property to 100%. This will make the image to scale down when needed, but never scale up to be larger than its original size.<br>
+                Below is an example of how to create a responsive image:<br>
+                </li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;img src="media/bali.jpg" style="max-width: 100%;"&gt;</code></div>
+                </pre>
+                The code above will be rendered as:<br>
+                <button id="example63" onclick="toggleSection('example63')" style="cursor: pointer;">Show/Hide Image</button>
+                <div id="example63Content" style="display: none;"> 
+                    <img src="media/bali.jpg" style="max-width: 100%;">
+                </div>
+                <br>
+                Other than this, it is also possible to change the image shown depending on the screen size by using the <code>&lt;picture&gt;</code> like below (try to resize the screen to see the difference):<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;picture&gt;
+    &lt;source srcset="../media/bali.jpg" media="(max-width: 1000px)"&gt;
+    &lt;img src="../media/reog.jpg" style="max-width: 100%;"&gt;
+&lt;/picture&gt;</code></div>
+                </pre>
+                The code above will be rendered as:<br>
+                <button id="example64" onclick="toggleSection('example64')" style="cursor: pointer;">Show/Hide Image</button>
+                <div id="example64Content" style="display: none;"> 
+                    <iframe src="html/rspvimg.html" width="1400" height="935" title="Responsive Image Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                </div>
+                <br>
+                Other useful things that can be made responsive such as a responsive text size by using the <code>vw</code> unit, like this:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;h1 style="font-size: 7vw;"&gt;Responsive Text Size&lt;/h1&gt;
+&lt;p style="font-size: 4vw;"&gt;Resize this window to see how the text size changes&lt;/p&gt;</code></div>
+                </pre>
+                The code above will be rendered as:<br>
+                <div>
+                    <iframe src="html/rspvtxt.html" width="1500" height="400" title="Responsive Text Size Example" style="resize: horizontal; border: 2px dashed black"></iframe>
+                </div>
+
             </ul>
         </div>
 

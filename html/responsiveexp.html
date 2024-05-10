@@ -37,6 +37,17 @@
             padding: 10px 15px;
             margin-top: 7px;
         }
+
+        .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .image-container > div {
+            flex: 1;
+            margin-right: 10px; /* Optional margin between images */
+        }
+
         img {
             object-fit: cover;
             height: 100%;
@@ -50,6 +61,14 @@
             }
             .right {
                 width: 100%;
+            }
+
+            .image-container {
+                flex-direction: column;
+            }
+
+            .image-container > div {
+                margin-right: 0; /* Remove margin between images when stacked vertically */
             }
         }
 
@@ -78,7 +97,7 @@
         <div class="main">
             <h2>Indonesia</h2>
             <p>Indonesia is a country in Southeast Asia and Oceania, between the Indian and Pacific oceans. It consists of more than seventeen thousand islands, including Sumatra, Java, Borneo, Sulawesi, and New Guinea. Indonesia is the world's largest island country and the 14th-largest country by land area, at 1,904,569 square kilometers (735,358 square miles). With over 267 million people, it is the world's 4th-most-populous country as well as the most-populous Muslim-majority country. Java, the world's most populous island, is home to more than half of the country's population.</p>
-            <div style="display:flex">
+            <div class="image-container">
                 <div style="flex:1"><img src="../media/rendang.jpg" alt="Rendang"></div>
                 <div style="flex:1"><img src="../media/bali.jpg" alt="Bali"></div>
                 <div style="flex:1"><img src="../media/reog.jpg" alt="Reog Ponorogo"></div>
@@ -87,12 +106,14 @@
 
         <div class="right">
             <h2>Indonesia's Best Destination</h2>
-            <p>Bali, Lombok, Raja Ampat, Komodo Island, Borobudur Temple, Prambanan Temple, Mount Bromo, Bunaken, Tana Toraja</p>
+            <p>Bali, Lombok, Raja Ampat, Komodo Island, Borobudur Temple, and many more</p>
             <h2>Indonesia's Best Food</h2>
-            <p>Nasi Goreng, Sate, Rendang, Soto, Gado-Gado, Nasi Padang, Nasi Uduk, Nasi Kuning, Nasi Liwet, Nasi Tumpeng, Nasi Pecel</p>
+            <p>Sate, Rendang, Soto, Gado-Gado, Nasi Padang, Nasi Kuning, Nasi Pecel, and many more</p>
             <h2>Indonesia's Best Culture</h2>
-            <p>Wayang, Batik, Angklung, Reog, Kecak, Pencak Silat, Saman, Tor-Tor, Jaipong, Zapin, Tari Piring, Tari Topeng, Tari Kecak</p>
+            <p>Wayang, Batik, Angklung, Reog, Kecak, Pencak Silat, Saman, Tor-Tor, Jaipong, and many more</p>
         </div>
     </div>
+
+    <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This web page is a part of a demonstration of fluid web design made by Iqbal based on w3schools tutorial. Resize the browser window to see the content respond to the resizing.</div>
 </body>
 </html>
