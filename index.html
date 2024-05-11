@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,8 +39,10 @@
                     <li><a href="#subsec17" onclick="openSection('subsec17'); openSection('section1')">HTML Block and Inline Elements</a></li>
                     <li><a href="#subsec18" onclick="openSection('subsec18'); openSection('section1')">HTML Classes and Id</a></li>
                     <li><a href="#subsec19" onclick="openSection('subsec19'); openSection('section1')">HTML Iframes</a></li>
-                    <li><a href="#subsec20" onclick="openSection('subsec20'); openSection('section1')">HTML Semantics</a></li>
-                    <li><a href="#subsec21" onclick="openSection('subsec21'); openSection('section1')">HTML Responsive</a></li>
+                    <li><a href="#subsec110" onclick="openSection('subsec110'); openSection('section1')">HTML Semantics</a></li>
+                    <li><a href="#subsec111" onclick="openSection('subsec111'); openSection('section1')">HTML Responsive</a></li>
+                    <li><a href="#subsec112" onclick="openSection('subsec112'); openSection('section1')">HTML Entities</a></li>
+                    <li><a href="#subsec113" onclick="openSection('subsec113'); openSection('section1')">HTML Forms</a></li>
                 </ul>
                 <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
             </ul>
@@ -54,6 +56,103 @@
 
         <h3 class="subsection" id="subsec11" onclick="toggleSection('subsec11')">HTML Formatting</h3>
         <div class="subsection" id="subsec11Content" style="display: none;">
+            <ul>
+            <li style="list-style-type: none;"><h4>HTML Style Guide</h4></li>
+
+            <li><strong>Always declare the document type with &lt;!DOCTYPE html&gt;</strong> as the first line in a HTML documents</li>
+            
+            <li><strong>Always use lowercase</strong> for HTML element names<br>
+            Example:<br>
+            Good one:
+            <pre><code>&lt;body&gt;
+    This is a code and content inside the &lt;body&gt; tag
+    .....
+&lt;/body&gt;</body></code></pre>
+            Bad one:
+            <pre><code>&lt;BODY&gt;
+    This is a code and content inside the &lt;BODY&gt; tag
+    .....
+&lt;/BODY&gt;</code></pre>
+            </li>
+
+            <li><strong>Always close HTML Elements</strong> (The code usually still works, but it is highly recomended to <strong>always</strong> close HTML elements<br>
+            Example:<br>
+            Good one:
+            <pre><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre>
+            Bad one:
+            <pre><code>&lt;p&gt;This is a paragraph</code></pre>
+            </li>
+
+            <li><strong>Always use lowercase for attribute names</strong><br>
+            Example:<br>
+            Good one:
+            <pre><code>&lt;img src="image.jpg" alt="Image"&gt;</code></pre>
+            Bad one:
+            <pre><code>&lt;img src="image.jpg" ALT="Image"&gt;</code></pre>
+            </li>
+            
+            <li><strong>Always use double quote for attribute values</strong>
+            Example:<br>
+            Good one:
+            <pre><code>&lt;img src="image.jpg" alt="Image"&gt;</code></pre>
+            Bad one:
+            <pre><code>&lt;img src=image.jpg alt=Image&gt;</code></pre>
+            </li>
+
+            <li><strong>Always specify <code>alt</code>, <code>width</code>, and <code>height</code> for images.</strong>
+            Example:<br>
+            Good one:
+            <pre><code>&lt;img src="image.jpg" alt="Image" width="500" height="auto"&gt;</code></pre>
+            Bad one:
+            <pre><code>&lt;img src="image.jpg"&gt;</code></pre>
+            </li>
+
+            <li><strong>no need to insert spaces around equal sign</strong>
+            Example:<br>
+            Good one:
+            <pre><code>&lt;img src="image.jpg" alt="Image" width="500" height="auto"&gt;</code></pre>
+            Bad one:
+            <pre><code>&lt;img src = "image.jpg" alt = "Image" width = "500" height = "auto"&gt;</code></pre>
+            </li>
+
+            <li><strong>Insert blank lines and indentations to make the code more readable</strong>
+            Example:<br>
+            Good one:
+            <pre><code>&lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+
+    &lt;h2&gt;This is a sub-heading&lt;/h2&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+
+    &lt;h2&gt;This is another sub-heading&lt;/h2&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+            Bad one:
+            <pre><code>&lt;body&gt;
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;h2&gt;This is a sub-heading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;h2&gt;This is another sub-heading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+            </li>
+
+            <li><strong>Always add &lt;title&gt; element, as it is important for SEO, it will shown when the website is bookmarked, and it is shown in the browser tab bar</strong></li>
+
+            <li>&lt;html&gt;, &lt;body&gt;, &lt;head&gt&gt; can be omited (not included) in HTML5, but it is still recommended to always include them</li>
+
+            <li>In HTML, it is optional to close an empty elements. However, if you want to make your HTML code compatible with XHTML, you must include the closing slash (/) in empty elements like below:<br>
+            <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta charset="UTF-8" /&gt; <!--XHTML--></code></pre>
+            </li>
+
+            <li>To ensure proper interpretation and correct search engine indexing, both the language and the character encoding &lt;meta charset="charset"&gt; should be specified in the &lt;head&gt; section of the HTML document</li>
+
+            
+            </ul>
+
             <ul>
                 <li>Inline styles have the <b>highest specificity</b>, <strong>overriding</strong> any other styles defined in <em>internal or external stylesheets</em>.</li>
                 <li><i>&lt;i&gt;</i> tag is used when you want to <i>italicize</i> the text.</li>
@@ -1838,10 +1937,28 @@
                         </ul>
                         <h4>Example:</h4>
                         <pre>
-                            <div class="code-wrapper"><code>&lt;code&gt;Code&lt;/code&gt;</code></div>
+                            <div class="code-wrapper"><code>&lt;code&gt;
+    x = 5;
+    y = 6;
+    z = x + y;&lt;/code&gt;</code></div>
                         </pre>
                         Above code will be rendered as:<br>
-                        <code>Code</code>
+                        <code>
+                            x = 5;
+                            y = 6;
+                            z = x + y;
+                        </code><br>
+                        *notes: <em>&lt;code&gt;</em> element will not preserve white spaces and line breaks. Use <em>&lt;pre&gt;</em> element to preserve white spaces and line breaks like below:<br>
+                        <pre>
+                            <div class="code-wrapper"><code>&lt;pre&gt;
+    x = 5;
+    y = 6;
+    z = x + y;&lt;/pre&gt;</code></div>
+                        </pre>
+                        Above code will be rendered as:<br>
+                        <pre>x = 5;
+y = 6;
+z = x + y;</pre>
                     </li>
                 </div>
 
@@ -1940,10 +2057,10 @@
                         </ul>
                         <h4>Example:</h4>
                         <pre>
-                            <div class="code-wrapper"><code>&lt;kbd&gt;Ctrl + C&lt;/kbd&gt;</code></div>
+                            <div class="code-wrapper"><code>&lt;q&gt;To copy a text, you can press &lt;kbd&gt;Ctrl + C&lt;/kbd&gt;&lt;/q&gt;</code></div>
                         </pre>
                         Above code will be rendered as:<br>
-                        <kbd>Ctrl + C</kbd>
+                        <q>To copy a text, you can press <kbd>Ctrl + C</kbd></q>
                     </li>
                 </div>
 
@@ -2071,10 +2188,10 @@ function calculate() {
                         </ul>
                         <h4>Example:</h4>
                         <pre>
-                            <div class="code-wrapper"><code>&lt;samp&gt;Sample Output&lt;/samp&gt;</code></div>
+                            <div class="code-wrapper"><code>&lt;q&gt;When there is an error occured, th screen will show a &lt;samp&gt;404 Not Found&lt;/samp&gt; message&lt;/q&gt;</code></div>
                         </pre>
                         Above code will be rendered as:<br>
-                        <samp>Sample Output</samp>
+                        <q>When there is an error occured, th screen will show a <samp>404 Not Found</samp> message</q>
                     </li>
                 </div>
 
@@ -2417,8 +2534,8 @@ function calculate() {
         </div>
         <hr>
 
-        <h3 class="subsection" id="subsec20" onclick="toggleSection('subsec20')">HTML Semantics</h3>
-        <div class="subsection" id="subsec20Content" style="display: none;">
+        <h3 class="subsection" id="subsec110" onclick="toggleSection('subsec110')">HTML Semantics</h3>
+        <div class="subsection" id="subsec110Content" style="display: none;">
             <ul>
                 <li style="list-style-type: none;"><h4>HTML <code>&lt;head&gt;</code> element </h4></li>
                 <li>The <code>&lt;head&gt;</code> element is a container for metadata (data about data) and is placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag.<br></li>
@@ -2465,6 +2582,7 @@ function calculate() {
                         <li><code>&lt;noscript&gt;</code> - defines an alternate content for users that have disabled scripts in their browser</li>
                     </ul>
                 </li>
+
                 <li style="list-style-type: none;"><h4>HTML Layout</h4></li>
                 <li>HTML has some semantics elements that can be used to define the structure of a web page.</li>
                 <li>Below is some usage of the HTML semantics elements:</li>
@@ -2496,27 +2614,95 @@ function calculate() {
                 However, floating elements are tied to the document flow, which may harm the layout of the document.<br>
                 Below is an example of how to use the float property:<br>
                 </li>
-                <div>
+                <button id="example67" onclick="toggleSection('example67')" style="cursor: pointer;">Show/Hide Example</button>
+                <div id="example67Content" style="display: none;">
                     <iframe src="html/floatexp.html" width="1500" height="759" title="Float Example" style="resize: horizontal; border: 2px dashed black"></iframe>
                 </div><br>
                 <li>Next is by using Flexbox. Use of flexbox ensures that elements behave predictably when the page layout must accommodate different screen sizes and different display devices.<br>
                 Below is an example of how to use Flexbox:<br>
                 </li>
-                <div>
+                <button id="example68" onclick="toggleSection('example68')" style="cursor: pointer;">Show/Hide Example</button>
+                <div id="example68Content" style="display: none;">
                     <iframe src="html/flexboxexp.html" width="1500" height="759" title="Flexbox Example" style="resize: horizontal; border: 2px dashed black"></iframe>
                 </div><br>
                 <li>Lastly is by using Grid. Grid is a layout system that allows you to design web pages in a more organized way with a two-dimensional layout system.<br>
                 Below is an example of how to use Grid:<br>
                 </li>
-                <div>
+                <button id="example69" onclick="toggleSection('example69')" style="cursor: pointer;">Show/Hide Example</button>
+                <div id="example69Content" style="display: none;">
                     <iframe src="html/gridexp.html" width="1500" height="759" title="Grid Example" style="resize: horizontal; border: 2px dashed black"></iframe>
                 </div></br>
+                
+                <li style="list-style-type: none;"><h4>HTML Semantics</h4></li>
+                <li>Semantic element are elements that are clearly describe its function to both the browser and the developer.<br>
+                    Example of semantic elements are <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;aside&gt;</code> (clearly describe its content).<br>
+                    Example of non-semantic elements are <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> (unclear what the content are).<br>
+                </li>
+
+                <li style="list-style-type:none;"><h4>HTML &lt;section&gt; element</h4></li>
+                <li>HTML <code>&lt;section&gt;</code> element is a container for grouping together thematically-related content, typically with a heading.<br>
+                    HTML <code>&lt;section&gt;</code> element usually used for Chapter, Introduction, News Item, Contact Information, etc.<br>
+                    Below is an example of how to use the <code>&lt;section&gt;</code> element:<br>
+                </li>
+                <button id="example70" onclick="toggleSection('example70')" style="cursor: pointer;">Show/Hide Example</button>
+                <div id="example70Content" style="display: none;">
+                    <iframe src="html/sect.html" width="600" height="460" title="Section Example" style="border: 2px dashed black"></iframe>
+                </div><br>
+
+                <li style="list-style-type:none;"><h4>HTML &lt;article&gt; element</h4></li>
+                <li>HTML <code>&lt;article&gt;</code> element specifies independent, self-contained content.<br>
+                HTML <code>&lt;article&gt;</code> element usually used for Forum Post, Blog Post, Product Cards, User Comment, etc.<br>
+                Below is an example of how to use the <code>&lt;article&gt;</code> element:<br>
+                </li>
+                <button id="example71" onclick="toggleSection('example71')" style="cursor: pointer;">Show/Hide Example</button>
+                <div id="example71Content" style="display: none;">
+                    <iframe src="html/articl.html" width="600" height="460" title="Article Example" style="border: 2px dashed black"></iframe>
+                </div><br>
+
+                <li style="list-style-type:none;"><h4>HTML &lt;header&gt; element</h4></li>
+                <li>HTML <code>&lt;header&gt;</code> element is a container for introductory content or a set of navigational links.<br>
+                HTML <code>&lt;header&gt;</code> element usually used for Logo, h1-h6, Authorship information, etc.<br>
+                *Notes: It is possible to have multiple <code>&lt;header&gt;</code> elements in one document. However, <code>&lt;header&gt;</code> cannot be placed within a <code>&lt;footer&gt;</code>, <code>&lt;address&gt;</code> or another <code>&lt;header&gt;</code> element.<br>
+                Below is an example of how to use the <code>&lt;header&gt;</code> element:<br>
+                </li>
+                <div>
+                    <iframe src="html/headr.html" width="400" height="120" title="Header Example" style="border: 2px dashed black"></iframe>
+                </div><br>
+
+                <li style="list-style-type:none;"><h4>HTML &lt;footer&gt; element</h4></li>
+                <li>HTML <code>&lt;footer&gt;</code> element is a container for footer content or a set of navigational links.<br>
+                HTML <code>&lt;footer&gt;</code> element usually used for Authorship information, Copyright information, Contact information, etc.<br>
+                *Notes: It is possible to have multiple <code>&lt;footer&gt;</code> elements in one document.<br>
+                Below is an example of how to use the <code>&lt;footer&gt;</code> element:<br>
+                </li>
+                <div>
+                    <iframe src="html/footr.html" width="400" height="85" title="Footer Example" style="border: 2px dashed black"></iframe>
+                </div><br>
+
+                <li style="list-style-type:none;"><h4>HTML &lt;nav&gt; element</h4></li>
+                <li>HTML <code>&lt;nav&gt;</code> element is a container for navigation links.<br>
+                HTML <code>&lt;nav&gt;</code> element usually used for Navigation links, Menu links, etc.<br>
+                Below is an example of how to use the <code>&lt;nav&gt;</code> element:<br>
+                </li>
+                <div>
+                    <iframe src="html/nav.html" width="400" height="35" title="Nav Example" style="border: 2px dashed black"></iframe>
+                </div><br>
+
+                <li style="list-style-type:none;"><h4>HTML &lt;aside&gt; element</h4></li>
+                <li>HTML <code>&lt;aside&gt;</code> element is a container for content that is tangentially related to the content around it.<br>
+                HTML <code>&lt;aside&gt;</code> element usually used for Sidebar, Pull-quotes, Advertising, etc.<br>
+                Below is an example of how to use the <code>&lt;aside&gt;</code> element:<br>
+                </li>
+                <div>
+                    <iframe src="html/asid.html" width="800" height="300" title="Aside Example" style="border: 2px dashed black"></iframe>
+                </div><br>
+                
             </ul>
         </div>
         <hr>
 
-        <h3 class="subsection" id="subsec21" onclick="toggleSection('subsec21')">HTML Responsive</h3>
-        <div class="subsection" id="subsec21Content" style="display: none;">
+        <h3 class="subsection" id="subsec111" onclick="toggleSection('subsec111')">HTML Responsive</h3>
+        <div class="subsection" id="subsec111Content" style="display: none;">
             <ul>
                 <li>Responsive web design makes your web page look good on all devices (desktops, tablets, and phones).</li>
                 <li>Responsive web design uses only HTML and CSS.</li>
@@ -2572,6 +2758,228 @@ function calculate() {
                 </li>
             </ul>
         </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec112" onclick="toggleSection('subsec112')">HTML Entities</h3>
+        <div class="subsection" id="subsec112Content" style="display: none;">
+            <ul>
+                <li>For a list of HTML charsets, visit <a href="https://www.w3schools.com/charsets/" target="_blank">HTML Charsets</a></li>
+                <li>There are some reserved characters in HTML just like the &lt; and &gt;. To type these reserved characters in HTML, it is needed to replace it with entities like this:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt; is &amp;lt;
+&gt; is &amp;gt;
+&amp; is &amp;amp;
+" is &amp;quot;
+' is &amp;apos;</code></div>
+                </pre>
+                *notes: aside from its name, it is also possible to use the entity number to represent the character, like this:<br>
+                <pre>
+                    <div class="code-wrapper"><code>&lt; is &amp;#60;
+&gt; is &amp;#62;
+&amp; is &amp;#38;
+" is &amp;#34;
+' is &amp;#39;</code></div>
+                </pre>
+                </li>
+                <li>There is also a non breaking space that function as a space, but it wont break into a new line when resized (useful for equation, name, etc) using the <code>&amp;nbsp;</code></li>
+                <li>There is also a non breaking hyphen (-) that can be written by using the entity <code>&amp;#8209;</code>. This function just like the <code>&amp;nbsp;</code> which wont break into a new line</li>
+                <li>These are some useful HTML Character entities:<br>
+                    <table class="table-indo">
+                        <tr>
+                            <th>Character</th>
+                            <th>Description</th>
+                            <th>Entity Name</th>
+                            <th>Entity Number</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Non-breaking space</td>
+                            <td>&amp;nbsp;</td>
+                            <td>&amp;#160;</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;</td>
+                            <td>Less than</td>
+                            <td>&amp;lt;</td>
+                            <td>&amp;#60;</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;</td>
+                            <td>Greater than</td>
+                            <td>&amp;gt;</td>
+                            <td>&amp;#62;</td>
+                        </tr>
+                        <tr>
+                            <td>&amp;</td>
+                            <td>Ampersand</td>
+                            <td>&amp;amp;</td>
+                            <td>&amp;#38;</td>
+                        </tr>
+                        <tr>
+                            <td>&quot;</td>
+                            <td>Quotation mark</td>
+                            <td>&amp;quot;</td>
+                            <td>&amp;#34;</td>
+                        </tr>
+                        <tr>
+                            <td>&apos;</td>
+                            <td>Apostrophe</td>
+                            <td>&amp;apos;</td>
+                            <td>&amp;#39;</td>
+                        </tr>
+                        <tr>
+                            <td>&cent;</td>
+                            <td>Cent</td>
+                            <td>&amp;cent;</td>
+                            <td>&amp;#162;</td>
+                        </tr>
+                        <tr>
+                            <td>&pound;</td>
+                            <td>Pound</td>
+                            <td>&amp;pound;</td>
+                            <td>&amp;#163;</td>
+                        </tr>
+                        <tr>
+                            <td>&yen;</td>
+                            <td>Yen</td>
+                            <td>&amp;yen;</td>
+                            <td>&amp;#165;</td>
+                        </tr>
+                        <tr>
+                            <td>&euro;</td>
+                            <td>Euro</td>
+                            <td>&amp;euro;</td>
+                            <td>&amp;#8364;</td>
+                        </tr>
+                        <tr>
+                            <td>&copy;</td>
+                            <td>Copyright</td>
+                            <td>&amp;copy;</td>
+                            <td>&amp;#169;</td>
+                        </tr>
+                        <tr>
+                            <td>&reg;</td>
+                            <td>Registered trademark</td>
+                            <td>&amp;reg;</td>
+                            <td>&amp;#174;</td>
+                        </tr>
+                    </table>
+                </li><br>
+                <li>
+                HTML Entities also used to combine diacritical marks with letters, like these:<br>
+                <table class="table-indo">
+                    <tr>
+                        <th>Mark</th>
+                        <th>Character</th>
+                        <th>Result</th>
+                        <th>Entity Name</th>
+                        <th>Entity Number</th>
+                    </tr>
+                    <tr>
+                        <td>Acute accent</td>
+                        <td>&#769;</td>
+                        <td>&aacute;</td>
+                        <td>&amp;aacute;</td>
+                        <td>&amp;#225;</td>
+                    </tr>
+                    <tr>
+                        <td>Grave accent</td>
+                        <td>&#768;</td>
+                        <td>&agrave;</td>
+                        <td>&amp;agrave;</td>
+                        <td>&amp;#224;</td>
+                    </tr>
+                    <tr>
+                        <td>Circumflex accent</td>
+                        <td>&#770;</td>
+                        <td>&acirc;</td>
+                        <td>&amp;acirc;</td>
+                        <td>&amp;#226;</td>
+                    </tr>
+                    <tr>
+                        <td>Tilde</td>
+                        <td>&#771;</td>
+                        <td>&atilde;</td>
+                        <td>&amp;atilde;</td>
+                        <td>&amp;#227;</td>
+                    </tr>
+                    <tr>
+                        <td>Umlaut</td>
+                        <td>&#776;</td>
+                        <td>&auml;</td>
+                        <td>&amp;auml;</td>
+                        <td>&amp;#228;</td>
+                    </tr>
+                    <tr>
+                        <td>Ring</td>
+                        <td>&#778;</td>
+                        <td>&aring;</td>
+                        <td>&amp;aring;</td>
+                        <td>&amp;#229;</td>
+                    </tr>
+                </table>
+                </li><br>
+                <li>There are many other entities that can be used in HTML, for a complete list of HTML entities, visit <a href="https://www.w3schools.com/charsets" target="_blank">HTML Charsets</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec113" onclick="toggleSection('subsec113')">HTML Form</h3>
+        <div class="subsection" id="subsec113Content" style="display: none;">
+        <ul>
+            <li>An HTML form used to collect user input. These input usually collected then processed in the server.</li>
+            <li>Forms need to be processed by the backend which will not be covered in this learning</li>
+            <form action="">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <li>There are various form &lt;input&gt; element that can be displayed, depending on what data is needed to be collected. Below are some of the form &lt;input&gt; elements:<br>
+            <table class="table-form">
+                <tr>
+                    <th>Element</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>&lt;input type="button"&gt;</td>
+                    <td>Defines a clickable button</td>
+                    <td><input type="button" value="Click me"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="checkbox"&gt;</td>
+                    <td>Defines a checkbox (selecting multiple choice from many choice)</td>
+                    <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> I have a bike</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> I have a car</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> I have a boat</label></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="text"&gt;</td>
+                    <td>Single-line text input field</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="radio"&gt;</td>
+                    <td>Radio button (selecting one of many choice)</td>
+                    <td><input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label><br>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label></td>
+                </tr>
+
+
+            </table>
+            </li>
+        </ul>
+        </div>
+        <hr>
 
     </div>
     <hr>

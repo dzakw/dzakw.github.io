@@ -295,6 +295,27 @@ ul.content-list li a:hover {
   color: gainsboro; /* Set the text color to gainsboro */
 }
 
+/* The following styles apply to elements with class "table-indo" */
+.table-form {
+  width: 300px; /* Set the width to 300px */
+  border-collapse: collapse; /* Collapse the borders */
+}
+
+/* The following styles apply to <th> elements within elements with class "table-indo" */
+.table-form th {
+  background-color: #171717; /* Set the background color to #171717 */
+  color: gainsboro; /* Set the text color to gainsboro */
+  font-weight: bold; /* Set the font weight to bold */
+  padding: 10px; /* Add 10 pixels of padding around the element */
+  font-size: 120%; /* Set the font size to 120% of the parent element */
+}
+
+/* The following styles apply to <td> elements within elements with class "table-indo" */
+.table-form td {
+  padding: 10px; /* Add 10 pixels of padding around the element */
+  border-bottom: 1px solid #171717; /* Add a 1px solid border at the bottom */
+}
+
 /* The following styles apply to <ul> elements with class "horizontal" */
 ul.horizontal {
   list-style-type: none; /* Remove the default bullet points */
