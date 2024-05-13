@@ -2133,30 +2133,27 @@ z = x + y;</pre>
                         </ul>
                         <h4>Example:</h4>
                         <pre>
-                            <div class="code-wrapper">
-                                 <code>
-&lt;form&gt;
-    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num1" value="5"&gt; *
-    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num2" value="3"&gt; =
-    &lt;output id="result"&gt;&lt;/output&gt;
-    &lt;button type="button" onclick="calculate()"&gt;Calculate&lt;/button&gt;
+                            <div class="code-wrapper"><code>&lt;form&gt;
+    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num1_1" value="5"&gt; *
+    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num2_1" value="3"&gt; =
+    &lt;output id="result_1"&gt;&lt;/output&gt;
+    &lt;button type="button" onclick="calculate(1)"&gt;Calculate&lt;/button&gt;
+&lt;/form&gt;
 
 &lt;script&gt;
-function calculate() {
-    const num1 = parseInt(document.getElementById('num1').value);
-    const num2 = parseInt(document.getElementById('num2').value);
-    document.getElementById('result').value = num1 * num2; 
+function calculate(formNumber) {
+    const num1 = parseInt(document.getElementById('num1_' + formNumber).value);
+    const num2 = parseInt(document.getElementById('num2_' + formNumber).value);
+    document.getElementById('result_' + formNumber).textContent = num1 * num2; 
 }
-&lt;/script&gt;
-                                  </code>
-                             </div>
+&lt;/script&gt;</code></div>
                         </pre>
                         Above code will be rendered as:<br>
                         <form>
-                            <input type="text" pattern="\d*" inputmode="numeric" id="num1" value="5"> *
-                            <input type="text" pattern="\d*" inputmode="numeric" id="num2" value="3"> =
-                            <output id="result"></output>
-                            <button type="button" onclick="calculate()">Calculate</button>
+                            <input type="text" pattern="\d*" inputmode="numeric" id="num1_1" value="5"> *
+                            <input type="text" pattern="\d*" inputmode="numeric" id="num2_1" value="3"> =
+                            <output id="result_1"></output>
+                            <button type="button" onclick="calculate(1)">Calculate</button>
                         </form>
                     </li>
                 </div>
@@ -3140,7 +3137,345 @@ function calculate() {
                 
                     </div>
                 </li>
-                <li>The usage of <code>&lt;label&gt;</code> element can be useful to the browser to be able to identify the input field. Other than that, <code>&lt;label&gt;</code> element helps user to click on a small area such as in a checkbox or radio button.</li>
+                <li>Forms also has some useful attributes. Below are the list of the attributes:</li>
+                <ul class="threeColumn">
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example73')"> <code>accept-charset</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example74')"> <code>action</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example75')"> <code>autocomplete</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example76')"> <code>enctype</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example77')"> <code>method</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example78')"> <code>name</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example79')"> <code>novalidate</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example80')"> <code>rel</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example81')"> <code>target</code></a></li>
+                </ul>
+
+                <div>
+                    <div>
+                        <li id="example73" style="display: none;">
+                            <h4><code>accept-charset</code></h4>
+                            <p>Specifies the character encodings that are to be used for the form submission</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form accept-charset="UTF-8"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example74" style="display: none;">
+                            <h4><code>action</code></h4>
+                            <p>Specifies where to send the form-data when a form is submitted</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form action="https://www.example.com"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example75" style="display: none;">
+                            <h4><code>autocomplete</code></h4>
+                            <p>Specifies whether a form should have autocomplete on or off</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form autocomplete="on"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example76" style="display: none;">
+                            <h4><code>enctype</code></h4>
+                            <p>Specifies how the form-data should be encoded when submitting it to the server</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form enctype="multipart/form-data"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div> 
+
+                    <div>
+                        <li id="example77" style="display: none;">
+                            <h4><code>method</code></h4>
+                            <p>Specifies the HTTP method to use when sending form-data<br>
+                            The <code>method</code> attribute can have one of the following values:</p>
+                            <ul>
+                                <li><code>get</code> - The form data is appended to the URL in name/value pairs
+                                    <ul>
+                                        <li>Appends the form data to the URL, in name/value pairs</li>
+                                        <li>NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)</li>
+                                        <li>The length of a URL is limited (2048 characters)</li>
+                                        <li>Useful for form submissions where a user wants to bookmark the result</li>
+                                        <li>GET is good for non-secure data, like query strings in Google</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li><code>post</code> - The form data is sent to the server as a block of data in the body of the form
+                                    <ul>
+                                        <li>Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)</li>
+                                        <li>POST has no size limitations, and can be used to send large amounts of data.</li>
+                                        <li>Form submissions with POST cannot be bookmarked</li>
+                                        <li>Always use post if the form data contains sensitive or personal information</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form method="post"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example78" style="display: none;">
+                            <h4><code>name</code></h4>
+                            <p>Specifies the name of the form</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form name="form1"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example79" style="display: none;">
+                            <h4><code>novalidate</code></h4>
+                            <p>Specifies that the form should not be validated when submitted</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form novalidate&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example80" style="display: none;">
+                            <h4><code>rel</code></h4>
+                            <p>Specifies the relationship between the current document and the linked document</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form rel="nofollow"&gt;</code></div>
+                            </pre>
+                    </div>
+
+                    <div>
+                        <li id="example81" style="display: none;">
+                            <h4><code>target</code></h4>
+                            <p>Specifies where to display the response that is received after submitting the form.<br>
+                            The <code>target</code> attribute can have one of the following values:</p>
+                            <ul>
+                                <li><code>_blank</code> - The response is displayed in a new window or tab</li>
+                                <li><code>_self</code> - The response is displayed in the same frame (this is default)</li>
+                                <li><code>_parent</code> - The response is displayed in the parent frame</li>
+                                <li><code>_top</code> - The response is displayed in the full body of the window</li>
+                                <li><code>framename</code> - The response is displayed in a named frame</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;form target="_blank"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+                </div>
+                <br>
+
+                <li>The HTML &lt;form&gt; element can contain one or more of the following form elements:</li>
+                <ul class="threeColumn">
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example82')"> <code>&lt;input&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example83')"> <code>&lt;label&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example84')"> <code>&lt;select&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example85')"> <code>&lt;textarea&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example86')"> <code>&lt;button&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example87')"> <code>&lt;fieldset&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example88')"> <code>&lt;legend&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example89')"> <code>&lt;datalist&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example90')"> <code>&lt;output&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example91')"> <code>&lt;option&gt;</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example92')"> <code>&lt;optgroup&gt;</code></a></li>
+                </ul>
+
+                <div>
+                    <div>
+                        <li id="example82" style="display: none;">
+                            <h4><code>&lt;input&gt;</code></h4>
+                            <p>Defines an input control, already explained</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text"&gt;</code></div>
+                            </pre>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example83" style="display: none;">
+                            <h4><code>&lt;label&gt;</code></h4>
+                            <p>Defines a label for an &lt;input&gt; element<br>
+                            The usage of <code>&lt;label&gt;</code> element can be useful to the browser to be able to identify the input field. Other than that, <code>&lt;label&gt;</code> element helps user to click on a small area such as in a checkbox or radio button.</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;label for="fname"&gt;First Name:&lt;/label&gt;
+&lt;input type="text" id="fname" name="fname"&gt;
+                                </code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" name="fname">
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example84" style="display: none;">
+                            <h4><code>&lt;select&gt;</code></h4>
+                            <p>Defines a drop-down list</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;select&gt;
+    &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+    &lt;option value="saab"&gt;Saab&lt;/option&gt;
+    &lt;option value="mercedes" selected&gt;Mercedes&lt;/option&gt;
+    &lt;option value="audi"&gt;Audi&lt;/option&gt;
+&lt;/select&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <select>
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes" selected>Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example85" style="display: none;">
+                            <h4><code>&lt;textarea&gt;</code></h4>
+                            <p>Defines a input text area that can be resized as needed</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;textarea name="message" rows="10" cols="30"&gt;Write something here&lt;/textarea&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <textarea name="message" rows="10" cols="30">Write something here</textarea>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example86" style="display: none;">
+                            <h4><code>&lt;button&gt;</code></h4>
+                            <p>Defines a clickable button</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;button type="button" onclick="alert('Hellow World!')"&gt;Click me&lt;/button&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <button type="button" onclick="alert('Hellow World!')">Click me</button>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example87" style="display: none;">
+                            <h4><code>&lt;fieldset&gt;</code></h4>
+                            <p>Groups related elements in a form</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;fieldset&gt;
+    &lt;legend&gt;Personalia:&lt;/legend&gt;
+    &lt;label for="fname"&gt;First Name:&lt;/label&gt;
+    &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;
+    &lt;label for="lname"&gt;Last Name:&lt;/label&gt;
+    &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/fieldset&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <fieldset>
+                                <legend>Personalia:</legend>
+                                <label for="fname">First name:</label><br>
+                                <input type="text" id="fname" name="fname" value="John"><br>
+                                <label for="lname">Last name:</label><br>
+                                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                <input type="submit" value="Submit">
+                            </fieldset>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example88" style="display: none;">
+                            <h4><code>&lt;legend&gt;</code></h4>
+                            <p>Defines a caption for a &lt;fieldset&gt; element</p>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;fieldset&gt;
+    &lt;legend&gt;Personalia:&lt;/legend&gt;
+    &lt;label for="fname"&gt;First Name:&lt;/label&gt;
+    &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;
+    &lt;label for="lname"&gt;Last Name:&lt;/label&gt;
+    &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/fieldset&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <fieldset>
+                                <legend>Personalia:</legend>
+                                <label for="fname">First name:</label><br>
+                                <input type="text" id="fname" name="fname" value="John"><br>
+                                <label for="lname">Last name:</label><br>
+                                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                <input type="submit" value="Submit">
+                            </fieldset>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example89" style="display: none;">
+                            <hr>
+                            <h3><code>&lt;datalist&gt;</code></h4>
+                            <ul>
+                                <li>Specifies a list of pre-defined options for an &lt;input&gt; element</li>
+                            </ul>
+                            <h4>Example:</h4>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input list="browsers"&gt;
+&lt;datalist id="browsers"&gt;
+    &lt;option value="Internet Explorer"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Opera"&gt;
+    &lt;option value="Safari"&gt;
+&lt;/datalist&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input list="browsers">
+                            <datalist id="browsers">
+                                <option value="Internet Explorer">
+                                <option value="Firefox">
+                                <option value="Chrome">
+                                <option value="Opera">
+                                <option value="Safari">
+                            </datalist>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example90" style="display:none;">
+                            <hr>
+                            <h3><code>&lt;output&gt;</code></h3>
+                            <ul>
+                                <li>Used to define the result of a calculation or user interaction.</li>
+                            </ul>
+                            <h4>Example:</h4>
+                            <pre>
+                            <div class="code-wrapper"><code>&lt;form&gt;
+    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num1_1" value="5"&gt; *
+    &lt;input type="text" pattern="\d*" inputmode="numeric" id="num2_1" value="3"&gt; =
+    &lt;output id="result_1"&gt;&lt;/output&gt;
+    &lt;button type="button" onclick="calculate(1)"&gt;Calculate&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+function calculate(formNumber) {
+    const num1 = parseInt(document.getElementById('num1_' + formNumber).value);
+    const num2 = parseInt(document.getElementById('num2_' + formNumber).value);
+    document.getElementById('result_' + formNumber).textContent = num1 * num2; 
+}
+&lt;/script&gt;</code></div>
+                        </pre>
+                            Above code will be rendered as:<br>
+                            <form>
+                                <input type="text" pattern="\d*" inputmode="numeric" id="num1_2" value="5"> *
+                                <input type="text" pattern="\d*" inputmode="numeric" id="num2_2" value="3"> =
+                                <output id="result_2"></output>
+                                <button type="button" onclick="calculate(2)">Calculate</button>
+                            </form>
+                        </li>
+                    </div>
+
+                </div>
             </ul>
         </div>
         <hr>

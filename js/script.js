@@ -116,8 +116,8 @@ function clearCanvas() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function calculate() {
-    const num1 = parseInt(document.getElementById('num1').value);
-    const num2 = parseInt(document.getElementById('num2').value);
-    document.getElementById('result').value = num1 * num2; 
+function calculate(formNumber) {
+    const num1 = parseInt(document.getElementById('num1_' + formNumber).value);
+    const num2 = parseInt(document.getElementById('num2_' + formNumber).value);
+    document.getElementById('result_' + formNumber).textContent = num1 * num2; 
 }

@@ -164,7 +164,11 @@ ul.content-list li a:hover {
   flex-wrap: wrap; /* Wrap the content */
 }
 
-
+@media screen and (max-width: 1600px) {
+  .table-container {
+    display:block; /* Use block display */
+  }
+}
 
 /* The following styles apply to elements with class "table-ie", as well as their <th> and <td> children */
 .table-ie, .table-ie th, .table-ie td {
