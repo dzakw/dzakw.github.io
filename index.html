@@ -2926,58 +2926,222 @@ function calculate() {
 
         <h3 class="subsection" id="subsec113" onclick="toggleSection('subsec113')">HTML Form</h3>
         <div class="subsection" id="subsec113Content" style="display: none;">
-        <ul>
-            <li>An HTML form used to collect user input. These input usually collected then processed in the server.</li>
-            <li>Forms need to be processed by the backend which will not be covered in this learning</li>
-            <form action="">
-                <label for="fname">First Name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last Name:</label><br>
-                <input type="text" id="lname" name="lname"><br><br>
-                <input type="submit" value="Submit">
-            </form>
-            <li>There are various form &lt;input&gt; element that can be displayed, depending on what data is needed to be collected. Below are some of the form &lt;input&gt; elements:<br>
-            <table class="table-form">
-                <tr>
-                    <th>Element</th>
-                    <th>Description</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td>&lt;input type="button"&gt;</td>
-                    <td>Defines a clickable button</td>
-                    <td><input type="button" value="Click me"></td>
-                </tr>
-                <tr>
-                    <td>&lt;input type="checkbox"&gt;</td>
-                    <td>Defines a checkbox (selecting multiple choice from many choice)</td>
-                    <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label for="vehicle1"> I have a bike</label><br>
-                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                        <label for="vehicle2"> I have a car</label><br>
-                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                        <label for="vehicle3"> I have a boat</label></td>
-                </tr>
-                <tr>
-                    <td>&lt;input type="text"&gt;</td>
-                    <td>Single-line text input field</td>
-                    <td><input type="text" name="name"></td>
-                </tr>
-                <tr>
-                    <td>&lt;input type="radio"&gt;</td>
-                    <td>Radio button (selecting one of many choice)</td>
-                    <td><input type="radio" id="html" name="fav_language" value="HTML">
-                        <label for="html">HTML</label><br>
-                        <input type="radio" id="css" name="fav_language" value="CSS">
-                        <label for="css">CSS</label><br>
-                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                        <label for="javascript">JavaScript</label></td>
-                </tr>
+            <ul>
+                <li>An HTML form used to collect user input. These input usually collected then processed in the server.</li>
+                <li>Forms need to be processed by the backend which will not be covered in this learning</li>
+                <form action="">
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <li>There are various form &lt;input&gt; element that can be displayed, depending on what data is needed to be collected. Below are some of the form &lt;input&gt; elements:<br>
+                    <button id="example72" onclick="toggleSectionFl('example72')" style="cursor: pointer;">Show/Hide Example</button>
+                    <div id="example72Content" class="table-container" style="display: none;">
+                        <table class="table-form">
+                        <tr>
+                            <th>Element</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>&lt;input type="button"&gt;</td>
+                            <td>Defines a clickable button</td>
+                            <td><input type="button" value="Click me"></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;input type="checkbox"&gt;</td>
+                            <td>Defines a checkbox (selecting multiple choice from many choice)</td>
+                            <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1"> I have a bike</label><br>
+                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                <label for="vehicle2"> I have a car</label><br>
+                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                <label for="vehicle3"> I have a boat</label></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;input type="color"&gt;</td>
+                            <td>Defines a color picker</td>
+                            <td><input type="color" name="favcolor"></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;input type="date"&gt;</td>
+                            <td>Defines a date control (year, month, day (no time))</td>
+                            <td><input type="date" name="bday"></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;input type="datetime-local"&gt;</td>
+                            <td>Defines a date and time control (year, month, day, time (no timezone))</td>
+                            <td><input type="datetime-local" name="bdaytime"></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;input type="email"&gt;</td>
+                            <td>Defines a field for an e-mail address (depending on the browser, the email address can be automatically validated when submitted.</td>
+                            <td><input type="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;input type="file"&gt;</td>
+                            <td>Defines a file-select field and a "Browse" button for file uploads</td>
+                            <td><input type="file" name="pic"></td>
+                        </tr>
+                        </table>
 
+                        <table class="table-form">
+                            <tr>
+                                <th>Element</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="hidden"&gt;</td>
+                                <td>Defines a hidden input field (the value wont be shown to user, but usually automatically filled like userID, session, etc)</td>
+                                <td><input type="hidden" id="custId" name="hidden" value="9182"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="image"&gt;</td>
+                                <td>Defines an image as the submit button</td>
+                                <td><input type="image" src="media/bali.jpg" alt="Submit" width="48" height="48"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="month"&gt;</td>
+                                <td>Defines a month and year control (no timezone)</td>
+                                <td><input type="month" name="bdaymonth"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="number"&gt;</td>
+                                <td>Defines a field for entering a number</td>
+                                <td><input type="number" name="quantity" min="1" max="5"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="password"&gt;</td>
+                                <td>Defines a password field (the characters are hidden)</td>
+                                <td><input type="password" name="pwd"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="radio"&gt;</td>
+                                <td>Radio button (selecting one of many choice)</td>
+                                <td><input type="radio" id="html" name="fav_language" value="HTML">
+                                    <label for="html">HTML</label><br>
+                                    <input type="radio" id="css" name="fav_language" value="CSS">
+                                    <label for="css">CSS</label><br>
+                                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                                    <label for="javascript">JavaScript</label></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="range"&gt;</td>
+                                <td>Defines a control for entering a number whose exact value is not important (like a slider control)</td>
+                                <td><input type="range" name="points" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="reset"&gt;</td>
+                                <td>Defines a reset button that will reset all form values to their default values</td>
+                                <td><input type="reset"></td>
+                            </tr>
+                        </table>
 
-            </table>
-            </li>
-        </ul>
+                        <table class="table-form">
+                            <tr>
+                                <th>Element</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="search"&gt;</td>
+                                <td>Defines a search field (for search boxes)</td>
+                                <td><input type="search" name="search"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="submit"&gt;</td>
+                                <td>Defines a submit button that will submit the form</td>
+                                <td><input type="submit"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="tel"&gt;</td>
+                                <td>Defines a field for entering a telephone number</td>
+                                <td><input type="tel" name="tel" pattern=""></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="text"&gt;</td>
+                                <td>Single-line text input field</td>
+                                <td><input type="text" name="name"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="time"&gt;</td>
+                                <td>Defines a control for entering a time (no timezone)</td>
+                                <td><input type="time" name="usr_time"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="url"&gt;</td>
+                                <td>Defines a field for entering a URL</td>
+                                <td><input type="url" name="homepage"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input type="week"&gt;</td>
+                                <td>Defines a week and year control (no timezone)</td>
+                                <td><input type="week" name="week_year"></td>
+                            </tr>
+                        </table>
+                    </div>
+                <br>
+                </li>
+                <li>There is something called input restrictions that can be used to validate the input. Below are some of the input restrictions:<br>
+                    <div class="table-container">
+                        <table class="table-form-auto">
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>checked</td>
+                                <td>Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")</td>
+                            </tr>
+                            <tr>
+                                <td>disabled</td>
+                                <td>Specifies that an input field should be disabled</td>
+                            </tr>
+                            <tr>
+                                <td>max</td>
+                                <td>Specifies the maximum value for an input field</td>
+                            </tr>
+                            <tr>
+                                <td>maxlength</td>
+                                <td>Specifies the maximum number of characters allowed in an input field</td>
+                            </tr>
+                            <tr>
+                                <td>min</td>
+                                <td>Specifies the minimum value for an input field</td>
+                            </tr>
+                            <tr>
+                                <td>pattern</td>
+                                <td>Specifies a regular expression that an input field's value is checked against</td>
+                            </tr>
+                            <tr>
+                                <td>readonly</td>
+                                <td>Specifies that an input field is read-only (cannot be changed)</td>
+                            </tr>
+                            <tr>
+                                <td>required</td>
+                                <td>Specifies that an input field is required (must be filled out)</td>
+                            </tr>
+                            <tr>
+                                <td>size</td>
+                                <td>Specifies the width (in characters) of an input field</td>
+                            </tr>
+                            <tr>
+                                <td>step</td>
+                                <td>Specifies the legal number intervals for an input field</td>
+                            </tr>
+                            <tr>
+                                <td>value</td>
+                                <td>Specifies the default value for an input field</td>
+                            </tr>
+                        </table>
+                
+                    </div>
+                </li>
+                <li>The usage of <code>&lt;label&gt;</code> element can be useful to the browser to be able to identify the input field. Other than that, <code>&lt;label&gt;</code> element helps user to click on a small area such as in a checkbox or radio button.</li>
+            </ul>
         </div>
         <hr>
 

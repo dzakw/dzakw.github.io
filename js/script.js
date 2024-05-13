@@ -1,7 +1,18 @@
+//This one toggle the section, used for the content
 function toggleSection(sectionId) {
     var sectionContent = document.getElementById(sectionId + "Content");
     if (sectionContent.style.display === "none") {
         sectionContent.style.display = "block";
+    } else {
+        sectionContent.style.display = "none";
+    }
+}
+
+//this one toggle the section, but it's for flex display
+function toggleSectionFl(sectionId) {
+    var sectionContent = document.getElementById(sectionId + "Content");
+    if (sectionContent.style.display === "none") {
+        sectionContent.style.display = "flex";
     } else {
         sectionContent.style.display = "none";
     }
