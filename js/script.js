@@ -95,11 +95,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     function showPosition(position) {
+      console.log('Position object:', position); // Log position object for debugging
       x.innerHTML = "Latitude: " + position.coords.latitude + 
       "<br>Longitude: " + position.coords.longitude;
     }
   
     function showError(error) {
+      console.error('Geolocation error:', error); // Log error object for debugging
       switch(error.code) {
         case error.PERMISSION_DENIED:
           x.innerHTML = "User denied the request for Geolocation.";
@@ -116,23 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   
-    const xx = document.getElementById("demo");
-  
-    function getLocations() {
-      if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPositions, showError);
-      } else {
-        xx.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-  
-    function showPositions(position) {
-      xx.innerHTML = "Latitude: " + position.coords.latitude +
-      "<br>Longitude: " + position.coords.longitude;
-    }
-  
     // Expose functions to the global scope so they can be called by the buttons
     window.getLocation = getLocation;
-    window.getLocations = getLocations;
   });
   
