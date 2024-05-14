@@ -43,6 +43,8 @@
                     <li><a href="#subsec111" onclick="openSection('subsec111'); openSection('section1')">HTML Responsive</a></li>
                     <li><a href="#subsec112" onclick="openSection('subsec112'); openSection('section1')">HTML Entities</a></li>
                     <li><a href="#subsec113" onclick="openSection('subsec113'); openSection('section1')">HTML Forms</a></li>
+                    <li><a href="#subsec114" onclick="openSection('subsec114'); openSection('section1')">HTML Graphics and Media</a></li>
+                    <li><a href="#subsec115" onclick="openSection('subsec115'); openSection('section1')">HTML APIs</a></li>
                 </ul>
                 <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
             </ul>
@@ -2116,10 +2118,10 @@ z = x + y;</pre>
                         </ul>
                         <h4>Example:</h4>
                         <pre>
-                            <div class="code-wrapper"><code>&lt;object data="media/Aspiring Indonesian.pdf" style="width: 800px; height: 500px;"&gt;&lt;/object&gt;</code></div>
+                            <div class="code-wrapper"><code>&lt;object data="media/Photoshop Day4.pdf" style="width: 800px; height: 500px;"&gt;&lt;/object&gt;</code></div>
                         </pre>
                         Above code will be rendered as:<br>
-                        <object data="media/Aspiring Indonesian.pdf" style="width: 800px; height: 500px;"></object>
+                        <object data="media/Photoshop Day4.pdf" style="width: 800px; height: 500px;"></object>
                     </li>
                 </div>
 
@@ -3595,10 +3597,524 @@ function calculate(formNumber) {
                         </li>
                     </div>
 
+                </div><br>
+
+                <li>HTML has several input attributes that are used to specify some specific input types. Below are some of the input attributes:</li>
+                <ul class="threeColumn">
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example93')"> <code>value</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example94')"> <code>readonly</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example95')"> <code>disabled</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example96')"> <code>size</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example97')"> <code>maxlength</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example98')"> <code>min</code> & <code>max</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example99')"> <code>multiple</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example100')"> <code>pattern</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example101')"> <code>placeholder</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example102')"> <code>required</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example103')"> <code>step</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example104')"> <code>autofocus</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example105')"> <code>height</code> & <code>width</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example106')"> <code>list</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example107')"> <code>autocomplete</code></a></li>
+                </ul>
+                <div>
+                    <div>
+                        <li id="example93" style="display: none;">
+                            <hr>
+                            <h3><code>value</code></h3>
+                            <ul>
+                                <li>Specifies the default value of an input element</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" value="John"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" value="John">
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example94" style="display: none;">
+                            <hr>
+                            <h3><code>readonly</code></h3>
+                            <ul>
+                                <li>Specifies that an input field is read-only (cannot be changed)</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" value="John" readonly&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" value="John" readonly>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example95" style="display: none;">
+                            <hr>
+                            <h3><code>disabled</code></h3>
+                            <ul>
+                                <li>Specifies that an input field is disabled (grayed out and cant be clicked)</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" value="John" disabled&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" value="John" disabled>
+                        </li>    
+                    </div>
+
+                    <div>
+                        <li id="example96" style="display: none;">
+                            <hr>
+                            <h3><code>size</code></h3>
+                            <ul>
+                                <li>The input <code>size</code> attribute specifies the visible width, in characters, of an input field. The default value is 20</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" value="John" size="3"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" value="John" size="3">
+                            <p>Note: The size attribute works with the following input types: text, search, tel, url, email, and password.</p>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example97" style="display: none">
+                            <hr>
+                            <h3><code>maxlength</code></h3>
+                            <ul>
+                                <li>The input <code>maxlength</code> attribute specifies the maximum number of characters allowed in an input field.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;label for ="mxlg"&gt;Pin:&lt;/label&gt;
+&lt;input id="mxlg" type="text" value="1234" maxlength="4" size="1"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <label for ="mxlg">Pin:</label>
+                            <input id="mxlg" type="text" value="1234" maxlength="4" size="1">
+                            <p>Note: When a maxlength is set, the input field will not accept more than the specified number of characters. However, this attribute does not provide any feedback. So, if you want to alert the user, you must write JavaScript code.</p>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example98" style="display: none;">
+                            <hr>
+                            <h3><code>min</code> & <code>max</code></h3>
+                            <ul>
+                                <li>The input <code>min</code> and <code>max</code> attributes are used to specify the minimum and maximum values for an input field.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="number" min="1" max="5" value="1"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="number" min="1" max="5" value="1">
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example99" style="display: none;">
+                            <hr>
+                            <h3><code>multiple</code></h3>
+                            <ul>
+                                <li>The input <code>multiple</code> attribute specifies that the user is allowed to enter more than one value in the input field.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="file" multiple&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="file" multiple>
+                            <p>The multiple attribute works with the following input types: email, and file.</p>
+                        </li>
+                    </div> 
+
+                    <div>
+                        <li id="example100" style="display: none;">
+                            <hr>
+                            <h3><code>pattern</code></h3>
+                            <ul>
+                                <li>The input <code>pattern</code> attribute specifies a regular expression that the input field's value is checked against.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" pattern="[A-Za-z]{3}" title="Three letter country code"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <label for="country">Country code:</label>
+                            <input type="text" pattern="[A-Za-z]{3}" title="Three letter country code">
+                            <p>The pattern attribute works with the following input types: text, search, url, tel, email, and password.</p>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example101" style="display: none;">
+                            <hr>
+                            <h3><code>placeholder</code></h3>
+                            <ul>
+                                <li>The input <code>placeholder</code> attribute specifies a short hint that describes the expected value of an input field.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" placeholder="Enter your name"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" placeholder="Enter your name">
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example102" style="display: none;">
+                            <hr>
+                            <h3><code>required</code></h3>
+                            <ul>
+                                <li>The input <code>required</code> attribute specifies that an input field must be filled out before submitting the form.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" required&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" required>
+                            <p>The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.</p>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example103" style="display: none;">
+                            <hr>
+                            <h3><code>step</code></h3>
+                            <ul>
+                                <li>The input <code>step</code> attribute specifies the legal number intervals for an input field.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="number" step="2"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="number" step="2">
+                            <p>The step attribute works with the following input types: number, range, date, datetime-local, month, time, and week.</p>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example104" style="display: none;">
+                            <hr>
+                            <h3><code>autofocus</code></h3>
+                            <ul>
+                                <li>The input <code>autofocus</code> attribute specifies that an input field should automatically get focus when the page loads.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" autofocus&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" autofocus>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example105" style="display: none;">
+                            <hr>
+                            <h3><code>height</code> & <code>width</code></h3>
+                            <ul>
+                                <li>The input <code>height</code> and <code>width</code> attributes are used to specify the height and width of an image input type.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" value="John" height="50" width="100"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="image" src="media/bali.jpg" alt="bali" height="200" width="400">
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example106" style="display: none;">
+                            <hr>
+                            <h3><code>list</code></h3>
+                            <ul>
+                                <li>The input <code>list</code> attribute refers to a &lt;datalist&gt; element that contains pre-defined options for an input field.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" list="browsers"&gt;
+&lt;datalist id="browsers"&gt;
+    &lt;option value="Internet Explorer"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Opera"&gt;
+    &lt;option value="Safari"&gt;
+&lt;/datalist&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" list="browsers">
+                            <datalist id="browsers">
+                                <option value="Internet Explorer">
+                                <option value="Firefox">
+                                <option value="Chrome">
+                                <option value="Opera">
+                                <option value="Safari">
+                            </datalist>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example107" style="display: none;">
+                            <hr>
+                            <h3><code>autocomplete</code></h3>
+                            <ul>
+                                <li>The input <code>autocomplete</code> attribute specifies whether a form or input field should have autocomplete (based on previous input) on or off.</li>
+                            </ul>
+                            <pre>
+                                <div class="code-wrapper"><code>&lt;input type="text" autocomplete="on"&gt;</code></div>
+                            </pre>
+                            <p>Code above will be rendered as:</p>
+                            <input type="text" autocomplete="on">
+                        </li>
+                    </div>
+
                 </div>
+
             </ul>
         </div>
         <hr>
+
+        <h3 class="subsection" id="subsec114" onclick="toggleSection('subsec114')">HTML Graphics and Media</h3>
+        <div class="subsection" id="subsec114Content" style="display: none;">
+            <ul>
+                <li style="list-style-type: none;"><h4>HTML Canvas</h4></li>
+                <li>The HTML <code>&lt;canvas&gt;</code> element is used to draw graphics on the fly by utilizing javascript</li>
+                <li>The <code>&lt;canvas&gt;</code> element is only a container for graphics. You must use a script to actually draw the graphics.</li><br>
+
+                <li style="list-style-type: none;"><h4>HTML SVG</h4></li>
+                <li>SVG stands for Scalable Vector Graphics</li>
+                <li>SVG is used to define vector-based graphics for the Web</li>
+                <li>SVG defines the graphics in XML format</li>
+                <li>SVG graphics do NOT lose any quality if they are zoomed or resized</li>
+                <li>Each element and attribute in SVG files can be animated</li>
+                <li>SVG is a W3C recommendation</li>
+                <li>SVG integrates with other W3C standards such as the DOM and XSL</li>
+                <li>The HTML <code>&lt;svg&gt;</code> element is a container for SVG graphics.</li>
+                <li>Below some example of SVG drawing:</li>
+                <div class="seveg">
+                    <svg width="200" height="210">
+                        <circle cx="100" cy="105" r="60" stroke="black" stroke-width="3" fill="red" />
+                    </svg>                      
+                    <svg width="200" height="210">
+                        <rect x="6" y="50" width="180" height="100" stroke="red" stroke-width="6" fill="blue" />
+                    </svg>                      
+                    <svg width="200" height="210">
+                        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+                    </svg>
+                    <svg width="200" height="210">
+                        <defs>
+                          <linearGradient id="grad1">
+                            <stop offset="0%" stop-color="yellow" />
+                            <stop offset="100%" stop-color="red" />
+                          </linearGradient>
+                        </defs>
+                        <ellipse cx="100" cy="105" rx="85" ry="55" fill="url(#grad1)" />
+                        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="120">SVG</text>
+                    </svg>
+                </div><br>
+                <li>Below are the comparisons between the usage of SVG vs Canvas:</li>
+                <table class="table-form-auto">
+                    <tr>
+                        <th>SVG</th>
+                        <th>Canvas</th>
+                    </tr>
+                    <tr>
+                        <td>Resolution independent</td>
+                        <td>Resolution dependent</td>
+                    </tr>
+                    <tr>
+                        <td>Support for event handlers</td>
+                        <td>No support for event handlers</td>
+                    </tr>
+                    <tr>
+                        <td>Good text rendering capabilities</td>
+                        <td>Poor text rendering capabilities</td>
+                    </tr>
+                    <tr>
+                        <td>Slow rendering if complex</td>
+                        <td>You can save the resulting image as .png or .jpg</td>
+                    </tr>
+                    <tr>
+                        <td>Not suited for game applications</td>
+                        <td>Well suited for graphic-intensive games</td>
+                    </tr>
+                    <tr>
+                        <td>SVG is searchable, indexable, and selectable</td>
+                        <td>Canvas is not searchable, indexable, or selectable</td>
+                    </tr>
+                </table><br>
+
+                <li style="list-style-type: none;"><h4>HTML Video</h4></li>
+                <li>HTML supports video playback for the following formats: MP4, WebM, and Ogg</li>
+                <li>The HTML <code>&lt;video&gt;</code> element is used to embed video content in a document</li>
+                <li>It is a good idea to always include the width and height attributes. If height and width are not set, the page might flicker while the video loads</li>
+                <li>Below is an example of how to embed a video:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;video width="320" controls autoplay muted loop&gt;
+    &lt;source src="media/vid1.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;</code></div>
+                </pre>
+                <li>Code above will be rendered as:</li>
+                <video width="320" controls autoplay muted loop>
+                    <source src="media/vid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <li>Above method are using local files that are stored in the same directory as the HTML file. The easier way would be to use a youtube videos by using the video URL:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;iframe width="420" height="315"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0"&gt;
+&lt;/iframe&gt;</code></div>
+                </pre>
+                <li>Code above will be rendered as:</li>
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0"></iframe><br>
+                <li>by adding <code>?autoplay=1&mute=1&loop=1&controls=0</code> to the URL, the video will autoplay, muted, looped, and without controls</li>
+
+                <li style="list-style-type: none;"><h4>HTML Audio</h4></li>
+                <li>HTML supports audio playback for the following formats: MP3, WAV, and Ogg</li>
+                <li>The HTML <code>&lt;audio&gt;</code> element is used to embed sound content in a document</li>
+                <li>Below is an example of how to embed an audio:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;audio controls autoplay loop&gt;
+    &lt;source src="media/aud1.mp3" type="audio/mp3"&gt;
+    Your browser does not support the audio tag.
+&lt;/audio&gt;</code></div>
+                </pre>
+                <li>Code above will be rendered as:</li>
+                <audio controls autoplay loop>
+                    <source src="media/aud1.mp3" type="audio/mp3">
+                    Your browser does not support the audio tag.
+                </audio><br>
+
+                <li style="list-style-type: none;"><h4>HTML Plug-ins</h4></li>
+
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec115" onclick="toggleSection('subsec115')">HTML APIs</h3>
+        <div class="subsection" id="subsec115Content" style="display: none;">
+            <ul>
+                <li>HTML5 introduced several new APIs that can be used to create interactive web applications. Below are some of the APIs:</li>
+                <ul class="threeColumn">
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example108')"> <code>Geolocation</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example109')"> <code>Drag and Drop</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example110')"> <code>Web Storage</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example111')"> <code>Web Workers</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example112')"> <code>Server-Sent Events</code></a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example113')"> <code>Application Cache</code></a></li>
+                </ul>
+
+                <div>
+                    <div>
+                        <li id="example108" style="display: none;">
+                            <hr>
+                            <h3><code>Geolocation</code></h3>
+                            <ul>
+                                <li>The HTML Geolocation API is used to locate a user's position</li>
+                                <li>The <code>navigator.geolocation</code> object is used to locate the user's position</li>
+                                <li>Below is an example of how to use the Geolocation API:</li>
+                                <pre>
+                                    <div class="code-wrapper"><code>var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "&lt;br&gt;Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        x.innerHTML = "User denied the request for Geolocation."
+        break;
+      case error.POSITION_UNAVAILABLE:
+        x.innerHTML = "Location information is unavailable."
+        break;
+      case error.TIMEOUT:
+        x.innerHTML = "The request to get user location timed out."
+        break;
+      case error.UNKNOWN_ERROR:
+        x.innerHTML = "An unknown error occurred."
+        break;
+    }
+}</code></div>
+                                </pre>
+                                <li>Code above will be rendered as:</li>
+                                <p id="demo">Click the button to get your coordinates:</p>
+                                <button onclick="getLocation()">Try It</button>
+                                
+                                <p id="demo"></p>
+                                <li>The <code>getCurrentPosition()</code> method returns an object on success. The latitude, longitude and accuracy properties are always returned. The other properties are returned if available:</li>
+                                <table class="table-form-auto">
+                                    <tr>
+                                        <th>Property</th>
+                                        <th>Description</th>
+                                    </tr>
+                                    <tr>
+                                        <td>coords.latitude</td>
+                                        <td>The latitude as a decimal number (always returned)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>coords.longitude</td>
+                                        <td>The longitude as a decimal number (always returned)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>coords.accuracy</td>
+                                        <td>The accuracy of position (always returned)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>coords.altitude</td>
+                                        <td>The altitude in meters above the mean sea level (returned if available)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>coords.altitudeAccuracy</td>
+                                        <td>The altitude accuracy of position (returned if available)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>coords.heading</td>
+                                        <td>The heading as degrees clockwise from North (returned if available)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>coords.speed</td>
+                                        <td>The speed in meters per second (returned if available)</td>
+                                    </tr>
+                                </table><br>
+                                <li>The Geolocation object also has other interesting methods:</li>
+                                <ul>
+                                    <li><code>watchPosition()</code> - Returns the current position of the user and continues to return updated position as the user moves (like the GPS in a car).</li>
+                                    <li><code>clearWatch()</code> - Stops the <code>watchPosition()</code> method.</li>
+                                </ul>
+                                <li>The example below shows the watchPosition() method. You need an accurate GPS device to test this (like smartphone):</li>
+                                <pre>
+                                    <div class="code-wrapper"><code>const x = document.getElementById("demo");
+
+function getLocations() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "&lt;br&gt;Longitude: " + position.coords.longitude;
+}</code></div>
+                                </pre>
+                                <li>Code above will be rendered as:</li>
+                                <p id="demo">Click the button to get your coordinates:</p>
+                                <button onclick="getLocations()">Try It</button>
+                            </ul>
+                        </li>
+                    </div>
+
+
+                </div>
+        </div>
 
     </div>
     <hr>

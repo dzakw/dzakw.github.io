@@ -391,3 +391,14 @@ li.horizontal a:hover {
       margin-right: 20px; /* Set the right margin to 20px */
   }
 }
+
+.seveg {
+  display:flex; /* Use flex display */
+  flex-wrap: wrap; /* Wrap the content */
+}
+
+@media screen and (max-width: 800px) {
+  .seveg {
+    display:block; /* Use block display */
+  }
+}

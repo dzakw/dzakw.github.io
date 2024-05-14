@@ -77,47 +77,54 @@ function toggleExample(exampleId) {
     lastOpenedExampleId = example.style.display === "block" ? exampleId : null; // Update tracker
 }
 
-const canvas = document.getElementById('myCanvas');
-const context = canvas.getContext('2d');
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-
-canvas.addEventListener('mousedown', (event) => {
-    isDrawing = true;
-    [lastX, lastY] = [event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top];
-});
-
-canvas.addEventListener('mousemove', (event) => {
-    if (isDrawing) {
-        const currentX = event.clientX - canvas.getBoundingClientRect().left;
-        const currentY = event.clientY - canvas.getBoundingClientRect().top;
-        draw(lastX, lastY, currentX, currentY);
-        [lastX, lastY] = [currentX, currentY];
-    }
-});
-
-canvas.addEventListener('mouseup', () => {
-    isDrawing = false;
-});
-
-function draw(startX, startY, endX, endY) {
-    context.strokeStyle = 'black';
-    context.lineWidth = 2;
-    context.lineJoin = 'round';
-    context.lineCap = 'round';
-    context.beginPath();
-    context.moveTo(startX, startY);
-    context.lineTo(endX, endY);
-    context.stroke();
-}
-
-function clearCanvas() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-}
-
 function calculate(formNumber) {
     const num1 = parseInt(document.getElementById('num1_' + formNumber).value);
     const num2 = parseInt(document.getElementById('num2_' + formNumber).value);
     document.getElementById('result_' + formNumber).textContent = num1 * num2; 
+}
+
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+
+const xx = document.getElementById("demo");
+
+function getLocations() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPositions);
+  } else {
+    xx.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function showPositions(position) {
+  xx.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
 }
