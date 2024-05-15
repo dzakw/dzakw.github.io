@@ -4105,6 +4105,74 @@ function showError(error) {
                         </li>
                     </div>
 
+                    <div>
+                        <li id="example110" style="display: none;">
+                            <hr>
+                            <h3>Web Storage</h3>
+                            <ul>
+                                <li>The Web Storage API is used to store data locally within the user's browser</li>
+                                <li>The Web Storage API is supported in all modern browsers</li>
+                                <li>HTML web storage provides two objects for storing data on the client:</li>
+                                <ul>
+                                    <li><code>window.localStorage</code> - stores data with no expiration date</li>
+                                    <li><code>window.sessionStorage</code> - stores data for one session (data is lost when the browser tab is closed)</li>
+                                </ul>
+                                <li>Below is the example of using <code>localStorage</code> object</li>
+                                <pre>
+                                    <div class="code-wrapper"><code>// Store
+localStorage.setItem("lastname", "Smith");
+
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");</code></div>
+                                </pre>
+                                <li>Example above explained:</li>
+                                <ul>
+                                    <li>First, create a localStorage name/value pair with name="lastname" and value="Smith"</li>
+                                    <li>Then, retrieve the value of "lastname" and insert it into the element with id="result"</li>
+                                </ul>
+                                <li>It is also possible to write above code like this:</li>
+                                <pre>
+                                    <div class="code-wrapper"><code>// Store
+localStorage.lastname = "Smith";
+
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.lastname;</code></div>
+                                </pre>
+                                <li>The syntax for removing the "lastname" localStorage item is as follows:</li>
+                                <pre>
+                                    <div class="code-wrapper"><code>localStorage.removeItem("lastname");</code></div>
+                                </pre>
+                                <br>
+                                <li>Below is the example of using <code>localStorage</code> object</li>
+                                <iframe src="html/localstore.html" width="800" height="250" title="page3"></iframe>
+                                <li>Example above explained:</li>
+                                <ul>
+                                    <li>The counter will count, and even when the window closed then reopen it will still count (can be emulated by the close and reopen button)</li>
+                                    <li>To clear the storage, need to use the <code>localStorage.clear()</code></li>
+                                </ul>
+                                <li>Below is the example of using <code>sessionStorage</code> object</li>
+                                <iframe src="html/sessionstore.html" width="800" height="200" title="page3"></iframe>
+                                <li>Example above explained:</li>
+                                <ul>
+                                    <li>The counter will count, but when the window closed then reopen it will reset (can be emulated by the button, but the button itself use <code>sessionStorage.clear();</code>, just to make it easier to show as example)</li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li id="example111" style="display: none;">
+                            <hr>
+                            <h3>Web Workers</h3>
+                            <ul>
+                                <li>Web Workers are a simple means for web content to run scripts in the background</li>
+                                <li>A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.</li>
+                                <li>Below is an example of how to use the Web Workers API:</li>
+                                <iframe src="html/webwork.html" width="800" height="200" title="page4"></iframe>
+                                <iframe src="html/sse.html" width="100%" height="600px" title="Tesla Stock Price"></iframe>
+                            </ul>
+                        </li>
+                    </div>
 
                 </div>
         </div>

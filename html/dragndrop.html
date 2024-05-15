@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag and Drop Notes</title>
     <style>
+        /* Basic styling for the body */
         body {
             margin: 0;
             overflow: hidden;
             font-family: Arial, sans-serif;
         }
 
+        /* Styling for the canvas that holds the notes */
         .canvas {
             position: relative;
-            width: 100vw;
-            height: 100vh;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
             background-color: #f0f0f0;
             display: flex;
             flex-wrap: wrap;
@@ -22,6 +24,7 @@
             box-sizing: border-box;
         }
 
+        /* Styling for individual notes */
         .note {
             position: absolute;
             width: 110px;
@@ -36,10 +39,12 @@
             overflow: auto;
         }
 
+        /* Styling for selected notes */
         .note.selected {
             border: 2px solid #000;
         }
 
+        /* Styling for note header input */
         .note header input.note-title {
             border: none;
             background: transparent;
@@ -49,6 +54,7 @@
             outline: none;
         }
 
+        /* Styling for note textarea */
         .note textarea {
             width: 100%;
             height: calc(100% - 40px);
@@ -58,6 +64,7 @@
             outline: none;
         }
 
+        /* Styling for the controls div */
         .controls {
             position: absolute;
             top: 10px;
@@ -65,11 +72,13 @@
             z-index: 10;
         }
 
+        /* Styling for buttons within controls */
         .controls button {
             padding: 10px;
             font-size: 16px;
         }
 
+        /* Styling for the selection box */
         .selection-box {
             position: absolute;
             border: 1px dashed #000;
@@ -79,45 +88,59 @@
     </style>
 </head>
 <body>
+    <!-- Control buttons for adding, saving, and loading notes -->
     <div class="controls">
         <button id="addNoteButton">+</button>
         <button id="saveNotesButton">Save</button>
         <button id="loadNotesButton">Load</button>
     </div>
+    <!-- The canvas where notes will be placed -->
     <div class="canvas" id="canvas"></div>
 
+    <!-- JavaScript for functionality -->
     <script>
+        // Get the canvas and button elements
         const canvas = document.getElementById('canvas');
         const addNoteButton = document.getElementById('addNoteButton');
         const saveNotesButton = document.getElementById('saveNotesButton');
         const loadNotesButton = document.getElementById('loadNotesButton');
+        
+        // Variables for drag and drop functionality
         let draggedElement = null;
         let offsetX = 0;
         let offsetY = 0;
+        
+        // Set to keep track of selected notes
         let selectedNotes = new Set();
         let isSelecting = false;
         let selectionBox = null;
         let startX, startY;
 
+        // Event listener to create a new note when the add button is clicked
         addNoteButton.addEventListener('click', () => {
             createNote();
         });
 
+        // Event listener to save notes when the save button is clicked
         saveNotesButton.addEventListener('click', () => {
             saveNotes();
         });
 
+        // Event listener to load notes when the load button is clicked
         loadNotesButton.addEventListener('click', () => {
             loadNotes();
         });
 
+        // Event listener to delete selected notes when the delete key is pressed
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Delete') {
                 deleteSelectedNotes();
             }
         });
 
+        // Function to create a new note
         function createNote() {
+            // Create a new note div
             const note = document.createElement('div');
             note.classList.add('note');
             note.draggable = true;
@@ -129,20 +152,28 @@
                 </header>
                 <textarea placeholder="Edit your note" spellcheck="false"></textarea>
             `;
+            // Append the note to the canvas
             canvas.appendChild(note);
+            // Add drag and drop handlers to the note
             addDragAndDropHandlers(note);
+            // Add select handler to the note
             addSelectHandler(note);
         }
 
+        // Function to delete selected notes
         function deleteSelectedNotes() {
+            // Remove each selected note from the canvas
             selectedNotes.forEach(note => {
                 canvas.removeChild(note);
             });
+            // Clear the set of selected notes
             selectedNotes.clear();
         }
 
+        // Function to select a note
         function selectNote(note, event) {
             if (event.shiftKey) {
+                // If shift key is pressed, toggle selection
                 if (selectedNotes.has(note)) {
                     selectedNotes.delete(note);
                     note.classList.remove('selected');
@@ -151,6 +182,7 @@
                     note.classList.add('selected');
                 }
             } else {
+                // If shift key is not pressed, select only the clicked note
                 selectedNotes.forEach(n => n.classList.remove('selected'));
                 selectedNotes.clear();
                 selectedNotes.add(note);
@@ -158,10 +190,12 @@
             }
         }
 
+        // Function to add a select handler to a note
         function addSelectHandler(note) {
             note.addEventListener('mousedown', (event) => selectNote(note, event));
         }
 
+        // Function to add drag and drop handlers to a note
         function addDragAndDropHandlers(note) {
             note.addEventListener('dragstart', function(event) {
                 draggedElement = event.target;
@@ -195,10 +229,12 @@
             });
         }
 
+        // Event listener for drag over event on the canvas
         canvas.addEventListener('dragover', function(event) {
             event.preventDefault();
         });
 
+        // Event listener for drop event on the canvas
         canvas.addEventListener('drop', function(event) {
             event.preventDefault();
             if (draggedElement) {
@@ -209,6 +245,7 @@
             }
         });
 
+        // Event listener for mousedown event on the canvas to start selection
         canvas.addEventListener('mousedown', function(event) {
             if (event.target === canvas) {
                 isSelecting = true;
@@ -226,6 +263,7 @@
             }
         });
 
+        // Event listener for mousemove event on the canvas to update selection box
         canvas.addEventListener('mousemove', function(event) {
             if (isSelecting) {
                 const currentX = event.clientX;
@@ -256,6 +294,7 @@
             }
         });
 
+        // Event listener for mouseup event on the canvas to end selection
         canvas.addEventListener('mouseup', function(event) {
             if (isSelecting) {
                 isSelecting = false;
@@ -263,6 +302,7 @@
             }
         });
 
+        // Function to save notes to local storage
         function saveNotes() {
             const notes = [];
             document.querySelectorAll('.note').forEach(note => {
@@ -278,6 +318,7 @@
             localStorage.setItem('notes', JSON.stringify(notes));
         }
 
+        // Function to load notes from local storage
         function loadNotes() {
             // Clear the canvas
             canvas.innerHTML = '';
