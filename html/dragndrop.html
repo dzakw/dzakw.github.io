@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Notes</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .canvas {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .note {
+            position: absolute;
+            width: 110px;
+            height: 150px;
+            background-color: #ffeb3b;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            box-sizing: border-box;
+            cursor: move;
+            resize: both;
+            overflow: auto;
+        }
+
+        .note.selected {
+            border: 2px solid #000;
+        }
+
+        .note header input.note-title {
+            border: none;
+            background: transparent;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+            outline: none;
+        }
+
+        .note textarea {
+            width: 100%;
+            height: calc(100% - 40px);
+            border: none;
+            resize: none;
+            background: transparent;
+            outline: none;
+        }
+
+        .controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+        }
+
+        .controls button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .selection-box {
+            position: absolute;
+            border: 1px dashed #000;
+            background: rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button id="addNoteButton">+</button>
+        <button id="saveNotesButton">Save</button>
+        <button id="loadNotesButton">Load</button>
+    </div>
+    <div class="canvas" id="canvas"></div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const addNoteButton = document.getElementById('addNoteButton');
+        const saveNotesButton = document.getElementById('saveNotesButton');
+        const loadNotesButton = document.getElementById('loadNotesButton');
+        let draggedElement = null;
+        let offsetX = 0;
+        let offsetY = 0;
+        let selectedNotes = new Set();
+        let isSelecting = false;
+        let selectionBox = null;
+        let startX, startY;
+
+        addNoteButton.addEventListener('click', () => {
+            createNote();
+        });
+
+        saveNotesButton.addEventListener('click', () => {
+            saveNotes();
+        });
+
+        loadNotesButton.addEventListener('click', () => {
+            loadNotes();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Delete') {
+                deleteSelectedNotes();
+            }
+        });
+
+        function createNote() {
+            const note = document.createElement('div');
+            note.classList.add('note');
+            note.draggable = true;
+            note.style.top = '50px';
+            note.style.left = '50px';
+            note.innerHTML = `
+                <header>
+                    <input type="text" placeholder="New Note" class="note-title" spellcheck="false" />
+                </header>
+                <textarea placeholder="Edit your note" spellcheck="false"></textarea>
+            `;
+            canvas.appendChild(note);
+            addDragAndDropHandlers(note);
+            addSelectHandler(note);
+        }
+
+        function deleteSelectedNotes() {
+            selectedNotes.forEach(note => {
+                canvas.removeChild(note);
+            });
+            selectedNotes.clear();
+        }
+
+        function selectNote(note, event) {
+            if (event.shiftKey) {
+                if (selectedNotes.has(note)) {
+                    selectedNotes.delete(note);
+                    note.classList.remove('selected');
+                } else {
+                    selectedNotes.add(note);
+                    note.classList.add('selected');
+                }
+            } else {
+                selectedNotes.forEach(n => n.classList.remove('selected'));
+                selectedNotes.clear();
+                selectedNotes.add(note);
+                note.classList.add('selected');
+            }
+        }
+
+        function addSelectHandler(note) {
+            note.addEventListener('mousedown', (event) => selectNote(note, event));
+        }
+
+        function addDragAndDropHandlers(note) {
+            note.addEventListener('dragstart', function(event) {
+                draggedElement = event.target;
+                const rect = draggedElement.getBoundingClientRect();
+                offsetX = event.clientX - rect.left;
+                offsetY = event.clientY - rect.top;
+                setTimeout(() => {
+                    draggedElement.style.display = 'none';
+                }, 0);
+            });
+
+            note.addEventListener('dragend', function(event) {
+                setTimeout(() => {
+                    draggedElement.style.display = 'block';
+                    draggedElement = null;
+                }, 0);
+            });
+
+            note.addEventListener('dragover', function(event) {
+                event.preventDefault();
+            });
+
+            note.addEventListener('drop', function(event) {
+                event.preventDefault();
+                if (draggedElement) {
+                    const x = event.clientX - offsetX;
+                    const y = event.clientY - offsetY;
+                    draggedElement.style.left = `${x}px`;
+                    draggedElement.style.top = `${y}px`;
+                }
+            });
+        }
+
+        canvas.addEventListener('dragover', function(event) {
+            event.preventDefault();
+        });
+
+        canvas.addEventListener('drop', function(event) {
+            event.preventDefault();
+            if (draggedElement) {
+                const x = event.clientX - offsetX;
+                const y = event.clientY - offsetY;
+                draggedElement.style.left = `${x}px`;
+                draggedElement.style.top = `${y}px`;
+            }
+        });
+
+        canvas.addEventListener('mousedown', function(event) {
+            if (event.target === canvas) {
+                isSelecting = true;
+                startX = event.clientX;
+                startY = event.clientY;
+
+                selectionBox = document.createElement('div');
+                selectionBox.classList.add('selection-box');
+                selectionBox.style.left = `${startX}px`;
+                selectionBox.style.top = `${startY}px`;
+                canvas.appendChild(selectionBox);
+
+                selectedNotes.forEach(note => note.classList.remove('selected'));
+                selectedNotes.clear();
+            }
+        });
+
+        canvas.addEventListener('mousemove', function(event) {
+            if (isSelecting) {
+                const currentX = event.clientX;
+                const currentY = event.clientY;
+                const width = currentX - startX;
+                const height = currentY - startY;
+
+                selectionBox.style.width = `${Math.abs(width)}px`;
+                selectionBox.style.height = `${Math.abs(height)}px`;
+                selectionBox.style.left = `${Math.min(startX, currentX)}px`;
+                selectionBox.style.top = `${Math.min(startY, currentY)}px`;
+
+                document.querySelectorAll('.note').forEach(note => {
+                    const noteRect = note.getBoundingClientRect();
+                    const selectionRect = selectionBox.getBoundingClientRect();
+
+                    if (selectionRect.left < noteRect.right &&
+                        selectionRect.right > noteRect.left &&
+                        selectionRect.top < noteRect.bottom &&
+                        selectionRect.bottom > noteRect.top) {
+                        note.classList.add('selected');
+                        selectedNotes.add(note);
+                    } else {
+                        note.classList.remove('selected');
+                        selectedNotes.delete(note);
+                    }
+                });
+            }
+        });
+
+        canvas.addEventListener('mouseup', function(event) {
+            if (isSelecting) {
+                isSelecting = false;
+                canvas.removeChild(selectionBox);
+            }
+        });
+
+        function saveNotes() {
+            const notes = [];
+            document.querySelectorAll('.note').forEach(note => {
+                notes.push({
+                    top: note.style.top,
+                    left: note.style.left,
+                    width: note.style.width,
+                    height: note.style.height,
+                    title: note.querySelector('.note-title').value,
+                    content: note.querySelector('textarea').value
+                });
+            });
+            localStorage.setItem('notes', JSON.stringify(notes));
+        }
+
+        function loadNotes() {
+            const notes = JSON.parse(localStorage.getItem('notes'));
+            if (notes) {
+                notes.forEach(noteData => {
+                    const note = document.createElement('div');
+                    note.classList.add('note');
+                    note.draggable = true;
+                    note.style.top = noteData.top;
+                    note.style.left = noteData.left;
+                    note.style.width = noteData.width;
+                    note.style.height = noteData.height;
+                    note.innerHTML = `
+                        <header>
+                            <input type="text" value="${noteData.title}" class="note-title" spellcheck="false" />
+                        </header>
+                        <textarea spellcheck="false">${noteData.content}</textarea>
+                    `;
+                    canvas.appendChild(note);
+                    addDragAndDropHandlers(note);
+                    addSelectHandler(note);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
