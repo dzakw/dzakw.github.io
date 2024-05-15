@@ -279,6 +279,9 @@
         }
 
         function loadNotes() {
+            // Clear the canvas
+            canvas.innerHTML = '';
+
             const notes = JSON.parse(localStorage.getItem('notes'));
             if (notes) {
                 notes.forEach(noteData => {
@@ -301,6 +304,7 @@
                 });
             }
         }
+
     </script>
 </body>
 </html>
