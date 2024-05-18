@@ -64,3 +64,58 @@ body, html {
     justify-content: space-between;
     margin-bottom: 85px;
 }
+
+.home-page {
+    margin-top:150px;
+}
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.home-left h1 {
+    font-size: 54px;
+    letter-spacing: 8px;
+    color: #171717;
+}
+
+/* Carousel container styling */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 831px;
+}
+
+/* Carousel inner container styling */
+.carousel-inner {
+    display: flex;
+    width: 400%; /* assuming 4 images */
+    animation: slide 16s infinite; /* adjust time as needed */
+}
+
+/* Each carousel item styling */
+.carousel-item {
+    flex: 1 0 100%;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Additional styling for images to fit the container */
+.carousel-item img {
+    height: auto;
+    width: 831px;
+    border-radius: 20px;
+}
