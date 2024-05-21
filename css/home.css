@@ -11,21 +11,6 @@ body, html {
     width: 100%;
 }
 
-.footer {
-    display: flex;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    background-color: white;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight:lighter;
-}
-
 /* location.html */
 
 .location {
@@ -138,7 +123,6 @@ body, html {
     animation-play-state: paused;
 }
 
-
 /* Additional styling for images to fit the container */
 .carousel-item img {
     height: 100%;
@@ -166,41 +150,6 @@ body, html {
     border-radius: 20px;
     cursor: pointer;
     border: none;
-}
-
-.location-now {
-    display: flex;
-    width: 105px;
-    height: 50px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.location-now:hover {
-    cursor: pointer;
-    background-color: #A60B0B;
-    border-radius: 5px;
-}
-
-.location-now:hover h2 {
-    color: white;
-}
-
-.location-now:hover .icon img {
-    filter: brightness(0) invert(1);
-}
-
-.location-now .icon {
-    display: flex;
-    align-items: center;
-}
-
-.location-now h2 {
-    font-size: 30px;
-    color: #A60B0B;
 }
 
 .btn-container {
@@ -281,3 +230,4 @@ body, html {
     padding: 10px;
     border: 1px solid #ffffff;
 }
+
