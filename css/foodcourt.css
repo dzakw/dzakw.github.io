@@ -39,7 +39,7 @@ html, body {
 
 .carousel-item img {
     width: 100%;
-    height: auto;
+    height: 227px;
     object-fit: cover;
 }
 
@@ -154,7 +154,6 @@ html, body {
     max-width: fit-content;
     height: 50px;
     color: #A60B0B;
-
     padding-left: 5px;
     padding-right: 5px;
     -webkit-appearance: none;
@@ -184,4 +183,183 @@ html, body {
     visibility: hidden;
     position: absolute;
     white-space: nowrap;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.main-menu::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.main-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main-menu-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    overflow-x: auto;
+    height: 270px;
+    width: 100%;
+    user-select: none;
+    cursor: grab;
+}
+
+.main-menu:active {
+    cursor: grabbing;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 160px;
+    height: 260px;
+    margin-right: 30px;
+}
+
+.menu-card-img {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-card img {
+    width: 160px;
+    height: 160px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.menu-card-title, 
+.menu-card-category, 
+.menu-card-bottom {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.menu-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #171717;
+    margin-top: 5px;
+}
+
+.menu-card-category {
+    font-size: 12px;
+    background-color: #818181;
+    color: white;
+    width: 75px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.menu-card-category img {
+    width: 22px;
+    height: auto;
+    object-fit: contain;
+    padding-top: 0px;
+}
+
+.menu-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.menu-card-bottom:hover .menu-card-btn button {
+    background-color: #50B148;
+    color: white;
+}
+
+.menu-card-bottom p {
+    font-size: 16px;
+    color: #171717;
+    font-weight: bold;
+    letter-spacing: -0.7px;
+}
+
+.menu-card-btn button {
+    font-size: 11px;
+    width: 60px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1px solid #50B148;
+    background-color: transparent;
+    color: #50B148;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-button {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu-button.left-button {
+    left: 0;
+}
+
+.menu-button.right-button {
+    right: 0;
+}
+
+.menu-button:hover .button-circle {
+    background-color: rgb(197, 197, 197);
+    box-shadow: 0px 4px 8px rgba(114, 114, 114, 0.2);
+}
+
+.button-circle {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(114, 114, 114, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 16px;
+    color: black;
+}
+
+.btn-all-menu {
+    margin-top: 50px;
 }
