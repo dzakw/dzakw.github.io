@@ -8,6 +8,7 @@
     width: 100%;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 999;
 }
 
 .navbar {
@@ -16,10 +17,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-}
-
-.navbar img {
-    cursor: pointer;
 }
 
 .navbar-right {
@@ -39,6 +36,7 @@
     align-items: center;
     margin-right: 30px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .navbar-right button:hover {
@@ -62,6 +60,7 @@
     font-size: 12px;
     font-weight:lighter;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 998;
 }
 
 .btn-back {
