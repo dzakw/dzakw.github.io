@@ -13,7 +13,7 @@ html, body {
 }
 
 .banner {
-    margin-top: 120px;
+    margin-top: 150px;
     height: 227px;
     width: 100%;
     display: flex; /* Use flexbox to align children */

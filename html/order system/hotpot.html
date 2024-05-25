@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reusable.css"> <!-- reusable style-->
+    <link rel="stylesheet" href="../../css/hotpot.css">
+    <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
+    <title>Hotpot</title>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div>
+                <img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo">
+            </div>
+            <div class="navbar-right">
+                <button>
+                    <img src="../../media/order/icon/menu.png" alt="Today's Menu">今日员工食堂菜单</button>
+                <button>
+                    <img src="../../media/order/icon/history.png" alt="History">订单历史</button>
+                <button>
+                    <img src="../../media/order/icon/faq.png" alt="FAQ">常问问题</button>
+                <button>
+                    <img src="../../media/order/icon/user.png" alt="Profile">我的
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-container" onclick="window.history.back();">
+        <button class="btn-back">
+            <img src="../../media/order/icon/back.png" alt="Back"> <!-- back icon -->
+        </button>
+        <p>后退</p>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-bar-container">
+            <div class="progress-bar-inner">
+                <div id="open-popup" class="progress-bar-circle completed">
+                    <p>选择桌号</p>
+                </div>                
+                <div class="progress-bar-line-done"></div>
+            </div>
+            <div class="progress-bar-inner">
+                <div class="progress-bar-circle ongoing">
+                    <p>火锅底料</p>
+                </div>
+                <div class="progress-bar-line"></div>
+            </div>
+            <div class="progress-bar-inner">
+                <div class="progress-bar-circle">
+                    <p>配菜</p>
+                </div>
+                <div class="progress-bar-line"></div>
+            </div>
+            <div class="progress-bar-circle">
+                <p>订购</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hotpot-header">
+        <h1>火锅</h1>
+        <div class="header-right">
+            <h3>1号包间</h3>
+            <h3>堂食</h3>
+            <div class="opt">
+                <select>
+                    <option value="dine">堂食</option>
+                    <option value="takeaway">打包</option>
+                </select>
+            </div>
+            <div class="opt">
+                <select>
+                    <option value="North Area">北区</option>
+                    <option value="South Area">南区</option>
+                    <option value="Huaxin">华新</option>
+                    <option value="VIP餐厅">VIP餐厅</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="hotpot-menu">
+        <h2>火锅底料</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="../../media/order/menu/hotpot1.png" alt="Hotpot 1">
+                <div class="menu-text">
+                    <p>鸳鸯锅</p>
+                    <p>¥76</p>
+                </div>
+                <button>增项目</button>
+            </div>
+            <div class="menu-item">
+                <img src="../../media/order/menu/hotpot2.png" alt="Hotpot 2">
+                <div class="menu-text">
+                    <p>番茄鸳鸯锅</p>
+                    <p>¥76</p>
+                </div>
+                <button>增项目</button>
+            </div>
+            <div class="menu-item">
+                <img src="../../media/order/menu/hotpot3.png" alt="Hotpot 3">
+                <div class="menu-text">
+                    <p>素红汤火锅</p>
+                    <p>¥76</p>
+                </div>
+                <button>增项目</button>
+            </div>
+            <div class="menu-item">
+                <img src="../../media/order/menu/hotpot4.png" alt="Hotpot 4">
+                <div class="menu-text">
+                    <p>番茄锅</p>
+                    <p>¥76</p>
+                </div>
+                <button>增项目</button>
+            </div>
+            <div class="menu-item">
+                <img src="../../media/order/menu/hotpot5.png" alt="Hotpot 5">
+                <div class="menu-text">
+                    <p>素清汤火锅</p>
+                    <p>¥76</p>
+                </div>
+                <button>增项目</button>
+            </div>
+            <div class="menu-item">
+                <img src="../../media/order/menu/hotpot6.png" alt="Hotpot 6">
+                <div class="menu-text">
+                    <p>牛肉火锅</p>
+                    <p>¥76</p>
+                </div>
+                <button>增项目</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>版权所有：印尼青山莫罗瓦利园区自动化信息部信息科 © 2021-2024 Indonesia Tsingshan. All rights reserved.</p>
+    </div> 
+    <script src="../../js/hotpot.js"></script>
+</body>
+</html>
