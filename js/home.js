@@ -99,6 +99,6 @@ tabButtons.forEach(button => {
     });
 });
 
-document.getElementyId('scroll-button').addEventListener('click', function() {
+document.getElementById('scroll-button').addEventListener('click', function() {
     document.getElementById('all-menu').scrollIntoView({ behavior: 'smooth' });
 });
