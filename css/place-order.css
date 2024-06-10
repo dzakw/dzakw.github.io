@@ -415,6 +415,10 @@ h3 {
     margin: 0 auto;
 }
 
+.marg-120 {
+    margin-top: 120px;
+}
+
 .receipt {
     height: 600px;
     width: 100%;
