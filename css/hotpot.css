@@ -865,3 +865,18 @@ body, html {
 .total-pay-btn button:hover {
     background-color: #245820;
 }
+
+.room-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 35px;
+    border: solid 2px #50B148;
+    margin-right: 30px;
+}
+
+.room-number h4 {
+    font-size: 26px;
+    font-weight: bold;
+}
