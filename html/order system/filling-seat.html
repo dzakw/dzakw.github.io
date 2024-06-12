@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reusable.css"> <!-- reusable style-->
+    <link rel="stylesheet" href="../../css/hotpot.css">
+    <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
+    <title>Select Fillings</title>
+</head>
+
+<body>
+<div class="navbar-container">
+    <div class="navbar">
+        <div>
+            <img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo">
+        </div>
+        <div class="navbar-right">
+            <button>
+                <img src="../../media/order/icon/menu.png" alt="Today's Menu">今日员工食堂菜单</button>
+            <button>
+                <img src="../../media/order/icon/history.png" alt="History">订单历史</button>
+            <button>
+                <img src="../../media/order/icon/faq.png" alt="FAQ">常问问题</button>
+            <button>
+                <img src="../../media/order/icon/user.png" alt="Profile">我的
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="back-container" onclick="window.history.back();">
+    <button class="btn-back">
+        <img src="../../media/order/icon/back.png" alt="Back"> <!-- back icon -->
+    </button>
+    <p>后退</p>
+</div>
+
+<div class="progress-bar">
+    <div class="progress-bar-container">
+        <div class="progress-bar-inner">
+            <div class="progress-bar-circle completed" onclick="window.location.href='hotpot.html'">
+                <p>选择桌号</p>
+            </div>                
+            <div class="progress-bar-line-done"></div>
+        </div>
+        <div class="progress-bar-inner">
+            <div class="progress-bar-circle completed" onclick="window.location.href='hotpot.html'">
+                <p>火锅底料</p>
+            </div>
+            <div class="progress-bar-line-done"></div>
+        </div>
+        <div class="progress-bar-inner">
+            <div class="progress-bar-circle ongoing">
+                <p>配菜</p>
+            </div>
+            <div class="progress-bar-line"></div>
+        </div>
+        <div class="progress-bar-circle">
+            <p>订购</p>
+        </div>
+    </div>
+</div>
+
+<div class="fillings-container">
+    <div class="hotpot-header">
+        <h1>火锅</h1>
+        <div class="header-right">
+            <h3>鸳鸯锅</h3>
+            <h3>1号(4人)</h3>
+            <div class="opt">
+                <select>
+                    <option value="dine">堂食</option>
+                    <option value="takeaway">打包</option>
+                </select>
+            </div>
+            <div class="opt">
+                <select>
+                    <option value="North Area">北区</option>
+                    <option value="South Area">南区</option>
+                    <option value="Huaxin">华新</option>
+                    <option value="VIP餐厅">VIP餐厅</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="filling-container">
+        <h2>配菜</h2>
+        <div class="filling-box">
+            <div class="filling-category">
+                <div class="filling-category-item">
+                    <div class="tabs">
+                        <a href="#section1" class="tab-button active">主食类</a>
+                        <a href="#section2" class="tab-button">肉类</a>
+                        <a href="#section3" class="tab-button">海鲜</a>
+                        <a href="#section4" class="tab-button">丸子类</a>
+                        <a href="#section5" class="tab-button">主食类</a>
+                        <a href="#section6" class="tab-button">饮料</a>
+                    </div>
+                </div>
+            </div>
+            <div id="section1" class="filling-item-container">
+                <div class="filling-item-row">
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filling-item-row">
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filling-item-row">
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filling-item-row">
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="items-left">
+                            <img src="../../media/order/menu/allmenu1.png" alt="Image 1">
+                        </div>
+                        <div class="items-right">
+                            <div class="items-price">
+                                <h3>沙拉</h3>
+                                <p>¥76起</p>
+                            </div>
+                            <button>增项目</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-payment">
+            <button onclick="window.location.href='place-order-hotpot-seat.html'">去付款</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>版权所有：印尼青山莫罗瓦利园区自动化信息部信息科 © 2021-2024 Indonesia Tsingshan. All rights reserved.</p>
+</div>
+
+<script src="../../js/filling.js"></script>
+</body>
+</html>
