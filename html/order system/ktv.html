@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reusable.css"> <!-- reusable style-->
+    <link rel="stylesheet" href="../../css/ktv.css">
+    <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
+    <title>KTV</title>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div>
+                <img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo">
+            </div>
+            <div class="navbar-right">
+                <button>
+                    <img src="../../media/order/icon/menu.png" alt="Today's Menu">今日员工食堂菜单</button>
+                <button>
+                    <img src="../../media/order/icon/history.png" alt="History">订单历史</button>
+                <button>
+                    <img src="../../media/order/icon/faq.png" alt="FAQ">常问问题</button>
+                <button>
+                    <img src="../../media/order/icon/user.png" alt="Profile">我的
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-container" onclick="window.history.back();">
+        <button class="btn-back">
+            <img src="../../media/order/icon/back.png" alt="Back"> <!-- back icon -->
+        </button>
+        <p>后退</p>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>KTV</h1>
+            <div class="header-right">
+                <div class="opt">
+                    <select>
+                        <option value="North Area">北区</option>
+                        <option value="South Area">南区</option>
+                        <option value="Huaxin">华新</option>
+                        <option value="VIP餐厅">VIP餐厅</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="inner-container">
+                <div class="content-header">
+                    <h3>小包(3-4人)</h3>
+                </div>
+                <div class="content-box">
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">12:30至19:00内,任选3小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>  
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">12:30至21:00内,任选6小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">17:00至22:00内,任选4小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">18:00至次日03:00内,任选3小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">18:00至次日06:30内,任选5小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inner-container">
+                <div class="content-header">
+                    <h3>中包(5-6人)</h3>
+                </div>
+                <div class="content-box">
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">12:30至19:00内,任选3小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>  
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">12:30至21:00内,任选6小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">17:00至22:00内,任选4小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">18:00至次日03:00内,任选3小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">18:00至次日06:30内,任选5小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inner-container">
+                <div class="content-header">
+                    <h3>大包(9-12)</h3>
+                </div>
+                <div class="content-box">
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">12:30至19:00内,任选3小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>  
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">12:30至21:00内,任选6小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">17:00至22:00内,任选4小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">18:00至次日03:00内,任选3小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown-container" onclick="toggleDropdown(this)">
+                        <div class="dropdown-header">
+                            <div>
+                                <div class="top-left">18:00至次日06:30内,任选5小时</div>
+                                <div class="bottom-left">可选6个特惠套餐,最高优惠232元</div>
+                            </div>
+                            <div class="right-content">
+                                <div class="top-right">¥76起</div>
+                                <div class="down-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>
+                                <span>3小时纯欢唱套餐</span>
+                                <span style="font-size: 12px; font-weight: bold;">¥76</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>版权所有：印尼青山莫罗瓦利园区自动化信息部信息科 © 2021-2024 Indonesia Tsingshan. All rights reserved.</p>
+    </div> 
+    <!-- --> <script src="../../js/ktv.js"></script>
+</body>
+</html>
