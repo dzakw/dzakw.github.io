@@ -13,12 +13,12 @@
     <div class="navbar-container">
         <div class="navbar">
             <div>
-                <img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo">
+                <a href="home.html"><img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo"></a>
             </div>
             <div class="navbar-right">
                 <button onclick="window.location.href='todays-menu.html'">
                     <img src="../../media/order/icon/menu.png" alt="Today's Menu">今日员工食堂菜单</button>
-                <button onclick="window.location.href='history.html'">
+                <button class="active" onclick="window.location.href='history.html'">
                     <img src="../../media/order/icon/history.png" alt="History">订单历史</button>
                 <button onclick="window.location.href='faq.html'">
                     <img src="../../media/order/icon/faq.png" alt="FAQ">常问问题</button>
@@ -45,14 +45,19 @@
                     <div class="status active">
                         <p>正在进行中</p>
                     </div>
-                    <div class="status">
+                    <div class="status" onclick="window.location.href='history-done.html'">
                         <p>订单历史</p>
                     </div>
                 </div>
             </div>
-            <div class="order-card">
+            <div class="order-card" onclick="window.location.href='receipt.html'">
                 <div class="order-card-left">
-                    <h4>订单编号: 586018122</h4>
+                    <div class="order-place">
+                        <p>打包</p>
+                        <div class="place">
+                            <p>北区 <img src="../../media/order/icon/location.png" alt="Location"></p>
+                        </div>
+                    </div>
                     <div class="leftp">
                         <p>x1</p>
                         <p>沙拉</p>
@@ -62,15 +67,45 @@
                         <p>香辣牛骨锅</p>
                     </div>
                 </div>
+                <div class="order-card-mid">
+                    <h4>订单编号: 586018122</h4>
+                </div>
                 <div class="order-card-right">
-                    <div class="current-status">
+                    <div class="current-status in-progress">
                         <p>正在进行中</p>
                     </div>
+                    <div class="order-price">
+                        <p>总价: ¥152</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="order-card" onclick="window.location.href='receipt.html'">
+                <div class="order-card-left">
                     <div class="order-place">
                         <p>打包</p>
                         <div class="place">
                             <p>北区 <img src="../../media/order/icon/location.png" alt="Location"></p>
                         </div>
+                    </div>
+                    <div class="leftp">
+                        <p>x1</p>
+                        <p>沙拉</p>
+                    </div>
+                    <div class="leftp">
+                        <p>x1</p>
+                        <p>香辣牛骨锅</p>
+                    </div>
+                    <div class="leftp">
+                        <p>......</p>
+                    </div>
+                </div>
+                <div class="order-card-mid">
+                    <h4>订单编号: 586018122</h4>
+                    <p>点击查看更多 <img src="../../media/order/icon/down.png"></p>
+                </div>
+                <div class="order-card-right">
+                    <div class="current-status in-progress">
+                        <p>正在进行中</p>
                     </div>
                     <div class="order-price">
                         <p>总价: ¥152</p>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reusable.css"> <!-- reusable style-->
+    <link rel="stylesheet" href="../../css/history.css">
+    <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
+    <title>Order History</title> 
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div>
+                <a href="home.html"><img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo"></a>
+            </div>
+            <div class="navbar-right">
+                <button onclick="window.location.href='todays-menu.html'">
+                    <img src="../../media/order/icon/menu.png" alt="Today's Menu">今日员工食堂菜单</button>
+                <button class="active" onclick="window.location.href='history.html'">
+                    <img src="../../media/order/icon/history.png" alt="History">订单历史</button>
+                <button onclick="window.location.href='faq.html'">
+                    <img src="../../media/order/icon/faq.png" alt="FAQ">常问问题</button>
+                <button onclick="window.location.href='profile.html'">
+                    <img src="../../media/order/icon/user.png" alt="Profile">我的
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-container" onclick="window.history.back();">
+        <button class="btn-back">
+            <img src="../../media/order/icon/back.png" alt="Back"> <!-- back icon -->
+        </button>
+        <p>后退</p>
+    </div>
+
+    <div class="container">
+        <h1>付款详情</h1>
+        <div class="inner-container">
+            <div class="order-status">
+                <h4>交易状态</h4>
+                <div class="status-container">
+                    <div class="status" onclick="window.location.href='history.html'">
+                        <p>正在进行中</p>
+                    </div>
+                    <div class="status active">
+                        <p>订单历史</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ord-cont">
+                <div class="order-card-date">
+                    <p>2024 年 1 月 5 日 20.24</p>
+                </div>
+                <div class="order-card" onclick="window.location.href='receipt.html'">
+                    <div class="order-card-left">
+                        <div class="order-place">
+                            <p>打包</p>
+                            <div class="place">
+                                <p>北区 <img src="../../media/order/icon/location.png" alt="Location"></p>
+                            </div>
+                        </div>
+                        <div class="leftp">
+                            <p>x1</p>
+                            <p>沙拉</p>
+                        </div>
+                        <div class="leftp">
+                            <p>x1</p>
+                            <p>香辣牛骨锅</p>
+                        </div>
+                    </div>
+                    <div class="order-card-mid">
+                        <h4>订单编号: 586018122</h4>
+                    </div>
+                    <div class="order-card-right">
+                        <div class="current-status in-progress">
+                            <p>正在进行中</p>
+                        </div>
+                        <div class="order-price">
+                            <p>总价: ¥152</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="order-card" onclick="window.location.href='receipt.html'">
+                    <div class="order-card-left">
+                        <div class="order-place">
+                            <p>打包</p>
+                            <div class="place">
+                                <p>北区 <img src="../../media/order/icon/location.png" alt="Location"></p>
+                            </div>
+                        </div>
+                        <div class="leftp">
+                            <p>x1</p>
+                            <p>沙拉</p>
+                        </div>
+                        <div class="leftp">
+                            <p>x1</p>
+                            <p>香辣牛骨锅</p>
+                        </div>
+                        <div class="leftp">
+                            <p>......</p>
+                        </div>
+                    </div>
+                    <div class="order-card-mid">
+                        <h4>订单编号: 586018122</h4>
+                        <p>点击查看更多 <img src="../../media/order/icon/down.png"></p>
+                    </div>
+                    <div class="order-card-right">
+                        <div class="current-status">
+                            <p>已完成</p>
+                        </div>
+                        <div class="order-price">
+                            <p>总价: ¥152</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="ord-cont">
+                <div class="order-card-date">
+                    <p>2024 年 1 月 5 日 20.24</p>
+                </div>
+                <div class="order-card" onclick="window.location.href='receipt.html'">
+                    <div class="order-card-left">
+                        <div class="order-place">
+                            <p>打包</p>
+                            <div class="place">
+                                <p>北区 <img src="../../media/order/icon/location.png" alt="Location"></p>
+                            </div>
+                        </div>
+                        <div class="leftp">
+                            <p>x1</p>
+                            <p>沙拉</p>
+                        </div>
+                        <div class="leftp">
+                            <p>x1</p>
+                            <p>香辣牛骨锅</p>
+                        </div>
+                    </div>
+                    <div class="order-card-mid">
+                        <h4>订单编号: 586018122</h4>
+                    </div>
+                    <div class="order-card-right">
+                        <div class="current-status cancelled">
+                            <p>已取消</p>
+                        </div>
+                        <div class="order-price">
+                            <p>总价: ¥152</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>版权所有：印尼青山莫罗瓦利园区自动化信息部信息科 © 2021-2024 Indonesia Tsingshan. All rights reserved.</p>
+    </div>
+</body>
+</html>
