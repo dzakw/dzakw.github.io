@@ -9,9 +9,9 @@ body, html {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-image: url('../media/order/bg login.png'); /* Add this line */
-    background-size: cover; /* Ensure the image covers the entire page */
-    background-position: center; /* Center the image */
+    background-image: url('../media/order/bg login.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -24,7 +24,7 @@ body, html {
 }
 
 .card {
-    position: relative; /* Ensure the logo is positioned relative to the card */
+    position: relative;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -65,7 +65,7 @@ p {
 .form:focus {
     border: 1px solid #50B148;
     border-right: none;
-    outline: none; /* Remove default outline */
+    outline: none;
 }
 
 .icon {
@@ -116,8 +116,70 @@ input[type="submit"]:hover {
 
 .logo {
     position: absolute;
-    top: 15px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
+    top: 15px;
+    left: 20px;
     width: 60px;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .logo {
+        top: 0;
+        left: 4px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    .cbox {
+        width: 100%;
+    }
+
+    .cbox label {
+        width: 100%;
+    }
+    
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    input[type="submit"]:active {
+        background-color: #3f8a3f;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
 }

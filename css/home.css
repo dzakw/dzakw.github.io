@@ -232,3 +232,15 @@ body, html {
     border: 1px solid #ffffff;
 }
 
+@media (max-width: 768px) {
+    body, html {
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #F7F9F8;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+}
