@@ -132,13 +132,14 @@ body, html {
     display: flex;
     align-items: baseline;
     overflow: hidden;
+    font-size: 16px;
 }
 
 .order-card-mid img {
     height: 10px;
     padding-left: 4px;
-    filter: drop-shadow(0px 100px 0 #50B148);
-    transform: translateY(-100px);
+    filter: drop-shadow(0px 50px 0 #50B148);
+    transform: translateY(-51px);
 }
 
 .order-card-mid {
@@ -146,6 +147,10 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.respons-p {
+    display: none;
 }
 
 .order-card-right {
@@ -237,4 +242,168 @@ body, html {
 .order-card-date p {
     font-size: 20px;
     color: #696969;
+}
+
+@media (max-width: 1220px) {
+    body, html {
+        margin: 0;
+        background-color: #F7F9F8;
+        width: 100%;
+        padding: 0 5px 0 5px;
+    }
+
+    .container {
+        margin-top: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container h1 {
+        font-size: 40px;
+        margin-bottom: 5px;
+        letter-spacing: 4px;
+    }
+    
+    .order-status {
+        margin-bottom: 10px;
+    }
+
+    .order-status h4 {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .status {
+        width: 80px;
+        height: 30px;
+    }
+    
+    .order-place p {
+        font-size: 14px;
+    }
+
+    .status p {
+        font-size: 16px;
+    }
+
+    .respons-p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .respons-p p {
+        font-size: 18px;
+        color: #171717;
+    }
+
+    .respons-p img {
+        filter: none;
+        transform: none;
+        width: 24px;
+        height: 24px;
+    }
+
+    .order-card-mid h4 {
+        display: none;
+    }
+
+    .current-status {
+        width: 70px;
+        height: 25px;
+    }
+
+    .current-status p {
+        font-size: 12px;
+    }
+
+    .order-price p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .inner-container {
+        padding: 0 20px 0 20px;
+    }
+
+    .container h1 {
+        font-size: 36px;
+    }
+
+    .order-status h4 {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .status p {
+        font-size: 14px;
+    }
+
+    .leftp p {
+        font-size: 12px;
+    }
+
+    .order-card-mid h4,
+    .order-card-mid p,
+    .respons-p p {
+        font-size: 16px;
+    }
+
+    .current-status {
+        width: 65px;
+        height: 25px;
+    }
+
+    .current-status p {
+        font-size: 11px;
+    }
+
+    .order-price p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 30px;
+        letter-spacing: 6px;
+    }
+
+    .order-card {
+        padding: 10px 10px 10px 10px;
+    }
+
+    .order-card-mid p {
+        font-size: 12px;
+    }
+
+    .order-card-mid p img {
+        width: 16px;
+        height: 6px;
+    }
+
+    .respons-p img {
+        filter: none;
+        transform: none;
+        width: 18px;
+        height: 18px;
+    }
+
+    .order-price p {
+        font-size: 12px;
+    }
+
+    .order-place p {
+        font-size: 12px;
+    }
+
+    .place img {
+        height: 16px;
+    }
+
+    .order-card-date p {
+        font-size: 16px;
+    }
 }
