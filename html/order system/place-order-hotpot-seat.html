@@ -10,31 +10,55 @@
 </head>
 
 <body>
-<div class="navbar-container">
-    <div class="navbar">
-        <div>
-            <a href="home.html"><img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo"></a>
-        </div>
-        <div class="navbar-right">
-            <button onclick="window.location.href='todays-menu.html'">
-                <img src="../../media/order/icon/menu.png" alt="Today's Menu">今日员工食堂菜单</button>
-            <button onclick="window.location.href='history.html'">
-                <img src="../../media/order/icon/history.png" alt="History">订单历史</button>
-            <button onclick="window.location.href='faq.html'">
-                <img src="../../media/order/icon/faq.png" alt="FAQ">建议箱</button>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <img src="../../media/order/icon/user.png" alt="Profile">我的
-                </button>
-                <div class="dropdown-content">
-                    <a href="profile.html"><img src="../../media/order/icon/profile.png" alt="个人资料">个人资料</a>
-                    <a href="change_password.html"><img src="../../media/order/icon/change_password.png" alt="更改密码">更改密码</a>
-                    <a href="login.html"><img src="../../media/order/icon/logout.png" alt="登出">登出</a>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div>
+                <a href="home.html"><img src="../../media/eternal tsingshan.png" width="60px" height="auto" alt="logo"></a>
+            </div>
+            <div class="navbar-right">
+                <button onclick="window.location.href='todays-menu.html'">
+                    <img src="../../media/order/icon/menu.png" alt="Today's Menu">今日员工食堂菜单</button>
+                <button onclick="window.location.href='history.html'">
+                    <img src="../../media/order/icon/history.png" alt="History">订单历史</button>
+                <button onclick="window.location.href='faq.html'">
+                    <img src="../../media/order/icon/faq.png" alt="FAQ">建议箱</button>
+                <div class="dropdown">
+                    <button class="dropbtn dropdown-toggle">
+                        <img src="../../media/order/icon/user.png" alt="Profile">我的
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="profile.html"><img src="../../media/order/icon/profile.png" alt="个人资料">个人资料</a>
+                        <a href="change_password.html"><img src="../../media/order/icon/change_password.png" alt="更改密码">更改密码</a>
+                        <a href="login.html"><img src="../../media/order/icon/logout.png" alt="登出">登出</a>
+                    </div>
                 </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>   
+                <span></span>
+            </div>
+        </div>
+        <div class="navbar-collapse">
+            <div class="resp" onclick="window.location.href='todays-menu.html'">
+                <img src="../../media/order/icon/menu.png" alt="Today's Menu"><p>>今日员工食堂菜单</p>
+            </div>
+            <div class="resp" onclick="window.location.href='history.html'">
+                <img src="../../media/order/icon/history.png" alt="History"><p>订单历史</p>
+            </div>
+            <div class="resp-faq" onclick="window.location.href='faq.html'">
+                <img src="../../media/order/icon/faq.png" alt="FAQ"><p>建议箱</p>
+            </div>
+            <div class="resp-faq accordion-inner">
+                <img src="../../media/order/icon/user.png" alt="Profile"><p>我的</p>
+            </div>
+            <div class="dropdown-content">
+                <a href="profile.html"><img src="../../media/order/icon/profile.png" alt="个人资料">个人资料</a>
+                <a href="change_password.html"><img src="../../media/order/icon/change_password.png" alt="更改密码">更改密码</a>
+                <a href="login.html"><img src="../../media/order/icon/logout.png" alt="登出">登出</a>
             </div>
         </div>
     </div>
-</div>
 
 <div class="back-container" onclick="window.history.back();">
     <button class="btn-back">
@@ -258,5 +282,6 @@
 </div>
 
 <script src="../../js/order.js"></script>
+<script src="../../js/reusable.js"></script>
 </body>
 </html>
