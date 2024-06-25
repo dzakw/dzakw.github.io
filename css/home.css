@@ -126,8 +126,7 @@ body, html {
 /* Additional styling for images to fit the container */
 .carousel-item img {
     height: 100%;
-    width: 1000px;
-    border-radius: 20px;
+    width: 1000px;  
 }
 
 .carousel-overlay {
@@ -230,6 +229,39 @@ body, html {
     text-align: center;
     padding: 10px;
     border: 1px solid #ffffff;
+}
+
+@media (max-width: 1600px) {
+    body, html {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .home-page {
+        align-items: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .carousel-container {
+        width: 800px;
+        height: 500px;
+    }
+
+    .carousel-inner {
+        height: 500px;
+    }
+
+    .carousel-overlay {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 1220px) {
+    body, html {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 921px) {
