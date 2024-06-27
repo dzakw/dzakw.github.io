@@ -299,7 +299,8 @@
         height: 60px;
     }
     .footer {
-        font-size: 10px;
+        display: flex;
+        text-align: center;
     }
 
     .navbar {
@@ -362,18 +363,31 @@
     }
 }
 
-@media (max-width: 480px) {
-    .footer {
-        font-size: 8px;
+@media (max-width: 610px) {
+    .location-now {
+        width: 70px;
+        height: 40px;
+        padding: 0 5px;
     }
+    
+    .location-now .icon img {
+        width: 20px;
+        height: 26.67px;
+    }
+    
+    
+    .location-now h2 {
+        font-size: 20px;
+        color: #A60B0B;
+    }
+}
 
+@media (max-width: 480px) {
     .back-container {
         top: 60px;
     }
 }
 
 @media (max-width: 390px) {
-    .footer {
-        font-size: 6px;
-    }
+
 }

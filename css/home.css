@@ -41,7 +41,7 @@ body, html {
 }
 
 .location button:hover {
-    background-color: #4B4B4B;
+    background-color: #245820;
     color: white;
 }
 
@@ -138,7 +138,7 @@ body, html {
     right: 0;
     width: 100%;
     opacity: 0;
-    height: 100%;
+    height: 522px;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -365,6 +365,42 @@ body, html {
     }
 }
 
+@media (max-width: 760px) {
+    .location {
+        margin-top: 0;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .location h1 {
+        font-size: 56px;
+        margin-bottom: 10px;
+    }
+
+    .btn-location {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 300px;
+    }
+
+    .btn-location button {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .btn-location button:last-child {
+        margin-bottom: 0;
+    }
+
+    .btn-location button:active {
+        background-color: #245820;
+        color: white;
+    }
+}
+
 @media (max-width: 640px) {
     .home-left {
         align-items: center;
@@ -393,6 +429,7 @@ body, html {
         border: none;
         color: #171717;
         border: 1px solid #cfcfcf;
+        font-size: 22px;
     }
 
     .btn-type button:hover {
@@ -411,18 +448,39 @@ body, html {
     .btn-type button img {
         display: none;
     }
+
+    .todays-menu {
+        align-items: center;
+        margin: 80px 0 0 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .todays-menu table {
+        width: 400px;
+    }
+
+    .todays-menu th,td {
+        font-size: 14px;
+        text-align: center;
+        padding: 4px;
+        border: 1px solid #ffffff;
+    }
 }
 
 @media (max-width: 480px) {
     body {
         padding-left: 10px;
         padding-right: 10px;
-        display: flex;
         align-items: center;
     }
    
     .home-left h1 {
         font-size: 26px;
+    }
+
+    .todays-menu table {
+        width: 340px;
     }
 }
 
