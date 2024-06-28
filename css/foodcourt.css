@@ -380,7 +380,6 @@ html, body {
     margin-top: 8px;
     margin-left: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-top: auto;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -389,6 +388,7 @@ html, body {
     justify-content: space-between;
     overflow-y: scroll;
 }
+
 .row {
     display: flex;
     flex-direction: row;
@@ -456,6 +456,12 @@ html, body {
     color: white;
 }
 
+.items-right button:hover {
+    background-color: #245820;
+    color: white;
+    cursor: pointer;
+}
+
 .items-left {
     display: flex;
     align-items: center;
@@ -495,7 +501,7 @@ html, body {
 }
 
 .checkout {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     width: 100%;
     display: flex;
     justify-content: end;
@@ -503,7 +509,7 @@ html, body {
 
 .checkout button {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border-radius: 4px;
     border: none;
     background-color: #50B148;
@@ -515,6 +521,31 @@ html, body {
 
 .checkout button:hover {
     background-color: #245820;
+}
+
+.category-hidden {
+    display: none;
+    height: fit-content;
+}
+
+.tab-buttons {
+    border: 1px solid #50B148;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #171717;
+    padding: 4px 6px 4px 6px;
+    margin-right: 12px;   
+}
+
+.current {
+    background-color: #50B148;
+    color: white;
+}
+
+.tab-buttons:active {
+    background-color: #245820;
+    color: white;
 }
 
 @media (max-width: 921px) {
@@ -614,11 +645,31 @@ html, body {
     .btn-all-menu {
         margin-top: 12px;
     }
+
+    .btn-all-menu-container {
+        margin-bottom: 30px;
+    }
+
+    .all-menu-item-container h1 {
+        font-size: 26px;
+    }
+
+    .all-menu-item {
+        margin-top: 6px;
+    }
+
+    .all-category {
+        margin-top: 42px;
+    }
 }
 
 @media (max-width: 480px) {
     .main-section {
         margin: 0 10px;
+    }
+
+    .banner {
+        margin-top:105px;
     }
 
     .main-section-header {
@@ -637,5 +688,99 @@ html, body {
     .opt select {
         font-size: 16px;
         height: 30px;
+    }
+
+    .menu-button {
+        width: 20px;
+    }
+
+    .button-circle {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .arrow {
+        font-size: 14px;
+    }
+
+    .all-category {
+        display: none;
+    }
+
+    .hamburg {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+    }
+
+    .hamburg div {
+        height: 35px;
+        display: flex;
+        padding-bottom: 2px;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .hamburg div span {
+        height: 3px;
+        width: 25px;
+        background: black;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .category-hidden {
+        display: flex;
+        flex-direction: row;
+        margin: 6px 0px 6px 10px;
+        line-height: 30px;
+    }
+
+    .checkout {
+        margin-bottom: 15px;
+    }
+
+    .items {
+        width: 160px;
+        height: 190px;
+        flex-direction: column;
+        padding: 3px;
+    }
+
+    .items-left img {
+        border-radius: 4px 4px 0 0;
+        object-fit: cover;
+        width: 160px;
+        height: 100px;
+    }
+
+    .items-right {
+        margin: 0;
+        width: 100%;
+    }
+
+    .items-price {
+        padding-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .items-price h3 {
+        margin: 8px 0 8px 0;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .items-price p {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .items-right button {
+        height: 30px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        margin-bottom: 0;
     }
 }
