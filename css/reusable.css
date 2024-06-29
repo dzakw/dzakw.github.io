@@ -101,9 +101,6 @@
 /* Footer */
 .footer {
     display: flex;
-    position: relative;
-    left: 0;
-    bottom: 0;
     width: 100%;
     height: 40px;
     background-color: white;
@@ -299,7 +296,6 @@
         height: 60px;
     }
     .footer {
-        display: flex;
         text-align: center;
     }
 

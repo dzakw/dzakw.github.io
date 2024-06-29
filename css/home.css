@@ -1,23 +1,26 @@
 * {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
 body, html {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding: 0;
+    margin: 0;
     background-color: #F7F9F8;
     width: 100%;
+    height: 100%;
 }
 
 /* location.html */
 
 .location {
-    margin-top:150px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: calc(100vh - 40px);
 }
 
 .location h1 {
@@ -54,14 +57,15 @@ body, html {
 
 .home-page {
     display: flex;
+    margin: 0 120px 0 120px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    width: 100%;
+    height: calc(100vh - 40px);
 }
 
 .home-left {
-    margin-top: 200px;
+    margin-top: 160px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -72,7 +76,6 @@ body, html {
     font-size: 54px;
     letter-spacing: 8px;
     color: #171717;
-    line-height: 0;
 }
 
 .home-right {
@@ -230,16 +233,11 @@ body, html {
 
 @media (max-height: 870px) {
     .home-page {
-        margin-bottom: 55px;
+        margin: 0 120px 55px 120px;
     }
 }
 
-@media (max-width: 1600px) {
-    body, html {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
+@media(max-width: 1500px) {
     .home-page {
         align-items: center;
     }
@@ -247,7 +245,7 @@ body, html {
 
 @media (max-width: 1400px) {
     .home-left {
-        margin-top: 0;
+        margin-top: 160px;
     }
     
     .carousel-inner {
@@ -280,10 +278,14 @@ body, html {
     .home-page {
         flex-direction: column;
         padding-top: 100px;
+        justify-content: start;
+        align-items: center;
+        margin: 0 10px 0 10px;
     }
 
     .home-left {
         width: 100%;
+        margin-top: 0;
     }
     
     .home-left h1 {
@@ -350,16 +352,6 @@ body, html {
 }
 
 @media (max-width: 921px) {
-    html, body {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
     .home-page {
         padding-top: 80px;
     }
@@ -367,9 +359,9 @@ body, html {
 
 @media (max-width: 760px) {
     .location {
-        margin-top: 0;
+        margin: 0 10px 0 10px;
         justify-content: center;
-        height: 100vh;
+        height: calc(100vh - 40px);
     }
 
     .location h1 {
@@ -413,6 +405,10 @@ body, html {
 }
 
 @media (max-width: 610px) {
+    body {
+        height: auto;
+    }
+
     .btn-resp {
         flex-direction: column;
         width: 100%;
@@ -451,9 +447,10 @@ body, html {
 
     .todays-menu {
         align-items: center;
-        margin: 80px 0 0 0;
-        height: 100%;
+        margin: 100px 0 0 0;
+        height: 805px;
         width: 100%;
+        justify-content: start;
     }
 
     .todays-menu table {
@@ -468,13 +465,7 @@ body, html {
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        padding-left: 10px;
-        padding-right: 10px;
-        align-items: center;
-    }
-   
+@media (max-width: 480px) { 
     .home-left h1 {
         font-size: 26px;
     }
