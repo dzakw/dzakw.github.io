@@ -6,16 +6,17 @@
 }
 
 body, html {
-    padding-left: 120px;
-    padding-right: 120px;
     background-color: #F7F9F8;
     width: 100%;
 }
 
 .container {
+    padding-left: 120px;
+    padding-right: 120px;
     display: flex;
     flex-direction: column;
     margin-top: 150px;
+    margin-bottom: 49px;
 }
 
 .container h1 {
@@ -245,15 +246,9 @@ body, html {
 }
 
 @media (max-width: 1220px) {
-    body, html {
-        margin: 0;
-        background-color: #F7F9F8;
-        width: 100%;
-        padding: 0 5px 0 5px;
-    }
-
     .container {
-        margin-top: 90px;
+        margin: 90px 30px 138px 30px;
+        padding: 0;
         justify-content: center;
         align-items: center;
     }
@@ -325,11 +320,15 @@ body, html {
 
 @media (max-width: 921px) {
     .container {
-        margin-top: 62px;
+        margin: 62px 10px 166px 10px;
     }
 }
 
 @media (max-width: 640px) {
+    .container {
+        margin-bottom: 171px;
+    }
+
     .inner-container {
         padding: 0 20px 0 20px;
     }
@@ -372,6 +371,10 @@ body, html {
 }
 
 @media (max-width: 480px) {
+    .container {
+        margin-bottom: 178px;
+    }
+
     .container h1 {
         font-size: 30px;
         letter-spacing: 6px;

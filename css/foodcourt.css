@@ -349,10 +349,12 @@ html, body {
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .all-menu-right {
-    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     display: flex;
     flex-direction: column;
 }
@@ -374,26 +376,23 @@ html, body {
 }
 
 .all-menu-item {
-    width: 100%;
     height: 650px;
     background-color: #D9D9D9;
     margin-top: 8px;
     margin-left: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
     flex-direction: column;
-    justify-content: space-between;
     overflow-y: scroll;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .all-menu-item-container {
@@ -449,6 +448,12 @@ html, body {
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.items:last-child {
+    margin-right: 0;
 }
 
 .items:hover .items-right button {
@@ -502,13 +507,13 @@ html, body {
 
 .checkout {
     margin-bottom: 40px;
-    width: 100%;
+    max-width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .checkout button {
-    width: 100%;
+    width: 1600px;
     height: 40px;
     border-radius: 4px;
     border: none;
@@ -546,6 +551,12 @@ html, body {
 .tab-buttons:active {
     background-color: #245820;
     color: white;
+}
+
+@media (max-width: 1600px) {
+    .main-section {
+        margin: 0 60px;
+    }
 }
 
 @media (max-width: 921px) {
@@ -663,7 +674,13 @@ html, body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 690px) {
+    .main-section {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 645px) {
     .main-section {
         margin: 0 10px;
     }
@@ -745,6 +762,7 @@ html, body {
         height: 190px;
         flex-direction: column;
         padding: 3px;
+        margin-bottom: 20px;
     }
 
     .items-left img {
@@ -780,7 +798,16 @@ html, body {
     }
 
     .row {
-        flex-wrap: wrap;
-        margin-bottom: 0;
+        margin: 0 10px 0 10px;
+    }
+}
+
+@media (max-width: 435px) {
+    .row {
+        margin: 0 2px 0 2px;
+    }
+
+    .items {
+        margin-right: 5px;
     }
 }

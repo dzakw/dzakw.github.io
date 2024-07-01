@@ -6,16 +6,14 @@
 }
 
 body, html {
-    padding-left: 120px;
-    padding-right: 120px;
     background-color: #F7F9F8;
     width: 100%;
 }
 
 .container {
     display: flex;
+    margin: 150px 240px 55px 240px;
     flex-direction: row;
-    margin-top: 150px;
     justify-content: space-between;
 }
 
@@ -169,12 +167,19 @@ hr {
     outline: none;
 }
 
-@media (max-width: 921px) {
-    body, html {
-        padding-left: 30px;
-        padding-right: 30px;
+@media (max-width: 1600px) {
+    .container {
+        margin: 150px 120px 55px 120px;
     }
+}
 
+@media (max-width: 1400px) {
+    .container {
+        margin: 150px 60px 55px 60px;
+    }
+}
+
+@media (max-width: 1000px) {
     .container {
         flex-direction: column;
         margin-top: 100px;
