@@ -103,12 +103,12 @@ document.getElementById('scroll-button').addEventListener('click', function() {
     document.getElementById('all-menu').scrollIntoView({ behavior: 'smooth' });
 });
 
-window.addEventListener('load', function() {
-    // Change the hash to #section1 without scrolling
-    if (!window.location.hash) {
-        history.replaceState(null, null, '#section1');
-    }
+// window.addEventListener('load', function() {
+//     // Change the hash to #section1 without scrolling
+//     // if (!window.location.hash) {
+//     //     history.replaceState(null, null, '#section1');
+//     // }
     
-    // Scroll to top after hash is set
-    window.scrollTo(0, 0);
-});
+//     // Scroll to top after hash is set
+//     window.scrollTo(0, 0);
+// });
