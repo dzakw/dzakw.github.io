@@ -57,7 +57,7 @@ body, html {
 
 .home-page {
     display: flex;
-    margin: 0 120px 0 120px;
+    margin: 0 240px 0 240px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -234,6 +234,14 @@ body, html {
 @media (max-height: 870px) {
     .home-page {
         margin: 0 120px 55px 120px;
+    }
+}
+
+
+@media(max-width: 1700px) {
+    .home-page {
+        margin-left: 120px;
+        margin-right: 120px;
     }
 }
 

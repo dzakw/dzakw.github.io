@@ -54,8 +54,9 @@ body, html {
 }
 
 .progress-bar-circle {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    min-height: 40px;
     background-color: #8F8F8F;
     border-radius: 50%;;
     display: flex;
@@ -237,6 +238,7 @@ body, html {
     padding-right: 20px;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    margin-bottom: 230px;
 }
 
 .hotpot-menu h2 {
@@ -478,6 +480,7 @@ body, html {
     margin-left: 120px;
     margin-right: 120px;
     margin-top: -20px;
+    margin-bottom: 10px;
 }
 
 .title h2 {
@@ -880,4 +883,148 @@ body, html {
 .room-number h4 {
     font-size: 26px;
     font-weight: bold;
+}
+
+
+@media (max-width: 1340px) {
+    .container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .hotpot-container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .menu-container {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .hotpot-menu {
+        justify-content: start;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 1173px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .order-card-left {
+        padding-left: 10px;
+    }
+
+    .order-card-right {
+        padding-right: 10px;
+    }
+
+    .progress-bar {
+        margin-top: 90px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hotpot-menu {
+        margin-bottom: 290px;
+    }
+}
+
+@media (max-width: 1026px) {
+    .order-card {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .order-card-left {
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        width: 100%;
+    }
+
+    .order-card-right {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .total-pay {
+        height: 150px;
+    }
+
+    .right-header {
+        margin-bottom: 20px;
+    }
+
+    .item-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 921px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .item img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .progress-bar {
+        margin-top: 70px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .order-card-left {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .progress-bar {
+        margin-top: 120px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .right-header p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .item img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .item-info h4 {
+        font-size: 16px;
+    }
+
+    .item-info p {
+        font-size: 14px;
+    }
+
+    .item-info {
+        padding-left: 5px;
+    }
+
+    .item-price-qty {
+        margin-right: 0;
+    }
 }

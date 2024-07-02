@@ -14,8 +14,8 @@ html, body {
 
 .container {
     margin-top: 140px;
-    margin-left:120px;
-    margin-right:120px;
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
 .title h2 {
@@ -414,6 +414,7 @@ h3 {
     align-items: center;
     width: 370px;
     margin: 0 auto;
+    margin-bottom: 25px;
 }
 
 .marg-120 {
@@ -582,8 +583,9 @@ h3 {
 }
 
 .progress-bar-circle {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    min-height: 40px;
     background-color: #8F8F8F;
     border-radius: 50%;;
     display: flex;
@@ -612,4 +614,134 @@ h3 {
 
 .ongoing p {
     padding-top: 30px;
+}
+
+@media (max-width: 1340px) {
+    .container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 1173px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .order-card-left {
+        padding-left: 10px;
+    }
+
+    .order-card-right {
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 1026px) {
+    .order-card {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .order-card-left {
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        width: 100%;
+    }
+
+    .order-card-right {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .total-pay {
+        height: 150px;
+    }
+
+    .right-header {
+        margin-bottom: 20px;
+    }
+
+    .item-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 921px) {
+    .container {
+        margin-top: 70px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .order-card-left {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .progress-bar {
+        margin-top: 80px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .progress-bar-container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+        
+    .receipt-container {
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 65px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .item img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .item-info h4 {
+        font-size: 16px;
+    }
+
+    .item-info p {
+        font-size: 14px;
+    }
+
+    .item-info {
+        padding-left: 5px;
+    }
+
+    .item-price-qty {
+        margin-right: 0;
+    }
+
+    .receipt-container {
+        width: 350px;
+    }
+
+    .col-container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }

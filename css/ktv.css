@@ -961,3 +961,109 @@ h1 {
     font-size: 26px;
     font-weight: bold;
 }
+
+@media (max-width: 1340px) {
+    .container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 1173px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .order-card-left {
+        padding-left: 10px;
+    }
+
+    .order-card-right {
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 1026px) {
+    .order-card {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .order-card-left {
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        width: 100%;
+    }
+
+    .order-card-right {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .total-pay {
+        height: 150px;
+    }
+
+    .right-header {
+        margin-bottom: 20px;
+    }
+
+    .item-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 921px) {
+    .container {
+        margin-top: 70px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .order-card-left {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 65px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .item img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .item-info h4 {
+        font-size: 16px;
+    }
+
+    .item-info p {
+        font-size: 14px;
+    }
+
+    .item-info {
+        padding-left: 5px;
+    }
+
+    .item-price-qty {
+        margin-right: 0;
+    }
+}
