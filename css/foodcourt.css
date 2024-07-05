@@ -811,3 +811,22 @@ html, body {
         margin-right: 5px;
     }
 }
+
+
+@media (max-width: 405px) {
+    .items {
+        width: 140px;
+        height: 190px;
+        padding: 0px;
+    }
+
+    .items-left img {
+        width: 140px;
+    }
+
+    .items-right {
+        padding: 6px;
+        padding-top: 0;
+        width: 100%;
+    }
+}

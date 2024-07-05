@@ -744,4 +744,36 @@ h3 {
         padding-left: 5px;
         padding-right: 5px;
     }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .order-card-left h3 {
+        font-size: 22px;
+    }
+
+    .item-price-qty p {
+        font-size: 18px;
+    }
+
+    .order-card h3 {
+        font-size: 22px;
+    }
+
+    .payment-detail p {
+        font-size: 16px;
+    }
+
+    .payment-total p {
+        font-size: 18px;
+    }
+
+    .more-info p {
+        font-size: 14px;
+    }
+
+    .total-pay-amount p {
+        font-size: 26px;
+    }
 }

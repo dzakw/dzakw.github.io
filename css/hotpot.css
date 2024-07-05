@@ -564,7 +564,8 @@ body, html {
     white-space: nowrap;
 }
 
-.items {
+.items,
+.itm {
     width: 200px;
     height: 115px;
     background-color: white;
@@ -579,28 +580,33 @@ body, html {
     flex: none;
 }
 
-.items:hover .items-right button {
+.items:hover .items-right button,
+.itm:hover .itm-right button {
     background-color: #245820;
     color: white;
 }
 
-.items-left {
+.items-left,
+.itm-left {
     display: flex;
     align-items: center;
 }
 
-.items-left img {
+.items-left img,
+.itm-left img {
     width: 115px;
     height: 110px;
 }
 
-.items-right {
+.items-right,
+.itm-right {
     margin-left: 6px;
     margin-right: 3px;
     width: 90%;
 }
 
-.items-right button {
+.items-right button,
+.itm-right button {
     width: 100%;
     border: 1px solid #50B148;
     background-color: transparent;
@@ -610,19 +616,22 @@ body, html {
     font-weight: bold;
 }
 
-.items-price {
+.items-price,
+.itm-price {
     color: #171717;
     padding-top: 5px;
     line-height: 1.5;
     margin-bottom: 30px;
 }
 
-.items-price h4 {
+.items-price h4,
+.itm-price h4 {
     font-size: 18px;
     font-weight: bold;
 }
 
-.items-price p {
+.items-price p,
+.itm-price p {
     font-size: 16px;
     font-weight: bold;
     color: #50B148;
@@ -1197,11 +1206,97 @@ body, html {
         padding: 6px 2px 12px 2px;
     }
 
-    .header-right {
-        align-items: center;
+    .hotpot-header h1 {
+        font-size: 28px;
     }
 
-    .opt {
+    .hotpot-header {
+        justify-content: space-between;
+    }
+
+    .header-right {
+        align-items: center;
+        width: calc(100% - 60px);
+    }
+
+    .header-right h3 {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .opt select {
+        padding-top: 10px;
+        font-size: 16px;
+    }
+
+    .opt select option {
+        font-size: 14px;
+    }
+
+    .fillings-container {
+        margin-bottom: 62px;
+    }
+
+    .filling-container {
+        height: 580px;
+    }
+
+    .filling-container h2 {
+        font-size: 24px;
         margin-bottom: 0;
+    }
+
+    .tab-buttons {
+        font-size: 14px;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .order-card-left h3 {
+        font-size: 22px;
+    }
+
+    .item-price-qty p {
+        font-size: 18px;
+    }
+
+    .order-card h3 {
+        font-size: 22px;
+    }
+
+    .payment-detail p {
+        font-size: 16px;
+    }
+
+    .payment-total p {
+        font-size: 18px;
+    }
+
+    .more-info p {
+        font-size: 14px;
+    }
+
+    .total-pay-amount p {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 405px) {
+    .items {
+        width: 140px;
+        height: 190px;
+        padding: 0px;
+    }
+
+    .items-left img {
+        width: 140px;
+    }
+
+    .items-right {
+        padding: 6px;
+        padding-top: 0;
+        width: 100%;
     }
 }
