@@ -16,6 +16,13 @@ body, html {
     flex-direction: column;
 }
 
+.containerz {
+    margin: 140px 120px 100px 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #popup-overlay {
     position: fixed;
     top: 0;
@@ -390,7 +397,7 @@ h1 {
 }
 
 .fillings-container {
-    margin: 190px 120px 0 120px;
+    margin: 190px 120px 140px 120px;
 }
 
 .filling-container {
@@ -443,6 +450,7 @@ h1 {
 
 .filling-item-row {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -481,7 +489,8 @@ h1 {
     color: white;
 }
 
-.items {
+.items,
+.itm  {
     width: 200px;
     height: 115px;
     background-color: white;
@@ -491,25 +500,32 @@ h1 {
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    flex: none;
 }
 
-.items:hover .items-right button {
+.items:hover .items-right button,
+.itm:hover .itm-right button {
     background-color: #245820;
     color: white;
 }
 
-.items-left {
+.items-left,
+.itm-left {
     display: flex;
     align-items: center;
 }
 
-.items-right {
+.items-right,
+.itm-right {
     margin-left: 6px;
     margin-right: 3px;
     width: 90%;
 }
 
-.items-right button {
+.items-right button,
+.itm-right button{
     width: 100%;
     border: 1px solid #50B148;
     background-color: transparent;
@@ -519,7 +535,8 @@ h1 {
     font-weight: bold;
 }
 
-.items-price {
+.items-price,
+.itm-price {
     color: #171717;
     padding-top: 5px;
     line-height: 1.5;
@@ -527,16 +544,20 @@ h1 {
 }
 
 .items-price h3, 
-.items-price p {
+.items-price p,
+.itm-price h3,
+.itm-price p {
     margin: 0;
 }
 
-.items-price p {
+.items-price p,
+.itm-price p {
     font-weight: bold;
     color: #50B148;
 }
 
-.items img {
+.items img,
+.itm img {
     width: 115px;
     height: 110px;
 }
@@ -962,6 +983,10 @@ h1 {
     font-weight: bold;
 }
 
+.category-hidden {
+    display: none;
+}
+
 @media (max-width: 1440px) {
     .top-left {
         font-size: 14px;
@@ -977,7 +1002,8 @@ h1 {
 }
 
 @media (max-width: 1340px) {
-    .container {
+    .container,
+    .containerz {
         margin-left: 40px;
         margin-right: 40px;
     }
@@ -988,7 +1014,8 @@ h1 {
 }
 
 @media (max-width: 1173px) {
-    .container {
+    .container,
+    .containerz {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -1003,6 +1030,12 @@ h1 {
 
     .inner-container {
         width: 33%;
+    }
+
+    .fillings-container {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 140px;
     }
 }
 
@@ -1047,9 +1080,13 @@ h1 {
 }
 
 @media (max-width: 921px) {
-    .container {
+    .container,
+    .containerz {
         margin-top: 70px;
-        height: 170vh;
+    }
+
+    .containerz {
+        margin-bottom: 20px;
     }
 
     .content-container {
@@ -1086,6 +1123,15 @@ h1 {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+
+    .fillings-container {
+        margin-top: 120px;
+        margin-bottom: 229px;
+    }
+
+    .hotpot-header h1 {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1093,11 +1139,126 @@ h1 {
         padding-left: 4px;
         padding-right: 4px;
     }
+
+    .category-hidden {
+        display: flex;
+        flex-direction: row;
+        margin: 6px 0px 6px 0;
+        line-height: 30px;
+    }
+
+    .tab-buttons {
+        border: 1px solid #50B148;
+        border-radius: 4px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #171717;
+        padding: 4px 6px 4px 6px;
+        margin-right: 12px;
+    }
+
+    .current {
+        background-color: #50B148;
+        color: white;
+    }
+
+    .fillings-container {
+        margin-bottom: 32px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .filling-container {
+        height: 600px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .filling-category {
+        display: none;
+    }
+
+    .filling-item-container {
+        width: 100%;
+        height: 400px;
+        padding-left: 6px;
+        padding-right: 0;
+    }
+
+    .tab-buttons {
+        border: 1px solid #50B148;
+        border-radius: 4px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #171717;
+        padding: 4px 6px 4px 6px;
+        margin-right: 12px;
+    }
+
+    .current {
+        background-color: #50B148;
+        color: white;
+    }
+
+    .items {
+        width: 160px;
+        height: 190px;
+        flex-direction: column;
+        padding: 3px;
+        margin-bottom: 20px;
+    }
+
+    .items-left img {
+        border-radius: 4px 4px 0 0;
+        object-fit: cover;
+        width: 160px;
+        height: 100px;
+    }
+
+    .items-right {
+        margin: 0;
+        width: 100%;
+    }
+
+    .items-price {
+        padding-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .items-price h3 {
+        margin: 8px 0 8px 0;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .items-price p {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .items-right button {
+        height: 30px;
+    }
+    
+    .fillings-container {
+        margin-bottom: 129px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .fillings-container {
+        margin-bottom: 141px;
+    }
+
+    .hotpot-header h1 {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 480px) {
-    .container {
-        margin-top: 65px;
+    .container,
+    .containerz {
         margin-left: 5px;
         margin-right: 5px;
     }
@@ -1121,5 +1282,38 @@ h1 {
 
     .item-price-qty {
         margin-right: 0;
+    }
+
+    .hotpot-header h1 {
+        font-size: 28px;
+    }
+
+    .hotpot-header {
+        justify-content: space-between;
+    }
+
+    .fillings-container {
+        margin-bottom: 164px;
+    }
+
+    .filling-container {
+        height: 580px;
+    }
+
+    .filling-container h2 {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    .tab-buttons {
+        font-size: 14px;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .order-card h3 {
+        font-size: 22px;
     }
 }
