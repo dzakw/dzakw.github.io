@@ -54,12 +54,15 @@
                 <ul>
                     <li><a href="#subsec31" onclick="openSection('subsec31'); openSection('section3')">Order System</a></li>
                 </ul>
+                <li><a href="#section4" onclick="openSection('section4')">Section 4: Javascript</a></li>
+                <ul>
+                    <li><a href="#subsec41" onclick="openSection('subsec41'); openSection('section4')">Javascript Introduction</a></li>
+                </ul>
             </ul>
         </div>
     </div>
     <hr>
     
-
     <h2 class="section" id="section1" onclick="toggleSection('section1')">Section 1: HTML</h2>
     <div id="section1Content" style="display: none;">
 
@@ -4223,5 +4226,45 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
                 <li><a href="html/order system/filling.html" target="_blank">Select Filling 填料</a></li>
             </ul>
         </div>
+    </div>
+    <hr>
+
+    <h2 class="section" id="section4" onclick="toggleSection('section4')">Section 4: Javascript</h2>
+    <div id="section4Content" style="display: none;">
+
+        <h3 class="subsection" id="subsec41" onclick="toggleSection('subsec41')">Javascript Introduction</h3>
+        <div class="subsection" id="subsec41Content" style="display: none;">
+            <ul>
+                <li>JavaScript is a programming language that enables you to create dynamically updating content, control multimedia, animate images, and much more</li>
+                <li>JavaScript is a client-side scripting language, which means the scripts are executed by the browser</li>
+                <li>JavaScript is an object-oriented language</li>
+                <li>JavaScript is case-sensitive</li>
+                <li>JavaScript is designed for creating network-centric applications</li>
+                <li>Javascript can change HTML Content like below:
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;p id="demoa"&gt;JavaScript can change HTML content.&lt;/p&gt;
+&lt;button type="button" onclick='document.getElementById("demoa").innerHTML = "Hello JavaScript!"'&gt;Click Me!&lt;/button&gt;
+&lt;button type="button" onclick='document.getElementById("demoa").innerHTML = "JavaScript can change HTML content."'&gt;Reset&lt;/button>&gt;</code></div>
+                    </pre>
+                    <p>Code above will be rendered as:</p>
+                    <p id="demoa">JavaScript can change HTML content.</p>
+                    <button type="button" onclick='document.getElementById("demoa").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+                    <button type="button" onclick='document.getElementById("demoa").innerHTML = "JavaScript can change HTML content."'>Reset</button>
+                </li>
+                <li>Javascript can change css attribute like below:
+                    <pre>
+                        <div class="code-wrapper"><code>&lt;img id="demob" src="media/bali.jpg" alt="bali" width="200" height="100" style="display:none"&gt;
+&lt;button type="button" onclick='document.getElementById("demob").style.display="block"''&gt;Show image&lt;/button&gt;
+&lt;button type="button" onclick='document.getElementById("demob").style.display="none"''&gt;Hide image&lt;/button&gt;</code></pre>
+                    <p>Code above will be rendered as:</p>
+                    <img id="demob" src="media/bali.jpg" alt="bali" width="200" height="100" style="display:none">
+                    <button type="button" onclick='document.getElementById("demob").style.display="block"''>Show image</button>
+                    <button type="button" onclick='document.getElementById("demob").style.display="none"''>Hide image</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <hr>
 </body>
 </html>
