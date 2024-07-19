@@ -4261,6 +4261,136 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
                     <button type="button" onclick='document.getElementById("demob").style.display="block"''>Show image</button>
                     <button type="button" onclick='document.getElementById("demob").style.display="none"''>Hide image</button>
                 </li>
+                <li>Javascript can be placed in <code>&lt;head&gt;</code> or in <code>&lt;body&gt;</code> section of HTML page</li>
+                <li>To insert a javascript inside a HTML code, use the <code>&lt;script&gt;</code> tag</li>
+                <li>Generally, it is better to place the <code>&lt;script&gt;</code> tag at the end of the HTML file, just before the closing <code>&lt;/body&gt;</code> tag</li>
+                <li>Javascript can be placed directly inside the HTML code, or in an external file</li>
+                <li>External javascript file can be linked to the HTML file using the <code>&lt;script src="filename.js"&gt;</code> tag</li>
+                <li>External Javascript file has some advantages, such as:</li>
+                <ul>
+                    <li>It separates the HTML and the code</li>
+                    <li>It makes the HTML and JavaScript easier to read and maintain</li>
+                    <li>Cached JavaScript files can speed up page loads</li>
+                </ul>
+
+                <h4>External Javascript</h4>
+                <li>An external script can be referenced in 3 different ways:</li>
+                <ul>
+                    <li>With a full URL (a full web address)</li>
+                    <li>With a file path (like /js/)</li>
+                    <li>Without any path</li>
+                </ul>
+                <li>This example uses a <b>full URL</b> to link to myScript.js:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;script src="https://www.w3schools.com/js/myScript.js"&gt;&lt;/script&gt;</code></div>
+                </pre>
+                <li>This example uses a <b>file path</b> to link to myScript.js:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;script src="/js/myScript.js"&gt;&lt;/script&gt;</code></div>
+                </pre>
+                <li>This example uses <b>no path</b> to link to myScript.js:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;script src="myScript.js"&gt;&lt;/script&gt;</code></div>
+                </pre>
+                <h4>Javascript Display</h4>
+                <li>Javascript can display data in different ways:</li>
+                <ul>
+                    <li>Writing into an HTML element, using <code>innerHTML</code></li>
+                    <li>Writing into the HTML output, using <code>document.write()</code></li>
+                    <li>Writing into an alert box, using <code>window.alert()</code></li>
+                    <li>Writing into the browser console, using <code>console.log()</code></li>
+                </ul>
+
+                <h4><code>innerHTML</code></h4>
+                <li>innerHTML is a property of the DOM. It is used to get or set the content of an HTML element</li>
+                <li>Below is an example of how to use the <code>innerHTML</code> property:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;p id="democ"&gt;&lt;/p&gt;
+&lt;button type="button" onclick='document.getElementById("democ").innerHTML = "Hello JavaScript!"'&gt;Click Me!&lt;/button&gt;
+&lt;button type="button" onclick='document.getElementById("democ").innerHTML = "JavaScript can change HTML content."'&gt;Reset&lt;/button&gt;</code></div>
+                </pre>
+                <p>Code above will be rendered as:</p>
+                <p id="democ"></p>
+                <button type="button" onclick='document.getElementById("democ").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+                <button type="button" onclick='document.getElementById("democ").innerHTML = ""'>Reset</button>
+
+                <h4><code>document.write()</code></h4>
+                <li>For testing purposes, it is convenient to use <code>document.write()</code></li>
+                <li>Below is an example of how to use the <code>document.write()</code> method:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;script&gt;
+document.write("hehe");
+&lt;/script&gt;</code></div>
+                </pre>
+                <p>Code above will be rendered as:</p>
+                <script>
+                    document.write("hehe");
+                </script>
+                <li>Notes: Using <code>document.write()</code> after an HTML document is loaded, will delete all existing HTML like this button below:</li>
+                <button type="button" onclick="document.write('hehe...')">Click Me!</button>
+                <li>Thus, The <code>document.write()</code> method should only be used for testing.</li>
+
+                <h4><code>window.alert()</code></h4>
+                <li>This one will make an alert box.</li>
+                <li>Below is an example of how to use the <code>window.alert()</code> method:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;button type="button" onclick="window.alert('Hello World!')"&gt;Click Me!&lt;/button&gt;</code></div>
+                </pre>
+                <p>Code above will be rendered as:</p>
+                <button type="button" onclick="window.alert('ehehe')">Click Me!</button>
+                <li>For this one, actually the "window" part of <code>window.alert()</code> can be skipped. In JavaScript, the window object is the global scope object.</li>
+                <li>This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;button type="button" onclick="alert('aha aha')"&gt;Click Me!&lt;/button&gt;</code></div>
+                </pre>
+                <p>Code above will be rendered as:</p>
+                <button type="button" onclick="alert('aha aha')">Click Me!</button>
+
+                <h4><code>console.log()</code></h4>
+                <li>This one will write a message to the console log.</li>
+                <li>For debugging purposes, the console.log() method can be typed in the browser to display data.</li>
+                <li>Below is an example of how to use the <code>console.log()</code> method:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;button type="button" onclick="console.log('Hello World!')"&gt;Click Me!&lt;/button&gt;</code></div>
+                </pre>
+                <li>Press F12 in the keyboard and then select the console tab, and then click the button below</li>
+                <button type="button" onclick="console.log('Hello World!')">Click Me!</button>
+
+                <h4>Javascript Print</h4>
+                <li>Javascript doesnt have any print object or print methods</li>
+                <li>You cannot access output devices from JavaScript</li>
+                <li>The only exception is that you can call the <code>window.print()</code> method in the browser to print the content of the current window.</li>
+                <li>Below is an example of how to use the <code>window.print()</code> method:</li>
+                <pre>
+                    <div class="code-wrapper"><code>&lt;button type="button" onclick="window.print()"&gt;Print this page&lt;/button&gt;</code></div>
+                </pre>
+                <p>Code above will be rendered as:</p>
+                <button type="button" onclick="window.print()">Print this page</button>
+                <h4>Javascript Statement</h4>
+                <li>JavaScript statements are composed of:</li>
+                <ul>
+                    <li>Values</li>
+                    <li>Operators</li>
+                    <li>Expressions</li>
+                    <li>Keywords</li>
+                    <li>Comments</li>
+                </ul>
+                <li>Below is an example of a statement:</li>
+                <pre>
+                    <div class="code-wrapper"><code>var x, y, z;    // Statement 1
+x = 5;          // Statement 2
+y = 6;          // Statement 3
+z = x + y;      // Statement 4</code></div>
+                </pre>
+                <li>Statements above will be rendered as:</li>
+                <p id="demod"></p>
+                <script>
+                    let x, y, z;
+                    x = 5;
+                    y = 6;
+                    z = x + y;
+                    document.getElementById("demod").innerHTML = z;
+                </script>
             </ul>
         </div>
 

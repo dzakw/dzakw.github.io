@@ -376,6 +376,17 @@ li.horizontal a:hover {
   background-color: #171717; /* Set the background color to #171717 */
 }
 
+h4 {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: #171717;
+}
+
+p {
+  margin-bottom: 0;
+}
+
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {
   body {
