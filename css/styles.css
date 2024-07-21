@@ -387,6 +387,39 @@ p {
   margin-bottom: 0;
 }
 
+.jsnumbercolor {
+  color: red;
+}
+
+.jsstringcolor {
+  color: brown;
+}
+
+.jskeywordcolor {
+  color: mediumblue;
+}
+
+.block-cont {
+  padding: 16px 10px;
+  background-color: #b9b9b9;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.block-bl {
+  background-color: gainsboro;
+  color: #000;
+  border-left: 4px solid #04AA6D;
+  padding: 6px 12px 6px 14px; 
+}
+
+.block-bl p {
+  margin-top: 0;
+  margin-left: 4px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {
   body {

@@ -57,6 +57,7 @@
                 <li><a href="#section4" onclick="openSection('section4')">Section 4: Javascript</a></li>
                 <ul>
                     <li><a href="#subsec41" onclick="openSection('subsec41'); openSection('section4')">Javascript Introduction</a></li>
+                    <li><a href="#subsec42" onclick="openSection('subsec42'); openSection('section4')">Javascript Syntax</a></li>
                 </ul>
             </ul>
         </div>
@@ -4380,19 +4381,116 @@ document.write("hehe");
                     <div class="code-wrapper"><code>var x, y, z;    // Statement 1
 x = 5;          // Statement 2
 y = 6;          // Statement 3
-z = x + y;      // Statement 4</code></div>
+z = x + y;      // Statement 4
+document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " adalah " + z; // Statement 5
+</code></div>
                 </pre>
                 <li>Statements above will be rendered as:</li>
-                <p id="demod"></p>
+                <p style="margin-top: 0; background-color: #000; color: white; width: fit-content;" id="demod"></p>
                 <script>
+                    document.addEventListener("DOMContentLoaded", function() {
                     let x, y, z;
                     x = 5;
                     y = 6;
                     z = x + y;
-                    document.getElementById("demod").innerHTML = z;
+                    document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " adalah " + z;
+                    });
                 </script>
+                <li>What that code does is it will calculate the value of x + y and then display the result in the element with id="demod"</li>
+                <li>Javascript statements will be executed one by one in the same order as it's written</li>
+                <li>Statements are separated by semicolons (<code>;</code>)</li>
+                <li>White spaces and line breaks are ignored in JavaScript, but the best practice is to use them around operators to make the code more readable</li>
+                <li>It is also advised to make a line of Javascript code, not longer than 80 characters.</li>
+                <li>If a statement is too long, it can be split into a new lines. The best place to break a statement is after an operator like below:</li>
+                <pre>
+                    <div class="code-wrapper"><code>document.getElementById("demod").innerHTML =
+"Hasil dari " + x + " + " + y + " adalah " + z;</code></div>
+                </pre>
+                <li>Multiple statements can be grouped together using curly brackets (<code>{}</code>)</li>
+                <li>This usually used in functions, loops, and conditional statements</li>
+                <li>Below is an example of how to use curly brackets:</li>
+                <pre>
+                    <div class="code-wrapper"><code>function myFunction() {
+    document.getElementById("demoe").innerHTML = "Hi there";
+    document.getElementById("demof").innerHTML = "How are you?";
+}</code></div>
+                </pre>
+                <li>Code above will be rendered as:</li>
+                <button type="button" onclick="myFunction()">Click Me!</button>
+                <p style="margin-top: 0; background-color: #000; color: white; width: fit-content;" id="demoe"></p>
+                <p style="margin-top: 0; background-color: #000; color: white; width: fit-content;" id="demof"></p>
+                <script>
+                    function myFunction() {
+                        document.getElementById("demoe").innerHTML = "Hi there!";
+                        document.getElementById("demof").innerHTML = "How are you?";
+                    }
+                </script>
+                <li>There are a list of reserved words in Javascript that cannot be used as variable names, function names, or any other identifiers. <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Which can be seen here</a></li>
             </ul>
         </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec42" onclick="toggleSection('subsec42')">Javascript Syntax</h3>
+        <div class="subsection" id="subsec42Content" style="display: none;">
+            <ul>
+                <li>Syntax is the set of rules of how a programs are constructed</li>
+                <h4>Javascript Values</h4>
+                <li>The JavaScript syntax defines two types of values:</li>
+                <ul>
+                    <li>Fixed values</li>
+                    <li>Variable values</li>
+                </ul>
+                <li>Fixed values are called <b>literals</b>. Variable values are called <b>variables</b></li>
+                <li>The two most important syntax for <b>literals</b> or fixed values are:</li>
+                <ul>
+                    <li>Numbers can be written with or without decimals:
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p class="jsnumbercolor">99</p>
+                                <p class="jsnumbercolor">92.42</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Strings are text, written within double or single quotes:
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p class="jsstringcolor">"Hello World!"</p>
+                                <p class="jsstringcolor">'Hello World!'</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <li>Next is Javascript <b>variables</b></li>
+                <li>In programming, variables are used to store data values</li>
+                <li>JavaScript uses the <code>var</code>, <code>let</code>, and <code>const</code> keywords to declare variables</li>
+                <li>An equal sign is used to assign values to variables</li>
+                <li>Below is an example of how to declare a variable:</li>
+                <div class="block-cont">
+                    <div class="block-bl">
+                        <p><span class="jskeywordcolor">var</span> x = <span class="jsnumbercolor">5</span>;</p>
+                        <p><span class="jskeywordcolor">let</span> y = <span class="jsnumbercolor">6</span>;</p>
+                        <p><span class="jskeywordcolor">const</span> z = <span class="jsnumbercolor">7</span>;</p>
+                    </div>
+                </div>
+                <li>It is also possible to declare a variable and assign a value later like this:</li>
+                <div class="block-cont">
+                    <div class="block-bl">
+                        <p><span class="jskeywordcolor">var</span> a;</p>
+                        <p>a = <span class="jsnumbercolor">8</span>;</p>
+                    </div>
+                </div>
+                <h4>Javascript Operators</h4>
+                <li>An expression is a combination of values, variables, and operators, which computes to a value.</li>
+                <li>The computation is called an evaluation.</li>
+                <li>For example, 5 * 10 evaluates to 50:</li>
+                <div class="block-cont">
+                    <div class="block-bl">
+                        <p><span class="jsnumbercolor">5</span> * <span class="jsnumbercolor">10</span></p>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <hr>
 
     </div>
     <hr>
