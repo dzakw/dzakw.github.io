@@ -6,9 +6,13 @@
 
     <title>Learn Frontend</title> <!-- This is how to write comment in HTML -->
     <link rel="stylesheet" href="css/styles.css"> <!-- This is how to link external css file -->
-    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAuwAAAAAAAADdAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERARERERERERAgERERERERAjIBERERERAjIyARERERAjICMgERERAjIBAjIBERECIBEQIyAREQABERECMgERERERERAjIBEREREREQIyARERERERECMgERERERERAiAREREREREQABERERERERERERERERERERH//wAA+/8AAPH/AADg/wAAwH8AAIA/AAAEHwAADg8AAB8HAAD/gwAA/8EAAP/gAAD/8AAA//gAAP//AAD//wAA" rel="icon" type="image/x-icon"> <!-- This is how to add favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="https://www.w3schools.com/favicon.ico"> -->
+    <link rel="icon" type="image/x-icon" href="../Frontend/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5fde2fdc76.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script> <!-- This is how to link external javascript file -->
+    <script src="js/script.js"></script> <!-- This is how to link external JavaScript file -->
     
     <!-- This is how to use internal css style -->
     <style>
@@ -54,10 +58,10 @@
                 <ul>
                     <li><a href="#subsec31" onclick="openSection('subsec31'); openSection('section3')">Order System</a></li>
                 </ul>
-                <li><a href="#section4" onclick="openSection('section4')">Section 4: Javascript</a></li>
+                <li><a href="#section4" onclick="openSection('section4')">Section 4: JavaScript</a></li>
                 <ul>
-                    <li><a href="#subsec41" onclick="openSection('subsec41'); openSection('section4')">Javascript Introduction</a></li>
-                    <li><a href="#subsec42" onclick="openSection('subsec42'); openSection('section4')">Javascript Syntax</a></li>
+                    <li><a href="#subsec41" onclick="openSection('subsec41'); openSection('section4')">JavaScript Introduction</a></li>
+                    <li><a href="#subsec42" onclick="openSection('subsec42'); openSection('section4')">JavaScript Syntax</a></li>
                 </ul>
             </ul>
         </div>
@@ -3035,8 +3039,8 @@ function calculate(formNumber) {
                                     <label for="html">HTML</label><br>
                                     <input type="radio" id="css" name="fav_language" value="CSS">
                                     <label for="css">CSS</label><br>
-                                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                                    <label for="javascript">JavaScript</label></td>
+                                    <input type="radio" id="JavaScript" name="fav_language" value="JavaScript">
+                                    <label for="JavaScript">JavaScript</label></td>
                             </tr>
                             <tr>
                                 <td>&lt;input type="range"&gt;</td>
@@ -3887,7 +3891,7 @@ function calculate(formNumber) {
         <div class="subsection" id="subsec114Content" style="display: none;">
             <ul>
                 <li style="list-style-type: none;"><h4>HTML Canvas</h4></li>
-                <li>The HTML <code>&lt;canvas&gt;</code> element is used to draw graphics on the fly by utilizing javascript</li>
+                <li>The HTML <code>&lt;canvas&gt;</code> element is used to draw graphics on the fly by utilizing JavaScript</li>
                 <li>The <code>&lt;canvas&gt;</code> element is only a container for graphics. You must use a script to actually draw the graphics.</li><br>
 
                 <li style="list-style-type: none;"><h4>HTML SVG</h4></li>
@@ -4230,10 +4234,10 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
     </div>
     <hr>
 
-    <h2 class="section" id="section4" onclick="toggleSection('section4')">Section 4: Javascript</h2>
+    <h2 class="section" id="section4" onclick="toggleSection('section4')">Section 4: JavaScript</h2>
     <div id="section4Content" style="display: none;">
 
-        <h3 class="subsection" id="subsec41" onclick="toggleSection('subsec41')">Javascript Introduction</h3>
+        <h3 class="subsection" id="subsec41" onclick="toggleSection('subsec41')">JavaScript Introduction</h3>
         <div class="subsection" id="subsec41Content" style="display: none;">
             <ul>
                 <li>JavaScript is a programming language that enables you to create dynamically updating content, control multimedia, animate images, and much more</li>
@@ -4241,7 +4245,7 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
                 <li>JavaScript is an object-oriented language</li>
                 <li>JavaScript is case-sensitive</li>
                 <li>JavaScript is designed for creating network-centric applications</li>
-                <li>Javascript can change HTML Content like below:
+                <li>JavaScript can change HTML Content like below:
                     <pre>
                         <div class="code-wrapper"><code>&lt;p id="demoa"&gt;JavaScript can change HTML content.&lt;/p&gt;
 &lt;button type="button" onclick='document.getElementById("demoa").innerHTML = "Hello JavaScript!"'&gt;Click Me!&lt;/button&gt;
@@ -4252,7 +4256,7 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
                     <button type="button" onclick='document.getElementById("demoa").innerHTML = "Hello JavaScript!"'>Click Me!</button>
                     <button type="button" onclick='document.getElementById("demoa").innerHTML = "JavaScript can change HTML content."'>Reset</button>
                 </li>
-                <li>Javascript can change css attribute like below:
+                <li>JavaScript can change css attribute like below:
                     <pre>
                         <div class="code-wrapper"><code>&lt;img id="demob" src="media/bali.jpg" alt="bali" width="200" height="100" style="display:none"&gt;
 &lt;button type="button" onclick='document.getElementById("demob").style.display="block"''&gt;Show image&lt;/button&gt;
@@ -4262,19 +4266,19 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
                     <button type="button" onclick='document.getElementById("demob").style.display="block"''>Show image</button>
                     <button type="button" onclick='document.getElementById("demob").style.display="none"''>Hide image</button>
                 </li>
-                <li>Javascript can be placed in <code>&lt;head&gt;</code> or in <code>&lt;body&gt;</code> section of HTML page</li>
-                <li>To insert a javascript inside a HTML code, use the <code>&lt;script&gt;</code> tag</li>
+                <li>JavaScript can be placed in <code>&lt;head&gt;</code> or in <code>&lt;body&gt;</code> section of HTML page</li>
+                <li>To insert a JavaScript inside a HTML code, use the <code>&lt;script&gt;</code> tag</li>
                 <li>Generally, it is better to place the <code>&lt;script&gt;</code> tag at the end of the HTML file, just before the closing <code>&lt;/body&gt;</code> tag</li>
-                <li>Javascript can be placed directly inside the HTML code, or in an external file</li>
-                <li>External javascript file can be linked to the HTML file using the <code>&lt;script src="filename.js"&gt;</code> tag</li>
-                <li>External Javascript file has some advantages, such as:</li>
+                <li>JavaScript can be placed directly inside the HTML code, or in an external file</li>
+                <li>External JavaScript file can be linked to the HTML file using the <code>&lt;script src="filename.js"&gt;</code> tag</li>
+                <li>External JavaScript file has some advantages, such as:</li>
                 <ul>
                     <li>It separates the HTML and the code</li>
                     <li>It makes the HTML and JavaScript easier to read and maintain</li>
                     <li>Cached JavaScript files can speed up page loads</li>
                 </ul>
 
-                <h4>External Javascript</h4>
+                <h4>External JavaScript</h4>
                 <li>An external script can be referenced in 3 different ways:</li>
                 <ul>
                     <li>With a full URL (a full web address)</li>
@@ -4293,8 +4297,9 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
                 <pre>
                     <div class="code-wrapper"><code>&lt;script src="myScript.js"&gt;&lt;/script&gt;</code></div>
                 </pre>
-                <h4>Javascript Display</h4>
-                <li>Javascript can display data in different ways:</li>
+
+                <h4>JavaScript Display</h4>
+                <li>JavaScript can display data in different ways:</li>
                 <ul>
                     <li>Writing into an HTML element, using <code>innerHTML</code></li>
                     <li>Writing into the HTML output, using <code>document.write()</code></li>
@@ -4357,8 +4362,8 @@ document.write("hehe");
                 <li>Press F12 in the keyboard and then select the console tab, and then click the button below</li>
                 <button type="button" onclick="console.log('Hello World!')">Click Me!</button>
 
-                <h4>Javascript Print</h4>
-                <li>Javascript doesnt have any print object or print methods</li>
+                <h4>JavaScript Print</h4>
+                <li>JavaScript doesnt have any print object or print methods</li>
                 <li>You cannot access output devices from JavaScript</li>
                 <li>The only exception is that you can call the <code>window.print()</code> method in the browser to print the content of the current window.</li>
                 <li>Below is an example of how to use the <code>window.print()</code> method:</li>
@@ -4367,7 +4372,8 @@ document.write("hehe");
                 </pre>
                 <p>Code above will be rendered as:</p>
                 <button type="button" onclick="window.print()">Print this page</button>
-                <h4>Javascript Statement</h4>
+
+                <h4>JavaScript Statement</h4>
                 <li>JavaScript statements are composed of:</li>
                 <ul>
                     <li>Values</li>
@@ -4397,10 +4403,10 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     });
                 </script>
                 <li>What that code does is it will calculate the value of x + y and then display the result in the element with id="demod"</li>
-                <li>Javascript statements will be executed one by one in the same order as it's written</li>
+                <li>JavaScript statements will be executed one by one in the same order as it's written</li>
                 <li>Statements are separated by semicolons (<code>;</code>)</li>
                 <li>White spaces and line breaks are ignored in JavaScript, but the best practice is to use them around operators to make the code more readable</li>
-                <li>It is also advised to make a line of Javascript code, not longer than 80 characters.</li>
+                <li>It is also advised to make a line of JavaScript code, not longer than 80 characters.</li>
                 <li>If a statement is too long, it can be split into a new lines. The best place to break a statement is after an operator like below:</li>
                 <pre>
                     <div class="code-wrapper"><code>document.getElementById("demod").innerHTML =
@@ -4425,16 +4431,17 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         document.getElementById("demof").innerHTML = "How are you?";
                     }
                 </script>
-                <li>There are a list of reserved words in Javascript that cannot be used as variable names, function names, or any other identifiers. <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Which can be seen here</a></li>
+                <li>There are a list of reserved words in JavaScript that cannot be used as variable names, function names, or any other identifiers. <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Which can be seen here</a></li>
             </ul>
         </div>
         <hr>
 
-        <h3 class="subsection" id="subsec42" onclick="toggleSection('subsec42')">Javascript Syntax</h3>
+        <h3 class="subsection" id="subsec42" onclick="toggleSection('subsec42')">JavaScript Syntax</h3>
         <div class="subsection" id="subsec42Content" style="display: none;">
             <ul>
                 <li>Syntax is the set of rules of how a programs are constructed</li>
-                <h4>Javascript Values</h4>
+
+                <h4>JavaScript Values</h4>
                 <li>The JavaScript syntax defines two types of values:</li>
                 <ul>
                     <li>Fixed values</li>
@@ -4460,17 +4467,144 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </li>
                 </ul>
-                <li>Next is Javascript <b>variables</b></li>
+                <li>Next is JavaScript <b>variables</b></li>
                 <li>In programming, variables are used to store data values</li>
-                <li>JavaScript uses the <code>var</code>, <code>let</code>, and <code>const</code> keywords to declare variables</li>
                 <li>An equal sign is used to assign values to variables</li>
-                <li>Below is an example of how to declare a variable:</li>
-                <div class="block-cont">
-                    <div class="block-bl">
-                        <p><span class="jskeywordcolor">var</span> x = <span class="jsnumbercolor">5</span>;</p>
-                        <p><span class="jskeywordcolor">let</span> y = <span class="jsnumbercolor">6</span>;</p>
-                        <p><span class="jskeywordcolor">const</span> z = <span class="jsnumbercolor">7</span>;</p>
+                <li>JavaScript uses the <code>var</code>, <code>let</code>, and <code>const</code> keywords to declare variables, or declared automatically like this:</li>
+                <div class="block-outer" data-result-id="demom" data-result-value="a = 9; let b = 5; var c = 6; const d = 7; (a + b + c) * d">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>a = <span class="jsnumbercolor">9</span>; <span class="commentcolor">//declared automatically</span></p>
+                            <p><span class="jskeywordcolor">let</span> b = <span class="jsnumbercolor">5</span>;</p> 
+                            <p><span class="jskeywordcolor">var</span> c = <span class="jsnumbercolor">6</span>;</p>
+                            <p><span class="jskeywordcolor">const</span> d = <span class="jsnumbercolor">7</span>;</p>
+                            <p>(a + b + c) * d;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
                     </div>
+                    <p id="demom" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>Below is the difference of those three:</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Scope</th>
+                        <th>Can be redeclared</th>
+                        <th>Can be reassigned</th>
+                    </tr>
+                    <tr>
+                        <td><code>var</code></td>
+                        <td>Function</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td><code>let</code></td>
+                        <td>Block</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td><code>const</code></td>
+                        <td>Block</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Declared automatically</td>
+                        <td>Global</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                </table>
+                <li>It is not recomended to declare a variable automatically, as it will be accessible globally and can lead to unexpected behavior like this:</li>
+                <div class="block-outer" data-result-id="demoo" data-result-function="complexExpression0">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> output = <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> testImplicitGlobal() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> (true) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx = <span class="jsnumbercolor">10</span>; <span class="commentcolor">// `xx` is implicitly declared as a global variable</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Inside if block: "</span> + xx + '\n'; <span class="commentcolor">// This will log 10</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Outside if block: "</span> + xx; <span class="commentcolor">// This will also log 10 because `xx` is a global variable</span></p>
+                            <p>}</p>
+                            <p>testImplicitGlobal();</p>
+                            <p><span class="commentcolor">// Demonstrate potential conflict with another function</span></p>
+                            <p><span class="jskeywordcolor">function</span> anotherFunction() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xx = <span class="jsnumbercolor">20</span>; <span class="commentcolor">// This modifies the same global variable `xx`</span></p>
+                            <p>}</p>
+                            <p>anotherFunction();</p>
+                            <p>output += '\n<span class="jsstringcolor">After calling anotherFunction, xx is: </span>' + xx; <span class="commentcolor">// This will log 20</span></p>
+                            <p><span class="jskeywordcolor">return</span> output;</p>                            
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoo" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>Notes: The <code>let</code> and <code>const</code> are block-scoped, while the <code>var</code> is function-scoped</li>
+                <li>Block-scoped means that the variable is only available within the block of code where it's declared, like this:</li>
+                <div class="block-outer" data-result-id="demon" data-result-function="complexExpression1">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> output = <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">if</span> (true) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> y = <span class="jsnumbercolor">20</span>;  <span class="commentcolor">//`y` is block-scoped to this `if` block</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Inside if block: "</span> + y + '\n';  <span class="commentcolor">// This will log 20</span></p>
+                            <p>}</p>
+                            <p>output += <span class="jsstringcolor">"Outside if block: "</span> + (typeof y);  <span class="commentcolor">// This will log 'undefined' because `y` is not accessible outside the block</span></p>
+                            <p><span class="jskeywordcolor">return</span> output;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demon" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>Function-scoped means that the variable is available within the function where it's declared, like this:</li>
+                <div class="block-outer" data-result-id="demoq" data-result-function="complexExpression2">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> output = <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> testFunctionScope() {</p>
+                            <p><span class="jskeywordcolor">&nbsp;&nbsp;&nbsp;&nbsp;if</span> (true) {</p>
+                            <p><span class="jskeywordcolor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var</span> x = <span class="jsnumbercolor">10</span>;  <span class="commentcolor">// `x` is function-scoped to `testFunctionScope`</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Inside if block: "</span> + x + '\n';  <span class="commentcolor">// This will log 10</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Outside if block: "</span> + x;  <span class="commentcolor">// This will also log 10 because `x` is accessible throughout the function</span></p>
+                            <p>}</p>
+                            <p><span class="jskeywordcolor">testFunctionScope</span>();</p>
+                            <p><span class="jskeywordcolor">return</span> output;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoq" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
                 </div>
                 <li>It is also possible to declare a variable and assign a value later like this:</li>
                 <div class="block-cont">
@@ -4479,15 +4613,91 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <p>a = <span class="jsnumbercolor">8</span>;</p>
                     </div>
                 </div>
-                <h4>Javascript Operators</h4>
+
+                <h4>JavaScript Operators</h4>
+                <li>JavaScript uses arithmetic operators to compute values (<code>+ - * /</code>) to compute values</li>
+                <div class="block-outer" data-result-id="demoh" data-result-value="(5 + 10) * 2 - (12 / 3)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsnumbercolor">(5</span> + <span class="jsnumbercolor">10</span>) * <span class="jsnumbercolor">2</span> - (<span class="jsnumbercolor">12</span> / <span class="jsnumbercolor">3</span>)</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoh" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
                 <li>An expression is a combination of values, variables, and operators, which computes to a value.</li>
                 <li>The computation is called an evaluation.</li>
                 <li>For example, 5 * 10 evaluates to 50:</li>
-                <div class="block-cont">
-                    <div class="block-bl">
-                        <p><span class="jsnumbercolor">5</span> * <span class="jsnumbercolor">10</span></p>
+                <div class="block-outer" data-result-id="demoj" data-result-value="5 * 10">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsnumbercolor">5</span> * <span class="jsnumbercolor">10</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoj" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>The value itself can be of various types, such as numbers, strings, or objects like this:</li>
+                <div class="block-outer" data-result-id="demol" data-result-value="5 + 10 + ' ' + 'Hello' + ' ' + 'World'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsnumbercolor">5</span> + <span class="jsnumbercolor">10</span> + " " + <span class="jsstringcolor">"Hello"</span> + " " <span class="jsstringcolor">"World"</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demol" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                
+                <li>To comment in JavaScript, use <code>//</code> for single line comment, and <code>/* */</code> for multi-line comment like this:</li>
+                <div class="block-outer" data-result-id="demop" data-result-value="/* This is a multi-line comment */">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">/* This is a</span></p>
+                            <p><span class="commentcolor">multi-line comment */</span></p>
+                            <p><span class="commentcolor">// This is a single line comment</span></p>
+                        </div>
                     </div>
                 </div>
+
+                <h4>JavaScript identifiers / Names</h4>
+                <li>In JavaScript, names are called identifiers. It is used to name variables, functions, classes, and objects</li>
+                <li>The rules for legal identifiers are much the same in most programming languages:</li>
+                <ul>
+                    <li>The first character must be a letter (A - Z or a - z), an underscore (<code>_</code>), or a dollar sign (<code>$</code>)</li>
+                    <li>Subsequent characters may be letters, digits, underscores, or dollar signs</li>
+                    <li>Numbers are not allowed as the first character</li>
+                    <li>JavaScript is case-sensitive. so variable <code>lastname</code> and <code>lastName</code> are two different variables</li>
+                    <li>Reserved words (like JavaScript keywords) cannot be used as identifiers</li>
+                </ul>
+                <li>There are various ways to name variable with multiple words like this:</li>
+                <ul>
+                    <li>using_underscore</li>
+                    <li>UpperCamelCase</li>
+                    <li><b>lowerCamelCase</b> (this is the one that mostly used in Javascript program)</li>
+                </ul>
+                <p style="margin-top: 0;">*Notes: Even tho the other two are valid, the lowerCamelCase is the most used in JavaScript. In the other hand, it is not allowed to use hyphen (-) in variable name</p>
+                <li>
             </ul>
         </div>
         <hr>

@@ -97,3 +97,118 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
+
+// //Javascript learning start here
+// function showAnswer1() {
+//     document.getElementById('demog').innerHTML = (5 + 10) * 2 - (12 / 3);
+//     document.getElementById('demoh').style.display = 'block';
+//     document.getElementById('reset1').style.display = 'flex';
+// }
+
+// function reset1() {
+//     document.getElementById('demog').innerHTML = '';
+//     document.getElementById('demoh').style.display = 'none';
+//     document.getElementById('reset1').style.display = 'none';
+// }
+
+// function showAnswer2() {
+//     document.getElementById('demoi').innerHTML = 5 * 10;
+//     document.getElementById('demoj').style.display = 'block';
+//     document.getElementById('reset2').style.display = 'flex';
+// }
+
+// function reset2() {
+//     document.getElementById('demoi').innerHTML = '';
+//     document.getElementById('demoj').style.display = 'none';
+//     document.getElementById('reset2').style.display = 'none';
+// }
+
+// function showAnswer3() {
+//     document.getElementById('demok').innerHTML = 5 + 10 + " " + "Hello" + " " + "World";
+//     document.getElementById('demol').style.display = 'block';
+//     document.getElementById('reset3').style.display = 'flex';
+// }
+
+// function reset3() {
+//     document.getElementById('demok').innerHTML = '';
+//     document.getElementById('demol').style.display = 'none';
+//     document.getElementById('reset3').style.display = 'none';
+// }
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.block-outer').forEach(block => {
+        const resultId = block.getAttribute('data-result-id');
+        const resultValue = block.getAttribute('data-result-value');
+        const resultFunction = block.getAttribute('data-result-function');
+
+        const runButton = block.querySelector('.run-btn');
+        const resetButton = block.querySelector('.reset-btn');
+        const resultElement = document.getElementById(resultId);
+
+        runButton.addEventListener('click', () => {
+            let result;
+            if (resultFunction) {
+                result = window[resultFunction]();
+            } else if (resultValue) {
+                try {
+                    result = eval(resultValue);
+                } catch (e) {
+                    result = 'Error evaluating expression';
+                }
+            }
+            resultElement.querySelector('span').textContent = result;
+            resultElement.style.display = 'block';
+            resetButton.style.display = 'flex';
+        });
+
+        resetButton.querySelector('.reset-icon').addEventListener('click', () => {
+            resultElement.querySelector('span').textContent = '';
+            resultElement.style.display = 'none';
+            resetButton.style.display = 'none';
+        });
+    });
+});
+
+function complexExpression0() {
+    let output = '';
+    function testImplicitGlobal() {
+        if (true) {
+            xx = 10; // `xx` is implicitly declared as a global variable
+            output += "Inside if block: " + xx + '\n'; // This will log 10
+        }
+        output += "Outside if block: " + xx; // This will also log 10 because `xx` is a global variable
+    }
+
+    testImplicitGlobal();
+    // Demonstrate potential conflict with another function
+    function anotherFunction() {
+        xx = 20; // This modifies the same global variable `xx`
+    }
+    
+    anotherFunction();
+    output += '\nAfter calling anotherFunction, xx is: ' + xx; // This will log 20
+    return output;
+}
+
+function complexExpression1() {
+    let output = '';
+    if (true) {
+        let y = 20;  // `y` is block-scoped to this `if` block
+        output += "Inside if block: " + y + '\n';  // This will log 20
+    }
+    output += "Outside if block: " + (typeof y);  // This will log 'undefined' because `y` is not accessible outside the block
+    return output;
+}
+
+function complexExpression2() {
+    let output = '';
+    function testFunctionScope() {
+        if (true) {
+            var x = 10;  // `x` is function-scoped to `testFunctionScope`
+            output += "Inside if block: " + x + '\n';  // This will log 10
+        }
+        output += "Outside if block: " + x;  // This will also log 10 because `x` is accessible throughout the function
+    }
+    testFunctionScope();
+    return output;
+}

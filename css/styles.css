@@ -399,6 +399,10 @@ p {
   color: mediumblue;
 }
 
+.commentcolor {
+  color: green;
+}
+
 .block-cont {
   padding: 16px 10px;
   background-color: #b9b9b9;
@@ -418,6 +422,125 @@ p {
   margin-left: 4px;
   font-family: monospace;
   font-size: 14px;
+}
+
+.block-run {
+  margin-top: 10px;
+  margin-right: 6px;
+}
+
+.block-run button {
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Source Sans 3", sans-serif;
+  padding: 6px 18px;
+  color: #FFFFFF;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.block-run button:hover {
+  background-color: #45a049;
+}
+
+.block-btn-cont {
+  display: flex; 
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.block-outer {
+  display: flex;
+  flex-direction: row;
+}
+
+/* #reset1 {
+  display: none;
+  align-items: end;
+}
+
+#reset1 img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#reset1 img:hover {
+  filter: brightness(0.92);
+}
+
+#reset2 {
+  display: none;
+  align-items: end;
+}
+
+#reset2 img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#reset2 img:hover {
+  filter: brightness(0.92);
+}
+
+
+#reset3 {
+  display: none;
+  align-items: end;
+}
+
+#reset3 img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#reset3 img:hover {
+  filter: brightness(0.92);
+} */
+
+.reset-btn {
+  display: none;
+  align-items: end;
+}
+
+.reset-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.reset-icon:hover {
+  filter: brightness(0.92);
+}
+
+.key-dec {
+  border-collapse: collapse;
+}
+
+.key-dec th {
+  background-color: #171717;
+  color: gainsboro;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 120%;
+  border-collapse: collapse;
+}
+
+.key-dec td {
+  padding: 10px;
+  border-bottom: 1px solid #171717;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+.key-dec tr:hover {
+  background-color: #4b4949;
+  color: gainsboro;
 }
 
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
