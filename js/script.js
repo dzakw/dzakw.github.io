@@ -137,6 +137,8 @@ function showPosition(position) {
 
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.block-outer').forEach(block => {
+        console.log('Block found:', block);
+
         const resultId = block.getAttribute('data-result-id');
         const resultValue = block.getAttribute('data-result-value');
         const resultFunction = block.getAttribute('data-result-function');
@@ -145,27 +147,33 @@ document.addEventListener('DOMContentLoaded', function () {
         const resetButton = block.querySelector('.reset-btn');
         const resultElement = document.getElementById(resultId);
 
-        runButton.addEventListener('click', () => {
-            let result;
-            if (resultFunction) {
-                result = window[resultFunction]();
-            } else if (resultValue) {
-                try {
-                    result = eval(resultValue);
-                } catch (e) {
-                    result = 'Error evaluating expression';
-                }
-            }
-            resultElement.querySelector('span').textContent = result;
-            resultElement.style.display = 'block';
-            resetButton.style.display = 'flex';
-        });
+        if (runButton && resetButton && resultElement) {
+            console.log('Adding event listeners for:', block);
 
-        resetButton.querySelector('.reset-icon').addEventListener('click', () => {
-            resultElement.querySelector('span').textContent = '';
-            resultElement.style.display = 'none';
-            resetButton.style.display = 'none';
-        });
+            runButton.addEventListener('click', () => {
+                let result;
+                if (resultFunction) {
+                    result = window[resultFunction]();
+                } else if (resultValue) {
+                    try {
+                        result = eval(resultValue);
+                    } catch (e) {
+                        result = 'Error evaluating expression';
+                    }
+                }
+                resultElement.querySelector('span').textContent = result;
+                resultElement.style.display = 'block';
+                resetButton.style.display = 'flex';
+            });
+
+            resetButton.querySelector('.reset-icon').addEventListener('click', () => {
+                resultElement.querySelector('span').textContent = '';
+                resultElement.style.display = 'none';
+                resetButton.style.display = 'none';
+            });
+        } else {
+            console.warn('Missing elements for block:', block);
+        }
     });
 });
 
@@ -173,30 +181,29 @@ function complexExpression0() {
     let output = '';
     function testImplicitGlobal() {
         if (true) {
-            xx = 10; // `xx` is implicitly declared as a global variable
-            output += "Inside if block: " + xx + '\n'; // This will log 10
+            xx = 10;
+            output += "Inside if block: " + xx;
         }
-        output += "Outside if block: " + xx; // This will also log 10 because `xx` is a global variable
+        output += "Outside if block: " + xx;
     }
 
     testImplicitGlobal();
-    // Demonstrate potential conflict with another function
     function anotherFunction() {
-        xx = 20; // This modifies the same global variable `xx`
+        xx = 20;
     }
     
     anotherFunction();
-    output += '\nAfter calling anotherFunction, xx is: ' + xx; // This will log 20
+    output += 'After calling anotherFunction, xx is: ' + xx;
     return output;
 }
 
 function complexExpression1() {
     let output = '';
     if (true) {
-        let y = 20;  // `y` is block-scoped to this `if` block
-        output += "Inside if block: " + y + '\n';  // This will log 20
+        let y = 20;
+        output += "Inside if block: " + y;
     }
-    output += "Outside if block: " + (typeof y);  // This will log 'undefined' because `y` is not accessible outside the block
+    output += "Outside if block: " + (typeof y); 
     return output;
 }
 
@@ -204,11 +211,23 @@ function complexExpression2() {
     let output = '';
     function testFunctionScope() {
         if (true) {
-            var x = 10;  // `x` is function-scoped to `testFunctionScope`
-            output += "Inside if block: " + x + '\n';  // This will log 10
+            var x = 10;
+            output += "Inside if block: " + x;
         }
-        output += "Outside if block: " + x;  // This will also log 10 because `x` is accessible throughout the function
+        output += "Outside if block: " + x;
     }
     testFunctionScope();
+    return output;
+}
+
+function complexExpression3() {
+    let output = '';
+    function stringCompareAddition() {
+        let x = 'Iqbal ';
+        let y = 'Dzakwan |';
+        output += "String addition: " + (x + y);
+        output += " String comparison: " + (x != y);
+    }
+    stringCompareAddition();
     return output;
 }

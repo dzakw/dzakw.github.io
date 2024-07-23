@@ -376,6 +376,45 @@ li.horizontal a:hover {
   background-color: #171717; /* Set the background color to #171717 */
 }
 
+blockquote {
+  background-color: #ffffcc;
+  border-left: 10px solid #a1a1a1;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  width: fit-content;
+}
+
+blockquote h3 {
+  font-weight: normal;
+  font-size: 32px;
+  color: #171717;
+  margin: 0;
+}
+
+blockquote p {
+  letter-spacing: 0.2px;
+}
+
+#section4Content code {
+  color: crimson;
+  background-color: rgba(189, 189, 189, 0.3)
+}
+
+#section4Content pre code{
+  color: crimson;
+  background-color: transparent;
+}
+
+#section4Content label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #171717;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family:'Segoe UI', Arial, sans-serif;
+}
+
 h4 {
   margin-bottom: 0;
   font-weight: bold;
@@ -383,24 +422,57 @@ h4 {
   color: #171717;
 }
 
+h5 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #171717;
+  margin: 0;
+}
+
 p {
   margin-bottom: 0;
 }
 
-.jsnumbercolor {
-  color: red;
+/* JS colors */
+.jskeywordcolor { 
+  color: #0000FF; 
+  font-weight: normal;
 }
 
-.jsstringcolor {
-  color: brown;
+.jsstringcolor { 
+  color: #A31515; 
+  font-weight: normal;
 }
 
-.jskeywordcolor {
-  color: mediumblue;
+.jsnumbercolor { 
+  color: #09885B; 
+  font-weight: normal;
 }
 
-.commentcolor {
-  color: green;
+.jsoperatorcolor { 
+  color: #000000; 
+  font-weight: normal;
+}
+
+.commentcolor { 
+  color: #008000; 
+  font-weight: normal;
+  font-style: italic;
+}
+
+.jsfunctioncolor { 
+  color: #000000; 
+  font-weight: bold;
+}
+
+.jsvariablecolor { 
+  color: #000000; 
+  font-weight: normal;
+}
+
+.jsbracketcolor { 
+  color: #38b307; 
+  font-weight: normal;
 }
 
 .block-cont {
@@ -535,12 +607,6 @@ p {
   padding: 10px;
   border-bottom: 1px solid #171717;
   border-collapse: collapse;
-  cursor: pointer;
-}
-
-.key-dec tr:hover {
-  background-color: #4b4949;
-  color: gainsboro;
 }
 
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */

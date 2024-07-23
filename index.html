@@ -62,6 +62,7 @@
                 <ul>
                     <li><a href="#subsec41" onclick="openSection('subsec41'); openSection('section4')">JavaScript Introduction</a></li>
                     <li><a href="#subsec42" onclick="openSection('subsec42'); openSection('section4')">JavaScript Syntax</a></li>
+                    <li><a href="#subsec43" onclick="openSection('subsec43'); openSection('section4')">JavaScript Operators</a></li>
                 </ul>
             </ul>
         </div>
@@ -4471,14 +4472,14 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <li>In programming, variables are used to store data values</li>
                 <li>An equal sign is used to assign values to variables</li>
                 <li>JavaScript uses the <code>var</code>, <code>let</code>, and <code>const</code> keywords to declare variables, or declared automatically like this:</li>
-                <div class="block-outer" data-result-id="demom" data-result-value="a = 9; let b = 5; var c = 6; const d = 7; (a + b + c) * d">
+                <div class="block-outer" data-result-id="demoj" data-result-value="a = 9; let b = 5; var c = 6; const d = 7; (a + b + c) * d">
                     <div class="block-cont">
                         <div class="block-bl">
-                            <p>a = <span class="jsnumbercolor">9</span>; <span class="commentcolor">//declared automatically</span></p>
-                            <p><span class="jskeywordcolor">let</span> b = <span class="jsnumbercolor">5</span>;</p> 
-                            <p><span class="jskeywordcolor">var</span> c = <span class="jsnumbercolor">6</span>;</p>
-                            <p><span class="jskeywordcolor">const</span> d = <span class="jsnumbercolor">7</span>;</p>
-                            <p>(a + b + c) * d;</p>
+                            <p><span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">9</span>; <span class="commentcolor">//declared automatically</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">b</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span>;</p>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">c</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">6</span>;</p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">7</span>;</p>
+                            <p><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">c</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">d</span>;</p>                            
                         </div>
                         <div class="block-btn-cont">
                             <div class="block-run">
@@ -4489,9 +4490,10 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             </div>
                         </div>
                     </div>
-                    <p id="demom" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                    <p id="demoj" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
                 </div>
                 <li>Below is the difference of those three:</li>
+                <label>Difference between <code>var</code>, <code>let</code>, and <code>const</code>:</label>
                 <table class="key-dec">
                     <tr>
                         <th>Keyword</th>
@@ -4524,138 +4526,34 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <td>Yes</td>
                     </tr>
                 </table>
+                <blockquote>
+                    <h3>>When to Use var, let, or const?</h3>
+                    <p><b>1. Always declare variables</b></p>
+                    <p>2. Always use <code>const</code> if the value should not be changed</p>
+                    <p>3. Always use <code>const</code> if the type should not be changed (Arrays and Objects)</p>
+                    <p>4. Only use <code>let</code> if you can't use <code>const</code></p>
+                    <p>5. Only use <code>var</code> if you MUST support old browsers.</p>
+                </blockquote>
                 <li>It is not recomended to declare a variable automatically, as it will be accessible globally and can lead to unexpected behavior like this:</li>
-                <div class="block-outer" data-result-id="demoo" data-result-function="complexExpression0">
+                <div class="block-outer" data-result-id="demol" data-result-function="complexExpression0">
                     <div class="block-cont">
                         <div class="block-bl">
-                            <p><span class="jskeywordcolor">let</span> output = <span class="jsstringcolor">''</span>;</p>
-                            <p><span class="jskeywordcolor">function</span> testImplicitGlobal() {</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> (true) {</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xx = <span class="jsnumbercolor">10</span>; <span class="commentcolor">// `xx` is implicitly declared as a global variable</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Inside if block: "</span> + xx + '\n'; <span class="commentcolor">// This will log 10</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Outside if block: "</span> + xx; <span class="commentcolor">// This will also log 10 because `xx` is a global variable</span></p>
-                            <p>}</p>
-                            <p>testImplicitGlobal();</p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">testImplicitGlobal</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">true</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">xx</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>; <span class="commentcolor">// `xx` is implicitly declared as a global variable</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Inside if block: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">xx</span>; <span class="commentcolor">// This will log 10</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Outside if block: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">xx</span>; <span class="commentcolor">// This will also log 10 because `xx` is a global variable</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">testImplicitGlobal</span><span class="jsbracketcolor">()</span>;</p>
                             <p><span class="commentcolor">// Demonstrate potential conflict with another function</span></p>
-                            <p><span class="jskeywordcolor">function</span> anotherFunction() {</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xx = <span class="jsnumbercolor">20</span>; <span class="commentcolor">// This modifies the same global variable `xx`</span></p>
-                            <p>}</p>
-                            <p>anotherFunction();</p>
-                            <p>output += '\n<span class="jsstringcolor">After calling anotherFunction, xx is: </span>' + xx; <span class="commentcolor">// This will log 20</span></p>
-                            <p><span class="jskeywordcolor">return</span> output;</p>                            
-                        </div>
-                        <div class="block-btn-cont">
-                            <div class="block-run">
-                                <button type="button" class="run-btn">Run ></button>
-                            </div>
-                            <div class="reset-btn" style="display: none;">
-                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
-                            </div>
-                        </div>
-                    </div>
-                    <p id="demoo" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
-                </div>
-                <li>Notes: The <code>let</code> and <code>const</code> are block-scoped, while the <code>var</code> is function-scoped</li>
-                <li>Block-scoped means that the variable is only available within the block of code where it's declared, like this:</li>
-                <div class="block-outer" data-result-id="demon" data-result-function="complexExpression1">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="jskeywordcolor">let</span> output = <span class="jsstringcolor">''</span>;</p>
-                            <p><span class="jskeywordcolor">if</span> (true) {</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> y = <span class="jsnumbercolor">20</span>;  <span class="commentcolor">//`y` is block-scoped to this `if` block</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Inside if block: "</span> + y + '\n';  <span class="commentcolor">// This will log 20</span></p>
-                            <p>}</p>
-                            <p>output += <span class="jsstringcolor">"Outside if block: "</span> + (typeof y);  <span class="commentcolor">// This will log 'undefined' because `y` is not accessible outside the block</span></p>
-                            <p><span class="jskeywordcolor">return</span> output;</p>
-                        </div>
-                        <div class="block-btn-cont">
-                            <div class="block-run">
-                                <button type="button" class="run-btn">Run ></button>
-                            </div>
-                            <div class="reset-btn" style="display: none;">
-                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
-                            </div>
-                        </div>
-                    </div>
-                    <p id="demon" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
-                </div>
-                <li>Function-scoped means that the variable is available within the function where it's declared, like this:</li>
-                <div class="block-outer" data-result-id="demoq" data-result-function="complexExpression2">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="jskeywordcolor">let</span> output = <span class="jsstringcolor">''</span>;</p>
-                            <p><span class="jskeywordcolor">function</span> testFunctionScope() {</p>
-                            <p><span class="jskeywordcolor">&nbsp;&nbsp;&nbsp;&nbsp;if</span> (true) {</p>
-                            <p><span class="jskeywordcolor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var</span> x = <span class="jsnumbercolor">10</span>;  <span class="commentcolor">// `x` is function-scoped to `testFunctionScope`</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Inside if block: "</span> + x + '\n';  <span class="commentcolor">// This will log 10</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;output += <span class="jsstringcolor">"Outside if block: "</span> + x;  <span class="commentcolor">// This will also log 10 because `x` is accessible throughout the function</span></p>
-                            <p>}</p>
-                            <p><span class="jskeywordcolor">testFunctionScope</span>();</p>
-                            <p><span class="jskeywordcolor">return</span> output;</p>
-                        </div>
-                        <div class="block-btn-cont">
-                            <div class="block-run">
-                                <button type="button" class="run-btn">Run ></button>
-                            </div>
-                            <div class="reset-btn" style="display: none;">
-                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
-                            </div>
-                        </div>
-                    </div>
-                    <p id="demoq" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
-                </div>
-                <li>It is also possible to declare a variable and assign a value later like this:</li>
-                <div class="block-cont">
-                    <div class="block-bl">
-                        <p><span class="jskeywordcolor">var</span> a;</p>
-                        <p>a = <span class="jsnumbercolor">8</span>;</p>
-                    </div>
-                </div>
-
-                <h4>JavaScript Operators</h4>
-                <li>JavaScript uses arithmetic operators to compute values (<code>+ - * /</code>) to compute values</li>
-                <div class="block-outer" data-result-id="demoh" data-result-value="(5 + 10) * 2 - (12 / 3)">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="jsnumbercolor">(5</span> + <span class="jsnumbercolor">10</span>) * <span class="jsnumbercolor">2</span> - (<span class="jsnumbercolor">12</span> / <span class="jsnumbercolor">3</span>)</p>
-                        </div>
-                        <div class="block-btn-cont">
-                            <div class="block-run">
-                                <button type="button" class="run-btn">Run ></button>
-                            </div>
-                            <div class="reset-btn" style="display: none;">
-                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
-                            </div>
-                        </div>
-                    </div>
-                    <p id="demoh" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
-                </div>
-                <li>An expression is a combination of values, variables, and operators, which computes to a value.</li>
-                <li>The computation is called an evaluation.</li>
-                <li>For example, 5 * 10 evaluates to 50:</li>
-                <div class="block-outer" data-result-id="demoj" data-result-value="5 * 10">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="jsnumbercolor">5</span> * <span class="jsnumbercolor">10</span></p>
-                        </div>
-                        <div class="block-btn-cont">
-                            <div class="block-run">
-                                <button type="button" class="run-btn">Run ></button>
-                            </div>
-                            <div class="reset-btn" style="display: none;">
-                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
-                            </div>
-                        </div>
-                    </div>
-                    <p id="demoj" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
-                </div>
-                <li>The value itself can be of various types, such as numbers, strings, or objects like this:</li>
-                <div class="block-outer" data-result-id="demol" data-result-value="5 + 10 + ' ' + 'Hello' + ' ' + 'World'">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="jsnumbercolor">5</span> + <span class="jsnumbercolor">10</span> + " " + <span class="jsstringcolor">"Hello"</span> + " " <span class="jsstringcolor">"World"</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">anotherFunction</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">xx</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">20</span>; <span class="commentcolor">// This modifies the same global variable `xx`</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">anotherFunction</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"After calling anotherFunction, xx is: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">xx</span>; <span class="commentcolor">// This will log 20</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>                            
                         </div>
                         <div class="block-btn-cont">
                             <div class="block-run">
@@ -4668,9 +4566,121 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demol" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
                 </div>
+                <li>Notes: The <code>let</code> and <code>const</code> are block-scoped, while the <code>var</code> is function-scoped</li>
+                <li>Block-scoped means that the variable is only available within the block of code where it's declared, like this:</li>
+                <div class="block-outer" data-result-id="demok" data-result-function="complexExpression1">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">true</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor"> {</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">20</span>; <span class="commentcolor">// `y` is block-scoped to this `if` block</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Inside if block: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span>; <span class="commentcolor">// This will log 20</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Outside if block: "</span> <span class="jsoperatorcolor">+</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">typeof</span> <span class="jsvariablecolor">y</span><span class="jsbracketcolor">)</span>; <span class="commentcolor">// This will log 'undefined' because `y` is not accessible outside the block</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>                                                       
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demok" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>Function-scoped means that the variable is available within the function where it's declared, like this:</li>
+                <div class="block-outer" data-result-id="demom" data-result-function="complexExpression2">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">testFunctionScope</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">true</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>; <span class="commentcolor">// `x` is function-scoped to `testFunctionScope`</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Inside if block: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span>; <span class="commentcolor">// This will log 10</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Outside if block: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span>; <span class="commentcolor">// This will also log 10 because `x` is accessible throughout the function</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">testFunctionScope</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>                                                       
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demom" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>It is also possible to declare a variable and assign a value later like this:</li>
+                <div class="block-cont">
+                    <div class="block-bl">
+                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">a</span>;</p>
+                        <p><span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">8</span>;</p>                        
+                    </div>
+                </div>
+
+                <h4>JavaScript Operators</h4>
+                <li>JavaScript uses arithmetic operators to compute values (<code>+ - * /</code>) to compute values</li>
+                <div class="block-outer" data-result-id="demog" data-result-value="(5 + 10) * 2 - (12 / 3)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">2</span> <span class="jsoperatorcolor">-</span> <span class="jsbracketcolor">(</span><span class="jsnumbercolor">12</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">3</span><span class="jsbracketcolor">)</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demog" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>An expression is a combination of values, variables, and operators, which computes to a value.</li>
+                <li>The computation is called an evaluation.</li>
+                <li>For example, 5 * 10 evaluates to 50:</li>
+                <div class="block-outer" data-result-id="demoh" data-result-value="5 * 10">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">10</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoh" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>The value itself can be of various types, such as numbers, strings, or objects like this:</li>
+                <div class="block-outer" data-result-id="demoi" data-result-value="5 + 10 + ' ' + 'Hello' + ' ' + 'World'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" "</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">"Hello"</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" "</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">"World"</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoi" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
                 
                 <li>To comment in JavaScript, use <code>//</code> for single line comment, and <code>/* */</code> for multi-line comment like this:</li>
-                <div class="block-outer" data-result-id="demop" data-result-value="/* This is a multi-line comment */">
+                <div class="block-outer">
                     <div class="block-cont">
                         <div class="block-bl">
                             <p><span class="commentcolor">/* This is a</span></p>
@@ -4697,8 +4707,213 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <li><b>lowerCamelCase</b> (this is the one that mostly used in Javascript program)</li>
                 </ul>
                 <p style="margin-top: 0;">*Notes: Even tho the other two are valid, the lowerCamelCase is the most used in JavaScript. In the other hand, it is not allowed to use hyphen (-) in variable name</p>
-                <li>
+                
+                <h4>Assignment Operators</h4>
+                <li>In JavaScript, the equal sign (<code>=</code>) is an assignment operator, not an equality operator</li>
+                <li>Below is the example:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>; <span class="commentcolor">// Assign the value 10 to x</span></p>
+                            <p><span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>; <span class="commentcolor">// Assign the value 10 to y</span></p>
+                            <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">==</span> <span class="jsvariablecolor">y</span>; <span class="commentcolor">// Returns true because the values are equal</span></p>                            
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Data Types</h4>
+                <li>JavaScript variables can hold many data types: numbers, strings, objects, arrays, functions, and more</li>
+                <li>Strings are written either with single or double quotes, numbers are written without quotes</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span>, <span class="commentcolor">// Number</span></p>
+                            <p><span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'John'</span>, <span class="commentcolor">// String</span></p>
+                            <p><span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">true</span>, <span class="commentcolor">// Boolean</span></p>
+                            <p><span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">null</span>, <span class="commentcolor">// Null</span></p>
+                            <p><span class="jsvariablecolor">b</span>, <span class="commentcolor">// Undefined</span></p>
+                            <p><span class="jsvariablecolor">c</span> <span class="jsoperatorcolor">=</span> [<span class="jsnumbercolor">1</span>, <span class="jsnumbercolor">2</span>, <span class="jsnumbercolor">3</span>], <span class="commentcolor">// Array</span></p>
+                            <p><span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> {<span class="jsstringcolor">firstName</span>: <span class="jsstringcolor">'John'</span>, <span class="jsstringcolor">lastName</span>: <span class="jsstringcolor">'Doe'</span>}; <span class="commentcolor">// Object</span></p>
+                        </div>
+                    </div>
+                </div>
+
             </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec43" onclick="toggleSection('subsec43')">JavaScript Operators</h3>
+        <div class="subsection" id="subsec43Content" style="display: none;">
+            <ul>
+                <li>There are various types of operators in JavaScript:</li>
+                <ul>
+                    <li>Arithmetic Operators</li>
+                    <li>Assignment Operators</li>
+                    <li>Comparison Operators</li>
+                    <li>String Operators</li>
+                    <li>Logical Operators</li>
+                    <li>Bitwise Operators</li>
+                    <li>Ternary Operators</li>
+                    <li>Type Operators</li>
+                </ul>
+
+                <h4>JavaScript Arithmetic Operators</h4>
+                <li>JavaScript arithmetic operators are used to perform arithmetic on numbers</li>
+                <li>Below is the list of arithmetic operators:</li>
+                <ul>
+                    <li><code>+</code> Addition</li>
+                    <li><code>-</code> Subtraction</li>
+                    <li><code>*</code> Multiplication</li>
+                    <li><code>**</code> Exponentiation</li>
+                    <li><code>/</code> Division</li>
+                    <li><code>%</code> Modulus (division remainder)</li>
+                    <li><code>++</code> Increment</li>
+                    <li><code>--</code> Decrement</li>
+                </ul>
+                <li>Below is the example of how to use those operators:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">15</span></p>
+                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">-</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span></p>
+                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">50</span></p>
+                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">**</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100000</span></p>
+                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2</span></p>
+                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">%</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span></p>
+                            <p><span class="jsnumbercolor">10</span><span class="jsoperatorcolor">++</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">11</span></p>
+                            <p><span class="jsnumbercolor">10</span><span class="jsoperatorcolor">--</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">9</span></p>                            
+                        </div>
+                    </div>
+                </div>
+
+                <h4>JavaScript Assignment Operators</h4>
+                <li>Assignment operators are used to assign values to variables</li>
+                <li>Below is the list of assignment operators:</li>
+                <label>Assignment Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                    </tr>
+                    <tr>
+                        <td><code>=</code></td>
+                        <td>x = y</td>
+                        <td>x = y</td>
+                    </tr>
+                    <tr>
+                        <td><code>+=</code></td>
+                        <td>x += y</td>
+                        <td>x = x + y</td>
+                    </tr>
+                    <tr>
+                        <td><code>-=</code></td>
+                        <td>x -= y</td>
+                        <td>x = x - y</td>
+                    </tr>
+                    <tr>
+                        <td><code>*=</code></td>
+                        <td>x *= y</td>
+                        <td>x = x * y</td>
+                    </tr>
+                    <tr>
+                        <td><code>/=</code></td>
+                        <td>x /= y</td>
+                        <td>x = x / y</td>
+                    </tr>
+                    <tr>
+                        <td><code>%=</code></td>
+                        <td>x %= y</td>
+                        <td>x = x % y</td>
+                    </tr>
+                    <tr>
+                        <td><code>**=</code></td>
+                        <td>x **= y</td>
+                        <td>x = x ** y</td>
+                    </tr>
+                </table>
+
+                <h4>JavaScript Comparison Operators</h4>
+                <li>Comparison operators are used in logical statements to determine equality or difference between variables or values</li>
+                <li>Below is the list of comparison operators:</li>
+                <label>Comparison Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>==</code></td>
+                        <td>Equal to</td>
+                        <td>x == y</td>
+                    </tr>
+                    <tr>
+                        <td><code>===</code></td>
+                        <td>Equal value and equal type</td>
+                        <td>x === y</td>
+                    </tr>
+                    <tr>
+                        <td><code>!=</code></td>
+                        <td>Not equal</td>
+                        <td>x != y</td>
+                    </tr>
+                    <tr>
+                        <td><code>!==</code></td>
+                        <td>Not equal value or not equal type</td>
+                        <td>x !== y</td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;</code></td>
+                        <td>Greater than</td>
+                        <td>x &gt; y</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;</code></td>
+                        <td>Less than</td>
+                        <td>x &lt; y</td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;=</code></td>
+                        <td>Greater than or equal to</td>
+                        <td>x &gt;= y</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;=</code></td>
+                        <td>Less than or equal to</td>
+                        <td>x &lt;= y</td>
+                    </tr>
+                    <tr>
+                        <td><code>?</code></td>
+                        <td>Ternary operator</td>
+                        <td>x = y ? a : b</td>
+                    </tr>
+                </table>
+                <li>It is possible to do String comparison and addition like this:</li>
+                <div class="block-outer" data-result-id="demon" data-result-function="complexExpression3">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">stringCompareAddition</span><span class="jsbracketcolor">() {</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Iqbal '</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Dzakwan |'</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"String addition: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">" String comparison: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">(x <span class="jsoperatorcolor">!=</span> y)</span>;</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">stringCompareAddition</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>                            
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demon" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
         </div>
         <hr>
 
