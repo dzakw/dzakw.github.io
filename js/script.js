@@ -231,3 +231,89 @@ function complexExpression3() {
     stringCompareAddition();
     return output;
 }
+
+function complexExpression4() {
+    let output = '';
+    function logicalOperators() {
+        let x = 10;
+        let y = 5;
+        output += "Logical AND: " + (x && y);
+        output += " Logical OR: " + (x || y);
+        output += " Logical NOT: " + (!x);
+    }
+    logicalOperators();
+    return output;
+}
+
+function complexExpression5() {
+    let output = '';
+    function ternaryOperators() {
+        let x = 10;
+        output += "x is " + (x > 10 ? 'Greater than 10' : 'Less than 10');
+    }
+    ternaryOperators();
+    return output;
+}
+
+function complexExpression6() {
+    let output = '';
+    function typeOperators() {
+        let x = 10;
+        output += "Type of x: " + typeof x + " | ";
+        let y = {name: 'Iqbal', age: 23, city: 'Morowali'};
+        output += "Instance of y: " + (y instanceof Object);
+    }
+    typeOperators();
+    return output;
+}
+
+function complexExpression7() {
+    let output = '';
+    function arithmeticOperations() {
+        let a = 10;
+        let b = 20;
+        let x = 100 + 50;
+        output += "Literal Number Addition: 100 + 50 = " + x + " | ";
+        let y = x + a + b;
+        output += "Variable Addition: x + a + b = " + y + " | ";
+        let z = (y ** 2 + b) % (a * 2);
+        output += "Expression: (y ** 2 + b) % (a * 2) = " + z;
+    }
+    arithmeticOperations();
+    return output;
+}
+
+function complexExpression8() {
+    let output = '';
+    function booleanOperations() {
+        let x = 5;
+        let y = 5;
+        let z = 6;
+        output += "x == y: " + (x == y) + " | ";
+        output += "x == z: " + (x == z) + " | ";
+    }
+    booleanOperations();
+    return output;
+}
+
+function complexExpression9() {
+    let output = '';
+    function undefinedVariable() {
+        let x = ['apple', 'banana', 'cherry'];
+        output += "original x: " + x + " | ";
+        output += "type of x: " + typeof x + " | ";
+        x = undefined;
+        output += "x now: " + x + " | ";
+        output += "type of x now: " + typeof x;
+    }
+    undefinedVariable();
+    return output;
+}
+
+function complexExpression10() {
+    function squaresum(p1, p2) {
+        return p1 ** 2 + p2 ** 2 + 2 * p1 * p2;
+    }
+    let output = squaresum(3, 4);
+    return output;
+}

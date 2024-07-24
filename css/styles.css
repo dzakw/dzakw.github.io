@@ -393,6 +393,11 @@ blockquote h3 {
 
 blockquote p {
   letter-spacing: 0.2px;
+  margin-top: 4px;
+}
+
+blockquote p:first-child {
+  margin-top: 0;
 }
 
 #section4Content code {
@@ -416,17 +421,19 @@ h1, h2, h3, h4, h5 {
 }
 
 h4 {
+  margin-top: 12px;
   margin-bottom: 0;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: normal;
+  font-size: 32px;
   color: #171717;
 }
 
 h5 {
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
+  font-size: 24px;
   color: #171717;
   margin: 0;
+  margin-top: 6px;
 }
 
 p {
@@ -479,7 +486,7 @@ p {
   padding: 16px 10px;
   background-color: #b9b9b9;
   border-radius: 5px;
-  width: fit-content;
+  min-width: fit-content;
 }
 
 .block-bl {
@@ -612,8 +619,12 @@ p {
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {
   body {
-      margin-left: 50px; /* Set the left margin to 50px */
-      margin-right: 50px; /* Set the right margin to 50px */
+      margin-left: 10px; /* Set the left margin to 50px */
+      margin-right: 10px; /* Set the right margin to 50px */
+  }
+
+  .block-cont {
+    min-width:auto;
   }
 }
 

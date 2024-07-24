@@ -63,6 +63,8 @@
                     <li><a href="#subsec41" onclick="openSection('subsec41'); openSection('section4')">JavaScript Introduction</a></li>
                     <li><a href="#subsec42" onclick="openSection('subsec42'); openSection('section4')">JavaScript Syntax</a></li>
                     <li><a href="#subsec43" onclick="openSection('subsec43'); openSection('section4')">JavaScript Operators</a></li>
+                    <li><a href="#subsec44" onclick="openSection('subsec44'); openSection('section4')">JavaScript Data Types</a></li>
+                    <li><a href="#subsec45" onclick="openSection('subsec45'); openSection('section4')">JavaScript Functions</a></li>
                 </ul>
             </ul>
         </div>
@@ -4760,31 +4762,100 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <h4>JavaScript Arithmetic Operators</h4>
                 <li>JavaScript arithmetic operators are used to perform arithmetic on numbers</li>
                 <li>Below is the list of arithmetic operators:</li>
-                <ul>
-                    <li><code>+</code> Addition</li>
-                    <li><code>-</code> Subtraction</li>
-                    <li><code>*</code> Multiplication</li>
-                    <li><code>**</code> Exponentiation</li>
-                    <li><code>/</code> Division</li>
-                    <li><code>%</code> Modulus (division remainder)</li>
-                    <li><code>++</code> Increment</li>
-                    <li><code>--</code> Decrement</li>
-                </ul>
-                <li>Below is the example of how to use those operators:</li>
-                <div class="block-outer">
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>+</code></td>
+                        <td>Addition</td>
+                        <td>10 + 5 = 15</td>
+                    </tr>
+                    <tr>
+                        <td><code>-</code></td>
+                        <td>Subtraction</td>
+                        <td>10 - 5 = 5</td>
+                    </tr>
+                    <tr>
+                        <td><code>*</code></td>
+                        <td>Multiplication</td>
+                        <td>10 * 5 = 50</td>
+                    </tr>
+                    <tr>
+                        <td><code>**</code></td>
+                        <td>Exponentiation</td>
+                        <td>10 ** 5 = 100000</td>
+                    </tr>
+                    <tr>
+                        <td><code>/</code></td>
+                        <td>Division</td>
+                        <td>10 / 5 = 2</td>
+                    </tr>
+                    <tr>
+                        <td><code>%</code></td>
+                        <td>Modulus (division remainder)</td>
+                        <td>10 % 5 = 0</td>
+                    </tr>
+                    <tr>
+                        <td><code>++</code></td>
+                        <td>Increment</td>
+                        <td>10++ = 11</td>
+                    </tr>
+                    <tr>
+                        <td><code>--</code></td>
+                        <td>Decrement</td>
+                        <td>10-- = 9</td>
+                    </tr>
+                </table>
+                <li>Arithmetic operators can be used on a literals, variables, or expressions like this:</li>
+                <div class="block-outer" data-result-id="demor" data-result-function="complexExpression7">
                     <div class="block-cont">
                         <div class="block-bl">
-                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">15</span></p>
-                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">-</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span></p>
-                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">50</span></p>
-                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">**</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100000</span></p>
-                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2</span></p>
-                            <p><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">%</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span></p>
-                            <p><span class="jsnumbercolor">10</span><span class="jsoperatorcolor">++</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">11</span></p>
-                            <p><span class="jsnumbercolor">10</span><span class="jsoperatorcolor">--</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">9</span></p>                            
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">arithmeticOperations</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">b</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">20</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">50</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Literal Number Addition: 100 + 50 = "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Variable Addition: x + a + b = "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor>(</span><span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">**</span> <span class="jsnumbercolor">2</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">%</span> <span class="jsbracketcolor>(</span><span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Expression: (y ** 2 + b) % (a * 2) = "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">z</span>;</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">arithmeticOperations</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
                         </div>
                     </div>
+                    <p id="demor" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
                 </div>
+                <li>Javascript generally has the same rule as daily math; the operator with the highest precedence will be executed first like this:</li>
+                <div class="block-outer" data-result-id="demos" data-result-value="5 + 10 * 2">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">2</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demos" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>The complete precedence will be explained in later section</li>
 
                 <h4>JavaScript Assignment Operators</h4>
                 <li>Assignment operators are used to assign values to variables</li>
@@ -4795,41 +4866,133 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <th>Operator</th>
                         <th>Example</th>
                         <th>Same As</th>
+                        <th>Explanation</th>
                     </tr>
                     <tr>
                         <td><code>=</code></td>
                         <td>x = y</td>
                         <td>x = y</td>
+                        <td>Assigns the value of y to x</td>
                     </tr>
                     <tr>
                         <td><code>+=</code></td>
                         <td>x += y</td>
                         <td>x = x + y</td>
+                        <td>Adds y to x</td>
                     </tr>
                     <tr>
                         <td><code>-=</code></td>
                         <td>x -= y</td>
                         <td>x = x - y</td>
+                        <td>Subtracts y from x</td>
                     </tr>
                     <tr>
                         <td><code>*=</code></td>
                         <td>x *= y</td>
                         <td>x = x * y</td>
+                        <td>Multiplies x by y</td>
                     </tr>
                     <tr>
                         <td><code>/=</code></td>
                         <td>x /= y</td>
                         <td>x = x / y</td>
+                        <td>Divides x by y</td>
                     </tr>
                     <tr>
                         <td><code>%=</code></td>
                         <td>x %= y</td>
                         <td>x = x % y</td>
+                        <td>Assigns the remainder of x divided by y to x</td>
                     </tr>
                     <tr>
                         <td><code>**=</code></td>
                         <td>x **= y</td>
                         <td>x = x ** y</td>
+                        <td>Assigns the result of x to the power of y to x</td>
+                    </tr>
+                </table>
+                <br>
+                <label>Shift Assignment Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                        <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;&lt;=</code></td>
+                        <td>x &lt;&lt;= y</td>
+                        <td>x = x &lt;&lt; y</td>
+                        <td>Shifts x in binary representation y bits to the left, shifting in zeros from the right</td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;&gt;=</code></td>
+                        <td>x &gt;&gt;= y</td>
+                        <td>x = x &gt;&gt; y</td>
+                        <td>Shifts x in binary representation y bits to the right, discarding bits shifted off</td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;&gt;&gt;=</code></td>
+                        <td>x &gt;&gt;&gt;= y</td>
+                        <td>x = x &gt;&gt;&gt; y</td>
+                        <td>Shifts x in binary representation y bits to the right, discarding bits shifted off, and shifting in zeros from the left</td>
+                    </tr>
+                </table>
+                <br>
+                <label>Bitwise Assignment Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                        <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td><code>&amp;=</code></td>
+                        <td>x &amp;= y</td>
+                        <td>x = x &amp; y</td>
+                        <td>Assign the result of bitwise AND of x and y to x</td>
+                    </tr>
+                    <tr>
+                        <td><code>|=</code></td>
+                        <td>x |= y</td>
+                        <td>x = x | y</td>
+                        <td>Assign the result of bitwise OR of x and y to x</td>
+                    </tr>
+                    <tr>
+                        <td><code>^=</code></td>
+                        <td>x ^= y</td>
+                        <td>x = x ^ y</td>
+                        <td>Assign the result of bitwise XOR of x and y to x</td>
+                    </tr>
+                </table>
+                <br>
+                <label>Logical Assignment Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                        <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td><code>&amp;&amp;=</code></td>
+                        <td>x &amp;&amp;= y</td>
+                        <td>x = x &amp;&amp; (x = y)</td>
+                        <td>Assign the result of logical AND of x and y to x</td>
+                    </tr>
+                    <tr>
+                        <td><code>||=</code></td>
+                        <td>x ||= y</td>
+                        <td>x = x || (x = y)</td>
+                        <td>Assign the result of logical OR of x and y to x</td>
+                    </tr>
+                    <tr>
+                        <td><code>??=</code></td>
+                        <td>x ??= y</td>
+                        <td>x = x ?? (x = y)</td>
+                        <td>Assigns a y to x if x is null or undefined</td>
                     </tr>
                 </table>
 
@@ -4914,8 +5077,433 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demon" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
                 </div>
+                <li>When used on a string, the <code>+</code> operator is called concatenation operator</li>
+                <li>Adding string with a number will have a result of string like this:</li>
+                <div class="block-outer" data-result-id="demoo" data-result-value="'Iqbal ' + 2024">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsstringcolor">'Iqbal '</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">2024</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoo" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                
+
+                <h4>JavaScript Logical Operators</h4>
+                <li>Logical operators are used to determine the logic between variables or values</li>
+                <li>Below is the list of logical operators:</li>
+                <label>Logical Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>&amp;&amp;</code></td>
+                        <td>Logical and</td>
+                        <td>x &amp;&amp; y</td>
+                    </tr>
+                    <tr>
+                        <td><code>||</code></td>
+                        <td>Logical or</td>
+                        <td>x || y</td>
+                    </tr>
+                    <tr>
+                        <td><code>!</code></td>
+                        <td>Logical not</td>
+                        <td>!x</td>
+                    </tr>
+                </table>
+                <li>Below is the example of how to use those operators:</li>
+                <div class="block-outer" data-result-id="demop" data-result-function="complexExpression4">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">logicalOperators</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Logical AND: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">(x <span class="jsoperatorcolor">&amp;&amp;</span> y)</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">" Logical OR: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">(x <span class="jsoperatorcolor">||</span> y)</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">" Logical NOT: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">(!x)</span>;</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">logicalOperators</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demop" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>Notes: It will be explained more in later section</li>
+
+                <h4>JavaScript Bitwise Operators</h4>
+                <li>Bit operators work on 32 bits numbers.</li>
+                <li>Any numeric operand in the operation is converted into a 32 bit number.</li>
+                <li>Below is the list of bitwise operators:</li>
+                <label>Bitwise Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                        <th>Same as</th>
+                        <th>Result</th>
+                        <th>Decimal</th>
+                    </tr>
+                    <tr>
+                        <td><code>&amp;</code></td>
+                        <td>AND</td>
+                        <td>5 &amp; 1</td>
+                        <td>0101 &amp; 0001</td>
+                        <td>0001</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>|</code></td>
+                        <td>OR</td>
+                        <td>5 | 1</td>
+                        <td>0101 | 0001</td>
+                        <td>0101</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><code>~</code></td>
+                        <td>NOT</td>
+                        <td>~ 5</td>
+                        <td>~0101</td>
+                        <td>1010</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><code>^</code></td>
+                        <td>XOR</td>
+                        <td>5 ^ 1</td>
+                        <td>0101 ^ 0001</td>
+                        <td>0100</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;&lt;</code></td>
+                        <td>Left shift</td>
+                        <td>5 &lt;&lt; 1</td>
+                        <td>0101 &lt;&lt; 1</td>
+                        <td>1010</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;&gt;</code></td>
+                        <td>Right shift</td>
+                        <td>5 &gt;&gt; 1</td>
+                        <td>0101 &gt;&gt; 1</td>
+                        <td>0010</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;&gt;&gt;</code></td>
+                        <td>Unsigned right shift</td>
+                        <td>5 &gt;&gt;&gt; 1</td>
+                        <td>0101 &gt;&gt;&gt; 1</td>
+                        <td>0010</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+                <blockquote>
+                    <p>The examples above uses 4 bits unsigned examples. But JavaScript uses 32-bit signed numbers.</p>
+                    <p>Because of this, in JavaScript, ~ 5 will not return 10. It will return -6.</p>
+                    <p>~00000000000000000000000000000101 will return 11111111111111111111111111111010</p>
+                </blockquote>
+
+                <h4>JavaScript Ternary Operators</h4>
+                <li>Ternary operators are used to assign a value to a variable based on some condition</li>
+                <li>Below is the example of how to use ternary operators:</li>
+                <div class="block-outer" data-result-id="demoq" data-result-function="complexExpression5">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">ternaryOperators</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"x is "</span> <span class="jsoperatorcolor">+</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">?</span> <span class="jsstringcolor">'Greater than 10'</span> <span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Less than 10'</span><span class="jsbracketcolor">)</span>;</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">ternaryOperators</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoq" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+
+                <h4>Javascript Type Operators</h4>
+                <li>Type operators are used to determine the type of a variable or value</li>
+                <li>Below is the list of type operators:</li>
+                <label>Type Operators</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>typeof</code></td>
+                        <td>Returns the type of a variable</td>
+                        <td>typeof x</td>
+                    </tr>
+                    <tr>
+                        <td><code>instanceof</code></td>
+                        <td>Returns true if an object is an instance of an object type</td>
+                        <td>object instanceof type</td>
+                    </tr>
+                </table>
+                <li>Below is the example of how to use those operators:</li>
+                <div class="block-outer" data-result-id="demos" data-result-function="complexExpression6">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">typeOperators</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Type of x: "</span> <span class="jsoperatorcolor">+</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">typeof</span> <span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> {<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'Iqbal'</span>, <span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">23</span>, <span class="jsvariablecolor">city</span>: <span class="jsstringcolor">'Morowali'</span>};</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Instance of y: "</span> <span class="jsoperatorcolor">+</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">y</span> <span class="jskeywordcolor">instanceof</span> <span class="jskeywordcolor">Object</span><span class="jsbracketcolor">)</span>;</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">typeOperators</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demos" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>Notes: It will be explained more in later section</li>
+            </ul>
         </div>
         <hr>
+
+        <h3 class="subsection" id="subsec44" onclick="toggleSection('subsec44')">JavaScript Data Types</h3>
+        <div class="subsection" id="subsec44Content" style="display: none;">
+            <ul>
+                <li>Javascript has 8 Data Types:</li>
+
+                <h5>String</h5>
+                <li>String is a series of characters like 'Iqbal Dzakwan'</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//Using single quotes:</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Iqbal Dzakwan'</span>;</p>
+                            <p><span class="commentcolor">//Using double quotes:</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Iqbal Dzakwan"</span>;</p>
+                        </div>
+                    </div>
+                </div>
+                <li>It is possible to use quotes inside a string, as long as they don't match the quotes surrounding the string:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//Using single quote inside double quotes:</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Iqbal's"</span>;</p>
+                            <p><span class="commentcolor">//Using double quotes inside single quotes:</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Iqbal "Dzakwan"</span>';</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h5>Number</h5>
+                <li>Number are stored as 64-bit floating point numbers. It can be written with or without decimals like 10 or 10.00</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Without decimals:</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span>;</p>
+                            <p><span class="commentcolor">// With decimals:</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10.00</span>;</p>
+                        </div>
+                    </div>
+                </div>
+                <li>It is possible to use scientific notation for extra small or extra large number like this:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123e5</span>; <span class="commentcolor">// 12300000</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123e-5</span>; <span class="commentcolor">// 0.00123</span></p>
+                        </div>
+                    </div>
+                </div>
+                <blockquote class="margin-0">
+                    <p>Most programming languages have many number types:</p>
+                    <br>
+                    <p>Whole numbers (integers):</p>
+                    <p>byte (8-bit), short (16-bit), int (32-bit), long (64-bit)</p>
+                    <br>
+                    <p>Real numbers (floating-point):</p>
+                    <p>float (32-bit), double (64-bit).</p>
+                    <br>
+                    <p><b>Javascript numbers are always one type:</b></p>
+                    <p><b>double (64-bit floating point).</b></p>
+                </blockquote>
+
+                <h5>BigInt</h5>
+                <li>JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be represented by a normal JavaScript Number.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">= BigInt</span>(<span class="jsnumbercolor">1234567890123456789012345678901234567890</span>);</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>Boolean</h5>
+                <li>Boolean can only have two values: <code>true</code> or <code>false</code></li>
+                <div class="block-outer" data-result-id="demot" data-result-function="complexExpression8">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">booleanOperations</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">6</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"x == y: "</span> <span class="jsoperatorcolor">+</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">x <span class="jsoperatorcolor">==</span> y</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"x == z: "</span> <span class="jsoperatorcolor">+</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">x <span class="jsoperatorcolor">==</span> z</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">booleanOperations</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demot" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+
+                <h5>Array</h5>
+                <li>Array is a special variable, which can hold more than one value at a time. array indexes are zero based, which means the first item is [0], second is [1], and so on.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> [<span class="jsstringcolor">'Toyota'</span>, <span class="jsstringcolor">'Honda'</span>, <span class="jsstringcolor">'Suzuki'</span>];</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>Object</h5>
+                <li>Object is a special variable, which can hold many values. It is written as name:value pairs, separated by commas, inside curly braces {}.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'Iqbal'</span>, <span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">23</span>, <span class="jsvariablecolor">city</span>: <span class="jsstringcolor">'Morowali'</span>};</p>
+                        </div>
+                    </div>
+                </div>
+                <li>The object (person) in the example above has 3 properties: name, age, and city.</li>
+
+                <h5>Undefined</h5>
+                <li>Undefined means a variable has been declared but has not been assigned a value.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span>;</p>
+                        </div>
+                    </div>
+                </div>
+                <li>It is also possible to empty an already defined variable so that it's value will be undefined, as well as it's type</li>
+                <div class="block-outer" data-result-id="demou" data-result-function="complexExpression9">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">undefinedVariable</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> [<span class="jsstringcolor">'apple'</span>, <span class="jsstringcolor">'banana'</span>, <span class="jsstringcolor">'cherry'</span>];</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"original x: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"type of x: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">typeof x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">undefined</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"x now: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"type of x now: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">typeof x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">undefinedVariable</span><span class="jsbracketcolor">()</span>;</p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span>;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demou" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+
+                <h5>Empty Value</h5>
+                <li>An empty value has nothing to do with <code>undefined</code>.</li>
+                <li>String with an empty value, will have a value of "" and its type still string. While in undefined, it doesn't have a value and its type is undefined.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span>; <span class="commentcolor">// The value is "", the typeof is "string"</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec45" onclick="toggleSection('subsec45')">JavaScript Functions</h3>
+        <div class="subsection" id="subsec45Content" style="display: none;">
+            <ul>
+                <li>A JavaScript function is a block of code designed to perform a particular task.</li>
+                <li>A JavaScript function is executed when "something" invokes it (calls it).</li>
+                <li>Below is the syntax of a function:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <i> name<span class="jsbracketcolor">(</span><span class="jsvariablecolor">parameter1</span>, <span class="jsvariablecolor">parameter2</span>, <span class="jsvariablecolor">parameter3</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></i></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// code to be executed</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>JavaScript function is defined with the <code>function</code> keyword, followed by a name, followed by parentheses <code>()</code>.</li>
+                <li>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables)</li>
+                <li>The parentheses may include parameter names separated by commas</li>
+                <li>The code to be executed, by the function, is placed inside curly brackets: <code>{}</code></li>
+                <li>Function parameters are the names listed inside the parentheses <code>()</code> in the function definition.</li>
+                <li>Function arguments are the values received by the function when it is invoked.</li>
+                <li>Inside the function, the arguments (the parameters) behave as local variables.</li>
+                
+            </ul>
+        </div>
 
     </div>
     <hr>
