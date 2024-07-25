@@ -5501,7 +5501,39 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <li>Function parameters are the names listed inside the parentheses <code>()</code> in the function definition.</li>
                 <li>Function arguments are the values received by the function when it is invoked.</li>
                 <li>Inside the function, the arguments (the parameters) behave as local variables.</li>
-                
+
+                <h4>Function Invocation</h4>
+                <li>The code inside the function will execute when "something" invokes (calls) the function:</li>
+                <ul>
+                    <li>When an event occurs (like when a user clicks a button)</li>
+                    <li>When it is invoked (called) from JavaScript code</li>
+                    <li>Automatically (self invoked)</li>
+                </ul>
+
+                <h4>Function Return</h4>
+                <li>When JavaScript reaches a <code>return</code> statement, the function will stop executing.</li>
+                <li>If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.</li>
+                <li>Functions often compute a return value. The return value is "returned" back to the "caller":</li>
+                <div class="block-outer" data-result-id="demov" data-result-function="complexExpression10">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Function is called, return value will end up in x</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">3</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demov" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
             </ul>
         </div>
 

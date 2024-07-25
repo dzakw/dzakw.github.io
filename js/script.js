@@ -310,10 +310,19 @@ function complexExpression9() {
     return output;
 }
 
+// function complexExpression10() {
+//     function squaresum(p1, p2) {
+//         return p1 ** 2 + p2 ** 2 + 2 * p1 * p2;
+//     }
+//     let output = squaresum(3, 4);
+//     return output;
+// }
+
 function complexExpression10() {
-    function squaresum(p1, p2) {
-        return p1 ** 2 + p2 ** 2 + 2 * p1 * p2;
+    // Function is called, return value will end up in x
+    let x = myFunction(4, 3);
+    function myFunction(a, b) {
+        return a + b;
     }
-    let output = squaresum(3, 4);
-    return output;
+    return x;
 }
