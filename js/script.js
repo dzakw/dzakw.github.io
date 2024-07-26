@@ -326,3 +326,26 @@ function complexExpression10() {
     }
     return x;
 }
+
+function complexExpression11() {
+    const fahrInput = document.getElementById('fahr');
+    const userInput = fahrInput.value;
+    const resultElement = document.getElementById('demow');
+
+    function toCelcius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+
+    if (userInput === '') {
+        resultElement.style.display = 'none';
+    } else {
+        const output = toCelcius(userInput);
+        resultElement.innerText = `${userInput}°F equals ${output}°C`;
+        resultElement.style.display = 'block';
+    }
+}
+
+// Initialize display based on default value
+window.onload = function() {
+    complexExpression11();
+}

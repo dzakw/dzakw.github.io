@@ -49,6 +49,7 @@
                     <li><a href="#subsec113" onclick="openSection('subsec113'); openSection('section1')">HTML Forms</a></li>
                     <li><a href="#subsec114" onclick="openSection('subsec114'); openSection('section1')">HTML Graphics and Media</a></li>
                     <li><a href="#subsec115" onclick="openSection('subsec115'); openSection('section1')">HTML APIs</a></li>
+                    <li><a href="#subsec116" onclick="openSection('subsec116'); openSection('section1')">HTML Event Attributes</a></li>
                 </ul>
                 <li><a href="#section2" onclick="openSection('section2')">Section 2: CSS</a></li>
                 <ul>
@@ -4192,6 +4193,263 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
 
                 </div>
         </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec116" onclick="toggleSection('subsec116')">HTML Event Attributes</h3>
+        <div class="subsection" id="subsec116Content" style="display: none">
+            <ul>
+                <h4>Global Event Attributes</h4>
+                <li>HTML has the ability to let events trigger actions in a browser, like starting a JavaScript when user clicks on an element, when user hovering, etc</li>
+                <li>Event attributes have script code as a value, and the script code will be executed when the event is triggered</li>
+                <li>Below are some of the global event attributes:</li>
+
+                <h4>Window Event Attributes</h4>
+                <li>Events triggered for the window object (applies to the <code>&lt;body&gt;</code> tag):</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>onafterprint</code></td>
+                        <td>Script to be run after the document is printed</td>
+                    </tr>
+                    <tr>
+                        <td><code>onbeforeprint</code></td>
+                        <td>Script to be run before the document is printed</td>
+                    </tr>
+                    <tr>
+                        <td><code>onbeforeunload</code></td>
+                        <td>Script to be run when the document is about to be unloaded</td>
+                    </tr>
+                    <tr>
+                        <td><code>onerror</code></td>
+                        <td>Script to be run when an error occurs</td>
+                    </tr>
+                    <tr>
+                        <td><code>onhashchange</code></td>
+                        <td>Script to be run when there has been changes to the anchor part of the a URL</td>
+                    </tr>
+                    <tr>
+                        <td><code>onload</code></td>
+                        <td>Script to be run when the document has finished loading</td>
+                    </tr>
+                    <tr>
+                        <td><code>onmessage</code></td>
+                        <td>Script to be run when the message is triggered</td>
+                    </tr>
+                    <tr>
+                        <td><code>onoffline</code></td>
+                        <td>Script to be run when the browser starts to work offline</td>
+                    </tr>
+                    <tr>
+                        <td><code>ononline</code></td>
+                        <td>Script to be run when the browser starts to work online</td>
+                    </tr>
+                    <tr>
+                        <td><code>onpagehide</code></td>
+                        <td>Script to be run when the window is hidden</td>
+                    </tr>
+                    <tr>
+                        <td><code>onpageshow</code></td>
+                        <td>Script to be run when the window becomes visible</td>
+                    </tr>
+                    <tr>
+                        <td><code>onpopstate</code></td>
+                        <td>Script to be run when the window's history changes</td>
+                    </tr>
+                    <tr>
+                        <td><code>onresize</code></td>
+                        <td>Script to be run when the window is resized</td>
+                    </tr>
+                    <tr>
+                        <td><code>onstorage</code></td>
+                        <td>Script to be run when a Web Storage area is updated</td>
+                    </tr>
+                    <tr>
+                        <td><code>onunload</code></td>
+                        <td>Script to be run when the document is about to be unloaded</td>
+                </table>
+
+                <h4>Form Event Attributes</h4>
+                <li>Events that are triggered by actions inside a HTML form (applies to almost all HTML elements, but is most used in form elements)</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>onblur</code></td>
+                        <td>Script to be run when the element loses focus</td>
+                    </tr>
+                    <tr>
+                        <td><code>onchange</code></td>
+                        <td>Script to be run when the element changes</td>
+                    </tr>
+                    <tr>
+                        <td><code>oncontextmenu</code></td>
+                        <td>Script to be run when the context menu is triggered</td>
+                    </tr>
+                    <tr>
+                        <td><code>onfocus</code></td>
+                        <td>Script to be run when the element gets focus</td>
+                    </tr>
+                    <tr>
+                        <td><code>oninput</code></td>
+                        <td>Script to be run when the element gets user input</td>
+                    </tr>
+                    <tr>
+                        <td><code>oninvalid</code></td>
+                        <td>Script to be run when the element is invalid</td>
+                    </tr>
+                    <tr>
+                        <td><code>onreset</code></td>
+                        <td>Script to be run when the form is reset</td>
+                    </tr>
+                    <tr>
+                        <td><code>onsearch</code></td>
+                        <td>Script to be run when the user writes something in a search field (for <code>&lt;input type="search"&gt;</code>)</td>
+                    </tr>
+                    <tr>
+                        <td><code>onselect</code></td>
+                        <td>Script to be run when the element gets selected</td>
+                    </tr>
+                    <tr>
+                        <td><code>onsubmit</code></td>
+                        <td>Script to be run when the form is submitted</td>
+                    </tr>
+                </table>
+
+                <h4>Keyboard Event Attributes</h4>
+                <li>Events that are triggered by keyboard actions</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>onkeydown</code></td>
+                        <td>Script to be run when a key is pressed</td>
+                    </tr>
+                    <tr>
+                        <td><code>onkeypress</code></td>
+                        <td>Script to be run when a key is being pressed</td>
+                    </tr>
+                    <tr>
+                        <td><code>onkeyup</code></td>
+                        <td>Script to be run when a key is released</td>
+                    </tr>
+                </table>
+
+                <h4>Mouse Event Attributes</h4>
+                <li>Events that are triggered by mouse actions</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>onclick</code></td>
+                        <td>Script to be run on a mouse click</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondblclick</code></td>
+                        <td>Script to be run on a mouse double-click</td>
+                    </tr>
+                    <tr>
+                        <td><code>onmousedown</code></td>
+                        <td>Script to be run when mouse button is pressed</td>
+                    </tr>
+                    <tr>
+                        <td><code>onmousemove</code></td>
+                        <td>Script to be run when mouse pointer moves</td>
+                    </tr>
+                    <tr>
+                        <td><code>onmouseout</code></td>
+                        <td>Script to be run when mouse pointer moves out of an element</td>
+                    </tr>
+                    <tr>
+                        <td><code>onmouseover</code></td>
+                        <td>Script to be run when mouse pointer moves over an element</td>
+                    </tr>
+                    <tr>
+                        <td><code>onmouseup</code></td>
+                        <td>Script to be run when mouse button is released</td>
+                    </tr>
+                    <tr>
+                        <td><code>onwheel</code></td>
+                        <td>Script to be run when mouse wheel rolls up or down over an element</td>
+                    </tr>
+                </table>
+
+                <h4>Drag Events Attributes</h4>
+                <li>Events that are triggered by drag actions</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>ondrag</code></td>
+                        <td>Script to be run when an element is dragged</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondragend</code></td>
+                        <td>Script to be run at the end of a drag operation</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondragenter</code></td>
+                        <td>Script to be run when an element has been dragged to a valid drop target</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondragleave</code></td>
+                        <td>Script to be run when an element leaves a valid drop target</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondragover</code></td>
+                        <td>Script to be run when an element is being dragged over a valid drop target</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondragstart</code></td>
+                        <td>Script to be run at the start of a drag operation</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondrop</code></td>
+                        <td>Script to be run when dragged element is being dropped</td>
+                    </tr>
+                    <tr>
+                        <td><code>onscroll</code></td>
+                        <td>Script to be run when an element's scrollbar is being scrolled</td>
+                    </tr>
+                </table>
+
+                <h4>Clipboard Events</h4>
+                <li>Events that are triggered by clipboard actions</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>oncopy</code></td>
+                        <td>Script to be run when the content of the element is being copied</td>
+                    </tr>
+                    <tr>
+                        <td><code>oncut</code></td>
+                        <td>Script to be run when the content of the element is being cut</td>
+                    </tr>
+                    <tr>
+                        <td><code>onpaste</code></td>
+                        <td>Script to be run when the content of the element is being pasted</td>
+                    </tr>
+                </table>
+
+                <h4>Media Events</h4>
+                <li>Events triggered by medias like videos, images, and audio (applies to all HTML elements, but is most common in media elements like <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code>, and <code>&lt;img&gt;</code>)</li>
+                
+
+            </ul>
+        </div>
 
     </div>
     <hr>
@@ -5534,6 +5792,27 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demov" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
                 </div>
+                <blockquote>
+                    <h3>So, why using functions?</h3>
+                    <p>Functions are used to perform certain actions, and they are important for code reusability.</p>
+                    <p>For example, you can use the same code many times with different arguments, to produce different results.</p>
+                </blockquote>
+
+                <h4>The () Operator</h4>
+                <li>The () operator invokes (calls) the function:</li>
+                <div class="block-outer" data-result-id="demow" data-result-function="complexExpression11">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toCelcius</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fahrenheit</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsoperatorcolor">/</span><span class="jsnumbercolor">9</span><span class="jsoperatorcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">fahrenheit</span><span class="jsoperatorcolor">-</span><span class="jsnumbercolor">32</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsfunctioncolor">toCelcius</span><span class="jsbracketcolor">(</span><input type="number" class="inputcelcius" id="fahr" value="77" onkeyup="complexExpression11()"><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                    <p id="demow" class="result" style="margin-left: 12px; display: block;"><span></span></p>
+                </div>                
             </ul>
         </div>
 
