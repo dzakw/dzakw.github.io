@@ -1191,6 +1191,7 @@
                                                 <h2 style="margin-left:5px">Section 1</h2>
                                                 <p style="margin-left:5px">Content of section 1...</p>
                                                 <p style="margin-left:5px">Content of section 1...</p>
+                                                <p style="margin-left:5px">Content of section 1...</p>
                                             </div>
                                             <div style="flex: 1; background-color: #e1e1e1;">
                                                 <h2 style="margin-left:5px">Section 2</h2>
@@ -4446,9 +4447,115 @@ document.getElementById("result").innerHTML = localStorage.lastname;</code></div
 
                 <h4>Media Events</h4>
                 <li>Events triggered by medias like videos, images, and audio (applies to all HTML elements, but is most common in media elements like <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code>, and <code>&lt;img&gt;</code>)</li>
-                
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>onabort</code></td>
+                        <td>Script to be run when the loading of an audio/video is aborted</td>
+                    </tr>
+                    <tr>
+                        <td><code>oncanplay</code></td>
+                        <td>Script to be run when the media can start playing, but might have to stop for buffering</td>
+                    </tr>
+                    <tr>
+                        <td><code>oncanplaythrough</code></td>
+                        <td>Script to be run when the media can be played through without stopping for buffering</td>
+                    </tr>
+                    <tr>
+                        <td><code>ondurationchange</code></td>
+                        <td>Script to be run when the duration of the media is changed</td>
+                    </tr>
+                    <tr>
+                        <td><code>onemptied</code></td>
+                        <td>Script to be run when something bad happens and the media file is suddenly unavailable (like unexpectedly disconnects)</td>
+                    </tr>
+                    <tr>
+                        <td><code>onended</code></td>
+                        <td>Script to be run when the media has reach the end (a useful event for messages like "thanks for listening")</td>
+                    </tr>
+                    <tr>
+                        <td><code>onerror</code></td>
+                        <td>Script to be run when an error occurs when loading an audio/video</td>
+                    </tr>
+                    <tr>
+                        <td><code>onloadeddata</code></td>
+                        <td>Script to be run when media data is loaded</td>
+                    </tr>
+                    <tr>
+                        <td><code>onloadedmetadata</code></td>
+                        <td>Script to be run when meta data (like dimensions and duration) are loaded</td>
+                    </tr>
+                    <tr>
+                        <td><code>onloadstart</code></td>
+                        <td>Script to be run when the browser starts looking for the specified media</td>
+                    </tr>
+                    <tr>
+                        <td><code>onpause</code></td>
+                        <td>Script to be run when the media is paused either by the user or programmatically</td>
+                    </tr>
+                    <tr>
+                        <td><code>onplay</code></td>
+                        <td>Script to be run when the media is ready to start playing</td>
+                    </tr>
+                    <tr>
+                        <td><code>onplaying</code></td>
+                        <td>Script to be run when the media actually has started playing</td>
+                    </tr>
+                    <tr>
+                        <td><code>onprogress</code></td>
+                        <td>Script to be run when the browser is in the process of getting the media data</td>
+                    </tr>
+                    <tr>
+                        <td><code>onratechange</code></td>
+                        <td>Script to be run each time the playback rate changes (like when a user switches to a slow motion or fast forward mode)</td>
+                    </tr>
+                    <tr>
+                        <td><code>onseeked</code></td>
+                        <td>Script to be run when the seeking attribute is set to false indicating that seeking has ended</td>
+                    </tr>
+                    <tr>
+                        <td><code>onseeking</code></td>
+                        <td>Script to be run when the seeking attribute is set to true indicating that seeking is active</td>
+                    </tr>
+                    <tr>
+                        <td><code>onstalled</code></td>
+                        <td>Script to be run when the browser is unable to fetch the media data for whatever reason</td>
+                    </tr>
+                    <tr>
+                        <td><code>onsuspend</code></td>
+                        <td>Script to be run when fetching the media data is stopped before it is completely loaded for whatever reason</td>
+                    </tr>
+                    <tr>
+                        <td><code>ontimeupdate</code></td>
+                        <td>Script to be run when the playing position has changed (like when the user fast forwards to a different point in the media)</td>
+                    </tr>
+                    <tr>
+                        <td><code>onvolumechange</code></td>
+                        <td>Script to be run each time the volume is changed which (includes setting the volume to "mute")</td>
+                    </tr>
+                    <tr>
+                        <td><code>onwaiting</code></td>
+                        <td>Script to be run when the media has paused but is expected to resume (like when the media pauses to buffer more data)</td>
+                    </tr>
+                </table>
+
+                <h4>Misc Events</h4>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>ontoggle</code></td>
+                        <td>Script to be run when the user opens or closes the <code>&lt;details&gt;</code> element</td>
+                    </tr>
+                </table>
 
             </ul>
+            
         </div>
 
     </div>
@@ -5804,15 +5911,57 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div class="block-cont">
                         <div class="block-bl">
                             <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
-                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toCelcius</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fahrenheit</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fahrenheit</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsoperatorcolor">/</span><span class="jsnumbercolor">9</span><span class="jsoperatorcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">fahrenheit</span><span class="jsoperatorcolor">-</span><span class="jsnumbercolor">32</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
-                            <p><span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsfunctioncolor">toCelcius</span><span class="jsbracketcolor">(</span><input type="number" class="inputcelcius" id="fahr" value="77" onkeyup="complexExpression11()"><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">(</span><input type="number" class="inputCelsius" id="fahr" value="77" onkeyup="complexExpression11()"><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jsbracketcolor">}</span></p>
                             <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">output</span><span class="jsoperatorcolor">;</span></p>
                         </div>
                     </div>
                     <p id="demow" class="result" style="margin-left: 12px; display: block;"><span></span></p>
-                </div>                
+                </div>
+                <li>Accessing a function with incorrect parameters can return an incorrect answer:</li>
+                <div class="block-outer" data-result-id="demox" data-result-function="complexExpression12">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">f</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsoperatorcolor">/</span><span class="jsnumbercolor">9</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">f</span><span class="jsoperatorcolor">-</span><span class="jsnumbercolor">32</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">value</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">value</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demox" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
+                <li>Accessing a function without () returns the function and not the function result:</li>
+                <div class="block-outer" data-result-id="demoy" data-result-function="complexExpression13">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fahrenheit</span><span class="jsbracketcolor">)</span> <span class"jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsoperatorcolor">/</span><span class="jsnumbercolor">9</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">fahrenheit</span><span class="jsoperatorcolor">-</span><span class="jsnumbercolor">32</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">value</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">value</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoy" class="result" style="margin-left: 12px; display: none;"><span></span> </p>
+                </div>
             </ul>
         </div>
 

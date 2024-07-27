@@ -344,8 +344,22 @@ function complexExpression11() {
         resultElement.style.display = 'block';
     }
 }
-
-// Initialize display based on default value
 window.onload = function() {
     complexExpression11();
+}
+
+function complexExpression12() {
+    function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+    let valToCel = toCelsius();
+    return valToCel;
+}
+
+function complexExpression13() {
+    function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+    let valToCel = toCelsius;
+    return valToCel;
 }
