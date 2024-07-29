@@ -363,3 +363,59 @@ function complexExpression13() {
     let valToCel = toCelsius;
     return valToCel;
 }
+
+function complexExpression14() {
+    function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+    let text = "The temperature is " + toCelsius(77) + "°" + " Celsius";
+    return text;
+}
+
+function complexExpression15() {
+    function person(fname, lname) {
+        this.firstname = fname;
+        this.lastname = lname;
+    }
+    const myFather = new person("John", "Doe");
+    const myMother = new person("Sally", "Rally");
+    return "My father is " + myFather.firstname + " " + myFather.lastname + ". My mother is " + myMother.firstname + " " + myMother.lastname;
+}
+
+function complexExpression16() {
+    function person(fname, lname) {
+        this.firstname = fname;
+        this.lastname = lname;
+    }
+    const myFather = new person("John", "Doe");
+    const myMother = new person ("Sally", "Rally");
+    return "My father is " + myFather["firstname"] + " " + myFather["lastname"] + ". My mother is " + myMother["firstname"] + " " + myMother["lastname"];
+}
+
+function complexExpression17() {
+    function person(fname, lname, id) {
+        this.fname = fname;
+        this.lname = lname;
+        this.id = id;
+        this.fullname = function() {
+            return this.fname + " " + this.lname;
+        }
+    }
+    const employee = new person("Andy", "Roe", 9969);
+    return employee.fullname() + " " + "with ID number " + employee.id + " is the Employee of The year of 2023";
+}
+
+function complexExpression18() {
+    function person(fname, lname, age) {
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.fulldata = function() {
+            return this.fname + " " + this.lname + ", age: " + this.age;
+        }
+    }
+    const employee = new person("Parjo", "Kui", 36);
+    const x = employee;
+    x.age = 32;
+    return employee.fulldata() + " is the prime suspect of this case."
+}

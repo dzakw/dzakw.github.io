@@ -489,6 +489,12 @@ p {
   min-width: fit-content;
 }
 
+.block-cont-p {
+  margin-top: 8px;
+  margin-bottom: 2px;
+  color: #222222;
+}
+
 .block-bl {
   background-color: gainsboro;
   color: #000;
@@ -628,6 +634,18 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   border-bottom: 1px solid #171717;
   border-collapse: collapse;
+}
+
+.result {
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-left: 12px;
+  margin-top: 0;
+  display: none; /* Hides the entire block */
+  height: fit-content;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 14px;
 }
 
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
