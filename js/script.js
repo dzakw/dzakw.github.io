@@ -161,13 +161,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         result = 'Error evaluating expression';
                     }
                 }
-                resultElement.querySelector('span').textContent = result;
+                resultElement.querySelector('span').innerHTML = result;
                 resultElement.style.display = 'block';
                 resetButton.style.display = 'flex';
             });
 
             resetButton.querySelector('.reset-icon').addEventListener('click', () => {
-                resultElement.querySelector('span').textContent = '';
+                resultElement.querySelector('span').innerHTML = '';
                 resultElement.style.display = 'none';
                 resetButton.style.display = 'none';
             });
@@ -418,4 +418,88 @@ function complexExpression18() {
     const x = employee;
     x.age = 32;
     return employee.fulldata() + " is the prime suspect of this case."
+}
+
+function car(brand, type, price, disc) {
+    this.brand = brand;
+    this.type = type;
+    this.price = price;
+    this.disc = disc;
+    this.dcprice = function() {
+        return this.price - (this.price * this.disc);
+    };
+    this.dp = function() {
+        return (0.2 * this.price) + 20000000;
+    };
+    this.installment = function() {
+        const monthlyInterestRate = 0.04; // 4% monthly interest rate
+        const numberOfMonths = 60; // 5 years in months
+        const principal = this.dcprice() - this.dp();
+        const monthlyPayment = principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
+        return monthlyPayment;
+    };
+}
+
+function complexExpression19() {
+    const supra = new car("Toyota", "GR Supra", 2237600000, 0.12);
+    let x = "brand";
+    let y = "type";
+    let z = "dcprice";
+    let formattedPrice = supra[z]().toLocaleString('id-ID');
+    return supra[x] + " " + supra[y] + " price after discount is Rp " + formattedPrice;
+}
+
+function complexExpression20() {
+    const supra = new car("Toyota", "GR Supra", 2237600000, 0.12);
+    supra.topSpeed = 310;
+    return supra.brand + " " + supra.type + " has the top speed of " + supra.topSpeed + "km/h.";
+}
+
+function complexExpression21() {
+    const supra = new car("Toyota", "GR Supra", 2237600000, 0.12);
+    delete supra.disc;
+    let formattedPrice = supra.dcprice().toLocaleString('id-ID');
+    return supra.brand + " " + supra.type + " price after discount is Rp " + formattedPrice;
+}
+
+function complexExpression22() {
+    const supra = new car("Toyota", "Supra", 2237600000, 0.12);
+    supra.model = {
+        supra1: "Celica XX",
+        supra2: "Celica Supra",
+        supra3: "A70 Supra",
+        supra4: "A80 Supra",
+        supra5: "GR Supra"
+    };
+    return supra.brand + " " + supra.type + " has a long history. The first generation is the " + supra.brand + " " + supra.model.supra1 + ". The second generation, " + supra.brand + " " + supra.model.supra2 + ", is the last version that has the name 'Celica'. The latest one launched after years of hiatus from the market at 2019 as " + supra.brand + " " + supra.model.supra5 + ".";
+}
+
+function complexExpression23() {
+    const civic = new car("Honda", "Civic", 1427500000, 0.05);
+    civic.model = "Type R";
+    let formattedPrice = civic.dcprice().toLocaleString('id-ID');
+    return "Unleash the thrill of the drive with the " + civic.brand + " " + civic.type + " " + civic.model + ", where performance meets precision in every mile, starting at Rp " + formattedPrice;
+}
+
+function complexExpression24() {
+    const supra = new car("Toyota", "Supra", 2237600000, 0.05);
+    const civic = new car("Honda", "Civic", 1427500000, 0.05);
+    const brz = new car("Subaru", "BRZ", 845000000, 0.05);
+    const m3 = new car("BMW", "M3", 2612114000, 0.05);
+    const mustang = new car("Ford", "Mustang GT", 2400000000, 0.05);
+
+    const cars = [supra, civic, brz, m3, mustang];
+    let text = "";
+    for (let i in cars) {
+        const downPayment = cars[i].dp().toLocaleString('id-ID');
+        const monthlyPayment = cars[i].installment().toLocaleString('id-ID');
+        text += `<li>
+                    <span style="color: black; font-weight: bold;">${cars[i].brand} ${cars[i].type}</span> - 
+                    <del style="color: #afafaf;">Price: Rp ${cars[i].price.toLocaleString('id-ID')}</del> - 
+                    Discounted Price: Rp ${cars[i].dcprice().toLocaleString('id-ID')}<br>
+                    &nbsp;&nbsp;Down Payment: Rp ${downPayment}<br>
+                    &nbsp;&nbsp;Monthly Installments: Only Rp ${monthlyPayment} over a 5-year term
+                 </li>`;
+    }
+    return "<h5 style='margin-top:0; margin-bottom:4px;'>Explore Our Premium Car Collection:</h5><ul>" + text + "</ul>";
 }

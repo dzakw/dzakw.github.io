@@ -6143,14 +6143,18 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <td>blue</td>
                     </tr>
                 </table>
-                <li>Object properties can be accessed in two ways:</li>
+                <li>Object properties can be accessed in three ways:</li>
                 <div class="block-outer">
                     <div class="block-cont">
                         <div class="block-bl">
-                            <p><span style="font-style: italic;">objectName.propertyName</span></p>
-                        </div>
-                        <div class="block-bl">
-                            <p><span style="font-style: italic;">objectName["propertyName"]</span></p>
+                            <p><span class="commentcolor">// objectName.propertyName</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// objectName["propertyName"]</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">person</span>[<span class="jsstringcolor">'age'</span>]<span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// objectName[expression]</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'age'</span><span class="jsoperatorcolor">;</span></p>
                         </div>
                     </div>
                 </div>
@@ -6208,6 +6212,120 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa2" class="result"><span></span> </p>
                 </div>
+                <br>
+                <div class="block-outer" data-result-id="demoa5" data-result-function="complexExpression19">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>objectName[expression]</p>
+                        </div>
+                        <br>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">brand</span>, <span class="jsvariablecolor">type</span>, <span class="jsvariablecolor">price</span>, <span class="jsvariablecolor">disc</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">brand</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">type</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">type</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">price</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">disc</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">disc</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">dcprice</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">-</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">*</span> <span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">disc</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">supra</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Toyota'</span>, <span class="jsstringcolor">'Supra'</span>, <span class="jsnumbercolor">100000</span>, <span class="jsnumbercolor">0.12</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'brand'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'type'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'dcprice'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">supra</span><span class="jsbracketcolor">&lbrack;</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">&rbrack;</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span><span class="jsbracketcolor">&lbrack;</span><span class="jsvariablecolor">y</span><span class="jsbracketcolor">&rbrack;</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' price after discount is $'</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span><span class="jsbracketcolor">&lbrack;</span><span class="jsvariablecolor">z</span><span class="jsbracketcolor">&rbrack;</span><span class="jsbracketcolor">()</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'.'</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa5" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>Below is how to add and delete an Object Properties.</li>
+                <h5>Adding New Properties</h5>
+                <div class="block-outer" data-result-id="demoa6" data-result-function="complexExpression20">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>supra.topSpeed <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">310</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">type</span> <span class="jsstringcolor">' has the top speed of '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">topSpeed</span> <span class="jsstringcolor">'km/h.'</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa6" class="result"><span></span> </p>
+                </div>
+                <h5>Deleting Properties</h5>
+                <div class="block-outer" data-result-id="demoa7" data-result-function="complexExpression21">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//deleting discount percentage</span></p>
+                            <p><span class="jskeywordcolor">delete</span> <span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">disc</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">supra</span><span class="jsbracketcolor">&lbrack;</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">&rbrack;</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span><span class="jsbracketcolor">&lbrack;</span><span class="jsvariablecolor">y</span><span class="jsbracketcolor">&rbrack;</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' price after discount is $'</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span><span class="jsbracketcolor">&lbrack;</span><span class="jsvariablecolor">z</span><span class="jsbracketcolor">&rbrack;</span><span class="jsbracketcolor">()</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'.'</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa7" class="result"><span></span> </p>
+                </div>
+                <h5>Nested Objects</h5>
+                <li>Property values inside an object can actually be other objects:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">brand</span><span class="jsoperatorcolor">&colon;</span> <span class="jsstringcolor">'Toyota'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">type</span><span class="jsoperatorcolor">&colon;</span> <span class="jsstringcolor">'Supra'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">price</span><span class="jsoperatorcolor">&colon;</span> <span class="jsnumbercolor">100000</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">disc</span><span class="jsoperatorcolor">&colon;</span> <span class="jsnumbercolor">0.12</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">dcprice</span><span class="jsoperatorcolor">&colon;</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">-</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">*</span> <span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">disc</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">&colon;</span> <span class="jsnumbercolor">310</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">model</span><span class="jsoperatorcolor">&colon;</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">supra1</span><span class="jsoperatorcolor">&colon;</span> <span class="jsstringcolor">'Celica XX'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">supra2</span><span class="jsoperatorcolor">&colon;</span> <span class="jsstringcolor">'Celica Supra'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">supra3</span><span class="jsoperatorcolor">&colon;</span> <span class="jsstringcolor">'A70 Supra'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">supra4</span><span class="jsoperatorcolor">&colon;</span> <span class="jsstringcolor">'A80 Supra'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">supra5</span><span class="jsoperatorcolor">&colon;</span> <span class="jsstringcolor">'GR Supra'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>                            
+                        </div>
+                    </div>
+                </div>
+                <li>To access the nested object, you can use dot notation or bracket notation just like accessing objects as usual like this:</li>
+                <div class="block-outer" data-result-id="demoa8" data-result-function="complexExpression22">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">type</span> <span class="jsstringcolor">' has a long history. The first generation is the '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">model</span>.<span class="jsvariablecolor">supra1</span> <span class="jsstringcolor"><span class="jsoperatorcolor">+</span> '.' <span class="jsoperatorcolor">+</span><br>' The second generation, '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span>.<span class="jsvariablecolor">model</span>&lsqb;<span class="jsstringcolor">'supra2'</span>&rsqb; <span class="jsstringcolor">', is the last version that has the name 'Celica'.<br> The latest one launched after years of hiatus from the market at 2019 as '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">supra</span>&lsqb;<span class="jsstringcolor">'model'</span>&rsqb;&lsqb;<span class="jsstringcolor">'supra5'</span>&rsqb; <span class="jsstringcolor">.'</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa8" class="result"><span></span> </p>
+                </div>
 
                 <h4>Object Methods</h4>
                 <li>Methods are <b>actions</b> that can be performed on objects</li>
@@ -6238,6 +6356,14 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <td><code>function() {return this.firstName + " " + this.lastName;}</code></td>
                     </tr>
                 </table>
+                <li>Methods are accessed like this:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p style="font-style: italic;">objectName.methodName()</p>
+                        </div>
+                    </div>
+                </div>
                 <li>Below is the example on how to access the object methods:</li>
                 <div class="block-outer" data-result-id="demoa3" data-result-function="complexExpression17">
                     <div class="block-cont">
@@ -6288,6 +6414,52 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p>Primitives are <b>immutable</b> (they are hardcoded and therefore cannot be changed)</p>
                     <p>Even if you assign a new value to a string, the old value will still be there</p>
                 </blockquote>
+
+                <h4>Displaying JavaScript Object</h4>
+                <li>There are several ways to display JavaScript objects:</li>
+                <ul>
+                    <li>Displaying the Object Properties by name</li>
+                    <li>Displaying the Object Properties in a Loop</li>
+                    <li>Displaying the Object using Object.values()</li>
+                    <li>Displaying the Object using JSON.stringify()</li>
+                </ul>
+                <h5>Displaying the Object Properties by name</h5>
+                <div class="block-outer" data-result-id="demoa9" data-result-function="complexExpression23">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">civic</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor>(</span><span class="jsstringcolor">'Honda'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Civic'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">1427500000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">model</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Type R'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">formattedPrice</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">dcprice</span><span class="jsbracketcolor>()</span>.<span class="jsfunctioncolor">toLocaleString</span><span class="jsbracketcolor>('id-ID')</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Unleash the thrill of the drive with the '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">type</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">model</span> <span class="jsoperatorcolor">+</span><br><span class="jsstringcolor">', where performance meets precision in every mile, starting at Rp '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">formattedPrice</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa9" class="result"><span></span> </p>
+                </div>
+                <h5>Displaying the Object Properties in a Loop</h5>
+                <div class="block-outer" data-result-id="demoa10" data-result-function="complexExpression24">
+                    <div class="block-cont">
+                        <div class="block-bl">
+
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa10" class="result"><span></span> </p>
+                </div>
 
                 <h4>JavaScript Immutable Primitive</h4>
                 <li>Immutable mean that the value of a variable cannot be changed directly after it has been created. If you want to change the value of a primitive, you have to assign a new value to the variable, but the old value will still be there.</li>
