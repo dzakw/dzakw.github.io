@@ -503,3 +503,55 @@ function complexExpression24() {
     }
     return "<h5 style='margin-top:0; margin-bottom:4px;'>Explore Our Premium Car Collection:</h5><ul>" + text + "</ul>";
 }
+
+function complexExpression25() {
+    //create an object
+    const car = {
+        brand: "Toyota",
+        year: 2023,
+        type: "Yaris"
+    };
+
+    //create an array
+    const myCAr = Object.values(car);
+
+    //display the array
+    return myCAr;
+}
+
+function complexExpression26(){
+    const fruits = {bananas:300, oranges:200, apples:430};
+
+    let text = "";
+    for(let [fruit, value] of Object.entries(fruits)) {
+        text += fruit + ": " + value + "<br>";
+    }
+    return text;
+}
+
+function complexExpression27() {
+    //create an object
+    const car = {
+        brand: "Toyota",
+        year: 2023,
+        type: "Yaris"
+    };
+
+    //Stringify Object
+    let myString = JSON.stringify(car);
+
+    //display string
+    return myString;
+}
+
+function complexExpression28() {
+    function Person(firstName, lastName, age, eyeColor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.eyeColor = eyeColor;
+        this.nationality = "Indonesian";
+    }
+    const myFather = new Person('John', 'Doe', 50, 'blue');
+    return "My father is " + myFather.nationality;
+}

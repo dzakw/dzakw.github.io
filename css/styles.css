@@ -482,6 +482,34 @@ p {
   font-weight: normal;
 }
 
+.jstemplateliteralcolor {
+  color: #A31515; /* Same as JS string color */
+  font-weight: normal;
+}
+
+/* HTML colors */
+.htmltagcolor { 
+  color: #800000; 
+  font-weight: normal;
+}
+
+.htmlattrnamecolor { 
+  color: #FF4500;
+  font-weight: normal;
+}
+
+.htmlattrvaluecolor { 
+  color: #0000FF;
+  font-weight: normal;
+}
+
+.htmltextcolor { 
+  color: #000000;
+  font-weight: normal;
+}
+
+
+
 .block-cont {
   padding: 16px 10px;
   background-color: #b9b9b9;

@@ -5187,7 +5187,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Literal Number Addition: 100 + 50 = "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span>;</p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Variable Addition: x + a + b = "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" | "</span>;</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor>(</span><span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">**</span> <span class="jsnumbercolor">2</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">%</span> <span class="jsbracketcolor>(</span><span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">**</span> <span class="jsnumbercolor">2</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">%</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span>;</p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">output</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"Expression: (y ** 2 + b) % (a * 2) = "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">z</span>;</p>
                             <p><span class="jsbracketcolor">}</span></p>
                             <p><span class="jsfunctioncolor">arithmeticOperations</span><span class="jsbracketcolor">()</span>;</p>
@@ -5979,7 +5979,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div class="block-cont" style="padding-top: 6px;">
                         <p class="block-cont-p">Instead of using a variable to store the return value of a function like this:</p>
                         <div class="block-bl">
-                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor>(</span><span class="jsnumbercolor">77</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">77</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"The temperature is "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" Celsius"</span><span class="jsoperatorcolor">;</span></p>                 
                         </div>
                         <p class="block-cont-p">You can use the function directly like this:</p>
@@ -6116,6 +6116,45 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myFather</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'John'</span>, <span class="jsstringcolor">'Doe'</span>, <span class="jsnumbercolor">50</span>, <span class="jsstringcolor">'blue'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myMother</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Sally'</span>, <span class="jsstringcolor">'Rally'</span>, <span class="jsnumbercolor">48</span>, <span class="jsstringcolor">'green'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myBrother</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Bob'</span>, <span class="jsstringcolor">'Doe'</span>, <span class="jsnumbercolor">25</span>, <span class="jsstringcolor">'brown'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>*Notes:</li>
+                <ul>
+                    <li>It is considered good practice to name constructor functions with an upper-case first letter</li>
+                    <li>In the constructor function, <code>this</code> has no value. The value of <code>this</code> will become the new object when a new object is created</li>
+                </ul>
+                <h5>Property Default Values</h5>
+                <li>A <b>value</b> given to a property will be a <b>default value</b> for all objects created by the constructor:</li>
+                <div class="block-outer" data-result-id="demoa14" data-result-function="complexExpression28">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">nationality</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Indonesian'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> myFather.<span class="jsvariablecolor">nationality</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa14" class="result"><span></span> </p>
+                </div>
+                <h5>Adding Property to a Constructor</h5>
+                <li>To add a new property into the constructor, must use construction function prototype like this:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//Adding new property</span></p>
+                            <p><span class="jsfunctioncolor">Person</span>.<span class="jsfunctioncolor">prototype</span>.<span class="jsvariablecolor">nationality</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Indonesian'</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">//Adding new method</span></p>
+                            <p><span class="jsfunctioncolor">Person</span>.<span class="jsfunctioncolor">prototype</span>.<span class="jsfunctioncolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">function</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
                         </div>
                     </div>
                 </div>
@@ -6376,7 +6415,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">fname</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jskeywordcolor">this</span>.<span class="jsvariablecolor">lname</span><span class="jsoperatorcolor">;</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
                             <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">employee</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Andy'</span>, <span class="jsstringcolor">'Roe'</span>, <span class="jsnumbercolor">9969</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
-                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">employee</span>.<span class="jsvariablecolor">fullname</span><span class="jsbracketcolor>()</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' with ID number '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">employee</span>.<span class="jsvariablecolor">id</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' is the Employee of The year of 2023'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">employee</span>.<span class="jsvariablecolor">fullname</span><span class="jsbracketcolor">()</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' with ID number '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">employee</span>.<span class="jsvariablecolor">id</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' is the Employee of The year of 2023'</span><span class="jsoperatorcolor">;</span></p>
                         </div>
                         <div class="block-btn-cont">
                             <div class="block-run">
@@ -6427,9 +6466,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <div class="block-outer" data-result-id="demoa9" data-result-function="complexExpression23">
                     <div class="block-cont">
                         <div class="block-bl">
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">civic</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor>(</span><span class="jsstringcolor">'Honda'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Civic'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">1427500000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">civic</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Honda'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Civic'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">1427500000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">model</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Type R'</span><span class="jsoperatorcolor">;</span></p>
-                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">formattedPrice</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">dcprice</span><span class="jsbracketcolor>()</span>.<span class="jsfunctioncolor">toLocaleString</span><span class="jsbracketcolor>('id-ID')</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">formattedPrice</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">dcprice</span><span class="jsbracketcolor">()</span>.<span class="jsfunctioncolor">toLocaleString</span><span class="jsbracketcolor">('id-ID')</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Unleash the thrill of the drive with the '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">type</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">civic</span>.<span class="jsvariablecolor">model</span> <span class="jsoperatorcolor">+</span><br><span class="jsstringcolor">', where performance meets precision in every mile, starting at Rp '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">formattedPrice</span><span class="jsoperatorcolor">;</span></p>
                         </div>
                         <div class="block-btn-cont">
@@ -6447,7 +6486,25 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <div class="block-outer" data-result-id="demoa10" data-result-function="complexExpression24">
                     <div class="block-cont">
                         <div class="block-bl">
-
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">supra</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Toyota'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Supra'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2237600000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">civic</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Honda'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Civic'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">1427500000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">brz</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Subaru'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'BRZ'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">845000000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">m3</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'BMW'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'M3'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2612114000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">mustang</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Ford'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Mustang GT'</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2400000000</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">0.05</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsvariablecolor">supra</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">civic</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">brz</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">m3</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">mustang</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">for</span> <span class="jsvariablecolor">let</span> <span class="jsvariablecolor">i</span> <span class="jskeywordcolor">in</span> <span class="jsvariablecolor">cars</span><span class="jsoperatorcolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">;</span><span class="jsoperatorcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">downPayment</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">cars</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span>.<span class="jsfunctioncolor">dp</span><span class="jsbracketcolor">()</span>.<span class="jsfunctioncolor">toLocaleString</span><span class="jsbracketcolor">('id-ID')</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">monthlyPayment</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">cars</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span>.<span class="jsfunctioncolor">installment</span><span class="jsbracketcolor">()</span>.<span class="jsfunctioncolor">toLocaleString</span><span class="jsbracketcolor">('id-ID')</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> '&lt;<span class="htmltagcolor">li</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="htmltagcolor">span</span> <span class="htmlattribute">style</span>=<span class="jsstringcolor">"color: black; font-weight: bold;"</span>&gt;<span class="jstemplateliteralcolor">${</span><span class="jsvariablecolor">cars</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span>.<span class="jsvariablecolor">brand</span><span class="jstemplateliteralcolor">}</span> <span class="jstemplateliteralcolor">${</span><span class="jsvariablecolor">cars</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span>.<span class="jsvariablecolor">type</span><span class="jstemplateliteralcolor">}</span>&lt;/<span class="htmltagcolor">span</span>&gt; - </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="htmltagcolor">del</span> <span class="htmlattribute">style</span>=<span class="jsstringcolor">"color: #afafaf;"</span>&gt;Price: Rp <span class="jstemplateliteralcolor">${</span><span class="jsvariablecolor">cars</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span>.<span class="jsvariablecolor">price</span>.<span class="jsfunctioncolor">toLocaleString</span><span class="jsbracketcolor">('id-ID')</span><span class="jstemplateliteralcolor">}</span>&lt;/<span class="htmltagcolor">del</span>&gt; - </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="htmltagcolor">span</span> style=<span class="jsstringcolor">"color: black; font-weight: bold;"</span>&gt;Down Payment: Rp <span class="jstemplateliteralcolor">${</span><span class="jsvariablecolor">downPayment</span><span class="jstemplateliteralcolor">}</span>&lt;/<span class="htmltagcolor">span</span>&gt;&lt;<span class="htmltagcolor">br</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="htmltagcolor">span</span> style=<span class="jsstringcolor">"color: black; font-weight: bold;"</span>&gt;Monthly Installments: Only Rp <span class="jstemplateliteralcolor">${</span><span class="jsvariablecolor">monthlyPayment</span><span class="jstemplateliteralcolor">}</span> over a 5-year term</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="htmltagcolor">li</span>&gt;'</p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">return</span> "&lt;<span class="htmltagcolor">h5</span> style=<span class="jsstringcolor">'margin-top:0; margin-bottom:4px;'</span>&gt;Explore Our Premium Car Collection:&lt;/<span class="htmltagcolor">h5</span>&gt;&lt;<span class="htmltagcolor">ul</span>&gt;" <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+</span> "&lt;/<span class="htmltagcolor">ul</span>&gt;"<span class="jsoperatorcolor">;</span></p>
                         </div>
                         <div class="block-btn-cont">
                             <div class="block-run">
@@ -6459,6 +6516,78 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                     <p id="demoa10" class="result"><span></span> </p>
+                </div>
+                <h5>Using Object.values()</h5>
+                <li><code>Object.values()</code> creates an array from the property values:</li>
+                <div class="block-outer" data-result-id="demoa11" data-result-function="complexExpression25">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//create an object</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">brand</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Toyota'</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">year</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">2023</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">type</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Yaris'</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">//create an array</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCAr</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">values</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">car</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">//display the array</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">myCAr</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa11" class="result"><span></span> </p>
+                </div>
+                <h5>Using Object.entries()</h5>
+                <li><code>Object.entries()</code> makes it simple to use objects in loops:</li>
+                <div class="block-outer" data-result-id="demoa12" data-result-function="complexExpression26">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsvariablecolor">bananas</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">300</span><span class="jsoperatorcolorc">,</span> <span class="jsvariablecolor">oranges</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">200</span><span class="jsoperatorcolorc">,</span> <span class="jsvariablecolor">apples</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">430</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">for</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">[fruit</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">value</span><span class="jskeywordcolor">]</span> <span class="jskeywordcolor">of</span> <span class="jsfunctioncolor">Object</span><span class="jsfunctioncolor">.entries</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fruits</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">fruit</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">": "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">value</span> <span class="jsoperatorcolor">+</span> <span class="htmltagcolor">"&lt;br&gt;"</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">text</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa12" class="result"><span></span> </p>
+                </div>
+                <h5>Using JSON.stringify()</h5>
+                <li>JavaScript objects can be converted to a string with JSON method <code>JSON.stringify()</code></li>
+                <li>The result will be a string written in JSON format</li>
+                <div class="block-outer" data-result-id="demoa13" data-result-function="complexExpression27">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myString</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsfunctioncolor">.stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">car</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa13" class="result"><span></span> </p>
                 </div>
 
                 <h4>JavaScript Immutable Primitive</h4>
@@ -6509,7 +6638,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <br>
                             <p><span class="commentcolor">//Change the value of the copy, which will also change the value of original employee object</span></p>
                             <p><span class="jsvariablecolor">x</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">32</span><span class="jsoperatorcolor">;</span></p>
-                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">employee</span>.<span class="jsvariablecolor">fulldata</span><span class="jsbracketcolor>()</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' is the prime suspect of this case.'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">employee</span>.<span class="jsvariablecolor">fulldata</span><span class="jsbracketcolor">()</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' is the prime suspect of this case.'</span><span class="jsoperatorcolor">;</span></p>
                         </div>
                         <div class="block-btn-cont">
                             <div class="block-run">
@@ -6528,5 +6657,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
     </div>
     <hr>
+    <script src="js/script.js"></script> <!-- This is how to link external JavaScript file -->
+
 </body>
 </html>
