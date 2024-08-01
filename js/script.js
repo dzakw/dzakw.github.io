@@ -555,3 +555,14 @@ function complexExpression28() {
     const myFather = new Person('John', 'Doe', 50, 'blue');
     return "My father is " + myFather.nationality;
 }
+
+function complexExpression29() {
+    return Date();
+}
+
+function complexExpression30() {
+    let txt = "We are the so-called \"Vikings\" from the north.";
+    let txt1 = 'He said "Hello"';
+    
+    return txt + "<br>" + txt1;
+}

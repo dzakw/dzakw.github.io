@@ -67,6 +67,8 @@
                     <li><a href="#subsec44" onclick="openSection('subsec44'); openSection('section4')">JavaScript Data Types</a></li>
                     <li><a href="#subsec45" onclick="openSection('subsec45'); openSection('section4')">JavaScript Functions</a></li>
                     <li><a href="#subsec46" onclick="openSection('subsec46'); openSection('section4')">JavaScript Objects</a></li>
+                    <li><a href="#subsec47" onclick="openSection('subsec47'); openSection('section4')">JavaScript Events</a></li>
+                    <li><a href="#subsec48" onclick="openSection('subsec48'); openSection('section4')">JavaScript Strings</a></li>
                 </ul>
             </ul>
         </div>
@@ -6158,6 +6160,36 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
+                <h5>Built-in JavaScript Constructors</h5>
+                <li>JavaScript has several built-in constructors for all native JavaScript objects:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">new</span> Object() <span class="commentcolor">//A new Object object</span></p>
+                            <p><span class="jskeywordcolor">new</span> Array() <span class="commentcolor">//A new Array object</span></p>
+                            <p><span class="jskeywordcolor">new</span> Map() <span class="commentcolor">//A new Map object</span></p>
+                            <p><span class="jskeywordcolor">new</span> Set() <span class="commentcolor">//A new Set object</span></p>
+                            <p><span class="jskeywordcolor">new</span> Date() <span class="commentcolor">//A new Date object</span></p>
+                            <p><span class="jskeywordcolor">new</span> RegExp() <span class="commentcolor">//A new RegExp object</span></p>
+                            <p><span class="jskeywordcolor">new</span> Function() <span class="commentcolor">//A new Function object</span></p>                            
+                        </div>
+                    </div>
+                </div>
+                <blockquote>
+                    <h5>Note:</h5>
+                    <p>The <code>Math()</code> object is not in the list. <code>Math</code> is a global object. The <code>new</code> keyword cannot be used to create a new Math object.</p>
+                </blockquote>
+                <li>There are alternatives on how to create a new object instead of using the <code>new</code> keyword:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">=</span> {} <span class="commentcolor">//Object object</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">b</span> <span class="jsoperatorcolor">=</span> [] <span class="commentcolor">//Array object</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">c</span> <span class="jsoperatorcolor">=</span> /()/ <span class="commentcolor">//Regexp object</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">function</span>(){} <span class="commentcolor">//Function object</span></p>
+                        </div>
+                    </div>
+                </div>
 
                 <h4>Object Properties</h4>
                 <table class="key-dec">
@@ -6655,8 +6687,133 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
         </div>
         <hr>
 
+        <h3 class="subsection" id="subsec47" onclick="toggleSection('subsec47')">JavaScript Events</h3>
+        <div class="subsection" id="subsec47Content" style="display: none;">
+            <ul>
+                <li>An HTML event can be something the browser does, or something a user does.</li>
+                <li>Here are some examples of HTML events:</li>
+                <ul>
+                    <li>When a user clicks the mouse</li>
+                    <li>When a web page has loaded</li>
+                    <li>When an image has been loaded</li>
+                    <li>When the mouse moves over an element</li>
+                    <li>When an input field is changed</li>
+                    <li>When an HTML form is submitted</li>
+                    <li>When a user strokes a key</li>
+                </ul>
+                <li>JavaScript lets you execute code when events are detected</li>
+                <li>HTML allows event handler attributes, with JavaScript code, to be added to HTML elements</li>
+                <li>In the following example, an <code>onclick</code> attribute (with code), is added to a <code>&lt;button&gt;</code> element:</li>
+                <div class="block-outer" data-result-id="demoa15" data-result-value="Date();">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="htmltagcolor">&lt;<span class="htmltagcolor">button</span> <span class="htmlattrnamecolor">onclick</span><span class="htmlattrvaluecolor">="document.getElementById('demo').innerHTML = Date()"</span>&gt;<span class="htmltextcolor">The time is?</span><span class="htmlbracketcolor">&lt;</span>/button<span class="htmlbracketcolor">&gt;</span></span></p>
+                            <p><span class="htmltagcolor">&lt;<span class="htmltagcolor">p</span> <span class="htmlattrnamecolor">id</span><span class="htmlattrvaluecolor">="demo"</span><span class="htmlbracketcolor">&gt;</span><span class="htmlbracketcolor">&lt;</span>/p<span class="htmlbracketcolor">&gt;</span></span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">The time is?</button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa15" class="result"><span></span> </p>
+                </div>
+                <li>It is also possible to make something like this using <code>this.innerHTML</code> that would change the content of its own element</li>
+                <button onclick="this.innerHTML = Date()">The time is?</button>
+                <li>It is more common to see event attributes calling a JavaScript function like this:</li>
+                <div class="block-outer" data-result-id="demoa16" data-result-function="complexExpression29">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">displayDate</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">document</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'#demoa16'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="htmltagcolor">&lt;<span class="htmltagcolor">button</span> <span class="htmlattrnamecolor">onclick</span><span class="htmlattrvaluecolor">="displayDate()"</span>&gt;<span class="htmltextcolor">The time is?</span><span class="htmlbracketcolor">&lt;</span>/button<span class="htmlbracketcolor">&gt;</span></span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa16" class="result"><span></span> </p>
+                </div>
+                <li>Here is a list of some common HTML events:</li>
+                <ul>
+                    <li><code>onchange</code> - An HTML element has been changed</li>
+                    <li><code>onclick</code> - The user clicks an HTML element</li>
+                    <li><code>onmouseover</code> - The user moves the mouse over an HTML element</li>
+                    <li><code>onmouseout</code> - The user moves the mouse away from an HTML element</li>
+                    <li><code>onkeydown</code> - The user pushes a keyboard key</li>
+                    <li><code>onkeyup</code> - The user releases a keyboard key</li>
+                    <li><code>onload</code> - The browser has finished loading the page</li>
+                </ul>
+                <li>For a complete list of events, visit <a href="#subsec116" onclick="openSection('subsec116'); openSection('section1')">HTML Event Attributes</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec48" onclick="toggleSection('subsec48')">JavaScript Strings</h3>
+        <div class="subsection" id="subsec48Content" style="display: none;">
+            <ul>
+                <li>Strings are used for <b>storing text</b></li>
+                <li>Strings are written <b>with quotes</b></li>
+                <li>JavaScript string is zero or more characters written inside single or double quotes:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Volvo'</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// Using single quotes</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carModel</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"XC90"</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// Using double quotes</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Its possible to use quotes inside a string, as long they don't match the quotes surrounding the string:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"It's alright"</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'He said "Hello"'</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>If you want to use the same type of quotes inside a string, you have to escape them in JavaScript, or use HTML Entities for HTML:</li>
+                <div class="block-outer" data-result-id="demoa17" data-result-function="complexExpression30">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//Using escape character</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"We are the so-called \"Vikings\" from the north."</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">//Using HTML Entities for HTML</span></p>
+                            <p><span class="htmltagcolor">&lt;<span class="htmltagcolor">p</span>&gt;</span><span class="jsvariablecolor">He said <span class="htmlattrnamecolor">&amp;quot;</span>Hello<span class="htmlattrnamecolor">&amp;quot;</span></span><span class="htmltagcolor">&lt;/<span class="htmltagcolor">p</span>&gt;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa17" class="result"><span></span> </p>
+                </div>
+                <h5>Template Strings</h5>
+                <li>Templates are strings enclosed in backticks (`this is a template string`)</li>
+                <li>Templates allow single and double quotes inside a string</li>
+
+            </ul>
+        </div>
+
     </div>
     <hr>
+
+
     <script src="js/script.js"></script> <!-- This is how to link external JavaScript file -->
 
 </body>
