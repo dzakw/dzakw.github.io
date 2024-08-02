@@ -6806,7 +6806,160 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <h5>Template Strings</h5>
                 <li>Templates are strings enclosed in backticks (`this is a template string`)</li>
                 <li>Templates allow single and double quotes inside a string</li>
+                <div class="block-outer" data-result-id="demoa18" data-result-function="complexExpression31">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">`It's alright. That's just a "small" mistakes`</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa18" class="result"><span></span> </p>
+                </div>
+                <h5>Breaking Long Lines</h5>
+                <li>For readability, programmers often like to avoid long code lines. A safe way to break up a statement is <b>after an operator.</b></li>
+                <li>A safe way to break up a string is by using <b>string addition:</b></li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'We are the so-called "Vikings" from the north.'</span> <span class="jsoperatorcolor">+</span></p>
+                            <p><span class="jsstringcolor">'We are the so-called "Vikings" from the north.'</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
 
+                <h4>String Methods</h4>
+                <li>JavaScript strings are primitive and immutable; this mean that all string methods will return a new string, not modify the original string</li>
+                <li>Here are the lists of JavaScript String methods:</li>
+                <ul class="threeColumn">
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example441')">at()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example442')">charAt()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example443')">charCodeAt()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example444')">codePointAt()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example445')">concat()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example446')">constructor()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example447')">endsWith()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example448')">fromCharCode()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example449')">includes()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example450')">indexOf()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example451')">lastIndexOf()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example452')">length()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example453')">localeCompare()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example454')">match()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example455')">padEnd()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example456')">padStart()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example457')">prototype()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example458')">repeat()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example459')">replace()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example460')">replaceAll()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example461')">search()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example462')">slice()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example463')">split()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example464')">startsWith()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example465')">substr()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example466')">substring()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example467')">toLocaleLowerCase()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example468')">toLocaleUpperCase()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example469')">toLowerCase()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example470')">toString()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example471')">toUpperCase()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example472')">trim()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example473')">trimEnd()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example474')">trimStart()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example475')">valueOf()</a></li>
+                </ul>
+                <div id="example441" style="display: none;">
+                    <h5>at()</h5>
+                    <li>The <code>at()</code> method returns the character at a specified index (position) in a string. It support negative index, and will access the string from the end of the string. Calling <code>at()</code> with an index outside of the string will return <code>undefined</code></li>
+                    <div class="block-outer" data-result-id="demoa19" data-result-function="complexExpression32">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"The light from the streetlamp was bright and eerie."</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at1</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">1</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at2</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">2</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at3</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">5</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at4</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">4</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at5</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">3</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at6</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">1</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at7</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">2</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at8</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">-10</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at9</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">8</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at10</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">2</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at11</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">-4</span>);</p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">at11</span> <span class="jsoperatorcolor">=</span> text.at(<span class="jsnumbercolor">100</span>);</p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">at1</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at2</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at3</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at4</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at5</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at6</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at7</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at8</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at9</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at10</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">at11</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa19" class="result"><span></span> </p>
+                    </div>
+                    <li>Code above can be simplified like this:</li>
+                    <div class="block-outer" data-result-id="demoa20" data-result-function="complexExpression33">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"The light from the streetlamp was bright and eerie."</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">indexs</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">&lbrack;</span><span class="jsnumbercolor">1<span class="jsoperatorcolor">,</span> 2<span class="jsoperatorcolor">,</span> 5<span class="jsoperatorcolor">,</span> 4<span class="jsoperatorcolor">,</span> 3<span class="jsoperatorcolor">,</span> 1<span class="jsoperatorcolor">,</span> 2<span class="jsoperatorcolor">,</span> -10<span class="jsoperatorcolor">,</span> 8<span class="jsoperatorcolor">,</span> 2<span class="jsoperatorcolor">,</span> -4</span><span class="jsbracketcolor">&rbrack;</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">sentence</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
+                                <br>
+                                <p><span class="jsfunctioncolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> i <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsoperatorcolor">;</span> i <span class="jsoperatorcolor">&le;</span> <span class="jsvariablecolor">indexs</span>.length<span class="jsoperatorcolor">;</span> i <span class="jsoperatorcolor">++</span><span class="jsbracketcolor">) {</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">sentence</span> <span class="jsoperatorcolor">=</span> text.at<span class="jsbracketcolor">(<span class="jsvariablecolor">indexs</span>[<span class="jsvariablecolor">i</span>])</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsbracketcolor">}</span></p>
+                                <br>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">sentence</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa20" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example442" style="display: none;">
+                    <h5>charAt()</h5>
+                    <li>The <code>charAt()</code> method returns the character at a specified index (position) in a string. The value cant be negative, and calling a value that is out of range will return an empty string.("")</li>
+                    <div class="block-outer" data-result-id="demoa21" data-result-function="complexExpression34">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"stay up, sport."</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">indexs</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">&lbrack;</span><span class="jsnumbercolor">1<span class="jsoperatorcolor">,</span> 11<span class="jsoperatorcolor">,</span> 3<span class="jsoperatorcolor">,</span> 11<span class="jsoperatorcolor">,</span> 1<span class="jsoperatorcolor">,</span> 2<span class="jsoperatorcolor">,</span> 4<span class="jsoperatorcolor">,</span> 0<span class="jsoperatorcolor">,</span> 5<span class="jsoperatorcolor">,</span> 6<span class="jsoperatorcolor">,</span> 12<span class="jsoperatorcolor">,</span> 2</span><span class="jsbracketcolor">&rbrack;</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">sentence</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
+                                <br>
+                                <p><span class="jsfunctioncolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> i <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsoperatorcolor">;</span> i <span class="jsoperatorcolor">&le;</span> <span class="jsvariablecolor">indexs</span>.length<span class="jsoperatorcolor">;</span> i <span class="jsoperatorcolor">++</span><span class="jsbracketcolor">) {</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">sentence</span> <span class="jsoperatorcolor">=</span> text.charAt<span class="jsbracketcolor">(<span class="jsvariablecolor">indexs</span>[<span class="jsvariablecolor">i</span>])</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsbracketcolor">}</span></p>
+                                <br>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">sentence</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa21" class="result"><span></span> </p>
+                    </div>
+                </div>
             </ul>
         </div>
 

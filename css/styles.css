@@ -680,6 +680,11 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
 }
 
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {
   body {

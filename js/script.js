@@ -566,3 +566,48 @@ function complexExpression30() {
     
     return txt + "<br>" + txt1;
 }
+
+function complexExpression31() {
+    return `It's alright "okay"?`;
+}
+
+function complexExpression32() {
+    let text = "The light from the streetlamp was bright and eerie.";
+    let at1 = text.at(1);
+    let at2 = text.at(2);
+    let at3 = text.at(5);
+    let at4 = text.at(4);
+    let at5 = text.at(3);
+    let at6 = text.at(1);
+    let at7 = text.at(2);
+    let at8 = text.at(-10);
+    let at9 = text.at(8);
+    let at10 = text.at(2);
+    let at11 = text.at(-4);
+    let at12 = text.at(100);
+    return at1 + at2 + at3 + at4 + at5 + at6 + at7 + at8 + at9 + at10 + at11;
+}
+
+function complexExpression33() {
+    let text = "The light from the streetlamp was bright and eerie.";
+    let indexs = [1, 2, 5, 4, 3, 1, 2, -10, 8, 2, -4];
+    let sentence = "";
+    
+    for (let i = 0; i < indexs.length; i++) {
+        sentence += text.at(indexs[i]);
+    }
+
+    return sentence;
+}
+
+function complexExpression34() {
+    let text = "stay up, sport.";
+    let indexs = [1, 11, 3, 11, 1, 2, 4, 0, 5, 6, 12, 2];
+    let sentence = "";
+    
+    for (let i = 0; i < indexs.length; i++) {
+        sentence += text.at(indexs[i]);
+    }
+
+    return sentence;
+}
