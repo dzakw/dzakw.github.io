@@ -611,3 +611,15 @@ function complexExpression34() {
 
     return sentence;
 }
+
+function complexExpression35() {
+    let text = "stay up, sport.";
+    let indexs = [1, 11, 3, 11, 1, 2, 4, 0, 5, 6, 12, 2];
+    let sentence = "";
+    
+    for (let i = 0; i < indexs.length; i++) {
+        sentence += text.at(indexs[i]);
+    }
+
+    return sentence;
+}
