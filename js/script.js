@@ -346,6 +346,7 @@ function complexExpression11() {
 }
 window.onload = function() {
     complexExpression11();
+    complexExpression41()
 }
 
 function complexExpression12() {
@@ -618,8 +619,118 @@ function complexExpression35() {
     let sentence = "";
     
     for (let i = 0; i < indexs.length; i++) {
-        sentence += text.at(indexs[i]);
+        sentence += text.charCodeAt(indexs[i]) + " ";
     }
 
     return sentence;
+}
+
+function complexExpression36() {
+    let text = "stay up, sport.";
+    let indexs = [1, 11, 3, 11, 1, 2, 4, 0, 5, 6, 12, 2];
+    let sentence = "";
+    
+    for (let i = 0; i < indexs.length; i++) {
+        sentence += text.codePointAt(indexs[i]) + " ";
+    }
+
+    return sentence;
+}
+
+function complexExpression37() {
+    let text1 = "Toyota";
+    let text2 = "Supra";
+    let result = text1.concat(" ", text2);
+    return result;
+}
+
+function complexExpression38() {
+    let text = "Toyota Supra";
+    let tcon = text.constructor;
+    return tcon;
+}
+
+function complexExpression39() {
+    let text1 = ["Itachi Uchiha", "Sasuke Uchiha", "Naruto Uzumaki"];
+    let text = "";
+    
+    for (let i = 0; i < text1.length; i++) {
+        if (text1[i].endsWith("Uchiha")) {
+            text += text1[i] + " is from Uchiha clan" + "<br>";
+        }
+        else {
+            text+= text1[i] + " is not from Uchiha clan" + "<br>";
+        }
+    }
+
+    return text;
+}
+
+function complexExpression40() {
+    let text = String.fromCharCode(116, 111, 121, 111, 116, 97, 32, 115, 117, 112, 114, 97);
+    return text;
+}
+
+function complexExpression41() {
+    const hiddenWord = "supra";
+    let displayedWord = document.getElementById("hidden-word").textContent.split(': ')[1];
+    const guessInput = document.getElementById("guess-input");
+    const guess = guessInput.value.toLowerCase();
+
+    if (guess.length !== 1) {
+      return;
+    }
+
+    let result = "";
+    if (hiddenWord.includes(guess)) {
+      result = `Good guess! The letter '${guess}' is in the word.`;
+      displayedWord = updateDisplayedWord(hiddenWord, displayedWord, guess);
+    } else {
+      result = `Sorry, the letter '${guess}' is not in the word.`;
+    }
+
+    document.getElementById("result").textContent = result;
+    document.getElementById("hidden-word").textContent = `Hidden Word: ${displayedWord}`;
+    guessInput.value = "";
+
+    function updateDisplayedWord(hiddenWord, displayedWord, guess) {
+      let newDisplayedWord = "";
+      for (let i = 0; i < hiddenWord.length; i++) {
+        if (hiddenWord[i] === guess) {
+          newDisplayedWord += guess + " ";
+        } else {
+          newDisplayedWord += displayedWord[i * 2] + " ";
+        }
+      }
+      return newDisplayedWord.trim();
+    }
+}
+
+function complexExpression42() {
+    let text = "Hello world, welcome to the hood.";
+    let result = text.indexOf("welcome");
+    return result;
+}
+
+function complexExpression43() {
+    let text = "Hello planet earth, you are a great planet.";
+    let result = text.lastIndexOf("planet");
+    return result;
+}
+
+function complexExpression44() {
+    let password = ["vgN]fCGZ^Q_!nRPw", ":kJ*K=P", "AvdGGah>]6", "Ru8@:", "Rc(aW", "Y*xk33H$_", "_oqF^b|kc", "zY{y@f$'", "zCnct{HhU", "l(HOgMXhFQEhr", "?}&\\('|v"];
+    let result = "";
+    for (let i = 0; i < password.length; i++) {
+        let stars = "";
+        for (let j = 0; j < password[i].length; j++) {
+            stars += "*";                
+        }
+        if (password[i].length < 8) {
+            result += stars + " is too short" + "<br>";
+        } else {
+            result += stars + " is a good password" + "<br>";
+        }
+    }
+    return result;
 }
