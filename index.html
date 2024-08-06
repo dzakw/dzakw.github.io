@@ -7319,6 +7319,353 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             </div>
                         </div>
                     </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa31" data-result-function="complexExpression45">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"aaad"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text2</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"aaac"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> text1<b>.localeCompare</b><span class="jsbracketcolor">(</span><span class="jsvariablecolor">text2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">prt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
+                                <br>
+                                <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">===</span> <span class="jsnumbercolor">-1</span><span class="jsbracketcolor">)</span> <span class="jsvariablecolor">prt</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"text1 is before text2"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">else</span> <span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">===</span> <span class="jsnumbercolor">0</span><span class="jsbracketcolor">)</span> <span class="jsvariablecolor">prt</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"text1 equal to text2"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">else</span> <span class="jsvariablecolor">prt</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"text1 is after text2"</span><span class="jsoperatorcolor">;</span></p>
+                                <br>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">prt</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa31" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example454" style="display: none;">
+                    <h5>match()</h5>
+                    <li>The <code>match()</code> method retrieves the result of matching a string against a regular expression.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.match</b><span class="jsbracketcolor">(</span><span class="jsregexpcolor">regexp</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa32" data-result-function="complexExpression46">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"No problem! Here's the information about the Mercedes CLR GTR:<br> The Mercedes CLR GTR is a remarkable racing car celebrated for its outstanding performance and sleek design.<br> Powered by a potent 6.0-liter V12 engine, it delivers over 600 horsepower. Acceleration from 0 to 100 km/h<br>takes approximately 3.7 seconds, with a remarkable top speed surprising 320 km/h.🥇Incorporating<br>adventure aerodynamic features and cutting-edge stability technologies, the CLR GTR ensures exceptional<br>stability and control, particularly during high-speed maneuvers. 💨Originally priced at around $1.5 million,<br>the Mercedes CLR GTR is considered one of the most exclusive and prestigious racing cars ever produced.<br>💰Its limited production run of just five units adds to its rarity, making it highly sought after by racing<br>enthusiasts and collectors worldwide. 🌎"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text2</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"No problem!"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.match</b><span class="jsbracketcolor">(</span><span class="jsvariablecolor">text2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">prt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
+                                <br>
+                                <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">!=</span> <span class="jskeywordcolor">null</span><span class="jsbracketcolor">)</span> <span class="jsvariablecolor">prt</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"text1 is generated by AI"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">else</span> <span class="jsvariablecolor">prt</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"text1 is written by hooman"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">prt</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa32" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example455" style="display: none;">
+                    <h5>padEnd()</h5>
+                    <li>The <code>padEnd()</code> method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.padEnd</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">targetLength</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">padString</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa33" data-result-function="complexExpression47">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"69"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text2</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"420"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.padEnd</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">101</span><span class="jsbracketcolor">,</span> <span class="jsvariablecolor">text2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa33" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example456" style="display: none;">
+                    <h5>padStart()</h5>
+                    <li>The <code>padStart()</code> method pads the current string with another string (repeated, if needed) so that the resulting string reaches a given length.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.padStart</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">targetLength</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">padString</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa34" data-result-function="complexExpression48">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"9"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text2</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"2024"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.padStart</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2024</span><span class="jsbracketcolor">,</span> <span class="jsvariablecolor">text2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa34" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example457" style="display: none;">
+                    <h5>prototype()</h5>
+                    <li>The <code>prototype()</code> method allows you to add new properties and methods to the String object.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.prototype</b><span class="jsbracketcolor">(</span><span class="jsstringcolor">name</span><span class="jsbracketcolor">,</span> <span class="jsvariablecolor">function</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa35" data-result-function="complexExpression49">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">function</span> <span class="jsvariablecolor">Person</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">firstName</span><span class="jsbracketcolor">,</span> <span class="jsvariablecolor">lastName</span><span class="jsbracketcolor">,</span> <span class="jsvariablecolor">age</span><span class="jsbracketcolor">,</span> <span class="jsvariablecolor">eyeColor</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">;</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">;</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">age</span><span class="jsoperatorcolor">;</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">eyeColor</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">eyeColor</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsbracketcolor">}</span></p>
+                                <p><span class="jsvariablecolor">Person</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">prototype</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">nationality</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Indonesian"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myFather</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'John'</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">'Doe'</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">50</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">'blue'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsstringcolor">"My father is "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myFather</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">nationality</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa35" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example458" style="display: none;">
+                    <h5>repeat()</h5>
+                    <li>The <code>repeat()</code> method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.repeat</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">count</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa36" data-result-function="complexExpression50">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"botol kecap marjan 5000 perak &lt;br&gt;"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.repeat</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa36" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example459" style="display: none;">
+                    <h5>replace()</h5>
+                    <li>The <code>replace()</code> method searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.replace</b><span class="jsbracketcolor">(</span><span class="jsregexpcolor">regexp</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">newvalue</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa37" data-result-function="complexExpression51">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Happy new year!. This new year will be a good one"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.replace</b><span class="jsbracketcolor">(</span><span class="jsstringcolor">"new year"</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">"new day"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa37" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example460" style="display: none;">
+                    <h5>replaceAll()</h5>
+                    <li>The <code>replaceAll()</code> method returns a new string with all matches of a pattern replaced by a replacement.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.replaceAll</b><span class="jsbracketcolor">(</span><span class="jsregexpcolor">regexp</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">newvalue</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa38" data-result-function="complexExpression52">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Happy new year!. This new year will be a good one"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.replaceAll</b><span class="jsbracketcolor">(</span><span class="jsstringcolor">"new year"</span><span class="jsbracketcolor">,</span> <span class="jsstringcolor">"new day"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa38" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example461" style="display: none;">
+                    <h5>search()</h5>
+                    <li>The <code>search()</code> method searches a string for a specified value, or regular expression, and returns the position of the first match.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.search</b><span class="jsbracketcolor">(</span><span class="jsregexpcolor">searchValue</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa39" data-result-function="complexExpression53">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"lorem ipsum dolor sit amet consepcutor adispicing sit elit."</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.search</b><span class="jsbracketcolor">(</span><span class="jsstringcolor">"sit"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa39" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example462" style="display: none;">
+                    <h5>slice()</h5>
+                    <li>The <code>slice()</code> method extracts a section of a string and returns it as a new string, without modifying the original string.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.slice</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">start</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">end</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa40" data-result-function="complexExpression54">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"The old heater, once a symbol of warmth, was now overshadowed by the cold,<br>while the historian recounted tales of ancient symbols like 'Heil' in a lecture."</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.slice</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">136</span><span class="jsbracketcolor">,</span><span class="jsnumbercolor">140</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">text1</span><b>.slice</b><span class="jsbracketcolor">(</span><span class="jsnumbercolor">8</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">14</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa40" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example463" style="display: none;">
+                    <h5>split()</h5>
+                    <li>The <code>split()</code> method divides a string into an ordered list of substrings, puts these substrings into an array, and returns the array.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.split</b><span class="jsbracketcolor">(</span><span class="jsregexpcolor">separator</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">limit</span><span class="jsbracketcolor">)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa41" data-result-function="complexExpression55">
+                        <div class="block-cont">
+                            <div class="block-bl">
+
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa41" class="result"><span></span> </p>
+                    </div>
                 </div>
             </ul>
         </div>

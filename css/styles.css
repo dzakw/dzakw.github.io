@@ -705,6 +705,8 @@ mark {
   height: fit-content;
   font-family: Consolas, 'Courier New', monospace;
   font-size: 14px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .flexrow {
