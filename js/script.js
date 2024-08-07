@@ -824,25 +824,74 @@ function complexExpression54() {
     return result;
 }
 
+// function complexExpression55() {
+//     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
+//     text1 = text1.replace(/[.,'";!?]/g, '');
+//     let words = text1.split(" ");
+    
+//     function sortWord(word) {
+//         let chars = word.split("");
+//         for (let i = 0; i < chars.length - 1; i++) {
+//             for (let j = 0; j < chars.length - i - 1; j++) {
+//                 if (chars[j].localeCompare(chars[j + 1]) > 0) {
+//                     [chars[j], chars[j + 1]] = [chars[j + 1], chars[j]];
+//                 }
+//             }
+//         }
+//         return chars.join("");
+//     }
+
+//     let sortedWords = words.map(word => sortWord(word));
+//     let result = sortedWords.join(" ");
+    
+//     return result.toLocaleLowerCase();
+// }
+
 function complexExpression55() {
     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
-    text1 = text1.replace(/[.,'";!?]/g, '');
     let words = text1.split(" ");
-    
-    function sortWord(word) {
-        let chars = word.split("");
-        for (let i = 0; i < chars.length - 1; i++) {
-            for (let j = 0; j < chars.length - i - 1; j++) {
-                if (chars[j].localeCompare(chars[j + 1]) > 0) {
-                    [chars[j], chars[j + 1]] = [chars[j + 1], chars[j]];
-                }
-            }
-        }
-        return chars.join("");
-    }
 
-    let sortedWords = words.map(word => sortWord(word));
-    let result = sortedWords.join(" ");
+    return words;
+}
+
+function complexExpression56() {
+    let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
+    let result = text1.startsWith("Heil", 136);
+    return result;
+}
+
+function complexExpression57() {
+    let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
+    let result = text1.substring(20, 50);
+    return result;
+}
+
+function complexExpression58() {
+    let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
+    let result = text1.substr(20, 50);
+    return result;
+}
+
+function complexExpression59() {
+    let text1 = "İstanbul'da güzel bir şehir.";
+    let result = text1.toLocaleLowerCase('tr-TR');
+    return result;
+}
+
+function complexExpression60() {
+    let text1 = "The Greek word for 'sigma' is 'σ'.";
+    let text2 = text1.substring(30, 32);
+    let text3 = text2.toLocaleUpperCase('el-GR');
+    let text4 = text1.replace(text2, text3);
+    return text4;
+}
+
+function complexExpression61() {
     
-    return result.toLocaleLowerCase();
+}
+
+function complexExpression62() {
+    let text1 = "The German term for 'sharp s' is 'ß'";
+    let result = text1.toUpperCase();
+    return result;
 }
