@@ -887,11 +887,84 @@ function complexExpression60() {
 }
 
 function complexExpression61() {
-    
+    let text1 = "No problem! Here's the information about the Mercedes CLR GTR:";
+    let result = text1.toLowerCase();
+    return result;
 }
 
 function complexExpression62() {
+    function car(brand, year) {
+        this.brand = brand;
+        this.year = year;
+    }
+    const supra = new car("Toyota Supra", 2020);
+    let x = Object.values(supra).toString();
+    let y = typeof(x);
+    return x + "<br>data type is: " + y;
+}
+
+function complexExpression63() {
     let text1 = "The German term for 'sharp s' is 'ß'";
     let result = text1.toUpperCase();
     return result;
+}
+
+function complexExpression64() {
+    let text = "            Toyota Supra            ";
+    let trimmedText = text.trim();
+    return `Original Length: ${text.length}<br>
+            Trimmed Length: ${trimmedText.length}<br>
+            Original String: '${text}'<br>
+            Trimmed String: '${trimmedText}'<br>
+            Lengths are equal: ${text.length === trimmedText.length}`;
+}
+
+function complexExpression65() {
+    let text = "            Toyota Supra            ";
+    let trimmedText = text.trimEnd();
+    return `Original Length: ${text.length}<br>
+            Trimmed Length: ${trimmedText.length}<br>
+            Original String: '${text}'<br>
+            Trimmed String: '${trimmedText}'<br>
+            Lengths are equal: ${text.length === trimmedText.length}`;
+}
+
+function complexExpression66() {
+    let text = "            Toyota Supra            ";
+    let trimmedText = text.trimStart();
+    return `Original Length: ${text.length}<br>
+            Trimmed Length: ${trimmedText.length}<br>
+            Original String: '${text}'<br>
+            Trimmed String: '${trimmedText}'<br>
+            Lengths are equal: ${text.length === trimmedText.length}`;
+}
+
+function complexExpression67() {
+    let strObj = new String("Hello");
+    return strObj.valueOf();
+}
+
+function complexExpression68() {
+    let brand = "Toyota";
+    let type = "Supra";
+    let car = `No problem, here is information about ${brand} ${type}.`;
+    return car;
+}
+
+function complexExpression69() {
+    let price = 2237600000;
+    let dpCicil = `With Down Payment of Rp ${(0.2 * price).toLocaleString('id-ID')} and payment only at Rp ${(((0.8 * price) * 0.02 * (1 + 0.02) ** 180) / ((1 + 0.02) ** 180 - 1)).toLocaleString('id-ID')} per month for 15 years`;
+    return dpCicil;
+}
+
+function complexExpression70() {
+    let header = "Template Strings";
+    let tags = ["template strings", "javascript", "es6"];
+    let html = `<h2 style="margin: 0;">${header}</h2><ul>`;
+    
+    for (const x of tags) {
+        html += `<li>${x}</li>`;
+    }
+    html += `</ul>`;
+    return html;
 }

@@ -69,6 +69,7 @@
                     <li><a href="#subsec46" onclick="openSection('subsec46'); openSection('section4')">JavaScript Objects</a></li>
                     <li><a href="#subsec47" onclick="openSection('subsec47'); openSection('section4')">JavaScript Events</a></li>
                     <li><a href="#subsec48" onclick="openSection('subsec48'); openSection('section4')">JavaScript Strings</a></li>
+                    <li><a href="#subsec49" onclick="openSection('subsec49'); openSection('section4')">JavaScript Numbers</a></li>
                 </ul>
             </ul>
         </div>
@@ -6822,6 +6823,84 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa18" class="result"><span></span> </p>
                 </div>
+                <h5>Interpolation</h5>
+                <li>Template strings can be used for string interpolation</li>
+                <li>Interpolation is the process of evaluating a string literal containing one or more placeholders, yielding a result in which the placeholders are replaced with their corresponding values</li>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 6px;">
+                        <span><b>Syntax:</b></span>
+                        <div class="block-bl">
+                            <p><span class="jsstringcolor">${...}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <h5>Variable Substitution</h5>
+                <li>Template strings can be used to substitute variables:</li>
+                <div class="block-outer" data-result-id="demoa54" data-result-function="complexExpression68">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Toyota'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">type</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Supra'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">`No problem, here is information about ${brand} ${type}.`</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">car</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa54" class="result"><span></span> </p>
+                </div>
+                <h5>Expression Substitution</h5>
+                <li>Template strings can be used to substitute expressions:</li>
+                <div class="block-outer" data-result-id="demoa55" data-result-function="complexExpression69">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2237600000</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">dpCicil</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">`With Down Payment of Rp ${(0.2 * price).toLocaleString('id-ID')} and payment only at<br> Rp ${(((0.8 * price) * 0.02 * (1 + 0.02) ** 180) / ((1 + 0.02) ** 180 - 1)).toLocaleString('id-ID')}<br> per month for 15 years`</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">dpCicil</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa55" class="result"><span></span> </p>
+                </div>
+                <h5>HTML Templates</h5>
+                <li>Template strings can be used to create HTML templates:</li>
+                <div class="block-outer" data-result-id="demoa56" data-result-function="complexExpression70">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">header</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Template Strings'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">tags</span> <span class="jsoperatorcolor">=</span> [<span class="jsstringcolor">'template strings'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'javascript'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'es6'</span>]<span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">html</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">`&lt;h2 style="margin: 0;"&gt;${header}&lt;/h2&gt;&lt;ul&gt;`</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">for</span> <span class="jsvariablecolor">(<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">tags</span><span class="jsoperatorcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">html</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">`&lt;li&gt;${x}&lt;/li&gt;`</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsvariablecolor">html</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">`&lt;/ul&gt;`</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">html</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa56" class="result"><span></span> </p>
+                </div>
                 <h5>Breaking Long Lines</h5>
                 <li>For readability, programmers often like to avoid long code lines. A safe way to break up a statement is <b>after an operator.</b></li>
                 <li>A safe way to break up a string is by using <b>string addition:</b></li>
@@ -7842,7 +7921,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div class="block-outer" data-result-id="demoa47" data-result-function="complexExpression61">
                         <div class="block-cont">
                             <div class="block-bl">
-
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"No problem! Here's the information about the Mercedes CLR GTR:"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.toLowerCase</b><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
                             </div>
                             <div class="block-btn-cont">
                                 <div class="block-run">
@@ -7856,9 +7937,247 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <p id="demoa47" class="result"><span></span> </p>
                     </div>
                 </div>
+                <div id = "example470" style="display: none;">
+                    <h5>toString()</h5>
+                    <li>The <code>toString()</code> method returns a string representing the specified object.</li>
+                    <li>Every object has a <code>toString()</code> method that is automatically called when the object is to be represented as a text value or when an object is referred to in a manner in which a string is expected.</li>
+                    <li>It is also possible to call <code>toString()</code> on primitive values, although this is not common practice.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>object</i></span><b>.toString</b><span class="jsbracketcolor">()</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa48" data-result-function="complexExpression62">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">function</span> car<span class="jsbracketcolor">(</span><span class="jsvariablecolor">brand</span><span class="jsbracketcolor">,</span> <span class="jsvariablecolor">year</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">brand</span><span class="jsoperatorcolor">;</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">year</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">year</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsbracketcolor">}</span></p>
+                                <p><span class="jskeywordcolor">const</span> supra <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">2020</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">Object</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">values</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">supra</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">typeof</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">"<br>data type is: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa48" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example471" style="display: none;">
+                    <h5>toUpperCase()</h5>
+                    <li>The <code>toUpperCase()</code> method returns the calling string value converted to upper case.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.toUpperCase</b><span class="jsbracketcolor">()</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa49" data-result-function="complexExpression63">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"The German term for 'sharp s' is 'ß'"</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text1</span><b>.toUpperCase</b><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa49" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example472" style="display: none;">
+                    <h5>trim()</h5>
+                    <li>The <code>trim()</code> method removes whitespace from both ends of a string.</li>
+                    <li>Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.trim</b><span class="jsbracketcolor">()</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa50" data-result-function="complexExpression64">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"            Toyota Supra            "</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">trimmedText</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text</span><b>.trim</b><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsstringcolor">`Original Length: ${text.length}&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Trimmed Length: ${trimmedText.length}&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Original String: '${text}'&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Trimmed String: '${trimmedText}'&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Lengths are equal: ${text.length === trimmedText.length}`</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa50" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example473" style="display: none;">
+                    <h5>trimEnd()</h5>
+                    <li>The <code>trimEnd()</code> method removes whitespace from the end of a string.</li>
+                    <li>Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.trimEnd</b><span class="jsbracketcolor">()</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa51" data-result-function="complexExpression65">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"            Toyota Supra            "</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">trimmedText</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text</span><b>.trimEnd</b><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsstringcolor">`Original Length: ${text.length}&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Trimmed Length: ${trimmedText.length}&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Original String: '${text}'&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Trimmed String: '${trimmedText}'&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Lengths are equal: ${text.length === trimmedText.length}`</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa51" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example474" style="display: none;">
+                    <h5>trimStart()</h5>
+                    <li>The <code>trimStart()</code> method removes whitespace from the beginning of a string.</li>
+                    <li>Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>string</i></span><b>.trimStart</b><span class="jsbracketcolor">()</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa52" data-result-function="complexExpression66">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"            Toyota Supra            "</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">trimmedText</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">text</span><b>.trimStart</b><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsstringcolor">`Original Length: ${text.length}&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Trimmed Length: ${trimmedText.length}&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Original String: '${text}'&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Trimmed String: '${trimmedText}'&lt;br&gt;</span></p>
+                                <p><span class="jsstringcolor">Lengths are equal: ${text.length === trimmedText.length}`</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa52" class="result"><span></span> </p>
+                    </div>
+                </div>
+                <div id="example475" style="display: none;">
+                    <h5>valueOf()</h5>
+                    <li>The <code>valueOf()</code> method returns the primitive value of the specified object.</li>
+                    <li>JavaScript calls the <code>valueOf()</code> method to convert an object to a primitive value when it is being used in a way that requires a primitive value.</li>
+                    <li>For example, when an object is compared using the <code>==</code> operator, the JavaScript engine will call the <code>valueOf()</code> method to get the primitive value of the object.</li>
+                    <div class="block-outer">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <span><b>Syntax:</b></span>
+                                <p><span class="jsvariablecolor"><i>object</i></span><b>.valueOf</b><span class="jsbracketcolor">()</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="block-outer" data-result-id="demoa53" data-result-function="complexExpression67">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">strObj</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">String</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Hello"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">strObj</span><b>.valueOf</b><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa53" class="result"><span></span> </p>
+                    </div>
+                </div>
             </ul>
         </div>
+        <hr>
 
+        <h3 class="subsection" id="subsec49" onclick="toggleSection('subsec49')">JavaScript Numbers</h3>
+        <div class="subsection" id="subsec49Content" style="display: none;">
+            <ul>
+                <li>JavaScript has only one type of number. Numbers can be written with or without decimals.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <span><b>Example:</b></span>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jsoperatorcolor">;</span><span class="commentcolor">// A number with decimals</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3</span><span class="jsoperatorcolor">;</span><span class="commentcolor">// A number without decimals</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Extra large or extra small numbers can be written with scientific (exponential) notation.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <span><b>Example:</b></span>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123e5</span><span class="jsoperatorcolor">;</span><span class="commentcolor">// 12300000</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123e-5</span><span class="jsoperatorcolor">;</span><span class="commentcolor">// 0.00123</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </ul>
+        </div>
+        <hr>
+        
     </div>
     <hr>
 
