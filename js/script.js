@@ -968,3 +968,12 @@ function complexExpression70() {
     html += `</ul>`;
     return html;
 }
+
+function complexExpression71() {
+    let myNumber = 2;
+
+    while (myNumber != Infinity) {
+        myNumber *= myNumber;
+    }
+    return myNumber;
+}

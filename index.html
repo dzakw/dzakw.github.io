@@ -8173,7 +8173,208 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
-                
+                <li><b>JavaScript Numbers are always 64-bit floating point</b></li>
+                <li>JavaScript does not have integers. JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.</li>
+                <li>This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63.</li>
+                <li>Javascript numbers without period or exponentation are accurate up to 15 digits</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <span><b>Example:</b></span>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">999999999999999</span><span class="jsoperatorcolor">;</span><span class="commentcolor">// x will be 999999999999999</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">9999999999999999</span><span class="jsoperatorcolor">;</span><span class="commentcolor">// y will be 10000000000000000</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>The maximum number of decimals is 17.</li>
+                <h5>Floating Precision</h5>
+                <li>JavaScript numbers are stored in 64-bit floating point format, which means that the numbers are stored in binary format (base 2) instead of decimal format (base 10).</li>
+                <li>Due to this, some numbers cannot be represented accurately in the binary format, which can lead to unexpected results like this:</li>
+                <div class="block-outer" data-result-id="demoa57" data-result-value="0.1 + 0.2">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0.1</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">0.2</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa57" class="result"><span></span> </p>
+                </div>
+                <h5>Adding Numbers and Strings</h5>
+                <li>JavaScript uses the <code>+</code> operator for both addition and concatenation.</li>
+                <li><b>Specifically for the addition (<code>+</code>), Numbers are added together, while strings are concatenated.</b></li>
+                <div class="block-outer" data-result-id="demoa58" data-result-value="5 + 5">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">5</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa58" class="result"><span></span> </p>
+                </div>
+                <br>
+                <div class="block-outer" data-result-id="demoa59" data-result-value="'5' + '5'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'5'</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'5'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa59" class="result"><span></span> </p>
+                </div>
+                <li>Adding a number and a string will result in string concatenation:</li>
+                <div class="block-outer" data-result-id="demoa60" data-result-value="5 + '2025'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'2025'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa60" class="result"><span></span> </p>
+                </div>
+                <li>Some common mistake with addition is like this, if you add a string and a number, the result will be a string concatenation:</li>
+                <div class="block-outer" data-result-id="demoa62" data-result-value="'The result is ' + 4 + 20">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'The result is'</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">4</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">20</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa62" class="result"><span></span> </p>
+                </div>
+                <li>While adding a number and then string will result in the number to be added first like this:</li>
+                <div class="block-outer" data-result-id="demoa63" data-result-value="12 + 24 + '500'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">12</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">24</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'500'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa63" class="result"><span></span> </p>
+                </div>
+                <li>For other numeric operations, JavaScript will try to convert strings to numbers:</li>
+                <div class="block-outer" data-result-id="demoa61" data-result-value="'5' * '4'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'5'</span> <span class="jsoperatorcolor">*</span> <span class="jsstringcolor">'4'</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa61" class="result"><span></span> </p>
+                </div>
+                <h5>NaN, Infinity, and Hexadecimal</h5>
+                <li><code>NaN</code>  (Not a Number) is a JavaScript reserved word indicating that a number is not a legal number.</li>
+                <li>Trying to do arithmetic with a non-numeric string will result in <code>NaN</code>. However, if the string is numeric, the result will be the number:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100</span> <span class="jsoperatorcolor">/</span> <span class="jsstringcolor">'Apple'</span><span class="jsoperatorcolor">; <span class="commentcolor">// return NaN</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100</span> <span class="jsoperatorcolor">/</span> <span class="jsstringcolor">'100'</span><span class="jsoperatorcolor">; <span class="commentcolor">// return 1</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>To find out if a value is a legal number in JavaScript, use the <code>isNaN()</code> function:</li>
+                <div class="block-outer" data-result-id="demoa64" data-result-value="isNaN(100 / 'Hello')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">isNaN</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">100</span> <span class="jsoperatorcolor">/</span> <span class="jsstringcolor">'Hello'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa64" class="result"><span></span> </p>
+                </div>
+                <li><code>NaN</code> is a number: <code>typeof NaN</code> returns <code>number</code>. This mean, that it will be treated as a number in any operation.</li>
+                <br>
+                <li><code>Infinity</code> is a number: <code>typeof Infinity</code> returns <code>number</code>. This mean, that it will be treated as a number in any operation.</li>
+                <li><code>Infinity</code> (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.</li>
+                <div class="block-outer" data-result-id="demoa65" data-result-function="complexExpression71">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myNumber</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">while</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">myNumber</span> <span class="jsoperatorcolor">!=</span> <span class="jsvariablecolor">Infinity</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">myNumber</span> <span class="jsoperatorcolor">*=</span> <span class="jsvariablecolor">myNumber</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa65" class="result"><span></span> </p>
+                </div>
+                <blockquote>
+                    <h5>Note:</h5>
+                    <p>be careful when doing an infinite loop though, because it might potentially just run indefinitely and freeze</p>
+                </blockquote>
+
             </ul>
         </div>
         <hr>
