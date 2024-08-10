@@ -6471,10 +6471,11 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
                 <h4>JavaScript Primitives</h4>
                 <li>A <b>Primitive value</b> is a value that has no properties or methods</li>
-                <li>There are 7 primitive data types in JavaScript:</li>
+                <li>There are 8 primitive data types in JavaScript:</li>
                 <ul>
                     <li><code>string</code></li>
                     <li><code>number</code></li>
+                    <li><code>bigint</code></li>
                     <li><code>boolean</code></li>
                     <li><code>null</code></li>
                     <li><code>undefined</code></li>
@@ -8317,6 +8318,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa61" class="result"><span></span> </p>
                 </div>
+
                 <h5>NaN, Infinity, and Hexadecimal</h5>
                 <li><code>NaN</code>  (Not a Number) is a JavaScript reserved word indicating that a number is not a legal number.</li>
                 <li>Trying to do arithmetic with a non-numeric string will result in <code>NaN</code>. However, if the string is numeric, the result will be the number:</li>
@@ -8374,6 +8376,102 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <h5>Note:</h5>
                     <p>be careful when doing an infinite loop though, because it might potentially just run indefinitely and freeze</p>
                 </blockquote>
+                <li>Hexadecimal (base 16) numbers are written with a leading zero followed by an "x" (0x), followed by the hexadecimal number:</li>
+                <div class="block-outer" data-result-id="demoa66" data-result-value="0x171717">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0x171717</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa66" class="result"><span></span> </p>
+                </div>
+                <li>Octal (base 8) numbers are written with a leading zero (0) followed by the octal number:</li>
+                <div class="block-outer" data-result-id="demoa67" data-result-value="0171717">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0171717</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa67" class="result"><span></span> </p>
+                </div>
+                <li>By default, JavaScript displays numbers as base 10 decimals. But you can use the <code>toString()</code> method to output numbers from base 2 to base 36.</li>
+                <li>Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">255</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">16</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// will return 'ff'</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">255</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">8</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// will return '377'</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">255</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// will return '11111111'</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">255</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// will return '255'</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h5>Number as Objects</h5>
+                <li>Normally, JavaScript numbers are primitive values created from literals:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>But numbers can also be defined as objects with the keyword <code>new</code>:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Number</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">123</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Do not create Number objects. It slows down execution speed, and prone to errors. Use numbers directly.</li>
+
+                <h5>BigInt</h5>
+                <li>BigInt is a new primitive type in JavaScript that can store whole numbers larger than 2<sup>53</sup> - 1, and lower than -(2<sup>53</sup> - 1).</li>
+                <li>BigInts are created by appending <code>n</code> to the end of an integer literal, or by calling the function <code>BigInt()</code>.</li>
+                <li>Operators that can be used on a JavaScript <code>number</code> can also be used on a <code>BigInt</code></li>
+                <li>However, it is to be noted that arithmetic operations between BigInt and Number are not allowed.</li>
+                <div class="block-outer" data-result-id="demoa68" data-result-function="complexExpression72">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// BigInt literal</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myBigInt</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2024202420242024202420242024202420242024202420242024n</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myType</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">typeof</span> <span class="jsvariablecolor">myBigInt</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myNumber</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2025</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// arithmetic operations need to be the same data types</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">addition</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myBigInt</span> <span class="jsoperatorcolor">+</span> <span class="jsfunctioncolor">BigInt</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myNumber</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsfunctioncolor">return</span> <span class="jsstringcolor">"typeof: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myType</span> <span class="jsstringcolor">"&lt;br&gt;</span> <span class="jsstringcolor">addition: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">addition</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa68" class="result"><span></span> </p>
+                </div>
 
             </ul>
         </div>

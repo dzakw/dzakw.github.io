@@ -977,3 +977,16 @@ function complexExpression71() {
     }
     return myNumber;
 }
+
+// let myNumber = 2025;
+// let myType = typeOf(myBigInt);
+// let addition = myBigInt + BigInt(myNumber);
+function complexExpression72() {
+    let myBigInt = 2024202420242024202420242024202420242024202420242024n;
+    let myType = typeof myBigInt;
+    let myNumber = 2025;
+
+    //arithmetic operations need to be the same data types
+    let addition = myBigInt + BigInt(myNumber);
+    return "typeof: " + myType + "<br>" + "addition: " + addition;
+}
