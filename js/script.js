@@ -990,3 +990,160 @@ function complexExpression72() {
     let addition = myBigInt + BigInt(myNumber);
     return "typeof: " + myType + "<br>" + "addition: " + addition;
 }
+
+// function complexExpression73() {
+//     let x = Number.MAX_SAFE_INTEGER;
+//     let y = Number.MIN_SAFE_INTEGER;
+//     return "<code>MAX_SAFE_INTEGER</code> is: " + x + "<br>" + "<code>MIN_SAFE_INTEGER</code> is: " + y;
+// }
+
+function complexExpression73() {
+    let x = Number.isFinite("123");
+    let y = isFinite("123");
+
+    return "<code>Number.isFinite('123')</code> will return: " + x + "<br>" + "<code>isFinite('123')</code> will return: " + y;
+}
+
+function complexExpression74() {
+    let x = 123;
+    let y = -456;
+    let z = "123";
+    let variables = { x, y, z };
+    let result = "";
+
+    for (let key in variables) {
+        if (Number.isInteger(variables[key])) {
+            result += "Variable " + key + " is an integer.<br>";
+        } else {
+            result += "Variable " + key + " is not an integer.<br>";
+        }
+    }
+
+    return result;
+}
+
+function complexExpression75() {
+    let x = Number.isNaN('Toyota Supra');
+    let y = isNaN('Toyota Supra');
+
+    return "<code>Number.isNaN('Toyota Supra')</code> will return: " + x + "<br>" + "<code>isNaN('Toyota Supra')</code> will return: " + y;
+}
+
+function complexExpression76() {
+    let x = 123;
+    let y = -456;
+    let z = 123456789012345678901234567890n;
+    let variables = { x, y, z };
+    let result = "";
+
+    for (let key in variables) {
+        if (Number.isSafeInteger(variables[key])) {
+            result += "Variable " + key + " is a safe integer.<br>";
+        } else {
+            result += "Variable " + key + " is not a safe integer.<br>";
+        }
+    }
+
+    return result;
+}
+
+function complexExpression77() {
+    var x = 9007199254740992;
+    var y = 123456789;
+    var z = -9007199254740991;
+
+    var maxSafe = Number.MAX_SAFE_INTEGER;
+    var minSafe = Number.MIN_SAFE_INTEGER;
+
+    function describeNumber(num, name) {
+        if (num > maxSafe || num < minSafe) {
+            return name + " variable is not a safe integer and is converted to BigInt: " + num + "n";
+        }
+        return name + " variable is a safe integer: " + num;
+    }
+
+    var resultX = describeNumber(x, "x");
+    var resultY = describeNumber(y, "y");
+    var resultZ = describeNumber(z, "z");
+
+    return resultX + "<br>" + resultY + "<br>" + resultZ;
+}
+
+function complexExpression78() {
+    return Number.parseFloat("40.00") + "<br>" +
+    Number.parseFloat("   40   ") + "<br>" +
+    Number.parseFloat("40 years") + "<br>" +
+    Number.parseFloat("40H") + "<br>" +
+    Number.parseFloat("H40");
+}
+
+function complexExpression79() {
+    return Number.parseInt("10", 10)+ "<br>" +
+    Number.parseInt("H010")+ "<br>" +
+    Number.parseInt("10", 8)+ "<br>" +
+    Number.parseInt("0x10")+ "<br>" +
+    Number.parseInt("10", 16);
+}
+
+function complexExpression80() {
+    Number.prototype.printHeilHeater = function() {
+        let result = '';
+        for (let i = 0; i < this; i++) {
+            result += "heil Heater<br>";
+        }
+        return result;
+    };
+
+    let numb = 10;
+    return numb.printHeilHeater();
+}
+
+function complexExpression81() {
+    let num = 5.56789;
+    let n = num.toExponential();
+
+    return n;
+}
+
+function complexExpression82() {
+    let num = 5.56789;
+    let n = num.toFixed(2);
+    return n + "<br>typeof n is: " + typeof n;
+}
+
+function complexExpression83() {
+    let num = 100000000;
+    let text = num.toLocaleString("id-ID", {style:"currency", currency:"IDR"});
+    return text;
+}
+
+function complexExpression84() {
+    let num = 0.001658853;
+    let num1 = num.toPrecision(2);
+    let num2 = num.toPrecision(3);
+    let num3 = num.toPrecision(10);
+
+    return "num: " + num + "<br>" + "num1: " + num1 + "<br>" + "num2: " + num2 + "<br>" + "num3: " + num3;
+}
+
+function complexExpression85() {
+    let num = 15;
+    let text1 = num.toString(8);
+    let text2 = num.toString(16);
+    let text3 = num.toString();
+
+    return "num: " + num + "; data type: " + typeof num + "<br>" +
+    "text1: " + text1 + "; data type: " + typeof text1 + "<br>" +
+    "text2: " + text2 + "; data type: " + typeof text2 + "<br>" +
+    "text3: " + text3 + "; data type: " + typeof text3 + "<br>";
+}
+
+function complexExpression86() {
+    let num = 15;
+    let num1 = new Number(10);
+    let num2 = new Number('Toyota Supra');
+
+    return "valueOf(num): " + num.valueOf() + "<br>" +
+    "valueOf(num1): " + num1.valueOf() + "<br>" +
+    "valueOf(num2): " + num2.valueOf() + "<br>";
+}

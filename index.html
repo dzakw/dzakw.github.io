@@ -8483,6 +8483,779 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                 </div>
 
+                <h5>Number Methods</h5>
+                <li>JavaScript has a number of useful methods to work with numbers.</li>
+
+                <ul class="threeColumn">
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example476')">constructor</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example477')">EPSILON</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example478')">isFinite()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example479')">isInteger()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example480')">isNaN()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example481')">isSafeInteger()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example482')">MAX_SAFE_INTEGER</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example483')">MIN_SAFE_INTEGER</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example484')">MAX_VALUE</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example485')">MIN_VALUE</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example486')">NaN</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example487')">NEGATIVE_INFINITY</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example488')">POSITIVE_INFINITY</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example489')">parseFloat()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example490')">parseInt()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example491')">prototype</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example492')">toExponential()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example493')">toFixed()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example494')">toLocaleString()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example495')">toPrecision()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example496')">toString()</a></li>
+                    <li class="threeColumn"><a href="#" onclick="toggleExample('example497')">valueOf()</a></li>
+                </ul>
+                <br>
+                <div id="example476" style="display: none;">
+                    <h5>Number.constructor</h5>
+                    <li>Returns the function that created the Number object's prototype.</li>
+                    <li>For JavaScript numbers, the <code>constructor</code> property returns:</li>
+                    <li>function Number() { [native code] }</li>
+                    <div class="block-outer" data-result-id="demoa69" data-result-value="let x = 123; let y = x.constructor; y;">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">constructor</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">y</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa69" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example477" style="display: none;">
+                    <h5>Number.EPSILON</h5>
+                    <li>Returns the smallest interval between two representable numbers. It can only be used as <code>Number.EPSILON</code>.</li>
+                    <li>Using it as <code>x.EPSILON</code> where <code>x</code> is a number, will return <code>undefined</code>.</li>
+                    <li>For JavaScript numbers, the <code>EPSILON</code> property returns:</li>
+                    <li>2.220446049250313e-16</li>
+                    <div class="block-outer" data-result-id="demoa70" data-result-value="Number.EPSILON">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">EPSILON</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa70" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example478" style="display: none;">
+                    <h5>Number.isFinite()</h5>
+                    <li>Returns <code>true</code> if the value is a finite number, otherwise <code>false</code>.</li>
+                    <li><code>isFinite</code> converts the value to a number before testing it, while <code>Number.isFinite</code> does not convert the value to a number.</li>
+                    <div class="block-outer" data-result-id="demoa71" data-result-function="complexExpression73">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">isFinite</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'123'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">isFinite</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'123'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa71" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example479" style="display: none;">
+                    <h5>Number.isInteger()</h5>
+                    <li>Returns <code>true</code> if the value is an integer, otherwise <code>false</code>.</li>
+                    <div class="block-outer" data-result-id="demoa72" data-result-function="complexExpression74">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">-456</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'123'</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa72" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example480" style="display: none;">
+                    <h5>Number.isNaN()</h5>
+                    <li>Returns <code>true</code> if the value is <code>NaN</code>, otherwise <code>false</code>.</li>
+                    <li><code>isNaN</code> method returns <code>true</code> if the value is Not-a-Number</li>
+                    <li><code>Number.isNaN</code> only returns <code>true</code> if a <b>number</b> is Not-a-Number.</li>
+                    <div class="block-outer" data-result-id="demoa73" data-result-function="complexExpression75">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">isNaN</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Toyota Supra'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">isNaN</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Toyota Supra'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa73" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example481" style="display: none;">
+                    <h5>Number.isSafeInteger()</h5>
+                    <li>Returns <code>true</code> if the value is a safe integer, otherwise <code>false</code>.</li>
+                    <li>A safe integer is an integer that can be exactly represented as a IEEE-754 double precision number (all integers from -(2<sup>53</sup> - 1) to 2<sup>53</sup> - 1).</li>
+                    <div class="block-outer" data-result-id="demoa74" data-result-function="complexExpression76">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">-456</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123456789012345678901234567890<span class="jskeywordcolor">n</span></span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa74" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example482" style="display: none;">
+                    <h5>Number.MAX_SAFE_INTEGER</h5>
+                    <li>Returns the largest safe integer in JavaScript (2<sup>53</sup> - 1) (9,007,199,254,740,991).</li>
+                    <li>You can only use it as <code>Number.MAX_SAFE_INTEGER</code>. Using <code>x.MAX_SAFE_INTEGER</code>, where x is a variable, will return undefined.</li>
+                    <div class="block-outer" data-result-id="demoa75" data-result-function="complexExpression77">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">9007199254740992</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123456789</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">-9007199254740991</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa75" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example483" style="display: none;">
+                    <h5>Number.MIN_SAFE_INTEGER</h5>
+                    <li>Returns the smallest safe integer in JavaScript -(2<sup>53</sup> - 1) (-9,007,199,254,740,991).</li>
+                    <li>You can only use it as <code>Number.MIN_SAFE_INTEGER</code>. Using <code>x.MIN_SAFE_INTEGER</code>, where x is a variable, will return undefined.</li>
+                    <div class="block-outer" data-result-id="demoa76" data-result-function="complexExpression77">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">9007199254740992</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123456789</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">-9007199254740991</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa76" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example484" style="display: none;">
+                    <h5>Number.MAX_VALUE</h5>
+                    <li>Returns the largest number possible in JavaScript.</li>
+                    <li>Using it as <code>x.MAX_VALUE</code> where x is a number, will return <code>undefined</code>.</li>
+                    <div class="block-outer" data-result-id="demoa77" data-result-value="Number.MAX_VALUE">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">MAX_VALUE</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa77" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example485" style="display: none;">
+                    <h5>Number.MIN_VALUE</h5>
+                    <li>Returns the smallest number possible in JavaScript.</li>
+                    <li>Using it as <code>x.MIN_VALUE</code> where x is a number, will return <code>undefined</code>.</li>
+                    <div class="block-outer" data-result-id="demoa78" data-result-value="Number.MIN_VALUE">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">MIN_VALUE</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa78" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example486" style="display: none;">
+                    <h5>Number.NaN</h5>
+                    <li>Returns <code>NaN</code> (Not-a-Number).</li>
+                    <li>Using it as <code>x.NaN</code> where x is a number, will return <code>undefined</code>.</li>
+                    <div class="block-outer" data-result-id="demoa79" data-result-value="Number.NaN">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">NaN</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa79" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example487" style="display: none;">
+                    <h5>Number.NEGATIVE_INFINITY</h5>
+                    <li>Returns negative infinity.</li>
+                    <li>Using it as <code>x.NEGATIVE_INFINITY</code> where x is a number, will return <code>undefined</code>.</li>
+                    <div class="block-outer" data-result-id="demoa80" data-result-value="Number.NEGATIVE_INFINITY">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">NEGATIVE_INFINITY</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa80" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example488" style="display: none;">
+                    <h5>Number.POSITIVE_INFINITY</h5>
+                    <li>Returns positive infinity.</li>
+                    <li>Using it as <code>x.POSITIVE_INFINITY</code> where x is a number, will return <code>undefined</code>.</li>
+                    <div class="block-outer" data-result-id="demoa81" data-result-value="Number.POSITIVE_INFINITY">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">POSITIVE_INFINITY</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa81" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example489" style="display: none;">
+                    <h5>Number.parseFloat()</h5>
+                    <li>Parses a value as a string and returns the first floating point number found in the string.</li>
+                    <div class="block-outer" data-result-id="demoa82" data-result-function="complexExpression78">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p>Number.parseFloat<span class="jsbracketcolor">(</span><span class="jsstringcolor">"40.00"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseFloat<span class="jsbracketcolor">(</span><span class="jsstringcolor">"&nbsp;&nbsp;&nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;&nbsp;"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseFloat<span class="jsbracketcolor">(</span><span class="jsstringcolor">"40 years"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseFloat<span class="jsbracketcolor">(</span><span class="jsstringcolor">"40H"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseFloat<span class="jsbracketcolor">(</span><span class="jsstringcolor">"H40"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa82" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example490" style="display: none;">
+                    <h5>Number.parseInt(<i>string, radix</i>)</h5>
+                    <li>Parses a value as a string and returns the first integer found in the string.</li>
+                    <li>The <code>radix</code> parameter is optional. It specifies the base of the number. The default is 10.</li>
+                    <div class="block-outer" data-result-id="demoa83" data-result-function="complexExpression79">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p>Number.parseInt<span class="jsbracketcolor">(</span><span class="jsstringcolor">"10", <span class="jskeywordcolor">10</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseInt<span class="jsbracketcolor">(</span><span class="jsstringcolor">"H010"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseInt<span class="jsbracketcolor">(</span><span class="jsstringcolor">"10", <span class="jskeywordcolor">8</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseInt<span class="jsbracketcolor">(</span><span class="jsstringcolor">"0x10"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p>Number.parseInt<span class="jsbracketcolor">(</span><span class="jsstringcolor">"10", <span class="jskeywordcolor">16</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa83" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example491" style="display: none;">
+                    <h5>Number.prototype</h5>
+                    <li>Allows you to add a new property or method to all numbers.</li>
+                    <li>This new property or method will be accessible to all numbers.</li>
+                    <div class="block-outer" data-result-id="demoa84" data-result-function="complexExpression80">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jsnumbercolor">Number</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">prototype</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">printHeilHeater</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jsoperatorcolor">;</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">for</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsoperatorcolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor"><</span> <span class="jskeywordcolor">this</span><span class="jsoperatorcolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"heil heater<span class="jsbracketcolor">&lt;br&gt;</span>"</span><span class="jsoperatorcolor">;</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">;</span></p>
+                                <br>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">numb</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">numb</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">printHeilHeater</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa84" class="result"><span></span> </p>
+                    </div>
+                    <blockquote style="background-color:#FFC0C7!important">
+                        <h5>Warning!!</h5>
+                        <p>It is not advised to change the prototype of an object that you do not control.</p>
+                        <p>You should not change the prototype of built-in JavaScript datatypes like:</p>
+                        <ul>
+                            <li>String</li>
+                            <li>Number</li>
+                            <li>Array</li>
+                            <li>Date</li>
+                            <li>Function</li>
+                            <li>Object</li>
+                        </ul>
+                    </blockquote>
+                </div>
+
+                <div id="example492" style="display: none;">
+                    <h5>Number.toExponential(<i>digits</i>)</h5>
+                    <li>Converts a number into an exponential notation.</li>
+                    <li>The <code>digits</code> parameter is optional. It specifies the number of digits after the decimal point. Default is as many digits as necessary.</li>
+                    <div class="block-outer" data-result-id="demoa85" data-result-function="complexExpression81">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5.56789</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toExponential</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa85" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example493" style="display: none;">
+                    <h5>Number.toFixed(<i>digits</i>)</h5>
+                    <li>Converts a number into a string, keeping a specified number of decimals.</li>
+                    <li>The <code>digits</code> parameter is optional. It specifies the number of digits after the decimal point. Default is 0.</li>
+                    <div class="block-outer" data-result-id="demoa86" data-result-function="complexExpression82">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5.56789</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toFixed</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsfunctioncolor">return</span> <span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">"&lt;br&gt;typeof n is: "</span> <span class="jsoperatorcolor">+</span> <span class="jsfunctioncolor">typeof</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa86" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example494" style="display: none;">
+                    <h5>Number.toLocaleString(<i>locales</i>, <i>options</i>)</h5>
+                    <li>Converts a number into a string, using a local language format.</li>
+                    <div class="block-outer" data-result-id="demoa87" data-result-function="complexExpression83">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100000000</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toLocaleString</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"id-ID"</span><span class="jsoperatorcolor">,</span> <span class="jsbracketcolor">{</span><span class="jsvariablecolor">style</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"currency"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">currency</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"IDR"</span><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa87" class="result"><span></span> </p>
+                    </div>
+                    <li>Below are the list of all parameter for <code>toLocaleString()</code> method:</li>
+                    <table class="key-dec tls">
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="55"><code>locales</code></td>
+                            <td><code>ar-SA</code> - Arabic (Saudi Arabia)</td>
+                        </tr>
+                        <tr>
+                            <td><code>bn-BD</code> - Bangla (Bangladesh)</td>
+                        </tr>
+                        <tr>
+                            <td><code>bn-IN</code> - Bangla (India)</td>
+                        </tr>
+                        <tr>
+                            <td><code>cs-CZ</code> - Czech (Czech Republic)</td>
+                        </tr>
+                        <tr>
+                            <td><code>da-DK</code> - Danish (Denmark)</td>
+                        </tr>
+                        <tr>
+                            <td><code>de-AT</code> - German (Austria)</td>
+                        </tr>
+                        <tr>
+                            <td><code>de-CH</code> - German (Switzerland)</td>
+                        </tr>
+                        <tr>
+                            <td><code>de-DE</code> - German (Germany)</td>
+                        </tr>
+                        <tr>
+                            <td><code>el-GR</code> - Greek (Greece)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-AU</code> - English (Australia)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-CA</code> - English (Canada)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-GB</code> - English (United Kingdom)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-IE</code> - English (Ireland)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-IN</code> - English (India)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-NZ</code> - English (New Zealand)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-US</code> - English (United States)</td>
+                        </tr>
+                        <tr>
+                            <td><code>en-ZA</code> - English (South Africa)</td>
+                        </tr>
+                        <tr>
+                            <td><code>es-AR</code> - Spanish (Argentina)</td>
+                        </tr>
+                        <tr>
+                            <td><code>es-CL</code> - Spanish (Chile)</td>
+                        </tr>
+                        <tr>
+                            <td><code>es-CO</code> - Spanish (Colombia)</td>
+                        </tr>
+                        <tr>
+                            <td><code>es-ES</code> - Spanish (Spain)</td>
+                        </tr>
+                        <tr>
+                            <td><code>es-MX</code> - Spanish (Mexico)</td>
+                        </tr>
+                        <tr>
+                            <td><code>es-US</code> - Spanish (United States)</td>
+                        </tr>
+                        <tr>
+                            <td><code>fi-FI</code> - Finnish (Finland)</td>
+                        </tr>
+                        <tr>
+                            <td><code>fr-BE</code> - French (Belgium)</td>
+                        </tr>
+                        <tr>
+                            <td><code>fr-CA</code> - French (Canada)</td>
+                        </tr>
+                        <tr>
+                            <td><code>fr-CH</code> - French (Switzerland)</td>
+                        </tr>
+                        <tr>
+                            <td><code>fr-FR</code> - French (France)</td>
+                        </tr>
+                        <tr>
+                            <td><code>he-IL</code> - Hebrew (Israel)</td>
+                        </tr>
+                        <tr>
+                            <td><code>hi-IN</code> - Hindi (India)</td>
+                        </tr>
+                        <tr>
+                            <td><code>hu-HU</code> - Hungarian (Hungary)</td>
+                        </tr>
+                        <tr>
+                            <td><code>id-ID</code> - Indonesian (Indonesia)</td>
+                        </tr>
+                        <tr>
+                            <td><code>it-CH</code> - Italian (Switzerland)</td>
+                        </tr>
+                        <tr>
+                            <td><code>it-IT</code> - Italian (Italy)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ja-JP</code> - Japanese (Japan)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ko-KR</code> - Korean (South Korea)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ms-MY</code> - Malay (Malaysia)</td>
+                        </tr>
+                        <tr>
+                            <td><code>nl-BE</code> - Dutch (Belgium)</td>
+                        </tr>
+                        <tr>
+                            <td><code>nl-NL</code> - Dutch (Netherlands)</td>
+                        </tr>
+                        <tr>
+                            <td><code>no-NO</code> - Norwegian (Norway)</td>
+                        </tr>
+                        <tr>
+                            <td><code>pl-PL</code> - Polish (Poland)</td>
+                        </tr>
+                        <tr>
+                            <td><code>pt-BR</code> - Portuguese (Brazil)</td>
+                        </tr>
+                        <tr>
+                            <td><code>pt-PT</code> - Portuguese (Portugal)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ro-RO</code> - Romanian (Romania)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ru-RU</code> - Russian (Russia)</td>
+                        </tr>
+                        <tr>
+                            <td><code>sk-SK</code> - Slovak (Slovakia)</td>
+                        </tr>
+                        <tr>
+                            <td><code>sv-SE</code> - Swedish (Sweden)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ta-IN</code> - Tamil (India)</td>
+                        </tr>
+                        <tr>
+                            <td><code>th-TH</code> - Thai (Thailand)</td>
+                        </tr>
+                        <tr>
+                            <td><code>tr-TR</code> - Turkish (Turkey)</td>
+                        </tr>
+                        <tr>
+                            <td><code>uk-UA</code> - Ukrainian (Ukraine)</td>
+                        </tr>
+                        <tr>
+                            <td><code>vi-VN</code> - Vietnamese (Vietnam)</td>
+                        </tr>
+                        <tr>
+                            <td><code>zh-CN</code> - Simplified Chinese (China)</td>
+                        </tr>
+                        <tr>
+                            <td><code>zh-HK</code> - Traditional Chinese (Hong Kong)</td>
+                        </tr>
+                        <tr>
+                            <td><code>zh-TW</code> - Traditional Chinese (Taiwan)</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="11"><code>options</code></td>
+                            <td><code>currency</code> Legal values: any currency code (like <code>"USD"</code>, <code>"EUR"</code>, <code>"CNY"</code>), or <code>"USD"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>currencyDisplay</code> Legal values: <code>"symbol"</code> (default), <code>"code"</code>, <code>"name"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>localeMatcher</code> Legal values: <code>"lookup"</code> (default), <code>"best fit"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>maximumFractionDigits</code> A number from 0 to 20 (default is 3)</td>
+                        </tr>
+                        <tr>
+                            <td><code>maximumSignificantDigits</code> A number from 1 to 21</td>
+                        </tr>
+                        <tr>
+                            <td><code>minimumFractionDigits</code> A number from 0 to 20 (default is 3)</td>
+                        </tr>
+                        <tr>
+                            <td><code>minimumIntegerDigits</code> A number from 1 to 21 (default is 1)</td>
+                        </tr>
+                        <tr>
+                            <td><code>minimumSignificantDigits</code> A number from 1 to 21 (default is 21)</td>
+                        </tr>
+                        <tr>
+                            <td><code>style</code> Legal values: <code>"decimal"</code> (default), <code>"currency"</code>, <code>"percent"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>useGrouping</code> Legal values: <code>true</code> (default), <code>false</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="example495" style="display: none;">
+                    <h5>Number.toPrecision(<i>digits</i>)</h5>
+                    <li>Formats a number to a specified length.</li>
+                    <li>The <code>digits</code> parameter is optional. It specifies the total length of the number. Default is as many digits as necessary.</li>
+                    <div class="block-outer" data-result-id="demoa88" data-result-function="complexExpression84">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0.001658853</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num1</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toPrecision</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num2</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toPrecision</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">3</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num3</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toPrecision</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa88" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example496" style="display: none;">
+                    <h5>Number.toString(<i>radix</i>)</h5>
+                    <li>Converts a number into a string.</li>
+                    <li>The <code>radix</code> parameter is optional. It specifies the base of the number. Default is 10.</li>
+                    <div class="block-outer" data-result-id="demoa89" data-result-function="complexExpression85">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">15</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">8</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text2</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">16</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text3</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa89" class="result"><span></span> </p>
+                    </div>
+                </div>
+
+                <div id="example497" style="display: none;">
+                    <h5>Number.valueOf()</h5>
+                    <li>Returns the primitive value of a number.</li>
+                    <li>It is usually called automatically by JavaScript behind the scenes. The use case for calling it explicitly is when you need to make sure you are working with a primitive value.</li>
+                    <li>It usually used when working on a custom objects.</li>
+                    <div class="block-outer" data-result-id="demoa90" data-result-function="complexExpression86">
+                        <div class="block-cont">
+                            <div class="block-bl">
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">15</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num1</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Number</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num2</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Number</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            </div>
+                            <div class="block-btn-cont">
+                                <div class="block-run">
+                                    <button type="button" class="run-btn">Run ></button>
+                                </div>
+                                <div class="reset-btn" style="display: none;">
+                                    <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <p id="demoa90" class="result"><span></span> </p>
+                    </div>
+                </div>
+
             </ul>
         </div>
         <hr>

@@ -695,6 +695,10 @@ mark {
   border-collapse: collapse;
 }
 
+.tls th, .tls td {
+  padding: 4px;
+}
+
 .result {
   border: 1px solid #ccc;
   background-color: #f1f1f1;
