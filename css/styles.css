@@ -487,6 +487,11 @@ p {
   font-weight: normal;
 }
 
+.jspropertycolor {
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* HTML colors */
 .htmltagcolor { 
   color: #800000; 
@@ -519,6 +524,10 @@ p {
   background-color: #b9b9b9;
   border-radius: 5px;
   min-width: fit-content;
+}
+
+.block-cont:nth-child(even) {
+  margin-left: 40px;
 }
 
 .block-cont-p {

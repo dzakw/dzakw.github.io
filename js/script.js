@@ -1147,3 +1147,97 @@ function complexExpression86() {
     "valueOf(num1): " + num1.valueOf() + "<br>" +
     "valueOf(num2): " + num2.valueOf() + "<br>";
 }
+
+function complexExpression87() {
+    const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3", "Ford Mustang GT", "Chevrolet Camaro", "Porsche 911", "Audi R8", "Nissan GT-R", "Lamborghini Huracan", "Ferrari 488", "McLaren 720S", "Bugatti Chiron"];
+    let result = "";
+
+    function getOrdinal(n) {
+        const suffixes = ["th", "st", "nd", "rd"];
+        const value = n % 100;
+        return n + (suffixes[(value - 20) % 10] || suffixes[value] || suffixes[0]);
+    }
+
+    for (let i = 0; i < cars.length; i++) {
+        result += `${getOrdinal(i + 1)} car: ${cars[i]} <br>`;
+    }
+
+    return result;
+}
+
+function complexExpression88() {
+    const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3"];
+    cars[1] = "Nissan Skyline GT-R";
+    let result = "";
+
+    for (let i = 0; i < cars.length; i++) {
+        result += cars[i] + "<br>";
+    }
+
+    return result;
+}
+
+function complexExpression89() {
+    const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3"];
+    let result = cars.toString().replaceAll(",", "<br>");
+    return result + "<br> typeof result: " + typeof result;
+}
+
+function complexExpression90() {
+    const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3"];
+    return cars + "<br> typeof cars: " + typeof cars;
+}
+
+function complexExpression91() {
+    // Object
+    const car = {
+        brand: "Toyota",
+        model: "Supra",
+        year: 2024,
+        features: ["Turbocharged engine", "Sport suspension", "Leather interior"]
+    };
+
+    // Function
+    function calculateCarAge(year) {
+        const currentYear = new Date().getFullYear();
+        return currentYear - year;
+    }
+
+    // Inner Array
+    const owners = ["Iqbal Dzakwan", "Fadoil Mun'im", "Gede Ardhi"];
+
+    // Outer Array
+    const carDetails = [car, calculateCarAge, owners];
+
+    let result = "";
+
+    result += `carDetails[0]: {<br>&nbsp;&nbsp;&nbsp;&nbsp;"brand": "${car.brand}",<br>&nbsp;&nbsp;&nbsp;&nbsp;"model": "${car.model}",<br>&nbsp;&nbsp;&nbsp;&nbsp;"year": ${car.year},<br>&nbsp;&nbsp;&nbsp;&nbsp;"features": [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${car.features.map(feature => `"${feature}"`).join('<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')}]<br>}<br><br>`;
+    result += `carDetails[1]: ${calculateCarAge.toString().replace(/\n/g, '<br>&nbsp;&nbsp;&nbsp;&nbsp;')}<br><br>`;
+    result += `carDetails[2]: [<br>&nbsp;&nbsp;&nbsp;&nbsp;${owners.map(owner => `"${owner}"`).join('<br>&nbsp;&nbsp;&nbsp;&nbsp;')}<br>] <br><br>`;
+
+    return result;
+}
+
+function complexExpression92() {
+    const fruits = ["Banana", "Orange", "Apple"];
+    fruits[5] = "Lemon";
+    let fLen = fruits.length;
+    let text = "";
+
+    for (let i = 0; i < fLen; i++) {
+        if (fruits[i] === undefined) {
+            text += "<code>undefined</code><br>";
+        } else {
+            text += fruits[i] + "<br>";
+        }
+    }
+
+    return text;
+}
+
+function complexExpression93() {
+    const fruits = ["Banana", "Orange", "Apple"];
+
+    return "Array<span class='jsoperatorcolor'>.</span><span class='jspropertycolor'>isArray(<span class='jsvariablecolor' style='color: #6a6a6a'>array name</span>)</span>: " + Array.isArray(fruits) + "<br>" +
+    "<span class='jsbracketcolor'>(</span><span class='jsvariablecolor' style='color: #6a6a6a'>array name</span> <span class='jskeywordcolor'>instanceof</span> Array<span class='jsbracketcolor'>)</span>: " + (fruits instanceof Array);
+}
