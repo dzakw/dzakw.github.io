@@ -62,40 +62,73 @@ h3.subsection:hover {
   color:gainsboro; /* Set the text color to gainsboro */
 }
 
-/* The following styles apply to <ul> elements with class "threeColumn" */
+ul.threeColumn, ul.fiveColumn {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  column-gap: 20px;
+}
+
+li.threeColumn, li.fiveColumn {
+  margin-bottom: 15px;
+}
+
+li.threeColumn a, li.fiveColumn a {
+  text-decoration: none;
+  color: #333;
+  background-color: gainsboro;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+li.threeColumn a:hover, li.fiveColumn a:hover {
+  background-color: #2b2b2b;
+  color: #fafafa;
+}
+
 ul.threeColumn {
-  list-style-type: none; /* Remove the default bullet points */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  column-count: 10; /* Divide the content into 10 columns */
-  column-gap: normal; /* Set the gap between columns to normal */
+  column-count: 3;
 }
 
-/* The following styles apply to <li> elements with class "threeColumn" */
-li.threeColumn {
-  margin-bottom: 10px; /* Add 10 pixels of margin at the bottom */
-}
-
-/* The following styles apply to <ul> elements with class "threeColumn" when the screen width is less than or equal to 1024px */
 @media screen and (max-width: 1024px) {
   ul.threeColumn {
-    column-count: 4; /* Divide the content into 4 columns */
+    column-count: 2;
   }
 }
 
-/* The following styles apply to <ul> elements with class "threeColumn" when the screen width is less than or equal to 768px */
 @media screen and (max-width: 768px) {
   ul.threeColumn {
-    column-count: 3; /* Divide the content into 3 columns */
+    column-count: 1;
   }
 }
 
-/* The following styles apply to <ul> elements with class "threeColumn" when the screen width is less than or equal to 480px */
-@media screen and (max-width: 480px) {
-  ul.threeColumn {
-    column-count: 2; /* Divide the content into 2 columns */
+ul.fiveColumn {
+  column-count: 5;
+}
+
+@media screen and (max-width: 1024px) {
+  ul.fiveColumn {
+    column-count: 4;
   }
 }
+
+@media screen and (max-width: 768px) {
+  ul.fiveColumn {
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  ul.fiveColumn {
+    column-count: 2;
+  }
+}
+
 
 /* The following styles apply to the <body> element */
 body {
@@ -416,7 +449,7 @@ blockquote p:first-child {
   color: #171717;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family:'Segoe UI', Arial, sans-serif;
 }
 
@@ -431,6 +464,14 @@ h4 {
 h5 {
   font-weight: normal;
   font-size: 24px;
+  color: #171717;
+  margin: 0;
+  margin-top: 6px;
+}
+
+h6 {
+  font-weight: normal;
+  font-size: 20px;
   color: #171717;
   margin: 0;
   margin-top: 6px;
@@ -524,6 +565,14 @@ p {
   background-color: #b9b9b9;
   border-radius: 5px;
   min-width: fit-content;
+}
+
+.pad6 {
+  padding: 6px;
+}
+
+.hei60 {
+  height: 60px;
 }
 
 .block-cont:nth-child(even) {

@@ -58,7 +58,7 @@ function toggleAllSections(...sectionIds) {
 var lastOpenedExampleId = null; // Track the last opened example
 
 function toggleExample(exampleId) {
-    event.preventDefault(); // Assuming you still want to prevent default behavior
+    event.preventDefault();
     var example = document.getElementById(exampleId);
 
     // Close any currently open example (if it's not the current one)
@@ -72,10 +72,12 @@ function toggleExample(exampleId) {
         example.style.display = "none";
     } else {
         example.style.display = "block";
+        example.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    lastOpenedExampleId = example.style.display === "block" ? exampleId : null; // Update tracker
+    lastOpenedExampleId = example.style.display === "block" ? exampleId : null;
 }
+
 
 function calculate(formNumber) {
     const num1 = parseInt(document.getElementById('num1_' + formNumber).value);
@@ -97,6 +99,161 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
+
+
+function generateList1() {
+    const methods = [
+        "Array[]", "Array()", "at()", "concat()", "constructor", "copyWithin()", "entries()", "every()",
+        "fill()", "filter()", "find()", "findIndex()", "findlast()", "findlastIndex()", "flat()", "flatMap()",
+        "forEach()", "from()", "includes()", "indexOf()", "isArray()", "join()", "keys()", "lastIndexOf()",
+        "length", "map()", "of()", "pop()", "prototype", "push()", "reduce()", "reduceRight()", "reverse()",
+        "shift()", "slice()", "some()", "sort()", "splice()", "toReversed()", "toSorted()", "toSpliced()",
+        "toString()", "unshift()", "values()", "valueOf()", "with()"
+    ];
+
+    const ul = document.getElementById('fiveColumn1');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'fiveColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 98}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList2() {
+    const methods = [
+        "&lt;address&gt;", "&lt;article&gt;", "&lt;aside&gt;", "&lt;blockquote&gt;", "&lt;canvas&gt;", "&lt;dd&gt;", "&lt;div&gt;", "&lt;dl&gt;", "&lt;dt&gt;",
+        "&lt;fieldset&gt;", "&lt;figcaption&gt;", "&lt;figure&gt;", "&lt;footer&gt;", "&lt;form&gt;", "&lt;h1&gt;-&lt;h6&gt;", "&lt;header&gt;", "&lt;hr&gt;",
+        "&lt;li&gt;", "&lt;main&gt;", "&lt;nav&gt;", "&lt;noscript&gt;", "&lt;ol&gt;", "&lt;p&gt;", "&lt;pre&gt;", "&lt;section&gt;", "&lt;table&gt;", "&lt;tfoot&gt;",
+        "&lt;ul&gt;", "&lt;video&gt;"
+    ];    
+
+    const ul = document.getElementById('threeColumn1');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example${index + 1}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList3() {
+    const methods = [
+        "&lt;a&gt;", "&lt;abbr&gt;", "&lt;acronym&gt;", "&lt;b&gt;", "&lt;bdo&gt;", "&lt;big&gt;", "&lt;br&gt;", "&lt;button&gt;", "&lt;cite&gt;",
+        "&lt;code&gt;", "&lt;dfn&gt;", "&lt;em&gt;", "&lt;i&gt;", "&lt;img&gt;", "&lt;input&gt;", "&lt;kbd&gt;", "&lt;label&gt;", "&lt;map&gt;",
+        "&lt;object&gt;", "&lt;output&gt;", "&lt;q&gt;", "&lt;samp&gt;", "&lt;script&gt;", "&lt;select&gt;", "&lt;small&gt;", "&lt;span&gt;",
+        "&lt;strong&gt;", "&lt;sub&gt;", "&lt;sup&gt;", "&lt;textarea&gt;", "&lt;time&gt;", "&lt;tt&gt;", "&lt;var&gt;"
+    ];
+
+    const ul = document.getElementById('threeColumn2');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example${index + 30}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList4() {
+    const methods = [
+        "accept-charset", "action", "autocomplete", "enctype", "method", "name", "novalidate", "rel", "target"
+    ];
+
+    const ul = document.getElementById('threeColumn3');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example${index + 73}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList5() {
+    const methods = [
+        "&lt;input&gt;", "&lt;label&gt;", "&lt;select&gt;", "&lt;textarea&gt;", "&lt;button&gt;", "&lt;fieldset&gt;", "&lt;legend&gt;", "&lt;datalist&gt;",
+        "&lt;output&gt;", "&lt;option&gt;", "&lt;optgroup&gt;"
+    ];
+
+    const ul = document.getElementById('threeColumn4');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example${index + 82}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList6() {
+    const methods = [
+        "value", "readonly", "disabled", "size", "maxlength", "min & max", "multiple", "pattern", "placeholder", "required", "step", "autofocus",
+        "height & width", "list", "autocomplete"
+    ];
+
+    const ul = document.getElementById('threeColumn5');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example${index + 93}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList7() {
+    const methods = [
+        "Geolocation", "Drag and Drop", "Web Storage", "Web Workers", "Server-Sent Events"
+    ];
+
+    const ul = document.getElementById('threeColumn6');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example${index + 108}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList8() {
+    const methods = [
+        "at()", "charAt()", "charCodeAt()", "codePointAt()", "concat()", "constructor()", "endsWith()", "fromCharCode()",
+        "includes()", "indexOf()", "lastIndexOf()", "length()", "localeCompare()", "match()", "padEnd()", "padStart()", "prototype()",
+        "repeat()", "replace()", "replaceAll()", "search()", "slice()", "split()", "startsWith()", "substr()", "substring()",
+        "toLocaleLowerCase()", "toLocaleUpperCase()", "toLowerCase()", "toString()", "toUpperCase()", "trim()", "trimEnd()", "trimStart()", "valueOf()"
+    ];
+
+    const ul = document.getElementById('threeColumn7');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 41}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList9() {
+    const methods = [
+        "constructor", "EPSILON", "isFinite()", "isInteger()", "isNaN()", "isSafeInteger()", "MAX_SAFE_INTEGER", "MIN_SAFE_INTEGER",
+        "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "parseFloat()", "parseInt()", "prototype",
+        "toExponential()", "toFixed()", "toLocaleString()", "toPrecision()", "toString()", "valueOf()"
+    ];
+
+    const ul = document.getElementById('threeColumn8');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 76}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+// Event Listeners
+document.addEventListener("DOMContentLoaded", () => {
+    let i = 1;
+    while (typeof window[`generateList${i}`] === 'function') {
+        window[`generateList${i}`]();
+        i++;
+    }
+});
+
 
 // //Javascript learning start here
 // function showAnswer1() {
@@ -1240,4 +1397,54 @@ function complexExpression93() {
 
     return "Array<span class='jsoperatorcolor'>.</span><span class='jspropertycolor'>isArray(<span class='jsvariablecolor' style='color: #6a6a6a'>array name</span>)</span>: " + Array.isArray(fruits) + "<br>" +
     "<span class='jsbracketcolor'>(</span><span class='jsvariablecolor' style='color: #6a6a6a'>array name</span> <span class='jskeywordcolor'>instanceof</span> Array<span class='jsbracketcolor'>)</span>: " + (fruits instanceof Array);
+}
+
+function complexExpression94() {
+    const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    return "cars<i>.at</i>(2): " + cars.at(2) + "<br>"
+    + "cars<i>.at</i>(-1): " + cars.at(-1) + "<br>"
+    + "cars[2]: " + cars[2] + "<br>"
+    + "cars[-1]: " + cars[-1];
+}
+
+function complexExpression95() {
+    const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    const cars1 = ["Honda Civic", "Subaru BRZ", "BMW M3"];
+    return cars.concat(cars1);
+}
+
+function complexExpression96() {
+    const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    return cars.constructor;
+}
+
+function complexExpression97() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya", 'Rambutan', 'Durian'];
+    return "fruits.copyWithin(2,0): " + fruits.copyWithin(2,0) + "<br>" +
+    "fruits.copyWithin(2,0,3): " + fruits.copyWithin(2,0,3);
+}
+
+function complexExpression98() {
+    const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let text = "";
+
+    for (let i of cars.entries()) {
+        text += i + "<br>";
+    }
+
+    return text;
+}
+
+function complexExpression99() {
+    const cars = [
+        { car: "Toyota Supra", topSpeed: 155 },
+        { car: "Toyota Camry", topSpeed: 130 },
+        { car: "Toyota Corolla", topSpeed: 125 },
+        { car: "Toyota RAV4", topSpeed: 120 },
+        { car: "Toyota Highlander", topSpeed: 115 },
+        { car: "Toyota Land Cruiser", topSpeed: 110 },
+        { car: "Honda Civic", topSpeed: 140 }
+    ];
+    const allToyotas = cars.every(car => car.startsWith("Toyota"));
+    return allToyotas;
 }
