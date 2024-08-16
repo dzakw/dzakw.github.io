@@ -9291,7 +9291,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <br>
                             <p><span class="commentcolor">// Function</span></p>
                             <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">calculateCarAge</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">year</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">currentYear</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor>(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getFullYear</span><span class="jsbracketcolor>(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">currentYear</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getFullYear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">currentYear</span> <span class="jsoperatorcolor">-</span> <span class="jsvariablecolor">year</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jsbracketcolor">}</span></p>
                             <br>
@@ -9640,7 +9640,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <div class="block-cont pad6">
                                 <span><b>Example:</b></span>
                                 <div class="block-bl">
-
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota Camry"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota Corolla"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Toyota RAV4"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota Highlander"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota Land Cruiser"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda Civic"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">allToyotas</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">cars</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">every</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=></span> <span class="jsvariablecolor">car</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">startsWith</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Toyota"</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                                 </div>
                                 <div class="block-btn-cont">
                                     <div class="block-run">
@@ -9666,6 +9668,363 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <li><code>true</code> if the function returns a truthy value for every array element. Otherwise, <code>false</code>.</li>
                         </ul>
                     </div>
+
+                    <div id="example4106" style="display: none;">
+                        <h5>fill()</h5>
+                        <p>The <code>fill()</code> method fills the specified elements in an array with a static value.</p>
+                        <p>This method overwrites the original array.</p>
+                        <div class="block-outer" data-result-id="demoa104" data-result-function="complexExpression100">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.fill(<i>value</i>, <i>start</i>, <i>end</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Kiwi"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Papaya"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Rambutan"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Durian"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fill</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Lemon"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fill</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Lemon"</span><span class="jsoperatorcolor">,</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span><span class="jsnumbercolor">4</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa104" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>value</b></i> - <b>Required</b> The value to fill the array with.</li>
+                            <li><i><b>start</b></i> - <b>Optional</b> The index position to start filling the array.</li>
+                            <li><i><b>end</b></i> - <b>Optional</b> The index position to stop filling the array.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The modified array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4107" style="display: none;">
+                        <h5>filter()</h5>
+                        <p>The <code>filter()</code> method creates a new array with all elements that pass the test implemented by the provided function.</p>
+                        <p>If no elements pass the test, an empty array will be returned.</p>
+                        <p><code>filter()</code> does not change the original array.</p>
+                        <div class="block-outer" data-result-id="demoa105" data-result-function="complexExpression101">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.filter(<i>function(currentValue, index, arr), thisValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">170</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span><br><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                <br>
+                                <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">cars</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">filter</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">topSpeed</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">map</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=></span> <span class="jsvariablecolor">car</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">car</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">topSpeed</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">car</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">car</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">topSpeed</span> <span class="jsoperatorcolor">>=</span> <span class="jsnumbercolor">160</span><span class="jsoperatorcolor">;</span></p>
+                                <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa105" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b> A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b> The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b> The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b> The array object the current element belongs to.</li>
+                            <li><i><b>thisValue</b></i> - <b>Optional</b>. Default is <code>undefined</code>. A value to be passed to the function to be used as its <code>this</code> value.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>An array with the elements that pass the test. If no elements pass the test, an empty array will be returned.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4108" style="display: none;">
+                        <h5>find()</h5>
+                        <p>The <code>find()</code> method returns the first element in an array that passes a test (provided as a function).</p>
+                        <p>The <code>find()</code> method executes a function for each array element.</p>
+                        <p>The <code>find()</code> method does not change the original array.</p>
+                        <p>If no elements pass the test, <code>undefined</code> is returned.</p>
+                        <div class="block-outer" data-result-id="demoa106" data-result-function="complexExpression102">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.find(<i>function(currentValue, index, arr), thisValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">test</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Aska"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">74</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Budi"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">85</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Citra"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">90</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Dika"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Eka"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">80</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Fajar"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span><span class="jsbracketcolor">}</span><br><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">test</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">find</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">student</span> <span class="jsoperatorcolor">=></span> <span class="jsvariablecolor">student</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">score</span> <span class="jsoperatorcolor"><=</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa106" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b> A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b> The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b> The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b> The array object the current element belongs to.</li>
+                            <li><i><b>thisValue</b></i> - <b>Optional</b>. Default is <code>undefined</code>. A value to be passed to the function to be used as its <code>this</code> value.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The first element in the array that passes the test. If no elements pass the test, <code>undefined</code> is returned.</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="example4109" style="display: none;">
+                        <h5>findIndex()</h5>
+                        <p>The <code>findIndex()</code> method returns the index of the first element in an array that passes a test (provided as a function).</p>
+                        <p>The <code>findIndex()</code> method executes a function for each array element.</p>
+                        <p>The <code>findIndex()</code> method does not change the original array.</p>
+                        <p>If no elements pass the test, <code>-1</code> is returned.</p>
+                        <div class="block-outer" data-result-id="demoa107" data-result-function="complexExpression103">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.findIndex(<i>function(currentValue, index, arr), thisValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">test</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Aska"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">74</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Budi"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">85</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Citra"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">90</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Dika"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Eka"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">80</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Fajar"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span><span class="jsbracketcolor">}</span><br><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">index</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">test</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">findIndex</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">student</span> <span class="jsoperatorcolor">=></span> <span class="jsvariablecolor">student</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">score</span> <span class="jsoperatorcolor"><=</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">index</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa107" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b> A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b> The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b> The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b> The array object the current element belongs to.</li>
+                            <li><i><b>thisValue</b></i> - <b>Optional</b>. Default is <code>undefined</code>. A value to be passed to the function to be used as its <code>this</code> value.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The index of the first element in the array that passes the test. If no elements pass the test, <code>-1</code> is returned.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4110" style="display: none;">
+                        <h5>findLast()</h5>
+                        <p>The <code>findLast()</code> method returns the last element in an array that passes a test (provided as a function).</p>
+                        <p>The <code>findLast()</code> method executes a function for each array element.</p>
+                        <p>The <code>findLast()</code> method does not change the original array.</p>
+                        <p>If no elements pass the test, <code>undefined</code> is returned.</p>
+                        <div class="block-outer" data-result-id="demoa108" data-result-function="complexExpression104">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.findLast(<i>function(currentValue, index, arr), thisValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">test</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Aska"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">74</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Budi"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">85</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Citra"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">90</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Dika"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Eka"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">80</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Fajar"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span><span class="jsbracketcolor">}</span><br><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">test</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">findLast</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">student</span> <span class="jsoperatorcolor">=></span> <span class="jsvariablecolor">student</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">score</span> <span class="jsoperatorcolor"><=</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa108" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b> A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b> The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b> The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b> The array object the current element belongs to.</li>
+                            <li><i><b>thisValue</b></i> - <b>Optional</b>. Default is <code>undefined</code>. A value to be passed to the function to be used as its <code>this</code> value.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The last element in the array that passes the test. If no elements pass the test, <code>undefined</code> is returned.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4111" style="display: none;">
+                        <h5>findLastIndex()</h5>
+                        <p>The <code>findLastIndex()</code> method returns the index of the last element in an array that passes a test (provided as a function).</p>
+                        <p>The <code>findLastIndex()</code> method executes a function for each array element.</p>
+                        <p>The <code>findLastIndex()</code> method does not change the original array.</p>
+                        <p>If no elements pass the test, <code>-1</code> is returned.</p>
+                        <div class="block-outer" data-result-id="demoa109" data-result-function="complexExpression105">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.findLastIndex(<i>function(currentValue, index, arr), thisValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">test</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Aska"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">74</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Budi"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">85</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Citra"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">90</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Dika"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Eka"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">80</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Fajar"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">score</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span><span class="jsbracketcolor">}</span><br><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">index</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">test</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">findLastIndex</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">student</span> <span class="jsoperatorcolor">=></span> <span class="jsvariablecolor">student</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">score</span> <span class="jsoperatorcolor"><=</span> <span class="jsnumbercolor">65</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">index</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa109" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b> A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b> The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b> The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b> The array object the current element belongs to.</li>
+                            <li><i><b>thisValue</b></i> - <b>Optional</b>. Default is <code>undefined</code>. A value to be passed to the function to be used as its <code>this</code> value.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The index of the last element in the array that passes the test. If no elements pass the test, <code>-1</code> is returned.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4112" style="display: none;">
+                        <h5>flat()</h5>
+                        <p>The <code>flat()</code> method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</p>
+                        <p>The <code>flat()</code> method does not change the original array.</p>
+                        <div class="block-outer" data-result-id="demoa110" data-result-function="complexExpression106">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.flat(<i>depth</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myArr</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsnumbercolor">3</span><span class="jsoperatorcolor">,</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">4</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">5</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">6</span><span class="jsbracketcolor">]</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsnumbercolor">7</span><span class="jsoperatorcolor">,</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">8</span><span class="jsoperatorcolor">,</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">9</span><span class="jsoperatorcolor">,</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">]</span><span class="jsbracketcolor">]</span><span class="jsbracketcolor">]</span><span class="jsbracketcolor">]</span><br><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">myArr</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">flat</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myArr</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">flat</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myArr</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">flat</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">Infinity</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa110" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>depth</b></i> - <b>Optional</b>. Default is <code>1</code>. The depth level specifying how deep a nested array structure should be flattened.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A new array with the sub-array elements concatenated into it up to the specified depth.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4113" style="display: none;">
+                        <h5>flatMap()</h5>
+                        <p>The <code>flatMap()</code> method first maps each element using a mapping function, then flattens the result into a new array.</p>
+                        <p>The <code>flatMap()</code> method is identical to a <code>map()</code> followed by a <code>flat()</code> of depth 1.</p>
+                        <p>The <code>flatMap()</code> method does not change the original array.</p>
+                        <div class="block-outer" data-result-id="demoa111" data-result-function="complexExpression107">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.flatMap(<i>function(currentValue, index, arr), thisValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa111" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b> A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b> The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b> The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b> The array object the current element belongs to.</li>
+                            <li><i><b>thisValue</b></i> - <b>Optional</b>. Default is <code>undefined</code>. A value to be passed to the function to be used as its <code>this</code> value.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A new array with each element being the result of the callback function and flattened to a depth of 1.</li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </ul>

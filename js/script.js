@@ -104,7 +104,7 @@ function showPosition(position) {
 function generateList1() {
     const methods = [
         "Array[]", "Array()", "at()", "concat()", "constructor", "copyWithin()", "entries()", "every()",
-        "fill()", "filter()", "find()", "findIndex()", "findlast()", "findlastIndex()", "flat()", "flatMap()",
+        "fill()", "filter()", "find()", "findIndex()", "findLast()", "findLastIndex()", "flat()", "flatMap()",
         "forEach()", "from()", "includes()", "indexOf()", "isArray()", "join()", "keys()", "lastIndexOf()",
         "length", "map()", "of()", "pop()", "prototype", "push()", "reduce()", "reduceRight()", "reverse()",
         "shift()", "slice()", "some()", "sort()", "splice()", "toReversed()", "toSorted()", "toSpliced()",
@@ -1437,14 +1437,108 @@ function complexExpression98() {
 
 function complexExpression99() {
     const cars = [
-        { car: "Toyota Supra", topSpeed: 155 },
-        { car: "Toyota Camry", topSpeed: 130 },
-        { car: "Toyota Corolla", topSpeed: 125 },
-        { car: "Toyota RAV4", topSpeed: 120 },
-        { car: "Toyota Highlander", topSpeed: 115 },
-        { car: "Toyota Land Cruiser", topSpeed: 110 },
-        { car: "Honda Civic", topSpeed: 140 }
-    ];
+        "Toyota Supra",
+        "Toyota Camry",
+        "Toyota Corolla",
+        "Toyota RAV4",
+        "Toyota Highlander",
+        "Toyota Land Cruiser",
+        "Honda Civic"
+    ];    
     const allToyotas = cars.every(car => car.startsWith("Toyota"));
     return allToyotas;
+}
+
+function complexExpression100() {
+    const fruits1 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya", 'Rambutan', 'Durian'];
+    const fruits2 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya", 'Rambutan', 'Durian'];
+    return "<span class='commentcolor'>//fruits.fill('lemon')</span><br>" + fruits1.fill("Lemon") + "<br>" +
+    "<span class='commentcolor'>//fruits.fill('lemon', 2, 4)</span><br>" + fruits2.fill("Lemon", 2, 4);
+}
+
+function complexExpression101() {
+    const cars = [
+        {car: "Toyota Supra", topSpeed: 155 },
+        {car: "Nissan Skyline", topSpeed: 180 },
+        {car: "Mazda RX-7", topSpeed: 155 },
+        {car: "Honda NSX", topSpeed: 170 },
+        {car: "Mitsubishi Lancer Evolution", topSpeed: 155 },
+        {car: "Subaru BRZ", topSpeed: 155 },
+    ];
+
+    const result = cars.filter(topSpeed).map(car => car.car);
+    function topSpeed(car) {
+        return car.topSpeed >= 160;
+    }
+    return result.join(', ');
+}
+
+function complexExpression102() {
+    const test = [
+        {name: "Aska", score: 74 },
+        {name: "Budi", score: 85 },
+        {name: "Citra", score: 90 },
+        {name: "Dika", score: 65 },
+        {name: "Eka", score: 80 },
+        {name: "Fajar", score: 50 },
+    ];
+
+    const result = test.find(student => student.score <= 65);
+    return result.name;
+}
+
+function complexExpression103() {
+    const test = [
+        {name: "Aska", score: 74 },
+        {name: "Budi", score: 85 },
+        {name: "Citra", score: 90 },
+        {name: "Dika", score: 65 },
+        {name: "Eka", score: 80 },
+        {name: "Fajar", score: 50 },
+    ];
+
+    const index = test.findIndex(student => student.score <= 65);
+    return index;
+}
+
+function complexExpression104() {
+    const test = [
+        {name: "Aska", score: 74 },
+        {name: "Budi", score: 85 },
+        {name: "Citra", score: 90 },
+        {name: "Dika", score: 65 },
+        {name: "Eka", score: 80 },
+        {name: "Fajar", score: 50 },
+    ];
+
+    const result = test.findLast(student => student.score <= 65);
+    return result.name;
+}
+
+function complexExpression105() {
+    const test = [
+        {name: "Aska", score: 74 },
+        {name: "Budi", score: 85 },
+        {name: "Citra", score: 90 },
+        {name: "Dika", score: 65 },
+        {name: "Eka", score: 80 },
+        {name: "Fajar", score: 50 },
+    ];
+
+    const index = test.findLastIndex(student => student.score <= 65);
+    return index;
+}
+
+function complexExpression106() {
+    const myArr = [
+        [1, 2],
+        [3, [4, 5, 6]],
+        [7, [8, [9, [10]]]]
+    ];
+    const newArr = myArr.flat();
+    const newArr2 = myArr.flat(2);
+    const newArrInf = myArr.flat(Infinity);
+    return "<span class='jsvariablecolor'>myArr</span>.<span class='jspropertycolor'>flat()</span>: " + JSON.stringify(newArr) + "<br>" +
+    "<span class='jsvariablecolor'>myArr</span>.<span class='jspropertycolor'>flat(2)</span>: " + JSON.stringify(newArr2) + "<br>" +
+    "<span class='jsvariablecolor'>myArr</span>.<span class='jspropertycolor'>flat(Infinity)</span>: " + JSON.stringify(newArrInf);
 }
