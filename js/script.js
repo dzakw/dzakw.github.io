@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function complexExpression0() {
+function complex0() {
     let output = '';
     function testImplicitGlobal() {
         if (true) {
@@ -354,7 +354,7 @@ function complexExpression0() {
     return output;
 }
 
-function complexExpression1() {
+function complex1() {
     let output = '';
     if (true) {
         let y = 20;
@@ -364,7 +364,7 @@ function complexExpression1() {
     return output;
 }
 
-function complexExpression2() {
+function complex2() {
     let output = '';
     function testFunctionScope() {
         if (true) {
@@ -377,7 +377,7 @@ function complexExpression2() {
     return output;
 }
 
-function complexExpression3() {
+function complex3() {
     let output = '';
     function stringCompareAddition() {
         let x = 'Iqbal ';
@@ -389,7 +389,7 @@ function complexExpression3() {
     return output;
 }
 
-function complexExpression4() {
+function complex4() {
     let output = '';
     function logicalOperators() {
         let x = 10;
@@ -402,7 +402,7 @@ function complexExpression4() {
     return output;
 }
 
-function complexExpression5() {
+function complex5() {
     let output = '';
     function ternaryOperators() {
         let x = 10;
@@ -412,7 +412,7 @@ function complexExpression5() {
     return output;
 }
 
-function complexExpression6() {
+function complex6() {
     let output = '';
     function typeOperators() {
         let x = 10;
@@ -424,7 +424,7 @@ function complexExpression6() {
     return output;
 }
 
-function complexExpression7() {
+function complex7() {
     let output = '';
     function arithmeticOperations() {
         let a = 10;
@@ -440,7 +440,7 @@ function complexExpression7() {
     return output;
 }
 
-function complexExpression8() {
+function complex8() {
     let output = '';
     function booleanOperations() {
         let x = 5;
@@ -453,7 +453,7 @@ function complexExpression8() {
     return output;
 }
 
-function complexExpression9() {
+function complex9() {
     let output = '';
     function undefinedVariable() {
         let x = ['apple', 'banana', 'cherry'];
@@ -467,7 +467,7 @@ function complexExpression9() {
     return output;
 }
 
-// function complexExpression10() {
+// function complex10() {
 //     function squaresum(p1, p2) {
 //         return p1 ** 2 + p2 ** 2 + 2 * p1 * p2;
 //     }
@@ -475,7 +475,7 @@ function complexExpression9() {
 //     return output;
 // }
 
-function complexExpression10() {
+function complex10() {
     // Function is called, return value will end up in x
     let x = myFunction(4, 3);
     function myFunction(a, b) {
@@ -484,7 +484,7 @@ function complexExpression10() {
     return x;
 }
 
-function complexExpression11() {
+function complex11() {
     const fahrInput = document.getElementById('fahr');
     const userInput = fahrInput.value;
     const resultElement = document.getElementById('demow');
@@ -502,11 +502,11 @@ function complexExpression11() {
     }
 }
 window.onload = function() {
-    complexExpression11();
-    complexExpression41()
+    complex11();
+    complex41()
 }
 
-function complexExpression12() {
+function complex12() {
     function toCelsius(fahrenheit) {
         return (5 / 9) * (fahrenheit - 32);
     }
@@ -514,7 +514,7 @@ function complexExpression12() {
     return valToCel;
 }
 
-function complexExpression13() {
+function complex13() {
     function toCelsius(fahrenheit) {
         return (5 / 9) * (fahrenheit - 32);
     }
@@ -522,7 +522,7 @@ function complexExpression13() {
     return valToCel;
 }
 
-function complexExpression14() {
+function complex14() {
     function toCelsius(fahrenheit) {
         return (5 / 9) * (fahrenheit - 32);
     }
@@ -530,7 +530,7 @@ function complexExpression14() {
     return text;
 }
 
-function complexExpression15() {
+function complex15() {
     function person(fname, lname) {
         this.firstname = fname;
         this.lastname = lname;
@@ -540,7 +540,7 @@ function complexExpression15() {
     return "My father is " + myFather.firstname + " " + myFather.lastname + ". My mother is " + myMother.firstname + " " + myMother.lastname;
 }
 
-function complexExpression16() {
+function complex16() {
     function person(fname, lname) {
         this.firstname = fname;
         this.lastname = lname;
@@ -550,7 +550,7 @@ function complexExpression16() {
     return "My father is " + myFather["firstname"] + " " + myFather["lastname"] + ". My mother is " + myMother["firstname"] + " " + myMother["lastname"];
 }
 
-function complexExpression17() {
+function complex17() {
     function person(fname, lname, id) {
         this.fname = fname;
         this.lname = lname;
@@ -563,7 +563,7 @@ function complexExpression17() {
     return employee.fullname() + " " + "with ID number " + employee.id + " is the Employee of The year of 2023";
 }
 
-function complexExpression18() {
+function complex18() {
     function person(fname, lname, age) {
         this.fname = fname;
         this.lname = lname;
@@ -598,7 +598,7 @@ function car(brand, type, price, disc) {
     };
 }
 
-function complexExpression19() {
+function complex19() {
     const supra = new car("Toyota", "GR Supra", 2237600000, 0.12);
     let x = "brand";
     let y = "type";
@@ -607,20 +607,20 @@ function complexExpression19() {
     return supra[x] + " " + supra[y] + " price after discount is Rp " + formattedPrice;
 }
 
-function complexExpression20() {
+function complex20() {
     const supra = new car("Toyota", "GR Supra", 2237600000, 0.12);
     supra.topSpeed = 310;
     return supra.brand + " " + supra.type + " has the top speed of " + supra.topSpeed + "km/h.";
 }
 
-function complexExpression21() {
+function complex21() {
     const supra = new car("Toyota", "GR Supra", 2237600000, 0.12);
     delete supra.disc;
     let formattedPrice = supra.dcprice().toLocaleString('id-ID');
     return supra.brand + " " + supra.type + " price after discount is Rp " + formattedPrice;
 }
 
-function complexExpression22() {
+function complex22() {
     const supra = new car("Toyota", "Supra", 2237600000, 0.12);
     supra.model = {
         supra1: "Celica XX",
@@ -632,14 +632,14 @@ function complexExpression22() {
     return supra.brand + " " + supra.type + " has a long history. The first generation is the " + supra.brand + " " + supra.model.supra1 + ". The second generation, " + supra.brand + " " + supra.model.supra2 + ", is the last version that has the name 'Celica'. The latest one launched after years of hiatus from the market at 2019 as " + supra.brand + " " + supra.model.supra5 + ".";
 }
 
-function complexExpression23() {
+function complex23() {
     const civic = new car("Honda", "Civic", 1427500000, 0.05);
     civic.model = "Type R";
     let formattedPrice = civic.dcprice().toLocaleString('id-ID');
     return "Unleash the thrill of the drive with the " + civic.brand + " " + civic.type + " " + civic.model + ", where performance meets precision in every mile, starting at Rp " + formattedPrice;
 }
 
-function complexExpression24() {
+function complex24() {
     const supra = new car("Toyota", "Supra", 2237600000, 0.05);
     const civic = new car("Honda", "Civic", 1427500000, 0.05);
     const brz = new car("Subaru", "BRZ", 845000000, 0.05);
@@ -662,7 +662,7 @@ function complexExpression24() {
     return "<h5 style='margin-top:0; margin-bottom:4px;'>Explore Our Premium Car Collection:</h5><ul>" + text + "</ul>";
 }
 
-function complexExpression25() {
+function complex25() {
     //create an object
     const car = {
         brand: "Toyota",
@@ -677,7 +677,7 @@ function complexExpression25() {
     return myCAr;
 }
 
-function complexExpression26(){
+function complex26(){
     const fruits = {bananas:300, oranges:200, apples:430};
 
     let text = "";
@@ -687,7 +687,7 @@ function complexExpression26(){
     return text;
 }
 
-function complexExpression27() {
+function complex27() {
     //create an object
     const car = {
         brand: "Toyota",
@@ -702,7 +702,7 @@ function complexExpression27() {
     return myString;
 }
 
-function complexExpression28() {
+function complex28() {
     function Person(firstName, lastName, age, eyeColor) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -714,22 +714,22 @@ function complexExpression28() {
     return "My father is " + myFather.nationality;
 }
 
-function complexExpression29() {
+function complex29() {
     return Date();
 }
 
-function complexExpression30() {
+function complex30() {
     let txt = "We are the so-called \"Vikings\" from the north.";
     let txt1 = 'He said "Hello"';
     
     return txt + "<br>" + txt1;
 }
 
-function complexExpression31() {
+function complex31() {
     return `It's alright "okay"?`;
 }
 
-function complexExpression32() {
+function complex32() {
     let text = "The light from the streetlamp was bright and eerie.";
     let at1 = text.at(1);
     let at2 = text.at(2);
@@ -746,7 +746,7 @@ function complexExpression32() {
     return at1 + at2 + at3 + at4 + at5 + at6 + at7 + at8 + at9 + at10 + at11;
 }
 
-function complexExpression33() {
+function complex33() {
     let text = "The light from the streetlamp was bright and eerie.";
     let indexs = [1, 2, 5, 4, 3, 1, 2, -10, 8, 2, -4];
     let sentence = "";
@@ -758,7 +758,7 @@ function complexExpression33() {
     return sentence;
 }
 
-function complexExpression34() {
+function complex34() {
     let text = "stay up, sport.";
     let indexs = [1, 11, 3, 11, 1, 2, 4, 0, 5, 6, 12, 2];
     let sentence = "";
@@ -770,7 +770,7 @@ function complexExpression34() {
     return sentence;
 }
 
-function complexExpression35() {
+function complex35() {
     let text = "stay up, sport.";
     let indexs = [1, 11, 3, 11, 1, 2, 4, 0, 5, 6, 12, 2];
     let sentence = "";
@@ -782,7 +782,7 @@ function complexExpression35() {
     return sentence;
 }
 
-function complexExpression36() {
+function complex36() {
     let text = "stay up, sport.";
     let indexs = [1, 11, 3, 11, 1, 2, 4, 0, 5, 6, 12, 2];
     let sentence = "";
@@ -794,20 +794,20 @@ function complexExpression36() {
     return sentence;
 }
 
-function complexExpression37() {
+function complex37() {
     let text1 = "Toyota";
     let text2 = "Supra";
     let result = text1.concat(" ", text2);
     return result;
 }
 
-function complexExpression38() {
+function complex38() {
     let text = "Toyota Supra";
     let tcon = text.constructor;
     return tcon;
 }
 
-function complexExpression39() {
+function complex39() {
     let text1 = ["Itachi Uchiha", "Sasuke Uchiha", "Naruto Uzumaki"];
     let text = "";
     
@@ -823,12 +823,12 @@ function complexExpression39() {
     return text;
 }
 
-function complexExpression40() {
+function complex40() {
     let text = String.fromCharCode(116, 111, 121, 111, 116, 97, 32, 115, 117, 112, 114, 97);
     return text;
 }
 
-function complexExpression41() {
+function complex41() {
     const hiddenWord = "supra";
     let displayedWord = document.getElementById("hidden-word").textContent.split(': ')[1];
     const guessInput = document.getElementById("guess-input");
@@ -863,19 +863,19 @@ function complexExpression41() {
     }
 }
 
-function complexExpression42() {
+function complex42() {
     let text = "Hello world, welcome to the hood.";
     let result = text.indexOf("welcome");
     return result;
 }
 
-function complexExpression43() {
+function complex43() {
     let text = "Hello planet earth, you are a great planet.";
     let result = text.lastIndexOf("planet");
     return result;
 }
 
-function complexExpression44() {
+function complex44() {
     let password = ["vgN]fCGZ^Q_!nRPw", ":kJ*K=P", "AvdGGah>]6", "Ru8@:", "Rc(aW", "Y*xk33H$_", "_oqF^b|kc", "zY{y@f$'", "zCnct{HhU", "l(HOgMXhFQEhr", "?}&\\('|v"];
     let result = "";
     for (let i = 0; i < password.length; i++) {
@@ -892,7 +892,7 @@ function complexExpression44() {
     return result;
 }
 
-function complexExpression45() {
+function complex45() {
     let text1 = "aaad";
     let text2 = "aaac";
     let result = text1.localeCompare(text2);
@@ -910,7 +910,7 @@ function complexExpression45() {
     return prt;
 }
 
-function complexExpression46() {
+function complex46() {
     let text1 = "No problem! Here's the information about the Mercedes CLR GTR: The Mercedes CLR GTR is a remarkable racing car celebrated for its outstanding performance and sleek design. Powered by a potent 6.0-liter V12 engine, it delivers over 600 horsepower. Acceleration from 0 to 100 km/h takes approximately 3.7 seconds, with a remarkable top speed surprising 320 km/h.🥇Incorporating adventure aerodynamic features and cutting-edge stability technologies, the CLR GTR ensures exceptional stability and control, particularly during high-speed maneuvers. 💨Originally priced at around $1.5 million, the Mercedes CLR GTR is considered one of the most exclusive and prestigious racing cars ever produced. 💰Its limited production run of just five units adds to its rarity, making it highly sought after by racing enthusiasts and collectors worldwide. 🌎";
     let text2 = "No problem!";
     let result = text1.match(text2);
@@ -925,21 +925,21 @@ function complexExpression46() {
     return prt;
 }
 
-function complexExpression47() {
+function complex47() {
     let text1 = "69";
     let text2 = "420";
     let result = text1.padEnd(101, text2);
     return result;
 }
 
-function complexExpression48() {
+function complex48() {
     let text1 = "9";
     let text2 = "2024";
     let result = text1.padStart(2024, text2);
     return result;
 }
 
-function complexExpression49() {
+function complex49() {
     function Person(firstName, lastName, age, eyeColor) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -951,37 +951,37 @@ function complexExpression49() {
     return "My father is " + myFather.nationality;
 }
 
-function complexExpression50() {
+function complex50() {
     let text1 = "botol kecap marjan 5000 perak <br>";
     let result = text1.repeat(4);
     return result;
 }
 
-function complexExpression51() {
+function complex51() {
     let text1 = "Happy new year!. This new year will be a good one";
     let result = text1.replace("new year", "new day");
     return result;
 }
 
-function complexExpression52() {
+function complex52() {
     let text1 = "Happy new year!. This new year will be a good one";
     let result = text1.replaceAll("new year", "new day");
     return result;
 }
 
-function complexExpression53() {
+function complex53() {
     let text1 = "lorem ipsum dolor sit amet consepcutor adispicing sit elit.";
     let result = text1.search("sit");
     return result;
 }
 
-function complexExpression54() {
+function complex54() {
     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
     let result = text1.slice(136,140) + " " + text1.slice(8, 14);
     return result;
 }
 
-// function complexExpression55() {
+// function complex55() {
 //     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
 //     text1 = text1.replace(/[.,'";!?]/g, '');
 //     let words = text1.split(" ");
@@ -1004,38 +1004,38 @@ function complexExpression54() {
 //     return result.toLocaleLowerCase();
 // }
 
-function complexExpression55() {
+function complex55() {
     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
     let words = text1.split(" ");
 
     return words;
 }
 
-function complexExpression56() {
+function complex56() {
     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
     let result = text1.startsWith("Heil", 136);
     return result;
 }
 
-function complexExpression57() {
+function complex57() {
     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
     let result = text1.substring(20, 50);
     return result;
 }
 
-function complexExpression58() {
+function complex58() {
     let text1 = "The old heater, once a symbol of warmth, was now overshadowed by the cold, while the historian recounted tales of ancient symbols like 'Heil' in a lecture.";
     let result = text1.substr(20, 50);
     return result;
 }
 
-function complexExpression59() {
+function complex59() {
     let text1 = "İstanbul'da güzel bir şehir.";
     let result = text1.toLocaleLowerCase('tr-TR');
     return result;
 }
 
-function complexExpression60() {
+function complex60() {
     let text1 = "The Greek word for 'sigma' is 'σ'.";
     let text2 = text1.substring(30, 32);
     let text3 = text2.toLocaleUpperCase('el-GR');
@@ -1043,13 +1043,13 @@ function complexExpression60() {
     return text4;
 }
 
-function complexExpression61() {
+function complex61() {
     let text1 = "No problem! Here's the information about the Mercedes CLR GTR:";
     let result = text1.toLowerCase();
     return result;
 }
 
-function complexExpression62() {
+function complex62() {
     function car(brand, year) {
         this.brand = brand;
         this.year = year;
@@ -1060,13 +1060,13 @@ function complexExpression62() {
     return x + "<br>data type is: " + y;
 }
 
-function complexExpression63() {
+function complex63() {
     let text1 = "The German term for 'sharp s' is 'ß'";
     let result = text1.toUpperCase();
     return result;
 }
 
-function complexExpression64() {
+function complex64() {
     let text = "            Toyota Supra            ";
     let trimmedText = text.trim();
     return `Original Length: ${text.length}<br>
@@ -1076,7 +1076,7 @@ function complexExpression64() {
             Lengths are equal: ${text.length === trimmedText.length}`;
 }
 
-function complexExpression65() {
+function complex65() {
     let text = "            Toyota Supra            ";
     let trimmedText = text.trimEnd();
     return `Original Length: ${text.length}<br>
@@ -1086,7 +1086,7 @@ function complexExpression65() {
             Lengths are equal: ${text.length === trimmedText.length}`;
 }
 
-function complexExpression66() {
+function complex66() {
     let text = "            Toyota Supra            ";
     let trimmedText = text.trimStart();
     return `Original Length: ${text.length}<br>
@@ -1096,25 +1096,25 @@ function complexExpression66() {
             Lengths are equal: ${text.length === trimmedText.length}`;
 }
 
-function complexExpression67() {
+function complex67() {
     let strObj = new String("Hello");
     return strObj.valueOf();
 }
 
-function complexExpression68() {
+function complex68() {
     let brand = "Toyota";
     let type = "Supra";
     let car = `No problem, here is information about ${brand} ${type}.`;
     return car;
 }
 
-function complexExpression69() {
+function complex69() {
     let price = 2237600000;
     let dpCicil = `With Down Payment of Rp ${(0.2 * price).toLocaleString('id-ID')} and payment only at Rp ${(((0.8 * price) * 0.02 * (1 + 0.02) ** 180) / ((1 + 0.02) ** 180 - 1)).toLocaleString('id-ID')} per month for 15 years`;
     return dpCicil;
 }
 
-function complexExpression70() {
+function complex70() {
     let header = "Template Strings";
     let tags = ["template strings", "javascript", "es6"];
     let html = `<h2 style="margin: 0;">${header}</h2><ul>`;
@@ -1126,7 +1126,7 @@ function complexExpression70() {
     return html;
 }
 
-function complexExpression71() {
+function complex71() {
     let myNumber = 2;
 
     while (myNumber != Infinity) {
@@ -1138,7 +1138,7 @@ function complexExpression71() {
 // let myNumber = 2025;
 // let myType = typeOf(myBigInt);
 // let addition = myBigInt + BigInt(myNumber);
-function complexExpression72() {
+function complex72() {
     let myBigInt = 2024202420242024202420242024202420242024202420242024n;
     let myType = typeof myBigInt;
     let myNumber = 2025;
@@ -1148,20 +1148,20 @@ function complexExpression72() {
     return "typeof: " + myType + "<br>" + "addition: " + addition;
 }
 
-// function complexExpression73() {
+// function complex73() {
 //     let x = Number.MAX_SAFE_INTEGER;
 //     let y = Number.MIN_SAFE_INTEGER;
 //     return "<code>MAX_SAFE_INTEGER</code> is: " + x + "<br>" + "<code>MIN_SAFE_INTEGER</code> is: " + y;
 // }
 
-function complexExpression73() {
+function complex73() {
     let x = Number.isFinite("123");
     let y = isFinite("123");
 
     return "<code>Number.isFinite('123')</code> will return: " + x + "<br>" + "<code>isFinite('123')</code> will return: " + y;
 }
 
-function complexExpression74() {
+function complex74() {
     let x = 123;
     let y = -456;
     let z = "123";
@@ -1179,14 +1179,14 @@ function complexExpression74() {
     return result;
 }
 
-function complexExpression75() {
+function complex75() {
     let x = Number.isNaN('Toyota Supra');
     let y = isNaN('Toyota Supra');
 
     return "<code>Number.isNaN('Toyota Supra')</code> will return: " + x + "<br>" + "<code>isNaN('Toyota Supra')</code> will return: " + y;
 }
 
-function complexExpression76() {
+function complex76() {
     let x = 123;
     let y = -456;
     let z = 123456789012345678901234567890n;
@@ -1204,7 +1204,7 @@ function complexExpression76() {
     return result;
 }
 
-function complexExpression77() {
+function complex77() {
     var x = 9007199254740992;
     var y = 123456789;
     var z = -9007199254740991;
@@ -1226,7 +1226,7 @@ function complexExpression77() {
     return resultX + "<br>" + resultY + "<br>" + resultZ;
 }
 
-function complexExpression78() {
+function complex78() {
     return Number.parseFloat("40.00") + "<br>" +
     Number.parseFloat("   40   ") + "<br>" +
     Number.parseFloat("40 years") + "<br>" +
@@ -1234,7 +1234,7 @@ function complexExpression78() {
     Number.parseFloat("H40");
 }
 
-function complexExpression79() {
+function complex79() {
     return Number.parseInt("10", 10)+ "<br>" +
     Number.parseInt("H010")+ "<br>" +
     Number.parseInt("10", 8)+ "<br>" +
@@ -1242,7 +1242,7 @@ function complexExpression79() {
     Number.parseInt("10", 16);
 }
 
-function complexExpression80() {
+function complex80() {
     Number.prototype.printHeilHeater = function() {
         let result = '';
         for (let i = 0; i < this; i++) {
@@ -1255,26 +1255,26 @@ function complexExpression80() {
     return numb.printHeilHeater();
 }
 
-function complexExpression81() {
+function complex81() {
     let num = 5.56789;
     let n = num.toExponential();
 
     return n;
 }
 
-function complexExpression82() {
+function complex82() {
     let num = 5.56789;
     let n = num.toFixed(2);
     return n + "<br>typeof n is: " + typeof n;
 }
 
-function complexExpression83() {
+function complex83() {
     let num = 100000000;
     let text = num.toLocaleString("id-ID", {style:"currency", currency:"IDR"});
     return text;
 }
 
-function complexExpression84() {
+function complex84() {
     let num = 0.001658853;
     let num1 = num.toPrecision(2);
     let num2 = num.toPrecision(3);
@@ -1283,7 +1283,7 @@ function complexExpression84() {
     return "num: " + num + "<br>" + "num1: " + num1 + "<br>" + "num2: " + num2 + "<br>" + "num3: " + num3;
 }
 
-function complexExpression85() {
+function complex85() {
     let num = 15;
     let text1 = num.toString(8);
     let text2 = num.toString(16);
@@ -1295,7 +1295,7 @@ function complexExpression85() {
     "text3: " + text3 + "; data type: " + typeof text3 + "<br>";
 }
 
-function complexExpression86() {
+function complex86() {
     let num = 15;
     let num1 = new Number(10);
     let num2 = new Number('Toyota Supra');
@@ -1305,7 +1305,7 @@ function complexExpression86() {
     "valueOf(num2): " + num2.valueOf() + "<br>";
 }
 
-function complexExpression87() {
+function complex87() {
     const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3", "Ford Mustang GT", "Chevrolet Camaro", "Porsche 911", "Audi R8", "Nissan GT-R", "Lamborghini Huracan", "Ferrari 488", "McLaren 720S", "Bugatti Chiron"];
     let result = "";
 
@@ -1322,7 +1322,7 @@ function complexExpression87() {
     return result;
 }
 
-function complexExpression88() {
+function complex88() {
     const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3"];
     cars[1] = "Nissan Skyline GT-R";
     let result = "";
@@ -1334,18 +1334,18 @@ function complexExpression88() {
     return result;
 }
 
-function complexExpression89() {
+function complex89() {
     const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3"];
     let result = cars.toString().replaceAll(",", "<br>");
     return result + "<br> typeof result: " + typeof result;
 }
 
-function complexExpression90() {
+function complex90() {
     const cars = ["Toyota Supra", "Honda Civic", "Subaru BRZ", "BMW M3"];
     return cars + "<br> typeof cars: " + typeof cars;
 }
 
-function complexExpression91() {
+function complex91() {
     // Object
     const car = {
         brand: "Toyota",
@@ -1375,7 +1375,7 @@ function complexExpression91() {
     return result;
 }
 
-function complexExpression92() {
+function complex92() {
     const fruits = ["Banana", "Orange", "Apple"];
     fruits[5] = "Lemon";
     let fLen = fruits.length;
@@ -1392,14 +1392,14 @@ function complexExpression92() {
     return text;
 }
 
-function complexExpression93() {
+function complex93() {
     const fruits = ["Banana", "Orange", "Apple"];
 
     return "Array<span class='jsoperatorcolor'>.</span><span class='jspropertycolor'>isArray(<span class='jsvariablecolor' style='color: #6a6a6a'>array name</span>)</span>: " + Array.isArray(fruits) + "<br>" +
     "<span class='jsbracketcolor'>(</span><span class='jsvariablecolor' style='color: #6a6a6a'>array name</span> <span class='jskeywordcolor'>instanceof</span> Array<span class='jsbracketcolor'>)</span>: " + (fruits instanceof Array);
 }
 
-function complexExpression94() {
+function complex94() {
     const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
     return "cars<i>.at</i>(2): " + cars.at(2) + "<br>"
     + "cars<i>.at</i>(-1): " + cars.at(-1) + "<br>"
@@ -1407,24 +1407,24 @@ function complexExpression94() {
     + "cars[-1]: " + cars[-1];
 }
 
-function complexExpression95() {
+function complex95() {
     const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
     const cars1 = ["Honda Civic", "Subaru BRZ", "BMW M3"];
     return cars.concat(cars1);
 }
 
-function complexExpression96() {
+function complex96() {
     const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
     return cars.constructor;
 }
 
-function complexExpression97() {
+function complex97() {
     const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya", 'Rambutan', 'Durian'];
     return "fruits.copyWithin(2,0): " + fruits.copyWithin(2,0) + "<br>" +
     "fruits.copyWithin(2,0,3): " + fruits.copyWithin(2,0,3);
 }
 
-function complexExpression98() {
+function complex98() {
     const cars = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
     let text = "";
 
@@ -1435,7 +1435,7 @@ function complexExpression98() {
     return text;
 }
 
-function complexExpression99() {
+function complex99() {
     const cars = [
         "Toyota Supra",
         "Toyota Camry",
@@ -1449,14 +1449,14 @@ function complexExpression99() {
     return allToyotas;
 }
 
-function complexExpression100() {
+function complex100() {
     const fruits1 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya", 'Rambutan', 'Durian'];
     const fruits2 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya", 'Rambutan', 'Durian'];
     return "<span class='commentcolor'>//fruits.fill('lemon')</span><br>" + fruits1.fill("Lemon") + "<br>" +
     "<span class='commentcolor'>//fruits.fill('lemon', 2, 4)</span><br>" + fruits2.fill("Lemon", 2, 4);
 }
 
-function complexExpression101() {
+function complex101() {
     const cars = [
         {car: "Toyota Supra", topSpeed: 155 },
         {car: "Nissan Skyline", topSpeed: 180 },
@@ -1473,7 +1473,7 @@ function complexExpression101() {
     return result.join(', ');
 }
 
-function complexExpression102() {
+function complex102() {
     const test = [
         {name: "Aska", score: 74 },
         {name: "Budi", score: 85 },
@@ -1487,7 +1487,7 @@ function complexExpression102() {
     return result.name;
 }
 
-function complexExpression103() {
+function complex103() {
     const test = [
         {name: "Aska", score: 74 },
         {name: "Budi", score: 85 },
@@ -1501,7 +1501,7 @@ function complexExpression103() {
     return index;
 }
 
-function complexExpression104() {
+function complex104() {
     const test = [
         {name: "Aska", score: 74 },
         {name: "Budi", score: 85 },
@@ -1515,7 +1515,7 @@ function complexExpression104() {
     return result.name;
 }
 
-function complexExpression105() {
+function complex105() {
     const test = [
         {name: "Aska", score: 74 },
         {name: "Budi", score: 85 },
@@ -1529,7 +1529,7 @@ function complexExpression105() {
     return index;
 }
 
-function complexExpression106() {
+function complex106() {
     const myArr = [
         [1, 2],
         [3, [4, 5, 6]],
@@ -1541,4 +1541,67 @@ function complexExpression106() {
     return "<span class='jsvariablecolor'>myArr</span>.<span class='jspropertycolor'>flat()</span>: " + JSON.stringify(newArr) + "<br>" +
     "<span class='jsvariablecolor'>myArr</span>.<span class='jspropertycolor'>flat(2)</span>: " + JSON.stringify(newArr2) + "<br>" +
     "<span class='jsvariablecolor'>myArr</span>.<span class='jspropertycolor'>flat(Infinity)</span>: " + JSON.stringify(newArrInf);
+}
+
+function complex107() {
+    const myArr = [
+        [1, 2],
+        [3, [4, 5, 6]],
+        [7, [8, [9, [10]]]]
+    ];
+
+    const result = myArr.flat(Infinity).map(x => [x, x * x]);
+    return JSON.stringify(result);
+}
+
+function complex108() {
+    const myCar = [
+        {car: "Toyota Supra", topSpeed: 155 },
+        {car: "Nissan Skyline", topSpeed: 180 },
+        {car: "Mazda RX-7", topSpeed: 155 },
+        {car: "Honda NSX", topSpeed: 170 },
+        {car: "Mitsubishi Lancer Evolution", topSpeed: 155 },
+        {car: "Subaru BRZ", topSpeed: 155 },
+    ];
+    let carDetails = "";
+    myCar.forEach(function(car) {
+        carDetails += car.car + ", Top Speed: " + car.topSpeed + " mph<br>";
+    });
+
+    return carDetails;
+}
+
+function complex109() {
+    const myCar = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    return myCar.includes("Subaru BRZ");
+}
+
+function complex110() {
+    const myCar = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    return myCar.indexOf("Subaru BRZ");
+}
+
+function complex111() {
+    const myCar = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    return myCar.join("<br>");
+}
+
+function complex112() {
+    //Create an Array
+    const myCar = ["Toyota Supra", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+
+    //Create an Iterable
+    const list = myCar.keys();
+
+    //List the Keys
+    let text = "";
+    for (let x of list) {
+        text += x + "<br>";
+    }
+    return text;
+}
+
+function complex113() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    return myCar.lastIndexOf("Subaru BRZ");
 }
