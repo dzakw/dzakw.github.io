@@ -10316,7 +10316,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <div class="block-cont pad6">
                                 <span><b>Example:</b></span>
                                 <div class="block-bl">
-
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">lastIndexOf</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                                 </div>
                                 <div class="block-btn-cont">
                                     <div class="block-run">
@@ -10337,6 +10338,300 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <h6>Return Value</h6>
                         <ul>
                             <li>The last index at which a given element can be found in the array, or <code>-1</code> if it is not present.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4122" style="display: none;">
+                        <h5>length</h5>
+                        <p>The <code>length</code> property of an object which is an instance of type <code>Array</code> sets or returns the number of elements in that array.</p>
+                        <p>The value is an unsigned, 32-bit integer that specifies the number of elements in an array.</p>
+                        <p>The value of the <code>length</code> property is automatically updated when new elements are added to the array, or existing elements are removed from the array.</p>
+                        <div class="block-outer" data-result-id="demoa120" data-result-value="[1, 2, 3].length">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.length</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jsbracketcolor">[</span><span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">3</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">length</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa120" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The number of elements in the array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4123" style="display: none;">
+                        <h5>map()</h5>
+                        <p>The <code>map()</code> method creates a new array populated with the results of calling a provided function on every element in the calling array.</p>
+                        <p>The <code>map()</code> method does not change the original array.</p>
+                        <div class="block-outer" data-result-id="demoa121" data-result-function="complex114">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.map(<i>function(currentValue, index, arr), thisValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">map</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">myfunc</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myfunc</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">carModel</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">res</span> <span class="jsoperatorcolor">+=</span> <span class="stringcolor">"Car model: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">carModel</span> <span class="jsoperatorcolor">+</span> <span class="stringcolor">"&lt;br&gt;"</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">map</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">myfunc</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa121" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b>. A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b>. The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b>. The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b>. The array object the current element belongs to.</li>
+                            <li><i><b>thisValue</b></i> - <b>Optional</b>. Default is <code>undefined</code>. A value to be passed to the function to be used as its <code>this</code> value.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>An array with the results of calling a provided function on every element in the calling array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4124" style="display: none;">
+                        <h5>of()</h5>
+                        <p>The <code>Array.of()</code> method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.</p>
+                        <p>The <code>Array.of()</code> method is a static method of the <code>Array</code> object. It can only be used as <code>Array.of()</code>.</p>
+                        <p>Using <code>x.of()</code>, where x is an array will return <code>undefined</code></p>
+                        <p>The difference of <code>Array.of()</code> from the <code>Array</code> constructor is that <code>Array.of()</code> create an array from the arguments passed to it, while the <code>Array</code> constructor creates an array from the arguments passed to it, while the <code>Array</code> constructor creates an array from the arguments passed to it, if there is only one argument and that argument is a number, it will create an array with the length of that number.</p>
+                        <div class="block-outer" data-result-id="demoa122" data-result-value="Array.of(3)">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>Array.of(<i>element0, element1, ..., elementN</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">//Create an array with a length of 1, and the value of 3</span></p>
+                                    <p><span class="jsvariablecolor">Array</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">of</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">3</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa122" class="result"><span></span> </p>
+                        </div>
+                        <p>For comparison, below is the <code>Array</code> constructor:</p>
+                        <div class="block-outer" data-result-id="demoa123" data-result-value="Array(3)">
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">//Create an empty array with a length of 3</span></p>
+                                    <p><span class="jsvariablecolor">Array</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">3</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa123" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>element0, element1, ..., elementN</b></i> - Elements to include in the new array.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A new Array instance from a variable number of arguments.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4125" style="display: none;">
+                        <h5>pop()</h5>
+                        <p>The <code>pop()</code> method removes the last element from an array and returns that element. This method changes the length of the array.</p>
+                        <div class="block-outer" data-result-id="demoa124" data-result-function="complex115">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.pop()</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">removed</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">pop</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa124" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The removed element from the array, or <code>undefined</code> if the array is empty.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4126" style="display: none;">
+                        <h5>prototype</h5>
+                        <p>The <code>prototype</code> property allows you to add new properties and methods to the <code>Array()</code> object.</p>
+                        <p>When constructing an <code>Array</code>, you can call the <code>prototype</code> property of the <code>Array</code> object to add new properties and methods to the <code>Array</code> object.</p>
+                        <div class="block-outer" data-result-id="demoa125" data-result-function="complex116">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>Array.prototype.<i>newproperty</i> = <i>value</i></p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">//Create a method that transforms array values into upper case</span></p>
+                                    <p><span class="jskeywordcolor">Array</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">prototype</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">myUcase</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsoperatorcolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jsoperatorcolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">this</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toUpperCase</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">//Use the method on any array</span></p>
+                                    <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">myUcase</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa125" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The new property added to the <code>Array</code> object.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4127" style="display: none;">
+                        <h5>push()</h5>
+                        <p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.</p>
+                        <div class="block-outer" data-result-id="demoa126" data-result-function="complex117">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.push(<i>element0, element1, ..., elementN</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">push</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Lamborghini Gallardo"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Bugatti Chiron"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa126" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>element0, element1, ..., elementN</b></i> - The elements to add to the end of the array.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The new length property of the object upon which the method was called.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4128" style="display: none;">
+                        <h5>reduce()</h5>
+                        <p>The <code>reduce()</code> method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.</p>
+                        <p>The <code>reduce()</code> method does not change the original array.</p>
+                        <div class="block-outer" data-result-id="demoa127" data-result-function="complex118">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.reduce(<i>function(accumulator, currentValue, index, arr), initialValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa127" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b>. A function to be run for each element in the array.</li>
+                            <li><i><b>accumulator</b></i> - <b>Required</b>. The initial value, or the previously returned value of the function.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b>. The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b>. The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b>. The array object the current element belongs to.</li>
+                            <li><i><b>initialValue</b></i> - <b>Optional</b>. The initial value to be passed to the function on the first call.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The single value that results from the reduction.</li>
                         </ul>
                     </div>
 

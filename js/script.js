@@ -1605,3 +1605,51 @@ function complex113() {
     const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
     return myCar.lastIndexOf("Subaru BRZ");
 }
+
+function complex114() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    let res = "";
+    myCar.map(myfunc);
+
+    function myfunc(carModel) {
+        res += "Car model: " + carModel + "<br>";
+    }
+    return res;
+}
+
+function complex115() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    removed = myCar.pop();
+    return "myCar: " + JSON.stringify(myCar) + "<br>" +
+    "removed: " + removed;
+}
+
+function complex116() {
+    Array.prototype.myUcase = function() {
+        for (let i = 0; i < this.length; i++) {
+            if (typeof this[i] === 'string') {
+                this[i] = this[i].toUpperCase();
+            }
+        }
+        return this;
+    };
+
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    return fruits.myUcase();
+}
+
+function complex117() {
+    const myCar1 = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution", "Subaru BRZ"];
+    myCar.push("Lamborghini Gallardo", "Bugatti Chiron");
+    const newCar = myCar;
+
+    return "Original array: " + JSON.stringify(myCar1) + "<br>" +
+    "Original array length: " + myCar1.length + "<br><br>" +
+    "Updated array: " + JSON.stringify(newCar) + "<br>" +
+    "Updated array length: " + newCar.length + "<br>";
+}
+
+function complex118() {
+    
+}
