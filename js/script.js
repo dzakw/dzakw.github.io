@@ -1651,5 +1651,60 @@ function complex117() {
 }
 
 function complex118() {
-    
+    const numbers = [15.5, 2.3, 1.1, 4.7];
+    function getSum(total, num) {
+        return total + Math.round(num);
+    }
+    return numbers.reduce(getSum, 0);
+}
+
+function complex119() {
+    const numbers = [199, 51, 23];
+    function myFunc(total, num) {
+        return Math.cos((total / num));
+    }
+    return numbers.reduceRight(myFunc);
+}
+
+function complex120() {
+    const text1 = ["Itachi Uchiha", "Sasuke Uchiha", "Naruto Uzumaki"];
+    return "text1.shift(): "+ JSON.stringify(text1.shift()) + "<br>" +
+    "text1: " + JSON.stringify(text1);
+}
+
+function complex121() {
+    const myCar1 = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    return "[" + myCar1.slice(0, 1) + ", " + myCar1.slice(-1) + "]";
+}
+
+function complex122() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+
+    function checkCar(type) {
+        return type.includes("Toyota");
+    }
+    return myCar.some(checkCar);
+}
+
+function complex123() {
+    const myCar = [
+        {car: "Toyota Supra", topSpeed: 155 },
+        {car: "Nissan Skyline", topSpeed: 180 },
+        {car: "Mazda RX-7", topSpeed: 155 },
+        {car: "Honda NSX", topSpeed: 170 },
+        {car: "Mitsubishi Lancer Evolution", topSpeed: 155 },
+        {car: "Subaru BRZ", topSpeed: 155 },
+    ];
+    myCar.sort(function(a, b) { return b.topSpeed - a.topSpeed; });
+    var result = myCar.map(function(car) {
+        return "Car: " + car.car + "<br>Top Speed: " + car.topSpeed;
+    }).join("<br><br>");
+
+    return result;
+}
+
+function complex124() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    myCar.splice(2, 4, "Toyota 86", "Honda S2000");
+    return JSON.stringify(myCar);
 }

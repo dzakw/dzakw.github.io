@@ -9509,7 +9509,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <h6>Return Value</h6>
                         <ul>
                             <li>A new Array instance.</li>
-                        </ul>                        
+                        </ul>
                     </div>
 
                     <div id="example4102" style="display: none;">
@@ -10607,7 +10607,11 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <div class="block-cont pad6">
                                 <span><b>Example:</b></span>
                                 <div class="block-bl">
-
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numbers</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">15.5</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2.3</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">1.1</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">4.7</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">getSum</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">total</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">num</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">total</span> <span class="jsoperatorcolor">+</span> <span class="jsfunctioncolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">round</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">num</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">numbers</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">reduce</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">getSum</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">0</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                                 </div>
                                 <div class="block-btn-cont">
                                     <div class="block-run">
@@ -10632,6 +10636,281 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <h6>Return Value</h6>
                         <ul>
                             <li>The single value that results from the reduction.</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="example4129" style="display: none;">
+                        <h5>reduceRight()</h5>
+                        <p>The <code>reduceRight()</code> method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.</p>
+                        <p>The <code>reduceRight()</code> method does not change the original array.</p>
+                        <div class="block-outer" data-result-id="demoa128" data-result-function="complex119">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.reduceRight(<i>function(accumulator, currentValue, index, arr), initialValue</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numbers</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">199</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">51</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">23</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunc</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">total</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">num</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsfunctioncolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">cos</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">total</span> <span class="jsoperatorcolor">/</span> <span class="jsvariablecolor">num</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">numbers</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">reduceRight</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">myFunc</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa128" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b>. A function to be run for each element in the array.</li>
+                            <li><i><b>accumulator</b></i> - <b>Required</b>. The initial value, or the previously returned value of the function.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b>. The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b>. The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b>. The array object the current element belongs to.</li>
+                            <li><i><b>initialValue</b></i> - <b>Optional</b>. The initial value to be passed to the function on the first call.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The single value that results from the reduction.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4130" style="display: none;">
+                        <h5>reverse()</h5>
+                        <p>The <code>reverse()</code> method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.</p>
+                        <div class="block-outer" data-result-id="demoa129" data-result-value="const numb = [1, 2, 3, 4, 5]; JSON.stringify(numb.reverse());">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.reverse()</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numb</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">3</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">4</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">5</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">numb</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">reverse</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa129" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The reversed array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4131" style="display: none;">
+                        <h5>shift()</h5>
+                        <p>The <code>shift()</code> method removes the first element from an array and returns that removed element. This method changes the length of the array.</p>
+                        <div class="block-outer" data-result-id="demoa130" data-result-function="complex120">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.shift()</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <span><b>Example:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">text1</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Itachi Uchiha"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Sasuke Uchiha"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Naruto Uzumaki"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">text1</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">shift</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">text1</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa130" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The removed element from the array, or <code>undefined</code> if the array is empty.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4132" style="display: none;">
+                        <h5>slice()</h5>
+                        <p>The <code>slice()</code> method returns a copy of a portion of an array into a new array object selected from <code>begin</code> to <code>end</code> (<code>end</code> not included) where <code>begin</code> and <code>end</code> represent the index of items in that array. The original array will not be modified.</p>
+                        <div class="block-outer" data-result-id="demoa131" data-result-function="complex121">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.slice(<i>begin</i>, <i>end</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar1</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myCar1</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">slice</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">1</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCar1</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">slice</span><span class="jsbracketcolor">(</span><span class="jsoperatorcolor">-</span><span class="jsnumbercolor">1</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa131" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>begin</b></i> - <b>Optional</b>. Zero-based index at which to begin extraction.</li>
+                            <li><i><b>end</b></i> - <b>Optional</b>. Zero-based index before which to end extraction. <code>slice</code> extracts up to but not including <code>end</code>. For example, <code>slice(1, 4)</code> extracts the second element up to the fourth element (elements indexed 1, 2, and 3).</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A new array containing the extracted elements.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4133" style="display: none;">
+                        <h5>some()</h5>
+                        <p>The <code>some()</code> method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.</p>
+                        <div class="block-outer" data-result-id="demoa132" data-result-function="complex122">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.some(<i>function(currentValue, index, arr)</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">checkCar</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">type</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">type</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">includes</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Toyota"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">some</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">checkCar</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa132" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>function()</b></i> - <b>Required</b>. A function to be run for each element in the array.</li>
+                            <li><i><b>currentValue</b></i> - <b>Required</b>. The value of the current element.</li>
+                            <li><i><b>index</b></i> - <b>Optional</b>. The array index of the current element.</li>
+                            <li><i><b>arr</b></i> - <b>Optional</b>. The array object the current element belongs to.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><code>true</code> if the callback function returns a truthy value for at least one element in the array. Otherwise, <code>false</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4134" style="display: none;">
+                        <h5>sort()</h5>
+                        <p>The <code>sort()</code> method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.</p>
+                        <div class="block-outer" data-result-id="demoa133" data-result-function="complex123">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.sort(<i>compareFunction</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">&lbrace;</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">&rbrace;</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">&lbrace;</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">&rbrace;</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">&lbrace;</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">&rbrace;</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">&lbrace;</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">170</span><span class="jsbracketcolor">&rbrace;</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">&lbrace;</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">&rbrace;</span><span class="jsoperatorcolor">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">&lbrace;</span><span class="jsvariablecolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">&rbrace;</span><br><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">sort</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> <span class="jskeywordcolor">return</span> <span class="jsvariablecolor">b</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">topSpeed</span> <span class="jsoperatorcolor">-</span> <span class="jsvariablecolor">a</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">topSpeed</span><span class="jsbracketcolor">;</span> <span class="jsbracketcolor">})</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">map</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">car</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> <span class="jskeywordcolor">return</span> <span class="jsstringcolor">"Car: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">"<br>Top Speed: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">topSpeed</span><span class="jsbracketcolor">;</span> <span class="jsbracketcolor">})</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">join</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"&lt;br&gt;&lt;br&gt;"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa133" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>compareFunction</b></i> - <b>Optional</b>. Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.<br>
+                                The function should return a negative, zero, or positive value, depending on the arguments</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The sorted array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4135" style="display: none;">
+                        <h5>splice()</h5>
+                        <p>The <code>splice()</code> method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</p>
+                        <div class="block-outer" data-result-id="demoa134" data-result-function="complex124">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.splice(<i>start</i>, <i>deleteCount</i>, <i>item1, item2, ...</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda RX-7"</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">"Honda NSX"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi Lancer Evolution"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">splice</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">4</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota 86"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Honda S2000"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa134" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>start</b></i> - <b>Required</b>. The index at which to start changing the array.</li>
+                            <li><i><b>deleteCount</b></i> - <b>Optional</b>. An integer indicating the number of old array elements to remove.</li>
+                            <li><i><b>item1, item2, ...</b></i> - <b>Optional</b>. The elements to add to the array, beginning at the start index.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>An array containing the deleted elements.</li>
                         </ul>
                     </div>
 
