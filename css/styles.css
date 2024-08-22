@@ -776,6 +776,39 @@ mark {
   flex-direction: row;
 }
 
+.date-cont {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.date-cont div span {
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 4px 6px 4px 6px;
+  border-radius: 6px;
+  background-color: #3d3d3d;
+  color: #fff;
+  font-family: monospace;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.date-cont div p {
+  margin-top: 6px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.date-cont div:last-child {
+  margin-right: 0;
+}
+
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {
   body {

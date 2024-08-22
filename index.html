@@ -71,6 +71,7 @@
                     <li><a href="#subsec48" onclick="openSection('subsec48'); openSection('section4')">JavaScript Strings</a></li>
                     <li><a href="#subsec49" onclick="openSection('subsec49'); openSection('section4')">JavaScript Numbers</a></li>
                     <li><a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')">JavaScript Arrays</a></li>
+                    <li><a href="#subsec411" onclick="openSection('subsec411'); openSection('section4')">JavaScript Dates</a></li>
                 </ul>
             </ul>
         </div>
@@ -10914,6 +10915,397 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </ul>
                     </div>
 
+                    <div id="example4136" style="display: none;">
+                        <h5>toReversed()</h5>
+                        <p>The <code>toReversed()</code> method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.</p>
+                        <div class="block-outer" data-result-id="demoa135" data-result-function="complex125">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.toReversed()</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numb</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">3</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">4</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">5</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">6</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">numb</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toReversed</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa135" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The reversed array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4137" style="display: none;">
+                        <h5>toSorted()</h5>
+                        <p>The <code>toSorted()</code> method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.</p>
+                        <p>The <code>toSorted()</code> method is the <b>copying version</b> of the <code>sort()</code> method. It does not overwrites the original array.</p>
+                        <div class="block-outer" data-result-id="demoa136" data-result-function="complex126">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.toSorted(compareFunction)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numb</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">3</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">4</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">5</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">3</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">3</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">8</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">9</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">numb</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toSorted</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> <span class="jskeywordcolor">return</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">-</span> <span class="jsvariablecolor">b</span><span class="jsbracketcolor">;</span> <span class="jsbracketcolor">})</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa136" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>compareFunction</b></i> - <b>Optional</b>. Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.<br>
+                                The function should return a negative, zero, or positive value, depending on the arguments</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The sorted array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4138" style="display: none;">
+                        <h5>toSpliced()</h5>
+                        <p>The <code>toSpliced()</code> method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</p>
+                        <p>The <code>toSpliced()</code> method is the <b>copying version</b> of the <code>splice()</code> method. It does not overwrites the original array.</p>
+                        <div class="block-outer" data-result-id="demoa137" data-result-function="complex127">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.toSpliced(<i>start</i>, <i>deleteCount</i>, <i>item1, item2, ...</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jscommentcolor">//at position 2, add "Lemon" and "Kiwi":</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toSpliced</span><span class="jsbracketcolor>(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Lemon"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Kiwi"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa137" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>start</b></i> - <b>Required</b>. The index at which to start changing the array.</li>
+                            <li><i><b>deleteCount</b></i> - <b>Optional</b>. An integer indicating the number of old array elements to remove.</li>
+                            <li><i><b>item1, item2, ...</b></i> - <b>Optional</b>. The elements to add to the array, beginning at the start index.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>An array containing the deleted elements.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4139" style="display: none;">
+                        <h5>toString()</h5>
+                        <p>The <code>toString()</code> method returns a string representing the specified array and its elements.</p>
+                        <div class="block-outer" data-result-id="demoa138" data-result-function="complex128">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.toString()</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa138" class="result"><span></span> </p>
+                        </div>
+                        <blockquote>
+                            <h5>Note</h5>
+                            <p>Every JavaScript object has a <code>toString()</code> method.</p>
+                            <p>The <code>toString()</code> method is used internally by JavaScript when an object needs to be displayed as a text (like in HTML), or when an object needs to be used as a string.</p>
+                        </blockquote>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A string representing the elements of the array.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4140" style="display: none;">
+                        <h5>unshift()</h5>
+                        <p>The <code>unshift()</code> method adds one or more elements to the beginning of an array and returns the new length of the array.</p>
+                        <p>The <code>unshift()</code> method overwrites the original array.</p>
+                        <div class="block-outer" data-result-id="demoa139" data-result-function="complex129">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.unshift(<i>element1, element2, ...</i>)</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">unshift</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Lemon"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Pineapple"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa139" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>element1, element2, ...</b></i> - <b>Optional</b>. The elements to add to the front of the array. Minimum is 1 item</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The new length property of the object upon which the method was called.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4141" style="display: none;">
+                        <h5>values()</h5>
+                        <p>The <code>values()</code> method returns a new array iterator object that contains the values for each index in the array.</p>
+                        <div class="block-outer" data-result-id="demoa140" data-result-function="complex130">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.values()</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">values</span><span class="jsbracketcolor>(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">"&lt;br&gt;"</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa140" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A new array iterator object.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4142" style="display: none;">
+                        <h5>valueOf()</h5>
+                        <p>The <code>valueOf()</code> method returns the primitive value of the specified object.</p>
+                        <div class="block-outer" data-result-id="demoa141" data-result-function="complex131">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.valueOf()</p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">valueOf</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa141" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The primitive value of the specified object.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4143" style="display: none;">
+                        <h5>with()</h5>
+                        <p>The <code>with()</code> method updates a specified array element.</p>
+                        <p>The <code>with()</code> method returns a new array and does not overwrites the original array.</p>
+                        <div class="block-outer" data-result-id="demoa142" data-result-function="complex132">
+                            <div class="block-cont pad6 hei60">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p>array.<i>with(index, value)</i></p>
+                                </div>
+                            </div>
+                            <div class="block-cont pad6">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Honda"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">cars</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor>(</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline GTR"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa142" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><i><b>index</b></i> - <b>Required</b>. The index of the element to add or update.</li>
+                            <li><i><b>value</b></i> - <b>Required</b>. The value to add or update.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The array with the added or updated element.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec411" onclick="toggleSection('subsec411')">JavaScript Dates</h3>
+        <div class="subsection" id="subsec411Content" style="display: none;">
+            <ul>
+                <li>JavaScript <b>Date Objects</b> let us work with dates.</li>
+                <b><li id="dateContainer"></li></b>
+                <li>It is also possible to call the year, month, day, hours, minutes, seconds, and milliseconds individually.</li>
+                <div class="date-cont">
+                    <div>
+                        <p>Day:</p>
+                        <span id="dayContainer"></span>
+                    </div>
+                    <div>
+                        <p>Month:</p>
+                        <span id="monthContainer"></span>
+                    </div>
+                    <div>
+                        <p>Date:</p>
+                        <span id="dateDayContainer"></span>
+                    </div>
+                    <div>
+                        <p>Year:</p>
+                        <span id="yearContainer"></span>
+                    </div>
+                    <div>
+                        <p>Hour:</p>
+                        <span id="hourContainer"></span>
+                    </div>
+                    <div>
+                        <p>Minute:</p>
+                        <span id="minuteContainer"></span>
+                    </div>
+                    <div>
+                        <p>Second:</p>
+                        <span id="secondContainer"></span> 
+                    </div>
+                    <div>
+                        <p>Millisecond:</p>
+                        <span id="millisecondContainer"></span>
+                    </div>
+                </div>
+                <li>There are 9 ways to create a new date object:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span></p>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor"><i>date string</i></span><span class="jsbracketcolor">)</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor"><i>year,month</i></span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor"><i>year,month,day</i></span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor"><i>year,month,day,hours</i></span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor"><i>year,month,day,hours,minutes</i></span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor"><i>year,month,day,hours,minutes,seconds</i></span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor"><i>year,month,day,hours,minutes,seconds,milliseconds</i></span><span class="jsbracketcolor">)</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">milliseconds</span><span class="jsbracketcolor">)</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li><code>new Date()</code> creates a date object with the <b>current date and time</b>:</li>
+                <div class="block-outer" data-result-id="demoa143" data-result-value="new Date()">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa143" class="result"><span></span> </p>
+                </div>
+                <li><code>new Date(<i>date string</i>)</code> creates a date object from a date string:</li>
+                <div class="block-outer" data-result-id="demoa144" data-result-value="new Date('2020-03-20')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'2020-03-20'</span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Mar 20 2020 08:00:00'</span><span class="jsbracketcolor">)</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa144" class="result"><span></span> </p>
                 </div>
 
             </ul>
@@ -10924,6 +11316,5 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
 
     <script src="js/script.js"></script> <!-- This is how to link external JavaScript file -->
-
 </body>
 </html>

@@ -1708,3 +1708,84 @@ function complex124() {
     myCar.splice(2, 4, "Toyota 86", "Honda S2000");
     return JSON.stringify(myCar);
 }
+
+function complex125() {
+    const numb = [1,2,3,4,5,6];
+    return numb.toReversed();
+}
+
+function complex126() {
+    const numb = [3,2,4,1,5,2,3,3,8,9];
+    return numb.toSorted(function(a, b){return a-b});
+}
+
+function complex127() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    //at position 2, add "Lemon" and "Kiwi":
+    return fruits.toSpliced(2,0, "Lemon", "Kiwi");
+}
+
+function complex128() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    return fruits.toString();
+}
+
+function complex129() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.unshift("Lemon", "Pineapple");
+    return fruits;
+}
+
+function complex130() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    let text = "";
+    for (let x of fruits.values()) {
+        text += x + "<br>";
+    }
+
+    return text;
+}
+
+function complex131() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    return fruits.valueOf();
+}
+
+function complex132() {
+    const cars = ["Toyota", "Subaru", "Nissan", "Mazda", "Honda", "Mitsubishi"];
+    const myCar = cars.with(0, "Toyota Supra").with(1, "Subaru BRZ").with(2, "Nissan Skyline GTR");
+
+    let text = "";
+    for (let i of myCar.values()) {
+        text += i + "<br>";
+    }
+    return text;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    function updateDateTime() {
+        const d = new Date();
+
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        const dayNames = [
+            "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ];
+        document.getElementById('dateContainer').textContent = d;
+        document.getElementById('yearContainer').textContent = d.getFullYear().toString();
+        document.getElementById('monthContainer').textContent = monthNames[d.getMonth()];
+        document.getElementById('dayContainer').textContent = dayNames[d.getDay()];
+        document.getElementById('dateDayContainer').textContent = d.getDate().toString();
+        document.getElementById('hourContainer').textContent = d.getHours().toString().padStart(2, '0');
+        document.getElementById('minuteContainer').textContent = d.getMinutes().toString().padStart(2, '0');
+        document.getElementById('secondContainer').textContent = d.getSeconds().toString().padStart(2, '0');
+        document.getElementById('millisecondContainer').textContent = d.getMilliseconds().toString().padStart(4, '0');
+    }
+
+    setInterval(updateDateTime, 1);
+    updateDateTime();
+});
