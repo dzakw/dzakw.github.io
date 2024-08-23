@@ -245,6 +245,21 @@ function generateList9() {
     });
 }
 
+function generateList10() {
+    const methods = [
+        "getFullYear()", "getMonth()", "getDate()", "getDay()", "getHours()", "getMinutes()", "getSeconds()", "getMilliseconds()",
+        "getTime()", "getTimezoneOffset()", "Date.now()"
+    ];
+
+    const ul = document.getElementById('threeColumn9');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example41${index + 44}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;
@@ -1775,6 +1790,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const dayNames = [
             "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
         ];
+        document.getElementById('dateContainer1').textContent = d;
         document.getElementById('dateContainer').textContent = d;
         document.getElementById('yearContainer').textContent = d.getFullYear().toString();
         document.getElementById('monthContainer').textContent = monthNames[d.getMonth()];

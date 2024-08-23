@@ -11308,6 +11308,430 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p id="demoa144" class="result"><span></span> </p>
                 </div>
 
+                <h5>Date Formats</h5>
+                <h6>JavaScript Date Input</h6>
+                <ul>
+                    <li>ISO Date: <code>2020-03-20</code> (The International Standard)</li>
+                    <li>Short Date: <code>03/20/2020</code></li>
+                    <li>Long Date: <code>Mar 20 2020</code> or <code>20 Mar 2020</code></li>
+                </ul>
+                <h6>JavaScript Date Output</h6>
+                <li>Independent of input format, JavaScript will (by default) output dates in full text string format:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p id="dateContainer1"></p>
+                        </div>
+                    </div>
+                </div>
+                <h6>JavaScript ISO Dates</h6>
+                <li>ISO 8601 is the international standard for the representation of dates and times.</li>
+                <li>The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:</li>
+                <div class="block-outer" data-result-id="demoa145" data-result-value="new Date('2020-03-20')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'2020-03-20'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa145" class="result"><span></span> </p>
+                </div>
+                <li>ISO Dates can be written with year, month, and day; or year and month only; or year only.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Full (YYYY-MM-DD)</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d1</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'2024-08-23'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Year and month (YYYY-MM)</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d2</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'2024-08'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Year only (YYYY)</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d3</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'2024'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>ISO Dates can also be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//Separate date and time with a capital T</span></p>
+                            <p><span class="commentcolor">//Indicate the time is UTC with a capital Z</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'2024-08-23T08:00:00Z'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>It is also possible to manually modify the time relative to UTC by adding or subtracting HH:MM like this:</li>
+                <div class="block-outer" data-result-id="demoa146" data-result-value="new Date('2024-08-23T08:00:00+02:00')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'2024-08-23T08:00:00+02:00'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa146" class="result"><span></span> </p>
+                </div>
+                <blockquote>
+                    <h6>Notes!</h6>
+                    <p>When setting and getting a date, without specifying the time zone, JavaScript will use the browser's time zone.</p>
+                    <p>In other words, a date without a time zone will create <b>a date with the user's local time zone</b>.</p>
+                </blockquote>
+                <h6>JavaScript Short and Long Dates</h6>
+                <li>Short dates are written with an "MM/DD/YYYY" syntax like this:</li>
+                <div class="block-outer" data-result-id="demoa147" data-result-value="new Date('08/23/2024')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'08/23/2024'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa147" class="result"><span></span> </p>
+                </div>
+                <li>Long dates are most often written with a "MMM DD YYYY" syntax like this:</li>
+                <div class="block-outer" data-result-id="demoa148" data-result-value="new Date('Aug 23 2024')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Aug 23 2024'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa148" class="result"><span></span> </p>
+                </div>
+                <li>Month and Day can be in any order, also month can be written in full (August) or abbreviated (Aug):</li>
+                <div class="block-outer" data-result-id="demoa149" data-result-value="new Date('23 August 2024')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'23 August 2024'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa149" class="result"><span></span> </p>
+                </div>
+                <h6>Date Input - Parsing Dates</h6>
+                <li>If you have a valid date string, you can use the <code>Date.parse()</code> method to convert it to milliseconds.</li>
+                <li>The <code>Date.parse()</code> method returns the number of milliseconds between the date and January 1, 1970.</li>
+                <div class="block-outer" data-result-id="demoa150" data-result-value="Date.parse('Aug 23, 2024')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">Date</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Aug 23, 2024'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa150" class="result"><span></span> </p>
+                </div>
+                <li>Vice versa, you can use the <code>new Date()</code> method to convert milliseconds to a date object:</li>
+                <div class="block-outer" data-result-id="demoa151" data-result-value="new Date(Date.parse('Aug 23, 2024'))">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1724342400000</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa151" class="result"><span></span> </p>
+                </div>
+
+                <h5>Date Get Methods</h5>
+                <li>In JavaScript, date objects are created with <code>new Date()</code>. It wil return a date object with current date and time.</li>
+
+                <ul class="threeColumn" id="threeColumn9">
+                </ul>
+                <br>
+
+                <div>
+                    <div id="example4144" style="display: none;">
+                        <h5>getFullYear() | getUTCFullyear</h5>
+                        <p>The <code>getFullYear()</code> method returns the year of the specified date as a four-digit number.</p>
+                        <p>The <code>getUTCFullYear()</code> method returns the year of the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa152" data-result-value="new Date().getFullYear()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getFullYear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa152" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4145" style="display: none;">
+                        <h5>getMonth() | getUTCMonth()</h5>
+                        <p>The <code>getMonth()</code> method returns the month of the specified date as a number (0-11).</p>
+                        <p>The <code>getUTCMonth()</code> method returns the month of the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa153" data-result-value="new Date().getMonth()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getMonth</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa153" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4146" style="display: none;">
+                        <h5>getDate() | getUTCDate()</h5>
+                        <p>The <code>getDate()</code> method returns the day of the month for the specified date as a number (1-31).</p>
+                        <p>The <code>getUTCDate()</code> method returns the day of the month for the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa154" data-result-value="new Date().getDate()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getDate</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa154" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4147" style="display: none;">
+                        <h5>getDay() | getUTCDay()</h5>
+                        <p>The <code>getDay()</code> method returns the day of the week for the specified date as a number (0-6).</p>
+                        <p>The <code>getUTCDay()</code> method returns the day of the week for the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa155" data-result-value="new Date().getDay()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getDay</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa155" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4148" style="display: none;">
+                        <h5>getHours() | getUTCHours()</h5>
+                        <p>The <code>getHours()</code> method returns the hour of the day for the specified date as a number (0-23).</p>
+                        <p>The <code>getUTCHours()</code> method returns the hour of the day for the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa156" data-result-value="new Date().getHours()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getHours</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa156" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4149" style="display: none;">
+                        <h5>getMinutes() | getUTCMinutes()</h5>
+                        <p>The <code>getMinutes()</code> method returns the minutes of the hour for the specified date as a number (0-59).</p>
+                        <p>The <code>getUTCMinutes()</code> method returns the minutes of the hour for the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa157" data-result-value="new Date().getMinutes()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getMinutes</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa157" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4150" style="display: none;">
+                        <h5>getSeconds() | getUTCSeconds()</h5>
+                        <p>The <code>getSeconds()</code> method returns the seconds of the minute for the specified date as a number (0-59).</p>
+                        <p>The <code>getUTCSeconds()</code> method returns the seconds of the minute for the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa158" data-result-value="new Date().getSeconds()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getSeconds</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa158" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4151" style="display: none;">
+                        <h5>getMilliseconds() | getUTCMilliseconds()</h5>
+                        <p>The <code>getMilliseconds()</code> method returns the milliseconds of the second for the specified date as a number (0-999).</p>
+                        <p>The <code>getUTCMilliseconds()</code> method returns the milliseconds of the second for the specified date according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa159" data-result-value="new Date().getMilliseconds()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getMilliseconds</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa159" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4152" style="display: none;">
+                        <h5>getTime() | getUTCTime()</h5>
+                        <p>The <code>getTime()</code> method returns the number of milliseconds since January 1, 1970.</p>
+                        <p>The <code>getUTCTime()</code> method returns the number of milliseconds since January 1, 1970, according to universal time.</p>
+                        <div class="block-outer" data-result-id="demoa160" data-result-value="new Date().getTime()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getTime</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa160" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4153" style="display: none;">
+                        <h5>getTimezoneOffset()</h5>
+                        <p>The <code>getTimezoneOffset()</code> method returns the time difference between UTC time and local time, in minutes.</p>
+                        <div class="block-outer" data-result-id="demoa161" data-result-value="new Date().getTimezoneOffset()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getTimezoneOffset</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa161" class="result"><span></span> </p>
+                            
+                        </div>
+                    </div>
+
+                    <div id="example4154" style="display: none;">
+                        <h5>Date.now()</h5>
+                        <p>The <code>Date.now()</code> method returns the number of milliseconds since January 1, 1970.</p>
+                        <div class="block-outer" data-result-id="demoa162" data-result-value="Date.now()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Date</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">now</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa162" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
             </ul>
         </div>
         
