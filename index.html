@@ -72,6 +72,7 @@
                     <li><a href="#subsec49" onclick="openSection('subsec49'); openSection('section4')">JavaScript Numbers</a></li>
                     <li><a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')">JavaScript Arrays</a></li>
                     <li><a href="#subsec411" onclick="openSection('subsec411'); openSection('section4')">JavaScript Dates</a></li>
+                    <li><a href="#subsec412" onclick="openSection('subsec412'); openSection('section4')">JavaScript Math</a></li>
                 </ul>
             </ul>
         </div>
@@ -11001,7 +11002,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                     <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
                                     <br>
                                     <p><span class="jscommentcolor">//at position 2, add "Lemon" and "Kiwi":</span></p>
-                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toSpliced</span><span class="jsbracketcolor>(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Lemon"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Kiwi"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toSpliced</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Lemon"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Kiwi"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                                 </div>
                                 <div class="block-btn-cont">
                                     <div class="block-run">
@@ -11116,7 +11117,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                     <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
                                     <br>
                                     <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
-                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">values</span><span class="jsbracketcolor>(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">values</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">"&lt;br&gt;"</span><span class="jsoperatorcolor">;</span></p>
                                     <p><span class="jsbracketcolor">}</span></p>
                                 </div>
@@ -11183,7 +11184,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <div class="block-cont pad6">
                                 <div class="block-bl">
                                     <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Toyota"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mazda"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Honda"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mitsubishi"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
-                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">cars</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor>(</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline GTR"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">cars</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Subaru BRZ"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">with</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Nissan Skyline GTR"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                                     <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">;</span></p>
                                 </div>
                                 <div class="block-btn-cont">
@@ -11482,8 +11483,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <h5>Date Get Methods</h5>
                 <li>In JavaScript, date objects are created with <code>new Date()</code>. It wil return a date object with current date and time.</li>
 
-                <ul class="threeColumn" id="threeColumn9">
-                </ul>
+                <ul class="threeColumn" id="threeColumn9"></ul>
                 <br>
 
                 <div>
@@ -11703,7 +11703,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                 </div>
                             </div>
                             <p id="demoa161" class="result"><span></span> </p>
-                            
+
                         </div>
                     </div>
 
@@ -11728,12 +11728,637 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
 
-
                 </div>
 
+                <h5>Date Set Methods</h5>
+                <li>In JavaScript, date objects are mutable. They can be changed after creation.</li>
+
+                <ul class="threeColumn" id="threeColumn10"></ul>
+                <br>
+
+                <div>
+                    <div id="example4155" style="display: none;">
+                        <h5>setFullYear()</h5>
+                        <p>The <code>setFullYear()</code> method sets the year of the specified date according to local time.</p>
+                        <div class="block-outer" data-result-id="demoa163" data-result-value="const d = new Date(); d.setFullYear(1999); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setFullYear</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1999</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa163" class="result"><span></span> </p>
+                        </div>
+                        <p>The <code>setFullYear()</code> method can optionally set month and day:</p>
+                        <div class="block-outer" data-result-id="demoa163a" data-result-value="const d = new Date('en-US', {timeZone: 'America/New_York'}); d.setFullYear(2001, 8, 11); d.setHours(08); d.setMinutes(46); d.setSeconds(40); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setFullYear</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2001</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">8</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">11</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa163a" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4156" style="display: none;">
+                        <h5>setMonth()</h5>
+                        <p>The <code>setMonth()</code> method sets the month of the specified date according to local time.</p>
+                        <div class="block-outer" data-result-id="demoa164" data-result-value="const d = new Date(); d.setMonth(0); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setMonth</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">0</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa164" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4157" style="display: none;">
+                        <h5>setDate()</h5>
+                        <p>The <code>setDate()</code> method sets the day of the month for the specified date according to local time.</p>
+                        <div class="block-outer" data-result-id="demoa165" data-result-value="const d = new Date(); d.setDate(15); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setDate</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">15</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa165" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4158" style="display: none;">
+                        <h5>setHours()</h5>
+                        <p>The <code>setHours()</code> method sets the hour of the day for the specified date according to local time.</p>
+                        <div class="block-outer" data-result-id="demoa166" data-result-value="const d = new Date(); d.setHours(12); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setHours</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">12</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa166" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4159" style="display: none;">
+                        <h5>setMinutes()</h5>
+                        <p>The <code>setMinutes()</code> method sets the minutes of the hour for the specified date according to local time.</p>
+                        <div class="block-outer" data-result-id="demoa167" data-result-value="const d = new Date(); d.setMinutes(30); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setMinutes</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">30</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa167" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4160" style="display: none;">
+                        <h5>setSeconds()</h5>
+                        <p>The <code>setSeconds()</code> method sets the seconds of the minute for the specified date according to local time.</p>
+                        <div class="block-outer" data-result-id="demoa168" data-result-value="const d = new Date(); d.setSeconds(30); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setSeconds</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">30</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa168" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4161" style="display: none;">
+                        <h5>setMilliseconds()</h5>
+                        <p>The <code>setMilliseconds()</code> method sets the milliseconds of the second for the specified date according to local time.</p>
+                        <div class="block-outer" data-result-id="demoa169" data-result-value="const d = new Date(); d.setMilliseconds(500); d.toISOString();">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setMilliseconds</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">500</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa169" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4162" style="display: none;">
+                        <h5>setTime()</h5>
+                        <p>The <code>setTime()</code> method sets the Date object to the time represented by a number of milliseconds since January 1, 1970.</p>
+                        <div class="block-outer" data-result-id="demoa170" data-result-value="const d = new Date(); d.setTime(696969696969); d;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setTime</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">696969696969</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa170" class="result"><span></span> </p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec412" onclick="toggleSection('subsec412')">JavaScript Math</h3>
+        <div class="subsection" id="subsec412Content" style="display: none;">
+            <ul>
+                <li>The JavaScript <code>Math</code> object provides properties and methods for mathematical constants and functions.</li>
+                <li><code>Math</code> is not a constructor and does not need to be instantiated; all its methods and properties are static.</li>
+                <li>It works with <code>Number</code> type but not <code>BigInt</code>.</li>
+                <li>For example, you use <code>Math.PI</code> for the constant π and <code>Math.sin(x)</code> for the sine function, where <code>x</code> is the argument.</li>
+
+                <h5>Math Properties</h5>
+                <li>The syntax for accessing the properties of the <code>Math</code> object is <code>Math.property</code>.</li>
+                <li>JavaScript provides 8 mathematical constants that can be accessed as Math properties:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns Euler's number</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">PI</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns PI</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">SQRT2</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;<span class="commentcolor">// returns the square root of 2</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">SQRT1_2</span><span class="jsoperatorcolor">;</span>&nbsp;<span class="commentcolor">// returns the square root of 1/2</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LN2</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the natural logarithm of 2</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LN10</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the natural logarithm of 10</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LOG2E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the base 2 logarithm of E</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LOG10E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;<span class="commentcolor">// returns the base 10 logarithm of E</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>Math Methods</h5>
+                <li>The syntax for math methods is <code>Math.method(number)</code>.</li>
+                
+                <ul class="threeColumn" id="threeColumn11"></ul>
+                <br>
+
+                <div>
+                    <div id="example4163" style="display: none;">
+                        <h5>Math.round()</h5>
+                        <p>The <code>Math.round(x)</code> method returns the value of <code>x</code> rounded to the nearest integer, either up or down.</p>
+                        <div class="block-outer" data-result-id="demoa171" data-result-value="Math.round(4.5)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">round</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4.7</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa171" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4164" style="display: none;">
+                        <h5>Math.ceil()</h5>
+                        <p>The <code>Math.ceil(x)</code> method returns the value of <code>x</code> rounded up to its nearest integer.</p>
+                        <div class="block-outer" data-result-id="demoa172" data-result-value="Math.ceil(4.1)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">ceil</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4.1</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa172" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4165" style="display: none;">
+                        <h5>Math.floor()</h5>
+                        <p>The <code>Math.floor(x)</code> method returns the value of <code>x</code> rounded down to its nearest integer.</p>
+                        <div class="block-outer" data-result-id="demoa173" data-result-value="Math.floor(4.9)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">floor</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4.9</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa173" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4166" style="display: none;">
+                        <h5>Math.trunc()</h5>
+                        <p>The <code>Math.trunc(x)</code> method returns the integer part of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa174" data-result-value="Math.trunc(-4.9)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">trunc</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">-4.9</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa174" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4167" style="display: none;">
+                        <h5>Math.sign()</h5>
+                        <p>The <code>Math.sign(x)</code> method returns the sign of the number <code>x</code>, indicating whether the number is positive, negative, or zero.</p>
+                        <div class="block-outer" data-result-id="demoa175" data-result-value="Math.sign(-4)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">sign</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">-4</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa175" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4168" style="display: none;">
+                        <h5>Math.pow()</h5>
+                        <p>The <code>Math.pow(x, y)</code> method returns the value of <code>x</code> to the power of <code>y</code>.</p>
+                        <div class="block-outer" data-result-id="demoa176" data-result-value="Math.pow(2, 8)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">pow</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">8</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa176" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4169" style="display: none;">
+                        <h5>Math.sqrt()</h5>
+                        <p>The <code>Math.sqrt(x)</code> method returns the square root of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa177" data-result-value="Math.sqrt(64)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">sqrt</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">64</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa177" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4170" style="display: none;">
+                        <h5>Math.abs()</h5>
+                        <p>The <code>Math.abs(x)</code> method returns the absolute value of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa178" data-result-value="Math.abs(-4.7)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">abs</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">-4.7</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa178" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4171" style="display: none;">
+                        <h5>Math.sin()</h5>
+                        <p>The <code>Math.sin(x)</code> method returns the sine of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa179" data-result-value="Math.sin(90 * Math.PI / 180)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">sin</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">90</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">PI</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa179" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4172" style="display: none;">
+                        <h5>Math.cos()</h5>
+                        <p>The <code>Math.cos(x)</code> method returns the cosine of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa180" data-result-value="Math.cos(0 * Math.PI / 180)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">cos</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">0</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">PI</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa180" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4173" style="display: none;">
+                        <h5>Math.tan()</h5>
+                        <p>The <code>Math.tan(x)</code> method returns the tangent of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa181" data-result-value="Math.tan(45 * Math.PI / 180)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">tan</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">45</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">PI</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa181" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4174" style="display: none;">
+                        <h5>Math.min()</h5>
+                        <p>The <code>Math.min()</code> method returns the smallest of zero or more numbers.</p>
+                        <div class="block-outer" data-result-id="demoa182" data-result-value="Math.min(0, 150, 30, 20, -8)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">min</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">150</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">30</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">20</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">-8</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa182" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4175" style="display: none;">
+                        <h5>Math.max()</h5>
+                        <p>The <code>Math.max()</code> method returns the largest of zero or more numbers.</p>
+                        <div class="block-outer" data-result-id="demoa183" data-result-value="Math.max(0, 150, 30, 20, -8)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">max</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">150</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">30</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">20</span><span class="jsoperatorcolor">,</span> <span class="jsnumbercolor">-8</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa183" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4176" style="display: none;">
+                        <h5>Math.random()</h5>
+                        <p>The <code>Math.random()</code> method returns a random number between 0 (inclusive) and 1 (exclusive).</p>
+                        <div class="block-outer" data-result-id="demoa184" data-result-value="Math.random()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">random</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa184" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4177" style="display: none;">
+                        <h5>Math.log()</h5>
+                        <p>The <code>Math.log(x)</code> method returns the natural logarithm (base E) of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa185" data-result-value="Math.log(2)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">log</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa185" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4178" style="display: none;">
+                        <h5>Math.log2()</h5>
+                        <p>The <code>Math.log2(x)</code> method returns the base 2 logarithm of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa186" data-result-value="Math.log2(8)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">log2</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">8</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa186" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4179" style="display: none;">
+                        <h5>Math.log10()</h5>
+                        <p>The <code>Math.log10(x)</code> method returns the base 10 logarithm of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa187" data-result-value="Math.log10(100)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">log10</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">100</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa187" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4180" style="display: none;">
+                        <h5>Math.exp()</h5>
+                        <p>The <code>Math.exp(x)</code> method returns <code>E</code> raised to the power of the number <code>x</code>.</p>
+                        <div class="block-outer" data-result-id="demoa188" data-result-value="Math.exp(1)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">exp</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa188" class="result"><span></span> </p>
+                        </div>
+                    </div>
+                </div>
 
             </ul>
         </div>
+        <hr>
         
     </div>
     <hr>

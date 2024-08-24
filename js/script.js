@@ -260,6 +260,37 @@ function generateList10() {
     });
 }
 
+function generateList11() {
+    const methods = [
+        "setFullYear()", "setMonth()", "setDate()", "setHours()", "setMinutes()", "setSeconds()", "setMilliseconds()",
+        "setTime()"
+    ];
+
+    const ul = document.getElementById('threeColumn10');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example41${index + 55}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList12() {
+    const methods = [
+        "Math.round()", "Math.ceil()", "Math.floor()", "Math.trunc()", "Math.sign()", "Math.pow()", 
+        "Math.sqrt()", "Math.abs()", "Math.sin()", "Math.cos()", "Math.tan()", "Math.min()", "Math.max()",
+        "Math.random()", "Math.log()", "Math.log2()", "Math.log10()", "Math.exp()"
+    ];
+
+    const ul = document.getElementById('threeColumn11');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example41${index + 63}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;
@@ -1805,3 +1836,9 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(updateDateTime, 1);
     updateDateTime();
 });
+
+function complex133() {
+    const d = new Date();
+    d.setFullYear(1999);
+    return d;
+}
