@@ -73,6 +73,7 @@
                     <li><a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')">JavaScript Arrays</a></li>
                     <li><a href="#subsec411" onclick="openSection('subsec411'); openSection('section4')">JavaScript Dates</a></li>
                     <li><a href="#subsec412" onclick="openSection('subsec412'); openSection('section4')">JavaScript Math</a></li>
+                    <li><a href="#subsec413" onclick="openSection('subsec413'); openSection('section4')">JavaScript Conditional</a></li>
                 </ul>
             </ul>
         </div>
@@ -11960,12 +11961,12 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <div class="block-bl">
                             <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns Euler's number</span></p>
                             <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">PI</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns PI</span></p>
-                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">SQRT2</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;<span class="commentcolor">// returns the square root of 2</span></p>
-                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">SQRT1_2</span><span class="jsoperatorcolor">;</span>&nbsp;<span class="commentcolor">// returns the square root of 1/2</span></p>
-                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LN2</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the natural logarithm of 2</span></p>
-                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LN10</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the natural logarithm of 10</span></p>
-                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LOG2E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the base 2 logarithm of E</span></p>
-                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LOG10E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;<span class="commentcolor">// returns the base 10 logarithm of E</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">SQRT2</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the square root of 2</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">SQRT1_2</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;<span class="commentcolor">// returns the square root of 1/2</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LN2</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the natural logarithm of 2</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LN10</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the natural logarithm of 10</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LOG2E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the base 2 logarithm of E</span></p>
+                            <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">LOG10E</span><span class="jsoperatorcolor">;</span>&nbsp;&nbsp;&nbsp;<span class="commentcolor">// returns the base 10 logarithm of E</span></p>
                         </div>
                     </div>
                 </div>
@@ -12269,6 +12270,71 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             </div>
                             <p id="demoa184" class="result"><span></span> </p>
                         </div>
+                        <ul>
+                            <li><code>Math.random()</code> used with <code>Math.floor()</code> can be used to return a random integer between two values.</li>
+                        </ul>
+                        <div class="block-outer" data-result-id="demoa184a" data-result-value="Math.floor(Math.random() * 10)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// returns a random integer between 0 and 9</span></p>
+                                    <p><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">floor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">random</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa184a" class="result"><span></span> </p>
+                        </div>
+                        <ul>
+                            <li>As seen above, Math.random can be used to generate random number between 2 integers. Thus it is a good idea to use Math.random() with Math.floor() to generate random integers.</li>
+                            <li>This function below always return a random number between min (included) and max (excluded):</li>
+                        </ul>
+                        <div class="block-outer" data-result-id="demoa184b" data-result-value="Math.floor(Math.random() * (1000 - 1) + 1)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">getRndInteger</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">min</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">max</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">floor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">random</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsbracketcolor">(</span><span class="jsnumbercolor">max</span> <span class="jsoperatorcolor">-</span> <span class="jsnumbercolor">min</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">min</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="commentcolor">// max = 1000 and min = 1</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa184b" class="result"><span></span> </p>
+                        </div>
+                        <ul>
+                            <li>This function below always return a random number between min and max (both included):</li>
+                        </ul>
+                        <div class="block-outer" data-result-id="demoa184c" data-result-value="Math.floor(Math.random() * (1000 - 1 + 1) + 1)">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">getRndInteger</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">min</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">max</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">floor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">Math</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">random</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsbracketcolor">(</span><span class="jsnumbercolor">max</span> <span class="jsoperatorcolor">-</span> <span class="jsnumbercolor">min</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">1</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">min</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="commentcolor">// max = 1000 and min = 1</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa184c" class="result"><span></span> </p>
+                        </div>
                     </div>
 
                     <div id="example4177" style="display: none;">
@@ -12356,9 +12422,234 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                 </div>
 
+                <h5>Boolean</h5>
+                <li>A JavaScript Boolean represents one of two values: <code>true</code> or <code>false</code>. Below is the syntax for a boolean variable:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>Boolean<span class="jsbracketcolor">(</span><i>value</i><span class="jsbracketcolor">)</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>This value can be a comparison, a variable, or any other value.</li>
+                <li>Everything with a "value" is true</li>
+                <li>Everything without a "value" is false</li>
+                <div class="block-outer" data-result-id="demoa189" data-result-value="Boolean(10 > 9)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">Boolean</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsnumbercolor">9</span><span class="jsbracketcolor">)</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa189" class="result"><span></span> </p>
+                </div>
+                <li>Booleans can also be defined as objects with the keyword <code>new</code></li>
+                <div class="block-outer" data-result-id="demoa190" data-result-value="let x = false; let y = new Boolean(false); 'typeof x: ' + typeof x + '&lt;br&gt;' + 'typeof y: ' + typeof y">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> x = <span class="jsbooleancolor">false</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> y = <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Boolean</span><span class="jsbracketcolor">(</span><span class="jsbooleancolor">false</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsstringcolor">'typeof x: '</span> <span class="jsoperatorcolor">+</span> <span class="jskeywordcolor">typeof</span> x <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'typeof y: '</span> <span class="jsoperatorcolor">+</span> <span class="jskeywordcolor">typeof</span> <span class="jskeywordcolor">y</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa190" class="result"><span></span> </p>
+                </div>
+                <blockquote>
+                    <h6>Note</h6>
+                    <p>Do not create Boolean objects. It slows down execution speed and also might incur an error as Boolean objects will behave as an object. Use booleans directly.</p>
+                </blockquote>
+
+                <h5>Ternary Operator <code>?</code></h5>
+                <li>The ternary operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the <code>if</code> statement.</li>
+                <li>Below is the syntax for the ternary operator:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><i>condition</i> <span class="jsoperatorcolor">?</span> <i>expressionIfTrue </i> <span class="jsoperatorcolor">:</span> <i>expressionIfFalse</i></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Below is an example of the ternary operator:</li>
+                <div class="block-outer" data-result-id="demoa191" data-result-function="complex134">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">20</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">voteable</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsnumbercolor">18</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">?</span> <span class="jsstringcolor">'Too young'</span> <span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Old enough'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">voteable</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa191" class="result"><span></span> </p>
+                </div>
+
+                <h5>Optional Chaining Operator <code>?.</code></h5>
+                <li>The optional chaining operator <code>?.</code> permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid.</li>
+                <li>It will return <code>undefined</code> rather than throwing an error if a reference is <code>null</code> or <code>undefined</code>.</li>
+                <div class="block-outer" data-result-id="demoa192" data-result-function="complex135">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jspropertycolor">type</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">'Fiat'</span><span class="jsoperatorcolor">,</span> <span class="jspropertycolor">model</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">'500'</span><span class="jsoperatorcolor">,</span> <span class="jspropertycolor">color</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">'white'</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">car</span><span class="jsoperatorcolor">?</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">name</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa192" class="result"><span></span> </p>
+                </div>
+
             </ul>
         </div>
         <hr>
+
+        <h3 class="subsection" id="subsec413" onclick="toggleSection('subsec413')">JavaScript Conditional</h3>
+        <div class="subsection" id="subsec413Content" style="display: none;">
+            <ul>
+                <li>Conditional statements are used to perform different actions based on different conditions.</li>
+                <li>JavaScript supports the following conditional statements:</li>
+                <ul>
+                    <li><strong><code>if</code> statement</strong> - executes a block of code if a specified condition is true</li>
+                    <li><strong><code>else</code> statement</strong> - executes a block of code if the same condition is false</li>
+                    <li><strong><code>else</code> if statement</strong> - specifies a new condition if the first condition is false</li>
+                    <li><strong><code>switch</code> statement</strong> - selects one of many code blocks to be executed</li>
+                </ul>
+
+                <h5><code>if</code> Statement</h5>
+                <li>The <code>if</code> statement executes a block of code JavaScript code to be executed if a condition is true.</li>
+                <li>The syntax for the <code>if</code> statement is as follows:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><i>condition</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if the condition is true</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Below is an example of the <code>if</code> statement to check if a person is old enough to vote:</li>
+                <div class="block-outer" data-result-id="demoa193" data-result-function="complex136">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">20</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsnumbercolor">18</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Old enough'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa193" class="result"><span></span> </p>
+                </div>
+                <li>Now what if the age is less than 18? We can use the <code>else</code> statement to specify a block of code to be executed if the condition is false.</li>
+                <li>Below is the syntax for the <code>else</code> statement:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><i>condition</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if the condition is true</span></p>
+                            <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if the condition is false</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Below is an example of the <code>if</code> and <code>else</code> statement to check if a person is old enough to vote:</li>
+                <div class="block-outer" data-result-id="demoa194" data-result-function="complex137">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">14</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsnumbercolor">18</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Old enough'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Too young'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa194" class="result"><span></span> </p>
+                </div>
+                <li>What if we want to check multiple conditions? We can use the <code>else if</code> statement to specify a new condition if the first condition is false.</li>
+                <li>Below is the syntax for the <code>else if</code> statement:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><i>condition1</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if condition1 is true</span></p>
+                            <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><i>condition2</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if the condition1 is false and condition2 is true</span></p>
+                            <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if the condition1 and condition2 are false</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Below is an example of the <code>if</code>, <code>else if</code>, and <code>else</code> statement to decide the price of a ticket based on the age of a person:</li>
+                <div class="block-outer" data-result-id="demoa195" data-result-function="complex138">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">8</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Ticket Price: Rp 25.000'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">&gt;=</span> <span class="jsnumbercolor">2</span> <span class="jsoperatorcolor">&amp;&amp;</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsnumbercolor">14</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Ticket Price: Rp 35.000'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">'Ticket Price: Rp 60.000'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa195" class="result"><span></span> </p>
+                </div>
+            </ul>
+        </div>
         
     </div>
     <hr>

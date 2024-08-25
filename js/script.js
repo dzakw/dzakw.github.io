@@ -1842,3 +1842,45 @@ function complex133() {
     d.setFullYear(1999);
     return d;
 }
+
+function complex134() {
+    let age = 20;
+    let voteable = (age < 18) ? 'Too young' : 'Old enough';
+    return voteable;
+}
+
+function complex135() {
+    const car = {type:"Fiat", model:"500", color:"white"};
+    let name = car?.name;
+    return name;
+}
+
+function complex136() {
+    let age = 20;
+    if (age > 18) {
+        return "Old enough";
+    }
+}
+
+function complex137() {
+    let age = 14;
+    if (age > 18) {
+        return "Old enough";
+    }
+    else {
+        return "Too young";
+    }
+}
+
+function complex138() {
+    let age = 8;
+    if (age < 2) {
+        return "Ticket Price: Rp 25.000";
+    }
+    else if (age >= 2 && age < 14) {
+        return "Ticket Price: Rp 35.000";
+    }
+    else {
+        return "Ticket Price: Rp 60.000";
+    }
+}
