@@ -571,6 +571,14 @@ p {
   padding: 6px;
 }
 
+.hei40 {
+  height: 40px;
+}
+
+.hei50 {
+  height: 50px;
+}
+
 .hei60 {
   height: 60px;
 }

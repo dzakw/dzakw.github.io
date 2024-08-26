@@ -74,6 +74,7 @@
                     <li><a href="#subsec411" onclick="openSection('subsec411'); openSection('section4')">JavaScript Dates</a></li>
                     <li><a href="#subsec412" onclick="openSection('subsec412'); openSection('section4')">JavaScript Math</a></li>
                     <li><a href="#subsec413" onclick="openSection('subsec413'); openSection('section4')">JavaScript Conditional</a></li>
+                    <li><a href="#subsec414" onclick="openSection('subsec414'); openSection('section4')">JavaScript Loops</a></li>
                 </ul>
             </ul>
         </div>
@@ -12648,6 +12649,392 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa195" class="result"><span></span> </p>
                 </div>
+
+                <h5><code>switch</code> Statement</h5>
+                <li>The <code>switch</code> statement is used to perform different actions based on different conditions.</li>
+                <li>It is often used as an alternative to the <code>if</code> statement.</li>
+                <li>Below is the syntax for the <code>switch</code> statement:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">switch</span> <span class="jsbracketcolor">(</span><i>expression</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <i>value1</i><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if expression is value1</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <i>value2</i><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if expression is value2</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">default</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed if expression is different from value1 and value2</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>This is how Switch statements works:</li>
+                <ul>
+                    <li>The <code>switch</code> expression is evaluated once.</li>
+                    <li>The value of the expression is compared with the values of each <code>case</code> in the structure.</li>
+                    <li>If there is a match, the associated block of code is executed.</li>
+                    <li>If there is no match, the <code>default</code> block is executed.</li>
+                    <li>The <code>break</code> statement is used to break out of the switch block.</li>
+                </ul>
+                <li>Below is an example of the <code>switch</code> statement to return the name of a day based on the day number:</li>
+                <div class="block-outer" data-result-id="demoa196" data-result-function="complex139">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">day</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">switch</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getDay</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">0</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Minggu'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">1</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Senin'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">2</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Selasa'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">3</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Rabu'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">4</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Kamis'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">5</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Jumat'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">6</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Sabtu'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsvariablecolor">day</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa196" class="result"><span></span> </p>
+                </div>
+                <h6>The break Keyword</h6>
+                <li>When JavaScript reaches a <code>break</code> keyword, it breaks out of the switch block.</li>
+                <li>This will stop the execution of more code and case testing inside the block.</li>
+                <li>That mean, if you omit the break statement, the next case will be executed anyway even if the evaluation does not match the case</li>
+                <li>It is not necessary to break the last case in a switch block, as the block breaks (ends) there anyway</li>
+                <h6>The default Keyword</h6>
+                <li>The <code>default</code> keyword specifies some code to run if there is no case match.</li>
+                <li>There can only be one default keyword in a switch block.</li>
+                <li>Although this is optional, it is recommended that you use it, as it takes care of unexpected cases.</li>
+                <li>The <code>default</code> keyword doesnt have to be the last case in a switch block.</li>
+                <li>It is also possible to have a common code block to make more than one case to share the same code block like this:</li>
+                <div class="block-outer" data-result-id="demoa197" data-result-function="complex140">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">day</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">switch</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getDay</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">0</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'It\'s weekend. yaaayy!!'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">5</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">case</span> <span class="jsnumbercolor">6</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Weekend soon'</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">default</span><span class="jscoloncolor">:</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">day</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'go to work go to work go to work'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsvariablecolor">day</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa197" class="result"><span></span> </p>
+                </div>
+                <blockquote>
+                    <h6>Note</h6>
+                    <p>If multiple cases matches a case value, the <b>first</b> case is selected</p>
+                    <p>If no matching cases are found, the program will continue to the <b>default</b> label</p>
+                    <p>If no default label is found, the program will continue to the statement <b>after the switch</b></p>
+                </blockquote>
+                <li>The Switch case use strict comparison (===). The values must be of the same type to match.</li>
+                <li>This mean, if the value is <code>1</code>, the case <code>'1'</code> will not match</li>
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec414" onclick="toggleSection('subsec414')">JavaScript Loops</h3>
+        <div class="subsection" id="subsec414Content" style="display: none;">
+            <ul>
+                <li>Loops are used to execute the same block of code a specified number of times or while a specified condition is true.</li>
+                <li>For this subsection, below is the const that will be used as example:</li>
+                <div class="block-outer">
+                    <div class="block-cont hei50">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'Toyota Supra'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Subaru BRZ'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Nissan Skyline'</span><span class="jsoperatorcolor">,</span><br><span class="jsstringcolor">'Mazda RX-7'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Honda NSX'</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">'Mitsubishi Lancer Evolution'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jscoloncolor">:</span> <span class="jsstringcolor">'Toyota Supra'</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jscoloncolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">,</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jscoloncolor">:</span> <span class="jsstringcolor">'Subaru BRZ'</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jscoloncolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">,</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jscoloncolor">:</span> <span class="jsstringcolor">'Nissan Skyline'</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jscoloncolor">:</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">,</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jscoloncolor">:</span> <span class="jsstringcolor">'Mazda RX-7'</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jscoloncolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">,</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jscoloncolor">:</span> <span class="jsstringcolor">'Honda NSX'</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jscoloncolor">:</span> <span class="jsnumbercolor">170</span><span class="jsbracketcolor">,</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jscoloncolor">:</span> <span class="jsstringcolor">'Mitsubishi Lancer Evolution'</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jscoloncolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jsvariablecolor">car</span><span class="jscoloncolor">:</span> <span class="jsstringcolor">'Subaru BRZ'</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jscoloncolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <ul class="threeColumn" id="threeColumn12"></ul>
+                <br>
+
+                <div>
+                    <div id="example4181" style="display: none;">
+                        <h5>For Loop</h5>
+                        <li>The <code>for</code> loop is used when you know in advance how many times the code should run.</li>
+                        <li>The syntax for the <code>for</code> loop is as follows:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><i>initialization</i><span class="jssemicoloncolor">;</span> <i>condition</i><span class="jssemicoloncolor">;</span> <i>increment</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of the <code>for</code> loop to print a reversed pyramid of stars:</li>
+                        <div class="block-outer" data-result-id="demoa198" data-result-function="complex141">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa198" class="result"><span></span> </p>
+                        </div>
+                        
+                        <h6>The Initialization Statement</h6>
+                        <li>The initialization statement is executed one time before the execution of the code block.</li>
+                        <li>This statement is actually optional, and can even be many values separated by commas like this:</li>
+                        <div class="block-outer" data-result-id="demoa199" data-result-function="complex142">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">len</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">len</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">len</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa199" class="result"><span></span> </p>
+                        </div>
+                        <li>It is also possible to omit the initialization statement, but you must declare the variable before the loop like this:</li>
+                        <div class="block-outer" data-result-id="demoa200" data-result-function="complex143">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jsbracketcolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa200" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>The Condition Statement</h6>
+                        <li>The condition statement is evaluated before each iteration of the loop.</li>
+                        <li>If the condition is true, the block of code inside the loop will be executed. If it is false, the loop will be terminated.</li>
+                        <li>It should be noted that the condition statement is optional. If omitted, you must provide a <b>break</b> inside the loop. Otherwise the loop will run forever.</li>
+                        <div class="block-outer" data-result-id="demoa201" data-result-function="complex144">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span> <span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&gt;=</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa201" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>The Increment Statement</h6>
+                        <li>The increment statement is executed every time after the code block has been executed.</li>
+                        <li>The increment statement can be any valid JavaScript statement, including a negative increment, or even a JavaScript function call.</li>
+                        <li>It is also possible to omit the increment statement, but you must provide a way to break the loop inside the block like this:</li>
+                        <div class="block-outer" data-result-id="demoa202" data-result-function="complex145">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jssemicoloncolor">;</span><span class="jssemicoloncolor">;</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&gt;=</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa202" class="result"><span></span> </p>
+                        </div>
+
+                    </div>
+
+                    <div id="example4182" style="display: none;">
+                        <h5>For In</h5>
+                        <li>The JavaScript <code>for in</code> statement loops through the properties of an Object</li>
+                        <li>The syntax for the <code>for in</code> loop is as follows:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span> <i>key</i> <span class="jskeywordcolor">in</span> <i>object</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of the <code>for in</code> loop to print the properties of an object:</li>
+                        <div class="block-outer" data-result-id="demoa203" data-result-function="complex146">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jskeywordcolor">in</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">number</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">parseInt</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">1</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">number</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'.</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">car</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' with a top speed of '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">topSpeed</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' mph&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa203" class="result"><span></span> </p>
+                        </div>
+                        <li>The <b>for in</b> loop iterates over the object</li>
+                        <li>Each iteration returns a <b>key</b> (i)</li>
+                        <li>The key then used to access the <b>value</b> of the key</li>
+                        <li>The value of the key is <b>object[i]</b></li>
+
+                        <h6>For In Over Arrays</h6>
+                        <li>It is possible to use For In over arrays, but it is better to just use <b>for</b> loop, <b>for of</b>, or <b>Array.forEach()</b> method. Especially when the index order is important</li>
+                        <li>Below is the syntax to use <b>for in</b> over arrays:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><i>variable</i> <span class="jskeywordcolor">in</span> <i>array</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h6>Array.forEach()</h6>
+                        <li>The <b>forEach()</b> method calls a function once for each element in an array, in order.</li>
+                        <li>The syntax for the <b>forEach()</b> method is as follows:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">array</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><i>function</i><span class="jsbracketcolor">(</span><i>currentValue</i><span class="jscomma">,</span> <i>index</i><span class="jscomma">,</span> <i>array</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of the <b>forEach()</b> method:</li>
+                        <div class="block-outer" data-result-id="demoa204" data-result-function="complex147">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><i>myFunc</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsvariablecolor">myFunc</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jscomma">,</span> <span class="jsvariablecolor">index</span><span class="jscomma">,</span> <span class="jsvariablecolor">array</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa204" class="result"><span></span> </p>
+                        </div>
+
+                    </div>
+                </div>
+                
             </ul>
         </div>
         

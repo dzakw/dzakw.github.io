@@ -291,6 +291,20 @@ function generateList12() {
     });
 }
 
+function generateList13() {
+    const methods = [
+        "Loop For", "Loop For In", "Loop For Of", "Loop While"
+    ];
+
+    const ul = document.getElementById('threeColumn12');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example41${index + 81}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;
@@ -1883,4 +1897,133 @@ function complex138() {
     else {
         return "Ticket Price: Rp 60.000";
     }
+}
+
+function complex139() {
+    let day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Minggu";
+            break;
+        case 1:
+            day = "Senin";
+            break;
+        case 2:
+            day = "Selasa";
+            break;
+        case 3:
+            day = "Rabu";
+            break;
+        case 4:
+            day = "Kamis";
+            break;
+        case 5:
+            day = "Jumat";
+            break;
+        case 6:
+            day = "Sabtu";
+    }
+    return day;
+}
+
+function complex140() {
+    let day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "It's weekend. yaaayy!!";
+            break;
+        case 5:
+        case 6:
+            day = "Weekend soon";
+            break;
+        default:
+            day = "go to work go to work go to work";
+    }
+    return day;
+}
+
+function complex141() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let text = "";
+    for (let i = 0; i < myCar.length; i++) {
+        text += myCar[i] + "<br>";
+    }
+    return text;
+}
+
+function complex142() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let i, len, text;
+    
+    for (i = 0, len = myCar.length, text = ""; i < len; i++) {
+        text += myCar[i] + "<br>";
+    }
+    
+    return text;
+}
+
+function complex143() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let i = 0;
+    let text = "";
+    
+    for (; i < myCar.length; i++) {
+        text += myCar[i] + "<br>";
+    }
+    
+    return text;
+}
+
+function complex144() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let text = '';
+    for (let i = 0; ; i++) {
+        if (i >= myCar.length) break;
+        text += myCar[i] + '<br>';
+    }
+    return text;
+}
+
+function complex145() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let text = "";
+    
+    let i = 0;
+    for (;;) {
+        if (i >= myCar.length) {
+            break;
+        }
+        text += myCar[i] + "<br>";
+        i++;
+    }
+    return text;
+}
+
+function complex146() {
+    const myCar = [
+        {car: "Toyota Supra", topSpeed: 155 },
+        {car: "Nissan Skyline", topSpeed: 180 },
+        {car: "Mazda RX-7", topSpeed: 155 },
+        {car: "Honda NSX", topSpeed: 170 },
+        {car: "Mitsubishi Lancer Evolution", topSpeed: 155 },
+        {car: "Subaru BRZ", topSpeed: 155 },
+    ];
+
+    let text = "";
+    for (let i in myCar) {
+        let number = parseInt(i) + 1;
+        text += number + ". " + myCar[i].car + " with a top speed of " + myCar[i].topSpeed + " mph<br>";
+    }
+    return text;
+}
+
+function complex147() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let txt = "";
+
+    myCar.forEach(myFunc);
+    function myFunc(value, index, array) {
+        txt += value + "<br>";
+    }
+    return txt;
 }
