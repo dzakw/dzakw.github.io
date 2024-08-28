@@ -75,6 +75,7 @@
                     <li><a href="#subsec412" onclick="openSection('subsec412'); openSection('section4')">JavaScript Math</a></li>
                     <li><a href="#subsec413" onclick="openSection('subsec413'); openSection('section4')">JavaScript Conditional</a></li>
                     <li><a href="#subsec414" onclick="openSection('subsec414'); openSection('section4')">JavaScript Loops</a></li>
+                    <li><a href="#subsec415" onclick="openSection('subsec415'); openSection('section4')">JavaScript Set and Map</a></li>
                 </ul>
             </ul>
         </div>
@@ -11003,7 +11004,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                 <div class="block-bl">
                                     <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Banana"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Orange"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Apple"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Mango"</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
                                     <br>
-                                    <p><span class="jscommentcolor">//at position 2, add "Lemon" and "Kiwi":</span></p>
+                                    <p><span class="commentcolor">//at position 2, add "Lemon" and "Kiwi":</span></p>
                                     <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toSpliced</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsoperatorcolor">,</span><span class="jsnumbercolor">0</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Lemon"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Kiwi"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
                                 </div>
                                 <div class="block-btn-cont">
@@ -13033,8 +13034,657 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
 
                     </div>
+
+                    <div id="example4183" style="display: none;">
+                        <h5>For Of</h5>
+                        <li>The <b>for of</b> statement loops through the values of an iterable object such as Arrays, Strings, Maps, NodeLists, and more.</li>
+                        <li>The syntax for the <b>for of</b> loop is as follows:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span> <i>variable</i> <span class="jskeywordcolor">of</span> <i>iterable</i><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of the <b>for of</b> loop to print the values of an array:</li>
+                        <div class="block-outer" data-result-id="demoa205" data-result-function="complex148">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa205" class="result"><span></span> </p>
+                        </div>
+                        <li>It can also be used to loop over string like this:</li>
+                        <div class="block-outer" data-result-id="demoa206" data-result-function="complex149">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Toyota Supra'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numb</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'First'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Second'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Third'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Fourth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Fifth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Sixth'</span><span class="jscomma">,</span><br><span class="jsstringcolor">'Seventh'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Eighth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Ninth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Tenth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Eleventh'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Twelfth'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">index</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">===</span> <span class="jsstringcolor">' '</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">continue</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">numb</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">index</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' letter is: '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">index</span><span class="jsoperatorcolor">++</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa206" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4184" style="display: none;">
+                        <h5>While</h5>
+                        <li>The <b>while</b> statement creates a loop that executes a specified statement as long as the test condition evaluates to true.</li>
+                        <li>The syntax for the <b>while</b> loop is as follows:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">while</span> <span class="jsbracketcolor">(</span> <i>condition</i> <span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of the <b>while</b> loop:</li>
+                        <div class="block-outer" data-result-id="demoa207" data-result-function="complex150">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">while</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa207" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>do while loop</h6>
+                        <li>The <b>do while</b> statement creates a loop that executes a specified statement until the test condition evaluates to false.</li>
+                        <li>The syntax for the <b>do while</b> loop is as follows:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">do</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// block of code to be executed</span></p>
+                                    <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">while</span> <span class="jsbracketcolor">(</span> <i>condition</i> <span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of the <b>do while</b> loop:</li>
+                        <div class="block-outer" data-result-id="demoa208" data-result-function="complex151">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">do</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">while</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt</span><span class="jsoperatorcolor">;</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa208" class="result"><span></span> </p>
+                        </div>
+                        <li>For loop and while loop are similar, generally what can be done using while loop can also be done using for loop and vice versa.</li>
+                    </div>
+
+                    <div id="example4185" style="display: none;">
+                        <h5>Break and Continue</h5>
+                        <li>The <b>break</b> statement "jumps out" of a loop.</li>
+                        <li>The <b>continue</b> statement "jumps over" one iteration in the loop.</li>
+                        <li>Below is an example of the <b>break</b> statement:</li>
+                        <div class="block-outer" data-result-id="demoa209" data-result-function="complex152">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">===</span> <span class="jsnumbercolor">3</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa209" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>Continue Statement</h6>
+                        <li>The <b>continue</b> statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</li>
+                        <li>Below example will skip the value of 3:</li>
+                        <div class="block-outer" data-result-id="demoa210" data-result-function="complex153">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">length</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">===</span> <span class="jsnumbercolor">3</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">continue</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa210" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4186" style="display: none;">
+                        <h5>Iterables</h5>
+                        <li>Iterables are iterable objects that can be looped over using <b>for of</b> loop</li>
+                        <li>Iterating means looping over a sequence of elements.</li>
+
+                        <h6>Iterating over a String</h6>
+                        <li>Strings are iterable objects, which means they can be looped over using <b>for of</b> loop</li>
+                        <li>Below is an example of iterating over a string:</li>
+                        <div class="block-outer" data-result-id="demoa211" data-result-function="complex154">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Toyota Supra'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numb</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'First'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Second'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Third'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Fourth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Fifth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Sixth'</span><span class="jscomma">,</span><br><span class="jsstringcolor">'Seventh'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Eighth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Ninth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Tenth'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Eleventh'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Twelfth'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">index</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">===</span> <span class="jsstringcolor">' '</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">continue</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">numb</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">index</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' letter is: '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">index</span><span class="jsoperatorcolor">++</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa211" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>Iterating over an Array</h6>
+                        <li>Arrays are iterable objects, which means they can be looped over using <b>for of</b> loop</li>
+                        <li>Below is an example of iterating over an array:</li>
+                        <div class="block-outer" data-result-id="demoa212" data-result-function="complex155">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'T'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'y'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">' '</span><span class="jscomma">,</span> <span class="jsstringcolor">'S'</span><span class="jscomma">,</span> <span class="jsstringcolor">'u'</span><span class="jscomma">,</span> <span class="jsstringcolor">'p'</span><span class="jscomma">,</span> <span class="jsstringcolor">'r'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa212" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>Iterating over a Set</h6>
+                        <li>Sets are iterable objects, which means they can be looped over using <b>for of</b> loop</li>
+                        <li>Below is an example of iterating over a set:</li>
+                        <div class="block-outer" data-result-id="demoa213" data-result-function="complex156">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'T'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'y'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">' '</span><span class="jscomma">,</span> <span class="jsstringcolor">'S'</span><span class="jscomma">,</span> <span class="jsstringcolor">'u'</span><span class="jscomma">,</span> <span class="jsstringcolor">'p'</span><span class="jscomma">,</span> <span class="jsstringcolor">'r'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa213" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>Iterating over a Map</h6>
+                        <li>Maps are iterable objects, which means they can be looped over using <b>for of</b> loop</li>
+                        <li>Below is an example of iterating over a map:</li>
+                        <div class="block-outer" data-result-id="demoa214" data-result-function="complex157">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jskeywordcolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Toyota Supra'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Nissan Skyline'</span><span class="jscomma">,</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Mazda RX-7'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Honda NSX'</span><span class="jscomma">,</span> <span class="jsnumbercolor">170</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Mitsubishi Lancer Evolution'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Subaru BRZ'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsbracketcolor">[</span><span class="jsvariablecolor">car</span><span class="jscomma">,</span> <span class="jsvariablecolor">topSpeed</span><span class="jsbracketcolor">]</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">txt</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">': '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">topSpeed</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' mph&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">txt</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa214" class="result"><span></span> </p>
+                        </div>
+
+                        <h6>JavaScript Iterators</h6>
+                        <li>Iterators are objects that define how to produce a <b>sequence of values</b> from an object</li>
+                        <li>An object becomes an <b>iterator</b> when it implements the <b>next()</b> method</li>
+                        <li>The <b>next()</b> method returns an object with two properties:</li>
+                        <ul>
+                            <li><b>value</b> - the next value in the sequence</li>
+                            <li><b>done</b> - 	true if the iterator has completed; false if the iterator has produced a new value</li>
+                        </ul>
+                        <li>Below iterable returns never ending: 10, 20, 30,... Everytime <code>next()</code> is called:</li>
+                        <div class="block-outer" data-result-id="demoa215" data-result-function="complex159">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">next</span><span class="jsoperatorcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">+=</span> <span class="jsnumbercolor">10</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">{</span><span class="jspropertycolor">value</span><span class="jsoperatorcolor">:</span><span class="jsvariablecolor">n</span><span class="jscomma">,</span> <span class="jspropertycolor">done</span><span class="jsoperatorcolor">:</span><span class="jskeywordcolor">false</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">myNumber</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">next</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">', '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">next</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">', '</span><br><span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">next</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">', '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">next</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">', '</span><br><span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">next</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">', '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">n</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">next</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">value</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa215" class="result"><span></span> </p>
+                        </div>
+                        <li>It is to be noted that JavaScript <code>for..of</code> doesnt work in this kind of iterables.</li>
+                        <li>A JavaScript iterable has a <code>Symbol.iterator</code>. This is a function that returns a <code>next()</code> function.</li>
+                        <li>An iterable can be iterated over with the code: <code>for (const x of iterable) {}</code></li>
+                        <div class="block-outer" data-result-id="demoa216" data-result-function="complex160">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myNumbers</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jspropertycolor">[Symbol.iterator]</span><span class="jsoperatorcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">done</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">false</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">next</span><span class="jsoperatorcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">+=</span> <span class="jsnumbercolor">10</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">==</span> <span class="jsnumbercolor">100</span><span class="jsbracketcolor">)</span> <span class="jsvariablecolor">done</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">true</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">{</span> <span class="jspropertycolor">value</span><span class="jsoperatorcolor">:</span> <span class="jsvariablecolor">n</span><span class="jscomma">,</span> <span class="jspropertycolor">done</span><span class="jsoperatorcolor">:</span> <span class="jsvariablecolor">done</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">num</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myNumbers</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa216" class="result"><span></span> </p>
+                        </div>
+                        <li>The <code>Symbol.iterator</code> method is called automatically by <code>for..of</code> loop. But it can also be called manually.</li>
+                        <div class="block-outer" data-result-id="demoa217" data-result-function="complex161">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myNumbers</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="commentcolor">// Make it Iterable</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jspropertycolor">[Symbol.iterator]</span><span class="jsoperatorcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">done</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">false</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">next</span><span class="jsoperatorcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">+=</span> <span class="jsnumbercolor">10</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">n</span> <span class="jsoperatorcolor">==</span> <span class="jsnumbercolor">100</span><span class="jsbracketcolor">)</span> <span class="jsvariablecolor">done</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">true</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">{</span> <span class="jspropertycolor">value</span><span class="jsoperatorcolor">:</span> <span class="jsvariablecolor">n</span><span class="jscomma">,</span> <span class="jspropertycolor">done</span><span class="jsoperatorcolor">:</span> <span class="jsvariablecolor">done</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Create an Iterator</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">iterator</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myNumbers</span><span class="jsbracketcolor>[Symbol.iterator]</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Iterate and build the text</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">while</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">true</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">iterator</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">next</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">result</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">done</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">break</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">result</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Return the result</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa217" class="result"><span></span> </p>
+                        </div>
+                        
+                    </div>
                 </div>
-                
+
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec415" onclick="toggleSection('subsec415')">JavaScript Set and Map</h3>
+        <div class="subsection" id="subsec415Content" style="display: none;">
+            <ul>
+                <h5>JavaScript Set</h5>
+                <li>Set is a collection of unique values</li>
+                <li>Each value can only occur once in a Set</li>
+                <li>A JavaScript Set can be created by:</li>
+                <ul>
+                    <li>Using the <code>new Set()</code> constructor</li>
+                    <li>Create a Set and use <code>add()</code> to add values</li>
+                </ul>
+                <li>Below is an example of creating a Set, by passing an Array to the <code>new Set()</code> constructor:</li>
+                <div class="block-outer" data-result-id="demoa218" data-result-value="const letters = new Set(['a', 'b', 'c']); 'The new set has ' + letters.size + ' values.';">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsstringcolor">'The new set has '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' values.'</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa218" class="result"><span></span> </p>
+                </div>
+                <li>Below is an example of creating a Set, by using the <code>add()</code> method:</li>
+                <div class="block-outer" data-result-id="demoa219" data-result-value="const letters = new Set(); letters.add('a'); letters.add('b'); letters.add('c'); 'The new set has ' + letters.size + ' values.';">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">()</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'a'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'b'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'c'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsstringcolor">'The new set has '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' values.'</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa219" class="result"><span></span> </p>
+                </div>
+                <li>To list all Set elements (values), you can use the <code>for..of</code> loop:</li>
+                <div class="block-outer" data-result-id="demoa220" data-result-function="complex162">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Create a Set</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// List all Elements</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">letters</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa220" class="result"><span></span> </p>
+                </div>
+
+                <br>
+                <li>JavaScript Set itself has some methods and properties:</li>
+                <ul class="threeColumn" id="threeColumn13"></ul>
+                <br>
+
+                <div>
+                    <div id="example4187" style="display: none;">
+                        <h5>new Set</h5>
+                        <li>The <code>new Set()</code> constructor creates a Set object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">(</span><i>iterable</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of creating a Set:</li>
+                        <div class="block-outer" data-result-id="demoa221" data-result-value="const letters = new Set(['a', 'b', 'c']); 'The new set has ' + letters.size + ' values.';">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsstringcolor">'The new set has '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' values.'</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa221" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>iterable</b> - <b>Required</b> An Array or other iterable object whose elements are added to the new Set</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A new Set object</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4188" style="display: none;">
+                        <h5>add()</h5>
+                        <li>The <code>add()</code> method adds a new element with a specified value to a Set object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><i>value</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of adding a value to a Set:</li>
+                        <div class="block-outer" data-result-id="demoa222" data-result-value="const letters = new Set(); letters.add('a'); letters.add('b'); letters.add('c'); 'The new set has ' + letters.size + ' values.';">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">()</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'a'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'b'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'c'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsstringcolor">'The new set has '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' values.'</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa222" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4189" style="display: none;">
+                        <h5>clear()</h5>
+                        <li>The <code>clear()</code> method removes all elements from a Set object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">clear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of clearing a Set:</li>
+                        <div class="block-outer" data-result-id="demoa223" data-result-value="const letters = new Set(['a', 'b', 'c']); letters.clear(); 'The new set has ' + letters.size + ' values.';">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">clear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsstringcolor">'The new set has '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' values.'</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa223" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4190" style="display: none;">
+                        <h5>delete()</h5>
+                        <li>The <code>delete()</code> method removes the specified element from a Set object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">delete</span><span class="jsbracketcolor>(</span><i>value</i><span class="jsbracketcolor>)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of deleting a value from a Set:</li>
+                        <div class="block-outer" data-result-id="demoa224" data-result-value="const letters = new Set(['a', 'b', 'c']); letters.delete('b'); 'The new set has ' + letters.size + ' values.';">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">delete</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'b'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa224" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                </div>
+
             </ul>
         </div>
         

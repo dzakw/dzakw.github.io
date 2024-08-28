@@ -293,7 +293,7 @@ function generateList12() {
 
 function generateList13() {
     const methods = [
-        "Loop For", "Loop For In", "Loop For Of", "Loop While"
+        "Loop For", "Loop For In", "Loop For Of", "Loop While", "Break", "Iterables"
     ];
 
     const ul = document.getElementById('threeColumn12');
@@ -301,6 +301,20 @@ function generateList13() {
         const li = document.createElement('li');
         li.className = 'threeColumn';
         li.innerHTML = `<a href="#" onclick="toggleExample('example41${index + 81}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList14() {
+    const methods = [
+        "new Set", "add()", "clear()", "delete()", "entries()", "forEach()", "has()", "keys()", "size", "values()"
+    ];
+
+    const ul = document.getElementById('threeColumn13');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 187}')">${method}</a>`;
         ul.appendChild(li);
     });
 }
@@ -2026,4 +2040,196 @@ function complex147() {
         txt += value + "<br>";
     }
     return txt;
+}
+
+function complex148() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let txt = "";
+    
+    for (let x of myCar) {
+        txt += x + "<br>";
+    }
+    return txt;
+}
+
+function complex149() {
+    let myCar = "Toyota Supra";
+    const numb = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth"];
+    let txt = "";
+    let index = 0;
+
+    for (let x of myCar) {
+        if (x === " ") continue;
+        txt += numb[index] + " letter is: " + x + "<br>";
+        index++;
+    }
+    return txt;
+}
+
+function complex150() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let i = 0;
+    let txt = "";
+
+    while (i < myCar.length) {
+        txt += myCar[i] + "<br>";
+        i++;
+    }
+    return txt;
+}
+
+function complex151() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let i = 0;
+    let txt = "";
+
+    do {
+        txt += myCar[i] + "<br>";
+        i++;
+    } while (i < myCar.length);
+    return txt;
+}
+
+function complex152() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let txt = "";
+    for (let i = 0; i < myCar.length; i++) {
+        if (i === 3) { break; }
+        txt += myCar[i] + "<br>";
+    }
+    return txt;
+}
+
+function complex153() {
+    const myCar = ["Toyota Supra", "Subaru BRZ", "Nissan Skyline", "Mazda RX-7", "Honda NSX", "Mitsubishi Lancer Evolution"];
+    let txt = "";
+    for (let i = 0; i < myCar.length; i++) {
+        if (i === 3) { continue; }
+        txt += myCar[i] + "<br>";
+    }
+    return txt;
+}
+
+function complex154() {
+    let myCar = "Toyota Supra";
+    const numb = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth"];
+    let txt = "";
+    let index = 0;
+
+    for (let x of myCar) {
+        if (x === " ") continue;
+        txt += numb[index] + " letter is: " + x + "<br>";
+        index++;
+    }
+    return txt;
+}
+
+function complex155() {
+    const myCar = ["T", "o", "y", "o", "t", "a", " ", "S", "u", "p", "r", "a"];
+    let txt = "";
+    for (let x of myCar) {
+        txt += x;
+    }
+    return txt;
+}
+
+function complex156() {
+    const myCar = new Set(["T", "o", "y", "o", "t", "a", " ", "S", "u", "p", "r", "a"]);
+    let txt = "";
+    for (let x of myCar) {
+        txt += x;
+    }
+    return txt;
+}
+
+function complex157() {
+    const myCar = new Map([
+        ["Toyota Supra", 155],
+        ["Nissan Skyline", 180],
+        ["Mazda RX-7", 155],
+        ["Honda NSX", 170],
+        ["Mitsubishi Lancer Evolution", 155],
+        ["Subaru BRZ", 155],
+    ]);
+
+    let txt = "";
+    for (const [car, topSpeed] of myCar) {
+        txt += car + ": " + topSpeed + " mph<br>";
+    }
+    return txt;
+}
+
+function complex158() {
+    let n = 0;
+    return {
+        next: function() {
+          n += 10;
+          return {value:n, done:false};
+        }
+    };
+}
+
+function complex159() {
+    const n = complex158();
+    return n.next().value + ", " + n.next().value + ", " + n.next().value + ", " + n.next().value + ", " + n.next().value + ", " + n.next().value;
+}
+
+function complex160() {
+    const myNumbers = {
+        [Symbol.iterator]: function() {
+            let n = 0;
+            let done = false;
+            return {
+                next() {
+                    n += 10;
+                    if (n == 100) { done = true; }
+                    return { value: n, done: done };
+                }
+            };
+        }
+    };
+
+    let text = "";
+    for (const num of myNumbers) {
+        text += num + "<br>";
+    }
+
+    return text;
+}
+
+function complex161() {
+    const myNumbers = {
+        [Symbol.iterator]: function() {
+            let n = 0;
+            let done = false;
+            return {
+                next() {
+                    n += 10;
+                    if (n == 100) { done = true; }
+                    return { value: n, done: done };
+                }
+            };
+        }
+    };
+
+    let iterator = myNumbers[Symbol.iterator]();
+    let text = "";
+    while (true) {
+        const result = iterator.next();
+        if (result.done) break;
+        text += result.value + "<br>";
+    }
+    return text;
+}
+
+function complex162() {
+    // Create a Set
+    const letters = new Set(["a","b","c"]);
+
+    // List all Elements
+    let text = "";
+    for (const x of letters) {
+        text += x;
+    };
+    return text;
 }
