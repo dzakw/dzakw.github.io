@@ -13683,6 +13683,451 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
 
+                    <div id="example4191" style="display: none;">
+                        <h5>entries()</h5>
+                        <li>The <code>entries()</code> method returns a new Iterator object that contains an array of [value, value] for each element in the Set object, in insertion order.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">entries</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li><code>entries()</code> method is supposed to return a [key, value] pair from an object. But since Set has no keys, the <code>entries()</code> method returns [value, value]. This makes Sets compatible with Maps.</li>
+                        <li>Below is an example of using the <code>entries()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa225" data-result-function="complex163">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myIterator</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">entries</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">entry</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myIterator</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">entry</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa225" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Iterator</b> - An iterable object with the values of the set.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4192" style="display: none;">
+                        <h5>forEach()</h5>
+                        <li>The <code>forEach()</code> method executes a provided function once for each value in the Set object. It does not change the original set.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><i>callbackFn</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>forEach()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa226" data-result-function="complex164">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'y'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">' '</span><span class="jscomma">,</span> <span class="jsstringcolor">'s'</span><span class="jscomma">,</span> <span class="jsstringcolor">'u'</span><span class="jscomma">,</span> <span class="jsstringcolor">'p'</span><span class="jscomma">,</span> <span class="jsstringcolor">'r'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">value</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toUpperCase</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa226" class="result"><span></span> </p>
+                        </div>
+                        <li>To be remembered: Set objects are collections of unique values. that means, if there is a duplicate value, it will not be added to the Set.</li>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>callbackFn</b> - <b>Required</b> Function to execute for each element</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4193" style="display: none;">
+                        <h5>has()</h5>
+                        <li>The <code>has()</code> method returns a boolean indicating whether an element with the specified value exists in a Set object or not.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">has</span><span class="jsbracketcolor">(</span><i>value</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of checking if a value exists in a Set:</li>
+                        <div class="block-outer" data-result-id="demoa227" data-result-value="const letters = new Set(['a', 'b', 'c']); letters.has('b');">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">has</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'b'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa227" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>value</b> - <b>Required</b> The value to test for presence in the Set object</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Boolean</b> - Returns <code>true</code> if an element with the specified value exists in the Set object; otherwise <code>false</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4194" style="display: none;">
+                        <h5>keys()</h5>
+                        <li>The <code>keys()</code> method returns a new Iterator object that contains the keys for each element in the Set object, in insertion order. Since Set objects do not have keys, the value of an element is both its key and value, therefore each element is both a key and a value.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">keys</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>keys()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa228" data-result-function="complex165">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'y'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">' '</span><span class="jscomma">,</span> <span class="jsstringcolor">'s'</span><span class="jscomma">,</span> <span class="jsstringcolor">'u'</span><span class="jscomma">,</span> <span class="jsstringcolor">'p'</span><span class="jscomma">,</span> <span class="jsstringcolor">'r'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">keys</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">keys</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toUpperCase</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa228" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Iterator</b> - An iterable object with the keys of the set.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4195" style="display: none;">
+                        <h5>size</h5>
+                        <li>The <code>size</code> property returns the number of values in a Set object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of getting the size of a Set:</li>
+                        <div class="block-outer" data-result-id="demoa229" data-result-value="const letters = new Set(['a', 'b', 'c']); letters.size;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">'b'</span><span class="jscomma">,</span> <span class="jsstringcolor">'c'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa229" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Number</b> - The number of values in the Set object.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4196" style="display: none;">
+                        <h5>values()</h5>
+                        <li>The <code>values()</code> method returns a new Iterator object that contains the values for each element in the Set object, in insertion order.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">values</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>values()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa230" data-result-function="complex164">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'y'</span><span class="jscomma">,</span> <span class="jsstringcolor">'o'</span><span class="jscomma">,</span> <span class="jsstringcolor">'t'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jscomma">,</span> <span class="jsstringcolor">' '</span><span class="jscomma">,</span> <span class="jsstringcolor">'s'</span><span class="jscomma">,</span> <span class="jsstringcolor">'u'</span><span class="jscomma">,</span> <span class="jsstringcolor">'p'</span><span class="jscomma">,</span> <span class="jsstringcolor">'r'</span><span class="jscomma">,</span> <span class="jsstringcolor">'a'</span><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">letters</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">value</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toUpperCase</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa230" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Iterator</b> - An iterable object with the values of the set.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h5>JavaScript Maps</h5>
+                <li>A Map holds key-value pairs where the keys can be any datatype.</li>
+                <li>A Map remembers the original insertion order of the keys.</li>
+                <li>To create a map, it can be done by:
+                    <ul>
+                        <li>Passing an Array to <code>new Map()</code></li>
+                        <li>Create a Map and use <code>Map.set()</code></li>
+                    </ul>
+                </li>
+                <li>Map itself is an object. <code>typeof</code> Map returns object, and <code>instanceof</code> Map returns true.</li>
+                <li>But there is some differences between a Maps and Objects:</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Objects</th>
+                        <th>Maps</th>
+                    </tr>
+                    <tr>
+                        <td>Not directly iterable</td>
+                        <td>Directly iterable</td>
+                    </tr>
+                    <tr>
+                        <td>Do not have a size property</td>
+                        <td>Have a size property</td>
+                    </tr>
+                    <tr>
+                        <td>Keys must be strings or symbols</td>
+                        <td>Keys can be any datatype</td>
+                    </tr>
+                    <tr>
+                        <td>Keys are not well ordered</td>
+                        <td>Keys ordered by insertion</td>
+                    </tr>
+                    <tr>
+                        <td>Have default keys</td>
+                        <td>No default keys</td>
+                    </tr>
+                </table>
+
+                <br>
+                <li>Below are the methods and properties of a Map:</li>
+                <ul class="threeColumn" id="threeColumn14"></ul>
+                <br>
+
+                <div>
+                    <div id="example4197" style="display: none;">
+                        <h5>new Map</h5>
+                        <li>The <code>new Map()</code> constructor creates a new Map object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">(</span><i>iterable</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of creating a Map:</li>
+                        <div class="block-outer" data-result-id="demoa231" data-result-value="const myMap = new Map(); myMap.set('apple', '500'); myMap.set('banana', '1000'); myMap.set('cherry', '750'); 'The number of apples in the basket are ' + myMap.get('apple') + ' apples.';">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myMap</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'apple'</span><span class="jscomma">,</span> <span class="jsstringcolor">'500'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'banana'</span><span class="jscomma">,</span> <span class="jsstringcolor">'1000'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'cherry'</span><span class="jscomma">,</span> <span class="jsstringcolor">'750'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsstringcolor">'The number of apples in the basket are '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">get</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'a'</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' apples.'</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa231" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>iterable</b> - An Array or other iterable object whose elements are key-value pairs (arrays with two elements, e.g. [[ 1, 'one' ],[ 2, 'two' ]]). Each key-value pair is added to the new Map; null is treated as undefined.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Map</b> - A new Map object</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4198" style="display: none;">
+                        <h5>clear()</h5>
+                        <li>The <code>clear()</code> method removes all elements from a Map object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">clear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of clearing a Map:</li>
+                        <div class="block-outer" data-result-id="demoa232" data-result-value="const myMap = new Map(); myMap.set('apple', '500'); myMap.set('banana', '1000'); myMap.set('cherry', '750'); myMap.clear(); 'The new map has ' + myMap.size + ' values.';">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myMap</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'apple'</span><span class="jscomma">,</span> <span class="jsstringcolor">'500'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'banana'</span><span class="jscomma">,</span> <span class="jsstringcolor">'1000'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'cherry'</span><span class="jscomma">,</span> <span class="jsstringcolor">'750'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">clear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsstringcolor">'The new map has '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' values.'</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa232" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4199" style="display: none;">
+                        <h5>delete()</h5>
+                        <li>The <code>delete()</code> method removes the specified element from a Map object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">delete</span><span class="jsbracketcolor">(</span><i>key</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of deleting an element from a Map:</li>
+                        <div class="block-outer" data-result-id="demoa233" data-result-value="const myMap = new Map(); myMap.set('apple', '500'); myMap.set('banana', '1000'); myMap.set('cherry', '750'); myMap.delete('banana'); 'The new map has ' + myMap.size + ' values.';">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myMap</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'apple'</span><span class="jscomma">,</span> <span class="jsstringcolor">'500'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'banana'</span><span class="jscomma">,</span> <span class="jsstringcolor">'1000'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'cherry'</span><span class="jscomma">,</span> <span class="jsstringcolor">'750'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">delete</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'banana'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsstringcolor">'The new map has '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myMap</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' values.'</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa233" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>key</b> - <b>Required</b> The key of the element to remove from the Map object.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Boolean</b> - Returns <code>true</code> if an element in the Map object existed and has been removed, or <code>false</code> if the element does not exist.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4200" style="display: none;">
+                        <h5>entries()</h5>
+                        <li>The <code>entries()</code> method returns a new Iterator object that contains an array of [key, value] for each element in the Map object in insertion order.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">entries</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>entries()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa234" data-result-function="complex166">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">entries</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa234" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Iterator</b> - An iterable object that contains the [key, value] pairs for each element in the Map object in insertion order.</li>
+                        </ul>
+                    </div>
                 </div>
 
             </ul>
@@ -13692,6 +14137,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
     <hr>
 
 
-    <script src="js/script.js"></script> <!-- This is how to link external JavaScript file -->
+    <script src="js/script.js"></script>
+    <script src="js/ul.js"></script> <!-- This is how to link external JavaScript file -->
 </body>
 </html>
