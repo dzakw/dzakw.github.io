@@ -13962,7 +13962,6 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <br>
                 <li>Below are the methods and properties of a Map:</li>
                 <ul class="threeColumn" id="threeColumn14"></ul>
-                <br>
 
                 <div>
                     <div id="example4197" style="display: none;">
@@ -14126,6 +14125,367 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <h6>Return Value</h6>
                         <ul>
                             <li><b>Iterator</b> - An iterable object that contains the [key, value] pairs for each element in the Map object in insertion order.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4201" style="display: none;">
+                        <h5>forEach()</h5>
+                        <li>The <code>forEach()</code> method executes a provided function once for each key-value pair in the Map object, in insertion order.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><i>callback</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>forEach()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa235" data-result-function="complex167">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jscomma">,</span> <span class="jsvariablecolor">key</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">key</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' = '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">value</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa235" class="result"><span></span>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>callback</b> - <b>Required</b> Function to execute for each element</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4202" style="display: none;">
+                        <h5>get()</h5>
+                        <li>The <code>get()</code> method returns a specified element from a Map object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">get</span><span class="jsbracketcolor">(</span><i>key</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of getting an element from a Map:</li>
+                        <div class="block-outer" data-result-id="demoa236" data-result-value="const fruits = new Map([['apples', 500], ['bananas', 300], ['oranges', 200]]); fruits.get('apples');">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">get</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'apples'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa236" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>key</b> - <b>Required</b> The key of the element to return from the Map object.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Any</b> - The element associated with the specified key in the Map object, or <code>undefined</code> if the key can't be found.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4203" style="display: none;">
+                        <h5>groupBy()</h5>
+                        <li>The <code>groupBy()</code> method groups the elements of a Map object according to string values returned from a callback function.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">Map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">groupBy</span><span class="jsbracketcolor">(</span><i>iterable</i>, <i>callback</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>groupBy()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa237" data-result-function="complex168">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an Array</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">name</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"apples"</span><span class="jscomma">,</span> <span class="jspropertycolor">quantity</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">300</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">name</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"bananas"</span><span class="jscomma">,</span> <span class="jspropertycolor">quantity</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">500</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">name</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"oranges"</span><span class="jscomma">,</span> <span class="jspropertycolor">quantity</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">200</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">name</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"kiwi"</span><span class="jscomma">,</span> <span class="jspropertycolor">quantity</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">150</span><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Callback function to Group Elements</span></p>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsvariablecolor">myCallback</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">{</span> <span class="jspropertycolor">quantity</span> <span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">quantity</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsnumbercolor">200</span> <span class="jsoperatorcolor">?</span> <span class="jsstringcolor">"ok"</span> <span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"low"</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Group by Quantity</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">Map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">groupBy</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fruits</span><span class="jscomma">,</span> <span class="jsvariablecolor">myCallback</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa237" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>iterable</b> - <b>Required</b> An Array or other iterable object whose elements are key-value pairs (arrays with two elements, e.g. [[ 1, 'one' ],[ 2, 'two' ]]). Each key-value pair is added to the new Map; null is treated as undefined.</li>
+                            <li><b>callback</b> - <b>Required</b> Function that produces an element of the new Map object, executed for each element in the Map object and returning the key for the element.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Object</b> - A new Map object with the elements grouped by the specified key.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4204" style="display: none;">
+                        <h5>has()</h5>
+                        <li>The <code>has()</code> method returns a boolean indicating whether an element with the specified key exists or not.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">has</span><span class="jsbracketcolor">(</span><i>key</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of checking if an element exists in a Map:</li>
+                        <div class="block-outer" data-result-id="demoa238" data-result-value="const fruits = new Map([['apples', 500], ['bananas', 300], ['oranges', 200]]); fruits.has('apples');">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">has</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'apples'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa238" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>key</b> - <b>Required</b> The key of the element to test for presence in the Map object.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Boolean</b> - Returns <code>true</code> if an element with the specified key exists in the Map object; otherwise <code>false</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4205" style="display: none;">
+                        <h5>keys()</h5>
+                        <li>The <code>keys()</code> method returns a new Iterator object that contains the keys for each element in the Map object in insertion order.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">keys</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>keys()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa239" data-result-function="complex169">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">keys</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>  
+                            </div>
+                            <p id="demoa239" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Iterator</b> - An iterable object that contains the keys for each element in the Map object in insertion order.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4206" style="display: none;">
+                        <h5>set()</h5>
+                        <li>The <code>set()</code> method adds or updates an element with a specified key and value to a Map object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><i>key</i>, <i>value</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of adding an element to a Map:</li>
+                        <div class="block-outer" data-result-id="demoa240" data-result-function="complex170">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">()</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">set</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">keys</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa240" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>key</b> - <b>Required</b> The key of the element to add to the Map object.</li>
+                            <li><b>value</b> - <b>Required</b> The value of the element to add to the Map object.</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Map</b> - The Map object.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4207" style="display: none;">
+                        <h5>size</h5>
+                        <li>The <code>size</code> property returns the number of elements in a Map object.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of getting the size of a Map:</li>
+                        <div class="block-outer" data-result-id="demoa241" data-result-value="const fruits = new Map([['apples', 500], ['bananas', 300], ['oranges', 200]]); fruits.size;">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">size</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa241" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Number</b> - The number of elements in the Map object.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4208" style="display: none;">
+                        <h5>values()</h5>
+                        <li>The <code>values()</code> method returns a new Iterator object that contains the values for each element in the Map object in insertion order.</li>
+                        <li>below is the syntax:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsvariablecolor">map</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">values</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>Below is an example of using the <code>values()</code> method:</li>
+                        <div class="block-outer" data-result-id="demoa242" data-result-function="complex171">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsnumbercolor">500</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsnumbercolor">300</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'oranges'</span><span class="jscomma">,</span> <span class="jsnumbercolor">200</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">tot</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">fruits</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">values</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">tot</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jskeywordcolor">return</span> <span class="jsstringcolor">"There are "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">tot</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" fruits in the basket"</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa242" class="result"><span></span> </p>
+                        </div>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li><b>Iterator</b> - An iterable object that contains the values for each element in the Map object in insertion order.</li>
                         </ul>
                     </div>
                 </div>

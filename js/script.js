@@ -2050,3 +2050,84 @@ function complex166() {
     }
     return text;
 }
+
+function complex167() {
+    const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let text = "";
+    fruits.forEach (function(value, key) {
+        text += key + " = " + value + "<br>";
+    });
+    return text;
+}
+
+function complex168() {
+    const fruits = [
+        {name:"apples", quantity:300},
+        {name:"bananas", quantity:500},
+        {name:"oranges", quantity:200},
+        {name:"kiwi", quantity:150}
+    ];
+
+    function myCallback({quantity}) {
+        return quantity > 200 ? "ok" : "low";
+    };
+
+    const result = Map.groupBy(fruits, myCallback);
+
+    let text = "These fruits are Ok: <br>";
+    for (let x of result.get("ok")) {
+        text += x.name + " " + x.quantity + "<br>";
+    }
+    text += "<br>These fruits are low: <br>";
+    for (let x of result.get("low")) {
+        text += x.name + " " + x.quantity + "<br>";
+    }
+    
+    return text;
+}
+
+function complex169() {
+    const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let text = "";
+    for (const x of fruits.keys()) {
+        text += x + "<br>";
+    };
+    return text;
+}
+
+function complex170() {
+    const fruits = new Map();
+    fruits.set('apples', 500);
+    fruits.set('bananas', 300);
+    fruits.set('oranges', 200);
+
+    let text= "";
+    for (const x of fruits.keys()) {
+        text += x + "<br>";
+    };
+    return text;
+}
+
+function complex171() {
+    const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+    
+    let tot = 0;
+    for (const x of fruits.values()) {
+        tot += x;
+    }
+    return "There are " + tot + " fruits in the basket";
+}
