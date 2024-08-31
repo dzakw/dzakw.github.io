@@ -76,6 +76,7 @@
                     <li><a href="#subsec413" onclick="openSection('subsec413'); openSection('section4')">JavaScript Conditional</a></li>
                     <li><a href="#subsec414" onclick="openSection('subsec414'); openSection('section4')">JavaScript Loops</a></li>
                     <li><a href="#subsec415" onclick="openSection('subsec415'); openSection('section4')">JavaScript Set and Map</a></li>
+                    <li><a href="#subsec416" onclick="openSection('subsec416'); openSection('section4')">JavaScript Type and Destructuring</a></li>               
                 </ul>
             </ul>
         </div>
@@ -6377,7 +6378,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p><b>Properties</b> are named <b>values</b></p>
                     <p><b>Methods</b> are <b>functions</b> stored as <b>properties</b></p>
                     <p><b>Properties</b> can be primities values, functions, or even other objects</p>
-                    <p><b>All Javascript values exept primitives are objects</b></p>
+                    <p><b>All Javascript values except primitives are objects</b></p>
                 </blockquote>
 
                 <h4>JavaScript Primitives</h4>
@@ -14489,6 +14490,475 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </ul>
                     </div>
                 </div>
+
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec416" onclick="toggleSection('subsec416')">JavaScript Type and Destructuring</h3>
+        <div class="subsection" id="subsec416Content" style="display: none;">
+            <ul>
+                <h5>JavaScript Typeof</h5>
+                <li>The <code>typeof</code> operator returns the <b>data type</b> of a JavaScript variable</li>
+                <li>below is the syntax:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">typeof</span> <i>variable</i><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>JavaScript itself has some data types, that can be read <a href="#subsec44" onclick="toggleSection('subsec44')">here</a></li>
+                <li>The <code>typeof</code> operator returns the type of a variable or an expression.</li>
+                <li>Below is an example of using the <code>typeof</code> on primitive data types:</li>
+                <div class="block-outer" data-result-id="demoa243" data-result-function="complex172">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jsstringcolor">'John'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jskeywordcolor">false</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jsnumbercolor">90909238912389489812398</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jsfunctioncolor">Symbol</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jskeywordcolor">null</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <i>x</i><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa243" class="result"><span></span> </p>
+                </div>
+                <li>JavaScript complex data types are only consists of object or a function. Below is an example of using the <code>typeof</code> on complex data types:</li>
+                <div class="block-outer" data-result-id="demoa244" data-result-function="complex173">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jsbracketcolor">{</span><span class="jspropertycolor">name</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'John'</span><span class="jscomma">,</span> <span class="jspropertycolor">age</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">30</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'John'</span><span class="jscomma">,</span> <span class="jsnumbercolor">30</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">typeof</span> <span class="jsfunctioncolor">myFunc</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa244" class="result"><span></span> </p>
+                </div>
+                <li>As <code>typeof</code> return object for all complex data types, we can use <code>Array.isArray()</code> and <code>instanceof</code> to recognize an Array.</li>
+                <li>Below is an example of using <code>Array.isArray()</code> and <code>instanceof</code> to recognize an Array:</li>
+                <div class="block-outer" data-result-id="demoa245" data-result-function="complex174">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsstringcolor">'oranges'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jspropertycolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Toyota Supra'</span><span class="jscomma">,</span> <span class="jspropertycolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">Array</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">isArray</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fruits</span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fruits</span> <span class="jskeywordcolor">instanceof</span> <span class="jsfunctioncolor">Array</span><span class="jsbracketcolor">)</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">Array</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">isArray</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myCar</span> <span class="jskeywordcolor">instanceof</span> <span class="jsfunctioncolor">Array</span><span class="jsbracketcolor">)</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa245" class="result"><span></span> </p>
+                </div>
+                <li>The <code>instanceof</code> operator returns <code>true</code> if an object is an instance of an object type, otherwise <code>false</code>.</li>
+                <li>Below is an example of using the <code>instanceof</code> operator:</li>
+                <div class="block-outer" data-result-id="demoa246" data-result-function="complex175">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">time</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'apples'</span><span class="jscomma">,</span> <span class="jsstringcolor">'bananas'</span><span class="jscomma">,</span> <span class="jsstringcolor">'oranges'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Toyota Supra'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Nissan Skyline'</span><span class="jscomma">,</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Mazda RX-7'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">
+                            <p><span class="jsbracketcolor">])</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">letters</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">([</span><span class="jsstringcolor">'a'</span><span class="jscomma">,</span><span class="jsstringcolor">'b'</span><span class="jscomma">,</span><span class="jsstringcolor">'c'</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsbracketcolor">(</span><span class="jsvariablecolor">time</span> <span class="jskeywordcolor">instanceof</span> <span class="jsfunctioncolor">Date</span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fruits</span> <span class="jskeywordcolor">instanceof</span> <span class="jsfunctioncolor">Array</span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myCar</span> <span class="jskeywordcolor">instanceof</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">)</span></p>
+                            <p><span class="jsbracketcolor">(</span><span class="jsvariablecolor">letters</span> <span class="jskeywordcolor">instanceof</span> <span class="jsfunctioncolor">Set</span><span class="jsbracketcolor">)</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa246" class="result"><span></span> </p>
+                </div>
+                
+                <h5>Type Conversion</h5>
+                <li>It is possible to do these type conversions:</li>
+                <ul>
+                    <li>Converting <b>Strings</b> to <b>Numbers</b></li>
+                    <li>Converting <b>Numbers</b> to <b>Strings</b></li>
+                    <li>Converting <b>Dates</b> to <b>Numbers</b></li>
+                    <li>Converting <b>Numbers</b> to <b>Dates</b></li>
+                    <li>Converting <b>Boolean</b> to <b>Numbers</b></li>
+                    <li>Converting <b>Numbers</b> to <b>Boolean</b></li>
+                </ul>
+                <li>Type conversion can be done by the use of a JavaScript function or automatically by JavaScript itself.</li>
+
+                <h6>Converting Strings to Numbers</h6>
+                <li>The global method <code>Number()</code> can be used to convert a variable or value to a number.</li>
+                <li>Below is an example of converting a string to a number:</li>
+                <div class="block-outer" data-result-id="demoa247" data-result-function="complex176">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">Number</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'3.14'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">Number</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">' '</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">Number</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">''</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">Number</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'99 88'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">Number</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Iqbal'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa247" class="result"><span></span> </p>
+                </div>
+                <li>Other than the use of <code>Number()</code>, It is also possible to use <a href="#example489" onclick="toggleBoth('subsec49', 'example489');"><code>parseFloat()</code></a> and <a href="#example490" onclick="toggleBoth('subsec49', 'example490');"><code>parseInt()</code></a> to convert a string to a number.</li>
+
+                <h6>Converting Numbers to Strings</h6>
+                <li>The global method <code>String()</code> can be used to convert a variable or value to a string.</li>
+                <li>Below is an example of converting a number to a string:</li>
+                <div class="block-outer" data-result-id="demoa248" data-result-function="complex177">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">String</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">String</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">123</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">String</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">100</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">23</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa248" class="result"><span></span> </p>
+                </div>
+                <li>Other than the use of <code>String()</code>, It is also possible to use <a href="#example470" onclick="toggleBoth('subsec48', 'example470');"><code>toString()</code></a> to convert a number to a string.</li>
+
+                <h6>Converting Dates to Numbers</h6>
+                <li>The global method <code>Number()</code> and <code>getTime()</code> can be used to convert a date to a number.</li>
+                <div class="block-outer" data-result-id="demoa249" data-result-value="let d = new Date(); 'Number(d): ' + Number(d) + '&lt;br&gt;' + 'd.getTime(): ' + d.getTime()">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">Number</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">d</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getTime</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa249" class="result"><span></span> </p>
+                </div>
+
+                <h6>Converting Dates to Strings</h6>
+                <li>The global method <code>String()</code> and <code>toString()</code> can be used to convert a date to a string.</li>
+                <div class="block-outer" data-result-id="demoa250" data-result-value="let d = new Date(); 'String(d): ' + String(d) + '&lt;br&gt;' + 'd.toString(): ' + d.toString()">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">d</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">String</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">d</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">d</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa250" class="result"><span></span> </p>
+                </div>
+                <li>Other <a href="#example489" onclick="toggleBoth('subsec411', 'threeColumn9');">Date Methods</a> can be used to convert a date to a string</li>
+
+                <h6>Converting Boolean to Numbers</h6>
+                <li>The global method <code>Number()</code> can be used to convert a boolean to a number.</li>
+                <div class="block-outer" data-result-id="demoa251" data-result-value="'Number(true): ' + Number(true) + '&lt;br&gt;' + 'Number(false): ' + Number(false)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">Number</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">true</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">Number</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">false</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa251" class="result"><span></span> </p>
+                </div>
+
+                <h6>Converting Numbers to Boolean</h6>
+                <li>The global method <code>Boolean()</code> can be used to convert a number to a boolean.</li>
+                <div class="block-outer" data-result-id="demoa252" data-result-value="'Boolean(0): ' + Boolean(0) + '&lt;br&gt;' + 'Boolean(1): ' + Boolean(1)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">Boolean</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">0</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">Boolean</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa252" class="result"><span></span> </p>
+                </div>
+
+                <h6>Converting Boolean to Strings</h6>
+                <li>The global method <code>String()</code> and <code>toString()</code> can be used to convert a boolean to a string.</li>
+                <div class="block-outer" data-result-id="demoa253" data-result-value="'String(true): ' + String(true) + '&lt;br&gt;' + 'String(false): ' + String(false) + '&lt;br&gt;' + 'true.toString(): ' + true.toString() + '&lt;br&gt;' + 'false.toString(): ' + false.toString()">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">String</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">true</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">String</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">false</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">true</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">false</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa253" class="result"><span></span> </p>
+                </div>
+
+                <h6>Converting Strings to Boolean</h6>
+                <li>The global method <code>Boolean()</code> can be used to convert a string to a boolean.</li>
+                <div class="block-outer" data-result-id="demoa254" data-result-value="'Boolean('true'): ' + Boolean('true') + '&lt;br&gt;' + 'Boolean('false'): ' + Boolean('false') + '&lt;br&gt;' + 'Boolean(''): ' + Boolean('')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">Boolean</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'true'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">Boolean</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'false'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">Boolean</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">''</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa254" class="result"><span></span> </p>
+                </div>
+
+                <h6>Automatic Type Conversion</h6>
+                <li>JavaScript automatically converts variables to the correct data type when performing operations.</li>
+                <div class="block-outer" data-result-id="demoa255" data-result-function="complex178">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsstringcolor">'5'</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">null</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsstringcolor">'5'</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">null</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsstringcolor">'5'</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">2</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsstringcolor">'5'</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'2'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsstringcolor">'5'</span> <span class="jsoperatorcolor">*</span> <span class="jsstringcolor">'2'</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa255" class="result"><span></span> </p>
+                </div>
+
+                <h5>JavaScript Type Conversion Table</h5>
+                <li>This table shows the result of converting different JavaScript values to Number, String, and Boolean:</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Original Value</th>
+                        <th>Converted to Number</th>
+                        <th>Converted to String</th>
+                        <th>Converted to Boolean</th>
+                    </tr>
+                    <tr>
+                        <td>false</td>
+                        <td>0</td>
+                        <td>"false"</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>true</td>
+                        <td>1</td>
+                        <td>"true"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>"0"</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>"1"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>"0"</td>
+                        <td>0</td>
+                        <td>"0"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>NaN</td>
+                        <td>NaN</td>
+                        <td>"NaN"</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>Infinity</td>
+                        <td>Infinity</td>
+                        <td>"Infinity"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>-Infinity</td>
+                        <td>-Infinity</td>
+                        <td>"-Infinity"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>""</td>
+                        <td>0</td>
+                        <td>""</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>[ ]</td>
+                        <td>0</td>
+                        <td>""</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>[ 1 ]</td>
+                        <td>1</td>
+                        <td>"1"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>[ 1, 2 ]</td>
+                        <td>NaN</td>
+                        <td>"1,2"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>{ }</td>
+                        <td>NaN</td>
+                        <td>"[object Object]"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>function() { }</td>
+                        <td>NaN</td>
+                        <td>"function() { }"</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>null</td>
+                        <td>0</td>
+                        <td>"null"</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>undefined</td>
+                        <td>NaN</td>
+                        <td>"undefined"</td>
+                        <td>false</td>
+                    </tr>
+                </table>
+
+                <h5>JavaScript Destructuring</h5>
+                <li>JavaScript destructuring is a feature that allows you to extract data from arrays, objects, maps, and sets.</li>
+                <li>Below is an example of destructuring an object.</li>
+                <div class="block-outer" data-result-id="demoa256" data-result-function="complex179">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">brand</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Toyota'</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">model</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Supra'</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">year</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">2024</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">features</span><span class="jsoperatorcolor">:</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">'Turbocharged engine'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Sport suspension'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Leather interior'</span><span class="jsbracketcolor">]</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Destructuring</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsbracketcolor">{</span><span class="jspropertycolor">brand</span><span class="jscomma">,</span> <span class="jspropertycolor">model</span><span class="jsbracketcolor">}</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">car</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">//Display Primitive Values</span></p>
+                            <p><span class="jsvariablecolor">brand</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">model</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa256" class="result"><span></span> </p>
+                </div>
+                <li>
 
             </ul>
         </div>

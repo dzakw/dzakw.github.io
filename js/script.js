@@ -100,6 +100,34 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 
+function toggleBoth(sectionId, exampleId) {
+    var sectionContent = document.getElementById(sectionId + "Content");
+    var example = document.getElementById(exampleId);
+
+    // Check current visibility states
+    var sectionVisible = sectionContent.style.display === "block";
+    var exampleVisible = example.style.display === "block";
+
+    // Open both if either is visible, but the other is not
+    if (sectionVisible && !exampleVisible) {
+        example.style.display = "block";
+        example.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (!sectionVisible && exampleVisible) {
+        sectionContent.style.display = "block";
+    } else {
+        // Toggle normally if both are in the same state (both hidden or both visible)
+        sectionContent.style.display = sectionVisible ? "none" : "block";
+        example.style.display = exampleVisible ? "none" : "block";
+        if (!exampleVisible) {
+            example.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Update the last opened example tracking
+    lastOpenedExampleId = example.style.display === "block" ? exampleId : null;
+}
+
+
 
 // //Javascript learning start here
 // function showAnswer1() {
@@ -2130,4 +2158,90 @@ function complex171() {
         tot += x;
     }
     return "There are " + tot + " fruits in the basket";
+}
+
+function complex172() {
+    let x;
+    return "<code>typeof</code> <span class='jsstringcolor'>'John'</span>: " + typeof "John" + "<br>" +
+           "<code>typeof</code> <span class='jsnumbercolor'>3.14</span>: " + typeof 3.14 + "<br>" +
+           "<code>typeof</code> <span class='jsbooleancolor'>false</span>: " + typeof false + "<br>" +
+           "<code>typeof</code> <span class='jsnumbercolor'>90909238912389489812398n</span>: " + typeof 90909238912389489812398n + "<br>" +
+           "<code>typeof</code> <span class='jsvariablecolor'>Symbol()</span>: " + typeof Symbol() + "<br>" +
+           "<code>typeof</code> <span class='jsvariablecolor'>null</span>: object (historically considered as <span class='jsnullcolor'>null</span>)<br>" +
+           "<code>typeof</code> <span class='jsvariablecolor'>x</span>: " + typeof x + "<br>";
+}
+
+function complex173() {
+    return  "<code>typeof</code> <span class='jsbracketcolor'>{<span class='jsvariablecolor'>name:</span> <span class='jsstringcolor'>'John'</span>, <span class='jsvariablecolor'>age:</span> <span class='jsnumbercolor'>30</span>}</span>: " + typeof {name: 'John', age: 30} + "<br>" +
+            "<code>typeof</code> <span class='jsbracketcolor'>[<span class='jsstringcolor'>'John'</span>, <span class='jsnumbercolor'>30</span>]</span>: " + typeof ['John', 30] + "<br>" +
+            "<code>typeof</code> <span class='jsvariablecolor'>new Map()</span>: " + typeof new Map() + "<br>" +
+            "<code>typeof</code> <span class='jsvariablecolor'>new Set()</span>: " + typeof new Set() + "<br>" +
+            "<code>typeof</code> <span class='jsfunctioncolor'>function myFunc() {}</span>: " + typeof function myFunc() {} + "<br>";
+}
+
+function complex174() {
+    const fruits = ["apples", "bananas", "oranges"];
+    const myCar = {car: "Toyota Supra", topSpeed: 155 };
+
+    return "Array.isArray(fruits): " + Array.isArray(fruits) + "<br>" +
+    "(fruits instanceof Array): " + (fruits instanceof Array) + "<br><br>" +
+    "Array.isArray(myCar): " + Array.isArray(myCar) + "<br>" +
+    "(myCar instanceof Array): " + (myCar instanceof Array);
+}
+
+function complex175() {
+    const time = new Date();
+    const fruits = ["apples", "bananas", "oranges"];
+    const myCar = new Map([
+        ["Toyota Supra", 155],
+        ["Nissan Skyline", 180],
+        ["Mazda RX-7", 155],
+        ["Honda NSX", 170],
+        ["Mitsubishi Lancer Evolution", 155],
+        ["Subaru BRZ", 155],
+    ]);
+    const letters = new Set(["a","b","c"]);
+
+    return "(time instanceof Date): " + (time instanceof Date) + "<br>" +
+    "(fruits instanceof Array): " + (fruits instanceof Array) + "<br>" +
+    "(myCar instanceof Map): " + (myCar instanceof Map) + "<br>" +
+    "(letters instanceof Set): " + (letters instanceof Set);
+}
+
+function complex176() {
+    return "Number('3.14'): " + Number('3.14') + "<br>" +
+    "Number(' '): " + Number(' ') + "<br>" +
+    "Number(''): " + Number('') + "<br>" +
+    "Number('99 88'): " + Number('99 88') + "<br>" +
+    "Number('Iqbal'): " + Number('Iqbal') + "<br>";
+}
+
+function complex177() {
+    let x = 123;
+    return "String(x): " + String(x) + "<br>" +
+    "String(123): " + String(123) + "<br>" +
+    "String(100 + 23): " + String(100 + 23) + "<br>";
+}
+
+function complex178() {
+    return "5 + null: " + (5 + null) + "<span class='commentcolor'> //null is converted to 0</span><br>" +
+    "'5' + null: " + ('5' + null) + "<span class='commentcolor'> //null is converted to 'null'</span><br>" +
+    "'5' + 2: " + ('5' + 2) + "<span class='commentcolor'> //2 is converted to '2'</span><br>" +
+    "'5' + '2': " + ('5' + '2') + "<span class='commentcolor'> //Both are strings</span><br>" +
+    "'5' * '2': " + ('5' * '2') + "<span class='commentcolor'> //Both are converted to numbers</span><br>";
+}
+
+function complex179() {
+    const car = {
+        brand: "Toyota",
+        model: "Supra",
+        year: 2024,
+        features: ["Turbocharged engine", "Sport suspension", "Leather interior"]
+    };
+
+    // Destructuring
+    let {brand, model} = car;
+
+    //Display Primitive Values
+    return brand + " " + model;
 }
