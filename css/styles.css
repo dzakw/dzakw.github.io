@@ -533,6 +533,11 @@ p {
   font-style: italic;
 }
 
+.jsregexpcolor {
+  color: #f50;
+  font-weight: normal;
+}
+
 /* HTML colors */
 .htmltagcolor { 
   color: #800000; 

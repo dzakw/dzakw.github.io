@@ -127,8 +127,6 @@ function toggleBoth(sectionId, exampleId) {
     lastOpenedExampleId = example.style.display === "block" ? exampleId : null;
 }
 
-
-
 // //Javascript learning start here
 // function showAnswer1() {
 //     document.getElementById('demog').innerHTML = (5 + 10) * 2 - (12 / 3);
@@ -2244,4 +2242,105 @@ function complex179() {
 
     //Display Primitive Values
     return brand + " " + model;
+}
+
+function complex180() {
+    const myCar = [
+        {car: "Toyota Supra", topSpeed: 155 },
+        {car: "Nissan Skyline", topSpeed: 180 },
+        {car: "Mazda RX-7", topSpeed: 155 },
+        {car: "Honda NSX", topSpeed: 170 },
+        {car: "Mitsubishi Lancer Evolution", topSpeed: 155 },
+        {car: "Subaru BRZ", topSpeed: 155 },
+    ];
+
+    let [car1,,,car2] = myCar;
+
+    return "car1.car: " + car1.car + "<br>" + "car2.car: " + car2.car;
+}
+
+function complex181() {
+    const myCar = [
+        {car: "Toyota Supra", topSpeed: 155 },
+        {car: "Nissan Skyline", topSpeed: 180 },
+        {car: "Mazda RX-7", topSpeed: 155 },
+        {car: "Honda NSX", topSpeed: 170 },
+        {car: "Mitsubishi Lancer Evolution", topSpeed: 155 },
+        {car: "Subaru BRZ", topSpeed: 155 },
+    ];
+
+    let {[0]: car1, [5]:car2} = myCar;
+
+    return "The " + car1.car + " has the same engine as " + car2.car + ". This mean that under the hood, they have a very simillar specs too.";
+}
+
+function complex182() {
+    const myCar = [
+        {car: "Toyota Supra", topSpeed: 155 },
+        {car: "Nissan Skyline", topSpeed: 180 },
+        {car: "Mazda RX-7", topSpeed: 155 },
+        {car: "Honda NSX", topSpeed: 170 },
+        {car: "Mitsubishi Lancer Evolution", topSpeed: 155 },
+        {car: "Subaru BRZ", topSpeed: 155 },
+    ];
+
+    let [car1, , car2, ...rest] = myCar;
+    
+    return "car1.car: " + car1.car + "<br>" + "car2.car: " + car2.car + "<br>" + "rest: " + JSON.stringify(rest);
+}
+
+function complex183() {
+    const myCar = new Map([
+        ["Toyota Supra", 155],
+        ["Nissan Skyline", 180],
+        ["Mazda RX-7", 155],
+        ["Honda NSX", 170],
+        ["Mitsubishi Lancer Evolution", 155],
+        ["Subaru BRZ", 155],
+    ]);
+
+    let text = "";
+    for (const [key, value] of myCar) {
+        text += key + " top speed is " + value + "mph.<br>";
+    }
+    return text;
+}
+
+function complex184() {
+    let firstName = "Iqbal";
+    let lastName = "Imaduddin";
+    
+    [firstName, lastName] = [lastName, firstName];
+    return firstName + ", " + lastName;
+}
+
+function complex185() {
+    function dec2bin(dec) {
+        return (dec >>> 0).toString(2);
+    }
+    return dec2bin(-21);
+}
+
+function complex186() {
+    function bin2dec(bin) {
+        return parseInt(bin, 2).toString(10);
+    }
+    return bin2dec(1000101);
+}
+
+function complex187() {
+    let supra = "Experience the thrill of driving with the legendary Toyota Supra. Known for its sleek design and powerful performance, the Toyota Supra is more than just a car; it's an icon of speed and style. Whether you're on the open road or navigating city streets, the Toyota Supra delivers an exhilarating ride that turns heads wherever it goes. Discover what it means to truly drive with the Toyota Supra, where every journey becomes an unforgettable adventure.";
+    return supra.search(/Toyota Supra/i);
+}
+
+function complex188() {
+    let supra = "Experience the thrill of driving with the legendary Toyota Supra. Known for its sleek design and powerful performance, the Toyota Supra is more than just a car; it's an icon of speed and style. Whether you're on the open road or navigating city streets, the Toyota Supra delivers an exhilarating ride that turns heads wherever it goes. Discover what it means to truly drive with the Toyota Supra, where every journey becomes an unforgettable adventure.";
+    const pattern = /Toyota Supra/i;
+    return pattern.test(supra);
+}
+
+function complex189() {
+    let obj = /Toyota Supra/i.exec("Experience the thrill of driving with the legendary Toyota Supra. Known for its sleek design and powerful performance, the Toyota Supra is more than just a car; it's an icon of speed and style. Whether you're on the open road or navigating city streets, the Toyota Supra delivers an exhilarating ride that turns heads wherever it goes. Discover what it means to truly drive with the Toyota Supra, where every journey becomes an unforgettable adventure.");
+
+    return "Found " + obj[0] + " in position " + obj.index + " in the text";
 }

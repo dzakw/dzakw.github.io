@@ -76,7 +76,8 @@
                     <li><a href="#subsec413" onclick="openSection('subsec413'); openSection('section4')">JavaScript Conditional</a></li>
                     <li><a href="#subsec414" onclick="openSection('subsec414'); openSection('section4')">JavaScript Loops</a></li>
                     <li><a href="#subsec415" onclick="openSection('subsec415'); openSection('section4')">JavaScript Set and Map</a></li>
-                    <li><a href="#subsec416" onclick="openSection('subsec416'); openSection('section4')">JavaScript Type and Destructuring</a></li>               
+                    <li><a href="#subsec416" onclick="openSection('subsec416'); openSection('section4')">JavaScript Type and Destructuring</a></li>
+                    <li><a href="#subsec417" onclick="openSection('subsec417'); openSection('section4')">JavaScript Bitwise and RegExp</a></li>
                 </ul>
             </ul>
         </div>
@@ -5432,7 +5433,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <li>Notes: It will be explained more in later section</li>
 
-                <h4>JavaScript Bitwise Operators</h4>
+                <h4 id="bitwiseOp">JavaScript Bitwise Operators</h4>
                 <li>Bit operators work on 32 bits numbers.</li>
                 <li>Any numeric operand in the operation is converted into a 32 bit number.</li>
                 <li>Below is the list of bitwise operators:</li>
@@ -13434,7 +13435,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                     <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
                                     <br>
                                     <p><span class="commentcolor">// Create an Iterator</span></p>
-                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">iterator</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myNumbers</span><span class="jsbracketcolor>[Symbol.iterator]</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">iterator</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myNumbers</span><span class="jsbracketcolor">[Symbol.iterator]</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
                                     <br>
                                     <p><span class="commentcolor">// Iterate and build the text</span></p>
                                     <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
@@ -13660,7 +13661,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <div class="block-outer">
                             <div class="block-cont">
                                 <div class="block-bl">
-                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">delete</span><span class="jsbracketcolor>(</span><i>value</i><span class="jsbracketcolor>)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">set</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">delete</span><span class="jsbracketcolor">(</span><i>value</i><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
                                 </div>
                             </div>
                         </div>
@@ -14958,7 +14959,465 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa256" class="result"><span></span> </p>
                 </div>
-                <li>
+                <li>Below is an example of destructuring an array.</li>
+                <div class="block-outer" data-result-id="demoa257" data-result-function="complex180">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Toyota Supra'</span><span class="jscomma">,</span> <span class="jspropertycolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Nissan Skyline'</span><span class="jscomma">,</span> <span class="jspropertycolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Mazda RX-7'</span><span class="jscomma">,</span> <span class="jspropertycolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Honda NSX'</span><span class="jscomma">,</span> <span class="jspropertycolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">170</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Mitsubishi Lancer Evolution'</span><span class="jscomma">,</span> <span class="jspropertycolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">{</span><span class="jspropertycolor">car</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'Subaru BRZ'</span><span class="jscomma">,</span> <span class="jspropertycolor">topSpeed</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsbracketcolor">[</span><span class="jsvariablecolor">car1</span><span class="jscomma">,,</span><span class="jsvariablecolor">car2</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myCar</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsstringcolor">'car1.car: '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car1</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">car</span> <span class="jsstringcolor">'&lt;br&gt;'</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'car2.car: '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car2</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">car</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa257" class="result"><span></span> </p>
+                </div>
+                <li>It is also possible to use Array Position values instead of skipping using commas like above.</li>
+                <div class="block-outer" data-result-id="demoa258" data-result-function="complex181">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsbracketcolor">{[</span><span class="jsnumbercolor">0</span><span class="jsbracketcolor">]:</span> <span class="jsvariablecolor">car1</span><span class="jscomma">,</span> <span class="jsbracketcolor">[</span><span class="jsnumbercolor">5</span><span class="jsbracketcolor">]:</span><span class="jsvariablecolor">car2</span><span class="jsbracketcolor">}</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myCar</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsstringcolor">'The '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car1</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">car</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' has the same engine as '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car2</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">car</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'.<br>This mean that under the hood, they have a very simillar specs too.'</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa258" class="result"><span></span> </p>
+                </div>
+                <li>It is possible to end a destructuring syntax with a rest property like below.</li>
+                <div class="block-outer" data-result-id="demoa259" data-result-function="complex182">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsbracketcolor">[</span><span class="jsvariablecolor">car1</span><span class="jscomma">,</span> <span class="jsvariablecolor">car2</span><span class="jsbracketcolor">,</span> <span class="jsoperatorcolor">...</span><span class="jsvariablecolor">rest</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myCar</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsstringcolor">'car1.car: '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car1</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">car</span> <span class="jsstringcolor">'&lt;br&gt;'</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'car2.car: '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">car2</span><span class="jsoperatorcolor">.</span><span class="jspropertycolor">car</span> <span class="jsstringcolor">'&lt;br&gt;'</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'rest: '</span> <span class="jsoperatorcolor">+</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">rest</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa259" class="result"><span></span> </p>
+                </div>
+                <li>Next is an example of destructuring a maps.</li>
+                <div class="block-outer" data-result-id="demoa260" data-result-function="complex183">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Map</span><span class="jsbracketcolor">([</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Toyota Supra'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Nissan Skyline'</span><span class="jscomma">,</span> <span class="jsnumbercolor">180</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Mazda RX-7'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Honda NSX'</span><span class="jscomma">,</span> <span class="jsnumbercolor">170</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Mitsubishi Lancer Evolution'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">[</span><span class="jsstringcolor">'Subaru BRZ'</span><span class="jscomma">,</span> <span class="jsnumbercolor">155</span><span class="jsbracketcolor">]</span></p>
+                            <p><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">const</span> <span class="jsbracketcolor">[</span><span class="jsvariablecolor">key</span><span class="jscomma">,</span> <span class="jsvariablecolor">value</span><span class="jsbracketcolor">]</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">myCar</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">key</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' top speed is '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">value</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'mph.&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">text</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa260" class="result"><span></span> </p>
+                </div>
+                <li>Destructuring itself can be used to swap values of variables.</li>
+                <div class="block-outer" data-result-id="demoa261" data-result-function="complex184">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Iqbal'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Imaduddin'</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsbracketcolor">[</span><span class="jsvariablecolor">firstName</span><span class="jscomma">,</span> <span class="jsvariablecolor">lastName</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsvariablecolor">lastName</span><span class="jscomma">,</span> <span class="jsvariablecolor">firstName</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">', '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">lastName</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa261" class="result"><span></span> </p>
+                </div>
+
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec417" onclick="toggleSection('subsec417')">JavaScript Bitwise and RegExp</h3>
+        <div class="subsection" id="subsec417Content" style="display: none;">
+            <ul>
+                <a href="#subsec43" onclick="toggleBoth('subsec43', 'bitwiseOp')"><h5>JavaScript Bitwise Operators</h5></a>
+                <li>Bitwise operators are used to perform bitwise operations on integers.</li>
+                <li>JavaScript uses 32 bits Bitwise Operands</li>
+                <li>Bitwise operators can be seen <a href="#subsec43" onclick="toggleBoth('subsec43', 'bitwiseOp')">in this subsection</a></li>
+
+                <h5>Binary Numbers</h5>
+                <li>Binary numbers are base-2 numbers, consisting of only 0 and 1.</li>
+                <li>Example: The decimal number 5 is represented in binary as 0101. This binary however, stored in 32 bits, will be 00000000000000000000000000000101.</li>
+                <li>Binary number itself have some repeating patterns, such as:</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Binary Representation</th>
+                        <th>Decimal Value</th>
+                    </tr>
+                    <tr>
+                        <td>00000000000000000000000000000101</td>
+                        <td>5 (4 + 1)</td>
+                    </tr>                 
+                    <tr>
+                        <td>00000000000000000000000000001101</td>
+                        <td>13 (8 + 4 + 1)</td>
+                    </tr>
+                    <tr>
+                        <td>00000000000000000000000000101101</td>
+                        <td>45 (32 + 8 + 4 + 1)</td>
+                    </tr>
+                </table>
+                <li>Below is an example of how to convert a decimal number to binary.</li>
+                <div class="block-outer" data-result-id="demoa262" data-result-function="complex185">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">dec2bin</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">dec</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">dec</span> <span class="jsoperatorcolor">&gt;&gt;&gt;</span> <span class="jsnumbercolor">0</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">dec2bin</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">-21</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa262" class="result"><span></span> </p>
+                </div>
+                <li>Below is an example of how to convert a binary number to decimal.</li>
+                <div class="block-outer" data-result-id="demoa263" data-result-function="complex186">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">bin2dec</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">bin</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsfunctioncolor">parseInt</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">bin</span><span class="jsbracketcolor">,</span> <span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsfunctioncolor">bin2dec</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'1000101'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa263" class="result"><span></span> </p>
+                </div>
+
+                <h5>Regular Expressions</h5>
+                <li>A regular expression is a sequence of characters that forms a search pattern.</li>
+                <li>Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text.</li>
+                <li>Syntax:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><i>/pattern/modifiers;</i></p>
+                        </div>
+                    </div>
+                </div>
+                <li>For example, the regular expression <i>/w3schools/i;</i> matches any occurrence of the word "w3schools" in a string, and "i" is a modifier that makes the search case-insensitive.</li>
+                <li>Regular expression usually used with the string methods <code>search()</code> and <code>replace()</code>.</li>
+                <li>Below is an example of how to use regular expression with the <code>search()</code> method.</li>
+                <div class="block-outer" data-result-id="demoa264" data-result-function="complex187">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">supra</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Experience the thrill of driving with the legendary Toyota Supra.</span></p>
+                            <p><span class="jsstringcolor">Known for its sleek design and powerful performance, the Toyota Supra is more than just a car;</span></p>
+                            <p><span class="jsstringcolor">it's an icon of speed and style. Whether you're on the open road or navigating city streets,</span></p>
+                            <p><span class="jsstringcolor">the Toyota Supra delivers an exhilarating ride that turns heads wherever it goes.</span></p>
+                            <p><span class="jsstringcolor">Discover what it means to truly drive with the Toyota Supra,</span></p>
+                            <p><span class="jsstringcolor">where every journey becomes an unforgettable adventure."</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">supra</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">search</span><span class="jsbracketcolor">(</span><span class="jsregexpcolor">/Toyota Supra/i</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa264" class="result"><span></span> </p>
+                </div>
+                <li>Using regexp instead of string arguments in the string methods will allow you to use more complex patterns.</li>
+                <li>This mean, the methods would be much more powerful (for example, case sensitive).</li>
+
+                <h6>Regular Expression Modifiers</h6>
+                <table class="key-dec">
+                    <tr>
+                        <th>Modifier</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>i</td>
+                        <td>Perform case-insensitive matching</td>
+                    </tr>
+                    <tr>
+                        <td>g</td>
+                        <td>Perform a global match (find all matches rather than stopping after the first match)</td>
+                    </tr>
+                    <tr>
+                        <td>m</td>
+                        <td>Perform multiline matching</td>
+                    </tr>
+                    <tr>
+                        <td>d</td>
+                        <td>Perform start and end matching</td>
+                    </tr>
+                </table>
+
+                <h6>Regular Expression Patterns</h6>
+                <label>Brackets are used to find a range of characters:</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Expression</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>[abc]</td>
+                        <td>Find any character between the brackets</td>
+                    </tr>
+                    <tr>
+                        <td>[^abc]</td>
+                        <td>Find any character NOT between the brackets</td>
+                    </tr>
+                    <tr>
+                        <td>[0-9]</td>
+                        <td>Find any digit from 0 to 9</td>
+                    </tr>
+                    <tr>
+                        <td>[a-z]</td>
+                        <td>Find any character from a to z</td>
+                    </tr>
+                    <tr>
+                        <td>[A-Z]</td>
+                        <td>Find any character from A to Z</td>
+                    </tr>
+                    <tr>
+                        <td>[A-z]</td>
+                        <td>Find any character from A to z</td>
+                    </tr>
+                    <tr>
+                        <td>[adgk]</td>
+                        <td>Find any character in the given set</td>
+                    </tr>
+                    <tr>
+                        <td>[^adgk]</td>
+                        <td>Find any character NOT in the given set</td>
+                    </tr>
+                    <tr>
+                        <td>(x|y)</td>
+                        <td>Find any of the alternatives separated with |</td>
+                    </tr>
+                </table>
+                <label>Metacharacters are characters with a special meaning:</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Expression</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>Find a single character, except newline or line terminator</td>
+                    </tr>
+                    <tr>
+                        <td>\d</td>
+                        <td>Find a digit</td>
+                    </tr>
+                    <tr>
+                        <td>\D</td>
+                        <td>Find a non-digit character</td>
+                    </tr>
+                    <tr>
+                        <td>\s</td>
+                        <td>Find a whitespace character</td>
+                    </tr>
+                    <tr>
+                        <td>\S</td>
+                        <td>Find a non-whitespace character</td>
+                    </tr>
+                    <tr>
+                        <td>\b</td>
+                        <td>Find a match at the beginning/end of a word, beginning like this: \bHI, end like this: HI\b</td>
+                    </tr>
+                    <tr>
+                        <td>\B</td>
+                        <td>Find a match, but not at the beginning/end of a word</td>
+                    </tr>
+                    <tr>
+                        <td>\w</td>
+                        <td>Find a word character</td>
+                    </tr>
+                    <tr>
+                        <td>\W</td>
+                        <td>Find a non-word character</td>
+                    </tr>
+                    <tr>
+                        <td>\n</td>
+                        <td>Find a newline character</td>
+                    </tr>
+                    <tr>
+                        <td>\r</td>
+                        <td>Find a carriage return character</td>
+                    </tr>
+                    <tr>
+                        <td>\t</td>
+                        <td>Find a tab character</td>
+                    </tr>
+                    <tr>
+                        <td>\v</td>
+                        <td>Find a vertical tab character</td>
+                    </tr>
+                    <tr>
+                        <td>\f</td>
+                        <td>Find a form feed character</td>
+                    </tr>
+                </table>
+                <label>Quantifiers define quantities:</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Expression</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>n+</td>
+                        <td>Matches any string that contains at least one n</td>
+                    </tr>
+                    <tr>
+                        <td>n*</td>
+                        <td>Matches any string that contains zero or more occurrences of n</td>
+                    </tr>
+                    <tr>
+                        <td>n?</td>
+                        <td>Matches any string that contains zero or one occurrences of n</td>
+                    </tr>
+                    <tr>
+                        <td>n{X}</td>
+                        <td>Matches any string that contains a sequence of X n's</td>
+                    </tr>
+                    <tr>
+                        <td>n{X,Y}</td>
+                        <td>Matches any string that contains a sequence of X to Y n's</td>
+                    </tr>
+                    <tr>
+                        <td>n{X,}</td>
+                        <td>Matches any string that contains a sequence of at least X n's</td>
+                    </tr>
+                    <tr>
+                        <td>n$</td>
+                        <td>Matches any string with n at the end of it</td>
+                    </tr>
+                    <tr>
+                        <td>^n</td>
+                        <td>Matches any string with n at the beginning of it</td>
+                    </tr>
+                    <tr>
+                        <td>?=n</td>
+                        <td>Matches any string that is followed by a specific string n</td>
+                    </tr>
+                    <tr>
+                        <td>?!n</td>
+                        <td>Matches any string that is not followed by a specific string n</td>
+                    </tr>
+                </table>
+
+                <h6>Using test()</h6>
+                <li>The <code>test()</code> method is a RegExp expression method that tests for a match in a string.</li>
+                <li>This method returns true if it finds a match, otherwise it returns false.</li>
+                <div class="block-outer" data-result-id="demoa265" data-result-function="complex188">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">supra</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Experience the thrill of driving with the legendary Toyota Supra.</span></p>
+                            <p><span class="jsstringcolor">Known for its sleek design and powerful performance, the Toyota Supra is more than just a car;</span></p>
+                            <p><span class="jsstringcolor">it's an icon of speed and style. Whether you're on the open road or navigating city streets,</span></p>
+                            <p><span class="jsstringcolor">the Toyota Supra delivers an exhilarating ride that turns heads wherever it goes.</span></p>
+                            <p><span class="jsstringcolor">Discover what it means to truly drive with the Toyota Supra,</span></p>
+                            <p><span class="jsstringcolor">where every journey becomes an unforgettable adventure."</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">pattern</span> <span class="jsoperatorcolor">=</span> <span class="jsregexpcolor">/Toyota Supra/i</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">pattern</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">test</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">supra</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa265" class="result"><span></span> </p>
+                </div>
+
+                <h6>Using exec()</h6>
+                <li>The <code>exec()</code> method is a RegExp expression method that tests for a match in a string.</li>
+                <li>This method returns an array of information or null if no match is found.</li>
+                <div class="block-outer" data-result-id="demoa266" data-result-function="complex189">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsregexpcolor">/Toyota Supra/i</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">exec</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">supra</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa266" class="result"><span></span> </p>
+                </div>
 
             </ul>
         </div>
