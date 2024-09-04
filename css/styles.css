@@ -62,6 +62,10 @@ h3.subsection:hover {
   color:gainsboro; /* Set the text color to gainsboro */
 }
 
+li {
+  list-style-type:none;
+}
+
 ul.threeColumn, ul.fiveColumn {
   list-style-type: none;
   padding: 0;
@@ -449,6 +453,18 @@ blockquote p:first-child {
   color: #171717;
 }
 
+.message-success {
+  font-family: monospace;
+  color: green;
+  background-color: rgba(189, 189, 189, 0.3)
+}
+
+.message-error {
+  font-family: monospace;
+  color: crimson;
+  background-color: rgba(189, 189, 189, 0.3)
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family:'Segoe UI', Arial, sans-serif;
 }
@@ -766,6 +782,25 @@ mark {
   border-collapse: collapse;
 }
 
+.nullpad {
+  margin-top: 4px;
+}
+
+.nullpad th, .nullpad td {
+  padding: 4px 20px 4px 20px;
+}
+
+.nullpad h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.tdcenter {
+  background-color: #ffffcc!important;
+  text-align: center;
+}
+
 .tls th, .tls td {
   padding: 4px;
 }
@@ -820,6 +855,23 @@ mark {
 
 .date-cont div:last-child {
   margin-right: 0;
+}
+
+.btn-err-inp {
+  font-size: medium;
+  font-weight: bold;
+  color: #171717;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #5EC75B;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-err-inp:hover {
+  background-color: #5EC75B;
+  color: #fff;
 }
 
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */

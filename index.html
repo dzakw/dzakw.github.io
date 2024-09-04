@@ -77,7 +77,8 @@
                     <li><a href="#subsec414" onclick="openSection('subsec414'); openSection('section4')">JavaScript Loops</a></li>
                     <li><a href="#subsec415" onclick="openSection('subsec415'); openSection('section4')">JavaScript Set and Map</a></li>
                     <li><a href="#subsec416" onclick="openSection('subsec416'); openSection('section4')">JavaScript Type and Destructuring</a></li>
-                    <li><a href="#subsec417" onclick="openSection('subsec417'); openSection('section4')">JavaScript Bitwise and RegExp</a></li>
+                    <li><a href="#subsec417" onclick="openSection('subsec417'); openSection('section4')">JavaScript Bitwise, RegExp, and Precedence</a></li>
+                    <li><a href="#subsec418" onclick="openSection('subsec418'); openSection('section4')">JavaScript Errors, Scope, and Hoisting</a></li>
                 </ul>
             </ul>
         </div>
@@ -6498,7 +6499,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <div class="block-outer" data-result-id="demoa12" data-result-function="complex26">
                     <div class="block-cont">
                         <div class="block-bl">
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsvariablecolor">bananas</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">300</span><span class="jsoperatorcolorc">,</span> <span class="jsvariablecolor">oranges</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">200</span><span class="jsoperatorcolorc">,</span> <span class="jsvariablecolor">apples</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">430</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">fruits</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsvariablecolor">bananas</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">300</span><span class="jsoperatorcolor"c">,</span> <span class="jsvariablecolor">oranges</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">200</span><span class="jsoperatorcolor"c">,</span> <span class="jsvariablecolor">apples</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">430</span><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
                             <br>
                             <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jsoperatorcolor">;</span></p>
                             <p><span class="jskeywordcolor">for</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">[fruit</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">value</span><span class="jskeywordcolor">]</span> <span class="jskeywordcolor">of</span> <span class="jsfunctioncolor">Object</span><span class="jsfunctioncolor">.entries</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">fruits</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span></p>
@@ -14610,7 +14611,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa246" class="result"><span></span> </p>
                 </div>
+                <br>
                 
+                <hr>
                 <h5>Type Conversion</h5>
                 <li>It is possible to do these type conversions:</li>
                 <ul>
@@ -14821,7 +14824,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa255" class="result"><span></span> </p>
                 </div>
+                <br>
 
+                <hr>
                 <h5>JavaScript Type Conversion Table</h5>
                 <li>This table shows the result of converting different JavaScript values to Number, String, and Boolean:</li>
                 <table class="key-dec">
@@ -14928,7 +14933,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <td>false</td>
                     </tr>
                 </table>
+                <br>
 
+                <hr>
                 <h5>JavaScript Destructuring</h5>
                 <li>JavaScript destructuring is a feature that allows you to extract data from arrays, objects, maps, and sets.</li>
                 <li>Below is an example of destructuring an object.</li>
@@ -15081,7 +15088,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
         </div>
         <hr>
 
-        <h3 class="subsection" id="subsec417" onclick="toggleSection('subsec417')">JavaScript Bitwise and RegExp</h3>
+        <h3 class="subsection" id="subsec417" onclick="toggleSection('subsec417')">JavaScript Bitwise, RegExp, and Precedence</h3>
         <div class="subsection" id="subsec417Content" style="display: none;">
             <ul>
                 <a href="#subsec43" onclick="toggleBoth('subsec43', 'bitwiseOp')"><h5>JavaScript Bitwise Operators</h5></a>
@@ -15151,7 +15158,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa263" class="result"><span></span> </p>
                 </div>
+                <br>
 
+                <hr>
                 <h5>Regular Expressions</h5>
                 <li>A regular expression is a sequence of characters that forms a search pattern.</li>
                 <li>Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text.</li>
@@ -15418,9 +15427,991 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa266" class="result"><span></span> </p>
                 </div>
+                <br>
+
+                <hr>
+                <h5>Operator Precedence</h5>
+                <li>Operator precedence describes the order in which operations are performed in an arithmetic expression.</li>
+                <li>For example, multiplication (<code>*</code>) and division (<code>/</code>) have a higher precedence than addition (<code>+</code>) and subtraction (<code>-</code>).</li>
+                <table class="key-dec nullpad">
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Operator Precedence Values</h6>
+                            Expressions in parentheses are computed <b>before</b> the rest of the expression<br>
+                            Functions are executed <b>before</b> the result is used in the rest of the expression
+                        </td>
+                    </tr>  
+                    <tr>
+                        <th>Val</th>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>( )</td>
+                        <td>Expression Grouping</td>
+                        <td>(3 + 4) * 5</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>.</td>
+                        <td>Member Of</td>
+                        <td>person.name</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>[]</td>
+                        <td>Member Of</td>
+                        <td>person['name']</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>?.</td>
+                        <td>Optional Chaining</td>
+                        <td>x ?. y</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>()</td>
+                        <td>Function Call</td>
+                        <td>myFunction()</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>new</td>
+                        <td>New with arguments</td>
+                        <td>new Date("June 5,2022")</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>new</td>
+                        <td>New without Arguments</td>
+                        <td>new Date()</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Increment Operators</h6>
+                            Postfix increments are executed <b>before</b> prefix increments
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>++</td>
+                        <td>Postfix Increment</td>
+                        <td>x++</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>--</td>
+                        <td>Postfix Decrement</td>
+                        <td>x--</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>++</td>
+                        <td>Prefix Increment</td>
+                        <td>++x</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>--</td>
+                        <td>Prefix Decrement</td>
+                        <td>--x</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>NOT Operator</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>!</td>
+                        <td>Logical NOT</td>
+                        <td>!(x==y)</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>~</td>
+                        <td>Bitwise NOT</td>
+                        <td>~x</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Unary Operators</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>+</td>
+                        <td>Unary Plus</td>
+                        <td>+x</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>-</td>
+                        <td>Unary Minus</td>
+                        <td>-x</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Data Type</td>
+                        <td>Typeof</td>
+                        <td>typeof x</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>void</td>
+                        <td>Void</td>
+                        <td>void x</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>delete</td>
+                        <td>Property Delete</td>
+                        <td>delete myCar.brand</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Arithmetic Operators</h6>
+                            Exponentiations are executed <b>before</b> multiplications<br>
+                            Multiplications and divisions are executed <b>before</b> additions and subtractions
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>**</td>
+                        <td>Exponentiation</td>
+                        <td>10 ** 2</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                        <td>10 * 2</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>/</td>
+                        <td>Division</td>
+                        <td>10 / 2</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>%</td>
+                        <td>Modulus</td>
+                        <td>10 % 2</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>+</td>
+                        <td>Addition</td>
+                        <td>10 + 2</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>-</td>
+                        <td>Subtraction</td>
+                        <td>10 - 2</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>+</td>
+                        <td>String Concatenation</td>
+                        <td>'Hello' + 'World'</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Shift Operators</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>&lt;&lt;</td>
+                        <td>Left Shift</td>
+                        <td>x &lt;&lt; 2</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>&gt;&gt;</td>
+                        <td>Right Shift (signed)</td>
+                        <td>x &gt;&gt; 2</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>&gt;&gt;&gt;</td>
+                        <td>Right Shift (unsigned)</td>
+                        <td>x &gt;&gt;&gt; 2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Relational Operators</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>in</td>
+                        <td>Property in Object</td>
+                        <td>'PI' in Math</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>instanceof</td>
+                        <td>Instance of Object</td>
+                        <td>x instanceof Array</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>&lt;</td>
+                        <td>Less Than</td>
+                        <td>x &lt; y</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>&lt;=</td>
+                        <td>Less Than or Equal</td>
+                        <td>x &lt;= y</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>&gt;</td>
+                        <td>Greater Than</td>
+                        <td>x &gt; y</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>&gt;=</td>
+                        <td>Greater Than or Equal</td>
+                        <td>x &gt;= y</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>==</td>
+                        <td>Equal</td>
+                        <td>x == y</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>===</td>
+                        <td>Strict Equal</td>
+                        <td>x === y</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>!=</td>
+                        <td>Not Equal</td>
+                        <td>x != y</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>!==</td>
+                        <td>Strict Not Equal</td>
+                        <td>x !== y</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Bitwise Operators</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>&amp;</td>
+                        <td>Bitwise AND</td>
+                        <td>x &amp; y</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>^</td>
+                        <td>Bitwise XOR</td>
+                        <td>x ^ y</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>|</td>
+                        <td>Bitwise OR</td>
+                        <td>x | y</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Logical Operators</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&amp;&amp;</td>
+                        <td>Logical AND</td>
+                        <td>x &amp;&amp; y</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>||</td>
+                        <td>Logical OR</td>
+                        <td>x || y</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>??</td>
+                        <td>Nullish Coalescing</td>
+                        <td>x ?? y</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Conditional (ternary) Operator</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>?:</td>
+                        <td>Conditional</td>
+                        <td>? "yes" : "no"</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="tdcenter">
+                            <h6>Assignment Operators</h6>
+                            Assignments are executed <b>after</b> other operations
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>=</td>
+                        <td>Simple Assignment</td>
+                        <td>x = y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>:</td>
+                        <td>Colon Assignment</td>
+                        <td>x : y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>+=</td>
+                        <td>Addition Assignment</td>
+                        <td>x += y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>-=</td>
+                        <td>Subtraction Assignment</td>
+                        <td>x -= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>*=</td>
+                        <td>Multiplication Assignment</td>
+                        <td>x *= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>**=</td>
+                        <td>Exponentiation Assignment</td>
+                        <td>x **= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>/=</td>
+                        <td>Division Assignment</td>
+                        <td>x /= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>%=</td>
+                        <td>Modulus Assignment</td>
+                        <td>x %= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>&lt;&lt;=</td>
+                        <td>Left Shift Assignment</td>
+                        <td>x &lt;&lt;= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>&gt;&gt;=</td>
+                        <td>Right Shift Assignment</td>
+                        <td>x &gt;&gt;= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>&gt;&gt;&gt;=</td>
+                        <td>Unsigned Right Shift Assignment</td>
+                        <td>x &gt;&gt;&gt;= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>&amp;=</td>
+                        <td>Bitwise AND Assignment</td>
+                        <td>x &amp;= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>|=</td>
+                        <td>Bitwise OR Assignment</td>
+                        <td>x |= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>^=</td>
+                        <td>Bitwise XOR Assignment</td>
+                        <td>x ^= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>&amp;&amp;=</td>
+                        <td>Logical AND Assignment</td>
+                        <td>x &amp;&amp;= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>||=</td>
+                        <td>Logical OR Assignment</td>
+                        <td>x ||= y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>=></td>
+                        <td>Arrow Function Assignment</td>
+                        <td>x =&gt; y</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>yield</td>
+                        <td>Pause / Resume</td>
+                        <td>yield x</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>yield*</td>
+                        <td>Delegated Generator</td>
+                        <td>yield* x</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>...</td>
+                        <td>Spread Operator</td>
+                        <td>...x</td>
+                    </tr>            
+                    <tr>
+                        <td>1</td>
+                        <td>,</td>
+                        <td>Comma</td>
+                        <td>x, y</td>
+                    </tr>
+                </table>
 
             </ul>
         </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec418" onclick="toggleSection('subsec418')">JavaScript Errors, Scope, and Hoisting</h3>
+        <div class="subsection" id="subsec418Content" style="display: none;">
+            <ul>
+                <h5>JavaScript Errors</h5>
+                <li>The <code>try</code> statement defines a code block to run (to try)</li>
+                <li>The <code>catch</code> statement defines a code block to run if an error occurs</li>
+                <li>The <code>finally</code> statement defines a code block to run after the try and catch blocks, regardless of the result</li>
+                <li>The <code>throw</code> statement allows you to create a custom error</li>
+                <br>
+                <li>When executing JavaScript code, different errors can occur.</li>
+                <li>Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things.</li>
+                <div class="block-outer" data-result-id="demoa267" data-result-function="complex190">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">adddlert</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Welcome guest!"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">catch</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">err</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">message</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa267" class="result"><span></span> </p>
+                </div>
+                <li>JavaScript statements <code>try</code> and <code>catch</code> come in pairs:</li>
+                <div class=block-outer>
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Block of code to try</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">catch</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Block of code to handle errors</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>When an error occurs in JavaScript, the interpreter will stop and generate an error message.</li>
+                <li>The technical term for this is: JavaScript will <b>throw an exception</b> (throw an error).</li>
+                <li style="background-color: #f3ffc0!important;">JavaScript will actually create an <b>Error object</b> with two main properties: <code>name</code> and <code>message</code>.</li>
+
+                <h6>The throw Statement</h6>
+                <li>The <code>throw</code> statement allows you to create a custom error.</li>
+                <li>Technically you can throw an exception (throw an error).</li>
+                <li>The exception can be a JavaScript <b>String</b>, a <b>Number</b>, a <b>Boolean</b>, or an <b>Object</b>:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"Too big"</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// throw a text</span></p>
+                            <p><span class="jskeywordcolor">throw</span> <span class="jsvariablecolor">500</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// throw a number</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Combine <code>throw</code> together with <code>try</code> and <code>catch</code>, and it is possible to control program flow and generate custom error messages.</li>
+                <li>Below is an example when using JavaScript Input Validation with <code>try</code> and <code>catch</code> statements:</li>   
+                <div class="block-outer">
+                    <div class="block-cont" style="margin-right: 20px;">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">message</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p01"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">message</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"desho"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">value</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">trim</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">==</span> <span class="jsstringcolor">""</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"empty"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">isNaN</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"not a number"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Number</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsnumbercolor">5</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"too low"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"too high"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">message</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Input is valid."</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">catch</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">message</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Input is "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">err</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <li>Please input a number between 5 and 10:</li>
+                        <div style="display: flex; flex-direction: row; margin-bottom: 6px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; margin-right: 20px; width: 120px; height: 22px;">
+                                <input id="desho" type="text" style=" height: 100%; width: 100%;" onkeyup="complex191()">
+                            </div>
+                            <p id="p01" style="margin-top: 0; height: fit-content;"></p>
+                        </div>     
+                    </div>
+                </div>
+                <li>Other than using JavaScript validation, modern browser usually also use HTML5 validation to check for input errors like below:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsbracketcolor">&lt;</span><span class="htmltagcolor">input</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demo"</span> <span class="htmlattrnamecolor">type</span>=<span class="htmlattrvaluecolor">"number"</span> <span class="htmlattrnamecolor">min</span>=<span class="htmlattrvaluecolor">"5"</span> <span class="htmlattrnamecolor">max</span>=<span class="htmlattrvaluecolor">"10"</span> <span class="htmlattrnamecolor">step</span>=<span class="htmlattrvaluecolor">"1"</span><span class="jsbracketcolor">&gt;</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h6>Finally Statement</h6>
+                <li>The <code>finally</code> statement lets you execute code, after try and catch, regardless of the result.</li>
+                <li>Syntax:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Block of code to try</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">catch</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Block of code to handle errors</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">finally</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Block of code to be executed regardless of the try / catch result</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Example:</li>
+                <div class="block-outer">
+                    <div class="block-cont" style="margin-right: 20px;">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">message</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p01"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">message</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"desho"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">value</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">trim</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">==</span> <span class="jsstringcolor">""</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"empty"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">isNaN</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"not a number"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Number</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsnumbercolor">5</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"too low"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span> <span class="jskeywordcolor">throw</span> <span class="jsstringcolor">"too high"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">message</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Input is valid."</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">catch</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">message</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Input is "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">err</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">finally</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"desho"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">value</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <li>Please input a number between 5 and 10:</li>
+                        <div style="display: flex; flex-direction: row; margin-bottom: 6px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; margin-right: 20px; width: 120px; height: 22px;">
+                                <input id="desho1" type="text" style=" height: 100%; width: 100%;" onkeyup="complex192()">
+                            </div>
+                            <p id="p02" style="margin-top: 0; height: fit-content;"></p>
+                        </div>     
+                    </div>
+                </div>
+
+                <h6>The Error Object</h6>
+                <li>JavaScript has a built in error object that provides error information when an error occurs.</li>
+                <li>The error object provides two useful properties: name and message.</li>
+                <li>Below is Error Object Properties:</li>
+                <table class="key-dec nullpad">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Sets or returns an error name</td>
+                    </tr>
+                    <tr>
+                        <td>message</td>
+                        <td>Sets or returns an error message (a string)</td>
+                    </tr>
+                </table>
+                <br>
+                
+                <h6>Error Name Values</h6>
+                <li>Below is a list of error name values:</li>
+
+                <ul class="threeColumn" id="threeColumn15"></ul>
+                <div>
+                    <div id="example4209" style="display: none;">
+                        <h5>EvalError</h5>
+                        <li>An error has occurred in the eval() function</li>
+                        <li style="background-color: #FFC0C7 !important;">Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</li>
+                    </div>
+
+                    <div id="example4210" style="display: none;">
+                        <h5>RangeError</h5>
+                        <li>A <code>RangeError</code> is thrown if you use a number that is outside the range of legal values.</li>
+                        <li>For example, it is not possible to set the number of significant digits of a number to 500.</li>
+                        <div class="block-outer" data-result-id="demoa268" data-result-function="complex193">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">1</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toPrecision</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">500</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// A number cannot have 500 significant digits</span></p>
+                                    <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">catch</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">err</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa268" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4211" style="display: none;">
+                        <h5>ReferenceError</h5>
+                        <li>A <code>ReferenceError</code> is thrown if you use (reference) a variable that has not been declared</li>
+                        <div class="block-outer" data-result-id="demoa269" data-result-function="complex194">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">1</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// y cannot be used (referenced)</span></p>
+                                    <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">catch</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">err</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa269" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4212" style="display: none;">
+                        <h5>SyntaxError</h5>
+                        <li>A <code>SyntaxError</code> is thrown if you try to evaluate code with a syntax error</li>
+                        <div class="block-outer" data-result-id="demoa270" data-result-function="complex195">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">eval</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"alert('Hello)"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Missing ' will produce an error</span></p>
+                                    <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">catch</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">err</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa270" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4213" style="display: none;">
+                        <h5>TypeError</h5>
+                        <li>A <code>TypeError</code> is thrown if an operand or argument is incompatible with the type expected by an operator or function.</li>
+                        <div class="block-outer" data-result-id="demoa271" data-result-function="complex196">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">num</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">1</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">num</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toUpperCase</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// You cannot convert a number to upper case</span></p>
+                                    <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">catch</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">err</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa271" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4214" style="display: none;">
+                        <h5>URIError</h5>
+                        <li>A <code>URIError</code> is thrown if you use illegal characters in a URI function</li>
+                        <div class="block-outer" data-result-id="demoa272" data-result-function="complex197">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">try</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">decodeURI</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"%%%"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// You cannot URI decode percent signs</span></p>
+                                    <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">catch</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">err</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">err</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa272" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <li>Other than the above, there are also other Non-standard Error Object Properties like <code>fileName</code> (mozilla), <code>lineNumber</code> (mozilla), and <code>columnNumber</code> (mozilla), <code>stack</code> (mozilla), <code>description</code> (microsoft), <code>number</code> (microsoft), and others.</li>
+                <li style="background-color: #f3ffc0!important;">Do not use these properties in public web sites, as they wont work in all browsers.</li>
+                <br>
+
+                <hr>
+                <h5>JavaScript Scope</h5>
+                <div style="background-color: #a8d8bb;">
+                    <li>Scope determines the accessibility (visibility) of variables.</li>
+                    <li>JavaScript variables have 3 types of scope:
+                    <ul>
+                        <li>Block scope</li>
+                        <li>Function scope</li>
+                        <li>Global scope</li>
+                    </ul>
+                </div>
+                <br>
+                
+                <h6>Block Scope</h6>
+                <li>The keyword <code>let</code> and <code>const</code> are used to declare block scope variables.</li>
+                <li>Variables declared inside a { } block cannot be accessed from outside the block:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="commentcolor">// x can NOT be used here</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Variables declared with the <code>var</code> keyword can NOT have block scope.</li>
+                <li>This mean, variable declared with the <code>var</code> keyword can be accessed outside the block:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="commentcolor">// x can be used here</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Local Scope</h6>
+                <li>Variables declared within a JavaScript function, become <b>LOCAL</b> to the function.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// code here can NOT use carName</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// code here CAN use carName</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="commentcolor">// code here can NOT use carName</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Function Scope</h6>
+                <li>Variables defined inside a function are not accessible (visible) from outside the function.</li>
+                <li>Variables declared with <code>var</code>, <code>let</code> and <code>const</code> are quite similar when declared inside a function. They all will have <b>Function Scope</b></li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;// Function Scope</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">speed</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Function Scope</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">color</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"red"</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Function Scope</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Global Scope</h6>
+                <li>Variables declared outside any function are <b>Global</b> variables.</li>
+                <li>Global variables can be accessed from anywhere in a JavaScript program.</li>
+                <li>Variables declared with <code>var</code> and <code>let</code> are quite similar when declared outside a function. They both will have <b>Global Scope</b></li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Toyota Supra"</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;// Global Scope</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">speed</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">123</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Global Scope</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">color</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"red"</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Global Scope</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Automatically Global</h6>
+                <li>If a value is assigned into a variable that has not been declared, it will automatically become a global variable, even if it is inside a function:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">myFunction</span><span class="jsbracketcolor">()</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;// Global Scope</span></p>
+                            <p><span class="commentcolor">// code here can use carName</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Volvo"</span><span class="jssemicoloncolor">;</span><span class="commentcolor">&nbsp;&nbsp;// Global Scope</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background-color: #FFC0C7!important; padding: 6px; margin-bottom: 6px;">
+                    <p style="margin-top: 4px;">Do NOT create global variables unless you intend to.</p>
+                    <p style="margin-top: 4px;">Your global variables (or functions) can overwrite window variables (or functions).</p>
+                    <p style="margin-top: 4px;">Any function, including the window object, can overwrite your global variables and functions.</p>
+                </div>
+                <li>The lifetime of a JavaScript variable starts when it is declared.</li>
+                <li>Function (local) variables are deleted when the function is completed.</li>
+                <li>In a web browser, global variables are deleted when you close the browser window (or tab).</li>
+                <br>
+
+                <hr>
+                <h5>JavaScript Hoisting</h5>
+                <li>Hoisting is JavaScript's default behavior of moving declarations to the top.</li>
+                <li>In JavaScript, a variable can be declared after it has been used.</li>
+                <li>In other words; a variable can be used before it has been declared.</li>
+                <li>Below Example 1 and Example 2 will show result as 5:</li>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example 1:</b> </p>
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Assign 5 to x</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">elem</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Find an element</span></p>
+                            <p><span class="jsvariablecolor">elem</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Display x in the element</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Declare x</span></p>
+                        </div>
+                    </div>
+                    <div class="block-cont" style="padding-top: 4px; height: fit-content;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example 2:</b> </p>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Declare x</span></p>
+                            <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Assign 5 to x</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">elem</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Find an element</span></p>
+                            <p><span class="jsvariablecolor">elem</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Display x in the element</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).</li>
+                <li>Variables defined with <code>let</code> and <code>const</code> are hoisted to the top of the block, but not initialized.</li>
+                <li>Using a <code>let</code> variable before it is declared will result in a <code>ReferenceError</code>.</li>
+                <li>The variable is in a "temporal dead zone" from the start of the block until it is declared:</li>
+                <div class="block-outer" data-result-id="demoa273" data-result-function="complex198">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example</b> </p>
+                        <p style="margin-top: 4px;">This will result in a <code>ReferenceError</code></p>
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Saab"</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Volvo"</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa273" class="result"><span></span> </p>
+                </div>
+                <li>Using <code>const</code> variable before it is declared, is a syntax error, so the code will simply not run.</li>
+                <div class="block-outer" data-result-id="demoa274" data-result-function="complex199">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example</b> </p>
+                        <p style="margin-top: 4px;">This code will not run</p>
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Saab"</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Volvo"</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa274" class="result"><span></span> </p>
+                </div>
+
+            </ul>
+        </div>
+        <hr>
         
     </div>
     <hr>

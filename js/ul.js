@@ -230,6 +230,20 @@ function generateList15() {
     });
 }
 
+function generateList16() {
+    const methods = [
+        "EvalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"
+    ];
+
+    const ul = document.getElementById('threeColumn15');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 209}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;

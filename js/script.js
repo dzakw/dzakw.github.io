@@ -206,6 +206,47 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Find the block specifically meant for complex191
+    document.querySelectorAll('.block-outer').forEach(block => {
+        const resultFunction = block.getAttribute('data-result-function');
+        
+        // Only set up event listeners if the function matches 'complex191'
+        if (resultFunction === 'complex191') {
+            const resultId = block.getAttribute('data-result-id');
+            const runButton = block.querySelector('.run-btn');
+            const resetButton = block.querySelector('.reset-btn');
+            const resultElement = document.getElementById(resultId);
+
+            if (runButton && resetButton && resultElement) {
+                console.log('Setting up complex191:', block);
+
+                // Add event listener for the Run button to trigger complex191
+                runButton.addEventListener('click', () => {
+                    // Execute the specific function, complex191
+                    if (typeof window[resultFunction] === 'function') {
+                        window[resultFunction]();
+                    }
+
+                    resultElement.style.display = 'block'; // Show the result area
+                    resetButton.style.display = 'flex';   // Show the reset button
+                });
+
+                // Add event listener for the Reset button
+                resetButton.querySelector('.reset-icon').addEventListener('click', () => {
+                    resultElement.innerHTML = '<span></span>'; // Clear generated content
+                    resultElement.style.display = 'none';       // Hide the result area
+                    resetButton.style.display = 'none';         // Hide the reset button
+                    resultElement.classList.remove('generated'); // Allow regeneration if needed
+                });
+            } else {
+                console.warn('Missing elements for complex191 block:', block);
+            }
+        }
+    });
+});
+
+
 function complex0() {
     let output = '';
     function testImplicitGlobal() {
@@ -2343,4 +2384,132 @@ function complex189() {
     let obj = /Toyota Supra/i.exec("Experience the thrill of driving with the legendary Toyota Supra. Known for its sleek design and powerful performance, the Toyota Supra is more than just a car; it's an icon of speed and style. Whether you're on the open road or navigating city streets, the Toyota Supra delivers an exhilarating ride that turns heads wherever it goes. Discover what it means to truly drive with the Toyota Supra, where every journey becomes an unforgettable adventure.");
 
     return "Found " + obj[0] + " in position " + obj.index + " in the text";
+}
+
+function complex190() {
+    try {
+        adddlert("Welcome guest!");
+    }
+    catch(err) {
+        return err.message;
+    }
+}
+
+function complex191() {
+    const message = document.getElementById("p01");
+    message.innerHTML = "";
+    let x = document.getElementById("desho").value;
+
+    message.classList.remove('message-success', 'message-error');
+
+    try { 
+        if (x.trim() === "") throw "empty";
+        if (isNaN(x)) throw "not a number";
+        x = Number(x);
+        if (x < 5) throw "too low";
+        if (x > 10) throw "too high";
+
+        message.innerHTML = "Input is valid.";
+        message.classList.add('message-success');
+    } catch (err) {
+        message.innerHTML = "Input is " + err;
+        message.classList.add('message-error');
+    }
+}
+
+function complex192() {
+    const message = document.getElementById("p02");
+    message.innerHTML = "";
+    let x = document.getElementById("desho1").value;
+
+    message.classList.remove('message-success', 'message-error');
+
+    try { 
+        if (x.trim() === "") throw "empty";
+        if (isNaN(x)) throw "not a number";
+        x = Number(x);
+        if (x < 5) throw "too low";
+        if (x > 10) throw "too high";
+
+        message.innerHTML = "Input is valid.";
+        message.classList.add('message-success');
+    } catch (err) {
+        message.innerHTML = "Input is " + err;
+        message.classList.add('message-error');
+    } finally {
+        document.getElementById("desho1").value = "";
+    }
+}
+
+function complex193() {
+    let num = 1;
+    
+    try {
+        num.toPrecision(500); // A number cannot have 500 significant digits
+        return "No error";
+    } catch (err) {
+        return err.name;
+    }
+}
+
+function complex194() {
+    let x = 5;
+    try {
+        x = y + 1; // y cannot be used (referenced)
+    }
+    catch(err) {
+        return err.name;
+    }
+}
+
+function complex195() {
+    try {
+        eval("alert('Hello)");   // Missing ' will produce an error
+    }
+    catch(err) {
+        return err.name;
+    }
+}
+
+function complex196() {
+    let num = 1;
+    try {
+        num.toUpperCase();   // You cannot convert a number to upper case
+    } catch (err) {
+        return err.name;     // Return the error name if an error occurs
+    }
+}
+
+function complex197() {
+    try {
+        decodeURI("%%%");   // You cannot URI decode percent signs
+    }
+    catch(err) {
+        return err.name;
+    }
+}
+
+function complex198() {
+    try {
+        carName = "Saab";
+        let carName = "Volvo";
+    }
+    catch(err) {
+        return err;
+    }
+}
+
+function complex199() {
+    const code = `
+    carName = "Volvo";
+    const carName;
+    return carName;
+    `;
+
+    try {
+        eval(`(function() { ${code} })()`);
+    } catch (error) {
+        console.error('Caught SyntaxError:', error.message); // This will log the syntax error
+        return 'Syntax error occurred: const must be initialized when declared.';
+    }
 }
