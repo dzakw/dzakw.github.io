@@ -244,6 +244,23 @@ function generateList16() {
     });
 }
 
+function generateList17() {
+    const methods = [
+        "Using variable without declaring", "Using object without declaring", "Deleting a variable", "Deleting a function", "Duplicating parameter name",
+        "Octal numeric literals", "Octal escape characters", "Writing to a read-only properties", "Writing to a get-only properties", "Deleting undeletable properties",
+        "Using word <code>eval</code> as variable name", "Using word <code>arguments</code> as variable name", "<code>with</code> statement", "Create <code>eval</code> variables in the scope from which it called", 
+        "<code>eval</code> declare a variable using <code>var</code>", "<code>eval</code> declare a variable using <code>let</code>", "<code>this</code> behavior"
+    ];
+
+    const ul = document.getElementById('threeColumn16');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 215}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;

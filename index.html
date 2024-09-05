@@ -79,6 +79,7 @@
                     <li><a href="#subsec416" onclick="openSection('subsec416'); openSection('section4')">JavaScript Type and Destructuring</a></li>
                     <li><a href="#subsec417" onclick="openSection('subsec417'); openSection('section4')">JavaScript Bitwise, RegExp, and Precedence</a></li>
                     <li><a href="#subsec418" onclick="openSection('subsec418'); openSection('section4')">JavaScript Errors, Scope, and Hoisting</a></li>
+                    <li><a href="#subsec419" onclick="openSection('subsec419'); openSection('section4')">JavaScript Strict Mode</a></li>
                 </ul>
             </ul>
         </div>
@@ -16408,7 +16409,425 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa274" class="result"><span></span> </p>
                 </div>
+                <br>
+                
+                <h6>JavaScript Initializations are Not Hoisted</h6>
+                <li>JavaScript only hoists declarations, not initializations.</li>
+                <li>Below <b>Example 1</b> does <b>not</b> give the same result as <b>Example 2</b></li>
+                <div class="block-outer" data-result-id="demoa275" data-result-function="complex200">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example 1:</b> </p>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Initialize x</span></p>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">7</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Initialize y</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa275" class="result"><span></span> </p>
+                </div>
+                <br>
+                <div class="block-outer" data-result-id="demoa276" data-result-function="complex201">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example 2:</b> </p>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Initialize x</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">7</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Initialize y</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa276" class="result"><span></span> </p>
+                </div>
+                <li>In example 2, y is undefined because only the declaration (var y), and not the initialization (=7) is hoisted to the top.</li>
+                <li>Because of hoisting, y has been declared before it is used, but because initializations are not hoisted, the value of y is undefined.</li>
+                <li>Example 2 above is the same as writing like this:</li>
+                <div class="block-outer" data-result-id="demoa277" data-result-function="complex202">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Initialize x</span></p>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">y</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Declare y</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">7</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Assign 7 to y</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">result</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa277" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>Hoisting are relatively overlooked behavior of JavaScript. So unless it is really necessary, always declare all variables at the beginning of every scope.</li>
 
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec419" onclick="toggleSection('subsec419')">JavaScript Strict Mode</h3>
+        <div class="subsection" id="subsec419Content" style="display: none;">
+            <ul>
+                <li><code>"use strict";</code> Defines that JavaScript code should be executed in "strict mode".</li>
+                <li>Strict mode is a way to introduce better error-checking into your code.</li>
+                <li>With strict mode, you can not, for example, use undeclared variables.</li>
+
+                <h5>Declaring Strict Mode</h5>
+                <li>To declare strict mode, you add <code>"use strict";</code> to the beginning of a JavaScript file or a JavaScript function.</li>
+                <li>Declared at the beginning of a script will make it to have global scope (all code in the script will execute in strict mode):</li>
+                <div class="block-outer" data-result-id="demoa278" data-result-function="complex203">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example</b> </p>
+                        <div class="block-bl">
+                            <p><span class="jsstringcolor">"use strict";</span></p>
+                            <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// This will cause an error because x is not declared</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa278" class="result"><span></span> </p>
+                </div>
+                <li>Note: the error message shown here can be seen from console, not from the result. This section will use result just for educational purpose.</li>
+                <li>If declared inside a function, it will have local scope (only work inside the function):</li>
+                <div class="block-outer" data-result-id="demoa279" data-result-function="complex204">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 0; font-size: 20px;"><b>Example</b> </p>
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// This will not cause an error.</span></p>
+                            <p><span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"use strict";</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// This will cause an error</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa279" class="result"><span></span> </p>
+                </div>
+                <li>Strict mode makes it easier to write "secure" JavaScript. Strict mode changes previously accepted "bad syntax" into real errors.</li>
+                <li>As an example, in normal JavaScript, mistyping a variable name creates a new global variable. But in strict mode, this will throw an error, making it impossible to accidentally create a global variable.</li>
+
+                <h5>Not Allowed in Strict Mode</h5>
+                <ul class="threeColumn" id="threeColumn16"></ul>
+                <div>
+                    <div id="example4215" style="display: none;">
+                        <li>Using a variable, without declaring it, is not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa280" data-result-function="complex205">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// This will cause an error</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa280" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4216" style="display: none;">
+                        <li>Using object, without declaring it, is not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa281" data-result-function="complex206">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span>p1<span class="jsoperatorcolor">:</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// This will cause an error</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa281" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4217" style="display: none;">
+                        <li>Deleting a variable (or object) is not allowed:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jsvariablecolor">var</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">delete</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Uncaught SyntaxError: Delete of an unqualified identifier in strict mode.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4218" style="display: none;">
+                        <li>Deleting a function is not allowed:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jsfunctioncolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsnumbercolor">10</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jskeywordcolor">delete</span> <span class="jsfunctioncolor">myFunction</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Uncaught SyntaxError: Delete of an unqualified identifier in strict mode.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4219" style="display: none;">
+                        <li>Duplicating a parameter name is not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa282" data-result-function="complex207">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">x</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">p1</span><span class="jscomma">,</span> <span class="jsvariablecolor">p1</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa282" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4220" style="display: none;">
+                        <li>Octal numeric literals are not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa283" data-result-function="complex208">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">010</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa283" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4221" style="display: none;">
+                        <li>Octal escape characters are not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa284" data-result-function="complex209">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"\010"</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa284" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4222" style="display: none;">
+                        <li>Writing to a read-only property is not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa285" data-result-function="complex210">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">Object</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">defineProperty</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">obj</span><span class="jscomma">,</span> <span class="jsstringcolor">"x"</span><span class="jscomma">,</span> <span class="jsbracketcolor">{</span><span class="jsvariablecolor">value</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">0</span><span class="jscomma">,</span> <span class="jsvariablecolor">writable</span><span class="jsoperatorcolor">:</span><span class="jskeywordcolor">false</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">obj</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa285" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4223" style="display: none;">
+                        <li>Writing to a get-only property is not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa286" data-result-function="complex211">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jskeywordcolor">get</span> <span class="jsvariablecolor">x</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span><span class="jskeywordcolor">return</span> <span class="jsnumbercolor">0</span><span class="jsbracketcolor>}</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">obj</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa286" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4224" style="display: none;">
+                        <li>Deleting an undeletable property is not allowed:</li>
+                        <div class="block-outer" data-result-id="demoa287" data-result-function="complex212">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">delete</span> <span class="jsvariablecolor">Object</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">prototype</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa287" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4225" style="display: none;">
+                        <li>Using word <code>eval</code> as a variable name is not allowed:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">eval</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Uncaught SyntaxError: Unexpected eval or arguments in strict mode</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4226" style="display: none;">
+                        <li>Using word <code>arguments</code> as a variable name is not allowed:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">arguments</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Uncaught SyntaxError: Unexpected eval or arguments in strict mode</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4227" style="display: none;">
+                        <li>Using <code>with</code> statement is not allowed:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">with</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">Math</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">cos</span><span class="jsbracketcolor>(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span><span class="jsbracketcolor">}</span> <span class="commentcolor">// Uncaught SyntaxError: Strict mode code may not include a with statement</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4228" style="display: none;">
+                        <li><code>eval()</code> is not allowed to create variables in the scope from which it was called.</li>
+                        <div class="block-outer" data-result-id="demoa288" data-result-function="complex213">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">"use strict";</span></p>
+                                    <p><span class="jskeywordcolor">eval</span> <span class="jsbracketcolor">(</span><span class="jsstringcolor">"x = 2"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsfunctioncolor">alert</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa288" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4229" style="display: none;">
+                        <li><code>eval</code> is not allowed to declare a variable using <code>var</code></li>
+                        <div class="block-outer" data-result-id="demoa289" data-result-function="complex214">
+                            <div class="block-cont">
+                                <div class="block-bl">
+
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <ul 
             </ul>
         </div>
         <hr>

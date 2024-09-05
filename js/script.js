@@ -2513,3 +2513,158 @@ function complex199() {
         return 'Syntax error occurred: const must be initialized when declared.';
     }
 }
+
+function complex200() {
+    var x = 5; // Initialize x
+    var y = 7; // Initialize y
+    // Return the concatenated values of x and y
+    return x + " " + y;
+}
+
+function complex201() {
+    var x = 5; // Initialize x
+    var result = x + " " + y;
+    var y = 7; // Initialize y
+    return result;
+}
+
+function complex202() {
+    var x = 5; // Initialize x
+    var y;
+    var result = x + " " + y;
+    var y = 7; // Initialize y
+    return result;
+}
+
+function complex203() {
+    try {
+        x = 3.14;
+        return x;
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex204() {
+    let x = 3.14;
+
+    function myFunc() {
+        "use strict";
+        try {
+            y = 9.8;
+            return y;
+        } catch (error) {
+            return error.message;
+        }
+    }
+    return "x: " + x + "<br>" + "y: " + myFunc();
+}
+
+function complex205() {
+    try {
+        x = 3.14;
+        return x;
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex206() {
+    try {
+        x = {p1:10, p2:20};
+        return x;
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex207() {
+    "use strict";
+    try {
+        eval(`
+            function x(p1, p1) {};
+        `);
+        return "Function created successfully";
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex208() {
+    "use strict";
+    try{
+        eval(`
+            let x = 010; 
+        `);
+        return "x declared successfully";
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex209() {
+    "use strict";
+    try {
+        eval(`
+            let x = '\\010';
+        `);
+        return "x declared successfully";
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex210() {
+    "use strict";
+    const obj = {};
+    Object.defineProperty(obj, "x", {value:0, writable:false});
+
+    try {
+        obj.x = 3.14;
+        return "obj.x successfuly written.";
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex211() {
+    "use strict";
+    const obj = {get x() {return 0} };
+
+    try {
+        obj.x = 3.14;
+        return "obj.x successfully written.";
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex212() {
+    "use strict";
+    try {
+        delete Object.prototype;
+        return "Object.prototype has been deleted.";
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex213() {
+    "use strict";
+    try {
+        eval ("x = 2");
+        alert (x);
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function complex214() {
+    "use strict";
+    try {
+        eval ("var x = 2");
+        alert (x);
+    } catch (error) {
+        return error.message;
+    }
+}
