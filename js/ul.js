@@ -249,7 +249,7 @@ function generateList17() {
         "Using variable without declaring", "Using object without declaring", "Deleting a variable", "Deleting a function", "Duplicating parameter name",
         "Octal numeric literals", "Octal escape characters", "Writing to a read-only properties", "Writing to a get-only properties", "Deleting undeletable properties",
         "Using word <code>eval</code> as variable name", "Using word <code>arguments</code> as variable name", "<code>with</code> statement", "Create <code>eval</code> variables in the scope from which it called", 
-        "<code>eval</code> declare a variable using <code>var</code>", "<code>eval</code> declare a variable using <code>let</code>", "<code>this</code> behavior"
+        "<code>eval</code> declare a variable using <code>var</code>", "<code>eval</code> declare a variable using <code>let</code>"
     ];
 
     const ul = document.getElementById('threeColumn16');
@@ -257,6 +257,35 @@ function generateList17() {
         const li = document.createElement('li');
         li.className = 'threeColumn';
         li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 215}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList18() {
+    const methods = [
+        "<code>this</code> behavior", "Future Proof"
+    ];
+
+    const ul = document.getElementById('threeColumn17');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 231}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList19() {
+    const methods = [
+        "<code>this</code> in a Method", "<code>this</code> Alone", "<code>this</code> in a Function (Default)", "<code>this</code> in a Function (Strict Mode)",
+        "<code>this</code> in Event Handlers", "Object Method Binding", "Explicit Function Binding", "Function Borrowing", "<code>this</code> Precedence"
+    ];
+
+    const ul = document.getElementById('threeColumn18');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 233}')">${method}</a>`;
         ul.appendChild(li);
     });
 }

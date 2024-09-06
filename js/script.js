@@ -293,8 +293,8 @@ function complex2() {
 function complex3() {
     let output = '';
     function stringCompareAddition() {
-        let x = 'Iqbal ';
-        let y = 'Dzakwan |';
+        let x = 'Max ';
+        let y = 'Verstappen |';
         output += "String addition: " + (x + y);
         output += " String comparison: " + (x != y);
     }
@@ -330,7 +330,7 @@ function complex6() {
     function typeOperators() {
         let x = 10;
         output += "Type of x: " + typeof x + " | ";
-        let y = {name: 'Iqbal', age: 23, city: 'Morowali'};
+        let y = {name: 'Max', age: 23, city: 'Morowali'};
         output += "Instance of y: " + (y instanceof Object);
     }
     typeOperators();
@@ -448,7 +448,7 @@ function complex15() {
         this.firstname = fname;
         this.lastname = lname;
     }
-    const myFather = new person("John", "Doe");
+    const myFather = new person("Max", "Verstappen");
     const myMother = new person("Sally", "Rally");
     return "My father is " + myFather.firstname + " " + myFather.lastname + ". My mother is " + myMother.firstname + " " + myMother.lastname;
 }
@@ -458,7 +458,7 @@ function complex16() {
         this.firstname = fname;
         this.lastname = lname;
     }
-    const myFather = new person("John", "Doe");
+    const myFather = new person("Max", "Verstappen");
     const myMother = new person ("Sally", "Rally");
     return "My father is " + myFather["firstname"] + " " + myFather["lastname"] + ". My mother is " + myMother["firstname"] + " " + myMother["lastname"];
 }
@@ -623,7 +623,7 @@ function complex28() {
         this.eyeColor = eyeColor;
         this.nationality = "Indonesian";
     }
-    const myFather = new Person('John', 'Doe', 50, 'blue');
+    const myFather = new Person('Max', 'Verstappen', 50, 'blue');
     return "My father is " + myFather.nationality;
 }
 
@@ -860,7 +860,7 @@ function complex49() {
         this.eyeColor = eyeColor;
     }
     Person.prototype.nationality = "Indonesian";
-    const myFather = new Person('John', 'Doe', 50, 'blue');
+    const myFather = new Person('Max', 'Verstappen', 50, 'blue');
     return "My father is " + myFather.nationality;
 }
 
@@ -1274,7 +1274,7 @@ function complex91() {
     }
 
     // Inner Array
-    const owners = ["Iqbal Dzakwan", "Fadoil Mun'im", "Gede Ardhi"];
+    const owners = ["Max Verstappen", "Fadoil Mun'im", "Gede Ardhi"];
 
     // Outer Array
     const carDetails = [car, calculateCarAge, owners];
@@ -2201,7 +2201,7 @@ function complex171() {
 
 function complex172() {
     let x;
-    return "<code>typeof</code> <span class='jsstringcolor'>'John'</span>: " + typeof "John" + "<br>" +
+    return "<code>typeof</code> <span class='jsstringcolor'>'Max'</span>: " + typeof "Max" + "<br>" +
            "<code>typeof</code> <span class='jsnumbercolor'>3.14</span>: " + typeof 3.14 + "<br>" +
            "<code>typeof</code> <span class='jsbooleancolor'>false</span>: " + typeof false + "<br>" +
            "<code>typeof</code> <span class='jsnumbercolor'>90909238912389489812398n</span>: " + typeof 90909238912389489812398n + "<br>" +
@@ -2211,8 +2211,8 @@ function complex172() {
 }
 
 function complex173() {
-    return  "<code>typeof</code> <span class='jsbracketcolor'>{<span class='jsvariablecolor'>name:</span> <span class='jsstringcolor'>'John'</span>, <span class='jsvariablecolor'>age:</span> <span class='jsnumbercolor'>30</span>}</span>: " + typeof {name: 'John', age: 30} + "<br>" +
-            "<code>typeof</code> <span class='jsbracketcolor'>[<span class='jsstringcolor'>'John'</span>, <span class='jsnumbercolor'>30</span>]</span>: " + typeof ['John', 30] + "<br>" +
+    return  "<code>typeof</code> <span class='jsbracketcolor'>{<span class='jsvariablecolor'>name:</span> <span class='jsstringcolor'>'Max'</span>, <span class='jsvariablecolor'>age:</span> <span class='jsnumbercolor'>30</span>}</span>: " + typeof {name: 'Max', age: 30} + "<br>" +
+            "<code>typeof</code> <span class='jsbracketcolor'>[<span class='jsstringcolor'>'Max'</span>, <span class='jsnumbercolor'>30</span>]</span>: " + typeof ['Max', 30] + "<br>" +
             "<code>typeof</code> <span class='jsvariablecolor'>new Map()</span>: " + typeof new Map() + "<br>" +
             "<code>typeof</code> <span class='jsvariablecolor'>new Set()</span>: " + typeof new Set() + "<br>" +
             "<code>typeof</code> <span class='jsfunctioncolor'>function myFunc() {}</span>: " + typeof function myFunc() {} + "<br>";
@@ -2252,7 +2252,7 @@ function complex176() {
     "Number(' '): " + Number(' ') + "<br>" +
     "Number(''): " + Number('') + "<br>" +
     "Number('99 88'): " + Number('99 88') + "<br>" +
-    "Number('Iqbal'): " + Number('Iqbal') + "<br>";
+    "Number('Max'): " + Number('Max') + "<br>";
 }
 
 function complex177() {
@@ -2348,7 +2348,7 @@ function complex183() {
 }
 
 function complex184() {
-    let firstName = "Iqbal";
+    let firstName = "Max";
     let lastName = "Imaduddin";
     
     [firstName, lastName] = [lastName, firstName];
@@ -2661,10 +2661,137 @@ function complex213() {
 
 function complex214() {
     "use strict";
-    try {
-        eval ("var x = 2");
-        alert (x);
-    } catch (error) {
-        return error.message;
+    function myFunction() {
+        alert(this); // will alert "undefined"
     }
+    myFunction();
+}
+
+function complex215() {
+    function myFunction() {
+        alert(this); // will alert "undefined"
+    }
+    myFunction();
+}
+
+function complex216() {
+    const person = {
+        firstName: "Max",
+        lastName : "Verstappen",
+        id       : 5566,
+        fullName : function() {
+          return this.firstName + " " + this.lastName;
+        }
+      };
+    return person.fullName();
+}
+
+function complex217() {
+    let x = this;
+    return x;
+}
+
+function complex218() {
+    "use strict";
+    let x = this;
+    return x;
+}
+
+function complex219() {
+    return this;
+}
+
+function complex220() {
+    "use strict";
+    function myFunc() {
+        return this;
+    }
+    return myFunc();
+}
+
+function complex221(elem) {
+    elem.classList.add("running");
+
+    // Remove the "running" class after the animation is complete
+    setTimeout(function() {
+        elem.classList.remove("running");
+    }, 2000); // Matches the duration of the animation
+}
+
+function complex222() {
+    const myObject = {
+        firstName: "Max",
+        lastName : "Verstappen",
+        id : 5566,
+        fullName : function() {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    
+    return myObject.fullName();
+}
+
+function complex223() {
+    const person1 = {
+        fullName: function() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      
+      const person2 = {
+        firstName:"Max",
+        lastName: "Verstappen",
+      }
+      
+      return person1.fullName.call(person2);
+}
+
+function complex224() {
+    const person = {
+        firstName: "Max",
+        lastName : "Verstappen",
+        id : 5566,
+        fullName : function() {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    
+    const member = {
+        firstName:"Lewis",
+        lastName:"Hamilton",
+    };
+    
+    return "person.fullName(): " + person.fullName() + "<br>" +
+    "person.fullName.bind(member)(): " + person.fullName.bind(member)();
+}
+
+function complex225() {
+    let myFunction = (a, b) => (a*a) + (2 * a * b) + (b*b);
+    return myFunction(4,7);
+}
+
+function complex226() {
+    // Regular Function:
+    hello = function() {
+        document.getElementById("demoa301").innerHTML += this;
+    }
+    
+    // The window object calls the function:
+    window.addEventListener("load", hello);
+    
+    // A button object calls the function:
+    document.getElementById("btns1").addEventListener("click", hello);
+}
+
+function complex227() {
+    // Arrow Function:
+    hello = () => {
+        document.getElementById("demoa302").innerHTML += this;
+    }
+    
+    // The window object calls the function:
+    window.addEventListener("load", hello);
+    
+    // A button object calls the function:
+    document.getElementById("btns2").addEventListener("click", hello);
 }

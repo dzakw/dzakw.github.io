@@ -493,6 +493,12 @@ h6 {
   margin-top: 6px;
 }
 
+h6.exampl {
+  margin-top: 0;
+  font-size: 24px;
+  color:#3a3a3a
+}
+
 p {
   margin-bottom: 0;
 }
@@ -532,6 +538,7 @@ p {
 .jsvariablecolor { 
   color: #000000; 
   font-weight: normal;
+  font-style: italic;
 }
 
 .jsbracketcolor { 
@@ -592,6 +599,10 @@ p {
   padding: 6px;
 }
 
+.hei30 {
+  height: 30px;
+}
+
 .hei40 {
   height: 40px;
 }
@@ -602,6 +613,14 @@ p {
 
 .hei60 {
   height: 60px;
+}
+
+.hei70 {
+  height: 70px;
+}
+
+.hei80 {
+  height: 80px;
 }
 
 .block-cont:nth-child(even) {
@@ -654,6 +673,37 @@ p {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+}
+
+/* Custom class for the button */
+.custom-run-btn {
+  position: relative; /* Allows the button to move */
+  background-color: #007bff; /* Customize button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease; /* Smooth transition for shape change */
+}
+
+/* Change button shape to parallelogram while running */
+.custom-run-btn.running {
+  animation: runAnimationCustom 2s ease-in-out forwards;
+}
+
+/* Keyframes for running animation */
+@keyframes runAnimationCustom {
+  0% { 
+    transform: translateX(0) skewX(0deg); 
+  }
+  50% { 
+    transform: translateX(1000px) skewX(-20deg);
+  }
+  100% { 
+    transform: translateX(0) skewX(20deg); 
+  }
 }
 
 .block-outer {
