@@ -81,6 +81,7 @@
                     <li><a href="#subsec418" onclick="openSection('subsec418'); openSection('section4')">JavaScript Errors, Scope, and Hoisting</a></li>
                     <li><a href="#subsec419" onclick="openSection('subsec419'); openSection('section4')">JavaScript Strict Mode</a></li>
                     <li><a href="#subsec420" onclick="openSection('subsec420'); openSection('section4')">JavaScript this Keyword & Arrow Function</a></li>
+                    <li><a href="#subsec421" onclick="openSection('subsec421'); openSection('section4')">JavaScript Class & Modules</a></li>
                 </ul>
             </ul>
         </div>
@@ -17343,6 +17344,158 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p id="demoa302" class="result"><span></span> </p>
                 </div>
                 
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec421" onclick="toggleSection('subsec421')">JavaScript Class & Modules</h3>
+        <div class="subsection" id="subsec421Content" style="display: none;">
+            <ul>
+                <h5>JavaScript Class</h5>
+                <li>JavaScript Classes are templates for JavaScript Objects.</li>
+                <li>Use the <code>class</code> keyword to create a class. Always add a method named <code>constructor()</code>:</li>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6 class="exampl"><b>Syntax</b> </h6>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">className</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> ... <span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6 class="exampl"><b>Example</b> </h6>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">name</span><span class="jscomma">,</span> <span class="jsvariablecolor">year</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">year</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">year</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>The example above creates a class named "Car".</li>
+                <li>The class has one initial properties, <code>brand</code>.</li>
+                <li style="background-color: #f3ffc0!important; margin-top: 6px;">A JavaScript class is <b>not</b> an object.</li>
+                <li style="background-color: #f3ffc0!important; margin-bottom: 6px;">It is a <b>template</b> for JavaScript objects.</li>
+
+                <h6>Using a Class</h6>
+                <li>When you have a class, you can use the class to create objects:</li>
+                <div class="block-outer" data-result-id="demoa303" data-result-function="complex228">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6 class="exampl"><b>Example</b> </h6>
+                        <p style="margin: 4px 0 2px 4px;">Create an object called "myCar1" and "myCar2" and use the <b>Car class</b> to create them:</p>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar1</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Ford"</span><span class="jscomma">,</span> <span class="jsnumbercolor">2014</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar2</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Audi"</span><span class="jscomma">,</span> <span class="jsnumbercolor">2019</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa303" class="result"><span></span> </p>
+                </div>
+
+                <h6>The Constructor Method</h6>
+                <li>The <code>constructor</code> method is a special method:</li>
+                <ul>
+                    <li>It has to have the exact name "constructor"</li>
+                    <li>It is executed automatically when a new object is created</li>
+                    <li>It is used to initialize object properties</li>
+                </ul>
+                <li>If a constructor method is not defined, a default, empty constructor witll automatically be created.</li>
+
+                <h6>Class Methods</h6>
+                <li>Class methods are created with the same syntax as object methods.</li>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6 class="exampl"><b>Syntax</b></h6>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">className</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> ... <span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">method1</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> ... <span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">method2</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> ... <span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">...</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">methodN</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> ... <span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Below is an example to create a class method named <code>age</code> that returns the Car age:</li>
+                <div class="block-outer" data-result-id="demoa304" data-result-function="complex229">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">name</span><span class="jscomma">,</span> <span class="jsvariablecolor">year</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">year</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">year</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">age</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">date</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">date</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getFullYear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">-</span> <span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">year</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Toyota Supra"</span><span class="jscomma">,</span> <span class="jsnumbercolor">2022</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsstringcolor">"My car "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" is "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">age</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" years old."</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa304" class="result"><span></span> </p>
+                </div>
+                <li>It is also possible to send parameters to Class methods:</li>
+                <div class="block-outer" data-result-id="demoa305" data-result-function="complex230">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">name</span><span class="jscomma">,</span> <span class="jsvariablecolor">year</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">year</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">year</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">age</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">-</span> <span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">year</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">date</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">year</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">date</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getFullYear</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Nissan Skyline GTR R34"</span><span class="jscomma">,</span> <span class="jsnumbercolor">2002</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span><span class="jsstringcolor">"My car "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" is "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">age</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">year</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" years old."</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa305" class="result"><span></span> </p>
+                </div>
+                <br>
+                
+                <h5>JavaScript Modules</h5>
+
             </ul>
         </div>
         <hr>

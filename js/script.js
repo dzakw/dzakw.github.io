@@ -2795,3 +2795,50 @@ function complex227() {
     // A button object calls the function:
     document.getElementById("btns2").addEventListener("click", hello);
 }
+
+function complex228() {
+    class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+      }
+    const myCar1 = new Car("Ford", 2014);
+    const myCar2 = new Car("Audi", 2019);
+
+    return myCar1.name + " " + myCar2.name;
+}
+
+function complex229() {
+    class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age() {
+          const date = new Date();
+          return date.getFullYear() - this.year;
+        }
+    }
+    
+    const myCar = new Car("Toyota Supra", 2022);
+    return"My car "+ myCar.name + " is " + myCar.age() + " years old.";
+}
+
+function complex230() {
+    class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age(x) {
+          return x - this.year;
+        }
+    }
+      
+    const date = new Date();
+    let year = date.getFullYear();
+
+    const myCar = new Car("Nissan Skyline GTR R34", 2002);
+    return"My car "+ myCar.name + " is " + myCar.age(year) + " years old.";
+}
