@@ -2842,3 +2842,37 @@ function complex230() {
     const myCar = new Car("Nissan Skyline GTR R34", 2002);
     return"My car "+ myCar.name + " is " + myCar.age(year) + " years old.";
 }
+
+function complex231() {
+    const person = {
+        name: "Max",
+        age: 26
+    };
+    return person.name;
+}
+
+function complex232() {
+    const person = {
+        name: "Max",
+        age: 26
+    };
+    return person["name"];
+}
+
+function complex233() {
+    const person = {
+        name: "Max",
+        age: 26
+    };
+    person.name = "Max Verstappen";
+    return person.name;
+}
+
+function complex234() {
+    const person = {
+        name: "Max",
+        age: 26
+    };
+    person["name"] = "Max Verstappen";
+    return person["name"];
+}
