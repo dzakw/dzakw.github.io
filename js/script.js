@@ -2876,3 +2876,62 @@ function complex234() {
     person["name"] = "Max Verstappen";
     return person["name"];
 }
+
+function complex235() {
+    const obj = JSON.parse('{ "name":"Max", "age":26, "nationality":"Dutch" }');
+    return obj.name;
+}
+
+function complex236() {
+    const name = '[ "Max", "John", "Jane" ]';
+    const obj = JSON.parse(name);
+    return obj[0];
+}
+
+function complex237() {
+    const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+    const obj = JSON.parse(text);
+    obj.birth = new Date(obj.birth);
+    return obj.name + ", " + obj.birth;
+}
+
+function complex238() {
+    const text = '{"name":"John", "age":"function () {return 30;}", "city":"New York"}';
+    const obj = JSON.parse(text);
+    obj.age = eval("(" + obj.age + ")");
+    return obj.name + ", " + obj.age();
+}
+
+function complex239() {
+    const obj = {"name":"John", "age":30, "city":"New York"};
+    const myJSON = JSON.stringify(obj);
+    return myJSON;
+}
+
+function complex240() {
+    const cars = ["Saab", "Volvo", "BMW"];
+    const myJSON = JSON.stringify(cars);
+    return myJSON;
+}
+
+function complex241() {
+    const myObj = { name: "John", age: 31, city: "New York" };
+    const myJSON = JSON.stringify(myObj);
+    localStorage.setItem("testJSON", myJSON);
+
+    let text = localStorage.getItem("testJSON");
+    let obj = JSON.parse(text);
+    return obj.name;
+}
+
+function complex242() {
+    const obj = {"name":"John", "today": new Date()};
+    const myJSON = JSON.stringify(obj);
+    return myJSON;
+}
+
+function complex243() {
+    const obj = {"name":"John", "age": "function () {return 30;}"};
+    const myJSON = JSON.stringify(obj);
+    return myJSON;
+}

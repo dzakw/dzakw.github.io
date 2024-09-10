@@ -17583,22 +17583,6 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                 </div>
 
-                <h6>JSON Values</h6>
-                <li>JSON values can be:</li>
-                <ul>
-                    <li>Numbers (integer or floating point)</li>
-                    <li>Strings (in double quotes)</li>
-                    <li>Boolean (true or false)</li>
-                    <li>Arrays (in square brackets)</li>
-                    <li>Objects (in curly braces)</li>
-                    <li>null</li>
-                </ul>
-                <li>In JavaScript, values can be all of the above, plus any other valid JavaScript expression, including:</li>
-                <ul>
-                    <li>Function</li>
-                    <li>Date</li>
-                    <li>Undefined</li>
-                </ul>
                 <li>In JSON, string values must be written with double quotes:</li>
                 <div class="block-outer">
                     <div class="block-cont" style="padding-top: 4px;">
@@ -17618,7 +17602,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                 </div>
 
-                <li>JavaScript Objects</li>
+                <h6>JavaScript Objects</h6>
                 <li>Because JSON syntax is derived from JavaScript object notation, very little extra software is needed to work with JSON within JavaScript.</li>
                 <li>With JavaScript, you can create an object and assign data to it, like this:</li>
                 <div class="block-outer">
@@ -17700,6 +17684,329 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <li>Other than that JavaScript objects, JavaScript Arrays can also be written as JSON.</li>
                 <li>JSON itself has the file type of ".json".</li>
+                <br>
+
+                <h5>JSON Data Types</h5>
+                <li>JSON values can be:</li>
+                <ul>
+                    <li>Numbers (integer or floating point)</li>
+                    <li>Strings (in double quotes)</li>
+                    <li>Boolean (true or false)</li>
+                    <li>Arrays (in square brackets)</li>
+                    <li>Objects (in curly braces)</li>
+                    <li>null</li>
+                </ul>
+                <li>In JavaScript, values can be all of the above, plus any other valid JavaScript expression, including:</li>
+                <ul>
+                    <li>Function</li>
+                    <li>Date</li>
+                    <li>Undefined</li>
+                </ul>
+
+                <ul class="threeColumn" id="threeColumn19"></ul>
+
+                <div>
+                    <div id="example4242" style="display: none;">
+                        <h5>JSON Strings</h5>
+                        <li>JSON strings are written in double quotes.</li>
+                        <div class="block-outer">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <h6 class="exampl"><b>Example</b></h6>
+                                <div class="block-bl">
+                                    <p><span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Max"</span><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4243" style="display: none;">
+                        <h5>JSON Numbers</h5>
+                        <li>JSON numbers are like JavaScript numbers.</li>
+                        <div class="block-outer">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <h6 class="exampl"><b>Example</b></h6>
+                                <div class="block-bl">
+                                    <p><span class="jsbracketcolor">{</span><span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">26</span><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4244" style="display: none;">
+                        <h5>JSON Object</h5>
+                        <div class="block-outer">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <h6 class="exampl"><b>Example</b></h6>
+                                <div class="block-bl">
+                                    <p><span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsstringcolor">"employee"</span><span class="jsoperatorcolor">:</span><span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Max"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">26</span><span class="jscomma">,</span> <span class="jsstringcolor">"nationality"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Dutch-Belgian"</span><span class="jsbracketcolor">}</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4245" style="display: none;">
+                        <h5>JSON Arrays</h5>
+                        <li>JSON arrays are written inside square brackets.</li>
+                        <div class="block-outer">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <h6 class="exampl"><b>Example</b></h6>
+                                <div class="block-bl">
+                                    <p><span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsstringcolor">"employees"</span><span class="jsoperatorcolor">:</span><span class="jsbracketcolor">[</span><span class="jsstringcolor">"Max"</span><span class="jscomma">,</span> <span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"Jane"</span><span class="jsbracketcolor">]</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4246" style="display: none;">
+                        <h5>JSON Boolean</h5>
+                        <li>JSON booleans are like JavaScript booleans.</li>
+                        <div class="block-outer">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <h6 class="exampl"><b>Example</b></h6>
+                                <div class="block-bl">
+                                    <p><span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Max"</span><span class="jscomma">,</span> <span class="jsstringcolor">"married"</span><span class="jsoperatorcolor">:</span><span class="jskeywordcolor">true</span><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4247" style="display: none;">
+                        <h5>JSON null</h5>
+                        <li>JSON null is like JavaScript null.</li>
+                        <div class="block-outer">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <h6 class="exampl"><b>Example</b></h6>
+                                <div class="block-bl">
+                                    <p><span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Max"</span><span class="jscomma">,</span> <span class="jsstringcolor">"car"</span><span class="jsoperatorcolor">:</span><span class="jskeywordcolor">null</span><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>JSON Parse</h5>
+                <li>A common use of JSON is to exchange data to/from a web server. When receiving data from a web server, the data is always a string.</li>
+                <li>Parse the data with <code>JSON.parse()</code>, and the data becomes a JavaScript object.</li>
+                <li>Below is an example to parse a JSON string:</li>
+                <div class="block-outer" data-result-id="demoa310" data-result-function="complex235">
+                    <div class="block-cont hei50" style="padding-top:0;">
+                        <p class="exampl" style="margin-top:4px;"><b>Imagine we received this text from a web server:</b></p>
+                        <div class="block-bl">
+                            <p><span class="jsstringcolor">'{ "name":"Max", "age":26, "nationality":"Dutch" }'</span></p>
+                        </div>
+                    </div>
+                    <div class="block-cont" style="padding-top:4px;">
+                        <p class="exampl" style="margin-top:4px;"><b>Use the JavaScript function <code>JSON.parse()</code> to convert text into a JavaScript object:</b></p>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'{ "name":"Max", "age":26, "nationality":"Dutch" }'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa310" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li style="background-color: #f3ffc0!important;">Make sure the text is in JSON format, or else you will get a syntax error.</li>
+                
+                <h6>Array as JSON</h6>
+                <li>When using the <code>JSON.parse()</code> on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object.</li>
+                <div class="block-outer" data-result-id="demoa311" data-result-function="complex236">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'[ "Max", "John", "Jane" ]'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">obj</span><span class="jsbracketcolor">[</span><span class="jsnumbercolor">0</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>      
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa311" class="result"><span></span> </p>
+                </div>
+                
+                <h6>Exceptions</h6>
+                <li>For parsing Date objects and Function, you have to write it as a string first and then convert it back later.</li>
+                <li>Below is an example to parse a Date object:</li>
+                <div class="block-outer" data-result-id="demoa312" data-result-function="complex237">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'{ "name":"John", "birth":"1986-12-14", "city":"New York" }'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">text</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">birth</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">birth</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">", "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">birth</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa312" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>Below is an example to parse a Function:</li>
+                <div class="block-outer" data-result-id="demoa313" data-result-function="complex238">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'{ "name":"John", "age":"function () {return 30;}", "city":"New York" }'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">text</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">eval</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"("</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">")"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">", "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">age</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa313" class="result"><span></span> </p>
+                </div>
+                <li style="background-color: #FFC0C7!important;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
+                <br>
+
+                <h5>JSON Stringify</h5>
+                <li>When sending data to a web server, the data has to be a string. Convert a JavaScript object into a string with <code>JSON.stringify()</code>.</li>
+                <li>Below is an example to convert a JavaScript object into a string:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">30</span><span class="jscomma">,</span> <span class="jsstringcolor">"city"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"New York"</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Now, to convert it into a string, we can use the <code>JSON.stringify()</code> method:</li>
+                <div class="block-outer" data-result-id="demoa315" data-result-function="complex239">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myJSON</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">obj</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa315" class="result"><span></span> </p>
+                </div>
+
+                <h6>JSON Stringify - Arrays</h6>
+                <li>When using the <code>JSON.stringify()</code> on an array, the method will convert the array into a string.</li>
+                <div class="block-outer" data-result-id="demoa316" data-result-function="complex240">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Saab"</span><span class="jscomma">,</span> <span class="jsstringcolor">"Volvo"</span><span class="jscomma">,</span> <span class="jsstringcolor">"BMW"</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myJSON</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">cars</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa316" class="result"><span></span> </p>
+                </div>
+
+                <h6>Storing Data</h6>
+                <li>When storing data, the data has to be a string. Convert a JavaScript object into a string with <code>JSON.stringify()</code>.</li>
+                <div class="block-outer" data-result-id="demoa317" data-result-function="complex241">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6 class="exampl"><b>Example</b></h6>
+                        <p style="margin-top: 4px;">Storing data in local storage</p>
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Storing data:</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myObj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">31</span><span class="jscomma">,</span> <span class="jsstringcolor">"city"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"New York"</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myJSON</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myObj</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">localStorage</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">setItem</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"testJSON"</span><span class="jscomma">,</span> <span class="jsvariablecolor">myJSON</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Retrieving data:</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">localStorage</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getItem</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"testJSON"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">text</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">obj</span>.<span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa317" class="result"><span></span> </p>
+                </div>
+
+                <h6>Exceptions</h6>
+                <li>In JSON, date objects are not allowed. The <code>JSON.stringify()</code> function will convert any dates into strings.</li>
+                <li>The string then can be converted back into a date object with the <code>JSON.parse()</code> function.</li>
+                <div class="block-outer" data-result-id="demoa318" data-result-function="complex242">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"today"</span><span class="jsoperatorcolor">:</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myJSON</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">obj</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">myJSON</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa318" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>Below is an example to convert a JavaScript object with a function into a string:</li>
+                <div class="block-outer" data-result-id="demoa319" data-result-function="complex243">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"function () {return 30;}"</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myJSON</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">obj</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">myJSON</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa319" class="result"><span></span> </p>
+                </div>
+                <li style="background-color: #FFC0C7!important;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
 
             </ul>
         </div>

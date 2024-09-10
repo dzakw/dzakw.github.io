@@ -290,6 +290,20 @@ function generateList19() {
     });
 }
 
+function generateList20() {
+    const methods = [
+        "JSON String", "JSON Number", "JSON Object", "JSON Array", "JSON Boolean", "<i>null</i>"
+    ];
+
+    const ul = document.getElementById('threeColumn19');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 242}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;
