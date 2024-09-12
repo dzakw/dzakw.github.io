@@ -246,6 +246,85 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('customForm');
+    const inputs = form.querySelectorAll('input[required]');
+
+    inputs.forEach(input => {
+        input.addEventListener('blur', () => {
+            const errorMessage = input.nextElementSibling;
+            if (!input.checkValidity()) {
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('customForm');
+    const tableBody = document.getElementById('tableBody');
+
+    // Function to fetch and display the latest 10 entries
+    function loadLatestData() {
+        fetch('php/fetch_latest.php') // Fetch latest 10 records from the server
+            .then(response => response.json())
+            .then(data => {
+                tableBody.innerHTML = ''; // Clear current table content
+                data.forEach(row => {
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `
+                        <td>${row.name}</td>
+                        <td>${row.email}</td>
+                        <td>${row.car || '-'}</td>
+                        <td>${row.nationality || '-'}</td>
+                        <td>${row.isMarried === '1' ? 'Married' : 'Single'}</td>
+                    `;
+                    tableBody.appendChild(newRow);
+                });
+            })
+            .catch(error => console.error('Error fetching latest data:', error));
+    }
+
+    // Load the latest data on page load
+    loadLatestData();
+
+    // Handle form submission with AJAX
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(form); // Create a FormData object with the form data
+
+        fetch('php/insert.php', {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Reload the latest data
+                    loadLatestData();
+
+                    // Clear the form fields
+                    form.reset();
+
+                    // Scroll to the table
+                    document.getElementById('dataDisplay').scrollIntoView({ behavior: 'smooth' });
+
+                    // Display success alert
+                    alert('Data successfully recorded.');
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+    });
+});
+
 
 function complex0() {
     let output = '';
@@ -2934,4 +3013,18 @@ function complex243() {
     const obj = {"name":"John", "age": "function () {return 30;}"};
     const myJSON = JSON.stringify(obj);
     return myJSON;
+}
+
+function complex244() {
+    const myJSON = '{"name":"Max", "age":26, "nationality":"Dutch-Belgian", "car":null, "isMarried":false}';
+    const myobj = JSON.parse(myJSON);
+
+    return "myobj.name: " + myobj.name + "<br>myJSON.name: " + myJSON.name;
+}
+
+function complex245() {
+    const myJSON = '[ "Max", "John", "Jane" ]';
+    const myArray = JSON.parse(myJSON);
+
+    return "myArray[0]: " + myArray[0] + "<br>myJSON.[0]: " + myJSON[0];
 }

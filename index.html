@@ -18007,7 +18007,165 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p id="demoa319" class="result"><span></span> </p>
                 </div>
                 <li style="background-color: #FFC0C7!important;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
+                <br>
 
+                <h5>JSON Object Literals</h5>
+                <li>JSON objects can be written as object literals.</li>
+                <li>Object literals are surrounded by curly braces <code>{}</code>.</li>
+                <li>Keys and values are separated by a colon <code>:</code>.</li>
+                <li>Keys must be strings, and value must be a valid JSON data type:</li>
+                <ul>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Object (JSON object)</li>
+                    <li>Array</li>
+                    <li>Boolean</li>
+                    <li>null</li>
+                </ul>
+                <li>Each key/value pair is separated by a comma.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsbracketcolor">{</span><span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Max"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">26</span><span class="jscomma">,</span> <span class="jsstringcolor">"nationality"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Dutch-Belgian"</span><span class="jscomma">,</span> <span class="jsstringcolor">"car"</span><span class="jsoperatorcolor">:</span><span class="jskeywordcolor">null</span><span class="jscomma">,</span> <span class="jsstringcolor">"isMarried"</span><span class="jsoperatorcolor">:</span><span class="jskeywordcolor">false</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li style="background-color: #f3ffc0!important;">It is important to note that JSON object literal is not an object, as JSON is a string format.</li>
+                <li style="background-color: #f3ffc0!important;">The JSON object literal can be converted into a JavaScript object with <code>JSON.parse()</code>.</li>
+                <br>
+                <div class="block-outer" data-result-id="demoa320" data-result-function="complex244">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myJSON</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'{ "name":"Max", "age":26, "nationality":"Dutch-Belgian", "car":null, "isMarried":false }'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myobj</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myJSON</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">myobj</span>.<span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">myJSON</span>.<span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa320" class="result"><span></span> </p>
+                </div>
+                <li style="background-color: #f3ffc0!important;">Other object operation is the same as in <a href="#subsec46" onclick="openSection('subsec46'); openSection('section4')" class="hreflink">JavaScript Objects</a> section after parsing the JSON Object literals into a JavaScript Object.</li>
+                <br>
+
+                <h5>JSON Array Literals</h5>
+                <li>JSON arrays can be written as array literals.</li>
+                <li>Array literals are surrounded by square brackets <code>[]</code>.</li>
+                <li>Values are separated by a comma.</li>
+                <li>Values must be a valid JSON data type:</li>
+                <ul>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Object (JSON object)</li>
+                    <li>Array</li>
+                    <li>Boolean</li>
+                    <li>null</li>
+                </ul>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsbracketcolor">[</span><span class="jsstringcolor">"Max"</span><span class="jscomma">,</span> <span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"Jane"</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li style="background-color: #f3ffc0!important;">It is important to note that JSON array literal is not an array, as JSON is a string format.</li>
+                <li style="background-color: #f3ffc0!important;">The JSON array literal can be converted into a JavaScript array with <code>JSON.parse()</code>.</li>
+                <br>
+                <div class="block-outer" data-result-id="demoa321" data-result-function="complex245">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myJSON</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'[ "Max", "John", "Jane" ]'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myArray</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">parse</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myJSON</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">myArray</span><span class="jsbracketcolor">[</span><span class="jsnumbercolor">0</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">myJSON</span><span class="jsbracketcolor">[</span><span class="jsnumbercolor">0</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa321" class="result"><span></span> </p>
+                </div>
+                <li style="background-color: #f3ffc0!important;">Other array operation is the same as in <a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')" class="hreflink">JavaScript Arrays</a> section after parsing the JSON Array literals into a JavaScript Array.</li>
+                <br>
+                <div style="display: flex; flex-direction: row;">
+                    <div class="custom-form-container">
+                        <form id="customForm">
+                            <!-- Hidden input to ensure a value is always sent -->
+                            <input type="hidden" name="isMarried" value="0">
+                    
+                            <!-- Form Field: Name -->
+                            <div class="custom-form-group">
+                                <label for="customName">Name <span class="custom-required">*</span></label>
+                                <input type="text" id="customName" name="name" placeholder="Enter your name" required>
+                                <small class="custom-error-message">Please enter your name.</small>
+                            </div>
+                    
+                            <!-- Form Field: Email -->
+                            <div class="custom-form-group">
+                                <label for="customEmail">Email <span class="custom-required">*</span></label>
+                                <input type="email" id="customEmail" name="email" placeholder="Enter your email" required>
+                                <small class="custom-error-message">Please enter a valid email address.</small>
+                            </div>
+                    
+                            <!-- Form Field: Car -->
+                            <div class="custom-form-group">
+                                <label for="customCar">Car</label>
+                                <input type="text" id="customCar" name="car" placeholder="Enter your car">
+                            </div>
+                    
+                            <!-- Form Field: Nationality -->
+                            <div class="custom-form-group">
+                                <label for="customNationality">Nationality</label>
+                                <input type="text" id="customNationality" name="nationality" placeholder="Enter your nationality">
+                            </div>
+                    
+                            <!-- Marital Status -->
+                            <div class="custom-form-group">
+                                <label for="customMarriedCheckbox">
+                                    <input type="checkbox" id="customMarriedCheckbox" name="isMarried" value="1">
+                                    Married
+                                </label>
+                            </div>
+                    
+                            <!-- Submit Button -->
+                            <div class="custom-form-group">
+                                <button type="submit" id="customSubmitButton">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <br>
+                    <div id="dataDisplay">
+                        <table id="dataTable" class="key-dec">
+                            <label>10 Latest Input:</label>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Car</th>
+                                    <th>Nationality</th>
+                                    <th>Marital Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
             </ul>
         </div>
         <hr>

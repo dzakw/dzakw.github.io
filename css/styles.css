@@ -924,6 +924,99 @@ mark {
   color: #fff;
 }
 
+.hreflink {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Container Styles */
+.custom-form-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px; /* Increased width for more space */
+  margin: 0;
+  /* Align container to the left side */
+  margin-left: 20px; 
+  margin-right: auto;
+}
+/* Form Container Styles */
+.custom-form-container {
+  padding: 20px; /* Add padding to ensure space around the form */
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+}
+
+/* Form Styles */
+#customForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; /* Set a max-width to control the form width */
+  width: 100%; /* Make the form responsive */
+}
+
+.custom-form-group {
+  margin-bottom: 15px;
+}
+
+.custom-form-group label {
+  font-weight: bold;
+  display: block;
+}
+
+.custom-required {
+  color: red;
+}
+
+#customForm input[type="text"],
+#customForm input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+#customForm input[type="text"]:focus,
+#customForm input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#customForm input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#customSubmitButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#customSubmitButton:hover {
+  background-color: #0056b3;
+}
+
+.custom-error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {
   body {
