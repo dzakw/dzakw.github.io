@@ -942,7 +942,7 @@ mark {
   max-width: 600px; /* Increased width for more space */
   margin: 0;
   /* Align container to the left side */
-  margin-left: 20px; 
+  margin-left: 0; 
   margin-right: auto;
 }
 /* Form Container Styles */
@@ -1015,7 +1015,6 @@ mark {
   font-size: 12px;
   display: none;
 }
-
 
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {

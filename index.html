@@ -83,6 +83,7 @@
                     <li><a href="#subsec420" onclick="openSection('subsec420'); openSection('section4')">JavaScript this Keyword & Arrow Function</a></li>
                     <li><a href="#subsec421" onclick="openSection('subsec421'); openSection('section4')">JavaScript Class & Modules</a></li>
                     <li><a href="#subsec422" onclick="openSection('subsec422'); openSection('section4')">JSON</a></li>
+                    <li><a href="#subsec423" onclick="openSection('subsec423'); openSection('section4')">JS Debugging, Style Guide, and Best Practices</a></li>
                 </ul>
             </ul>
         </div>
@@ -15954,7 +15955,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <li>When an error occurs in JavaScript, the interpreter will stop and generate an error message.</li>
                 <li>The technical term for this is: JavaScript will <b>throw an exception</b> (throw an error).</li>
-                <li style="background-color: #f3ffc0!important;">JavaScript will actually create an <b>Error object</b> with two main properties: <code>name</code> and <code>message</code>.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">JavaScript will actually create an <b>Error object</b> with two main properties: <code>name</code> and <code>message</code>.</li>
 
                 <h6>The throw Statement</h6>
                 <li>The <code>throw</code> statement allows you to create a custom error.</li>
@@ -16088,7 +16089,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div id="example4209" style="display: none;">
                         <h5>EvalError</h5>
                         <li>An error has occurred in the eval() function</li>
-                        <li style="background-color: #FFC0C7 !important;">Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</li>
+                        <li style="background-color: #FFC0C7 !important; display: inline-block;">Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</li>
                     </div>
 
                     <div id="example4210" style="display: none;">
@@ -16223,7 +16224,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <br>
                 <li>Other than the above, there are also other Non-standard Error Object Properties like <code>fileName</code> (mozilla), <code>lineNumber</code> (mozilla), and <code>columnNumber</code> (mozilla), <code>stack</code> (mozilla), <code>description</code> (microsoft), <code>number</code> (microsoft), and others.</li>
-                <li style="background-color: #f3ffc0!important;">Do not use these properties in public web sites, as they wont work in all browsers.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">Do not use these properties in public web sites, as they wont work in all browsers.</li>
                 <br>
 
                 <hr>
@@ -16503,7 +16504,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
                 <h5>Declaring Strict Mode</h5>
                 <li>To declare strict mode, you add <code>"use strict";</code> to the beginning of a JavaScript file or a JavaScript function.</li>
-                <li style="background-color: #f3ffc0!important;">The "use strict" directive is only recognized at the beginning of a script or a function.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">The "use strict" directive is only recognized at the beginning of a script or a function.</li>
                 <li>Declared at the beginning of a script will make it to have global scope (all code in the script will execute in strict mode):</li>
                 <div class="block-outer" data-result-id="demoa278" data-result-function="complex203">
                     <div class="block-cont" style="padding-top: 4px;">
@@ -17381,8 +17382,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <li>The example above creates a class named "Car".</li>
                 <li>The class has one initial properties, <code>brand</code>.</li>
-                <li style="background-color: #f3ffc0!important; margin-top: 6px;">A JavaScript class is <b>not</b> an object.</li>
-                <li style="background-color: #f3ffc0!important; margin-bottom: 6px;">It is a <b>template</b> for JavaScript objects.</li>
+                <li style="background-color: #f3ffc0!important; margin-top: 6px; display: inline-block;">A JavaScript class is <b>not</b> an object.</li>
+                <li style="background-color: #f3ffc0!important; margin-bottom: 6px; display: inline-block;">It is a <b>template</b> for JavaScript objects.</li>
 
                 <h6>Using a Class</h6>
                 <li>When you have a class, you can use the class to create objects:</li>
@@ -17552,7 +17553,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </ul>
 
                 <h6>JSON Data - A name and a Value</h6>
-                <li style="background-color: #f3ffc0!important;">JSON names require double quotes.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">JSON names require double quotes.</li>
                 <li>JSON data is written as name/value pairs:</li>
                 <div class="block-outer">
                     <div class="block-cont">
@@ -17818,7 +17819,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p id="demoa310" class="result"><span></span> </p>
                 </div>
                 <br>
-                <li style="background-color: #f3ffc0!important;">Make sure the text is in JSON format, or else you will get a syntax error.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">Make sure the text is in JSON format, or else you will get a syntax error.</li>
                 
                 <h6>Array as JSON</h6>
                 <li>When using the <code>JSON.parse()</code> on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object.</li>
@@ -17885,7 +17886,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa313" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #FFC0C7!important;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
+                <li style="background-color: #FFC0C7!important; display: inline-block;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
                 <br>
 
                 <h5>JSON Stringify</h5>
@@ -18006,7 +18007,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa319" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #FFC0C7!important;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
+                <li style="background-color: #FFC0C7!important; display: inline-block;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
                 <br>
 
                 <h5>JSON Object Literals</h5>
@@ -18030,8 +18031,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
-                <li style="background-color: #f3ffc0!important;">It is important to note that JSON object literal is not an object, as JSON is a string format.</li>
-                <li style="background-color: #f3ffc0!important;">The JSON object literal can be converted into a JavaScript object with <code>JSON.parse()</code>.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">It is important to note that JSON object literal is not an object, as JSON is a string format.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">The JSON object literal can be converted into a JavaScript object with <code>JSON.parse()</code>.</li>
                 <br>
                 <div class="block-outer" data-result-id="demoa320" data-result-function="complex244">
                     <div class="block-cont">
@@ -18053,7 +18054,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa320" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #f3ffc0!important;">Other object operation is the same as in <a href="#subsec46" onclick="openSection('subsec46'); openSection('section4')" class="hreflink">JavaScript Objects</a> section after parsing the JSON Object literals into a JavaScript Object.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">Other object operation is the same as in <a href="#subsec46" onclick="openSection('subsec46'); openSection('section4')" class="hreflink">JavaScript Objects</a> section after parsing the JSON Object literals into a JavaScript Object.</li>
                 <br>
 
                 <h5>JSON Array Literals</h5>
@@ -18076,8 +18077,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
-                <li style="background-color: #f3ffc0!important;">It is important to note that JSON array literal is not an array, as JSON is a string format.</li>
-                <li style="background-color: #f3ffc0!important;">The JSON array literal can be converted into a JavaScript array with <code>JSON.parse()</code>.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">It is important to note that JSON array literal is not an array, as JSON is a string format.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">The JSON array literal can be converted into a JavaScript array with <code>JSON.parse()</code>.</li>
                 <br>
                 <div class="block-outer" data-result-id="demoa321" data-result-function="complex245">
                     <div class="block-cont">
@@ -18099,7 +18100,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa321" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #f3ffc0!important;">Other array operation is the same as in <a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')" class="hreflink">JavaScript Arrays</a> section after parsing the JSON Array literals into a JavaScript Array.</li>
+                <li style="background-color: #f3ffc0!important; display: inline-block;">Other array operation is the same as in <a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')" class="hreflink">JavaScript Arrays</a> section after parsing the JSON Array literals into a JavaScript Array.</li>
                 <br>
                 <div style="display: flex; flex-direction: row;">
                     <div class="custom-form-container">
@@ -18165,10 +18166,260 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </table>
                     </div>
                 </div>
-                
+                <br>
+                <li>The form above accept user input and store it into users table, with each input stored in different column.</li>
+                <li>While this below input will store everything into 1 column with JSON data type:</li>
+                <div class="block-outer" data-result-id="demoa322" data-result-function="complex246">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">userData</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"name"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Kobe Bryant"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"email"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"kobe.bryant@example.com"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"car"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Maserati GranTurismo"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"nationality"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"American"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"isMarried"</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">1</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">jsonData</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">JSON</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">stringify</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">userData</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="commentcolor">//Code to send the data to the server</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa322" class="result"><span></span> </p>
+                </div>                
             </ul>
         </div>
         <hr>
+
+        <h3 class="subsection" id="subsec423" onclick="toggleSection('subsec423')">JS Debugging, Style Guide, and Best Practices</h3>
+        <div class="subsection" id="subsec423Content" style="display: none;">
+            <ul>
+                <h5>Debugging</h5>
+                <li>Debugging is the process of finding and fixing errors within a script.</li>
+                <li>All modern browsers have a built-in JavaScript debugger.</li>
+                <li>With a debugger, it is possible to set breakpoints (plaecs where code execution can be stopped), and examine variables while the code is executing.</li>
+                <li>Usually, debugging can be activated in the browser using the F12 key, and then select "Console" in the debugger menu.</li>
+                <br>
+                <h6><code>console.log()</code> Method</h6>
+                <li><code>console.log()</code> will display JavaScript values in the debugger window:</li>
+                <div class="block-outer" data-result-id="demoa323" data-result-function="complex247">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">str</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"dudududu Max Verstappen"</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">currentString</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor"><</span> <span class="jsvariablecolor">str</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">length</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">currentString</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">str</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">console</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">log</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">currentString</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa323" class="result"><span></span> </p>
+                </div>
+                <br>
+                <h6>Setting Breakpoints</h6>
+                <li>Breakpoints can be set by clicking on the line number in the debugger window.</li>
+                <li>When the code is executed, the execution will stop at the breakpoint, and the code can be examined.</li>
+                <li>After examining values, you can resume the execution by pressing the F8 key.</li>
+                <br>
+                <h6>The <code>debugger</code> Keyword</h6>
+                <li>The <code>debugger</code> keyword stops the execution of JavaScript, and calls (if available) the debugging function.</li>
+                <li>This has the same function as setting a breakpoint in the debugger.</li>
+                <li>If no debugging is available, the debugger statement has no effect.</li>
+                <div class="block-outer" data-result-id="demoa324" data-result-function="complex248">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <p style="margin-top: 4px;">The code below will stop the execution at the <code>debugger</code> keyword <b>if the debugger is turned on (press F12)</b>:</p>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">15</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">debugger</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">return</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa324" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>Style Guide</h5>
+                <li style="background-color: #FFC0C7!important; display: inline-block;">Always use the same coding conventions for all your JavaScript projects.</li>
+                <li>Coding conventions are <b>styl guidelines for programming.</b> This typically cover:</li>
+                <ul>
+                    <li>Naming and declaration rules for variables and functions.</li>
+                    <li>Rules for the use of white space, indentation, and comments.</li>
+                    <li>Programming practices and principles.</li>
+                </ul>
+                <li>With a consistent coding conventions, it will secure quality by improving readability and thus easier to maintain.</li>
+                <br>
+                <h6>Variable Names</h6>
+                <li>Variable names should be written in camelCase.</li>
+                <li>Variable names start with a letter.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"John"</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Doe"</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">19.90</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Spaces Around Operators</h6>
+                <li>Always put spaces around operators ( = + - * / ), and after commas:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">2</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">2</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsstringcolor">"firstName"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"lastName"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Doe"</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Code Indentation</h6>
+                <li>Always use 4 spaces for indentation of code blocks:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toCelsius</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">f</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">(</span><span class="jsvariablecolor">f</span> <span class="jsoperatorcolor">-</span> <span class="jsnumbercolor">32</span><span class="jsoperatorcolor">)</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">5</span> <span class="jsoperatorcolor">/</span> <span class="jsnumbercolor">9</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h6>Statement Rules</h6>
+                <li>General rules for simple statements:</li>
+                <ul>
+                    <li>Always end a simple statement with a semicolon.</li>
+                </ul>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">5</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">6</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"Brand"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Toyota"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"Model"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Supra"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"Year"</span><span class="jsoperatorcolor">:</span><span class="jsnumbercolor">2020</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"Color"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Red"</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>General rule for complex (compound) statements:</li>
+                <ul>
+                    <li>Put the opening bracket at the end of the first line.</li>
+                    <li>Use one space before the opening bracket.</li>
+                    <li>Put the closing bracket on a new line, without leading spaces.</li>
+                    <li>Do not end a complex statement with a semicolon.</li>
+                </ul>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6>Functions:</h6>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toFahrenheit</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">c</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">(</span><span class="jsvariablecolor">c</span> <span class="jsoperatorcolor">*</span> <span class="jsnumbercolor">9</span><span class="jsoperatorcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">32</span><span class="jssemicoloncolor"></span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6>Conditional Statements:</h6>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">time</span> <span class="jsoperatorcolor">==</span> <span class="jsstringcolor">"morning"</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">greet</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Good Morning!"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor"></span></p>
+                            <p><span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">greet</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Good Evening!"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor"></span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6>Loops:</h6>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor"><</span> <span class="jsnumbercolor">10</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">console</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">log</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor"></span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Object Rules</h6>
+                <li>General rules for object definitions:</li>
+                <ul>
+                    <li>Place the opening bracket on the same line as the object name.</li>
+                    <li>Use colon plus one space between each property and its value.</li>
+                    <li>Use quotes around string values, not around numeric values.</li>
+                    <li>Do not add a comma after the last property-value pair.</li>
+                    <li>Place the closing bracket on a new line, without leading spaces.</li>
+                    <li>Always end an object definition with a semicolon.</li>
+                </ul>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor>{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"firstName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"John"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"lastName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Doe"</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>Short object can be written in one line, using spaces only between properties, like this:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor>{</span> <span class="jsstringcolor">"firstName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"lastName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Doe"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h6>Line Length &lt; 80</h6>
+                <li>For readability, avoid lines longer than 80 characters.</li>
+                <li>If a JavaScript statement does not fit on one line, the best place to break it is after an operator or a comma:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Hello World! This is a very long text, and it will be broken into two lines.<br>Hello World! This is a very long text, and it will be broken into two lines."</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </ul>
+        </div>
         
     </div>
     <hr>

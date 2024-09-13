@@ -325,7 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 function complex0() {
     let output = '';
     function testImplicitGlobal() {
@@ -3028,3 +3027,57 @@ function complex245() {
 
     return "myArray[0]: " + myArray[0] + "<br>myJSON.[0]: " + myJSON[0];
 }
+
+function complex246() {
+    // Create an object with the provided data
+    const userData = {
+        name: "Kobe Bryant",
+        email: "kobe.bryant@example.com",
+        car: "Maserati GranTurismo",
+        nationality: "American",
+        isMarried: 1
+    };
+
+    // Convert the object into a JSON string
+    const jsonData = JSON.stringify(userData);
+
+    // Send the JSON string to the PHP script
+    fetch('php/insert_json.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: jsonData
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            console.log('Data successfully inserted into users_json.');
+        } else {
+            console.error('Insertion Error:', result.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+    return jsonData; // Optionally return the JSON string
+}
+
+function complex247() {
+    const str = "dudududu Max Verstappen";
+    let currentString = "";
+
+    for (let i = 0; i < str.length; i++) {
+        currentString += str[i];
+        console.log(currentString);
+    }
+    alert("click 'F12' to see the console log!")
+}
+
+function complex248() {
+    let x = 15 * 5;
+    debugger;
+    return x;
+}
+
