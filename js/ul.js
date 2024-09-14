@@ -304,6 +304,23 @@ function generateList20() {
     });
 }
 
+function generateList21() {
+    const methods = [
+        "Avoid Global Variables", "Always Declare Local Variables", "Declarations on Top", "Initialize Variables",
+        "Declare Objects with <code>const</code>", "Declare Arrays with <code>const</code>", "Don't Use <code>new Object()</code>",
+        "Beware of Automatic Type Conversions", "Use === Comparison", "Use Parameter Defaults", "End Your Switches with Defaults",
+        "Avoid Number, String, and Boolean as Objects", "Avoid Using eval()"
+    ];
+
+    const ul = document.getElementById('threeColumn20');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 248}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;

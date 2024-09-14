@@ -3081,3 +3081,53 @@ function complex248() {
     return x;
 }
 
+function complex249() {
+    let carName = "Volvo";
+    function myFunc() {
+        let carOwner = "Max";
+        return carName + " Owned by " + carOwner;
+    }
+    return myFunc();
+}
+
+function complex250() {
+    let x1 = "";
+    let x2 = 0;
+    let x3 = false;
+    const x4 = {};
+    const x5 = [];
+    const x6 = /()/;
+    const x7 = function(){};
+
+    return "x1: " + typeof x1 + "<br>" +
+    "x2: " + typeof x2 + "<br>" +
+    "x3: " + typeof x3 + "<br>" +
+    "x4: " + typeof x4 + "<br>" +
+    "x5: " + typeof x5 + "<br>" +
+    "x6: " + typeof x6 + "<br>" +
+    "x7: " + typeof x7 + "<br>";
+}
+
+function complex251() {
+    let x = "Hello";
+    x = 5;
+
+    return "<code>typeof</code> x: " + typeof x;
+}
+
+function complex252() {
+    let x1 = (0 == "");    // true
+    let x2 = (1 == "1");   // true
+    let x3 = (1 == true);  // true
+
+    let y1 = (0 === "");   // false
+    let y2 = (1 === "1");  // false
+    let y3 = (1 === true); // false
+
+    return "(0 == ''): " + x1 + "<br>" +
+    "(1 == '1'): " + x2 + "<br>" +
+    "(1 == true): " + x3 + "<br><br>" +
+    "(0 === ''): " + y1 + "<br>" +
+    "(1 === '1'): " + y2 + "<br>" +
+    "(1 === true): " + y3;
+}

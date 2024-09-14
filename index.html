@@ -18417,6 +18417,266 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
+                <br>
+
+                <h5>Best Practices</h5>
+
+                <ul class="threeColumn" id="threeColumn20"></ul>
+
+                <div>
+                    <div id="example4248" style="display: none;">
+                        <h6>Avoid Global Variables</h6>
+                        <li>Minimize the use of global variable. This includes all data types, objects, and functions.</li>
+                        <li>Global variables can be overwritten by other scripts, and thus cause bugs.</li>
+                        <li style="background-color: #f3ffc0!important; display: inline-block;">Use local variables instead.</li>
+                        <div class="block-outer" data-result-id="demoa325" data-result-function="complex249">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">//Global Variable</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Volvo"</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carOwner</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Max"</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">//Local Variable</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" owned by "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">carOwner</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">//carName accessible anywhere</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa325" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4249" style="display: none;">
+                        <h6>Always Declare Local Variables</h6>
+                        <li>Always declare new local variables with the <code>var</code>, <code>let</code>, or <code>const</code> keyword, otherwise they will become global variables.</li>
+                        <li style="background-color: #f3ffc0!important; display: inline-block;">Strict mode does not allow undeclared variables.</li>
+                    </div>
+
+                    <div id="example4250" style="display: none;">
+                        <h6>Declaration on Top</h6>
+                        <li>It is a good practice to declare all variables at the beginning of every script or function.</li>
+                        <li>This will:</li>
+                        <ul>
+                            <li>Give cleaner code.</li>
+                            <li>Provide a single place to look for local variables.</li>
+                            <li>Reduce the possibility of unwanted re-declarations.</li>
+                            <li>Make it easier to avoid unwanted (implied) global variables.</li>
+                        </ul>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Declare at the beginning</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">firstName</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">lastName</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">price</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">discount</span><span class="jssemicoloncolor">,</span> <span class="jsvariablecolor">fullPrice</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Use later</span></p>
+                                    <p><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Max"</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Verstappen"</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">19.90</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">discount</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0.10</span><span class="jssemicoloncolor">;</span></p>
+                                    <br>
+                                    <p><span class="jsvariablecolor">fullPrice</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">price</span> <span class="jsoperatorcolor">-</span> <span class="jsvariablecolor">discount</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <li>This also goes for loop variables:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">for</span> <span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor"><</span> <span class="jsnumbercolor">10</span><span class="jssemicoloncolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">return</span> <span class="jsstringcolor">"Max Verstappen"</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4251" style="display: none;">
+                        <h6>Initialize Variables</h6>
+                        <li>It is a good coding practice to initialize variables when you declare them.</li>
+                        <li>This will:</li>
+                        <ul>
+                            <li>Give cleaner code.</li>
+                            <li>Provide a single place to initialize variables.</li>
+                            <li>Avoid undefined values.</li>
+                        </ul>
+                        <br>
+                        <div class="block-outer">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <p style="margin-top: 0;">Declare and Initiate at the beginning:</p>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Volvo"</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carModel</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"XC90"</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">carYear</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2020</span><span class="jssemicoloncolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4252" style="display: none;">
+                        <h6>Declare Objects with <code>const</code></h6>
+                        <li>Declaring objects with const will prevent any accidental change of type:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsstringcolor">"type"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Fiat"</span><span class="jscomma">,</span> <span class="jsstringcolor">"model"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"500"</span><span class="jscomma">,</span> <span class="jsstringcolor">"color"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"white"</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Fiat"</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Changes object to string</span></p>
+                                </div>
+                                <br>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsstringcolor">"type"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Fiat"</span><span class="jscomma">,</span> <span class="jsstringcolor">"model"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"500"</span><span class="jscomma">,</span> <span class="jsstringcolor">"color"</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"white"</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">car</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Fiat"</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Not possible</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4253" style="display: none;">
+                        <h6>Declare Arrays with <code>const</code></h6>
+                        <li>Declaring arrays with const will prevent any accidental change of type:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Saab"</span><span class="jscomma">,</span> <span class="jsstringcolor">"Volvo"</span><span class="jscomma">,</span> <span class="jsstringcolor">"BMW"</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Changes array to number</span></p>
+                                </div>
+                                <br>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Saab"</span><span class="jscomma">,</span> <span class="jsstringcolor">"Volvo"</span><span class="jscomma">,</span> <span class="jsstringcolor">"BMW"</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsvariablecolor">cars</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3</span><span class="jssemicoloncolor">;</span> <span class="commentcolor">// Not possible</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4254" style="display: none;">
+                        <h6>Don't Use <code>new Object()</code></h6>
+                        <ul>
+                            <li>Use <code>""</code> instead of <code>new String()</code></li>
+                            <li>Use <code>0</code> instead of <code>new Number()</code></li>
+                            <li>Use <code>false</code> instead of <code>new Boolean()</code></li>
+                            <li>Use <code>[]</code> instead of <code>new Array()</code></li>
+                            <li>Use <code>{}</code> instead of <code>new Object()</code></li>
+                            <li>Use <code>/()/</code> instead of <code>new RegExp()</code></li>
+                            <li>Use <code>function () {}</code> instead of <code>new Function()</code></li>
+                        </ul>
+                        <br>
+                        <div class="block-outer" data-result-id="demoa326" data-result-function="complex250">
+                            <div class="block-cont" style="padding-top: 4px;">
+                                <h6>Example</h6>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x1</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">""</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// new primitive string</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x2</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// new primitive number</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x3</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">false</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// new primitive boolean</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x4</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// new object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x5</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">[</span><span class="jsbracketcolor">]</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// new array</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x6</span> <span class="jsoperatorcolor">=</span> <span class="jsregexpcolor">/()/</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// new regexp object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x7</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">()</span><span class="jsbracketcolor">{</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;<span class="commentcolor">// new function object</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa326" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4255" style="display: none;">
+                        <h6>Beware of Automatic Type Conversion</h6>
+                        <li>JavaScript is weakly typed, which can cause unexpected results.</li>
+                        <li>Always be aware of automatic type conversion, when working with operators:</li>
+                        <div class="block-outer" data-result-id="demoa327" data-result-function="complex251">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Max Verstappen"</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;<span class="commentcolor">// x is a string</span></p>
+                                    <p><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">1</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// x is now a number</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa327" class="result"><span></span> </p>
+                        </div>
+                        <br>
+                        <li style="background-color: #f3ffc0!important; display: inline-block;">Beware that number can accidentally be converted to strings or <code>NaN</code> (Not a Number).</li>
+                    </div>
+
+                    <div id="example4256" style="display: none;">
+                        <h6>Use === Comparison</h6>
+                        <li>Always use <code>===</code> to compare variables and values.</li>
+                        <li>Using <code>==</code> comparison operator always converts (to matching types) before comparison.</li>
+                        <div class="block-outer" data-result-id="demoa328" data-result-function="complex252">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsnumbercolor">0</span> <span class="jsoperatorcolor">==</span> <span class="jsstringcolor">""</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// true</span></p>
+                                    <p><span class="jsnumbercolor">1</span> <span class="jsoperatorcolor">==</span> <span class="jsstringcolor">"1"</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// true</span></p>
+                                    <p><span class="jsnumbercolor">1</span> <span class="jsoperatorcolor">==</span> <span class="jskeywordcolor">true</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// true</span></p>
+                                    <br>
+                                    <p><span class="jsnumbercolor">0</span> <span class="jsoperatorcolor">===</span> <span class="jsstringcolor">""</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// false</span></p>
+                                    <p><span class="jsnumbercolor">1</span> <span class="jsoperatorcolor">===</span> <span class="jsstringcolor">"1"</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// false</span></p>
+                                    <p><span class="jsnumbercolor">1</span> <span class="jsoperatorcolor">===</span> <span class="jskeywordcolor">true</span><span class="jssemicoloncolor">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// false</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa328" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4257" style="display: none;">
+                        <h6>Use Prameter Defaults</h6>
+                        <li>If a function is called with a missing argument, the value of the missing argument is set to <code>undefined</code>.</li>
+                        <li>Undefined values can break your code. It is a good habit to assign default values to arguments.</li>
+                        <div class="block-outer" data-result-id="demoa329" data-result-function="complex253">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    function myFunction(x, y) {
+                                        if (y === undefined) {
+                                          y = 0;
+                                        }  
+                                        return x * y;
+                                      }
+
+                                      myFunction(4)
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa329" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                </div>
 
             </ul>
         </div>
