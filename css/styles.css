@@ -587,14 +587,6 @@ p {
   font-weight: normal;
 }
 
-
-.block-cont {
-  padding: 16px 10px;
-  background-color: #b9b9b9;
-  border-radius: 5px;
-  min-width: fit-content;
-}
-
 .pad6 {
   padding: 6px;
 }
@@ -621,6 +613,47 @@ p {
 
 .hei80 {
   height: 80px;
+}
+
+.block-div2,
+.block-div3 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.block-div2 .block-outer {
+  flex: 0 0 50%;
+}
+
+.block-div3 .block-outer {
+  flex: 0 0 33.3%;
+}
+
+@media (max-width: 1440px) {
+  .block-div3 {
+    flex-direction: column;
+  }
+
+  .block-div3 .block-outer {
+    flex: 0 0 auto;
+  }
+
+  .block-outer {
+    margin-bottom: 20px;
+  }
+}
+
+.block-outer {
+  display: flex;
+  flex-direction: row;
+}
+
+.block-cont {
+  padding: 16px 10px;
+  background-color: #b9b9b9;
+  border-radius: 5px;
+  min-width: fit-content;
 }
 
 .block-cont:nth-child(even) {
@@ -704,11 +737,6 @@ p {
   100% { 
     transform: translateX(0) skewX(20deg); 
   }
-}
-
-.block-outer {
-  display: flex;
-  flex-direction: row;
 }
 
 .inputcelcius {
@@ -860,6 +888,7 @@ mark {
   background-color: #f1f1f1;
   padding: 10px;
   margin-left: 12px;
+  margin-right: 12px;
   margin-top: 0;
   display: none; /* Hides the entire block */
   height: fit-content;

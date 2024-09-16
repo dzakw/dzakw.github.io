@@ -3131,3 +3131,91 @@ function complex252() {
     "(1 === '1'): " + y2 + "<br>" +
     "(1 === true): " + y3;
 }
+
+function complex253() {
+    function myFunction(x, y) {
+        if (y === undefined) {
+          y = 0;
+        }  
+        return x * y;
+    }
+    return myFunction(4);
+}
+
+function complex254() {
+    let day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+            break;
+        default:
+            day = "Unknown";
+    }
+    return "Today is " + day;
+}
+
+function complex255() {
+    let x = new String("John");
+    let y = "John";
+
+    return x === y;
+}
+
+function complex256() {
+    let x = new String("John");
+    let y = new String("John");
+
+    return x == y;
+}
+
+function complex257() {
+    function myFunction(a) {
+        let power = 10 
+        return a * power
+    }
+    return myFunction(12)
+}
+
+function complex258() {
+    function myFunction(a) {
+        let power = 10 
+        return a * power;
+    }
+    return myFunction(12);
+}
+
+function complex259() {
+    const person = [];
+    person[0] = "Max";
+    person[1] = "Verstappen";
+    person[2] = 33;
+
+    return "person.length: " + person.length + "<br>person[0]: " + person[0];
+}
+
+function complex260() {
+    const person = [];
+    person["firstName"] = "Max";
+    person["lastName"] = "Verstappen";
+    person["age"] = 33;
+    
+    return "person.length: " + person.length + "<br>person[0]: " + person[0];
+}

@@ -321,6 +321,51 @@ function generateList21() {
     });
 }
 
+function generateList22() {
+    const methods = [
+        "Variable Names", "Spaces Around Operators", "Code Indentation", "Statement Rules", "Object Rules", "Line Length"
+    ];
+
+    const ul = document.getElementById('threeColumn21');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 261}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList23() {
+    const methods = [
+        "Accidentally Using the Assignment Operator", "Expecting Loose Comparison", "Confusing Addition & Concatenation", "Misunderstanding Floats",
+        "Breaking a JavaScript String", "Misplacing Semicolon", "Breaking a Return Statement", "Accessing Arrays with Named Indexes",
+        "Ending Definitions with a Comma", "Undefined is Not Null"
+    ];
+
+    const ul = document.getElementById('threeColumn22');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 267}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList24() {
+    const methods = [
+        "Reduce Activity in Loops", "Reduce DOM Access", "Reduce DOM Size", "Avoid Unnecessary Variables",
+        "Delay JavaScript Loading", "Avoid Using <code>with</code>"
+    ];
+
+    const ul = document.getElementById('threeColumn23');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 277}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;
