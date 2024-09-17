@@ -366,6 +366,21 @@ function generateList24() {
     });
 }
 
+function generateList25() {
+    const methods = [
+        "Object Literal", "<code>new</code> Keyword", "Object Constructor", "<code>Object.assign()</code>",
+        "<code>Object.create()</code>", "<code>Object.fromEntries()</code>"
+    ];
+
+    const ul = document.getElementById('threeColumn24');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 283}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;

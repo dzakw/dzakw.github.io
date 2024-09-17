@@ -79,7 +79,7 @@
                     <li><a href="#subsec416" onclick="openSection('subsec416'); openSection('section4')">JavaScript Type and Destructuring</a></li>
                     <li><a href="#subsec417" onclick="openSection('subsec417'); openSection('section4')">JavaScript Bitwise, RegExp, and Precedence</a></li>
                     <li><a href="#subsec418" onclick="openSection('subsec418'); openSection('section4')">JavaScript Errors, Scope, and Hoisting</a></li>
-                    <li><a href="#subsec419" onclick="openSection('subsec419'); openSection('section4')">JavaScript Strict Mode</a></li>
+                    <li><a href="#subsec419" onclick="openSection('subsec419'); openSection('section4')">JavaScript Strict Mode & Reserved Words</a></li>
                     <li><a href="#subsec420" onclick="openSection('subsec420'); openSection('section4')">JavaScript this Keyword & Arrow Function</a></li>
                     <li><a href="#subsec421" onclick="openSection('subsec421'); openSection('section4')">JavaScript Class & Modules</a></li>
                     <li><a href="#subsec422" onclick="openSection('subsec422'); openSection('section4')">JSON</a></li>
@@ -5953,6 +5953,15 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>  
                     </div>
                 </div>
+                <li>Methods for Defining JavaScript Objects:</li>
+                <ul>
+                    <li>Using an Object Literal</li>
+                    <li>Using the new Keyword</li>
+                    <li>Using an Object Constructor</li>
+                    <li>Using Object.assign()</li>
+                    <li>Using Object.create()</li>
+                    <li>Using Object.fromEntries()</li>
+                </ul>
                 <li>Object can also has methods like <code>car.start</code>, <code>car.drive</code>, <code>car.stop</code>, etc.</li>
                 <li>Methods are performed at different times</li>
                 <blockquote>
@@ -5960,92 +5969,251 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p>It is a common practice to declare objects with the <code>const</code> keyword. This tells the browser that the object will not be reassigned, and it will be faster to access the object.</p>
                     <p>JavaScript object can be defined through <b>object literal</b>, using the <b><code>new</code> keyword</b>, or using an <b>object constructor</b></p>
                 </blockquote>
-                
-                <h4>Javascript Object Literal</h4>
-                <li>An object literal is a list of name:value pairs (like <code>type:Fiat</code>) inside curly braces {} and are separated by commas.</li>
-                <div class="block-outer">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p>{<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'Fiat'</span>, <span class="jsvariablecolor">model</span>: <span class="jsstringcolor">'500'</span>, <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'white'</span>};</p>
-                        </div>
-                    </div>
-                </div>
-                <li>These examples create a JavaScript object wirh 4 properties:</li>
-                <div class="block-outer">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>, <span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>, <span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">50</span>, <span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span>};</p>
-                        </div>
-                        <p class="block-cont-p">It is also possible to create it like this:</p>
-                        <div class="block-bl">
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">50</span>,</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span></p>
-                            <p><span class="jsbracketcolor">};</span></p>
-                        </div>
-                        <p class="block-cont-p">An object can also created as an empty object, and then add the properties later:</p>
-                        <div class="block-bl">
-                            <p><span class="commentcolor">// Create an empty Object</span></p>
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {};</p>
-                            <br>
-                            <p><span class="commentcolor">// Add properties to the object</span></p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Max'</span>;</p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Verstappen'</span>;</p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">50</span>;</p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">eyeColor</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'blue'</span>;</p>
-                        </div>
-                    </div>
-                </div>
 
-                <h4>Using <<code>new</code> >Keyword</h4>
-                <li>Below is the example on how to create a new JavaScript object using the <code>new</code> keyword, and then adds 4 properties:</li>
-                <div class="block-outer">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="commentcolor">// Create an Object</span></p>
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Object</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
-                            <br>
-                            <p><span class="commentcolor">// Add properties to the object</span></p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Max'</span>;</p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Verstappen'</span>;</p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">50</span>;</p>
-                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">eyeColor</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'blue'</span>;</p>
-                        </div>
-                    </div>
-                </div>
-                <blockquote>
-                    <h3>Note:</h3>
-                    <p>Both examples above do exactly the same, and it is recomended to just use the <b>Object Literal</b> for a better readability, simplicity, and performance.</p>
-                </blockquote>
-
-                <h4>Using Object Constructor</h4>
-                <li>Below is the example on how to create a new JavaScript object using an <b>object constructor</b>, and then adds 4 properties:</li>
-                <div class="block-outer">
-                    <div class="block-cont">
-                        <div class="block-bl">
-                            <p><span class="commentcolor">// Create an Object Constructor</span></p>
-                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">firstName</span>, <span class="jsvariablecolor">lastName</span>, <span class="jsvariablecolor">age</span>, <span class="jsvariablecolor">eyeColor</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">;</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">;</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">age</span><span class="jsoperatorcolor">;</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">eyeColor</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">eyeColor</span><span class="jsoperatorcolor">;</span></p>
-                            <p><span class="jsbracketcolor">}</span></p>
-                        </div>
-                        <p class="block-cont-p">After declaring the constructor, now we can use <code>new Person()</code> to create many new Person objects:</p>
-                        <div class="block-bl">
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myFather</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Max'</span>, <span class="jsstringcolor">'Verstappen'</span>, <span class="jsnumbercolor">50</span>, <span class="jsstringcolor">'blue'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myMother</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Sally'</span>, <span class="jsstringcolor">'Rally'</span>, <span class="jsnumbercolor">48</span>, <span class="jsstringcolor">'green'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
-                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myBrother</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Bob'</span>, <span class="jsstringcolor">'Verstappen'</span>, <span class="jsnumbercolor">25</span>, <span class="jsstringcolor">'brown'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
-                        </div>
-                    </div>
-                </div>
-                <li>*Notes:</li>
-                <ul>
-                    <li>It is considered good practice to name constructor functions with an upper-case first letter</li>
-                    <li>In the constructor function, <code>this</code> has no value. The value of <code>this</code> will become the new object when a new object is created</li>
+                <ul class="threeColumn" id="threeColumn24">
                 </ul>
+
+                <div>
+                    <div id="example4283" style="display: none;">
+                        <h5>Object Literals</h5>
+                        <li>An object literal is a list of name:value pairs (like <code>type:Fiat</code>) inside curly braces {} and are separated by commas.</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>{<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'Fiat'</span>, <span class="jsvariablecolor">model</span>: <span class="jsstringcolor">'500'</span>, <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'white'</span>};</p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>These examples create a JavaScript object wirh 4 properties:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>, <span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>, <span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">50</span>, <span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span>};</p>
+                                </div>
+                                <p class="block-cont-p">It is also possible to create it like this:</p>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">50</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                </div>
+                                <p class="block-cont-p">An object can also created as an empty object, and then add the properties later:</p>
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an empty Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {};</p>
+                                    <br>
+                                    <p><span class="commentcolor">// Add properties to the object</span></p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Max'</span>;</p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Verstappen'</span>;</p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">50</span>;</p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">eyeColor</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'blue'</span>;</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+
+                    <div id="example4284" style="display: none;">
+                        <h5>Using <code>new</code> Keyword</h5>
+                        <li>Below is the example on how to create a new JavaScript object using the <code>new</code> keyword, and then adds 4 properties:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Object</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Add properties to the object</span></p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Max'</span>;</p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Verstappen'</span>;</p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">50</span>;</p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">eyeColor</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'blue'</span>;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote>
+                            <h3>Note:</h3>
+                            <p>Both examples above do exactly the same, and it is recomended to just use the <b>Object Literal</b> for a better readability, simplicity, and performance.</p>
+                        </blockquote>
+                    </div>
+                    
+                    <div id="example4285" style="display: none;">
+                        <h5>Using Object Constructor</h5>
+                        <li>Below is the example on how to create a new JavaScript object using an <b>object constructor</b>, and then adds 4 properties:</li>
+                        <div class="block-outer">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an Object Constructor</span></p>
+                                    <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">firstName</span>, <span class="jsvariablecolor">lastName</span>, <span class="jsvariablecolor">age</span>, <span class="jsvariablecolor">eyeColor</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">age</span><span class="jsoperatorcolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">eyeColor</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">eyeColor</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <p class="block-cont-p">After declaring the constructor, now we can use <code>new Person()</code> to create many new Person objects:</p>
+                                <div class="block-bl">
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myFather</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Max'</span>, <span class="jsstringcolor">'Verstappen'</span>, <span class="jsnumbercolor">50</span>, <span class="jsstringcolor">'blue'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myMother</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Sally'</span>, <span class="jsstringcolor">'Rally'</span>, <span class="jsnumbercolor">48</span>, <span class="jsstringcolor">'green'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myBrother</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Person</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Bob'</span>, <span class="jsstringcolor">'Verstappen'</span>, <span class="jsnumbercolor">25</span>, <span class="jsstringcolor">'brown'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <li>*Notes:</li>
+                        <ul>
+                            <li>It is considered good practice to name constructor functions with an upper-case first letter</li>
+                            <li>In the constructor function, <code>this</code> has no value. The value of <code>this</code> will become the new object when a new object is created</li>
+                        </ul>        
+                    </div>
+
+                    <div id="example4286" style="display: none;">
+                        <h5>Using <code>Object.assign()</code></h5>
+                        <li>The <code>Object.assign()</code> method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.</li>
+                        <div class="block-outer">
+                            <div class="block-cont pad6">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">assign</span><span class="jsbracketcolor">(</span><i><span class="jsvariablecolor">target</span>, <span class="jsvariablecolor">source(s)</span></i><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-outer" data-result-id="demoa348" data-result-function="complex261">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create Target Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person1</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">26</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Create Source Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person2</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Sally'</span><span class="jsbracketcolor">}</span>;</p>
+                                    <br>
+                                    <p><span class="commentcolor">// Assign Source to Target</span></p>
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">assign</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person1</span>, <span class="jsvariablecolor">person2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa348" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>target</b>: The target object.</li>
+                            <li><b>source(s)</b>: The source object(s).</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>The target object.</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4287" style="display: none;">
+                        <h5>Using <code>Object.create()</code></h5>
+                        <li>The <code>Object.create()</code> method creates a new object, using an existing object.</li>
+                        <div class="block-outer">
+                            <div class="block-cont pad6">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">create</span><span class="jsbracketcolor">(</span><i><span class="jsvariablecolor">object, properties</span></i><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-outer" data-result-id="demoa349" data-result-function="complex262">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an Object:</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Create new Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolorcolor">man</span> = <span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">create</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">man</span>.<span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Peter'</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa349" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>object</b>: An existing object</li>
+                            <li><b>properties</b>: Optional. A descriptor of properties to be added or changed:
+                            <ul>
+                                <li>value: value</li>
+                                <li>writable: true/false</li>
+                                <li>enumerable: true/false</li>
+                                <li>configurable: true/false</li>
+                                <li>get: function</li>
+                                <li>set: function</li>
+                            </ul></li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>A new object</li>
+                        </ul>
+                    </div>
+
+                    <div id="example4288" style="display: none;">
+                        <h5>Using <code>Object.fromEntries()</code></h5>
+                        <li>The <code>Object.fromEntries()</code> method transforms a list of key-value pairs into an object.</li>
+                        <div class="block-outer">
+                            <div class="block-cont pad6">
+                                <span><b>Syntax:</b></span>
+                                <div class="block-bl">
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">fromEntries</span><span class="jsbracketcolor">(</span><i><span class="jsvariablecolor">iterable</span></i><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-outer" data-result-id="demoa350" data-result-function="complex263">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an Array:</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">arr</span> <span class="jsoperatorcolor">=</span> [[<span class="jsstringcolor">'firstName'</span>, <span class="jsstringcolor">'Max'</span>], [<span class="jsstringcolor">'lastName'</span>, <span class="jsstringcolor">'Verstappen'</span>]];</p>
+                                    <br>
+                                    <p><span class="commentcolor">// Create an Object:</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">fromEntries</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">arr</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa350" class="result"><span></span> </p>
+                        </div>
+                        <h6>Parameters</h6>
+                        <ul>
+                            <li><b>iterable</b>: An iterable object, like an Array or a Map</li>
+                        </ul>
+                        <h6>Return Value</h6>
+                        <ul>
+                            <li>An object</li>
+                        </ul>
+                    </div>
+
+                    <hr>
+                </div>
+
                 <h5>Property Default Values</h5>
                 <li>A <b>value</b> given to a property will be a <b>default value</b> for all objects created by the constructor:</li>
                 <div class="block-outer" data-result-id="demoa14" data-result-function="complex28">
@@ -6065,6 +6233,17 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa14" class="result"><span></span> </p>
                 </div>
+
+                <h5>Prototype Inheritance</h5>
+                <li>All JavaScript objects inherit properties and methods from a prototype:</li>
+                <ul>
+                    <li><code>Date</code> objects inherit from <code>Date.prototype</code></li>
+                    <li><code>Array</code> objects inherit from <code>Array.prototype</code></li>
+                    <li><code>Person</code> objects inherit from <code>Person.prototype</code></li>
+                </ul>
+                <li>The <code>Object.prototype</code> is on the top of the prototype inheritance chain:</li>
+                <li><code>Date</code> objects, <code>Array</code> objects, and <code>Person</code> objects inherit from <code>Object.prototype</code></li>
+
                 <h5>Adding Property to a Constructor</h5>
                 <li>To add a new property into the constructor, must use construction function prototype like this:</li>
                 <div class="block-outer">
@@ -6080,6 +6259,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
+
                 <h5>Built-in JavaScript Constructors</h5>
                 <li>JavaScript has several built-in constructors for all native JavaScript objects:</li>
                 <div class="block-outer">
@@ -15955,7 +16135,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <li>When an error occurs in JavaScript, the interpreter will stop and generate an error message.</li>
                 <li>The technical term for this is: JavaScript will <b>throw an exception</b> (throw an error).</li>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">JavaScript will actually create an <b>Error object</b> with two main properties: <code>name</code> and <code>message</code>.</li>
+                <li class="tip">JavaScript will actually create an <b>Error object</b> with two main properties: <code>name</code> and <code>message</code>.</li>
 
                 <h6>The throw Statement</h6>
                 <li>The <code>throw</code> statement allows you to create a custom error.</li>
@@ -16089,7 +16269,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div id="example4209" style="display: none;">
                         <h5>EvalError</h5>
                         <li>An error has occurred in the eval() function</li>
-                        <li style="background-color: #FFC0C7 !important; display: inline-block;">Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</li>
+                        <li class="warn">Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</li>
                     </div>
 
                     <div id="example4210" style="display: none;">
@@ -16224,7 +16404,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <br>
                 <li>Other than the above, there are also other Non-standard Error Object Properties like <code>fileName</code> (mozilla), <code>lineNumber</code> (mozilla), and <code>columnNumber</code> (mozilla), <code>stack</code> (mozilla), <code>description</code> (microsoft), <code>number</code> (microsoft), and others.</li>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">Do not use these properties in public web sites, as they wont work in all browsers.</li>
+                <li class="tip">Do not use these properties in public web sites, as they wont work in all browsers.</li>
                 <br>
 
                 <hr>
@@ -16495,7 +16675,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
         </div>
         <hr>
 
-        <h3 class="subsection" id="subsec419" onclick="toggleSection('subsec419')">JavaScript Strict Mode</h3>
+        <h3 class="subsection" id="subsec419" onclick="toggleSection('subsec419')">JavaScript Strict Mode & Reserved Words</h3>
         <div class="subsection" id="subsec419Content" style="display: none;">
             <ul>
                 <li><code>"use strict";</code> Defines that JavaScript code should be executed in "strict mode".</li>
@@ -16504,7 +16684,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
                 <h5>Declaring Strict Mode</h5>
                 <li>To declare strict mode, you add <code>"use strict";</code> to the beginning of a JavaScript file or a JavaScript function.</li>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">The "use strict" directive is only recognized at the beginning of a script or a function.</li>
+                <li class="tip">The "use strict" directive is only recognized at the beginning of a script or a function.</li>
                 <li>Declared at the beginning of a script will make it to have global scope (all code in the script will execute in strict mode):</li>
                 <div class="block-outer" data-result-id="demoa278" data-result-function="complex203">
                     <div class="block-cont" style="padding-top: 4px;">
@@ -16784,7 +16964,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <div class="block-cont">
                                 <div class="block-bl">
                                     <p><span class="jsstringcolor">"use strict";</span></p>
-                                    <p><span class="jskeywordcolor">with</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">Math</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">cos</span><span class="jsbracketcolor>(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span><span class="jsbracketcolor">}</span> <span class="commentcolor">// Uncaught SyntaxError: Strict mode code may not include a with statement</span></p>
+                                    <p><span class="jskeywordcolor">with</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">Math</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">{</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">cos</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span><span class="jsbracketcolor">}</span> <span class="commentcolor">// Uncaught SyntaxError: Strict mode code may not include a with statement</span></p>
                                 </div>
                             </div>
                         </div>
@@ -16913,7 +17093,368 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
-                <ul 
+                <br>
+
+                <h5>Reserved Words</h5>
+                <li>In JavaScript, these words are reserved and cannot be used as variables, labels, or function names:</li>
+                <table class="key-dec full-width">
+                    <tr>
+                        <td>abstract</td>
+                        <td>arguments</td>
+                        <td style="color: crimson;"><b>await</b></td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>break</td>
+                        <td>byte</td>
+                        <td>case</td>
+                        <td>catch</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td style="color: crimson;"><b>class</b></td>
+                        <td style="color: crimson;"><b>const</b></td>
+                        <td>continue</td>
+                    </tr>
+                    <tr>
+                        <td>debugger</td>
+                        <td>default</td>
+                        <td>delete</td>
+                        <td>do</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>else</td>
+                        <td style="color: crimson;"><b>enum</b></td>
+                        <td>eval</td>
+                    </tr>
+                    <tr>
+                        <td style="color: crimson;"><b>export</b></td>
+                        <td style="color: crimson;"><b>extends</b></td>
+                        <td>false</td>
+                        <td>final</td>
+                    </tr>
+                    <tr>
+                        <td>finally</td>
+                        <td>float</td>
+                        <td>for</td>
+                        <td>function</td>
+                    </tr>
+                    <tr>
+                        <td>goto</td>
+                        <td>if</td>
+                        <td>implements</td>
+                        <td style="color: crimson;"><b>import</b></td>
+                    </tr>
+                    <tr>
+                        <td>in</td>
+                        <td>instanceof</td>
+                        <td>int</td>
+                        <td>interface</td>
+                    </tr>
+                    <tr>
+                        <td style="color: crimson;"><b>let</b></td>
+                        <td>long</td>
+                        <td>native</td>
+                        <td>new</td>
+                    </tr>
+                    <tr>
+                        <td>null</td>
+                        <td>package</td>
+                        <td>private</td>
+                        <td>protected</td>
+                    </tr>
+                    <tr>
+                        <td>public</td>
+                        <td>return</td>
+                        <td>short</td>
+                        <td>static</td>
+                    </tr>
+                    <tr>
+                        <td style="color: crimson;"><b>super</b></td>
+                        <td>switch</td>
+                        <td>synchronized</td>
+                        <td>this</td>
+                    </tr>
+                    <tr>
+                        <td>throw</td>
+                        <td>throws</td>
+                        <td>transient</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>try</td>
+                        <td>typeof</td>
+                        <td>var</td>
+                        <td>void</td>
+                    </tr>
+                    <tr>
+                        <td>volatile</td>
+                        <td>while</td>
+                        <td>with</td>
+                        <td>yield</td>
+                    </tr>
+                </table>
+                <li>Words colored in <span style="color: crimson;"><b>red</b></span> was new in ECMAScript 5 and ECMAScript 6.</li>
+                <h6>Removed Reserved Words</h6>
+                <li>The following reserved words have been removed from the ECMAScript 5/6 standard:</li>
+                <table class="key-dec full-width">
+                    <tr>
+                        <td>abstract</td>
+                        <td>boolean</td>
+                        <td>byte</td>
+                        <td>char</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>final</td>
+                        <td>float</td>
+                        <td>goto</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>long</td>
+                        <td>native</td>
+                        <td>short</td>
+                    </tr>
+                    <tr>
+                        <td>synchronized</td>
+                        <td>throws</td>
+                        <td>transient</td>
+                        <td>volatile</td>
+                    </tr>
+                </table>
+                <br>
+                <li class="tip">The removed reserved words can still be used in JavaScript programs, but should be avoided.</li>
+
+                <h6>JavaScript Objects, Properties, and Methods</h6>
+                <li>You should also avoid using the name of JavaScript built-in objects, properties, and methods:</li>
+                <table class="key-dec full-width">
+                    <tr>
+                        <td>Array</td>
+                        <td>Date</td>
+                        <td>eval</td>
+                        <td>function</td>
+                    </tr>
+                    <tr>
+                        <td>hasOwnProperty</td>
+                        <td>Infinity</td>
+                        <td>isFinite</td>
+                        <td>isNaN</td>
+                    </tr>
+                    <tr>
+                        <td>isPrototypeOf</td>
+                        <td>length</td>
+                        <td>Math</td>
+                        <td>NaN</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Number</td>
+                        <td>Object</td>
+                        <td>prototype</td>
+                    </tr>
+                    <tr>
+                        <td>String</td>
+                        <td>toString</td>
+                        <td>undefined</td>
+                        <td>valueOf</td>
+                    </tr>
+                </table>
+                <br>
+
+                <h6>Java Reserved Words</h6>
+                <li>JavaScript is often used together with Java. You should avoid using some Java objects and properties as JavaScript identifiers:</li>
+                <table class="key-dec full-width">
+                    <tr>
+                        <td>getClass</td>
+                        <td>java</td>
+                        <td>JavaArray</td>
+                        <td>JavaClass</td>
+                    </tr>
+                    <tr>
+                        <td>JavaObject</td>
+                        <td>JavaPackage</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <br>
+
+                <h6>Other Reserved Words</h6>
+                <li>JavaScript can be used as the programming language in many applications.</li>
+                <li>You should also avoid using the name of HTML and Window objects and properties:</li>
+                <table class="key-dec full-width">
+                    <tr>
+                        <td>alert</td>
+                        <td>all</td>
+                        <td>anchor</td>
+                        <td>anchors</td>
+                    </tr>
+                    <tr>
+                        <td>area</td>
+                        <td>assign</td>
+                        <td>blur</td>
+                        <td>button</td>
+                    </tr>
+                    <tr>
+                        <td>checkbox</td>
+                        <td>clearInterval</td>
+                        <td>clearTimeout</td>
+                        <td>clientInformation</td>
+                    </tr>
+                    <tr>
+                        <td>close</td>
+                        <td>closed</td>
+                        <td>confirm</td>
+                        <td>constructor</td>
+                    </tr>
+                    <tr>
+                        <td>crypto</td>
+                        <td>decodeURI</td>
+                        <td>decodeURIComponent</td>
+                        <td>defaultStatus</td>
+                    </tr>
+                    <tr>
+                        <td>document</td>
+                        <td>element</td>
+                        <td>elements</td>
+                        <td>embed</td>
+                    </tr>
+                    <tr>
+                        <td>embeds</td>
+                        <td>encodeURI</td>
+                        <td>encodeURIComponent</td>
+                        <td>escape</td>
+                    </tr>
+                    <tr>
+                        <td>event</td>
+                        <td>fileUpload</td>
+                        <td>focus</td>
+                        <td>form</td>
+                    </tr>
+                    <tr>
+                        <td>forms</td>
+                        <td>frame</td>
+                        <td>innerHeight</td>
+                        <td>innerWidth</td>
+                    </tr>
+                    <tr>
+                        <td>layer</td>
+                        <td>layers</td>
+                        <td>link</td>
+                        <td>location</td>
+                    </tr>
+                    <tr>
+                        <td>mimeTypes</td>
+                        <td>navigate</td>
+                        <td>navigator</td>
+                        <td>frames</td>
+                    </tr>
+                    <tr>
+                        <td>frameRate</td>
+                        <td>hidden</td>
+                        <td>history</td>
+                        <td>image</td>
+                    </tr>
+                    <tr>
+                        <td>images</td>
+                        <td>offscreenBuffering</td>
+                        <td>open</td>
+                        <td>opener</td>
+                    </tr>
+                    <tr>
+                        <td>option</td>
+                        <td>outerHeight</td>
+                        <td>outerWidth</td>
+                        <td>packages</td>
+                    </tr>
+                    <tr>
+                        <td>pageXOffset</td>
+                        <td>pageYOffset</td>
+                        <td>parent</td>
+                        <td>parseFloat</td>
+                    </tr>
+                    <tr>
+                        <td>parseInt</td>
+                        <td>password</td>
+                        <td>pkcs11</td>
+                        <td>plugin</td>
+                    </tr>
+                    <tr>
+                        <td>prompt</td>
+                        <td>propertyIsEnum</td>
+                        <td>radio</td>
+                        <td>reset</td>
+                    </tr>
+                    <tr>
+                        <td>screenX</td>
+                        <td>screenY</td>
+                        <td>scroll</td>
+                        <td>secure</td>
+                    </tr>
+                    <tr>
+                        <td>select</td>
+                        <td>self</td>
+                        <td>setInterval</td>
+                        <td>setTimeout</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>submit</td>
+                        <td>taint</td>
+                        <td>text</td>
+                    </tr>
+                    <tr>
+                        <td>textarea</td>
+                        <td>top</td>
+                        <td>unescape</td>
+                        <td>untaint</td>
+                    </tr>
+                    <tr>
+                        <td>window</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h6>HTML Event Handlers</h6>
+                <li>In addition you should avoid using the name of all HTML event handlers.</li>
+                <li>Examples:</li>
+                <table class="key-dec full-width">
+                    <tr>
+                        <td>onblur</td>
+                        <td>onclick</td>
+                        <td>onerror</td>
+                        <td>onfocus</td>
+                    </tr>
+                    <tr>
+                        <td>onkeydown</td>
+                        <td>onkeypress</td>
+                        <td>onkeyup</td>
+                        <td>onload</td>
+                    </tr>
+                    <tr>
+                        <td>onmousedown</td>
+                        <td>onmousemove</td>
+                        <td>onmouseout</td>
+                        <td>onmouseover</td>
+                    </tr>
+                    <tr>
+                        <td>onmouseup</td>
+                        <td>onreset</td>
+                        <td>onresize</td>
+                        <td>onselect</td>
+                    </tr>
+                    <tr>
+                        <td>onsubmit</td>
+                        <td>onunload</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
             </ul>
         </div>
         <hr>
@@ -17382,8 +17923,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </div>
                 <li>The example above creates a class named "Car".</li>
                 <li>The class has one initial properties, <code>brand</code>.</li>
-                <li style="background-color: #f3ffc0!important; margin-top: 6px; display: inline-block;">A JavaScript class is <b>not</b> an object.</li>
-                <li style="background-color: #f3ffc0!important; margin-bottom: 6px; display: inline-block;">It is a <b>template</b> for JavaScript objects.</li>
+                <li class="tip" style="margin-top: 6px;">A JavaScript class is <b>not</b> an object.</li>
+                <li class="tip" style="margin-bottom: 6px;">It is a <b>template</b> for JavaScript objects.</li>
 
                 <h6>Using a Class</h6>
                 <li>When you have a class, you can use the class to create objects:</li>
@@ -17553,7 +18094,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 </ul>
 
                 <h6>JSON Data - A name and a Value</h6>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">JSON names require double quotes.</li>
+                <li class="tip">JSON names require double quotes.</li>
                 <li>JSON data is written as name/value pairs:</li>
                 <div class="block-outer">
                     <div class="block-cont">
@@ -17819,7 +18360,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p id="demoa310" class="result"><span></span> </p>
                 </div>
                 <br>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">Make sure the text is in JSON format, or else you will get a syntax error.</li>
+                <li class="tip">Make sure the text is in JSON format, or else you will get a syntax error.</li>
                 
                 <h6>Array as JSON</h6>
                 <li>When using the <code>JSON.parse()</code> on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object.</li>
@@ -17886,7 +18427,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa313" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #FFC0C7!important; display: inline-block;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
+                <li class="warn">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
                 <br>
 
                 <h5>JSON Stringify</h5>
@@ -18007,7 +18548,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa319" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #FFC0C7!important; display: inline-block;">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
+                <li class="warn">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <code>eval()</code> to convert them back into functions.</li>
                 <br>
 
                 <h5>JSON Object Literals</h5>
@@ -18031,8 +18572,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">It is important to note that JSON object literal is not an object, as JSON is a string format.</li>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">The JSON object literal can be converted into a JavaScript object with <code>JSON.parse()</code>.</li>
+                <li class="tip">It is important to note that JSON object literal is not an object, as JSON is a string format.</li>
+                <li class="tip">The JSON object literal can be converted into a JavaScript object with <code>JSON.parse()</code>.</li>
                 <br>
                 <div class="block-outer" data-result-id="demoa320" data-result-function="complex244">
                     <div class="block-cont">
@@ -18054,7 +18595,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa320" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">Other object operation is the same as in <a href="#subsec46" onclick="openSection('subsec46'); openSection('section4')" class="hreflink">JavaScript Objects</a> section after parsing the JSON Object literals into a JavaScript Object.</li>
+                <li class="tip">Other object operation is the same as in <a href="#subsec46" onclick="openSection('subsec46'); openSection('section4')" class="hreflink">JavaScript Objects</a> section after parsing the JSON Object literals into a JavaScript Object.</li>
                 <br>
 
                 <h5>JSON Array Literals</h5>
@@ -18077,8 +18618,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">It is important to note that JSON array literal is not an array, as JSON is a string format.</li>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">The JSON array literal can be converted into a JavaScript array with <code>JSON.parse()</code>.</li>
+                <li class="tip">It is important to note that JSON array literal is not an array, as JSON is a string format.</li>
+                <li class="tip">The JSON array literal can be converted into a JavaScript array with <code>JSON.parse()</code>.</li>
                 <br>
                 <div class="block-outer" data-result-id="demoa321" data-result-function="complex245">
                     <div class="block-cont">
@@ -18100,7 +18641,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa321" class="result"><span></span> </p>
                 </div>
-                <li style="background-color: #f3ffc0!important; display: inline-block;">Other array operation is the same as in <a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')" class="hreflink">JavaScript Arrays</a> section after parsing the JSON Array literals into a JavaScript Array.</li>
+                <li class="tip">Other array operation is the same as in <a href="#subsec410" onclick="openSection('subsec410'); openSection('section4')" class="hreflink">JavaScript Arrays</a> section after parsing the JSON Array literals into a JavaScript Array.</li>
                 <br>
                 <div style="display: flex; flex-direction: row;">
                     <div class="custom-form-container">
@@ -18263,7 +18804,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <br>
 
                 <h5>Style Guide</h5>
-                <li style="background-color: #FFC0C7!important; display: inline-block;">Always use the same coding conventions for all your JavaScript projects.</li>
+                <li class="warn">Always use the same coding conventions for all your JavaScript projects.</li>
                 <li>Coding conventions are <b>styl guidelines for programming.</b> This typically cover:</li>
                 <ul>
                     <li>Naming and declaration rules for variables and functions.</li>
@@ -18439,7 +18980,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <h6>Avoid Global Variables</h6>
                         <li>Minimize the use of global variable. This includes all data types, objects, and functions.</li>
                         <li>Global variables can be overwritten by other scripts, and thus cause bugs.</li>
-                        <li style="background-color: #f3ffc0!important; display: inline-block;">Use local variables instead.</li>
+                        <li class="tip">Use local variables instead.</li>
                         <div class="block-outer" data-result-id="demoa325" data-result-function="complex249">
                             <div class="block-cont">
                                 <div class="block-bl">
@@ -18467,7 +19008,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div id="example4249" style="display: none;">
                         <h6>Always Declare Local Variables</h6>
                         <li>Always declare new local variables with the <code>var</code>, <code>let</code>, or <code>const</code> keyword, otherwise they will become global variables.</li>
-                        <li style="background-color: #f3ffc0!important; display: inline-block;">Strict mode does not allow undeclared variables.</li>
+                        <li class="tip">Strict mode does not allow undeclared variables.</li>
                     </div>
 
                     <div id="example4250" style="display: none;">
@@ -18627,7 +19168,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p id="demoa327" class="result"><span></span> </p>
                         </div>
                         <br>
-                        <li style="background-color: #f3ffc0!important; display: inline-block;">Beware that number can accidentally be converted to strings or <code>NaN</code> (Not a Number).</li>
+                        <li class="tip">Beware that number can accidentally be converted to strings or <code>NaN</code> (Not a Number).</li>
                     </div>
 
                     <div id="example4256" style="display: none;">
@@ -18850,7 +19391,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             </div>
                         </div>
                         <br>
-                        <li style="background-color: #f3ffc0!important; display: inline-block;">The assignment operator (<code>=</code>) returns the value that was assigned.</li>
+                        <li class="tip">The assignment operator (<code>=</code>) returns the value that was assigned.</li>
                     </div>
 
                     <div id="example4268" style="display: none;">
@@ -19153,8 +19694,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                 </div>
                             </div>
                         </div>
-                        <li style="background-color: #f3ffc0!important; display: inline-block;">Trailing commas are not allowed in Internet Explorer 8, and it will crash.</li>
-                        <li style="background-color: #f3ffc0!important; display: inline-block;">JSON also does not allow trailing commas.</li>
+                        <li class="tip">Trailing commas are not allowed in Internet Explorer 8, and it will crash.</li>
+                        <li class="tip">JSON also does not allow trailing commas.</li>
                     </div>
 
                     <div id="example4276" style="display: none;">
@@ -19281,7 +19822,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <h6>Delay JavaScript Loading</h6>
                         <li>Putting your scripts at the bottom of the page body lets the browser load the page first.</li>
                         <li>While a script is downloading, the browser will not start any other downloads. In addition all parsing and rendering activity might be blocked.</li>
-                        <li style="background-color: #f3ffc0!important; display: inline-block;">The HTTP specification defines that browsers should not download more than two components in parallel.</li>
+                        <li class="tip">The HTTP specification defines that browsers should not download more than two components in parallel.</li>
                         <li>An alternative is to use <code>defer="true"</code> in the script tag.</li>
                         <li>The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for external scripts.</li>
                         <li>If possible, you can add your script to the page by code, after the page has loaded:</li>
@@ -19294,7 +19835,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">element</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">createElement</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"script"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">element</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">src</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"myScript.js"</span><span class="jssemicoloncolor">;</span></p>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">body</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">appendChild</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">element</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
-                                    <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jsbracketcolor">}</span><span class="jssemicoloncol`or">;</span></p>
                                     <p><span class="htmltagcolor">&lt;/script&gt;</span></p>
                                 </div>
                             </div>
@@ -19306,7 +19847,6 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <li>Avoid using the <code>with</code> keyword. It has a negative effect on speed. It also clutters up JavaScript scopes.</li>
                         <li>The with keyword is not allowed in strict mode.</li>
                     </div>
-
                 </div>
 
             </ul>

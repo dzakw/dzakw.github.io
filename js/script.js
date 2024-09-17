@@ -3219,3 +3219,45 @@ function complex260() {
     
     return "person.length: " + person.length + "<br>person[0]: " + person[0];
 }
+
+function complex261() {
+    // Create Target Object
+    const person1 = {
+        firstName: "Max",
+        lastName: "Verstappen",
+        age: 26,
+        eyeColor: "blue"
+    };
+    
+    // Create Source Object
+    const person2 = {firstName: "Sally"};
+    
+    // Assign Source to Target
+    Object.assign(person1, person2);
+
+    return "person1.name: " + person1.firstName + " " + person1.lastName + "<br>person1.age: " + person1.age + "<br>person1.eyeColor: " + person1.eyeColor;
+}
+
+function complex262() {
+    // Create an Object:
+    const person = {
+        firstName: "Max",
+        lastName: "Verstappen"
+    };
+    
+    // Create new Object
+    const man = Object.create(person);
+    man.firstName = "Peter";
+
+    return "man.name: " + man.firstName + " " + man.lastName;
+}
+
+function complex263() {
+    // Create an Array:
+    const arr = [['firstName', 'Max'], ['lastName', 'Verstappen']];
+
+    // Create an Object:
+    const person = Object.fromEntries(arr);
+
+    return "person.name: " + person.firstName + " " + person.lastName;
+}

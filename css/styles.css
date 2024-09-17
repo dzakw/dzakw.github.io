@@ -845,6 +845,10 @@ mark {
   border-collapse: collapse;
 }
 
+.full-width {
+  width: 100%;
+}
+
 .key-dec th {
   background-color: #171717;
   color: gainsboro;
@@ -1043,6 +1047,18 @@ mark {
   color: red;
   font-size: 12px;
   display: none;
+}
+
+.tip {
+  background-color: #f3ffc0!important;
+  display: inline-block;
+  padding: 6px;
+}
+
+.warn {
+  background-color: #ffc0c7!important;
+  display: inline-block;
+  padding: 6px;
 }
 
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
