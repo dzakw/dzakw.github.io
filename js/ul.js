@@ -381,6 +381,21 @@ function generateList25() {
     });
 }
 
+function generateList26() {
+    const methods = [
+        "Using const", "JavaScript <code>Object.preventExtensions()</code>", "JavaScript <code>Object.isExtensible()</code>", "JavaScript <code>Object.seal()</code>",
+        "JavaScript <code>Object.isSealed()</code>", "JavaScript <code>Object.freeze()</code>", "JavaScript <code>Object.isFrozen()</code>"
+    ];
+
+    const ul = document.getElementById('threeColumn25');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 289}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;

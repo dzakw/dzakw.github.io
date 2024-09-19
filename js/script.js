@@ -3261,3 +3261,172 @@ function complex263() {
 
     return "person.name: " + person.firstName + " " + person.lastName;
 }
+
+function complex264() {
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen',
+        language: 'de',
+        get lang() {
+            return this.language;
+        }
+    };
+    return person.lang;
+}
+
+function complex265() {
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen',
+        language: '',
+        set lang(lang) {
+            this.language = lang;
+        }
+    };
+
+    person.lang = 'de';
+    return person.language;
+}
+
+function complex266() {
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen',
+        language: 'de',
+        get lang() {
+            return this.language.toUpperCase();
+        }
+    };
+
+    return person.lang;
+}
+
+function complex267() {
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen',
+        language: '',
+        set lang(lang) {
+            this.language = lang.toUpperCase();
+        }
+    };
+
+    person.lang = 'de';
+    return person.language;
+}
+
+function complex268() {
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen'
+    };
+    
+    Object.preventExtensions(person);
+
+    try {
+        person.age = 26;
+
+        if (!person.hasOwnProperty('age')) {
+            return "Error: Failed to add 'age' property: object is not extensible.";
+        }
+    } catch (error) {
+        return `Error: ${error.message}`;
+    }
+
+    return person.age;
+}
+
+function complex269() {
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen'
+    };
+
+    Object.preventExtensions(person);
+    let x = Object.isExtensible(person);
+    return x;
+}
+
+function complex270() {
+    "use strict"
+    // Create Object
+    const person = {
+        firstName: "Max",
+        lastName: "Verstappen",
+        age: 26,
+        eyeColor: "blue"
+    };
+
+    // Seal Object
+    Object.seal(person)
+
+    let text = "";
+    try {
+      delete person.age;
+      text = Object.values(person);
+    }
+    catch (err) {
+      text = err;
+    }
+
+    return text;
+}
+
+function complex271() {
+    "use strict"
+    // Create Object
+    const person = {
+        firstName: "Max",
+        lastName: "Verstappen",
+        age: 26,
+        eyeColor: "blue"
+    };
+
+    // Seal Object
+    Object.seal(person);
+
+    let text = Object.isSealed(person);
+    return text;
+}
+
+function complex272() {
+    'use strict'
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen',
+        age: 26,
+        eyeColor: 'blue'
+    };
+
+    Object.freeze(person)
+    let text = "";
+    try {
+      person.age = 27;
+      text = Object.values(person);
+    }
+    catch (err) {
+      text = err;
+    }
+
+    return text;
+}
+
+function complex273() {
+    'use strict'
+    const person = {
+        firstName: 'Max',
+        lastName: 'Verstappen',
+        age: 26,
+        eyeColor: 'blue'
+    };
+
+    Object.freeze(person);
+    let x = Object.isFrozen(person);
+    return x;
+}
+
+function complex274() {
+    const x = function (a, b) {return a * b};
+    let z = x(4, 3);
+    return z;
+}

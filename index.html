@@ -5782,6 +5782,89 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
+                <li>A JavaScript function can also be defined using an <b>expression</b></li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <i> x<span class="jsoperatorcolor"> = </span><span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></i></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">b</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>After a function expression stored in a variable, the variable then can be used as a function like this:</li>
+                <div class="block-outer" data-result-id="demoa361" data-result-function="complex274">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">function</span> <span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">b</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">z</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">3</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jsvariablecolor">z</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa361" class="result"><span></span> </p>
+                </div>
+                <li class="tip">The function above is actually an anonymous function (a function without a name).</li>
+                <li class="tip">Functions stored in variables do not need function names. They are always invoked (called) using the variable name.</li>
+
+                <h5>Function Constructor</h5>
+                <li>It is also possible to use the <code>Function</code> constructor to create a function like this:</li>
+                <div class="block-outer" data-result-id="demoa362" data-result-function="complex274">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myFunction</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Function</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'a'</span>, <span class="jsstringcolor">'b'</span>, <span class="jsstringcolor">'return a * b'</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">3</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa362" class="result"><span></span> </p>
+                </div>
+                <li class="tip">To be noted; the usage of <code>new</code> should be avoided most of the time. For this case, using new simply the same as writing like this:</li>
+                <div class="block-outer" data-result-id="demoa363" data-result-function="complex275">
+                    <div class="block-cont">
+                        <div class="block-bl">
+
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa363" class="result"><span></span> </p>
+                </div>
+                <li><b>Hoisting</b> also applies for function declarations.</li>
+                <li>Function declarations are hoisted to the top of the file, so it can be called before it is declared.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">y</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">y</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                    </div>
+                </div>
+
                 <li>JavaScript function is defined with the <code>function</code> keyword, followed by a name, followed by parentheses <code>()</code>.</li>
                 <li>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables)</li>
                 <li>The parentheses may include parameter names separated by commas</li>
@@ -5970,6 +6053,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p>JavaScript object can be defined through <b>object literal</b>, using the <b><code>new</code> keyword</b>, or using an <b>object constructor</b></p>
                 </blockquote>
 
+                <h5>Object Declaration</h5>
                 <ul class="threeColumn" id="threeColumn24">
                 </ul>
 
@@ -6210,9 +6294,377 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <li>An object</li>
                         </ul>
                     </div>
-
-                    <hr>
                 </div>
+                <hr>
+
+                <h5>JavaScript Accessors (Getters and Setters)</h5>
+                <li>Getters and setters allow you to define Object Accessors (Computed Properties).</li>
+
+                <h6>Getters</h6>
+                <li>Getters are used to get the value of an object's property.</li>
+                <li>This example uses a <code>lang</code> property to <code>get</code> the value of the <code>language</code> property.</li>
+                <div class="block-outer" data-result-id="demoa351" data-result-function="complex264">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Create an object:</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">language</span>: <span class="jsstringcolor">'de'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">get</span> <span class="jsvariablecolor">lang</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">language</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Display data from the object using a getter:</span></p>
+                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lang</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa351" class="result"><span></span> </p>
+                </div>
+
+                <h6>Setters</h6>
+                <li>Setters are used to set the value of an object's property.</li>
+                <li>This example uses a <code>lang</code> property to <code>set</code> the value of the <code>language</code> property.</li>
+                <div class="block-outer" data-result-id="demoa352" data-result-function="complex265">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Create an object:</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">language</span>: <span class="jsstringcolor">''</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">set</span> <span class="jsvariablecolor">lang</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">lang</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">language</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">lang</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Set an object property using a setter:</span></p>
+                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lang</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'de'</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Display data from the object:</span></p>
+                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">language</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa352" class="result"><span></span> </p>
+                </div>
+
+                <h5>Getters and Setters Data Quality</h5>
+                <li>Getters and setters can ensure better data quality:</li>
+                <li>Using the <code>lang</code> property, in this example, returns the value of the <code>language</code> property in upper case:</li>
+                <div class="block-outer" data-result-id="demoa353" data-result-function="complex266">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Create an object:</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">language</span>: <span class="jsstringcolor">'de'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">get</span> <span class="jsvariablecolor">lang</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">language</span>.<span class="jsfunctioncolor">toUpperCase</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Display data from the object using a getter:</span></p>
+                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lang</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa353" class="result"><span></span> </p>
+                </div>
+                <li>Using the <code>lang</code> property, in this example, stores an upper case value in the <code>language</code> property:</li>
+                <div class="block-outer" data-result-id="demoa354" data-result-function="complex267">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// Create an object:</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">language</span>: <span class="jsstringcolor">''</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">set</span> <span class="jsvariablecolor">lang</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">lang</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">this</span>.<span class="jsvariablecolor">language</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">lang</span>.<span class="jsfunctioncolor">toUpperCase</span><span class="jsbracketcolor">()</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Set an object property using a setter:</span></p>
+                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">lang</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'de'</span><span class="jsoperatorcolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// Display data from the object:</span></p>
+                            <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">language</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa354" class="result"><span></span> </p>
+                </div>
+
+                <blockquote>
+                    <h6>Why Using Getters and Setters?</h6>
+                    <ul>
+                        <li>It gives simpler syntax</li>
+                        <li>It allows equal syntax for properties and methods</li>
+                        <li>It can secure better data quality</li>
+                        <li>It is useful for doing things behind-the-scenes</li>
+                    </ul>
+                    <br>
+                </blockquote>
+
+                <h5>Object Protection Methods</h5>
+                <li>There are several methods to protect objects from being modified</li>
+                <li>And since array is an object, these methods can also be used to protect arrays</li>
+                <ul class="threeColumn" id="threeColumn25"></ul>
+
+                <div>
+                    <div id="example4289" style="display: none;">
+                        <h5>Using <code>const</code></h5>
+                        <li>The most common way to protect an object from being changed is by using the <code>const</code> keyword.</li>
+                        <li>With <code>const</code> you can not re-assign the object, but you can still change the value of a property, delete a property or create a new property.</li>
+                    </div>
+
+                    <div id="example4290" style="display: none;">
+                        <h5>Using JavaScript <code>Object.preventExtensions()</code></h5>
+                        <li>The <code>Object.preventExtensions()</code> method prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).</li>
+                        <div class="block-outer" data-result-id="demoa355" data-result-function="complex268">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an object:</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Prevent new properties from being added to the object:</span></p>
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">preventExtensions</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Add a new property to the object:</span></p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">26</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa355" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4291" style="display: none;">
+                        <h5>JavaScript <code>Object.isExtensible()</code></h5>
+                        <li>The <code>Object.isExtensible()</code> method determines if an object is extensible (i.e. if new properties can be added to it).</li>
+                        <li>The <code>Object.isExtensible()</code> returns true if an object is extensible.</li>
+                        <div class="block-outer" data-result-id="demoa356" data-result-function="complex269">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="commentcolor">// Create an object:</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Prevent new properties from being added to the object:</span></p>
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">preventExtensions</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Check if the object is extensible:</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">isExtensible</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">x</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa356" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4292" style="display: none;">
+                        <h5>Using JavaScript <code>Object.seal()</code></h5>
+                        <li>The <code>Object.seal()</code> method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable.</li>
+                        <blockquote>
+                            <h6>Note</h6>
+                            <p>The <code>Object.seal()</code> method will fail silently in non-strict mode and throw a TypeError in strict mode.</p>
+                        </blockquote>
+                        <div class="block-outer" data-result-id="demoa357" data-result-function="complex270">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">'use strict'</span></p>
+                                    <p><span class="commentcolor">// Create Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">26</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Seal Object</span></p>
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">seal</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// This will throw an error</span></p>
+                                    <p><span class="jskeywordcolor">delete</span> <span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa357" class="result"><span></span> </p>
+                        </div>
+                    </div>
+                    
+                    <div id="example4293" style="display: none;">
+                        <h5>JavaScript <code>Object.isSealed()</code></h5>
+                        <li>The <code>Object.isSealed()</code> method determines if an object is sealed.</li>
+                        <li>The <code>Object.isSealed()</code> returns true if an object is sealed.</li>
+                        <div class="block-outer" data-result-id="demoa358" data-result-function="complex271">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">'use strict'</span></p>
+                                    <p><span class="commentcolor">// Create Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">26</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Seal Object</span></p>
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">seal</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Check if the object is sealed:</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">isSealed</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">x</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa358" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4294" style="display: none;">
+                        <h5>Using JavaScript <code>Object.freeze()</code></h5>
+                        <li>The <code>Object.freeze()</code> method freezes an object.</li>
+                        <li>A frozen object are read-only. No modification, addition or deletion of properties are allowed.</li>
+                        <blockquote>
+                            <h6>Note</h6>
+                            <p>The <code>Object.freeze()</code> method will fail silently in non-strict mode and throw a TypeError in strict mode.</p>
+                        </blockquote>
+                        <div class="block-outer" data-result-id="demoa359" data-result-function="complex272">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">'use strict'</span></p>
+                                    <p><span class="commentcolor">// Create Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">26</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Freeze Object</span></p>
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">freeze</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// This will throw an error</span></p>
+                                    <p><span class="jsvariablecolor">person</span>.<span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">27</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa359" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4295" style="display: none;">
+                        <h5>JavaScript <code>Object.isFrozen()</code></h5>
+                        <li>The <code>Object.isFrozen()</code> method determines if an object is frozen.</li>
+                        <li>The <code>Object.isFrozen()</code> returns true if an object is frozen.</li>
+                        <div class="block-outer" data-result-id="demoa360" data-result-function="complex273">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p><span class="jsstringcolor">'use strict'</span></p>
+                                    <p><span class="commentcolor">// Create Object</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span>: <span class="jsstringcolor">'Max'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span>: <span class="jsstringcolor">'Verstappen'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">age</span>: <span class="jsnumbercolor">26</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">eyeColor</span>: <span class="jsstringcolor">'blue'</span></p>
+                                    <p><span class="jsbracketcolor">};</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Freeze Object</span></p>
+                                    <p><span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">freeze</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span></p>
+                                    <br>
+                                    <p><span class="commentcolor">// Check if the object is frozen:</span></p>
+                                    <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">Object</span>.<span class="jsfunctioncolor">isFrozen</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                                    <p><span class="jsvariablecolor">x</span><span class="jsoperatorcolor">;</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa360" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
 
                 <h5>Property Default Values</h5>
                 <li>A <b>value</b> given to a property will be a <b>default value</b> for all objects created by the constructor:</li>
