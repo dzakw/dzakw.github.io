@@ -5836,10 +5836,13 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p id="demoa362" class="result"><span></span> </p>
                 </div>
                 <li class="tip">To be noted; the usage of <code>new</code> should be avoided most of the time. For this case, using new simply the same as writing like this:</li>
-                <div class="block-outer" data-result-id="demoa363" data-result-function="complex275">
+                <div class="block-outer" data-result-id="demoa363" data-result-function="complex274">
                     <div class="block-cont">
                         <div class="block-bl">
-
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myFunction</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">b</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">3</span><span class="jsbracketcolor">);</span></p>
                         </div>
                         <div class="block-btn-cont">
                             <div class="block-run">
@@ -5864,6 +5867,185 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                 </div>
+
+                <h5>Functions are Objects</h5>
+                <li>JavaScript functions are a special type of objects, called function objects.</li>
+                <li>JavaScript functions have both properties and methods.</li>
+                <li>Since functions are objects, they can be stored in variables, passed as arguments, and returned from other functions.</li>
+                <li>Below example shows how the <code>arguments.length</code> <b>property</b> can be used to return the number of arguments received by the function:</li>
+                <div class="block-outer" data-result-id="demoa364" data-result-function="complex275">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">arguments</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">length</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">3</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa364" class="result"><span></span> </p>
+                </div>
+                <li>Other example is the use of <code>toString()</code> <b>method</b> returns the function as as string:</li>
+                <div class="block-outer" data-result-id="demoa365" data-result-function="complex276">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">b</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">text</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">myFunction</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">toString</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa365" class="result"><span></span> </p>
+                </div>
+
+                <h4>Function Parameters</h4>
+                <li>A JavaScript <code>function</code> does not perform any checking on parameter values (arguments).</li>
+                <h5>Parameter Rules</h5>
+                <li>JavaScript function definitions do not specify data types for parameters.</li>
+                <li>JavaScript functions do not perform type checking on the passed arguments.</li>
+                <li>JavaScript functions do not check the number of arguments received.</li>
+                <li>If a function is called with missing arguments (less than declared), the missing values are set to: <code>undefined</code></li>
+                <li>Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter:</li>
+                <div class="block-outer" data-result-id="demoa366" data-result-function="complex277">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x, y</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">===</span> <span class="jskeywordcolor">undefined</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">2</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">X</span> <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">y</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa366" class="result"><span></span> </p>
+                </div>
+                <li>It is also possible to set a default values into a function parameters like this:</li>
+                <div class="block-outer" data-result-id="demoa367" data-result-function="complex278">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span>, <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">10</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">y</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa367" class="result"><span></span> </p>
+                </div>
+
+                <h6>Function Rest Parameter</h6>
+                <li>The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.</li>
+                <li>Below is an example of using rest parameter:</li>
+                <div class="block-outer" data-result-id="demoa368" data-result-function="complex279">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">sum</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">...</span><span class="jsvariablecolor">args</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">sum</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">for</span> <span class="jsvariablecolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">arg</span> <span class="jskeywordcolor">of</span> <span class="jsvariablecolor">args</span><span class="jsvariablecolor">)</span> <span class="jsvariablecolor">sum</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">arg</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">sum</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">sum</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">9</span>, <span class="jsnumbercolor">16</span>, <span class="jsnumbercolor">25</span>, <span class="jsnumbercolor">29</span>, <span class="jsnumbercolor">100</span>, <span class="jsnumbercolor">66</span>, <span class="jsnumbercolor">77</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa368" class="result"><span></span> </p>
+                </div>
+
+                <h6>Arguments Object</h6>
+                <li>JavaScript functions have a built-in object called the arguments object.</li>
+                <li>The argument object contains an array of the arguments used when the function was called (invoked).</li>
+                <li>This way you can simply use a function to find (for instance) the highest value in a list of numbers:</li>
+                <div class="block-outer" data-result-id="demoa369" data-result-function="complex280">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">findMax</span><span class="jsbracketcolor">() {</span>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">max</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">-Infinity</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">for</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsvariablecolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">arguments</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">length</span><span class="jsvariablecolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">arguments</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span> <span class="jsoperatorcolor">&gt;</span> <span class="jsvariablecolor">max</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">max</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">arguments</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">max</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">findMax</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span>, <span class="jsnumbercolor">123</span>, <span class="jsnumbercolor">500</span>, <span class="jsnumbercolor">115</span>, <span class="jsnumbercolor">44</span>, <span class="jsnumbercolor">88</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jsvariablecolor">x</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa369" class="result"><span></span> </p>
+                </div>
+                <li>Or create a function to sum all input values:</li>
+                <div class="block-outer" data-result-id="demoa370" data-result-function="complex281">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">sumAll</span><span class="jsbracketcolor">() {</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">sum</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">for</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jsvariablecolor">;</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">arguments</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">length</span><span class="jsvariablecolor">;</span> <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">sum</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">arguments</span><span class="jsbracketcolor">[</span><span class="jsvariablecolor">i</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">sum</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">sumAll</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">1</span>, <span class="jsnumbercolor">123</span>, <span class="jsnumbercolor">500</span>, <span class="jsnumbercolor">115</span>, <span class="jsnumbercolor">44</span>, <span class="jsnumbercolor">88</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jsvariablecolor">x</span><span class="jsoperatorcolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa370" class="result"><span></span> </p>
+                </div>
+                <div id="chart1"></div>
 
                 <li>JavaScript function is defined with the <code>function</code> keyword, followed by a name, followed by parentheses <code>()</code>.</li>
                 <li>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables)</li>
@@ -17348,7 +17530,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <div class="block-cont">
                                 <div class="block-bl">
                                     <p><span class="jsstringcolor">"use strict";</span></p>
-                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jskeywordcolor">get</span> <span class="jsvariablecolor">x</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span><span class="jskeywordcolor">return</span> <span class="jsnumbercolor">0</span><span class="jsbracketcolor>}</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">obj</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span><span class="jskeywordcolor">get</span> <span class="jsvariablecolor">x</span><span class="jsbracketcolor">()</span> <span class="jsbracketcolor">{</span><span class="jskeywordcolor">return</span> <span class="jsnumbercolor">0</span><span class="jsbracketcolor">}</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
                                     <br>
                                     <p><span class="jsvariablecolor">obj</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">3.14</span><span class="jssemicoloncolor">;</span></p>
                                 </div>
@@ -19390,7 +19572,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <div class="block-outer">
                             <div class="block-cont">
                                 <div class="block-bl">
-                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor>{</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"firstName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"John"</span><span class="jscomma">,</span></p>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"lastName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Doe"</span><span class="jscomma">,</span></p>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span></p>
@@ -19403,7 +19585,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <div class="block-outer">
                             <div class="block-cont">
                                 <div class="block-bl">
-                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor>{</span> <span class="jsstringcolor">"firstName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"lastName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Doe"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                                    <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span> <span class="jsstringcolor">"firstName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"John"</span><span class="jscomma">,</span> <span class="jsstringcolor">"lastName"</span><span class="jsoperatorcolor">:</span> <span class="jsstringcolor">"Doe"</span><span class="jscomma">,</span> <span class="jsstringcolor">"age"</span><span class="jsoperatorcolor">:</span> <span class="jsnumbercolor">50</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
                                 </div>
                             </div>
                         </div>
@@ -20310,5 +20492,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
     <script src="js/script.js"></script>
     <script src="js/ul.js"></script> <!-- This is how to link external JavaScript file -->
+    <script src="d3.v7.js"></script>
+    <script src="js/d3js.js"></script>
 </body>
 </html>

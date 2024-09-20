@@ -3430,3 +3430,75 @@ function complex274() {
     let z = x(4, 3);
     return z;
 }
+
+function complex275() {
+    function myFunction(a, b) {
+        return arguments.length;
+    }
+    return myFunction(4, 3);
+}
+
+function complex276() {
+    function myFunction(a, b) {
+        return a * b;
+    }
+      
+    let text = myFunction.toString();
+    return text;
+}
+
+function complex277() {
+    function myFunction(x, y) {
+        if (y === undefined) {
+          y = 2;
+        }
+        return x * y;
+    }
+    return myFunction(4);
+}
+
+function complex278() {
+    function myFunction(x, y = 10) {
+        return x + y;
+    }
+    return myFunction(5);
+}
+
+function complex279() {
+    function sum(...args) {
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+      }
+      
+      let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+      return x;
+}
+
+function complex280() {
+    function findMax() {
+        let max = -Infinity;
+        for (let i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+
+    let x = findMax(1, 123, 500, 115, 44, 88);
+    return x;
+}
+
+function complex281() {
+    function sumAll() {
+        let sum = 0;
+        for(let i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+    
+    let x = sumAll(1, 123, 500, 115, 44, 88);
+    return x;
+}
