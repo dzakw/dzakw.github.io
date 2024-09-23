@@ -83,7 +83,8 @@
                     <li><a href="#subsec420" onclick="openSection('subsec420'); openSection('section4')">JavaScript this Keyword & Arrow Function</a></li>
                     <li><a href="#subsec421" onclick="openSection('subsec421'); openSection('section4')">JavaScript Class & Modules</a></li>
                     <li><a href="#subsec422" onclick="openSection('subsec422'); openSection('section4')">JSON</a></li>
-                    <li><a href="#subsec423" onclick="openSection('subsec423'); openSection('section4')">JS Debugging, Style Guide, and Best Practices</a></li>
+                    <li><a href="#subsec423" onclick="openSection('subsec423'); openSection('section4')">Debugging, Style Guide, and Best Practices</a></li>
+                    <li><a href="#subsec424" onclick="openSection('subsec424'); openSection('section4')">JavaScript Async and HTML DOM</a></li>
                 </ul>
             </ul>
         </div>
@@ -6062,6 +6063,252 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <li>When it is invoked (called) from JavaScript code</li>
                     <li>Automatically (self invoked)</li>
                 </ul>
+
+                <h4>Function call()</h4>
+                <li>You can use the <code>call()</code> method to call a function with a given <code>this</code> value and arguments provided individually.</li>
+                <div class="block-outer" data-result-id="demoa371" data-result-function="complex282">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person1</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Max"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Verstappen"</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person2</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Mary"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Verstappen"</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jscommentcolor">// This will return "Max Verstappen":</span></p>
+                            <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person1</span><span class="jsbracketcolor">);</span></p>
+                            <br>
+                            <p><span class="jscommentcolor">// This will return "Mary Verstappen"</span></p>
+                            <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person2</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa371" class="result"><span></span> </p>
+                </div>
+                <h5>The call() Method with Arguments</h5>
+                <li>The <code>call()</code> method can accept arguments:</li>
+                <div class="block-outer" data-result-id="demoa372" data-result-function="complex283">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">city</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">country</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">','</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">city</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">','</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">country</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person1</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Doe"</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">call</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person1</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Oslo"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Norway"</span><span class="jsbracketcolor">);</span>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa372" class="result"><span></span> </p>
+                </div>
+
+                <h5>The apply() Method</h5>
+                <li>The <code>apply()</code> method is similar to the <code>call()</code> method (above).</li>
+                <li>In this example, the <code>apply()</code> method accepts arguments as an array:</li>
+                <div class="block-outer" data-result-id="demoa373" data-result-function="complex284">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">city</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">country</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">','</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">city</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">','</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">country</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person1</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Doe"</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">apply</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person1</span><span class="jsoperatorcolor">,</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Oslo"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Norway"</span><span class="jsbracketcolor">]);</span>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa373" class="result"><span></span> </p>
+                </div>
+                <li>The difference between <code>call()</code> and <code>apply()</code> is:</li>
+                <ul>
+                    <li>The <code>call()</code> method takes arguments separately.</li>
+                    <li>The <code>apply()</code> method takes arguments as an array.</li>
+                </ul>
+                <h5>The apply() Method with Arguments</h5>
+                <li>The <code>apply()</code> method accept arguments as an array:</li>
+                <div class="block-outer" data-result-id="demoa374" data-result-function="complex284">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">city</span><span class="jsoperatorcolor">,</span> <span class="jsvariablecolor">country</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">lastName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">','</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">city</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">','</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">country</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person1</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Doe"</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">apply</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person1</span><span class="jsoperatorcolor">,</span> <span class="jsbracketcolor">[</span><span class="jsstringcolor">"Oslo"</span><span class="jsoperatorcolor">,</span> <span class="jsstringcolor">"Norway"</span><span class="jsbracketcolor">]);</span>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa374" class="result"><span></span> </p>
+                </div>
+
+                <h5>The bind() Method</h5>
+                <li>With the <code>bind()</code> method, an object can borrow a method from another object.</li>
+                <li>The example below creates 2 objects (person and member). The member object borrows the fullname method from the person object:</li>
+                <div class="block-outer" data-result-id="demoa375" data-result-function="complex285">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Doe"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">fullName</span><span class="jsoperatorcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">member</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Nate"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Higgers"</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">fullName</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">bind</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">member</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jsfunctioncolor">fullname</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa375" class="result"><span></span> </p>
+                </div>
+                <li>Sometimes the bind() method has to be used to prevent losing <b>this</b>.</li>
+                <li>In the following example, the person object has a display method. In the display method, <b>this</b> refers to the person object:</li>
+                <div class="block-outer" data-result-id="demoa376" data-result-function="complex286">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">person</span> <span class="jsoperatorcolor">=</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">firstName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"John"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Doe"</span><span class="jsoperatorcolor">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">display</span><span class="jsoperatorcolor">:</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">);</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">x</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">firstName</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">' '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">x</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">innerHTML</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">display</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">);</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa376" class="result"><span></span> </p>
+                </div>
+
+                <h4>What is <b>this</b>?</h4>
+                <li>In JavaScript, the <code>this</code> keyword refers to an object.</li>
+                <li>The <code>this</code> keyword refers to different objects depending on how it is used:</li>
+                <table class="key-dec">
+                    <tr>
+                        <td>In an object method, <code>this</code> refers to the object.</td>
+                    </tr>
+                    <tr>
+                        <td>Alone, <code>this</code> refers to the global object.</td>
+                    </tr>
+                    <tr>
+                        <td>In a function, in strict mode, <code>this</code> is <code>undefined</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>In an event, <code>this</code> refers to the element that received the event.</td>
+                    </tr>
+                    <tr>
+                        <td>Methods like <code>call()</code>, and <code>apply()</code> can refer <code>this</code> to any object.</td>
+                    </tr>
+                </table>
+
+                <h4>JavaScript Closures</h4>
+                <li>JavaScript variables can belong to the local or global scope. Global variables can be made local (private) with closures.</li>
+                <li>A closure is a function having access to the parent scope, even after the parent function has closed.</li>
+                <li>A closure is created when an inner function is made accessible from an outer function.</li>
+                <li>To use a closure, define a function inside another function and expose it.</li>
+                <div class="block-outer" data-result-id="demoa377" data-result-function="complex287">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">a</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsfunctioncolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">b</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">a</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">b</span><span class="jsoperatorcolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span><span class="jsoperatorcolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">add5</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsbracketcolor">);</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">add10</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">);</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">add5</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="jscommentcolor">// returns 7</span></p>
+                            <p><span class="jsvariablecolor">add10</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="jscommentcolor">// returns 12</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa377" class="result"><span></span> </p>
+                </div>                
 
                 <h4>Function Return</h4>
                 <li>When JavaScript reaches a <code>return</code> statement, the function will stop executing.</li>
@@ -18582,7 +18829,132 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <p id="demoa303" class="result"><span></span> </p>
                 </div>
 
-                <h6>The Constructor Method</h6>
+                <h6>Class Inheritance</h6>
+                <li>To create a class inheritance, use the <code>extends</code> keyword.</li>
+                <li>A class created with a class inheritance inherits all the methods from another class:</li>
+                <div class="block-outer" data-result-id="demoa378" data-result-function="complex288">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">brand</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">carname</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">brand</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">present</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">'I have a '</span> <span class="jsoperatorcolor">+</span> <span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">carname</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Model</span> <span class="jskeywordcolor">extends</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">brand</span><span class="jscomma">,</span> <span class="jsvariablecolor">mod</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">super</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">brand</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">model</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">mod</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">show</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">present</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">', it is a '</span> <span class="jsoperatorcolor">+</span> <span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">model</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Model</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Ford'</span><span class="jscomma">,</span> <span class="jsstringcolor">'Mustang'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">show</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa378" class="result"><span></span> </p>
+                </div>
+                <li>The <code>super()</code> method refers to the parent class.</li>
+                <li>By calling the <code>super()</code> method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.</li>
+                <li>Classes also allows you to use <code>get</code> and <code>set</code> methods.</li>
+                <li>Below is an example to create a class with <code>get</code> and <code>set</code> methods:</li>
+                <div class="block-outer" data-result-id="demoa379" data-result-function="complex289">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">brand</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">carname</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">brand</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">get</span> <span class="jsvariablecolor">cnam</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">carname</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">set</span> <span class="jsvariablecolor">cnam</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">carname</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">x</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Ford'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">myCar</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">cnam</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa379" class="result"><span></span> </p>
+                </div>
+                <li>Unlike functions, and other JavaScript objects, classes are not hoisted.</li>
+                <li>That means that you must declare a class before you can use it:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">//You cannot use the class yet.</span></p>
+                            <p><span class="commentcolor">//myCar = new Car("Ford") will raise an error.</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">brand</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p> pan></p>
+                            <br>
+                            <p><span class="commentcolor">//Now you can use the class:</span></p>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Ford'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h6>Static Methods</h6>
+                <li>Static methods are defined on the class itself, and not on the prototype.</li>
+                <li>That means you cannot call a static method on an object, only on an object class.</li>
+                <div class="block-outer" data-result-id="demoa380" data-result-function="complex290">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">class</span> <span class="jsvariablecolor">Car</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">constructor</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">name</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">this</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">name</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">static</span> <span class="jsfunctioncolor">hello</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">"Hello!!"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myCar</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Car</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'Ford'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// You can call 'hello()' on the Car Class:</span></p>
+                            <p><span class="jsvariablecolor">Car</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">hello</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// But NOT on a Car Object:</span></p>
+                            <p><span class="commentcolor">// myCar.hello();</span></p>
+                            <p><span class="commentcolor">// this will raise an error.</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa380" class="result"><span></span> </p>
+                </div>
+
+                <h5>The Constructor Method</h5>
                 <li>The <code>constructor</code> method is a special method:</li>
                 <ul>
                     <li>It has to have the exact name "constructor"</li>
@@ -20485,7 +20857,193 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
             </ul>
         </div>
-        
+
+        <h3 class="subsection" id="subsec424" onclick="toggleSection('subsec424')">JavaScript Async and HTML DOM</h3>
+        <div class="subsection" id="subsec424Content" style="display: none;">
+            <ul>
+                <h4>JavaScript Async</h4>
+                <li>asynchronous programming refers to the ability to run tasks that take time (e.g., reading files, fetching data from a server, or performing complex computations)</li>
+                <li>without blocking the execution of other code. This allows your program to remain responsive while waiting for these tasks to complete.</li>
+                <h5>JavaScript Callbacks</h5>
+                <li>A callback is a function that is to be executed after another function has finished executing.</li>
+                <li>JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.</li>
+                <li>This example will end up displaying "Goodbye":</li>
+                <div class="block-outer" data-result-id="demoa381" data-result-function="complex291">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">some</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa381"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">some</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFirst</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Hello"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">mySecond</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Goodbye"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">myFirst</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">mySecond</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa381" class="result"><span></span> </p>
+                </div>
+                <li>This example will end up displaying "Hello":</li>
+                <div class="block-outer" data-result-id="demoa382" data-result-function="complex292">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">some</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa381"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">some</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFirst</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Hello"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">mySecond</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Goodbye"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">mySecond</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">myFirst</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>    
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa382" class="result"><span></span> </p>
+                </div>
+                <li>Sometimes you would like to have better control over when to execute a function.</li>
+                <li>Suppose you want to do a calculation, and then display the result.</li>
+                <li>You could call a calculator function (<code>myCalculator</code>), save the result, and then call another function (<code>myDisplayer</code>) to display the result:</li>
+                <div class="block-outer" data-result-id="demoa383" data-result-function="complex293">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">some</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">some</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myCalculator</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">num1</span><span class="jscomma">,</span> <span class="jsvariablecolor">num2</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">sum</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num1</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">num2</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">sum</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">result</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">myCalculator</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jscomma">,</span> <span class="jsnumbercolor">5</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">result</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa383" class="result"><span></span> </p>
+                </div>
+                <li>Or, you could call a calculator function (<code>myCalculator</code>), and let the calculator function call the display function (<code>myDisplayer</code>):</li>
+                <div class="block-outer" data-result-id="demoa384" data-result-function="complex294">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">some</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">some</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myCalculator</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">num1</span><span class="jscomma">,</span> <span class="jsvariablecolor">num2</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">sum</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num1</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">num2</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">sum</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">myCalculator</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jscomma">,</span> <span class="jsnumbercolor">5</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa384" class="result"><span></span> </p>
+                </div>
+                <li>The problem with the first example above, is that you have to call two functions to display the result.</li>
+                <li>The problem with the second example, is that you cannot prevent the calculator function from displaying the result.</li>
+                <li>Thats where <b>callback</b> come in handy</li>
+                <li>Using a callback, you could call the calculator function (<code>myCalculator</code>) with a callback (<code>myCallback</code>), and let the calculator function run the callback after the calculation is finished:</li>
+                <div class="block-outer" data-result-id="demoa385" data-result-function="complex295">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">some</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa385"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">some</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myCalculator</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">num1</span><span class="jscomma">,</span> <span class="jsvariablecolor">num2</span><span class="jscomma">,</span> <span class="jsvariablecolor">myCallback</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">sum</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">num1</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">num2</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">myCallback</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">sum</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">myCalculator</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jscomma">,</span> <span class="jsnumbercolor">5</span><span class="jscomma">,</span> <span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa385" class="result"><span></span> </p>
+                </div>
+                <li>In the example above, myDisplayer is a called a <b>callback function</b>.</li>
+                <li>It is passed to myCalculator() as an argument.</li>
+                <blockquote>
+                    <h6>Note</h6>
+                    <p>When you pass a function as an argument, remember not to use parenthesis.</p>
+                    <p>It should be <code>myCalculator(5, 5, myDisplayer);</code>, not <code><s>myCalculator(5, 5, myDisplayer());</s></code>.</p>
+                </blockquote>
+                <li>Callbacks itself really shine are in asynchronous functions, where one function has to wait for another function (like waiting for a file to load).</li>
+
+                <h5>JavaScript Asynchronous</h5>
+                <li>Asynchronous programming is a form of parallel programming that allows a unit of work to run separately from the primary application thread.</li>
+                <li>The examples used in the previous chapter, was very simplified. The purpose of the examples was to demonstrate the syntax of callback functions</li>
+                <li>Asynchronous programming is a more complex topic, because it involves waiting for a response from an external source, such as a file system or a network request.</li>
+                <li>In the real world, callbacks are most often used with asynchronous functions.</li>
+                <li>A typical example is JavaScript <code>setTimeout()</code>.</li>
+                <li>When using the JavaScript function <code>setTimeout()</code>, you can specify a callback function to be executed on time-out:</li>
+                <div class="block-outer" data-result-id="demoa386" data-result-function="complex296">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">setTimeout</span><span class="jsbracketcolor">(</span><span class="jsfunctioncolor">myFunction</span><span class="jscomma">,</span> <span class="jsnumbercolor">3000</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsstringcolor">"I love You !!"</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa386" class="result"><span></span> </p>
+                </div>
+
+            </ul>
+        </div>
+
     </div>
     <hr>
 

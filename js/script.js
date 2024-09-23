@@ -166,8 +166,6 @@ function toggleBoth(sectionId, exampleId) {
 
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.block-outer').forEach(block => {
-        console.log('Block found:', block);
-
         const resultId = block.getAttribute('data-result-id');
         const resultValue = block.getAttribute('data-result-value');
         const resultFunction = block.getAttribute('data-result-function');
@@ -177,34 +175,41 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultElement = document.getElementById(resultId);
 
         if (runButton && resetButton && resultElement) {
-            console.log('Adding event listeners for:', block);
-
             runButton.addEventListener('click', () => {
-                let result;
-                if (resultFunction) {
-                    result = window[resultFunction]();
-                } else if (resultValue) {
+                resultElement.querySelector('span').innerHTML = ''; // Clear previous result
+                resultElement.style.display = 'block'; // Show result area
+
+                if (resultFunction && typeof window[resultFunction] === 'function') {
+                    // Call the function dynamically by name (e.g., complex1, complex296, etc.)
+                    const result = window[resultFunction]();
+                    if (typeof result !== 'undefined') {
+                        resultElement.querySelector('span').innerHTML = result;
+                    }
+                } 
+                // Evaluate the result value if no function is specified
+                else if (resultValue) {
                     try {
-                        result = eval(resultValue);
+                        const evaluatedResult = eval(resultValue);
+                        resultElement.querySelector('span').innerHTML = evaluatedResult;
                     } catch (e) {
-                        result = 'Error evaluating expression';
+                        resultElement.querySelector('span').innerHTML = 'Error evaluating expression';
                     }
                 }
-                resultElement.querySelector('span').innerHTML = result;
-                resultElement.style.display = 'block';
-                resetButton.style.display = 'flex';
+
+                resetButton.style.display = 'flex'; // Show reset button
             });
 
             resetButton.querySelector('.reset-icon').addEventListener('click', () => {
-                resultElement.querySelector('span').innerHTML = '';
-                resultElement.style.display = 'none';
-                resetButton.style.display = 'none';
+                resultElement.querySelector('span').innerHTML = ''; // Clear result
+                resultElement.style.display = 'none'; // Hide result
+                resetButton.style.display = 'none'; // Hide reset button
             });
         } else {
             console.warn('Missing elements for block:', block);
         }
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Find the block specifically meant for complex191
@@ -3501,4 +3506,240 @@ function complex281() {
     
     let x = sumAll(1, 123, 500, 115, 44, 88);
     return x;
+}
+
+function complex282() {
+    const person = {
+        fullName: function() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      const person1 = {
+        firstName:"John",
+        lastName: "Doe"
+      }
+      const person2 = {
+        firstName:"Mary",
+        lastName: "Doe"
+      }
+      
+      // This will return "John Doe":
+      return "person1: " + person.fullName.call(person1) +"<br>person2: " + person.fullName.call(person2);;
+}
+
+function complex283() {
+    const person = {
+        fullName: function(city, country) {
+          return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+      }
+      
+      const person1 = {
+        firstName:"John",
+        lastName: "Doe"
+      }
+      
+      return person.fullName.call(person1, "Oslo", "Norway");
+}
+
+function complex284() {
+    const person = {
+        fullName: function(city, country) {
+            return this.firstName + ' ' + this.lastName + ',' + city + ',' + country;
+        }
+    }
+    const person1 = {
+        firstName:"John",
+        lastName:"Doe"
+    }
+    return person.fullName.apply(person1, ["Oslo", "Norway"]);
+}
+
+function complex285() {
+    const person = {
+        firstName:"John",
+        lastName: "Doe",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      
+      const member = {
+        firstName:"Nate",
+        lastName: "Higgers",
+      }
+      
+      let fullName = person.fullName.bind(member);
+      return fullName();
+}
+
+function complex286() {
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+            let x = document.getElementById("demo");
+            x.innerHTML = this.firstName + " " + this.lastName;
+            return x.innerHTML;
+        }
+    }
+    
+    return person.display();
+}
+
+function complex287() {
+    function add(a) {
+        return function(b) {
+            return a + b;
+        };
+    }
+    
+    let add5 = add(5);
+    let add10 = add(10);
+    
+    return "add5(2): " + add5(2) + "<br>add10(2): " + add10(2);
+}
+
+function complex288() {
+    class Car {
+        constructor(brand) {
+          this.carname = brand;
+        }
+        present() {
+          return 'I have a ' + this.carname;
+        }
+      }
+      
+      class Model extends Car {
+        constructor(brand, mod) {
+          super(brand);
+          this.model = mod;
+        }
+        show() {
+          return this.present() + ', it is a ' + this.model;
+        }
+      }
+      
+      let myCar = new Model("Ford", "Mustang");
+      return myCar.show();      
+}
+
+function complex289() {
+    class Car {
+        constructor(brand) {
+          this.carname = brand;
+        }
+        get cnam() {
+          return this.carname;
+        }
+        set cnam(x) {
+          this.carname = x;
+        }
+      }
+      
+      const myCar = new Car("Ford");
+      
+      return myCar.cnam;
+}
+
+function complex290() {
+    class Car {
+        constructor(name) {
+          this.name = name;
+        }
+        static hello() {
+          return "Hello!!";
+        }
+      }
+      
+      const myCar = new Car("Ford");
+      
+      // You can call 'hello()' on the Car Class:
+      return Car.hello();
+      
+      // But NOT on a Car Object:
+      // document.getElementById("demo").innerHTML = myCar.hello();
+      // this will raise an error.
+}
+
+function complex291() {
+    function myDisplayer(message) {
+        return message; // Return the message
+    }
+
+    function myFirst() {
+        return myDisplayer("Hello"); // Return the message
+    }
+    
+    function mySecond() {
+        return myDisplayer("Goodbye"); // Return the message
+    }
+
+    // Call myFirst() first, but only use the result of mySecond()
+    myFirst(); // This will run, but its output will be ignored
+    return mySecond(); // This will be the final output
+}
+
+function complex292() {
+    function myDisplayer(message) {
+        return message; // Return the message
+    }
+
+    function myFirst() {
+        return myDisplayer("Hello"); // Return the message
+    }
+    
+    function mySecond() {
+        return myDisplayer("Goodbye"); // Return the message
+    }
+
+    // Call myFirst() first, but only use the result of mySecond()
+    mySecond(); // This will run, but its output will be ignored
+    return myFirst(); // This will be the final output  
+}
+
+function complex293() {
+    function myDisplayer(some) {
+        return some;
+      }
+      
+      function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
+      }
+      
+      let result = myCalculator(5, 5);
+      return myDisplayer(result);
+}
+
+function complex294() {
+    function myDisplayer(some) {
+        return some;
+    }
+    
+    function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        return myDisplayer(sum);
+    }
+    
+    return myCalculator(5, 5);
+}
+
+function complex295() {
+    function myDisplayer(some) {
+        return some;
+      }
+      
+      function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        return myCallback(sum);
+      }
+      
+      return myCalculator(5, 5, myDisplayer);
+}
+
+function complex296() {
+    setTimeout(() => {
+        document.getElementById('demoa386').querySelector('span').innerHTML = "I love You !!";
+    }, 3000); // Delay of 3 seconds
 }
