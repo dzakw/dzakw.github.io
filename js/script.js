@@ -3743,3 +3743,13 @@ function complex296() {
         document.getElementById('demoa386').querySelector('span').innerHTML = "I love You !!";
     }, 3000); // Delay of 3 seconds
 }
+
+async function complex297() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("I love You !!");
+        }, 3000); // Delay of 3 seconds
+    }).then((message) => {
+        document.getElementById('demoa386').querySelector('span').innerHTML = message;
+    });
+}

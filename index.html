@@ -6083,10 +6083,10 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">lastName</span><span class="jsoperatorcolor">:</span><span class="jsstringcolor">"Verstappen"</span></p>
                             <p><span class="jsbracketcolor">}</span></p>
                             <br>
-                            <p><span class="jscommentcolor">// This will return "Max Verstappen":</span></p>
+                            <p><span class="commentcolor">// This will return "Max Verstappen":</span></p>
                             <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person1</span><span class="jsbracketcolor">);</span></p>
                             <br>
-                            <p><span class="jscommentcolor">// This will return "Mary Verstappen"</span></p>
+                            <p><span class="commentcolor">// This will return "Mary Verstappen"</span></p>
                             <p><span class="jsfunctioncolor">person</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">fullName</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">person2</span><span class="jsbracketcolor">);</span></p>
                         </div>
                         <div class="block-btn-cont">
@@ -6295,8 +6295,8 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">add5</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">5</span><span class="jsbracketcolor">);</span></p>
                             <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">add10</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">add</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">10</span><span class="jsbracketcolor">);</span></p>
                             <br>
-                            <p><span class="jsvariablecolor">add5</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="jscommentcolor">// returns 7</span></p>
-                            <p><span class="jsvariablecolor">add10</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="jscommentcolor">// returns 12</span></p>
+                            <p><span class="jsvariablecolor">add5</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// returns 7</span></p>
+                            <p><span class="jsvariablecolor">add10</span><span class="jsbracketcolor">(</span><span class="jsnumbercolor">2</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">;</span> <span class="commentcolor">// returns 12</span></p>
                         </div>
                         <div class="block-btn-cont">
                             <div class="block-run">
@@ -19051,11 +19051,11 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div class="block-cont" style="padding-top: 4px;">
                         <h6 class="exampl"><b>Example</b> </h6>
                         <div class="block-bl">
-                            <p><span class="jscommentcolor">// Module.js</span></p>
+                            <p><span class="commentcolor">// Module.js</span></p>
                             <p><span class="jskeywordcolor">export</span> <span class="jskeywordcolor">const</span> <span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"John"</span><span class="jssemicoloncolor">;</span></p>
                             <p><span class="jskeywordcolor">export</span> <span class="jskeywordcolor">const</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">30</span><span class="jssemicoloncolor">;</span></p>
                             <br>
-                            <p><span class="jscommentcolor">// App.js</span></p>
+                            <p><span class="commentcolor">// App.js</span></p>
                             <p><span class="jskeywordcolor">import</span> <span class="jsbracketcolor">{</span> <span class="jsvariablecolor">name</span><span class="jscomma">,</span> <span class="jsvariablecolor">age</span> <span class="jsbracketcolor">}</span> <span class="jskeywordcolor">from</span> <span class="jsstringcolor">"./Module.js"</span><span class="jssemicoloncolor">;</span></p>
                             <p><span class="jsvariablecolor">console</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">log</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">name</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
                             <p><span class="jsvariablecolor">console</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">log</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">age</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
@@ -21039,6 +21039,113 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
                     </div>
                     <p id="demoa386" class="result"><span></span> </p>
+                </div>
+
+                <h5>JavaScript Promise Object</h5>
+                <li>A Promise is a JavaScript object that links producing code and consuming code.</li>
+                <div class="block-outer">
+                    <div class="block-cont" style="padding-top: 4px;">
+                        <h6 style="margin-top: 0;">Promise Syntax:</h6>
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myPromise</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Promise</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myResolve</span><span class="jscomma">,</span> <span class="jsvariablecolor">myReject</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// "Producing Code" (May take some time)</span></p>
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">myResolve</span><span class="jsbracketcolor">(</span><span class="commentcolor">// when successful</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">myReject</span><span class="jsbracketcolor">(</span><span class="commentcolor">// when error</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// "Consuming Code" (Must wait for a fulfilled Promise)</span></p>
+                            <p><span class="jsvariablecolor">myPromise</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">then</span><span class="jsbracketcolor">(</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> <span class="commentcolor">/* code if successful */</span> <span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">error</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span> <span class="commentcolor">/* code if some error */</span> <span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>When the producing code obtains the result, it should call one of the two callbacks:</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>When</th>
+                        <th>Call</th>
+                    </tr>
+                    <tr>
+                        <td>Success</td>
+                        <td>myResolve(result value)</td>
+                    </tr>
+                    <tr>
+                        <td>Error</td>
+                        <td>myReject(error value)</td>
+                    </tr>
+                </table>
+                <li>A JavaScript Promise object can be:</li>
+                <li><b>Pending</b>: before the result is ready. <code>undefined</code>.</li>
+                <li><b>Fullfilled<b>: when the result is ready. A result value.</li>
+                <li><b>Rejected</b>: if an error occurred.</li>
+
+                <li>Here is how to use a Promise:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">myPromise</span>.<span class="jsfunctioncolor">then</span><span class="jsbracketcolor">(</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// code if successful</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">error</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// code if some error</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <blockquote>
+                    <p>Promise.then() takes two arguments, a callback for success and another for failure.</p>
+                    <p>However, both are optional, so you can add a callback for success or failure only.</p>
+                </blockquote>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">some</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">some</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">myPromise</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Promise</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">myResolve</span><span class="jscomma">,</span> <span class="jsvariablecolor">myReject</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="commentcolor">// The producing code (this may take some time)</span></p>
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">==</span> <span class="jsnumbercolor">0</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">myResolve</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"OK"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span> <span class="jskeywordcolor">else</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">myReject</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"Error"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsvariablecolor">myPromise</span>.<span class="jsfunctioncolor">then</span><span class="jsbracketcolor">(</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span><span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">value</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span><span class="jsbracketcolor">}</span><span class="jscomma">,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">error</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span><span class="jsfunctioncolor">myDisplayer</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">error</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span><span class="jsbracketcolor">}</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Promise can be used for waiting for a timeout and waiting for a file:</li>
+                <div class="block-outer" data-result-id="demoa387" data-result-function="complex297">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">return</span> <span class="jskeywordcolor">new</span> <span class="jsfunctioncolor">Promise</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">resolve</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">setTimeout</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">resolve</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"I love You !!"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span><span class="jscomma">,</span> <span class="jsnumbercolor">3000</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">then</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">message</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa387"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">message</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa387" class="result"><span></span> </p>
                 </div>
 
             </ul>
