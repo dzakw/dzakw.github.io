@@ -3744,12 +3744,38 @@ function complex296() {
     }, 3000); // Delay of 3 seconds
 }
 
-async function complex297() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("I love You !!");
-        }, 3000); // Delay of 3 seconds
-    }).then((message) => {
-        document.getElementById('demoa386').querySelector('span').innerHTML = message;
-    });
+function complex297() {
+    function myDisplayer(some) {
+        document.getElementById("demoa387").innerHTML = some;
+    }
+    async function myFunction() {
+        return "Max Verstappen";
+    }
+    
+    myFunction().then(
+        function(value) {myDisplayer(value);},
+        function(error) {myDisplayer(error);}
+    );
+}
+
+function complex298() {
+    async function myDisplay() {
+        let myPromise = new Promise(function(resolve, reject) {
+          resolve("I love You !!");
+        });
+        document.getElementById("demoa388").innerHTML = await myPromise;
+      }
+      
+      myDisplay();
+}
+
+function complex299() {
+    async function myDisplay() {
+        let myPromise = new Promise(function(resolve) {
+          setTimeout(function() {resolve("I love You !!");}, 3000);
+        });
+        document.getElementById("demoa389").innerHTML = await myPromise;
+      }
+      
+      myDisplay();
 }
