@@ -3779,3 +3779,45 @@ function complex299() {
       
       myDisplay();
 }
+
+function complex300() {
+    let elements = document.querySelectorAll('h2.section');
+    let combinedContent = '';
+    elements.forEach(function(element) {
+        combinedContent += element.innerHTML + '<br>'; // Append each element's innerHTML
+    });
+    document.getElementById('demoa393').innerHTML = combinedContent;
+}
+
+function complex301() {
+    document.getElementById("demoa394").innerHTML = "Date : " + new Date(); // Show date immediately
+    setInterval(() => {
+        document.getElementById("demoa394").innerHTML = "Date : " + new Date();
+    }, 1000); // Update every second (1000 ms)
+}
+
+function validateCharacter(event) {
+    const char = String.fromCharCode(event.which); // Get the character from the event
+    // Allow only letters and spaces
+    if (!/^[a-zA-Z\s]$/.test(char)) {
+        event.preventDefault(); // Prevent the input
+    }
+}
+
+function validateIdCardCharacter(event) {
+    const char = String.fromCharCode(event.which); // Get the character from the event
+    // Allow only numbers
+    if (!/^[0-9]$/.test(char)) {
+        event.preventDefault(); // Prevent the input
+    }
+}
+
+function complex302() {
+    // Add the form dynamically to the container
+    document.getElementById("demoa395").innerHTML = `
+        Name: <input type="text" name="fname" id="fname" required onkeypress="return validateCharacter(event)" required><br>
+        ID Card: <input type="text" name="idcard" id="idcard" required onkeypress="return validateIdCardCharacter(event)" required><br>
+        Team: <input type="text" name="team" id="team" placeholder="Optional"><br>
+        <input type="submit" value="Submit">
+    `;
+}

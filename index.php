@@ -84,7 +84,8 @@
                     <li><a href="#subsec421" onclick="openSection('subsec421'); openSection('section4')">JavaScript Class & Modules</a></li>
                     <li><a href="#subsec422" onclick="openSection('subsec422'); openSection('section4')">JSON</a></li>
                     <li><a href="#subsec423" onclick="openSection('subsec423'); openSection('section4')">Debugging, Style Guide, and Best Practices</a></li>
-                    <li><a href="#subsec424" onclick="openSection('subsec424'); openSection('section4')">JavaScript Async and HTML DOM</a></li>
+                    <li><a href="#subsec424" onclick="openSection('subsec424'); openSection('section4')">JavaScript Async</a></li>
+                    <li><a href="#subsec425" onclick="openSection('subsec425'); openSection('section4')">JavaScript HTML DOM</a></li>
                 </ul>
             </ul>
         </div>
@@ -20857,8 +20858,9 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
             </ul>
         </div>
+        <hr>
 
-        <h3 class="subsection" id="subsec424" onclick="toggleSection('subsec424')">JavaScript Async and HTML DOM</h3>
+        <h3 class="subsection" id="subsec424" onclick="toggleSection('subsec424')">JavaScript Async</h3>
         <div class="subsection" id="subsec424Content" style="display: none;">
             <ul>
                 <h4>JavaScript Async</h4>
@@ -21266,6 +21268,568 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <p id="demoa389" class="result"><span></span> </p>
                 </div>
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec425" onclick="toggleSection('subsec425')">JavaScript HTML DOM</h3>
+        <div class="subsection" id="subsec425Content" style="display: none;">
+            <ul>
+                <li>With the HTML DOM, JavaScript can access and change all the elements of an HTML document.</li>
+                <li>When a web page is loaded, the browser creates a Document Object Model of the page.</li>
+                <li>The HTML DOM model is constructed as a tree of Objects:</li>
+                <div class="block-outer" style="width: 100%;">
+                    <div class="block-cont" style="padding-top: 4px; width: 100%;">
+                        <h6 style="margin-top:0 0; display: flex; justify-content: center;">HTML DOM Tree of Objects</h6>
+                        <div class="block-bl" style="display: flex; justify-content: center; background-color: white; border: none;">
+                            <img src="media/domtree.png" alt="DOM Tree" style="width: 100%; max-width: 600px;">
+                        </div>
+                    </div>
+                </div>
+                <li>With the object model, JavaScript gets all the power it needs to create dynamic HTML: </li>
+                <ul>
+                    <li>JavaScript can change all the HTML elements in the page.</li>
+                    <li>JavaScript can change all the HTML attributes in the page.</li>
+                    <li>JavaScript can change all the CSS styles in the page.</li>
+                    <li>JavaScript can remove existing HTML elements and attributes.</li>
+                    <li>JavaScript can add new HTML elements and attributes.</li>
+                    <li>JavaScript can react to all existing HTML events in the page.</li>
+                    <li>JavaScript can create new HTML events in the page.</li>
+                </ul>
+                <br>
+
+                <h5>HTML DOM Methods</h5>
+                <li>HTML DOM methods are actions you can perform (on HTML Elements).</li>
+                <li>HTML DOM prop`erties are values (of HTML Elements) that you can set or change.</li>
+                <li>The HTML DOM can be accessed with JavaScript (and with other programming languages). In the DOM, all HTML elements are defined as objects.</li>
+                <li>The programming interface is the properties and methods of each object.</li>
+                <li>A property is a value that you can get or set (like changing the content of an HTML element).</li>
+                <li>A method is an action you can do (like add or deleting an HTML element).</li>
+                <li>The following example changes the content (the <code>innerHTML</code>) of the <code>&lt;p&gt;</code> element with <code>id="demo"</code>:</li>
+                <div class="block-outer" data-result-id="demoa390" data-result-value="document.getElementById('demoa390').innerHTML = 'Max Verstappen'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demo"</span>&gt;&lt;<span class="htmltagcolor">/p</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Max Verstappen"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa390" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>The most common way to access an HTML element is to use the <code>id</code> of the element by using the <code>getElementById()</code> method.</li>
+                <li>The easiest way to get the content of an element is by using the <code>innerHTML</code> property. It is useful for getting or replacing the content of HTML elements.</li>
+                <br>
+
+                <h5>HTML DOM Document Object</h5>
+                <li>If you want to access any element in an HTML page, you always start with accessing the document object.</li>
+                <li>Below are some examples of how you can use the document object to access and manipulate HTML.</li>
+                <label>Finding HTML Elements</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>document.getElementById(id)</code></td>
+                        <td>Find an element by element id</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.getElementsByTagName(name)</code></td>
+                        <td>Find elements by tag name</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.getElementsByClassName(name)</code></td>
+                        <td>Find elements by class name</td>
+                    </tr>
+                </table>
+                <br>
+                <label>Changing HTML Elements</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>element.innerHTML = new html content</code></td>
+                        <td>Change the inner HTML of an element</td>
+                    </tr>
+                    <tr>
+                        <td><code>element.attribute = new value</code></td>
+                        <td>Change the attribute value of an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td><code>element.style.property = new style</code></td>
+                        <td>Change the style of an HTML element</td>
+                    </tr>
+                </table>
+                <br>
+                <table class="key-dec">
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>element.setAttribute(attribute, value)</code></td>
+                        <td>Change the attribute value of an HTML element</td>
+                    </tr>
+                </table>
+                <br>
+                <label>Adding and Deleting Elements</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>document.createElement(element)</code></td>
+                        <td>Create an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.removeChild(element)</code></td>
+                        <td>Remove an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.appendChild(element)</code></td>
+                        <td>Add an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.replaceChild(new, old)</code></td>
+                        <td>Replace an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.write(text)</code></td>
+                        <td>Write into the HTML output stream</td>
+                    </tr>
+                </table>
+                <br>
+                <label>Adding Events Handlers</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>document.getElementById(id).onclick = function(){code}</code></td>
+                        <td>Adding event handler code to an onclick event</td>
+                    </tr>
+                </table>
+                <br>
+                <label>Finding HTML Objects</label>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                        <th>DOM</th>
+                    </tr>
+                    <tr>
+                        <td><code>document.anchors</code></td>
+                        <td>Returns all <code>&lt;a&gt;</code> elements that have a name attribute</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.applets</code></td>
+                        <td>Returns all <code>&lt;applet&gt;</code> elements (Deprecated in HTML5)</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.baseURI</code></td>
+                        <td>Returns the absolute base URI of the document</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.body</code></td>
+                        <td>Returns the <code>&lt;body&gt;</code> element</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.cookie</code></td>
+                        <td>Returns the document's cookie</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.doctype</code></td>
+                        <td>Returns the document's doctype</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.documentElement</code></td>
+                        <td>Returns the <code>&lt;html&gt;</code> element</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.documentMode</code></td>
+                        <td>Returns the mode used by the browser</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.documentURI</code></td>
+                        <td>Returns the URI of the document</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.domain</code></td>
+                        <td>Returns the domain name of the server that loaded the document</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.domConfig</code></td>
+                        <td>Obsolete. Returns the DOM configuration (Obsolete)</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.embeds</code></td>
+                        <td>Returns all <code>&lt;embed&gt;</code> elements</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.forms</code></td>
+                        <td>Returns all <code>&lt;form&gt;</code> elements</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.head</code></td>
+                        <td>Returns the <code>&lt;head&gt;</code> element</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.images</code></td>
+                        <td>Returns all <code>&lt;img&gt;</code> elements</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.implementation</code></td>
+                        <td>Returns the DOM implementation</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.inputEncoding</code></td>
+                        <td>Returns the document's encoding (character set)</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.lastModified</code></td>
+                        <td>Returns the date and time the document was last modified</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.links</code></td>
+                        <td>Returns all <code>&lt;a&gt;</code> elements</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.readyState</code></td>
+                        <td>Returns the (loading) status of the document</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.referrer</code></td>
+                        <td>Returns the URL of the document that loaded the current document</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.scripts</code></td>
+                        <td>Returns all <code>&lt;script&gt;</code> elements</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.strictErrorChecking</code></td>
+                        <td>Returns if error checking is enforced</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.title</code></td>
+                        <td>Returns the <code>&lt;title&gt;</code> element</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.URL</code></td>
+                        <td>Returns the complete URL of the document</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <br>
+                <h5>HTML DOM Elements</h5>
+                <li>There are several ways to find the elements inside an HTML document:</li>
+                <ul>
+                    <li>Find by HTML object id</li>
+                    <li>Find by HTML tag name</li>
+                    <li>Find by HTML class name</li>
+                    <li>Find by HTML CSS selector</li>
+                    <li>Find by HTML object collection</li>
+                </ul>
+                <li>The easiest way to find an HTML element in the DOM, is by using the element id.</li>
+                <div class="block-outer" data-result-id="demoa391" data-result-value="document.getElementById('demoa391').innerHTML = 'Max Verstappen'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demo"</span>&gt;&lt;<span class="htmltagcolor">/p</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Max Verstappen"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa391" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>Another way to find an HTML element is by using the element tag name.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">myElement</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementsByTagName</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>In this example below, it will finds the 666th element from this whole documents, and then putting it iside <code>&lt;div&gt;</code> element with <code>id="demoa392"</code>:</li>
+                <div class="block-outer" data-result-id="demoa392" data-result-value="document.getElementById('demoa392').innerHTML = document.getElementsByTagName('p')[666].innerHTML">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">div <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa392"</span>&gt;&lt;<span class="htmltagcolor">/div</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa392"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementsByTagName</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p"</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">[</span><span class="jsnumbercolor">666</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa392" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>Another way to find an HTML element is by using the element class name.</li>
+                <li>This example returns a list of all <code>&lt;h2&gt;</code> elements with <code>class="section"</code>.</li>
+                <div class="block-outer" data-result-id="demoa393" data-result-function="complex300">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">elements</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">querySelectorAll</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'h2.section'</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jskeywordcolor">let</span> <span class="jsvariablecolor">combinedContent</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">elements</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">forEach</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">element</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">combinedContent</span> <span class="jsoperatorcolor">+=</span> <span class="jsvariablecolor">element</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'&lt;br&gt;'</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">'demo'</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">combinedContent</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa393" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>Changing HTML Content</h5>
+                <li>The easiest way to modify the content of an HTML element is by using the <code>innerHTML</code> property</li>
+                <li>The syntax to change HTML element content based of element's id as follows:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"id"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">new HTML</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>The syntax to change HTML attribute value based of element's id as follows:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"id"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">attribute</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">new value</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>JavaScript can also create dynamic HTML content like this:</li>
+                <div class="block-outer" data-result-id="demoa394" data-result-function="complex301">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">setInterval</span><span class="jsbracketcolor">(</span><span class="jskeywordcolor">function</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Date : "</span> <span class="jsoperatorcolor">+</span> <span class="jsfunctioncolor">Date</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span>, <span class="jsnumbercolor">1000</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa394" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>DOM Forms</h5>
+                <li>Form validation is when the JavaScript is used to check if the form has the intended input or not</li>
+                <li>This can simply used to check if a form field is empty, or more complex to restrict user to input certain character only.</li>
+                <li>This below JS Form validation will check alert the user if the field is empty</li>
+                <div class="block-outer" data-result-id="demoa395" data-result-function="complex302">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="htmlbracketcolor">&lt;</span><span class="htmltagcolor">script</span><span class="htmlbracketcolor">&gt;</span></p>
+                            <p><span class="jsfunctioncolor">function</span> <span class="jsfunctioncolor">validateCharacter</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">event</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">char</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">String</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">event</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">which</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span> <span class="jscommentcolor">// Get the character from the event</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Allow only letters and spaces</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsoperatorcolor">!</span><span class="jsregexpcolor">/^[a-zA-Z\s]$</span><span class="jsregexpcolor">/</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">test</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">char</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">event</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">preventDefault</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span> <span class="jscommentcolor">// Prevent the input</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">function</span> <span class="jsfunctioncolor">validateIdCardCharacter</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">event</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">char</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">String</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">event</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">which</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span> <span class="jscommentcolor">// Get the character from the event</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Allow only numbers</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> <span class="jsbracketcolor">(</span><span class="jsoperatorcolor">!</span><span class="jsregexpcolor">/^[0-9]$</span><span class="jsregexpcolor">/</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">test</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">char</span><span class="jsbracketcolor">)</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">event</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">preventDefault</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span> <span class="jscommentcolor">// Prevent the input</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">function</span> <span class="jsfunctioncolor">formGenerate</span><span class="jsbracketcolor">(</span><span class="jsbracketcolor">)</span> <span class="jsbracketcolor">{</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Add the form dynamically to the container</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">`</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: <span class="htmltagcolor">&lt;</span><span class="htmltagcolor">input <span class="htmlattrnamecolor">type</span>=<span class="htmlattrvaluecolor">"text"</span> <span class="htmlattrnamecolor">name</span>=<span class="htmlattrvaluecolor">"fname"</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"fname"</span> <span class="htmlattrnamecolor">required</span> <span class="htmlattrnamecolor">onkeypress</span>=<span class="htmlattrvaluecolor">"return validateCharacter(event)"</span> <span class="htmlattrnamecolor">required</span><span class="htmltagcolor">&gt;</span><span class="htmltagcolor">&lt;/</span><span class="htmltagcolor">input</span><span class="htmltagcolor">&gt;</span><span class="htmltagcolor">&lt;br&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID Card: <span class="htmltagcolor">&lt;</span><span class="htmltagcolor">input <span class="htmlattrnamecolor">type</span>=<span class="htmlattrvaluecolor">"text"</span> <span class="htmlattrnamecolor">name</span>=<span class="htmlattrvaluecolor">"idcard"</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"idcard"</span> <span class="htmlattrnamecolor">required</span> <span class="htmlattrnamecolor">onkeypress</span>=<span class="htmlattrvaluecolor">"return validateIdCardCharacter(event)"</span> <span class="htmlattrnamecolor">required</span><span class="htmltagcolor">&gt;</span><span class="htmltagcolor">&lt;/</span><span class="htmltagcolor">input</span><span class="htmltagcolor">&gt;</span><span class="htmltagcolor">&lt;br&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team: <span class="htmltagcolor">&lt;</span><span class="htmltagcolor">input <span class="htmlattrnamecolor">type</span>=<span class="htmlattrvaluecolor">"text"</span> <span class="htmlattrnamecolor">name</span>=<span class="htmlattrvaluecolor">"team"</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"team"</span> <span class="htmlattrnamecolor">placeholder</span>=<span class="htmlattrvaluecolor">"Optional"</span><span class="htmltagcolor">&gt;</span><span class="htmltagcolor">&lt;/</span><span class="htmltagcolor">input</span><span class="htmltagcolor">&gt;</span><span class="htmltagcolor">&lt;br&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="htmltagcolor">&lt;</span><span class="htmltagcolor">input <span class="htmlattrnamecolor">type</span>=<span class="htmlattrvaluecolor">"submit"</span> <span class="htmlattrnamecolor">value</span>=<span class="htmlattrvaluecolor">"Submit"</span><span class="htmltagcolor">&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">`</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsbracketcolor">}</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <form name="myForm" method="post" id="demoa395" class="result" action="php/insert_karyawan.php"><span></span> </form>
+                </div>
+                <br>
+                <li>The code above will do form validation both using <code>validateCharacter</code> and <code>validateIdCardCharacter</code> function and also by including <code>required</code> attribute in the input field</li>
+                <li>What it does is, it will prevent user to input number in the Name field, prevent letter input in ID Card field, and also prevent the Name and ID Card field to be empty.</li>
+                <li>Below is the data input in the database based on user input:</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>ID Card</th>
+                        <th>Nama Karyawan</th>
+                        <th>Tim</th>
+                    </tr>
+                    <?php
+                        // Include your database connection
+                        include 'php/connect.php';
+
+                        // Fetch data from the 'karyawan' table
+                        $sql = "SELECT idcard, name, team FROM karyawan"; // Ensure 'team' is the correct column name
+                        $result = $conn->query($sql);
+
+                        // Check if there are any rows in the result set
+                        if ($result->num_rows > 0) {
+                            // Output data for each row
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr><td>" . $row["idcard"] . "</td><td>" . $row["name"] . "</td><td>" . $row["team"] . "</td></tr>"; // Ensure idcard, name, and team are displayed
+                            }
+                        } else {
+                            echo "<tr><td colspan='3'>No employees found</td></tr>"; // Adjusted colspan to match number of columns
+                        }
+
+                        // Close the database connection
+                        $conn->close();
+                    ?>                    
+                </table>
+                <br>
+                <li>As can be seen above, data validation can be done using HTML (using the <code>required</code> attribute, and also using JavaScript.</li>
+                <li>HTML user validation called <b>Client side validation</b>. This will be performed by the web browser, <b>before</b> input is sent to a web server</li>
+                <li>JavaScript user validation called <b>Server side validation</b>. This will be performed by the web server, <b>after</b> input is sent to a web server</li>
+                <br>
+
+                <h5>HTML5 Constraint Validation</h5>
+                <li>HTML5 introduced a new HTML validation concept called <b>constraint validation</b>.</li>
+                <li>HTML constraint validation is based on:</li>
+                <ul>
+                    <li>Constraint validation <b>HTML Input Attributes</b></li>
+                    <li>Constraint validation <b>CSS Pseudo Selectors</b></li>
+                    <li>Constraint validation <b>DOM Properties and Methods</b></li>
+                </ul>
+                <h6>Constraint Validation HTML Input Attributes</h6>
+                <table class="key-dec">
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>disabled</code></td>
+                        <td>Specifies that the input element should be disabled</td>
+                    </tr>
+                    <tr>
+                        <td><code>max</code></td>
+                        <td>Specifies the maximum value for an input element</td>
+                    </tr>
+                    <tr>
+                        <td><code>min</code></td>
+                        <td>Specifies the minimum value for an input element</td>
+                    </tr>
+                    <tr>
+                        <td><code>pattern</code></td>
+                        <td>Specifies a regular expression that an input element's value is checked against</td>
+                    </tr>
+                    <tr>
+                        <td><code>required</code></td>
+                        <td>Specifies that the input field must be filled out before submitting the form</td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td>Specifies the type of input element to display</td>
+                    </tr>
+                </table>
+                <h6>Constraint Validation CSS Pseudo Selectors</h6>
+                <table class="key-dec">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>:disabled</code></td>
+                        <td>Selects input elements with the "disabled" attribute specified</td>
+                    </tr>
+                    <tr>
+                        <td><code>:invalid</code></td>
+                        <td>Selects input elements with invalid values</td>
+                    </tr>
+                    <tr>
+                        <td><code>:optional</code></td>
+                        <td>Selects input elements with no "required" attribute specified</td>
+                    </tr>
+                    <tr>
+                        <td><code>:required</code></td>
+                        <td>Selects input elements with the "required" attribute specified</td>
+                    </tr>
+                    <tr>
+                        <td><code>:valid</code></td>
+                        <td>Selects input elements with valid values</td>
+                    </tr>
+                </table>
             </ul>
         </div>
 
