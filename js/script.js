@@ -3821,3 +3821,136 @@ function complex302() {
         <input type="submit" value="Submit">
     `;
 }
+
+function startBouncing() {
+    const container = document.querySelector('.bounce-container');
+    let dvdCount = 1; // Start with 1 DVD
+    let posX = [], posY = [], velX = [], velY = [];
+    const dvdWidth = 20;
+    const dvdHeight = 20;
+    const maxDvds = 8000; // Limit to 8000 DVDs
+    let lastDuplicateTime = 0; // Track last duplication time
+    const duplicationCooldown = 1; // Cooldown period in milliseconds
+    let animationId;
+    const rectangleCounter = document.getElementById('rectangleCount'); // Counter element
+    let isPlaying = false; // Track play state
+
+    // Create the initial DVD element
+    function createDVD() {
+        const dvd = document.createElement('div');
+        dvd.classList.add('bounce-rectangle');
+        container.appendChild(dvd);
+        return dvd;
+    }
+
+    let dvds = []; // Array to store DVD elements
+
+    // Initialize starting conditions (used in both start and reset)
+    function initStartConditions() {
+        posX = [Math.random() * (container.offsetWidth - dvdWidth)]; // Random starting X position
+        posY = [Math.random() * (container.offsetHeight - dvdHeight)]; // Random starting Y position
+        velX = [(Math.random() > 0.5 ? 1 : -1) * (2 + Math.random() * 4)]; // Random velocity for X
+        velY = [(Math.random() > 0.5 ? 1 : -1) * (2 + Math.random() * 4)]; // Random velocity for Y
+
+        // Clear existing DVDs and create the initial one
+        dvds.forEach(dvd => container.removeChild(dvd));
+        dvds = [createDVD()];
+        dvdCount = 1; // Reset count
+        updateRectangleCount(); // Update the count in the UI
+    }
+
+    function moveDVD() {
+        const containerWidth = container.offsetWidth;
+        const containerHeight = container.offsetHeight;
+        const now = Date.now(); // Get current time
+
+        for (let i = 0; i < dvdCount; i++) {
+            posX[i] += velX[i];
+            posY[i] += velY[i];
+
+            // Check for collision with container walls
+            let hitWall = false;
+            if (posX[i] + dvdWidth >= containerWidth || posX[i] <= 0) {
+                velX[i] = -velX[i]; // Reverse X direction
+                hitWall = true;
+            }
+            if (posY[i] + dvdHeight >= containerHeight || posY[i] <= 0) {
+                velY[i] = -velY[i]; // Reverse Y direction
+                hitWall = true;
+            }
+
+            // Duplicate DVD only if enough time has passed since the last duplication
+            if (hitWall && dvdCount < maxDvds && now - lastDuplicateTime > duplicationCooldown) {
+                duplicateDVD(containerWidth, containerHeight);
+                lastDuplicateTime = now; // Update last duplication time
+            }
+
+            // Update each DVD position
+            dvds[i].style.left = `${posX[i]}px`;
+            dvds[i].style.top = `${posY[i]}px`;
+        }
+
+        // Reset if the number of DVDs reaches 8000
+        if (dvdCount >= maxDvds) {
+            resetDvds();
+        }
+
+        animationId = requestAnimationFrame(moveDVD);
+    }
+
+    // Duplicate DVD on bounce
+    function duplicateDVD(containerWidth, containerHeight) {
+        if (dvdCount < maxDvds) {
+            dvdCount++;
+            posX.push(Math.random() * (containerWidth - dvdWidth)); // Random new position for the new DVD
+            posY.push(Math.random() * (containerHeight - dvdHeight));
+            velX.push((Math.random() > 0.5 ? 1 : -1) * (2 + Math.random() * 4)); // Random velocity
+            velY.push((Math.random() > 0.5 ? 1 : -1) * (2 + Math.random() * 4));
+            dvds.push(createDVD()); // Add new DVD
+            updateRectangleCount(); // Update the counter
+        }
+    }
+
+    // Reset the DVDs
+    function resetDvds() {
+        initStartConditions(); // Use same initial conditions for reset
+        if (isPlaying) {
+            moveDVD(); // Restart animation
+        }
+    }
+
+    // Update the rectangle counter
+    function updateRectangleCount() {
+        rectangleCounter.textContent = dvdCount; // Update the counter text
+    }
+
+    // Pause and Play functionality
+    document.getElementById('pauseBtn').addEventListener('click', function () {
+        cancelAnimationFrame(animationId);
+        isPlaying = false; // Update play state
+        document.getElementById('pauseBtn').style.display = 'none';
+        document.getElementById('playBtn').style.display = 'inline';
+    });
+
+    document.getElementById('playBtn').addEventListener('click', function () {
+        if (!isPlaying) {
+            moveDVD(); // Start animation on play
+            isPlaying = true; // Update play state
+        }
+        document.getElementById('playBtn').style.display = 'none';
+        document.getElementById('pauseBtn').style.display = 'inline';
+    });
+
+    // Reset functionality
+    document.getElementById('resetBtn').addEventListener('click', function () {
+        cancelAnimationFrame(animationId); // Stop animation
+        resetDvds(); // Reset to the initial state
+    });
+
+    // Start the animation with initialized values
+    initStartConditions(); // Prepare the initial state, but don't start moving yet
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    startBouncing();
+});

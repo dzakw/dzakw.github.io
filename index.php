@@ -21830,6 +21830,67 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <td>Selects input elements with valid values</td>
                     </tr>
                 </table>
+                <br>
+                <h5>Changing HTML Style</h5>
+                <li>Changing the style of an HTML element, is a variant of changing the content of an HTML element</li>
+                <li>To change the style of an HTML element, use this syntax:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"id"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">style</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">property</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"value"</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>The following example changes the style of a <code>&lt;p&gt;</code> element:</li>
+                <div class="block-outer" data-result-id="demoa396" data-result-value="document.getElementById('demoa396').style.color = 'red'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demo"</span>&gt;&lt;<span class="htmltagcolor">/p</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">style</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">color</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"red"</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa396" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>It is possible to use events to change the style of an HTML element</li>
+                <li>For example, this script changes the color of a <code>&lt;p&gt;</code> element when the mouse pointer is over it:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button</span> <span class="htmlattrnamecolor">type</span>=<span class="htmlattrvaluecolor">"button"</span> <span class="htmlattrnamecolor">class</span>=<span class="htmlattrvaluecolor">"run-btn"</span> <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"document.getElementById('demos1').style.color = 'red'"</span>&gt;Run &gt;&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">p</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demos1"</span> <span class="htmlattrnamecolor">onmouseover</span>=<span class="htmlattrvaluecolor">"this.style.color='blue'"</span>&gt;<span class="htmltextcolor">This is a demo paragraph. Hover to turn blue, click to turn red.</span>&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn" onclick="document.getElementById('demos1').style.color = 'red'">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-left: 6px;" id="demos1" onmouseover="this.style.color='blue'">This is a demo paragraph. Hover to turn blue, click to turn red.</p>
+                </div>
+                <br>
+
+                <div class="bounce-container">
+                </div><br>
+                <button id="playBtn">Play</button>
+                <button id="pauseBtn" style="display:none;">Pause</button>
+                <button id="resetBtn">Reset</button>
+                <p>Current DVD Count: <span id="rectangleCount">1</span></p>                
+                <br>
+                <li>DOM Events can be accessed in <a href="#subsec116" onclick="openSection('subsec116'); toggleSection('subsec116');">Go to HTML Event Attributes</a></li>
             </ul>
         </div>
 
