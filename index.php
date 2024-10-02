@@ -7153,7 +7153,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p><span class="jskeywordcolor">new</span> Set() <span class="commentcolor">//A new Set object</span></p>
                             <p><span class="jskeywordcolor">new</span> Date() <span class="commentcolor">//A new Date object</span></p>
                             <p><span class="jskeywordcolor">new</span> RegExp() <span class="commentcolor">//A new RegExp object</span></p>
-                            <p><span class="jskeywordcolor">new</span> Function() <span class="commentcolor">//A new Function object</span></p>                            
+                            <p><span class="jskeywordcolor">new</span> Function() <span class="commentcolor">//A new Function object 666</span></p>                            
                         </div>
                     </div>
                 </div>
@@ -21891,6 +21891,135 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <p>Current DVD Count: <span id="rectangleCount">1</span></p>                
                 <br>
                 <li>DOM Events can be accessed in <a href="#subsec116" onclick="openSection('subsec116'); toggleSection('subsec116');">Go to HTML Event Attributes</a></li>
+                <br>
+
+                <li>The <code>addEventListener()</code> method allows you to add many events to the same element, without overwriting existing events:</li>
+                <li>This example uses the <code>addEventListener()</code> method to add two click events to the same button.</li>
+                <div class="block-outer" data-result-id="demoa397" data-result-function="complex303">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">element</span>.<span class="jsfunctioncolor">addEventListener</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"mouseover"</span><span class="jsbracketcolor">,</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">element</span>.<span class="jsfunctioncolor">addEventListener</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"click"</span><span class="jsbracketcolor">,</span> <span class="jsfunctioncolor">mySecondFunction</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">element</span>.<span class="jsfunctioncolor">addEventListener</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"mouseout"</span><span class="jsbracketcolor">,</span> <span class="jsfunctioncolor">myThirdFunction</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn" id="myBtn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa397" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <li>The <code>removeEventListener()</code> method removes event handlers that have been attached with the addEventListener() method:</li>
+                <div class="block-outer" data-result-id="demoa398" data-result-function="complex304">
+                    <div class="block-cont" id="myDIV" style="padding-top: 4px;">
+                        <p style="margin-top:0">This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.</p>
+                        <p style="margin-top:0">Click the button to remove the div's event handler.</p>
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">element</span>.<span class="jsfunctioncolor">removeEventListener</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"mousemove"</span><span class="jsbracketcolor">,</span> <span class="jsfunctioncolor">myFunction</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                                <button type="button" class="run-btn" id="myBtn" onclick="removeHandler()">removeHandler()</button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa398" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>DOM Navigation</h5>
+                <li>Everything in an HTML document is a node. The <code>&lt;html&gt;</code> element is parent node, and every element inside it is a child node</li>
+                <li>Using the DOM, the following node properties can be used to navigate between nodes in the node tree:</li>
+                <ul>
+                    <li><code>parentNode</code></li>
+                    <li><code>childNodes[nodenumber]</code></li>
+                    <li><code>firstChild</code></li>
+                    <li><code>lastChild</code></li>
+                    <li><code>nextSibling</code></li>
+                    <li><code>previousSibling</code></li>
+                </ul>
+                <li>These properties allow you to navigate up and down the node tree, moving from one node to a related node</li>
+                <li>All the DOM elements can be written using the nodes notation like this</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="htmlbracketcolor">&lt;</span><span class="htmltagcolor">div</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"div1"</span><span class="htmlbracketcolor">&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="htmlbracketcolor">&lt;</span><span class="htmltagcolor">p</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"p1"</span><span class="htmlbracketcolor">&gt;</span>This is a paragraph.<span class="htmlbracketcolor">&lt;/</span><span class="htmltagcolor">p</span><span class="htmlbracketcolor">&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="htmlbracketcolor">&lt;</span><span class="htmltagcolor">p</span> <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"p2"</span><span class="htmlbracketcolor">&gt;</span>This is another paragraph.<span class="htmlbracketcolor">&lt;/</span><span class="htmltagcolor">p</span><span class="htmlbracketcolor">&gt;</span></p>
+                            <p><span class="htmlbracketcolor">&lt;/</span><span class="htmltagcolor">div</span><span class="htmlbracketcolor">&gt;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// This is using element notation to add a new paragraph</span></p>
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"div1"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">innerHTML</span> <span class="jsoperatorcolor">+=</span> <span class="jsstringcolor">"&lt;p&gt;This is a new paragraph.&lt;/p&gt;"</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="commentcolor">// This is using nodes notation to add a new paragraph</span></p>
+                            <p><span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">para</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">createElement</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">node</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">createTextNode</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"This another new paragraph."</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">para</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">appendChild</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">node</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <br>
+                            <p><span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">element</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"div1"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">child</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p1"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsvariablecolor">element</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">insertBefore</span><span class="jsbracketcolor">(</span><span class="jsvariablecolor">para</span><span class="jsoperatorcolor">,</span><span class="jsvariablecolor">child</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>DOM Collections and Node Lists</h5>
+                <li>The <code>getElementsByTagName()</code> method returns an <code>HTMLCollection</code> object.</li>
+                <li>An <code>HTMLCollection</code> object is an array-like list (collection) of HTML elements.</li>
+                <li>The following code selects all <code>&lt;p&gt;</code> elements in a document:</li>
+                <div class="block-outer" data-result-id="demoa399" data-result-function="complex305">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">myCollection</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementsByTagName</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa399"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"The innerHTML of the 666th paragraph is: "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCollection</span><span class="jsbracketcolor">[</span><span class="jsnumbercolor">666</span><span class="jsbracketcolor">]</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa399" class="result"><span></span> </p>
+                </div>
+                <li>The <code>length</code> property can also be used to get the number of elements in an <code>HTMLCollection</code></li>
+                <div class="block-outer" data-result-id="demoa400" data-result-value="'This document contains ' + document.getElementsByTagName('p').length + ' paragraphs. and '">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">const</span> <span class="jsvariablecolor">myCollection</span> <span class="jsoperatorcolor">=</span> <span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementsByTagName</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"p"</span><span class="jsbracketcolor">)</span><span class="jssemicoloncolor">;</span></p>
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"This document contains "</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">myCollection</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">length</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">" paragraphs."</span><span class="jssemicoloncolor">;</span>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa400" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>The HTML DOM <code>NodeList</code> object is a list of nodes extracted from a document.</li>
+                <li>A <code>NodeList</code> object is almost the same as an <code>HTMLCollection</code> object.</li>
+                <li>It is an array-like object, with <code>length</code> property and <code>item()</code> method</li>
+                <li>The <code>NodeList</code> object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0</li>
+                <li>An <code>HTMLCollection</code> is always a live collection. Example: if you add an element to the document, the <code>HTMLCollection</code> will instantly contain the new element</li>
+                <li>A <code>NodeList</code> is most often a static collection. Example: if you add an element to the document, it will not automatically be added to the <code>NodeList</code></li>
             </ul>
         </div>
 

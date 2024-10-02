@@ -3954,3 +3954,43 @@ function startBouncing() {
 document.addEventListener("DOMContentLoaded", function () {
     startBouncing();
 });
+
+function complex303() {
+    var x = document.getElementById("myBtn");
+    x.addEventListener("mouseover", myFunction);
+    x.addEventListener("click", mySecondFunction);
+    x.addEventListener("mouseout", myThirdFunction);
+    
+    function myFunction() {
+      document.getElementById("demoa397").innerHTML += "Moused over!<br>";
+    }
+    
+    function mySecondFunction() {
+      document.getElementById("demoa397").innerHTML += "Clicked!<br>";
+    }
+    
+    function myThirdFunction() {
+      document.getElementById("demoa397").innerHTML += "Moused out!<br>";
+    }
+}
+
+function myFunctionas() {
+    document.getElementById("demoa398").innerHTML = Math.random();
+    }
+
+function complex304() {
+    document.getElementById("myDIV").addEventListener("mousemove", myFunctionas);
+}
+
+function removeHandler() {
+    document.getElementById("myDIV").removeEventListener("mousemove", myFunctionas);
+}
+
+function complex304() {
+    document.getElementById("demoa399").innerHTML = "This is a paragraph.";
+}
+
+function complex305() {
+    const myCollection = document.getElementsByTagName("p");
+    document.getElementById("demoa399").innerHTML = "The innerHTML of the 666th paragraph is: " + myCollection[666].innerHTML;
+}
