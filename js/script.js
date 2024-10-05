@@ -3994,3 +3994,9 @@ function complex305() {
     const myCollection = document.getElementsByTagName("p");
     document.getElementById("demoa399").innerHTML = "The innerHTML of the 666th paragraph is: " + myCollection[666].innerHTML;
 }
+
+function complex306() {
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    return "Browser inner window width: " + w + "<br>Browser inner window height: " + h;
+}

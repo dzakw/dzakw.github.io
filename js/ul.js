@@ -396,6 +396,50 @@ function generateList26() {
     });
 }
 
+function generateList27() {
+    const methods = [
+        "<code>screen.width</code>", "<code>screen.height</code>", "<code>screen.availWidth</code>", "<code>screen.availHeight</code>", "<code>screen.colorDepth</code>", 
+        "<code>screen.pixelDepth</code>" 
+    ];
+
+    const ul = document.getElementById('threeColumn26');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 296}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList28() {
+    const methods = [
+        "<code>window.location.href</code>", "<code>window.location.hostname</code>", "<code>window.location.pathname</code>", "<code>window.location.protocol</code>",
+        "<code>window.location.assign()</code>"
+    ];
+
+    const ul = document.getElementById('threeColumn27');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 302}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+function generateList28() {
+    const methods = [
+        "Cookie Enabled", "App Version", "Platform", "Language", "OnLine", "Java Enabled"
+    ];
+
+    const ul = document.getElementById('threeColumn28');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 307}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;

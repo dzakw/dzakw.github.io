@@ -86,6 +86,7 @@
                     <li><a href="#subsec423" onclick="openSection('subsec423'); openSection('section4')">Debugging, Style Guide, and Best Practices</a></li>
                     <li><a href="#subsec424" onclick="openSection('subsec424'); openSection('section4')">JavaScript Async</a></li>
                     <li><a href="#subsec425" onclick="openSection('subsec425'); openSection('section4')">JavaScript HTML DOM</a></li>
+                    <li><a href="#subsec426" onclick="openSection('subsec426'); openSection('section4')">JavaScript Browser BOM</a></li>
                 </ul>
             </ul>
         </div>
@@ -22022,6 +22023,541 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <li>A <code>NodeList</code> is most often a static collection. Example: if you add an element to the document, it will not automatically be added to the <code>NodeList</code></li>
             </ul>
         </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec426" onclick="toggleSection('subsec426')">JavaScript Browser Object Model</h3>
+        <div class="subsection" id="subsec426Content" style="display: none;">
+            <ul>
+                <li>The Browser Object Model (BOM) allows JavaScript to "talk to" the browser</li>
+                <li>ince modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM.</li>
+                <br>
+                <h5>Window Object</h5>
+                <li>The window object represents an open window in a browser</li>
+                <li>The window object is supported by all browsers. It represents the browser's window</li>
+                <li>All global JavaScript objects, functions, and variables automatically become members of the window object</li>
+                <li>Global variables are properties of the window object</li>
+                <li>Global functions are methods of the window object</li>
+                <li>Even the document object (of the HTML DOM) is a property of the window object</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">window</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">document</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Hello World!"</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Is the same as:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demo"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">"Hello World!"</span><span class="jssemicoloncolor">;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <li>Two properties can be used to determine the size of the browser window.</li>
+                <li>These two properties are <code>window.innerHeight</code> and <code>window.innerWidth</code></li>
+                <li>The following code displays the inner width and height of the browser window:</li>
+                <br>
+
+                <h5>Window Screen</h5>
+                <li>The <code>window.screen</code> object contains information about the user's screen.</li>
+                <li>It can be written with <code>window.screen</code> or <code>screen</code></li>
+
+                <ul class="threeColumn" id="threeColumn26"></ul>
+
+                <div>
+                    <div id="example4296" style="display: none;">
+                        <h6>Window Screen Width</h6>
+                        <li>The <code>screen.width</code> property returns the width of the visitor's screen in pixels.</li>
+                        <div class="block-outer" data-result-id="demoa401" data-result-value="document.getElementById('demoa401').innerHTML = 'Screen Width: ' + screen.width">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa401"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa401"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Screen Width: ' + screen.width</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa401" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4297" style="display: none;">
+                        <h6>Window Screen Height</h6>
+                        <li>The <code>screen.height</code> property returns the height of the visitor's screen in pixels.</li>
+                        <div class="block-outer" data-result-id="demoa402" data-result-value="document.getElementById('demoa402').innerHTML = 'Screen Height: ' + screen.height">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa402"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa402"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Screen Height: ' + screen.height</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa402" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4298" style="display: none;">
+                        <h6>Window Screen Available Width</h6>
+                        <li>The <code>screen.availWidth</code> property returns the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.</li>
+                        <div class="block-outer" data-result-id="demoa403" data-result-value="document.getElementById('demoa403').innerHTML = 'Available Screen Width: ' + screen.availWidth">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa403"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa403"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Available Screen Width: ' + screen.availWidth</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa403" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4299" style="display: none;">
+                        <h6>Window Screen Available Height</h6>
+                        <li>The <code>screen.availHeight</code> property returns the height of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.</li>
+                        <div class="block-outer" data-result-id="demoa404" data-result-value="document.getElementById('demoa404').innerHTML = 'Available Screen Height: ' + screen.availHeight">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa404"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa404"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Available Screen Height: ' + screen.availHeight</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa404" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4300" style="display: none;">
+                        <h6>Window Screen Color Depth</h6>
+                        <li>The <code>screen.colorDepth</code> property returns the number of bits used to display one color.</li>
+                        <li>All modern computers use 24 bit or 32 bit hardware for color resolution</li>
+                        <div class="block-outer" data-result-id="demoa405" data-result-value="document.getElementById('demoa405').innerHTML = 'Color Depth: ' + screen.colorDepth">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa405"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa405"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Color Depth: ' + screen.colorDepth</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="example4301" style="display: none;">
+                        <h6>Window Screen Pixel Depth</h6>
+                        <li>The <code>screen.pixelDepth</code> property returns the color resolution of the screen.</li>
+                        <li>It is similar to the <code>screen.colorDepth</code> property, but returns the number of bits used to display one pixel.</li>
+                        <div class="block-outer" data-result-id="demoa406" data-result-value="document.getElementById('demoa406').innerHTML = 'Pixel Depth: ' + screen.pixelDepth">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa406"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa406"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Pixel Depth: ' + screen.pixelDepth</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa406" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+
+                <h5>Window Location</h5>
+                <li>The <code>window.location</code> object can be used to get the current page address (URL) and to redirect the browser to a new page</li>
+                <li>The <code>window.location</code> object can be written without the window prefix</li>
+
+                <ul class="threeColumn" id="threeColumn27"></ul>
+
+                <div>
+                    <div id="example4302" style="display: none;">
+                        <h6>Window Location Href</h6>
+                        <li>The <code>location.href</code> property returns the URL of the current page.</li>
+                        <div class="block-outer" data-result-id="demoa407" data-result-value="document.getElementById('demoa407').innerHTML = 'Page location is ' + location.href">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa407"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa407"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Page location is ' + location.href</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa407" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4303" style="display: none;">
+                        <h6>Window Location Hostname</h6>
+                        <li>The <code>location.hostname</code> property returns the name of the internet host (of the current page).</li>
+                        <div class="block-outer" data-result-id="demoa408" data-result-value="document.getElementById('demoa408').innerHTML = 'Page hostname is ' + location.hostname">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa408"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa408"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Page hostname is ' + location.hostname</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa408" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4304" style="display: none;">
+                        <h6>Window Location Pathname</h6>
+                        <li>The <code>location.pathname</code> property returns the path and filename of the current page.</li>
+                        <div class="block-outer" data-result-id="demoa409" data-result-value="document.getElementById('demoa409').innerHTML = 'Page path is ' + location.pathname">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa409"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa409"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Page path is ' + location.pathname</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa409" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4305" style="display: none;">
+                        <h6>Window Location Protocol</h6>
+                        <li>The <code>location.protocol</code> property returns the web protocol used (http: or https:).</li>
+                        <div class="block-outer" data-result-id="demoa410" data-result-value="document.getElementById('demoa410').innerHTML = 'Page protocol is ' + location.protocol">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa410"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa410"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Page protocol is ' + location.protocol</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa410" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4306" style="display: none;">
+                        <h6>Window Location Assign</h6>
+                        <li>The <code>location.assign()</code> method loads a new document.</li>
+                        <li>The argument is the URL of the page to navigate to.</li>
+                        <div class="block-outer" data-result-id="demoa411" data-result-value="location.assign('https://www.w3schools.com')">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"location.assign('https://www.w3schools.com')" </span>&gt;Visit W3Schools&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa411" class="result"><span></span> </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>Window History</h5>
+                <li>The <code>window.history</code> object contains the browsers history.</li>
+                <li>The history object contains the URLs visited by the user (within a browser window).</li>
+                <li>Some of the history object methods are:</li>
+                <ul>
+                    <li><code>history.back()</code> - same as clicking back in the browser</li>
+                    <li><code>history.forward()</code> - same as clicking forward in the browser</li>
+                </ul>
+                <br>
+                <h6>Window History Back</h6>
+                <li>The <code>history.back()</code> method loads the previous URL in the history list.</li>
+                <div class="block-outer" data-result-id="demoa412" data-result-value="history.back()">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa412"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">history.back()</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa412" class="result"><span></span> </p>
+                </div>
+                <br>
+                <h6>Window History Forward</h6>
+                <li>The <code>history.forward()</code> method loads the next URL in the history list.</li>
+                <div class="block-outer" data-result-id="demoa413" data-result-value="history.forward()">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa413"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">history.forward()</span><span class="jssemicoloncolor">;</span></p>
+                            <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa413" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>Window Navigator</h5>
+                <li>The <code>window.navigator</code> object contains information about the visitor's browser.</li>
+                <li>The navigator object can be written without the window prefix.</li>
+                <li>Some of the navigator object properties are:</li>
+                <ul>
+                    <li><code>navigator.cookieEnabled</code> - returns true if cookies are enabled, otherwise false</li>
+                    <li><code>navigator.appVersion</code> - returns version information about the browser</li>
+                    <li><code>navigator.platform</code> - returns for which platform the browser is compiled</li>
+                    <li><code>navigator.language</code> - returns the language of the browser</li>
+                    <li><code>navigator.onLine</code> - returns true if the browser is online</li>
+                    <li><code>navigator.javaEnabled()</code> - returns true if Java is enabled</li>
+                </ul>
+                <br>
+                <ul class="threeColumn" id="threeColumn28"></ul>
+
+                <div>
+                    <div id="example4307" style="display: none;">
+                        <h6>Window Navigator Cookie Enabled</h6>
+                        <li>The <code>navigator.cookieEnabled</code> property returns true if cookies are enabled, otherwise false.</li>
+                        <div class="block-outer" data-result-id="demoa414" data-result-value="document.getElementById('demoa414').innerHTML = 'Cookies Enabled is ' + navigator.cookieEnabled">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa414"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa414"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Cookies Enabled is ' + navigator.cookieEnabled</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa414" class="result"><span></span> </p>
+                        </div>        
+                    </div>
+
+                    <div id="example4308" style="display: none;">
+                        <h6>Window Navigator App Version</h6>
+                        <li>The <code>navigator.appVersion</code> property returns version information about the browser.</li>
+                        <div class="block-outer" data-result-id="demoa415" data-result-value="document.getElementById('demoa415').innerHTML = 'App Version is ' + navigator.appVersion">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa415"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa415"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'App Version is ' + navigator.appVersion</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa415" class="result"><span></span> </p>
+                        </div>        
+                    </div>
+
+                    <div id="example4309" style="display: none;">
+                        <h6>Window Navigator Platform</h6>
+                        <li>The <code>navigator.platform</code> property returns for which platform the browser is compiled.</li>
+                        <div class="block-outer" data-result-id="demoa416" data-result-value="document.getElementById('demoa416').innerHTML = 'Platform is ' + navigator.platform">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa416"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa416"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Platform is ' + navigator.platform</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa416" class="result"><span></span> </p>
+                        </div>
+                    </div>
+
+                    <div id="example4310" style="display: none;">
+                        <h6>Window Navigator Language</h6>
+                        <li>The <code>navigator.language</code> property returns the language of the browser.</li>
+                        <div class="block-outer" data-result-id="demoa417" data-result-value="document.getElementById('demoa417').innerHTML = 'Language is ' + navigator.language">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa417"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa417"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Language is ' + navigator.language</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa417" class="result"><span></span> </p>
+                        </div>        
+                    </div>
+
+                    <div id="example4311" style="display: none;">
+                        <h6>Window Navigator OnLine</h6>
+                        <li>The <code>navigator.onLine</code> property returns true if the browser is online.</li>
+                        <div class="block-outer" data-result-id="demoa418" data-result-value="document.getElementById('demoa418').innerHTML = 'Online is ' + navigator.onLine">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa418"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa418"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Online is ' + navigator.onLine</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa418" class="result"><span></span> </p>
+                        </div>        
+                    </div>
+
+                    <div id="example4312" style="display: none;">
+                        <h6>Window Navigator Java Enabled</h6>
+                        <li>The <code>navigator.javaEnabled()</code> method returns true if Java is enabled.</li>
+                        <div class="block-outer" data-result-id="demoa419" data-result-value="document.getElementById('demoa419').innerHTML = 'Java is ' + navigator.javaEnabled()">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa419"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                                    <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa419"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Java is ' + navigator.javaEnabled()</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa419" class="result"><span></span> </p>
+                        </div>        
+                    </div>
+
+                </div>
+            </ul>
+        </div>
+        <hr>
 
     </div>
     <hr>
