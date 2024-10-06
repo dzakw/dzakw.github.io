@@ -22533,12 +22533,12 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     <div id="example4312" style="display: none;">
                         <h6>Window Navigator Java Enabled</h6>
                         <li>The <code>navigator.javaEnabled()</code> method returns true if Java is enabled.</li>
-                        <div class="block-outer" data-result-id="demoa419" data-result-value="document.getElementById('demoa419').innerHTML = 'Java is ' + navigator.javaEnabled()">
+                        <div class="block-outer" data-result-id="demoa419" data-result-value="document.getElementById('demoa419').innerHTML = 'Java is enabled: ' + navigator.javaEnabled()">
                             <div class="block-cont">
                                 <div class="block-bl">
                                     <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa419"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
                                     <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa419"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Java is ' + navigator.javaEnabled()</span><span class="jssemicoloncolor">;</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">document</span><span class="jsoperatorcolor">.</span><span class="jsfunctioncolor">getElementById</span><span class="jsbracketcolor">(</span><span class="jsstringcolor">"demoa419"</span><span class="jsbracketcolor">)</span><span class="jsoperatorcolor">.</span><span class="jsvariablecolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Java is enabled: ' + navigator.javaEnabled()</span><span class="jssemicoloncolor">;</span></p>
                                     <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
                                 </div>
                                 <div class="block-btn-cont">
@@ -22553,8 +22553,185 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                             <p id="demoa419" class="result"><span></span> </p>
                         </div>        
                     </div>
-
                 </div>
+                <br>
+
+                <h5>Window Popup Alert</h5>
+                <li>The <code>alert()</code> method displays an alert box with a specified message and an OK button.</li>
+                <h6>Window Alert Box</h6>
+                <li>The <code>alert()</code> method is often used if you want to make sure information comes through to the user.</li>
+                <li>When an alert box pops up, the user will have to click "OK" to proceed.</li>
+                <div class="block-outer" data-result-id="demoa420" data-result-value="alert('Hello! I am an alert box!')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"alert('Hello! I am an alert box!')" </span>&gt;Try it&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa420" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h6>Window Confirm Box</h6>
+                <li>The <code>confirm()</code> method displays a dialog box with a specified message, along with an OK and a Cancel button.</li>
+                <li>A confirm box is often used if you want the user to verify or accept something.</li>
+                <li>When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed.</li>
+                <div class="block-outer" data-result-id="demoa421" data-result-value="confirm('Press a button!')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"confirm('Press a button!')" </span>&gt;Try it&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa421" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h6>Window Prompt Box</h6>  
+                <li>The <code>prompt()</code> method displays a dialog box that prompts the visitor for input.</li>
+                <li>A prompt box is often used if you want the user to input a value before entering a page.</li>
+                <li>When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.</li>
+                <div class="block-outer" data-result-id="demoa422" data-result-value="prompt('Please enter your name', 'Harry Potter')">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"prompt('Please enter your name', 'Harry Potter')" </span>&gt;Try it&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa422" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>JavaScript Timing Events</h5>
+                <li>JavaScript can be executed in time intervals.</li>
+                <li>This is called timing events.</li>
+                <li>There are two key methods for timing events:</li>
+                <ul>
+                    <li><code>setTimeout(function, milliseconds)</code> - executes a function, after waiting a specified number of milliseconds</li>
+                    <li><code>setInterval(function, milliseconds)</code> - same as setTimeout(), but repeats the execution of the function continuously</li>
+                </ul>
+                <br>
+                <h6>Window Set Timeout</h6>
+                <li>The <code>setTimeout()</code> method calls a function or evaluates an expression after a specified number of milliseconds.</li>
+                <div class="block-outer" data-result-id="demoa423" data-result-value="setTimeout(function(){ alert('Hello!') }, 3000)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"setTimeout(function(){ alert('Hello!') }, 3000)" </span>&gt;Try it&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa423" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>To stop the execution of <code>setTimeout()</code> use the <code>clearTimeout()</code> method.</li>
+                <div class="block-outer" data-result-id="demoa424" data-result-value="myVar = setTimeout(function(){ alert('Hello!') }, 3000); clearTimeout(myVar)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"myVar = setTimeout(function(){ alert('Hello!') }, 3000); clearTimeout(myVar)" </span>&gt;Try it&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa424" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h6>Window Set Interval</h6>
+                <li>The <code>setInterval()</code> method calls a function or evaluates an expression at specified intervals (in milliseconds).</li>
+                <div class="block-outer" data-result-id="demoa425" data-result-value="setInterval(function(){ alert('Hello!') }, 3000)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"setInterval(function(){ alert('Hello!') }, 3000)" </span>&gt;Try it&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa425" class="result"><span></span> </p>
+                </div>
+                <br>
+                <li>To stop the execution of <code>setInterval()</code> use the <code>clearInterval()</code> method.</li>
+                <div class="block-outer" data-result-id="demoa426" data-result-value="myVar = setInterval(function(){ alert('Hello!') }, 3000); clearInterval(myVar)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">button <span class="htmlattrnamecolor">onclick</span>=<span class="htmlattrvaluecolor">"myVar = setInterval(function(){ alert('Hello!') }, 3000); clearInterval(myVar)" </span>&gt;Try it&lt;/<span class="htmltagcolor">button</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa426" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>JavaScript Cookies</h5>
+                <li>Cookies are data, stored in small text files, on your computer.</li>
+                <li>When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.</li>
+                <li>Cookies were invented to solve the problem "how to remember information about the user":</li>
+                <ul>
+                    <li>When a user visits a web page, his/her name can be stored in a cookie.</li>
+                    <li>Next time the user visits the page, the cookie remembers his/her name.</li>
+                </ul>
+                <li>Cookies are saved in name-value pairs like:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>username = John Doe</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>When a browser requests a web page from a server, cookies belonging to the page are added to the request.</li>
+                <li>This way the server gets the necessary data to "remember" information about users.</li>
+                <li>JavaScript can create, read, and delete cookies with the <code>document.cookie</code> property.</li>
+                <br>
+                
+
+
             </ul>
         </div>
         <hr>
