@@ -22729,8 +22729,131 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <li>This way the server gets the necessary data to "remember" information about users.</li>
                 <li>JavaScript can create, read, and delete cookies with the <code>document.cookie</code> property.</li>
                 <br>
-                
+                <li>The <code>document.cookie</code> properties can be used to create, read, and delete cookies.</li>
+                <li>With JavaScript, a cookie can be created like this:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>document.cookie = <span class="jsstringcolor">"username=John Doe"</span>;</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>With JavaScript, a cookie can be read like this:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>var x = document.cookie;</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>With JavaScript, a cookie can be deleted by setting the expires parameter to a past date like this:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>document.cookie = <span class="jsstringcolor">"username=John Doe; expires=Thu, 01 Jan 1970 00:00:00 UTC"</span>;</p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <hr>
 
+        <h3 class="subsection" id="subsec427" onclick="toggleSection('subsec427')">JavaScript Web APIs</h3>
+        <div class="subsection" id="subsec427Content" style="display: none;">
+            <ul>
+                <li>API stands for <b>Application Programming Interface</b></li>
+                <li>All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data.</li>
+                <li>Third party APIs are not built into the browser.</li>
+                <li>To use these APIs, you will have to download the code from the web.</li>
+                <li>For example:</li>
+                <ul>
+                    <li>Youtube API - Allows to display videos on a web site</li>
+                    <li>Twitter API - Allows you to display Tweets on a web site.</li>
+                    <li>Facebook API - Allows you to display Facebook info on a web site.</li>
+                </ul>
+                <br>
+
+                <h5>Form Validation API</h5>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>checkValidity()</td>
+                        <td>Checks whether the form has any constraints and whether it satisfies them.</td>
+                    </tr>
+                    <tr>
+                        <td>setCustomValidity(message)</td>
+                        <td>Sets a custom error message that is displayed when a form is submitted.</td>
+                    </tr>
+                </table>
+                <br>
+                <h6>Constraint Validation DOM Properties</h6>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>validity</td>
+                        <td>Returns a ValidityState object that contains the validity states of an element.</td>
+                    </tr>
+                    <tr>
+                        <td>validationMessage</td>
+                        <td>Returns the error message that would be displayed if the user submits the form.</td>
+                    </tr>
+                    <tr>
+                        <td>willValidate</td>
+                        <td>Returns true if an element will be validated when the form is submitted.</td>
+                    </tr>
+                </table>
+                <br>
+                <h6>Validity Properties</h6>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>customError</td>
+                        <td>Returns true if a custom validity message is set.</td>
+                    </tr>
+                    <tr>
+                        <td>patternMismatch</td>
+                        <td>Returns true if an element's value does not match its pattern attribute.</td>
+                    </tr>
+                    <tr>
+                        <td>rangeOverflow</td>
+                        <td>Returns true if an element's value is greater than the max attribute.</td>
+                    </tr>
+                    <tr>
+                        <td>rangeUnderflow</td>
+                        <td>Returns true if an element's value is less than the min attribute.</td>
+                    </tr>
+                    <tr>
+                        <td>stepMismatch</td>
+                        <td>Returns true if an element's value is invalid per its step attribute.</td>
+                    </tr>
+                    <tr>
+                        <td>tooLong</td>
+                        <td>Returns true if an element's value exceeds its maxLength attribute.</td>
+                    </tr>
+                    <tr>
+                        <td>typeMismatch</td>
+                        <td>Returns true if an element's value is invalid per its type attribute.</td>
+                    </tr>
+                    <tr>
+                        <td>valueMissing</td>
+                        <td>Returns true if an element has a required attribute, but no value.</td>
+                    </tr>
+                    <tr>
+                        <td>valid</td>
+                        <td>Returns true if an element's value is valid.</td>
+                    </tr>
+                </table>
 
             </ul>
         </div>
