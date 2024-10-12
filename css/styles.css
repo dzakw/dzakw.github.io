@@ -62,7 +62,7 @@ h3.subsection:hover {
   color:gainsboro; /* Set the text color to gainsboro */
 }
 
-li {
+ul li {
   list-style-type:none;
 }
 
@@ -1074,6 +1074,30 @@ mark {
   display: inline-block;
   padding: 6px;
 }
+
+/* Style for the employee details */
+.employee-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.employee-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.employee-card strong {
+  color: #555;
+  font-size: 16px;
+}
+
+
 
 /* The following styles apply to the <body> element when the screen width is less than or equal to 768px */
 @media (max-width: 768px) {

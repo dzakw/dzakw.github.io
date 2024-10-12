@@ -87,6 +87,8 @@
                     <li><a href="#subsec424" onclick="openSection('subsec424'); openSection('section4')">JavaScript Async</a></li>
                     <li><a href="#subsec425" onclick="openSection('subsec425'); openSection('section4')">JavaScript HTML DOM</a></li>
                     <li><a href="#subsec426" onclick="openSection('subsec426'); openSection('section4')">JavaScript Browser BOM</a></li>
+                    <li><a href="#subsec427" onclick="openSection('subsec427'); openSection('section4')">JavaScript Web API</a></li>
+                    <li><a href="#subsec428" onclick="openSection('subsec428'); openSection('section4')">JavaScript AJAX</a></li>
                 </ul>
             </ul>
         </div>
@@ -21731,6 +21733,32 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                 <li>The code above will do form validation both using <code>validateCharacter</code> and <code>validateIdCardCharacter</code> function and also by including <code>required</code> attribute in the input field</li>
                 <li>What it does is, it will prevent user to input number in the Name field, prevent letter input in ID Card field, and also prevent the Name and ID Card field to be empty.</li>
                 <li>Below is the data input in the database based on user input:</li>
+                <?php
+                // Include your database connection
+                include 'php/connect.php';
+            
+                // Define how many results per page
+                $results_per_page = 10;
+            
+                // Find out the number of total results in the table
+                $sql = "SELECT COUNT(idcard) AS total FROM karyawan";
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+                $total_results = $row['total'];
+            
+                // Determine the number of total pages available
+                $total_pages = ceil($total_results / $results_per_page);
+            
+                // Find out what page number the user is on
+                $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+            
+                // Calculate the starting limit for the results on the current page
+                $starting_limit = ($page - 1) * $results_per_page;
+            
+                // Fetch data from the 'karyawan' table with LIMIT and OFFSET
+                $sql = "SELECT idcard, name, team FROM karyawan LIMIT $starting_limit, $results_per_page";
+                $result = $conn->query($sql);
+                ?>
                 <table class="key-dec">
                     <tr>
                         <th>ID Card</th>
@@ -21738,27 +21766,42 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <th>Tim</th>
                     </tr>
                     <?php
-                        // Include your database connection
-                        include 'php/connect.php';
-
-                        // Fetch data from the 'karyawan' table
-                        $sql = "SELECT idcard, name, team FROM karyawan"; // Ensure 'team' is the correct column name
-                        $result = $conn->query($sql);
-
                         // Check if there are any rows in the result set
                         if ($result->num_rows > 0) {
                             // Output data for each row
                             while ($row = $result->fetch_assoc()) {
-                                echo "<tr><td>" . $row["idcard"] . "</td><td>" . $row["name"] . "</td><td>" . $row["team"] . "</td></tr>"; // Ensure idcard, name, and team are displayed
+                                echo "<tr><td>" . $row["idcard"] . "</td><td>" . $row["name"] . "</td><td>" . $row["team"] . "</td></tr>";
                             }
                         } else {
-                            echo "<tr><td colspan='3'>No employees found</td></tr>"; // Adjusted colspan to match number of columns
+                            echo "<tr><td colspan='3'>No employees found</td></tr>";
                         }
-
+                
                         // Close the database connection
                         $conn->close();
-                    ?>                    
+                    ?>
                 </table>
+                
+                <!-- Pagination Controls -->
+                <div class="pagination">
+                    <?php
+                    if ($page > 1) {
+                        echo '<a href="?page=' . ($page - 1) . '">Previous</a> ';
+                    }
+                
+                    for ($i = 1; $i <= $total_pages; $i++) {
+                        if ($i == $page) {
+                            echo '<strong>' . $i . '</strong> '; // Highlight current page
+                        } else {
+                            echo '<a href="?page=' . $i . '">' . $i . '</a> ';
+                        }
+                    }
+                
+                    if ($page < $total_pages) {
+                        echo '<a href="?page=' . ($page + 1) . '">Next</a>';
+                    }
+                    ?>
+                </div>
+            
                 <br>
                 <li>As can be seen above, data validation can be done using HTML (using the <code>required</code> attribute, and also using JavaScript.</li>
                 <li>HTML user validation called <b>Client side validation</b>. This will be performed by the web browser, <b>before</b> input is sent to a web server</li>
@@ -22855,10 +22898,631 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </tr>
                 </table>
 
+                <h5>Web History API</h5>
+                <li>The <code>history</code> object contains the browsers history.</li>
+                <li>The history object contains the URLs visited by the user (within a browser window).</li>
+                <li>Some of the history object methods are:</li>
+                <ul>
+                    <li><code>history.back()</code> - same as clicking back in the browser</li>
+                    <li><code>history.forward()</code> - same as clicking forward in the browser</li>
+                    <li><code>history.go(number)</code> - loads a specific URL from the history list. Negative for back, positive for forward</li>
+                </ul>
+
+                <h5>Web Storage API</h5>
+                <li>The Web Storage API provides mechanisms by which browsers can store key/value pairs locally within the user's browser.</li>
+                <li>There are two types of storage objects:</li>
+                <h6>localStorage Object</h6>
+                <li>The <code>localStorage</code> object stores data with no expiration date.</li>
+                <li>The <code>localStorage.setItem()</code> method stores a data item in a storage.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>localStorage.setItem(<span class="jsstringcolor">'lastname'</span>, <span class="jsstringcolor">'Verstappen'</span>);</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>The <code>localStorage.getItem()</code> method retrieves a data item from a storage.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>var lastname = localStorage.getItem(<span class="jsstringcolor">'lastname'</span>);</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>The <code>localStorage.removeItem()</code> method removes a data item from a storage.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>localStorage.removeItem(<span class="jsstringcolor">'lastname'</span>);</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>The <code>localStorage.clear()</code> method clears all data items from a storage.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>localStorage.clear();</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h6>sessionStorage Object</h6>
+                <li>The <code>sessionStorage</code> object stores data for one session.</li>
+                <li>The data is deleted when the user closes the specific browser tab.</li>
+                <li>The <code>sessionStorage.setItem()</code> method stores a data item in a storage.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>sessionStorage.setItem(<span class="jsstringcolor">'lastname'</span>, <span class="jsstringcolor">'Verstappen'</span>);</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>The <code>sessionStorage.getItem()</code> method retrieves a data item from a storage.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>var lastname = sessionStorage.getItem(<span class="jsstringcolor">'lastname'</span>);</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li>All the storage object properties and methods can be used both for localStorage object and sessionStorage object.</li>
+                
+                <h5>Web Worker API</h5>
+                <li>Web Workers are a simple means for web content to run scripts in background threads.</li>
+                <li>The worker thread can perform tasks without affecting the performance of the page.</li>
+                <li>The JavaScript code inside a web worker will run independently in the background while user continue to do whatever they want: clicking, selecting things, etc.</li>
+                <li>Before creating a web worker, it is better to check whether the user's broser supports it:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">if</span> (<span class="jskeywordcolor">typeof</span>(<span class="jsvariablecolor">Worker</span>) !== <span class="jsstringcolor">"undefined"</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Yes! Web worker support!</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Some code.....</span></p>
+                            <p>} <span class="jskeywordcolor">else</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// Sorry! No Web Worker support..</span></p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                </div>
+                <li>Web worker itself is a separate JavaScript file.</li>
+                <li>Here, we create a script that counts. The script is stored in the "js/demo_workers2.js" file:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// demo_workers.js</span></p>
+                            <p><span class="jskeywordcolor">let</span> i = <span class="jsnumbercolor">0</span>;</p>
+                            <br>
+                            <p><span class="jskeywordcolor">function</span> timedCount() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;i ++;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;postMessage(i);</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(<span class="jsstringcolor">"timedCount()"</span>,<span class="jsnumbercolor">500</span>);</p>
+                            <p>}</p>
+                            <br>
+                            <p>timedCount();</p>
+                        </div>
+                    </div>
+                </div>
+                <li>The important part of the code above is the <code>postMessage()</code> method - which is used to post a message back to the HTML page.</li>
+                <blockquote>
+                    <p>Note: Normally web workers are not used for such simple scripts, but for more CPU intensive tasks.</p>
+                </blockquote>
+                <li>Now that we have the web worker file, we need to call it from an HTML page.</li>
+                <li>The following lines checks if the worker already exists, if not - it creates a new web worker object and runs the code in "demo_workers2.js":</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">if</span>(<span class="jskeywordcolor">typeof</span>(<span class="jsvariablecolor">w</span>) == <span class="jsstringcolor">"undefined"</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;><span class="jsvariablecolor">w</span> = <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Worker</span>(<span class="jsstringcolor">"js/demo_workers2.js"</span>);</p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                </div>
+                <li>Now, we need to create a function that will receive messages from the worker and display them:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">w</span>.onmessage = <span class="jskeywordcolor">function</span>(<span class="jsvariablecolor">event</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(<span class="jsstringcolor">'result'</span>).innerHTML = <span class="jsvariablecolor">event</span>.data;</p>
+                            <p>};</p>
+                        </div>
+                    </div>
+                </div>
+                <li>When the web worker posts a message, the code within the event listener is executed. The data from the web worker is stored in event.data.</li>
+                <li>When a web worker object is created, it will continue to listen for messages (even after the external script is finished) until it is terminated.</li>
+                <li>To terminate a web worker, and free browser/computer resources, use the <code>terminate()</code> method.</li>
+                <li>If the worker variable set to <code>undefined</code> after it has been terminated, the code then can be reused.</li>
+
+                <p>Count numbers: <output id="resultza"></output></p>
+                <button onclick="startWorker()">Start Worker</button>
+                <button onclick="stopWorker()">Stop Worker</button>
+                <br>
+
+                <h5>Web Fetch API</h5>
+                <li>The Fetch API interface allows web browser to make HTTP requests to web servers.</li>
+                <li>The example below fetches a file and displays the content:</li>
+                <div class="block-outer" data-result-id="demoa427" data-result-value="fetch('demo_text.txt').then(response => response.text()).then(data => document.getElementById('demoa427').innerHTML = data)">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>&lt;<span class="htmltagcolor">p <span class="htmlattrnamecolor">id</span>=<span class="htmlattrvaluecolor">"demoa427"</span>&gt;&lt;/<span class="htmltagcolor">p</span>&gt;</p>
+                            <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;fetch(<span class="jsstringcolor">'demo_text.txt'</span>).<span class="jskeywordcolor">then</span>(response =&gt; response.text()).<span class="jskeywordcolor">then</span>(data =&gt; document.getElementById(<span class="jsstringcolor">'demoa427'</span>).innerHTML = data)</p>
+                            <p>&lt;<span class="htmltagcolor">/script</span>&gt;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa427" class="result"><span></span> </p>
+                </div>
+                <br>
+
+                <h5>Web Geolocation API</h5>
+                <li>The HTML Geolocation API is used to get the geographical position of a user.</li>
+                <li>Since this can compromise privacy, the position is not available unless the user approves it.</li>
+                <blockquote>
+                    <p>The Geolocation API will only work on secure contexts such as HTTPS.</p>
+                    <p>If your site is hosted on a non-secure origin (such as HTTP) the requests to get the users location will no longer function.</p>
+                </blockquote>
+                <li>To get the user's location, you can use the <code>getCurrentPosition()</code> method:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsfunctioncolor">navigator</span>.<span class="jsfunctioncolor">geolocation</span>.<span class="jsfunctioncolor">getCurrentPosition</span>(<span class="jsfunctioncolor">showPosition</span>);</p>
+                        </div>
+                    </div>
+                </div>
+                <li>The <code>getCurrentPosition()</code> method returns an object on success. The latitude, longitude and accuracy properties are always returned.</li>
+                <li>The other properties that are returned when available:</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Returns</th>
+                    </tr>
+                    <tr>
+                        <td>coords.latitude</td>
+                        <td>The latitude in decimal degrees (always returned)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.longitude</td>
+                        <td>The longitude in decimal degrees (always returned)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.accuracy</td>
+                        <td>The accuracy of position in meters (always returned)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.altitude</td>
+                        <td>The altitude in meters above the mean sea level</td>
+                    </tr>
+                    <tr>
+                        <td>coords.altitudeAccuracy</td>
+                        <td>The altitude accuracy of position</td>
+                    </tr>
+                    <tr>
+                        <td>coords.heading</td>
+                        <td>The heading as degrees clockwise from North</td>
+                    </tr>
+                    <tr>
+                        <td>coords.speed</td>
+                        <td>The speed in meters per second</td>
+                    </tr>
+                    <tr>
+                        <td>timestamp</td>
+                        <td>The date/time of the response</td>
+                    </tr>
+                </table>
             </ul>
         </div>
         <hr>
 
+        <h3 class="subsection" id="subsec428" onclick="toggleSection('subsec428')">JavaScript AJAX</h3>
+        <div class="subsection" id="subsec428Content" style="display: none;">
+            <ul>
+                <li>AJAX stands for <b>Asynchronous JavaScript And XML</b></li>
+                <li>AJAX is not a programming language.</li>
+                <li>AJAX just uses a combination of:</li>
+                <ul>
+                    <li>A browser built-in <code>XMLHttpRequest</code> object (to request data from a web server)</li>
+                    <li>JavaScript and HTML DOM (to display or use the data)</li>
+                </ul>
+                <li>AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</li>
+                <img src="media/ajax.gif" alt="ajax" class="img-block">
+                <table class="key-dec">
+                    <tr>
+                        <td>1. An event occurs in a web page (the page is loaded, a button is clicked)</td>
+                    </tr>
+                    <tr>
+                        <td>2. An XMLHttpRequest object is created by JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>3. The XMLHttpRequest object sends a request to a web server</td>
+                    </tr>
+                    <tr>
+                        <td>4. The server processes the request</td>
+                    </tr>
+                    <tr>
+                        <td>5. The server sends a response back to the web page</td>
+                    </tr>
+                    <tr>
+                        <td>6. The response is read by JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>7. Proper action (like page update) is performed by JavaScript</td>
+                    </tr>
+                </table>
+                <br>
+                <li>The keystone of AJAX is the <code>XMLHttpRequest</code> object</li>
+                <ol>
+                    <li>Create an <code>XMLHttpRequest</code> object</li>
+                    <li>Define a callback function</li>
+                    <li>Open the <code>XMLHttpRequest</code> object</li>
+                    <li>Send a Request to a server</li>
+                </ol>
+                <h6>Create an XMLHttpRequest Object</h6>
+                <li>The <code>XMLHttpRequest</code> object can be used to exchange data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</li>
+                <li>Syntax for creating an <code>XMLHttpRequest</code> object:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><i>variable</i> = <span class="jskeywordcolor">new</span> XMLHttpRequest();</p>
+                        </div>
+                    </div>
+                </div>
+                <h6>Define a Callback Function</h6>
+                <li>A callback function is a function passed as a parameter to another function.</li>
+                <li>In this case, the callback function should contain the code to execute when the response is ready.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>xhttp.<span class="jspropertycolor">onload</span> = <span class="jskeywordcolor">function</span>() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// code to execute when the response is ready</span></p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                </div>
+                <h6>Send a Request</h6>
+                <li>To send a request to a server, we use the <code>open()</code> and <code>send()</code> methods of the <code>XMLHttpRequest</code> object:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>xhttp.<span class="jsfunctioncolor">open</span>(<span class="jsstringcolor">'GET'</span>, <span class="jsstringcolor">'ajax_info.txt'</span>);</p>
+                            <p>xhttp.<span class="jsfunctioncolor">send</span>();</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jsvariablecolor">const</span> xhttp = <span class="jskeywordcolor">new</span> XMLHttpRequest();</p>
+                            <p>xhttp.onload = <span class="jsfunctioncolor">function</span>() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(<span class="jsstringcolor">'demo'</span>).innerHTML = <span class="jsvariablecolor">this</span>.responseText;</p>
+                            <p>}</p>
+                            <p>xhttp.open(<span class="jsstringcolor">'GET'</span>, <span class="jsstringcolor">'ajax_info.txt'</span>);</p>
+                            <p>xhttp.send();</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="demoa428">
+                    <h2>Let AJAX Change this text</h2>
+                    <button type="button" onclick="complex307()">Change Content</button>
+                </div>
+                <blockquote>
+                    <p>For security reasons, modern browsers do not allow access across domains.</p>
+                    <p>This means that both the web page and the XML file it tries to load, must be located on the same server.</p>
+                </blockquote>
+                <br>
+                <h6>XMLHttpRequest Object Methods</h6>
+                <table class="key-dec">
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>new XMLHttpRequest()</td>
+                        <td>Creates a new XMLHttpRequest object</td>
+                    </tr>
+                    <tr>
+                        <td>abort()</td>
+                        <td>Cancels the current request</td>
+                    </tr>
+                    <tr>
+                        <td>getAllResponseHeaders()</td>
+                        <td>Returns header information</td>
+                    </tr>
+                    <tr>
+                        <td>getResponseHeader()</td>
+                        <td>Returns specific header information</td>
+                    </tr>
+                    <tr>
+                        <td>open(method, url, async, user, psw)</td>
+                        <td>
+                            Specifies the type of request<br>
+                            method: the type of request: GET or POST<br>
+                            url: the server (file) location<br>
+                            async: true (asynchronous) or false (synchronous)<br>
+                            user: optional user name<br>
+                            psw: optional password
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>send()</td>
+                        <td>Sends the request to the server<br>Used for GET requests</td>
+                    </tr>
+                    <tr>
+                        <td>setRequestHeader()</td>
+                        <td>Adds a label/value pair to the header to be sent<br>Used for POST requests</td>
+                    </tr>
+                </table>
+                <br>
+                <h6>XMLHttpRequest Object Properties</h6>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>onreadystatechange</td>
+                        <td>An event handler that is called whenever the <code>readyState</code> attribute changes</td>
+                    </tr>
+                    <tr>
+                        <td>readyState</td>
+                        <td>Holds the status of the XMLHttpRequest<br>0: request not initialized<br>1: server connection established<br>2: request received<br>3: processing request<br>4: request finished and response is ready</td>
+                    </tr>
+                    <tr>
+                        <td>responseText</td>
+                        <td>Returns the response data as a string</td>
+                    </tr>
+                    <tr>
+                        <td>responseXML</td>
+                        <td>Returns the response data as XML data</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>Returns the status-number of a request<br>200: "OK"<br>403: "Forbidden"<br>404: "Not Found"</td>
+                    </tr>
+                    <tr>
+                        <td>statusText</td>
+                        <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+                    </tr>
+                </table>
+                <br>
+                <h6>The onload Property</h6>
+                <li>The <code>onload</code> property is called when the request has been completed:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>xhttp.onload = <span class="jskeywordcolor">function</span>() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// code to execute when the response is ready</span></p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h6>Multiple Callback Functions</h6>
+                <li>If you have more than one AJAX task in a website, you should create one function for executing the <code>XMLHttpRequest</code> object, and one callback function for each AJAX task.</li>
+                <li>The function call should contain the URL and what function to call when the response is ready.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>loadDoc(<span class="jsstringcolor">'url-1'</span>, myFunction1);</p>
+                            <p>loadDoc(<span class="jsstringcolor">'url-2'</span>, myFunction2);</p>
+                            <br>
+                            <p><span class="jskeywordcolor">function</span> loadDoc(url, cFunction) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">const</span> xhttp = <span class="jskeywordcolor">new</span> XMLHttpRequest();</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.onload = <span class="jskeywordcolor">function</span>() {cFunction(<span class="jsvariablecolor">this</span>);}</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.open(<span class="jsstringcolor">'GET'</span>, url);</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.send();</p>
+                            <p>}</p>
+                            <br>
+                            <p><span class="jskeywordcolor">function</span> myFunction1(xhttp) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// action goes here</span></p>
+                            <p>}</p>
+                            <p><span class="jskeywordcolor">function</span> myFunction2(xhttp) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor">// action goes here</span></p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h6>The onreadystatechange Property</h6>
+                <li>The <code>readyState</code> property holds the status of the <code>XMLHttpRequest</code>.</li>
+                <li>The <code>onreadystatechange</code> property defines a callback function to be executed when the readyState changes.</li>
+                <li>The status property and the statusText properties hold the status of the <code>XMLHttpRequest</code> object.</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>onreadystatechange</td>
+                        <td>An event handler that is called whenever the <code>readyState</code> attribute changes</td>
+                    </tr>
+                    <tr>
+                        <td>readyState</td>
+                        <td>Holds the status of the XMLHttpRequest<br>0: request not initialized<br>1: server connection established<br>2: request received<br>3: processing request<br>4: request finished and response is ready</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>Returns the status-number of a request<br>200: "OK"<br>403: "Forbidden"<br>404: "Not Found"</td>
+                    </tr>
+                    <tr>
+                        <td>statusText</td>
+                        <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+                    </tr>
+                </table>
+                <li>The <code>onreadystatechange</code> function is called every time the readyState changes.</li>
+                <br>
+
+                <h5>AJAX Request</h5>
+                <li>To send a request to a server, we use the <code>open()</code> and <code>send()</code> methods of the <code>XMLHttpRequest</code> object:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>xhttp.<span class="jsfunctioncolor">open</span>(<span class="jsstringcolor">'GET'</span>, <span class="jsstringcolor">'ajax_info.txt'</span>, <span class="jskeywordcolor">true</span>);</p>
+                            <p>xhttp.<span class="jsfunctioncolor">send</span>();</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <table class="key-dec">
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>open(method, url, async, user, psw)</td>
+                        <td>
+                            Specifies the type of request<br>
+                            method: the type of request: GET or POST<br>
+                            url: the server (file) location<br>
+                            async: true (asynchronous) or false (synchronous)<br>
+                            user: optional user name<br>
+                            psw: optional password
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>send()</td>
+                        <td>Sends the request to the server<br>Used for GET requests</td>
+                    </tr>
+                    <tr>
+                        <td>send(string)</td>
+                        <td>Sends the request to the server<br>Used for POST requests</td>
+                    </tr>
+                </table>
+                <li>The url parameter of the <code>open()</code> method, is an address to a file on a server:</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p>xhttp.<span class="jsfunctioncolor">open</span>(<span class="jsstringcolor">'GET'</span>, <span class="jsstringcolor">'ajax_info.txt'</span>, <span class="jskeywordcolor">true</span>);</p>
+                        </div>
+                    </div>
+                </div>
+                <li>The file can be any kind of file, like .txt and .xml, or server scripting files like .asp and .php (which can perform actions on the server before sending the response back).</li>
+                <li>Server requests should be sent asynchronously.</li>
+                <li>By sending asynchronously, the JavaScript does not have to wait for the server response, but can instead:</li>
+                <ul>
+                    <li>execute other scripts while waiting for server response</li>
+                    <li>deal with the response when the response is ready</li>
+                </ul>
+                <br>
+
+                <h5>AJAX Response</h5>
+                <li>Server Response Properties</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>responseText</td>
+                        <td>Returns the response data as a string</td>
+                    </tr>
+                    <tr>
+                        <td>responseXML</td>
+                        <td>Returns the response data as XML data</td>
+                    </tr>
+                </table>
+                <br>
+                <li>Server Response Methods</li>
+                <table class="key-dec">
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>getResponseHeader()</td>
+                        <td>Returns specific header information</td>
+                    </tr>
+                    <tr>
+                        <td>getAllResponseHeaders()</td>
+                        <td>Returns all the header information</td>
+                    </tr>
+                </table>
+                <br>
+
+                <h5>AJAX Database</h5>
+                <li>Database operations are performed by PHP scripts.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">loadIdcardOptions</span>() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">const</span> xhttp = <span class="jskeywordcolor">new</span> XMLHttpRequest();</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.onload = <span class="jsfunctioncolor">function</span>() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(<span class="jsstringcolor">'idcardDropdown'</span>).innerHTML += <span class="jsvariablecolor">this</span>.responseText;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.open(<span class="jsstringcolor">'GET'</span>, <span class="jsstringcolor">'php/karyawan_options.php'</span>, <span class="jskeywordcolor">true</span>);</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.send();</p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                </div>
+                <li>The function above sends an asynchronous GET request to the server to fetch available ID card options from a PHP file (karyawan_options.php).</li>
+                <li>Once the server responds, it adds the response (the ID card options) to the HTML element with the ID idcardDropdown.</li>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">showKaryawanData</span>(idcard) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> (idcard == <span class="jsstringcolor">""</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(<span class="jsstringcolor">'employeeDetails'</span>).innerHTML = <span class="jsstringcolor">""</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">const</span> xhttp = <span class="jskeywordcolor">new</span> XMLHttpRequest();</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.onload = <span class="jsfunctioncolor">function</span>() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(<span class="jsstringcolor">'employeeDetails'</span>).innerHTML = <span class="jsvariablecolorcolor">this</span>.responseText;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.open(<span class="jsstringcolor">'GET'</span>, <span class="jsstringcolor">'php/karyawan_fetch.php?idcard='</span> + idcard);</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;xhttp.send();</p>
+                            <p>}</p>
+                        </div>
+                    </div>
+                </div>
+                <li>The function above sends an asynchronous GET request to the server to fetch employee details from a PHP file (karyawan_fetch.php) based on the selected ID card.</li>
+                <li>Once the server responds, it adds the response (the employee details) to the HTML element with the ID employeeDetails.</li>
+                <li>Together, these functions allow users to select an employee by ID card and view their details.</li>
+
+                <div>
+                    <h2>Insert New Karyawan</h2>
+                    <form action="php/insert_karyawan.php" method="POST">
+                        <div>
+                            <label for="fname">Full Name:</label>
+                            <input type="text" name="fname" id="fname" required onkeypress="return validateCharacter(event)" required>
+                        </div>
+                        <div>
+                            <label for="idcard">ID Card Number:</label>
+                            <input type="text" name="idcard" id="idcard" required onkeypress="return validateIdCardCharacter(event)" required>
+                        </div>
+                        <div>
+                            <label for="team">Team:</label>
+                            <input type="text" name="team" id="team" placeholder="Optional"><br>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <h2>Select an Employee by ID Card</h2>
+
+                <form action="">
+                  <select name="karyawan" id="idcardDropdown" onchange="complex309(this.value)">
+                    <option value="">Select ID Card:</option>
+                    <!-- Options will be dynamically loaded here -->
+                  </select>
+                </form>
+                
+                <br>
+                <div id="employeeDetails">Employee details will be displayed here...</div>
+                
+            </ul>
+        </div>
     </div>
     <hr>
 

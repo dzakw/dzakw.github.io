@@ -4000,3 +4000,62 @@ function complex306() {
     let h = window.innerHeight;
     return "Browser inner window width: " + w + "<br>Browser inner window height: " + h;
 }
+
+let wza;
+
+function startWorker() {
+    if (typeof(wza) == "undefined") {
+        wza = new Worker("js/demo_workers2.js");
+    }
+    wza.onmessage = function(event) {
+        document.getElementById("resultza").innerHTML = event.data;
+    };
+}
+
+function stopWorker() {
+    wza.terminate();
+    wza = undefined;
+}
+
+function complex307() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("demoa428").innerHTML =
+      this.responseText;
+    }
+    xhttp.open("GET", "demo_AJAX.txt");
+    xhttp.send();
+}
+
+function complex308() {
+    // Restore the default HTML content
+    document.getElementById("demoa428").innerHTML = '<h2>Let AJAX Change this text</h2><button type="button" onclick="complex307()">Change Content</button>';
+}
+
+// Function to load ID card options dynamically when the page loads
+function loadIdcardOptions() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("idcardDropdown").innerHTML += this.responseText;
+    }
+    xhttp.open("GET", "php/karyawan_options.php", true);
+    xhttp.send();
+}
+  
+// Function to fetch employee data based on selected ID card
+function complex309(idcard) {
+    if (idcard == "") {
+    document.getElementById("employeeDetails").innerHTML = "";
+    return;
+    }
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("employeeDetails").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "php/karyawan_fetch.php?idcard=" + idcard);
+    xhttp.send();
+}
+  
+  // Load ID card options on page load
+  document.addEventListener("DOMContentLoaded", loadIdcardOptions);
+ 
