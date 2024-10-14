@@ -56,6 +56,7 @@ function toggleAllSections(...sectionIds) {
 }
 
 var lastOpenedExampleId = null; // Track the last opened example
+var lastOpenedChildExampleId = null; // Track the last opened child example
 
 function toggleExample(exampleId) {
     event.preventDefault();
@@ -76,28 +77,34 @@ function toggleExample(exampleId) {
     }
 
     lastOpenedExampleId = example.style.display === "block" ? exampleId : null;
+
+    // If the example has a child example, toggle its visibility too
+    var childExampleId = exampleId + "Child";
+    var childExample = document.getElementById(childExampleId);
+    if (childExample) {
+        toggleChildExample(childExampleId);
+    }
 }
 
+function toggleChildExample(childExampleId) {
+    event.preventDefault();
+    var childExample = document.getElementById(childExampleId);
 
-function calculate(formNumber) {
-    const num1 = parseInt(document.getElementById('num1_' + formNumber).value);
-    const num2 = parseInt(document.getElementById('num2_' + formNumber).value);
-    document.getElementById('result_' + formNumber).textContent = num1 * num2; 
-}
+    // Close any currently open child example (if it's not the current one)
+    if (lastOpenedChildExampleId !== null && lastOpenedChildExampleId !== childExampleId) {
+        var lastOpenedChildExample = document.getElementById(lastOpenedChildExampleId);
+        lastOpenedChildExample.style.display = "none";
+    }
 
-const x = document.getElementById("demo");
+    // Toggle the current child example
+    if (childExample.style.display !== "none") {
+        childExample.style.display = "none";
+    } else {
+        childExample.style.display = "block";
+        childExample.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+    lastOpenedChildExampleId = childExample.style.display === "block" ? childExampleId : null;
 }
 
 function toggleBoth(sectionId, exampleId) {
@@ -127,6 +134,28 @@ function toggleBoth(sectionId, exampleId) {
     lastOpenedExampleId = example.style.display === "block" ? exampleId : null;
 }
 
+
+
+function calculate(formNumber) {
+    const num1 = parseInt(document.getElementById('num1_' + formNumber).value);
+    const num2 = parseInt(document.getElementById('num2_' + formNumber).value);
+    document.getElementById('result_' + formNumber).textContent = num1 * num2; 
+}
+
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
 // //Javascript learning start here
 // function showAnswer1() {
 //     document.getElementById('demog').innerHTML = (5 + 10) * 2 - (12 / 3);
@@ -4058,4 +4087,580 @@ function complex309(idcard) {
   
   // Load ID card options on page load
   document.addEventListener("DOMContentLoaded", loadIdcardOptions);
- 
+
+function complex310() {
+    var trace1 = {
+        x: [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+        y: [219, 146, 112, 127, 124, 180, 236, 207, 236, 263, 350, 430, 474, 526, 488, 537, 500, 439],
+        name: 'Rest of world',
+        marker: {color: 'rgb(55, 83, 109)'},
+        type: 'bar'
+    };
+      
+    var trace2 = {
+        x: [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+        y: [16, 13, 10, 11, 28, 37, 43, 55, 56, 88, 105, 156, 270, 299, 340, 403, 549, 499],
+        name: 'China',
+        marker: {color: 'rgb(26, 118, 255)'},
+        type: 'bar'
+    };
+      
+    var data = [trace1, trace2];
+      
+    var layout = {
+        title: 'US Export of Plastic Scrap',
+        margin: {l: 50, r: 50, t: 50, b: 50},
+        height: 275,
+        xaxis: {tickfont: {
+            size: 14,
+            color: 'rgb(107, 107, 107)'
+        }},
+        yaxis: {
+          title: 'USD (millions)',
+          titlefont: {
+            size: 16,
+            color: 'rgb(107, 107, 107)'
+        },
+          tickfont: {
+            size: 14,
+            color: 'rgb(107, 107, 107)'
+        }
+        },
+        legend: {
+          x: 0,
+          y: 1.0,
+          bgcolor: 'rgba(255, 255, 255, 0)',
+          bordercolor: 'rgba(255, 255, 255, 0)'
+        },
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1
+    };
+
+    var config = {
+        responsive: true
+    };
+      
+    Plotly.newPlot('demoa429', data, layout, config);
+}
+
+function complex311() {
+    var xData = [
+        [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2013],
+        [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2013],
+        [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2013],
+        [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2013]
+      ];
+      
+      var yData = [
+        [74, 82, 80, 74, 73, 72, 74, 70, 70, 66, 66, 69],
+        [45, 42, 50, 46, 36, 36, 34, 35, 32, 31, 31, 28],
+        [13, 14, 20, 24, 20, 24, 24, 40, 35, 41, 43, 50],
+        [18, 21, 18, 21, 16, 14, 13, 18, 17, 16, 19, 23]
+      ];
+      
+      var colors = ['rgba(67,67,67,1)', 'rgba(115,115,115,1)', 'rgba(49,130,189, 1)',
+        'rgba(189,189,189,1)'
+      ];
+      
+      var lineSize = [2, 2, 4, 2];
+      
+      var labels = ['Television', 'Newspaper', 'Internet', 'Radio'];
+      
+      var data = [];
+      
+      for ( var i = 0 ; i < xData.length ; i++ ) {
+        var result = {
+          x: xData[i],
+          y: yData[i],
+          type: 'scatter',
+          mode: 'lines',
+          line: {
+            color: colors[i],
+            width: lineSize[i]
+          }
+        };
+        var result2 = {
+          x: [xData[i][0], xData[i][11]],
+          y: [yData[i][0], yData[i][11]],
+          type: 'scatter',
+          mode: 'markers',
+          marker: {
+            color: colors[i],
+            size: 12
+          }
+        };
+        data.push(result, result2);
+      }
+      
+      var layout = {
+        showlegend: false,
+        height: 600,
+        width: 600,
+        xaxis: {
+          showline: true,
+          showgrid: false,
+          showticklabels: true,
+          linecolor: 'rgb(204,204,204)',
+          linewidth: 2,
+          autotick: false,
+          ticks: 'outside',
+          tickcolor: 'rgb(204,204,204)',
+          tickwidth: 2,
+          ticklen: 5,
+          tickfont: {
+            family: 'Arial',
+            size: 12,
+            color: 'rgb(82, 82, 82)'
+          }
+        },
+        yaxis: {
+          showgrid: false,
+          zeroline: false,
+          showline: false,
+          showticklabels: false
+        },
+        autosize: false,
+        margin: {
+          autoexpand: false,
+          l: 100,
+          r: 20,
+          t: 100
+        },
+        annotations: [
+          {
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.0,
+            y: 1.05,
+            xanchor: 'left',
+            yanchor: 'bottom',
+            text: 'Main Source for News',
+            font:{
+              family: 'Arial',
+              size: 30,
+              color: 'rgb(37,37,37)'
+            },
+            showarrow: false
+          },
+          {
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.5,
+            y: -0.1,
+            xanchor: 'center',
+            yanchor: 'top',
+            text: 'Source: Pew Research Center & Storytelling with data',
+            showarrow: false,
+            font: {
+              family: 'Arial',
+              size: 12,
+              color: 'rgb(150,150,150)'
+            }
+          }
+        ]
+      };
+      
+      for( var i = 0 ; i < xData.length ; i++ ) {
+        var result = {
+          xref: 'paper',
+          x: 0.05,
+          y: yData[i][0],
+          xanchor: 'right',
+          yanchor: 'middle',
+          text: labels[i] + ' ' + yData[i][0] +'%',
+          showarrow: false,
+          font: {
+            family: 'Arial',
+            size: 16,
+            color: 'black'
+          }
+        };
+        var result2 = {
+          xref: 'paper',
+          x: 0.95,
+          y: yData[i][11],
+          xanchor: 'left',
+          yanchor: 'middle',
+          text: yData[i][11] +'%',
+          font: {
+            family: 'Arial',
+            size: 16,
+            color: 'black'
+          },
+          showarrow: false
+        };
+      
+        layout.annotations.push(result, result2);
+      }
+      
+      Plotly.newPlot('demoa430', data, layout);      
+}
+
+function complex312() {
+    var heroDamage = [];
+    var winRate = [];
+
+    for (let i = 0; i < 75; i++) {
+        let damage = 2000 + i * 120; 
+        let baseWinRate = 30 + (i / 3); 
+
+        let noise = Math.random() * 5 - 2.5; 
+        let rate = Math.min(62, Math.max(30, baseWinRate + noise)); 
+
+        heroDamage.push(damage);
+        winRate.push(rate);
+    }
+
+    let outliers = [
+        { damage: 3000, rate: 56 }, { damage: 2500, rate: 52 }, { damage: 2200, rate: 50 }, 
+        { damage: 2000, rate: 48 }, { damage: 2800, rate: 58 }, { damage: 2400, rate: 54 },
+        { damage: 2600, rate: 53 }, { damage: 2300, rate: 51 }, { damage: 2100, rate: 50 },
+        { damage: 1900, rate: 49 }, { damage: 1700, rate: 48 }, { damage: 1500, rate: 47 },
+        { damage: 1300, rate: 46 }, { damage: 1100, rate: 45 }, { damage: 8000, rate: 39 },
+        { damage: 8500, rate: 41 }, { damage: 8800, rate: 43 }, { damage: 10000, rate: 45 },
+        { damage: 10500, rate: 50 }, { damage: 11000, rate: 55 }, { damage: 1000, rate: 48 }, 
+        { damage: 1100, rate: 54 }, { damage: 1200, rate: 58 }, { damage: 5000, rate: 30 },
+        { damage: 5500, rate: 31 }, { damage: 6000, rate: 32 }, { damage: 9500, rate: 37 },
+        { damage: 10000, rate: 39 }, { damage: 10500, rate: 42 }, { damage: 4000, rate: 55 }, 
+        { damage: 6000, rate: 40 }, { damage: 7000, rate: 45 }, { damage: 11000, rate: 50 }, 
+        { damage: 9000, rate: 58 }, { damage: 8500, rate: 59 }, { damage: 8000, rate: 60 },
+        { damage: 9500, rate: 35 }, { damage: 9000, rate: 38 }, { damage: 8500, rate: 40 },
+        { damage: 11000, rate: 30 }, { damage: 10500, rate: 33 }, { damage: 10000, rate: 36 },
+        { damage: 7500, rate: 60 }, { damage: 7100, rate: 58 }, { damage: 6700, rate: 56 },
+        { damage: 4700, rate: 32 }, { damage: 4500, rate: 34 }, { damage: 4300, rate: 36 },
+        { damage: 6000, rate: 52 }, { damage: 5800, rate: 49 }, { damage: 5600, rate: 47 },
+    ];
+
+    outliers.forEach((o) => {
+        heroDamage.push(o.damage);
+        winRate.push(o.rate);
+    });
+
+    var data = [
+        {
+            x: heroDamage,
+            y: winRate,
+            mode: 'markers',
+            marker: {
+                size: 10,
+                color: heroDamage, 
+                colorscale: 'Turbo',
+                showscale: true, 
+            },
+            type: 'scatter',
+        },
+    ];
+
+    var layout = {
+        title: 'Relationship between Hero Damage and Win Rate in Dota 2',
+        xaxis: {
+            title: 'Hero Damage',
+            range: [0, 12000], 
+        },
+        yaxis: {
+            title: 'Win Rate (%)',
+            range: [0, 70], 
+        },
+    };
+
+    Plotly.newPlot('demoa431', data, layout);
+}
+
+function complex313() {
+    var data = [
+        {
+            values: [413219, 158729, 81982, 39182],
+            labels: ['SE Asia', 'China', 'Europe', 'America'],
+            type: 'pie'
+        }
+    ];
+
+    var layout = {
+        title: 'Distribution of Dota 2 Players',
+        height: 300,
+        width: 500,
+        margin: {
+            l: 20,
+            r: 20,
+            t: 40,
+            b: 10,
+            pad: 4
+        }
+    };
+
+    Plotly.newPlot('demoa432', data, layout);
+}
+
+const heroes = [
+    { name: "Abaddon", winRate: 55.59, pickRate: 8.57, kda: 3.36 },
+    { name: "Alchemist", winRate: 50.25, pickRate: 8.16, kda: 3.20 },
+    { name: "Ancient Apparition", winRate: 52.04, pickRate: 7.29, kda: 2.83 },
+    { name: "Anti-Mage", winRate: 48.09, pickRate: 11.10, kda: 2.89 },
+    { name: "Arc Warden", winRate: 50.93, pickRate: 4.03, kda: 2.96 },
+    { name: "Axe", winRate: 52.94, pickRate: 18.14, kda: 2.57 },
+    { name: "Bane", winRate: 50.21, pickRate: 2.51, kda: 2.62 },
+    { name: "Batrider", winRate: 43.76, pickRate: 1.21, kda: 2.42 },
+    { name: "Beastmaster", winRate: 48.36, pickRate: 3.24, kda: 2.75 },
+    { name: "Bloodseeker", winRate: 51.50, pickRate: 3.78, kda: 2.84 },
+    { name: "Bounty Hunter", winRate: 51.86, pickRate: 8.25, kda: 2.75 },
+    { name: "Brewmaster", winRate: 49.09, pickRate: 0.88, kda: 3.00 },
+    { name: "Bristleback", winRate: 48.40, pickRate: 10.56, kda: 2.53 },
+    { name: "Broodmother", winRate: 51.15, pickRate: 3.42, kda: 3.20 },
+    { name: "Centaur Warrunner", winRate: 51.65, pickRate: 8.52, kda: 2.94 },
+    { name: "Chaos Knight", winRate: 49.46, pickRate: 4.18, kda: 2.54 },
+    { name: "Chen", winRate: 43.95, pickRate: 0.50, kda: 2.49 },
+    { name: "Clinkz", winRate: 50.07, pickRate: 4.59, kda: 2.81 },
+    { name: "Clockwerk", winRate: 52.69, pickRate: 8.37, kda: 2.77 },
+    { name: "Crystal Maiden", winRate: 50.68, pickRate: 12.51, kda: 2.36 },
+    { name: "Dark Seer", winRate: 50.41, pickRate: 1.78, kda: 2.91 },
+    { name: "Dawnbreaker", winRate: 51.38, pickRate: 4.17, kda: 3.03 },
+    { name: "Dazzle", winRate: 47.88, pickRate: 8.86, kda: 2.30 },
+    { name: "Death Prophet", winRate: 49.77, pickRate: 2.95, kda: 3.03 },
+    { name: "Disruptor", winRate: 50.03, pickRate: 6.38, kda: 2.99 },
+    { name: "Doom", winRate: 45.57, pickRate: 4.83, kda: 2.48 },
+    { name: "Dragon Knight", winRate: 48.74, pickRate: 9.28, kda: 2.91 },
+    { name: "Drow Ranger", winRate: 50.99, pickRate: 12.77, kda: 3.00 },
+    { name: "Earth Spirit", winRate: 49.19, pickRate: 3.89, kda: 2.84 },
+    { name: "Earthshaker", winRate: 49.30, pickRate: 16.36, kda: 2.85 },
+    { name: "Elder Titan", winRate: 50.93, pickRate: 1.63, kda: 2.53 },
+    { name: "Ember Spirit", winRate: 47.31, pickRate: 4.61, kda: 3.43 },
+    { name: "Enchantress", winRate: 47.15, pickRate: 3.60, kda: 2.65 },
+    { name: "Enigma", winRate: 50.17, pickRate: 3.71, kda: 2.35 },
+    { name: "Faceless Void", winRate: 45.73, pickRate: 7.23, kda: 2.91 },
+    { name: "Grimstroke", winRate: 48.28, pickRate: 4.54, kda: 2.72 },
+    { name: "Gyrocopter", winRate: 47.73, pickRate: 4.72, kda: 2.62 },
+    { name: "Hoodwink", winRate: 46.04, pickRate: 10.60, kda: 2.83 },
+    { name: "Huskar", winRate: 48.10, pickRate: 6.09, kda: 1.96 },
+    { name: "Invoker", winRate: 47.60, pickRate: 20.16, kda: 3.16 },
+    { name: "Io", winRate: 50.24, pickRate: 3.76, kda: 2.76 },
+    { name: "Jakiro", winRate: 50.40, pickRate: 12.59, kda: 2.43 },
+    { name: "Juggernaut", winRate: 52.01, pickRate: 16.01, kda: 3.02 },
+    { name: "Keeper of the Light", winRate: 47.90, pickRate: 2.00, kda: 3.07 },
+    { name: "Kunkka", winRate: 49.30, pickRate: 6.11, kda: 3.15 },
+    { name: "Legion Commander", winRate: 53.07, pickRate: 16.97, kda: 2.76 },
+    { name: "Leshrac", winRate: 49.16, pickRate: 2.65, kda: 2.47 },
+    { name: "Lich", winRate: 54.75, pickRate: 12.95, kda: 2.68 },
+    { name: "Lifestealer", winRate: 52.55, pickRate: 8.60, kda: 3.74 },
+    { name: "Lina", winRate: 46.32, pickRate: 11.84, kda: 2.60 },
+    { name: "Lion", winRate: 49.81, pickRate: 23.59, kda: 2.24 },
+    { name: "Lone Druid", winRate: 49.27, pickRate: 2.31, kda: 2.78 },
+    { name: "Luna", winRate: 51.58, pickRate: 18.14, kda: 3.04 },
+    { name: "Lycan", winRate: 50.60, pickRate: 2.27, kda: 3.36 },
+    { name: "Magnus", winRate: 48.79, pickRate: 8.17, kda: 2.87 },
+    { name: "Marci", winRate: 49.70, pickRate: 7.13, kda: 2.49 },
+    { name: "Mars", winRate: 47.75, pickRate: 8.06, kda: 2.94 },
+    { name: "Medusa", winRate: 54.22, pickRate: 9.97, kda: 4.49 },
+    { name: "Meepo", winRate: 48.30, pickRate: 1.65, kda: 2.53 },
+    { name: "Mirana", winRate: 44.79, pickRate: 6.36, kda: 2.81 },
+    { name: "Monkey King", winRate: 44.54, pickRate: 7.94, kda: 2.59 },
+    { name: "Morphling", winRate: 45.80, pickRate: 7.74, kda: 2.96 },
+    { name: "Muerta", winRate: 47.01, pickRate: 3.16, kda: 2.55 },
+    { name: "Naga Siren", winRate: 47.26, pickRate: 1.55, kda: 2.68 },
+    { name: "Nature's Prophet", winRate: 45.64, pickRate: 9.52, kda: 2.46 },
+    { name: "Necrophos", winRate: 52.87, pickRate: 11.20, kda: 3.11 },
+    { name: "Night Stalker", winRate: 52.36, pickRate: 7.34, kda: 3.27 },
+    { name: "Nyx Assassin", winRate: 51.02, pickRate: 9.84, kda: 2.62 },
+    { name: "Ogre Magi", winRate: 51.40, pickRate: 14.97, kda: 2.69 },
+    { name: "Omniknight", winRate: 50.98, pickRate: 3.31, kda: 2.40 },
+    { name: "Oracle", winRate: 52.68, pickRate: 4.28, kda: 2.99 },
+    { name: "Outworld Destroyer", winRate: 50.78, pickRate: 5.83, kda: 2.92 },
+    { name: "Pangolier", winRate: 48.73, pickRate: 4.17, kda: 3.17 },
+    { name: "Phantom Assassin", winRate: 50.61, pickRate: 20.22, kda: 3.00 },
+    { name: "Phantom Lancer", winRate: 47.71, pickRate: 3.94, kda: 2.96 },
+    { name: "Phoenix", winRate: 50.45, pickRate: 5.47, kda: 2.93 },
+    { name: "Primal Beast", winRate: 48.54, pickRate: 4.06, kda: 3.04 },
+    { name: "Puck", winRate: 48.93, pickRate: 9.19, kda: 3.43 },
+    { name: "Pudge", winRate: 50.83, pickRate: 24.79, kda: 2.54 },
+    { name: "Pugna", winRate: 48.14, pickRate: 4.03, kda: 2.53 },
+    { name: "Queen of Pain", winRate: 50.26, pickRate: 14.69, kda: 3.80 },
+    { name: "Razor", winRate: 50.11, pickRate: 6.68, kda: 2.88 },
+    { name: "Riki", winRate: 51.39, pickRate: 5.88, kda: 3.29 },
+    { name: "Ringmaster", winRate: 47.42, pickRate: 7.90, kda: 2.73 },
+    { name: "Rubick", winRate: 47.23, pickRate: 19.89, kda: 2.81 },
+    { name: "Sand King", winRate: 49.50, pickRate: 9.48, kda: 2.57 },
+    { name: "Shadow Demon", winRate: 49.53, pickRate: 4.35, kda: 2.67 },
+    { name: "Shadow Fiend", winRate: 51.03, pickRate: 21.54, kda: 2.88 },
+    { name: "Shadow Shaman", winRate: 53.01, pickRate: 12.38, kda: 2.56 },
+    { name: "Silencer", winRate: 52.75, pickRate: 9.51, kda: 2.67 },
+    { name: "Skywrath Mage", winRate: 50.47, pickRate: 7.53, kda: 2.89 },
+    { name: "Slardar", winRate: 49.35, pickRate: 6.47, kda: 2.47 },
+    { name: "Slark", winRate: 49.35, pickRate: 10.69, kda: 2.77 },
+    { name: "Snapfire", winRate: 46.83, pickRate: 6.04, kda: 2.90 },
+    { name: "Sniper", winRate: 48.24, pickRate: 22.11, kda: 3.27 },
+    { name: "Spectre", winRate: 51.37, pickRate: 10.79, kda: 4.26 },
+    { name: "Spirit Breaker", winRate: 51.21, pickRate: 12.55, kda: 3.03 },
+    { name: "Storm Spirit", winRate: 50.32, pickRate: 8.47, kda: 3.30 },
+    { name: "Sven", winRate: 45.33, pickRate: 3.18, kda: 2.48 },
+    { name: "Techies", winRate: 46.98, pickRate: 8.46, kda: 2.18 },
+    { name: "Templar Assassin", winRate: 44.75, pickRate: 4.50, kda: 3.03 },
+    { name: "Terrorblade", winRate: 46.06, pickRate: 2.49, kda: 2.38 },
+    { name: "Tidehunter", winRate: 49.82, pickRate: 4.69, kda: 3.06 },
+    { name: "Timbersaw", winRate: 48.87, pickRate: 9.13, kda: 3.01 },
+    { name: "Tinker", winRate: 49.45, pickRate: 3.58, kda: 3.07 },
+    { name: "Tiny", winRate: 48.12, pickRate: 7.17, kda: 3.06 },
+    { name: "Treant Protector", winRate: 49.70, pickRate: 4.85, kda: 2.75 },
+    { name: "Troll Warlord", winRate: 50.17, pickRate: 3.58, kda: 2.39 },
+    { name: "Tusk", winRate: 45.98, pickRate: 6.60, kda: 2.45 },
+    { name: "Underlord", winRate: 51.92, pickRate: 5.55, kda: 2.98 },
+    { name: "Undying", winRate: 51.29, pickRate: 7.92, kda: 2.63 },
+    { name: "Ursa", winRate: 49.29, pickRate: 8.42, kda: 2.98 },
+    { name: "Vengeful Spirit", winRate: 51.54, pickRate: 8.87, kda: 2.21 },
+    { name: "Venomancer", winRate: 50.13, pickRate: 6.88, kda: 2.58 },
+    { name: "Viper", winRate: 49.85, pickRate: 8.28, kda: 2.73 },
+    { name: "Visage", winRate: 52.36, pickRate: 3.35, kda: 3.10 },
+    { name: "Void Spirit", winRate: 51.97, pickRate: 5.26, kda: 3.75 },
+    { name: "Warlock", winRate: 54.13, pickRate: 9.48, kda: 3.01 },
+    { name: "Weaver", winRate: 48.14, pickRate: 7.54, kda: 3.35 },
+    { name: "Windranger", winRate: 43.49, pickRate: 7.98, kda: 2.82 },
+    { name: "Winter Wyvern", winRate: 50.76, pickRate: 3.41, kda: 2.51 },
+    { name: "Witch Doctor", winRate: 52.28, pickRate: 17.49, kda: 2.47 },
+    { name: "Wraith King", winRate: 55.51, pickRate: 12.96, kda: 3.55 },
+    { name: "Zeus", winRate: 51.11, pickRate: 13.61, kda: 3.90 }
+];
+
+function complex314() {
+    var x = [], y = [], size = [], text = [];
+    heroes.forEach((hero) => {
+        x.push(hero.winRate);
+        y.push(hero.kda);
+        size.push(hero.pickRate * 25); // Increase the multiplier for larger bubbles
+        text.push(hero.name);
+    });
+
+    var data = [
+        {
+            x: x,
+            y: y,
+            mode: 'markers',
+            marker: {
+                size: size,
+                sizemode: 'area',
+                sizeref: 1, // Adjust the reference value to control bubble scaling
+                color: y,
+                colorscale: 'YlGnBu',
+                showscale: false,
+            },
+            text: text,
+            textfont: {
+                size: 12,
+            },
+            type: 'scatter',
+        }
+    ];
+
+    var layout = {
+        title: {
+            text: 'Hero Win Rate vs Hero KDA vs Hero Pick Rate',
+            font: {
+                size: 24,
+            },
+        },
+        xaxis: {
+            title: {
+                text: 'Hero Win Rate (%)',
+                font: {
+                    size: 18,
+                },
+            },
+            range: [43, 56], 
+        },
+        yaxis: {
+            title: {
+                text: 'Hero KDA',
+                font: {
+                    size: 18,
+                },
+            },
+            range: [1.8, 4], 
+        },
+    };
+
+    Plotly.newPlot('demoa433', data, layout);
+}
+
+function complex315() {
+    var x = [], y = [], text = []; // Added text array for formatted hero info
+    heroes.forEach((hero) => {
+        x.push(hero.kda);
+        y.push(hero.winRate);
+        // Format the text for hover info
+        text.push(`${hero.name}<br>KDA: ${hero.kda}<br>Win Rate: ${hero.winRate}%`);
+    });
+
+    // Calculate linear regression
+    const n = x.length;
+    const sumX = x.reduce((a, b) => a + b, 0);
+    const sumY = y.reduce((a, b) => a + b, 0);
+    const sumXY = x.reduce((sum, xi, i) => sum + xi * y[i], 0);
+    const sumX2 = x.reduce((sum, xi) => sum + xi * xi, 0);
+
+    const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+    const intercept = (sumY - slope * sumX) / n;
+
+    // Create data for the trend line
+    var trendLineX = [Math.min(...x), Math.max(...x)];
+    var trendLineY = trendLineX.map(xi => slope * xi + intercept);
+
+    var data = [
+        {
+            x: x,
+            y: y,
+            mode: 'markers',
+            type: 'scatter',
+            marker: {
+                size: 10,
+                color: 'rgba(255, 0, 0, 1)',
+                line: {
+                    color: 'rgba(255, 0, 0, 1)',
+                    width: 0.5,
+                },
+            },
+            name: 'Data Points', // Optional: name for the legend
+            text: text, // Assign formatted hero info to the text attribute
+            hoverinfo: 'text', // Show formatted info on hover
+        },
+        {
+            x: trendLineX,
+            y: trendLineY,
+            mode: 'lines',
+            type: 'scatter',
+            line: {
+                color: 'rgba(0, 0, 255, 1)',
+                width: 2,
+            },
+            name: 'Trend Line' // Optional: name for the legend
+        }
+    ];
+
+    var layout = {
+        title: {
+            text: 'Correlation between Hero KDA and Win Rate',
+            font: {
+                size: 24,
+            },
+        },
+        xaxis: {
+            title: {
+                text: 'Hero KDA',
+                font: {
+                    size: 18,
+                },
+            },
+            range: [1.7, 4.7], // Adjust the range based on your data
+        },
+        yaxis: {
+            title: {
+                text: 'Hero Win Rate (%)',
+                font: {
+                    size: 18,
+                },
+            },
+            range: [42, 57], // Set a suitable range for win rate
+        },
+        width: 800, // Adjust width as needed
+        height: 600 // Optional: adjust the height if needed
+    };
+
+    Plotly.newPlot('demoa434', data, layout);
+}

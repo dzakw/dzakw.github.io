@@ -440,6 +440,110 @@ function generateList28() {
     });
 }
 
+function generateList29() {
+    const methods = [
+        "Plotly", "Chart.js", "Google Charts", "D3.js"
+    ];
+
+    const ul = document.getElementById('threeColumn29');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleExample('example4${index + 313}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+// Basic Charts
+function generateList30() {
+    const methods = [
+        "Bar Charts", "Line Charts", "Scatter Plots", "Pie Charts", "Bubble Charts", "Dot Plots", "Filled Area Plots",
+        "Horizontal Bar Charts", "Sunburst Charts", "Sankey Diagrams", "Point Cloud", "Treemaps", "Tables"
+    ];
+
+    const ul = document.getElementById('threeColumn30');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleChildExample('childExample${index + 0}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+// Statistical Charts
+function generateList32() {
+    const methods = [
+        "Error Bars", "Box Plots", "Histograms", "2D Density Plots", "Violin Plot"
+    ];
+
+    const ul = document.getElementById('threeColumn31');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleChildExample('childExample${index + 13}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+// Scientific Charts
+function generateList33() {
+    const methods = [
+        "Contour Plots", "Heatmaps", "Ternary Plots", "Wind Rose Charts", "Radar Charts", "Polar Charts"
+    ];
+
+    const ul = document.getElementById('threeColumn32');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleChildExample('childExample${index + 18}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+// Financial Charts
+function generateList34() {
+    const methods = [
+        "Wterfall Charts", "Indicators", "Candlestick Charts", "Time Series", "Bullet Charts"
+    ];
+
+    const ul = document.getElementById('threeColumn33');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleChildExample('childExample${index + 24}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+// Maps
+function generateList35() {
+    const methods = [
+        "Tile Map Layers", "Tile Density Heatmap", "Line on Maps", "Bubble Maps", "Choropleth Maps"
+    ];
+
+    const ul = document.getElementById('threeColumn34');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleChildExample('childExample${index + 29}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
+// 3D Charts
+function generateList36() {
+    const methods = [
+        "3D Scatter Plots", "Ribbon Plots", "3D Surface Plots"
+    ];
+
+    const ul = document.getElementById('threeColumn35');
+    methods.forEach((method, index) => {
+        const li = document.createElement('li');
+        li.className = 'threeColumn';
+        li.innerHTML = `<a href="#" onclick="toggleChildExample('childExample${index + 34}')">${method}</a>`;
+        ul.appendChild(li);
+    });
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     let i = 1;
