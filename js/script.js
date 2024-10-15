@@ -4519,6 +4519,148 @@ const heroes = [
     { name: "Zeus", winRate: 51.11, pickRate: 13.61, kda: 3.90 }
 ];
 
+const invoker = [
+    { date: new Date(2024, 8, 14), pickRate: 16.27, winRate: 46.99},
+    { date: new Date(2024, 8, 15), pickRate: 15.64, winRate: 47.22},
+    { date: new Date(2024, 8, 16), pickRate: 15.31, winRate: 47.41},
+    { date: new Date(2024, 8, 17), pickRate: 15.67, winRate: 47.78},
+    { date: new Date(2024, 8, 18), pickRate: 15.99, winRate: 47.84},
+    { date: new Date(2024, 8, 19), pickRate: 16.21, winRate: 47.56},
+    { date: new Date(2024, 8, 20), pickRate: 16.13, winRate: 47.98},
+    { date: new Date(2024, 8, 21), pickRate: 15.77, winRate: 47.58},
+    { date: new Date(2024, 8, 22), pickRate: 15.83, winRate: 47.84},
+    { date: new Date(2024, 8, 23), pickRate: 16.34, winRate: 48.22},
+    { date: new Date(2024, 8, 24), pickRate: 16.91, winRate: 48.34},
+    { date: new Date(2024, 8, 25), pickRate: 16.83, winRate: 48.28},
+    { date: new Date(2024, 8, 26), pickRate: 17.06, winRate: 48.39},
+    { date: new Date(2024, 8, 27), pickRate: 16.95, winRate: 48.31},
+    { date: new Date(2024, 8, 28), pickRate: 16.72, winRate: 47.96},
+    { date: new Date(2024, 8, 29), pickRate: 16.94, winRate: 48.09},
+    { date: new Date(2024, 8, 30), pickRate: 16.89, winRate: 48.57},
+    { date: new Date(2024, 9, 1), pickRate: 17.03, winRate: 48.46},
+    { date: new Date(2024, 9, 2), pickRate: 19.43, winRate: 47.03},
+    { date: new Date(2024, 9, 3), pickRate: 19.43, winRate: 47.21},
+    { date: new Date(2024, 9, 4), pickRate: 19.92, winRate: 46.75},
+    { date: new Date(2024, 9, 5), pickRate: 19.74, winRate: 46.95},
+    { date: new Date(2024, 9, 6), pickRate: 19.57, winRate: 47.28},
+    { date: new Date(2024, 9, 7), pickRate: 19.20, winRate: 47.51},
+    { date: new Date(2024, 9, 8), pickRate: 19.32, winRate: 47.74},
+    { date: new Date(2024, 9, 9), pickRate: 19.24, winRate: 47.65},
+    { date: new Date(2024, 9, 10), pickRate: 19.39, winRate: 47.76},
+    { date: new Date(2024, 9, 11), pickRate: 19.29, winRate: 47.63},
+    { date: new Date(2024, 9, 12), pickRate: 18.93, winRate: 47.77},
+    { date: new Date(2024, 9, 13), pickRate: 18.66, winRate: 47.36},
+    { date: new Date(2024, 9, 14), pickRate: 16.34, winRate: 48.40},
+];
+
+const ti2024 = [
+    { hero: "Abaddon", played: 1, win: 0, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Alchemist", played: 16, win: 7, lose: 9, radiantPlay: 5, radiantWin: 3, radiantLose: 2, direPlay: 11, direWin: 4, direLose: 7, bans: 32 },
+    { hero: "Ancient Apparition", played: 1, win: 0, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Anti-Mage", played: 0, win: 0, lose: 0, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 0, direWin: 0, direLose: 0, bans: 2 },
+    { hero: "Axe", played: 0, win: 0, lose: 0, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 0, direWin: 0, direLose: 0, bans: 1 },
+    { hero: "Bane", played: 6, win: 3, lose: 3, radiantPlay: 6, radiantWin: 3, radiantLose: 3, direPlay: 0, direWin: 0, direLose: 0, bans: 1 },
+    { hero: "Batrider", played: 34, win: 14, lose: 20, radiantPlay: 18, radiantWin: 8, radiantLose: 10, direPlay: 16, direWin: 6, direLose: 10, bans: 22 },
+    { hero: "Beastmaster", played: 13, win: 6, lose: 7, radiantPlay: 5, radiantWin: 2, radiantLose: 3, direPlay: 8, direWin: 4, direLose: 4, bans: 17 },
+    { hero: "Brewmaster", played: 1, win: 1, lose: 0, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 1, direLose: 0, bans: 1 },
+    { hero: "Bristleback", played: 9, win: 4, lose: 5, radiantPlay: 6, radiantWin: 4, radiantLose: 2, direPlay: 3, direWin: 0, direLose: 3, bans: 6 },
+    { hero: "Broodmother", played: 6, win: 4, lose: 2, radiantPlay: 3, radiantWin: 2, radiantLose: 1, direPlay: 3, direWin: 2, direLose: 1, bans: 16 },
+    { hero: "Centaur Warrunner", played: 22, win: 11, lose: 11, radiantPlay: 14, radiantWin: 9, radiantLose: 5, direPlay: 8, direWin: 2, direLose: 6, bans: 40 },
+    { hero: "Chaos Knight", played: 3, win: 0, lose: 3, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 2, direWin: 0, direLose: 2, bans: 0 },
+    { hero: "Chen", played: 9, win: 4, lose: 5, radiantPlay: 6, radiantWin: 2, radiantLose: 4, direPlay: 3, direWin: 2, direLose: 1, bans: 9 },
+    { hero: "Clinkz", played: 2, win: 0, lose: 2, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 1, direWin: 0, direLose: 1, bans: 1 },
+    { hero: "Clockwerk", played: 28, win: 14, lose: 14, radiantPlay: 12, radiantWin: 5, radiantLose: 7, direPlay: 16, direWin: 9, direLose: 7, bans: 18 },
+    { hero: "Crystal Maiden", played: 4, win: 0, lose: 4, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 3, direWin: 0, direLose: 3, bans: 1 },
+    { hero: "Dark Seer", played: 2, win: 2, lose: 0, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 1, direWin: 1, direLose: 0, bans: 5 },
+    { hero: "Dark Willow", played: 14, win: 8, lose: 6, radiantPlay: 8, radiantWin: 4, radiantLose: 4, direPlay: 6, direWin: 4, direLose: 2, bans: 3 },
+    { hero: "Dazzle", played: 3, win: 0, lose: 3, radiantPlay: 2, radiantWin: 0, radiantLose: 2, direPlay: 1, direWin: 0, direLose: 1, bans: 4 },
+    { hero: "Death Prophet", played: 0, win: 0, lose: 0, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 0, direWin: 0, direLose: 0, bans: 1 },
+    { hero: "Disruptor", played: 2, win: 1, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 2, direWin: 1, direLose: 1, bans: 0 },
+    { hero: "Doom", played: 32, win: 13, lose: 19, radiantPlay: 13, radiantWin: 5, radiantLose: 8, direPlay: 19, direWin: 8, direLose: 11, bans: 64 },
+    { hero: "Dragon Knight", played: 40, win: 17, lose: 23, radiantPlay: 23, radiantWin: 12, radiantLose: 11, direPlay: 17, direWin: 5, direLose: 12, bans: 36 },
+    { hero: "Drow Ranger", played: 5, win: 4, lose: 1, radiantPlay: 4, radiantWin: 3, radiantLose: 1, direPlay: 1, direWin: 1, direLose: 0, bans: 1 },
+    { hero: "Earth Spirit", played: 12, win: 7, lose: 5, radiantPlay: 7, radiantWin: 5, radiantLose: 2, direPlay: 5, direWin: 2, direLose: 3, bans: 11 },
+    { hero: "Earthshaker", played: 8, win: 3, lose: 5, radiantPlay: 5, radiantWin: 2, radiantLose: 3, direPlay: 3, direWin: 1, direLose: 2, bans: 6 },
+    { hero: "Elder Titan", played: 7, win: 3, lose: 4, radiantPlay: 3, radiantWin: 2, radiantLose: 1, direPlay: 4, direWin: 1, direLose: 3, bans: 2 },
+    { hero: "Ember Spirit", played: 1, win: 1, lose: 0, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 0, direWin: 0, direLose: 0, bans: 11 },
+    { hero: "Enchantress", played: 31, win: 16, lose: 15, radiantPlay: 14, radiantWin: 7, radiantLose: 7, direPlay: 17, direWin: 9, direLose: 8, bans: 55 },
+    { hero: "Enigma", played: 10, win: 6, lose: 4, radiantPlay: 2, radiantWin: 2, radiantLose: 0, direPlay: 8, direWin: 4, direLose: 4, bans: 27 },
+    { hero: "Faceless Void", played: 4, win: 3, lose: 1, radiantPlay: 2, radiantWin: 2, radiantLose: 0, direPlay: 2, direWin: 1, direLose: 1, bans: 9 },
+    { hero: "Grimstroke", played: 2, win: 0, lose: 2, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 2, direWin: 0, direLose: 2, bans: 2 },
+    { hero: "Gyrocopter", played: 2, win: 1, lose: 1, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 6 },
+    { hero: "Hoodwink", played: 12, win: 6, lose: 6, radiantPlay: 3, radiantWin: 3, radiantLose: 0, direPlay: 9, direWin: 3, direLose: 6, bans: 1 },
+    { hero: "Huskar", played: 1, win: 0, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 10 },
+    { hero: "Invoker", played: 15, win: 10, lose: 5, radiantPlay: 4, radiantWin: 3, radiantLose: 1, direPlay: 11, direWin: 7, direLose: 4, bans: 41 },
+    { hero: "Io", played: 4, win: 0, lose: 4, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 3, direWin: 0, direLose: 3, bans: 0 },
+    { hero: "Jakiro", played: 9, win: 3, lose: 6, radiantPlay: 4, radiantWin: 2, radiantLose: 2, direPlay: 5, direWin: 1, direLose: 4, bans: 0 },
+    { hero: "Keeper of the Light", played: 4, win: 3, lose: 1, radiantPlay: 2, radiantWin: 1, radiantLose: 1, direPlay: 2, direWin: 2, direLose: 0, bans: 4 },
+    { hero: "Kunkka", played: 39, win: 21, lose: 18, radiantPlay: 25, radiantWin: 14, radiantLose: 11, direPlay: 14, direWin: 7, direLose: 7, bans: 29 },
+    { hero: "Leshrac", played: 7, win: 2, lose: 5, radiantPlay: 3, radiantWin: 1, radiantLose: 2, direPlay: 4, direWin: 1, direLose: 3, bans: 7 },
+    { hero: "Lina", played: 14, win: 5, lose: 9, radiantPlay: 6, radiantWin: 0, radiantLose: 6, direPlay: 8, direWin: 5, direLose: 3, bans: 20 },
+    { hero: "Lone Druid", played: 2, win: 0, lose: 2, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 2, direWin: 0, direLose: 2, bans: 0 },
+    { hero: "Magnus", played: 17, win: 4, lose: 13, radiantPlay: 8, radiantWin: 2, radiantLose: 6, direPlay: 9, direWin: 2, direLose: 7, bans: 20 },
+    { hero: "Marci", played: 28, win: 13, lose: 15, radiantPlay: 13, radiantWin: 6, radiantLose: 7, direPlay: 15, direWin: 7, direLose: 8, bans: 35 },
+    { hero: "Mars", played: 10, win: 6, lose: 4, radiantPlay: 5, radiantWin: 3, radiantLose: 2, direPlay: 5, direWin: 3, direLose: 2, bans: 3 },
+    { hero: "Medusa", played: 8, win: 5, lose: 3, radiantPlay: 3, radiantWin: 3, radiantLose: 0, direPlay: 5, direWin: 2, direLose: 3, bans: 29 },
+    { hero: "Mirana", played: 33, win: 13, lose: 20, radiantPlay: 13, radiantWin: 6, radiantLose: 7, direPlay: 20, direWin: 7, direLose: 13, bans: 0 },
+    { hero: "Morphling", played: 4, win: 3, lose: 1, radiantPlay: 3, radiantWin: 2, radiantLose: 1, direPlay: 1, direWin: 1, direLose: 0, bans: 10 },
+    { hero: "Nature's Prophet", played: 6, win: 3, lose: 3, radiantPlay: 2, radiantWin: 1, radiantLose: 1, direPlay: 4, direWin: 2, direLose: 2, bans: 4 },
+    { hero: "Necrophos", played: 2, win: 0, lose: 2, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 2, direWin: 0, direLose: 2, bans: 0 },
+    { hero: "Night Stalker", played: 2, win: 0, lose: 2, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 1, direWin: 0, direLose: 1, bans: 9 },
+    { hero: "Nyx Assassin", played: 3, win: 1, lose: 2, radiantPlay: 2, radiantWin: 0, radiantLose: 2, direPlay: 1, direWin: 1, direLose: 0, bans: 0 },
+    { hero: "Ogre Magi", played: 5, win: 2, lose: 3, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 4, direWin: 2, direLose: 2, bans: 0 },
+    { hero: "Omniknight", played: 3, win: 0, lose: 3, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 3, direWin: 0, direLose: 3, bans: 1 },
+    { hero: "Oracle", played: 1, win: 1, lose: 0, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 1, direLose: 0, bans: 3 },
+    { hero: "Outworld Destroyer", played: 1, win: 0, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Pangolier", played: 21, win: 7, lose: 14, radiantPlay: 8, radiantWin: 3, radiantLose: 5, direPlay: 13, direWin: 4, direLose: 9, bans: 13 },
+    { hero: "Phantom Assassin", played: 3, win: 2, lose: 1, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 2, direWin: 2, direLose: 0, bans: 1 },
+    { hero: "Phantom Lancer", played: 2, win: 1, lose: 1, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 1, direWin: 1, direLose: 0, bans: 0 },
+    { hero: "Phoenix", played: 6, win: 2, lose: 4, radiantPlay: 2, radiantWin: 1, radiantLose: 1, direPlay: 4, direWin: 1, direLose: 3, bans: 0 },
+    { hero: "Puck", played: 6, win: 2, lose: 4, radiantPlay: 3, radiantWin: 2, radiantLose: 1, direPlay: 3, direWin: 0, direLose: 3, bans: 5 },
+    { hero: "Pugna", played: 1, win: 0, lose: 1, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 0, direWin: 0, direLose: 0, bans: 0 },
+    { hero: "Queen of Pain", played: 2, win: 0, lose: 2, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Riki", played: 6, win: 3, lose: 3, radiantPlay: 3, radiantWin: 1, radiantLose: 2, direPlay: 3, direWin: 2, direLose: 1, bans: 5 },
+    { hero: "Rubick", played: 25, win: 9, lose: 16, radiantPlay: 11, radiantWin: 5, radiantLose: 6, direPlay: 14, direWin: 4, direLose: 10, bans: 7 },
+    { hero: "Sand King", played: 1, win: 0, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Shadow Demon", played: 5, win: 2, lose: 3, radiantPlay: 3, radiantWin: 2, radiantLose: 1, direPlay: 2, direWin: 0, direLose: 2, bans: 0 },
+    { hero: "Shadow Fiend", played: 3, win: 1, lose: 2, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 3, direWin: 1, direLose: 2, bans: 2 },
+    { hero: "Shadow Shaman", played: 3, win: 1, lose: 2, radiantPlay: 2, radiantWin: 1, radiantLose: 1, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Silencer", played: 6, win: 2, lose: 4, radiantPlay: 2, radiantWin: 0, radiantLose: 2, direPlay: 4, direWin: 2, direLose: 2, bans: 1 },
+    { hero: "Skywrath Mage", played: 2, win: 1, lose: 1, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Slardar", played: 3, win: 2, lose: 1, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 2, direWin: 1, direLose: 1, bans: 0 },
+    { hero: "Slark", played: 9, win: 5, lose: 4, radiantPlay: 4, radiantWin: 3, radiantLose: 1, direPlay: 5, direWin: 2, direLose: 3, bans: 4 },
+    { hero: "Snapfire", played: 9, win: 4, lose: 5, radiantPlay: 2, radiantWin: 0, radiantLose: 2, direPlay: 7, direWin: 4, direLose: 3, bans: 1 },
+    { hero: "Spectre", played: 3, win: 2, lose: 1, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 2, direWin: 2, direLose: 0, bans: 1 },
+    { hero: "Spirit Breaker", played: 1, win: 1, lose: 0, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 0, direWin: 0, direLose: 0, bans: 0 },
+    { hero: "Storm Spirit", played: 2, win: 1, lose: 1, radiantPlay: 2, radiantWin: 1, radiantLose: 1, direPlay: 0, direWin: 0, direLose: 0, bans: 0 },
+    { hero: "Sven", played: 2, win: 1, lose: 1, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 1 },
+    { hero: "Techies", played: 13, win: 8, lose: 5, radiantPlay: 6, radiantWin: 3, radiantLose: 3, direPlay: 7, direWin: 5, direLose: 2, bans: 5 },
+    { hero: "Templar Assassin", played: 3, win: 2, lose: 1, radiantPlay: 2, radiantWin: 2, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Terrorblade", played: 5, win: 1, lose: 4, radiantPlay: 3, radiantWin: 1, radiantLose: 2, direPlay: 2, direWin: 0, direLose: 2, bans: 2 },
+    { hero: "Tidehunter", played: 3, win: 2, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 3, direWin: 2, direLose: 1, bans: 0 },
+    { hero: "Timbersaw", played: 3, win: 1, lose: 2, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 2, direWin: 1, direLose: 1, bans: 0 },
+    { hero: "Tinker", played: 2, win: 1, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 2, direWin: 1, direLose: 1, bans: 0 },
+    { hero: "Tiny", played: 22, win: 8, lose: 14, radiantPlay: 10, radiantWin: 3, radiantLose: 7, direPlay: 12, direWin: 5, direLose: 7, bans: 2 },
+    { hero: "Treant Protector", played: 4, win: 2, lose: 2, radiantPlay: 2, radiantWin: 1, radiantLose: 1, direPlay: 2, direWin: 1, direLose: 1, bans: 0 },
+    { hero: "Tusk", played: 6, win: 3, lose: 3, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 5, direWin: 2, direLose: 3, bans: 3 },
+    { hero: "Underlord", played: 6, win: 3, lose: 3, radiantPlay: 4, radiantWin: 2, radiantLose: 2, direPlay: 2, direWin: 1, direLose: 1, bans: 4 },
+    { hero: "Undying", played: 22, win: 11, lose: 11, radiantPlay: 8, radiantWin: 3, radiantLose: 5, direPlay: 14, direWin: 8, direLose: 6, bans: 22 },
+    { hero: "Ursa", played: 11, win: 3, lose: 8, radiantPlay: 5, radiantWin: 1, radiantLose: 4, direPlay: 6, direWin: 2, direLose: 4, bans: 18 },
+    { hero: "Vengeful Spirit", played: 3, win: 0, lose: 3, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 2, direWin: 0, direLose: 2, bans: 0 },
+    { hero: "Venomancer", played: 3, win: 1, lose: 2, radiantPlay: 2, radiantWin: 0, radiantLose: 2, direPlay: 1, direWin: 1, direLose: 0, bans: 1 },
+    { hero: "Viper", played: 1, win: 0, lose: 1, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 0, direWin: 0, direLose: 0, bans: 0 },
+    { hero: "Visage", played: 1, win: 0, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
+    { hero: "Void Spirit", played: 16, win: 8, lose: 8, radiantPlay: 5, radiantWin: 2, radiantLose: 3, direPlay: 11, direWin: 6, direLose: 5, bans: 5 },
+    { hero: "Warlock", played: 4, win: 1, lose: 3, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 3, direWin: 1, direLose: 2, bans: 0 },
+    { hero: "Weaver", played: 2, win: 0, lose: 2, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 2, direWin: 0, direLose: 2, bans: 0 },
+    { hero: "Windranger", played: 2, win: 1, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 2, direWin: 1, direLose: 1, bans: 2 },
+    { hero: "Winter Wyvern", played: 1, win: 1, lose: 0, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 1, direLose: 0, bans: 0 },
+    { hero: "Witch Doctor", played: 5, win: 4, lose: 1, radiantPlay: 1, radiantWin: 1, radiantLose: 0, direPlay: 4, direWin: 3, direLose: 1, bans: 0 },
+    { hero: "Wraith King", played: 3, win: 0, lose: 3, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 2, direWin: 0, direLose: 2, bans: 0 },
+    { hero: "Zeus", played: 1, win: 0, lose: 1, radiantPlay: 1, radiantWin: 0, radiantLose: 1, direPlay: 0, direWin: 0, direLose: 0, bans: 0 }
+];
+
+
 function complex314() {
     var x = [], y = [], size = [], text = [];
     heroes.forEach((hero) => {
@@ -4663,4 +4805,318 @@ function complex315() {
     };
 
     Plotly.newPlot('demoa434', data, layout);
+}
+
+
+function complex316() {
+    var dates = [];
+    var pickRates = [];
+    var winRates = [];
+
+    for (let i = 0; i < invoker.length; i++) {
+        dates.push(invoker[i].date);
+        pickRates.push(invoker[i].pickRate);
+        winRates.push(invoker[i].winRate);
+    }
+
+    var data = [{
+        x: dates,
+        y: pickRates,
+        type: 'scatter',
+        mode: 'none',
+        fill: 'tozeroy',
+        name: 'Pick Rate',
+        line: {
+            color: 'rgba(0, 0, 255, 1)',
+            width: 2,
+        },
+        hovertemplate: ' %{y:.2f}%',
+        meta: winRates,
+    }, {
+        x: dates,
+        y: winRates,
+        type: 'scatter',
+        mode: 'none',
+        fill: 'tonexty',
+        name: 'Win Rate',
+        line: {
+            color: 'rgba(255, 165, 0, 1)',
+            width: 2,
+        },
+        hovertemplate: ' %{y:.2f}%',
+        meta: pickRates,
+    }];
+
+    var layout = {
+        title: {
+            text: 'Invoker Pick Rate vs Win Rate Over Time',
+            font: {
+                size: 24,
+            },
+        },
+        xaxis: {
+            title: {
+                text: 'Date',
+                font: {
+                    size: 18,
+                },
+            },
+        },
+        yaxis: {
+            title: {
+                text: 'Pick Rate and Win Rate (%)',
+                font: {
+                    size: 18,
+                },
+            },
+            range: [10, 50],
+        },
+        hovermode: 'x unified',
+        width: 800,
+        height: 600,
+    };
+
+    Plotly.newPlot('demoa435', data, layout);
+}
+
+function complex317() {
+    const sortedData = [...ti2024].sort((a, b) => b.played - a.played).slice(0, 20);
+
+    const heroesDota = sortedData.map(item => item.hero);
+    const wins = sortedData.map(item => item.win);
+    const losses = sortedData.map(item => item.lose);
+
+    heroesDota.reverse();
+    wins.reverse();
+    losses.reverse();
+
+    const traceWin = {
+        x: wins,
+        y: heroesDota,
+        name: 'Win',
+        type: 'bar',
+        orientation: 'h',
+        hovertemplate: 'Win: %{x}<extra></extra>',
+        marker: {
+            color: 'rgba(255, 140, 0, 1)'
+        }
+    };
+
+    const traceLose = {
+        x: losses,
+        y: heroesDota,
+        name: 'Lose',
+        type: 'bar',
+        orientation: 'h',
+        hovertemplate: 'Lose: %{x}<extra></extra>',
+        marker: {
+            color: 'rgba(255, 140, 0, 0.3)'
+        }
+    };
+
+    const layout = {
+        title: 'Top 20 Most Played Heroes in The International 2024',
+        barmode: 'stack',
+        xaxis: {
+            title: 'Number of Matches'
+        },
+        yaxis: {
+            title: 'Heroes',
+            automargin: true
+        },
+        height: 600
+    };
+
+    const data = [traceWin, traceLose];
+
+    Plotly.newPlot('demoa436', data, layout);
+}
+
+function complex318() {
+    var data = [{
+        type: "sunburst",
+        ids: [
+          "North America", "Europe", "Australia", "North America - Football", "Soccer",
+          "North America - Rugby", "Europe - Football", "Rugby",
+          "Europe - American Football","Australia - Football", "Association",
+          "Australian Rules", "Autstralia - American Football", "Australia - Rugby",
+          "Rugby League", "Rugby Union"
+        ],
+        labels: [
+          "North<br>America", "Europe", "Australia", "Football", "Soccer", "Rugby",
+          "Football", "Rugby", "American<br>Football", "Football", "Association",
+          "Australian<br>Rules", "American<br>Football", "Rugby", "Rugby<br>League",
+          "Rugby<br>Union"
+        ],
+        parents: [
+          "", "", "", "North America", "North America", "North America", "Europe",
+          "Europe", "Europe","Australia", "Australia - Football", "Australia - Football",
+          "Australia - Football", "Australia - Football", "Australia - Rugby",
+          "Australia - Rugby"
+        ],
+        outsidetextfont: {size: 20, color: "#377eb8"},
+        // leaf: {opacity: 0.4},
+        marker: {line: {width: 2}},
+      }];
+      
+      var layout = {
+        margin: {l: 0, r: 0, b: 0, t:0},
+        sunburstcolorway:["#636efa","#ef553b","#00cc96"],
+      };
+      
+      
+      Plotly.newPlot('demoa437', data, layout);      
+}
+
+function complex319() {
+    const data = {
+        type: "sankey",
+        orientation: "h",
+        node: {
+            pad: 15,
+            thickness: 20,
+            line: {
+                color: "black",
+                width: 0.5
+            },
+            label: [
+                "Invoker", "Phantom Assassin", "Magnus", "Witch Doctor", "Monkey King",
+                "Shadow Fiend", "Wind Ranger", "Dragon Knight", "Rubick", "Warlock"
+            ],
+            color: [
+                "#A3E4D7", "#F1948A", "#AED6F1", "#D7BDE2", "#A9DFBF",
+                "#76D7C4", "#85C1E9", "#F5B7B1", "#F7DC6F", "#F0B27A"
+            ]
+        },
+        link: {
+            source: [
+                0, 0, 0, 0, 0, // Invoker to each Radiant hero
+                1, 1, 1, 1, 1, // Phantom Assassin to each Radiant hero
+                2, 2, 2, 2, 2, // Magnus to each Radiant hero
+                3, 3, 3, 3, 3, // Witch Doctor to each Radiant hero
+                4, 4, 4, 4, 4  // Monkey King to each Radiant hero
+            ],
+            target: [
+                5, 6, 7, 8, 9, // Targets for Invoker
+                5, 6, 7, 8, 9, // Targets for Phantom Assassin
+                5, 6, 7, 8, 9, // Targets for Magnus
+                5, 6, 7, 8, 9, // Targets for Witch Doctor
+                5, 6, 7, 8, 9  // Targets for Monkey King
+            ],
+            value: [
+                4891, 3092, 7892, 2391, 1832, // Damage from Invoker (total ~12k)
+                4821, 1323, 6321, 3532, 2742, // Damage from Phantom Assassin (total ~18k)
+                983, 231, 1402, 2421, 3201, // Damage from Magnus (total ~8k)
+                6542, 2132, 5671, 2382, 4980, // Damage from Witch Doctor (total ~3.7k)
+                787, 109, 320, 902, 1302  // Damage from Monkey King (total ~11.7k)
+            ],
+            color: "rgba(100, 100, 100, 0.5)" // Link color
+        }
+    };
+
+    const layout = {
+        title: "Dota 2 Damage Distribution (Dire to Radiant)",
+        font: {
+            size: 12
+        }
+    };
+
+    Plotly.newPlot('demoa438', [data], layout);
+}
+
+function complex320() {
+    // Sample data for the point cloud chart
+    var data = [{
+        x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // X-axis data
+        y: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], // Y-axis data
+        z: [1, 3, 2, 5, 4, 6, 8, 7, 9, 10], // Z-axis data
+        mode: 'markers', // Display as points
+        marker: {
+            size: 10, // Size of the points
+            color: 'rgba(0, 176, 246, 0.8)', // Color of the points
+            opacity: 0.8,
+            line: {
+                width: 0.5,
+                color: 'white'
+            }
+        }
+    }];
+
+    // Layout settings
+    var layout = {
+        title: 'Simple Point Cloud Chart',
+        scene: {
+            xaxis: { title: 'X Axis' },
+            yaxis: { title: 'Y Axis' },
+            zaxis: { title: 'Z Axis' }
+        }
+    };
+
+    // Plot the chart
+    Plotly.newPlot('demoa439', data, layout);
+}
+
+function complex321() {
+    const data = [{
+        type: "treemap",
+        labels: ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+        parents: ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve"],
+        textinfo: "label+value", // Display label and value
+        marker: {
+            line: {
+                width: 2 // Set border width for the rectangles
+            }
+        }
+    }];
+
+    // Layout settings
+    const layout = {
+        height: 190, // Set the height of the treemap to 200 pixels
+        margin: {
+            t: 4, // Top margin
+            b: 4, // Bottom margin
+            l: 10, // Left margin
+            r: 10  // Right margin
+        }
+    };
+
+    Plotly.newPlot('demoa440', data, layout);
+}
+
+function complex322() {
+    // Sort the data by 'played' in descending order
+    ti2024.sort((a, b) => b.played - a.played);
+
+    // Prepare table data
+    const header = ['Hero', 'Played', 'Win', 'Lose', 'Bans'];
+    const values = ti2024.map(hero => [hero.hero, hero.played, hero.win, hero.lose, hero.bans]);
+
+    // Create the table data structure
+    const data = [{
+        type: 'table',
+        header: {
+            values: header.map(h => `<b>${h}</b>`), // Bold headers
+            align: 'center',
+            line: { width: 1, color: 'black' },
+            fill: { color: 'lightgrey' },
+            font: { family: 'Arial', size: 12, color: 'black' }
+        },
+        cells: {
+            values: values[0].map((_, colIndex) => values.map(row => row[colIndex])),
+            align: 'center',
+            line: { color: 'black', width: 1 },
+            fill: { color: ['white', 'lightblue'] }, // Alternate row colors
+            font: { family: 'Arial', size: 11, color: 'black' }
+        }
+    }];
+
+    // Layout settings
+    const layout = {
+        title: 'TI 2024 Hero Statistics',
+        height: 400,
+        margin: { l: 10, r: 10, t: 30, b: 10 }
+    };
+
+    // Plot the table
+    Plotly.newPlot('demoa441', data, layout);
 }

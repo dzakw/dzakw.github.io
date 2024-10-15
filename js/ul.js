@@ -470,7 +470,7 @@ function generateList30() {
 }
 
 // Statistical Charts
-function generateList32() {
+function generateList31() {
     const methods = [
         "Error Bars", "Box Plots", "Histograms", "2D Density Plots", "Violin Plot"
     ];
@@ -485,7 +485,7 @@ function generateList32() {
 }
 
 // Scientific Charts
-function generateList33() {
+function generateList32() {
     const methods = [
         "Contour Plots", "Heatmaps", "Ternary Plots", "Wind Rose Charts", "Radar Charts", "Polar Charts"
     ];
@@ -500,7 +500,7 @@ function generateList33() {
 }
 
 // Financial Charts
-function generateList34() {
+function generateList33() {
     const methods = [
         "Wterfall Charts", "Indicators", "Candlestick Charts", "Time Series", "Bullet Charts"
     ];
@@ -515,7 +515,7 @@ function generateList34() {
 }
 
 // Maps
-function generateList35() {
+function generateList34() {
     const methods = [
         "Tile Map Layers", "Tile Density Heatmap", "Line on Maps", "Bubble Maps", "Choropleth Maps"
     ];
@@ -530,7 +530,7 @@ function generateList35() {
 }
 
 // 3D Charts
-function generateList36() {
+function generateList35() {
     const methods = [
         "3D Scatter Plots", "Ribbon Plots", "3D Surface Plots"
     ];

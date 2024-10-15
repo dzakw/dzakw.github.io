@@ -23538,6 +23538,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <li>Plotly.js is a charting library that comes with over 40 chart types:</li>
                         <h2>Bar Charts</h2>
                         <ul class="threeColumn" id="threeColumn30"></ul>
+
                         <div id="childExample0" style="display: none;">
                             <h6>Bar Chart</h6>
                             <li>Bar Chart usually used for comparing categorical data across different groups.</li>
@@ -24051,6 +24052,412 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                                 <p id="demoa434" class="result"><span></span> </p>
                             </div>
                         </div>
+                        <div id="childExample6" style="display: none;">
+                            <h6>Filled Area Plots</h6>
+                            <li>Filled Area Plots usually used to visualize the distribution of data.</li>
+                            <li>It is similar to a line chart, but the area below the line is filled with color.</li>
+                            <li>In this example, we will create a filled area plot, which shows the Invoker hero from Dota 2 Win Rate vs Pick Rate over time:</li>
+                            <div class="block-outer" data-result-id="demoa435" data-result-function="complex316">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">dates</span> = [];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">pickRates</span> = [];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">winRates</span> = [];</p>
+                                        <br>
+                                        <p><span class="jsfunctioncolor">for</span> (<span class="jskeywordcolor">let</span> i = <span class="jsnumbercolor">0</span>; i &lt; <span class="jsvariablecolor">invoker</span>.<span class="jspropertycolor">length</span>; i++) {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">dates</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">invoker</span>[i].<span class="jspropertycolor">date</span>);</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">pickRates</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">invoker</span>[i].<span class="jspropertycolor">pickRate</span>);</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">winRates</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">invoker</span>[i].<span class="jspropertycolor">winRate</span>);</p>
+                                        <p>}</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> = [{</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">dates</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">pickRates</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'scatter'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">mode</span>: <span class="jsstringcolor">'none'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">fill</span>: <span class="jsstringcolor">'tozeroy'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'Pick Rate</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(0, 0, 255, 1)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">hovertemplate</span>: <span class="jsstringcolor">' %{y:.2f}%'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">meta</span>: <span class="jsvariablecolor">winRates</span>,</p>
+                                        <p>}, {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">dates</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">winRates</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'scatter'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">mode</span>: <span class="jsstringcolor">'none'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">fill</span>: <span class="jsstringcolor">'tonexty'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'Win Rate</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(255, 165, 0, 1)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">hovertemplate</span>: <span class="jsstringcolor">' %{y:.2f}%'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">meta</span>: <span class="jsvariablecolor">pickRates</span>,</p>
+                                        <p>}];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> layout = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span>: <span class="jsstringcolor">'Invoker Pick Rate vs Win Rate Over Time'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">font</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">24</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span>: <span class="jsstringcolor">'Date'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">font</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">18</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">text</span>: <span class="jsstringcolor">'Pick Rate and Win Rate (%)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">font</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">18</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">range</span>: [<span class="jsnumbercolor">10</span>, <span class="jsnumbercolor">50</span>],</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">hovermode</span>: <span class="jsstringcolor">'x unified'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">800</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">height</span>: <span class="jsnumbercolor">600</span>,</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>(<span class="jsvariablecolor">demo</span>, <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa435" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample7" style="display: none;">
+                            <h6>Horizontal Bar Charts</h6>
+                            <li>Horizontal Bar Charts usually used to compare the data between different categories.</li>
+                            <li>It is similar to a bar chart, but the bars are horizontal.</li>
+                            <li>In this example, we will create a horizontal bar chart, which shows the top 20 heroes with the highest pick rate in Dota 2 The International 2024:</li>
+                            <div class="block-outer" data-result-id="demoa436" data-result-function="complex317">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">sortedData</span> = [...<span class="jsvariablecolor">ti2024</span>].<span class="jsfunctioncolor">sort</span>((<span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span>) =&gt; <span class="jsvariablecolor">b</span>.<span class="jspropertycolor">played</span> - <span class="jsvariablecolor">a</span>.<span class="jspropertycolor">played</span>).<span class="jsfunctioncolor">slice</span>(<span class="jsnumbercolor">0</span>, <span class="jsnumbercolor">20</span>);</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">heroesDota</span> = <span class="jsvariablecolor">sortedData</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">item</span> =&gt; <span class="jsvariablecolor">item</span>.<span class="jspropertycolor">hero</span>);</p>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">wins</span> = <span class="jsvariablecolor">sortedData</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">item</span> =&gt; <span class="jsvariablecolor">item</span>.<span class="jspropertycolor">win</span>);</p>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">losses</span> = <span class="jsvariablecolor">sortedData</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">item</span> =&gt; <span class="jsvariablecolor">item</span>.<span class="jspropertycolor">lose</span>);</p>
+                                        <br>
+                                        <p><span class="jsvariablecolor">heroesDota</span>.<span class="jsfunctioncolor">reverse</span>();</p>
+                                        <p><span class="jsvariablecolor">wins</span>.<span class="jsfunctioncolor">reverse</span>();</p>
+                                        <p><span class="jsvariablecolor">losses</span>.<span class="jsfunctioncolor">reverse</span>();</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">traceWin</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">wins</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">heroesDota</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'Win'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'bar'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">orientation</span>: <span class="jsstringcolor">'h'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">hovertemplate</span>: <span class="jsstringcolor">'Win: %{x}&lt;extra&gt;&lt;/extra&gt;'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(255, 140, 0, 1)'</span>,</p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">traceLose</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">losses</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">heroesDota</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'Lose'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'bar'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">orientation</span>: <span class="jsstringcolor">'h'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">hovertemplate</span>: <span class="jsstringcolor">'Lose: %{x}&lt;extra&gt;&lt;/extra&gt;'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(255, 140, 0, 0.3)'</span>,</p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Top 20 Most Played Heroes in The International 2024'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">barmode</span>: <span class="jsstringcolor">'stack'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Number of Matches'</span>,</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Heroes'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">automargin</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">height</span>: <span class="jsnumbercolor">600</span>,</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">data</span> = [<span class="jsvariablecolor">traceWin</span>, <span class="jsvariablecolor">traceLose</span>];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>(<span class="jsvariablecolor">demo</span>, <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa436" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample8" style="display: none;">
+                            <h6>Sunburst Charts</h6>
+                            <li>Sunburst Charts usually used to visualize hierarchical data.</li>
+                            <li>It is a circular chart with multiple levels, where each level represents a category.</li>
+                            <li>In this example, we will create a sunburst chart, which shows the heroes win rate in TI 2024 for radiant vs dire</li>
+                            <div class="block-outer" data-result-id="demoa437" data-result-function="complex318">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> = [{</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'sunburst'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">ids</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'North America'</span>, <span class="jsstringcolor">'Europe'</span>, <span class="jsstringcolor">'Australia'</span>, <span class="jsstringcolor">'North America - Football'</span>, <span class="jsstringcolor">'Soccer'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'North America - Rugby'</span>, <span class="jsstringcolor">'Europe - Football'</span>, <span class="jsstringcolor">'Rugby'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Europe - American Football'</span>,<span class="jsstringcolor">'Australia - Football'</span>, <span class="jsstringcolor">'Association'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Australian Rules'</span>, <span class="jsstringcolor">'Autstralia - American Football'</span>, <span class="jsstringcolor">'Australia - Rugby'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Rugby League'</span>, <span class="jsstringcolor">'Rugby Union'</span></p>
+                                        <p>&nbsp;&nbsp;],</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">labels</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'North&lt;br&gt;America'</span>, <span class="jsstringcolor">'Europe'</span>, <span class="jsstringcolor">'Australia'</span>, <span class="jsstringcolor">'Football'</span>, <span class="jsstringcolor">'Soccer'</span>, <span class="jsstringcolor">'Rugby'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Football'</span>, <span class="jsstringcolor">'Rugby'</span>, <span class="jsstringcolor">'American&lt;br&gt;Football'</span>, <span class="jsstringcolor">'Football'</span>, <span class="jsstringcolor">'Association'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Australian&lt;br&gt;Rules'</span>, <span class="jsstringcolor">'American&lt;br&gt;Football'</span>, <span class="jsstringcolor">'Rugby'</span>, <span class="jsstringcolor">'Rugby&lt;br&gt;League'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Rugby&lt;br&gt;Union'</span></p>
+                                        <p>&nbsp;&nbsp;],</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">parents</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">''</span>, <span class="jsstringcolor">''</span>, <span class="jsstringcolor">''</span>, <span class="jsstringcolor">'North America'</span>, <span class="jsstringcolor">'North America'</span>, <span class="jsstringcolor">'North America'</span>, <span class="jsstringcolor">'Europe'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Europe'</span>, <span class="jsstringcolor">'Europe'</span>,<span class="jsstringcolor">'Australia'</span>, <span class="jsstringcolor">'Australia - Football'</span>, <span class="jsstringcolor">'Australia - Football'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'Australia - Football'</span>, <span class="jsstringcolor">'Australia - Football'</span>, <span class="jsstringcolor">'Australia - Rugby'</span>, <span class="jsstringcolor">'Australia - Rugby'</span></p>
+                                        <p>&nbsp;&nbsp;],</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">outsidetextfont</span>: {<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">20</span>, <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'#377eb8'</span>},</p>
+                                        <p>&nbsp;&nbsp;<span class="commentcolor">// leaf: {opacity: 0.4},</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {<span class="jsvariablecolor">line</span>: {<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">2</span>}},</p>
+                                        <p>&nbsp;&nbsp;}];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">margin</span>: {<span class="jsvariablecolor">l</span>: <span class="jsnumbercolor">0</span>, <span class="jsvariablecolor">r</span>: <span class="jsnumbercolor">0</span>, <span class="jsvariablecolor">b</span>: <span class="jsnumbercolor">0</span>, <span class="jsvariablecolor">t</span>:<span class="jsnumbercolor">0</span>},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">sunburstcolorway</span>:[<span class="jsstringcolor">'#636efa'</span>,<span class="jsstringcolor">'#ef553b'</span>,<span class="jsstringcolor">'#00cc96'</span>],</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>(<span class="jsvariablecolor">demo</span>, <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa437" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample9" style="display: none;">
+                            <h6>Sankey Diagrams</h6>
+                            <li>Sankey Diagrams usually used to visualize the flow of data.</li>
+                            <li>It is a flow diagram, where the width of the arrows or lines is proportional to the flow quantity.</li>
+                            <li>In this example, we will create a Sankey diagram, which shows a Dota 2 Match data and shows damage dealt from Dire to Radiant team</li>
+                            <div class="block-outer" data-result-id="demoa438" data-result-function="complex319">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">data</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'sankey'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">orientation</span>: <span class="jsstringcolor">'h'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">node</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">pad</span>: <span class="jsnumbercolor">15</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">thickness</span>: <span class="jsnumbercolor">20</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'black'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">0.5</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">label</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"Invoker", "Phantom Assassin", "Magnus", "Witch Doctor", "Monkey King",</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">"Shadow Fiend", "Wind Ranger", "Dragon Knight", "Rubick", "Warlock"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'#A3E4D7', '#F1948A', '#AED6F1', '#D7BDE2', '#A9DFBF',</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsstringcolor">'#76D7C4', '#85C1E9', '#F5B7B1', '#F7DC6F', '#F0B27A'</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;]</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">link</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">source</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">0, 0, 0, 0, 0, <span class="commentcolor">// Invoker to each Radiant hero</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">1, 1, 1, 1, 1, <span class="commentcolor">// Phantom Assassin to each Radiant hero</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">2, 2, 2, 2, 2, <span class="commentcolor">// Magnus to each Radiant hero</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">3, 3, 3, 3, 3, <span class="commentcolor">// Witch Doctor to each Radiant hero</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">4, 4, 4, 4, 4  <span class="commentcolor">// Monkey King to each Radiant hero</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">target</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">5, 6, 7, 8, 9, <span class="commentcolor">// Targets for Invoker</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">5, 6, 7, 8, 9, <span class="commentcolor">// Targets for Phantom Assassin</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">5, 6, 7, 8, 9, <span class="commentcolor">// Targets for Magnus</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">5, 6, 7, 8, 9, <span class="commentcolor">// Targets for Witch Doctor</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">5, 6, 7, 8, 9  <span class="commentcolor">// Targets for Monkey King</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">value</span>: [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">4891, 3092, 7892, 2391, 1832, <span class="commentcolor">// Damage from Invoker (total ~12k)</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">4821, 1323, 6321, 3532, 2742, <span class="commentcolor">// Damage from Phantom Assassin (total ~18k)</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">983, 231, 1402, 2421, 3201, <span class="commentcolor">// Damage from Magnus (total ~8k)</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">6542, 2132, 5671, 2382, 4980, <span class="commentcolor">// Damage from Witch Doctor (total ~3.7k)</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">787, 109, 320, 902, 1302 <span class="commentcolor">// Damage from Monkey King (total ~11.7k)</span></span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: "rgba(100, 100, 100, 0.5)"</p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Dota 2 Damage Distribution (Dire to Radiant)'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">font</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">12</span></p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>}</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.newPlot('myDiv', <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa438" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample10" style="display: none;">
+                            <h6>Point Cloud</h6>
+                            <li>Point Clouds are used to visualize the distribution of data points</li>
+                            <li>It is similar to scatter plot. But, it is used to visualize a large number of data points.</li>
+                            <div class="block-outer" data-result-id="demoa439" data-result-function="complex320">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> = [{</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: [<span class="jsnumbercolor">1</span>, <span class="jsnumbercolor">2</span>, <span class="jsnumbercolor">3</span>, <span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">5</span>, <span class="jsnumbercolor">6</span>, <span class="jsnumbercolor">7</span>, <span class="jsnumbercolor">8</span>, <span class="jsnumbercolor">9</span>, <span class="jsnumbercolor">10</span>], <span class="commentcolor">// X-axis data</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: [<span class="jsnumbercolor">10</span>, <span class="jsnumbercolor">11</span>, <span class="jsnumbercolor">12</span>, <span class="jsnumbercolor">13</span>, <span class="jsnumbercolor">14</span>, <span class="jsnumbercolor">15</span>, <span class="jsnumbercolor">16</span>, <span class="jsnumbercolor">17</span>, <span class="jsnumbercolor">18</span>, <span class="jsnumbercolor">19</span>], <span class="commentcolor">// Y-axis data</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">z</span>: [<span class="jsnumbercolor">1</span>, <span class="jsnumbercolor">3</span>, <span class="jsnumbercolor">2</span>, <span class="jsnumbercolor">5</span>, <span class="jsnumbercolor">4</span>, <span class="jsnumbercolor">6</span>, <span class="jsnumbercolor">8</span>, <span class="jsnumbercolor">7</span>, <span class="jsnumbercolor">9</span>, <span class="jsnumbercolor">10</span>], <span class="commentcolor">// Z-axis data</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">mode</span>: <span class="jsstringcolor">'markers'</span>, <span class="commentcolor">// Display as points</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">10</span>, <span class="commentcolor">// Size of the points</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(0, 176, 246, 0.8)'</span>, <span class="commentcolor">// Color of the points</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">opacity</span>: <span class="jsnumbercolor">0.8</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">0.5</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'white'</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>}];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Simple Point Cloud Chart'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">scene</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">xaxis</span>: { <span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'X Axis'</span> },</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: { <span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Y Axis'</span> },</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zaxis</span>: { <span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Z Axis'</span> }</p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>('demo', <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa439" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample11" style="display: none;">
+                            <h6>Treemap</h6>
+                            <li>Treemaps are used to visualize hierarchical data using nested rectangles.</li>
+                            <li>It is a space-filling visualization technique, where each node of the tree is represented by a rectangle.</li>
+                            <div class="block-outer" data-result-id="demoa440" data-result-function="complex321">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> = [{</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'treemap'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">labels</span>: [<span class="jsstringcolor">'Eve'</span>, <span class="jsstringcolor">'Cain'</span>, <span class="jsstringcolor">'Seth'</span>, <span class="jsstringcolor">'Enos'</span>, <span class="jsstringcolor">'Noam'</span>, <span class="jsstringcolor">'Abel'</span>, <span class="jsstringcolor">'Awan'</span>, <span class="jsstringcolor">'Enoch'</span>, <span class="jsstringcolor">'Azura'</span>],</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">parents</span>: [<span class="jsstringcolor">''</span>, <span class="jsstringcolor">'Eve'</span>, <span class="jsstringcolor">'Eve'</span>, <span class="jsstringcolor">'Seth'</span>, <span class="jsstringcolor">'Seth'</span>, <span class="jsstringcolor">'Eve'</span>, <span class="jsstringcolor">'Eve'</span>, <span class="jsstringcolor">'Awan'</span>, <span class="jsstringcolor">'Eve'</span> ]</p>
+                                        <p>}];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>('demo', <span class="jsvariablecolor">data</span>)</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa440" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample12" style="display: none;">
+                            <h6>Table</h6>
+                            <div class="block-outer" data-result-id="demoa441" data-result-function="complex322">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jsvariablecolor">ti2024</span>.<span class="jsfunctioncolor">sort</span>((<span class="jsvariablecolor">a</span>, <span class="jsvariablecolor">b</span>) => <span class="jsvariablecolor">b</span>.<span class="jsvariablecolor">played</span> - <span class="jsvariablecolor">a</span>.<span class="jsvariablecolor">played</span>);</p>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">header</span> = [<span class="jsstringcolor">'Hero'</span>, <span class="jsstringcolor">'Played'</span>, <span class="jsstringcolor">'Win'</span>, <span class="jsstringcolor">'Lose'</span>, <span class="jsstringcolor">'Bans'</span>];</p>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">values</span> = <span class="jsvariablecolor">ti2024</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">hero</span> => [<span class="jsvariablecolor">hero</span>.<span class="jsvariablecolor">hero</span>, <span class="jsvariablecolor">hero</span>.<span class="jsvariablecolor">played</span>, <span class="jsvariablecolor">hero</span>.<span class="jsvariablecolor">win</span>, <span class="jsvariablecolor">hero</span>.<span class="jsvariablecolor">lose</span>, <span class="jsvariablecolor">hero</span>.<span class="jsvariablecolor">bans</span>]);</p>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">data</span> = [{</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'table'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">header</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">values</span>: <span class="jsvariablecolor">header</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">h</span> => <span class="jsstringcolor">`<b>${h}</b>`</span>), <span class="commentcolor">// Bold headers</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">align</span>: <span class="jsstringcolor">'center'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: { <span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">1</span>, <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'black'</span> },</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">fill</span>: { <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'lightgrey'</span> },</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">font</span>: { <span class="jsvariablecolor">family</span>: <span class="jsstringcolor">'Arial'</span>, <span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">12</span>, <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'black'</span> }</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">cells</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">values</span>: <span class="jsvariablecolor">values</span>[<span class="jsnumbercolor">0</span>].<span class="jsfunctioncolor">map</span>((_, <span class="jsvariablecolor">colIndex</span>) => <span class="jsvariablecolor">values</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">row</span> => <span class="jsvariablecolor">row</span>[<span class="jsvariablecolor">colIndex</span>])),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">align</span>: <span class="jsstringcolor">'center'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: { <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'black'</span>, <span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">1</span> },</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">fill</span>: { <span class="jsvariablecolor">color</span>: [<span class="jsstringcolor">'white'</span>, <span class="jsstringcolor">'lightblue'</span>] }, <span class="commentcolor">// Alternate row colors</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">font</span>: { <span class="jsvariablecolor">family</span>: <span class="jsstringcolor">'Arial'</span>, <span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">11</span>, <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'black'</span> }</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                        <p>}];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'TI 2024 Hero Statistics'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">height</span>: <span class="jsnumbercolor">400</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">margin</span>: { <span class="jsvariablecolor">l</span>: <span class="jsnumbercolor">10</span>, <span class="jsvariablecolor">r</span>: <span class="jsnumbercolor">10</span>, <span class="jsvariablecolor">t</span>: <span class="jsnumbercolor">30</span>, <span class="jsvariablecolor">b</span>: <span class="jsnumbercolor">10</span> }</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>('demo', <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa441" class="result"><span></span> </p>
+                            </div>
+                        </div>
+
+                        <h2>Statistical Charts</h2>
+                        <ul class="threeColumn" id="threeColumn31"></ul>
                     </div>
                 </div>
 
