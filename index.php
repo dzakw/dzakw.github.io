@@ -24458,6 +24458,731 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
 
                         <h2>Statistical Charts</h2>
                         <ul class="threeColumn" id="threeColumn31"></ul>
+                        <div id="childExample13" style="display: none;">
+                            <h6>Error Bars</h6>
+                            <li>Error bars are used to indicate the uncertainty or variability of data.</li>
+                            <li>It is used to show the range of data points around the mean value.</li>
+                            <div class="block-outer" data-result-id="demoa442" data-result-function="complex323">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">dates</span> = <span class="jsvariablecolor">invoker</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">data</span> => <span class="jsfunctioncolor">formatDate</span>(<span class="jsvariablecolor">data</span>.<span class="jsvariablecolor">date</span>));</p>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">winRates</span> = <span class="jsvariablecolor">invoker</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">data</span> => <span class="jsvariablecolor">data</span>.<span class="jsvariablecolor">winRate</span>);</p>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">errorValues</span> = <span class="jsvariablecolor">invoker</span>.<span class="jsfunctioncolor">map</span>(<span class="jsvariablecolor">data</span> => <span class="jsvariablecolor">data</span>.<span class="jsvariablecolor">variation</span>);</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">trace</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">dates</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">winRates</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'scatter'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">mode</span>: <span class="jsstringcolor">'lines+markers'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'Win Rate'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: { <span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'blue'</span> },</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">error_y</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'data'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">array</span>: <span class="jsvariablecolor">errorValues</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">visible</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(255, 0, 0, 0.4)'</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">6</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'blue'</span></p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">const</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Invoker Win Rate Over Time with Error Bars'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Date'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'category'</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Win Rate (%)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">range</span>: [<span class="jsnumbercolor">46</span>, <span class="jsnumbercolor">49</span>]</p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">1000</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">height</span>: <span class="jsnumbercolor">500</span></p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>('demoa442', [<span class="jsvariablecolor">trace</span>], <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa442" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample14" style="display: none;">
+                            <h6>Box Plot</h6>
+                            <li>Box plots are used to visualize the distribution of data points.</li>
+                            <li>It shows the median, quartiles, and outliers in the data.</li>
+                            <div class="block-outer" data-result-id="demoa443" data-result-function="complex324">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">xData</span> = [<span class="jsstringcolor">'Carmelo&lt;br&gt;Anthony'</span>, <span class="jsstringcolor">'Dwyane&lt;br&gt;Wade'</span>,</p>
+                                        <p><span class="jsstringcolor">'Deron</span>&lt;br&gt;<span class="jsstringcolor">Williams'</span>, <span class="jsstringcolor">'Brook&lt;br&gt;Lopez'</span>,</p>
+                                        <p><span class="jsstringcolor">'Damian&lt;br&gt;Lillard'</span>, <span class="jsstringcolor">'David&lt;br&gt;West'</span>,</p>
+                                        <p><span class="jsstringcolor">'Blake&lt;br&gt;Griffin'</span>, <span class="jsstringcolor">'David&lt;br&gt;Lee'</span>,</p>
+                                        <p><span class="jsstringcolor">'Demar&lt;br&gt;Derozan'</span>];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">getrandom</span>(<span class="jsvariablecolor">num</span> , <span class="jsvariablecolor">mul</span>) {</p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">value</span> = [ ];</p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">for</span> ( <span class="jsvariablecolor">i</span> = <span class="jsnumbercolor">0</span>; <span class="jsvariablecolor">i</span> &lt;= <span class="jsvariablecolor">num</span>; <span class="jsvariablecolor">i</span>++ ) {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">rand</span> = <span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">random</span>() * <span class="jsvariablecolor">mul</span>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">value</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">rand</span>);</p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">value</span>;</p>
+                                        <p>}</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">yData</span> = [</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span> ,<span class="jsnumbercolor">10</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">20</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">25</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">40</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">45</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">30</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">20</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">15</span>),</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsfunctioncolor">getrandom</span>(<span class="jsnumbercolor">30</span>, <span class="jsnumbercolor">43</span>),</p>
+                                        <p>];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">colors</span> = [<span class="jsstringcolor">'rgba(93, 164, 214, 0.5)'</span>, <span class="jsstringcolor">'rgba(255, 144, 14, 0.5)'</span>, <span class="jsstringcolor">'rgba(44, 160, 101, 0.5)'</span>,<br> <span class="jsstringcolor">'rgba(255, 65, 54, 0.5)'</span>, <span class="jsstringcolor">'rgba(207, 114, 255, 0.5)'</span>, <span class="jsstringcolor">'rgba(127, 96, 0, 0.5)'</span>,<br> <span class="jsstringcolor">'rgba(255, 140, 184, 0.5)'</span>, <span class="jsstringcolor">'rgba(79, 90, 117, 0.5)'</span>, <span class="jsstringcolor">'rgba(222, 223, 0, 0.5)'</span>];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> = [];</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">for</span> ( <span class="jsvariablecolor">var</span> <span class="jsvariablecolor">i</span> = <span class="jsnumbercolor">0</span>; <span class="jsvariablecolor">i</span> &lt; <span class="jsvariablecolor">xData</span>.<span class="jsvariablecolor">length</span>; <span class="jsvariablecolor">i</span>++ ) {</p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">result</span> = {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'box'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">yData</span>[<span class="jsvariablecolor">i</span>],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsvariablecolor">xData</span>[<span class="jsvariablecolor">i</span>],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">boxpoints</span>: <span class="jsstringcolor">'all'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">jitter</span>: <span class="jsnumbercolor">0.5</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">whiskerwidth</span>: <span class="jsnumbercolor">0.2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">fillcolor</span>: <span class="jsstringcolor">'cls'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">2</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">1</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                        <p>&nbsp;&nbsp;};</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">data</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">result</span>);</p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Points Scored by the Top 9 Scoring NBA Players in 2012'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">autorange</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">showgrid</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zeroline</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">dtick</span>: <span class="jsnumbercolor">5</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">gridcolor</span>: <span class="jsstringcolor">'rgb(255, 255, 255)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">gridwidth</span>: <span class="jsnumbercolor">1</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zerolinecolor</span>: <span class="jsstringcolor">'rgb(255, 255, 255)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zerolinewidth</span>: <span class="jsnumbercolor">2</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">margin</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">l</span>: <span class="jsnumbercolor">40</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">r</span>: <span class="jsnumbercolor">30</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">b</span>: <span class="jsnumbercolor">80</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">t</span>: <span class="jsnumbercolor">100</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">paper_bgcolor</span>: <span class="jsstringcolor">'rgb(243, 243, 243)'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">plot_bgcolor</span>: <span class="jsstringcolor">'rgb(243, 243, 243)'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">showlegend</span>: <span class="jskeywordcolor">false</span></p>
+                                        <p>};</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>('demoa443', <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa443" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample15" style="display: none;">
+                            <h6>Histogram</h6>
+                            <li>Histograms are used to represent the distribution of a continuous numerical data set.</li>
+                            <li>It is a type of bar chart that shows the frequency of data points in a given range.</li>
+                            <div class="block-outer" data-result-id="demoa444" data-result-function="complex325">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x1</span> = [];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x2</span> = [];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">y1</span> = [];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">y2</span> = [];</p>
+                                        <p><span class="jskeywordcolor">for</span> (<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">i</span> = <span class="jsnumbercolor">1</span>; <span class="jsvariablecolor">i</span> &lt; <span class="jsnumbercolor">500</span>; <span class="jsvariablecolor">i</span>++) </p>
+                                        <p>{</p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">k</span> = <span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">random</span>();</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x1</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">k</span>*<span class="jsnumbercolor">5</span>);</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x2</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">k</span>*<span class="jsnumbercolor">10</span>);</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y1</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">k</span>);</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y2</span>.<span class="jsfunctioncolor">push</span>(<span class="jsvariablecolor">k</span>*<span class="jsnumbercolor">2</span>);</p>
+                                        <p>}</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace1</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">x1</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">y1</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'control'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">autobinx</span>: <span class="jskeywordcolor">false</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">histnorm</span>: <span class="jsstringcolor">'count'</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(255, 100, 102, 0.7)'</span>, </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>:  <span class="jsstringcolor">'rgba(255, 100, 102, 1)'</span>, </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">1</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                        <p>&nbsp;&nbsp;},  </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">opacity</span>: <span class="jsnumbercolor">0.5</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'histogram'</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xbins</span>: { </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">end</span>: <span class="jsnumbercolor">2.8</span>, </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">0.06</span>, </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">start</span>: .<span class="jsnumbercolor">5</span></p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace2</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">x2</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">y2</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">autobinx</span>: <span class="jskeywordcolor">false</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgba(100, 200, 102, 0.7)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">line</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>:  <span class="jsstringcolor">'rgba(100, 200, 102, 1)'</span>, </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">1</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                        <p>&nbsp;&nbsp;}, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'experimental'</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">opacity</span>: <span class="jsnumbercolor">0.75</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'histogram'</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xbins</span>: { </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">end</span>: <span class="jsnumbercolor">4</span>, </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">0.06</span>, </p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">start</span>: -<span class="jsnumbercolor">3.2</span></p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> = [<span class="jsvariablecolor">trace1</span>, <span class="jsvariablecolor">trace2</span>];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">bargap</span>: <span class="jsnumbercolor">0.05</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">bargroupgap</span>: <span class="jsnumbercolor">0.2</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">barmode</span>: <span class="jsstringcolor">'overlay'</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Sampled Results'</span>, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xaxis</span>: {<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Value'</span>}, </p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: {<span class="jsvariablecolor">title</span>: <span class="jsstringcolor">'Count'</span>}</p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>('demoa444', <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa444" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample16" style="display: none;">
+                            <h6>2D Density Plots</h6>
+                            <li>2D Density plots are used to visualize the distribution of data points in a 2D space.</li>
+                            <li>It is a type of contour plot that shows the density of data points in a given area.</li>
+                            <div class="block-outer" data-result-id="demoa445" data-result-function="complex326">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">normal</span>() {</p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">x</span> = <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">y</span> = <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">rds</span>, <span class="jsvariablecolor">c</span>;</p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">do</span> {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">x</span> = <span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">random</span>() * <span class="jsnumbercolor">2</span> - <span class="jsnumbercolor">1</span>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">y</span> = <span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">random</span>() * <span class="jsnumbercolor">2</span> - <span class="jsnumbercolor">1</span>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">rds</span> = <span class="jsvariablecolor">x</span> * <span class="jsvariablecolor">x</span> + <span class="jsvariablecolor">y</span> * <span class="jsvariablecolor">y</span>;</p>
+                                        <p>&nbsp;&nbsp;} <span class="jskeywordcolor">while</span> ( <span class="jsvariablecolor">rds</span> == <span class="jsnumbercolor">0</span> || <span class="jsvariablecolor">rds</span> &gt; <span class="jsnumbercolor">1</span>);</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">c</span> = <span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">sqrt</span>(-<span class="jsnumbercolor">2</span> * <span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">log</span>(<span class="jsvariablecolor">rds</span>) / <span class="jsvariablecolor">rds</span>); <span class="jscommentcolor">// Box-Muller transform</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsvariablecolor">x</span> * <span class="jsvariablecolor">c</span>; <span class="jscommentcolor">// throw away extra sample y * c</span></p>
+                                        <p>}</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">N</span> = <span class="jsnumbercolor">2000</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">a</span> = -<span class="jsnumbercolor">1</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">b</span> = <span class="jsnumbercolor">1.2</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">step</span> = (<span class="jsvariablecolor">b</span> - <span class="jsvariablecolor">a</span>) / (<span class="jsvariablecolor">N</span> - <span class="jsnumbercolor">1</span>);</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">t</span> = <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Array</span>(<span class="jsvariablecolor">N</span>), <span class="jsvariablecolor">x</span> = <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Array</span>(<span class="jsvariablecolor">N</span>), <span class="jsvariablecolor">y</span> = <span class="jskeywordcolor">new</span> <span class="jsvariablecolor">Array</span>(<span class="jsvariablecolor">N</span>);</p>
+                                        <p><span class="jskeywordcolor">for</span>(<span class="jskeywordcolor">var</span> <span class="jsvariablecolor">i</span> = <span class="jsnumbercolor">0</span>; <span class="jsvariablecolor">i</span> &lt; <span class="jsvariablecolor">N</span>; <span class="jsvariablecolor">i</span>++){</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">t</span>[<span class="jsvariablecolor">i</span>] = <span class="jsvariablecolor">a</span> + <span class="jsvariablecolor">step</span> * <span class="jsvariablecolor">i</span>;</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>[<span class="jsvariablecolor">i</span>] = (<span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">pow</span>(<span class="jsvariablecolor">t</span>[<span class="jsvariablecolor">i</span>], <span class="jsnumbercolor">3</span>)) + (<span class="jsnumbercolor">0.3</span> * <span class="jsfunctioncolor">normal</span>() );</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>[<span class="jsvariablecolor">i</span>] = (<span class="jsvariablecolor">Math</span>.<span class="jsfunctioncolor">pow</span>(<span class="jsvariablecolor">t</span>[<span class="jsvariablecolor">i</span>], <span class="jsnumbercolor">6</span>)) + (<span class="jsnumbercolor">0.3</span> * <span class="jsfunctioncolor">normal</span>() );</p>
+                                        <p>}</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace1</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">x</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">y</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">mode</span>: <span class="jsstringcolor">'markers'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'points'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgb(102,0,0)'</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">size</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">opacity</span>: <span class="jsnumbercolor">0.4</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'scatter'</span></p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace2</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">x</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">y</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'density'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">ncontours</span>: <span class="jsnumbercolor">20</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">colorscale</span>: <span class="jsstringcolor">'Hot'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">reversescale</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">showscale</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'histogram2dcontour'</span></p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace3</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">x</span>: <span class="jsvariablecolor">x</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'x density'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgb(102,0,0)'</span>},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: <span class="jsstringcolor">'y2'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'histogram'</span></p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace4</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">y</span>: <span class="jsvariablecolor">y</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">name</span>: <span class="jsstringcolor">'y density'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">marker</span>: {<span class="jsvariablecolor">color</span>: <span class="jsstringcolor">'rgb(102,0,0)'</span>},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xaxis</span>: <span class="jsstringcolor">'x2'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">type</span>: <span class="jsstringcolor">'histogram'</span></p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> = [<span class="jsvariablecolor">trace1</span>, <span class="jsvariablecolor">trace2</span>, <span class="jsvariablecolor">trace3</span>, <span class="jsvariablecolor">trace4</span>];</p>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">layout</span> = {</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">showlegend</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">autosize</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">width</span>: <span class="jsnumbercolor">600</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">height</span>: <span class="jsnumbercolor">550</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">margin</span>: {<span class="jsvariablecolor">t</span>: <span class="jsnumbercolor">50</span>},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">hovermode</span>: <span class="jsstringcolor">'closest'</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">bargap</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">domain</span>: [<span class="jsnumbercolor">0</span>, <span class="jsnumbercolor">0.85</span>],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">showgrid</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zeroline</span>: <span class="jskeywordcolor">false</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">domain</span>: [<span class="jsnumbercolor">0</span>, <span class="jsnumbercolor">0.85</span>],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">showgrid</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zeroline</span>: <span class="jskeywordcolor">false</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">xaxis2</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">domain</span>: [<span class="jsnumbercolor">0.85</span>, <span class="jsnumbercolor">1</span>],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">showgrid</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zeroline</span>: <span class="jskeywordcolor">false</span></p>
+                                        <p>&nbsp;&nbsp;},</p>
+                                        <p>&nbsp;&nbsp;<span class="jsvariablecolor">yaxis2</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">domain</span>: [<span class="jsnumbercolor">0.85</span>, <span class="jsnumbercolor">1</span>],</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">showgrid</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">zeroline</span>: <span class="jskeywordcolor">false</span></p>
+                                        <p>&nbsp;&nbsp;}</p>
+                                        <p>};</p>
+                                        <p><span class="jskeywordcolor">Plotly</span>.<span class="jsfunctioncolor">newPlot</span>('demo', <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>);</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa445" class="result"><span></span> </p>
+                            </div>
+                        </div>
+                        <div id="childExample17" style="display: none;">
+                            <h6>Violin Plot</h6>
+                            <li>Violin plots are used to visualize the distribution of data points in a continuous numerical data set.</li>
+                            <li>It is a type of box plot that shows the probability density of data points in a given range.</li>
+                            <div class="block-outer" data-result-id="demoa446" data-result-function="complex327">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace1</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 32"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">1</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"positive"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Thursday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">10.07</span>, <span class="jsnumbercolor">34.83</span>, <span class="jsnumbercolor">10.65</span>, <span class="jsnumbercolor">12.43</span>, <span class="jsnumbercolor">24.08</span>, <span class="jsnumbercolor">13.42</span>, <span class="jsnumbercolor">12.48</span>, <span class="jsnumbercolor">29.8</span>, <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">14.52</span>, <span class="jsnumbercolor">11.38</span>, <span class="jsnumbercolor">20.27</span>, <span class="jsnumbercolor">11.17</span>, <span class="jsnumbercolor">12.26</span>, <span class="jsnumbercolor">18.26</span>, <span class="jsnumbercolor">8.51</span>, <span class="jsnumbercolor">10.33</span>, <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">14.15</span>, <span class="jsnumbercolor">13.16</span>, <span class="jsnumbercolor">17.47</span>, <span class="jsnumbercolor">27.05</span>, <span class="jsnumbercolor">16.43</span>, <span class="jsnumbercolor">8.35</span>, <span class="jsnumbercolor">18.64</span>, <span class="jsnumbercolor">11.87</span>, <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">19.81</span>, <span class="jsnumbercolor">43.11</span>, <span class="jsnumbercolor">13.0</span>, <span class="jsnumbercolor">12.74</span>, <span class="jsnumbercolor">13.0</span>, <span class="jsnumbercolor">16.4</span>, <span class="jsnumbercolor">16.47</span>, <span class="jsnumbercolor">18.78</span> <br>
+                                        <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace2</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 30"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">-0.6</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"negative"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Thursday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">27.2</span>, <span class="jsnumbercolor">22.76</span>, <span class="jsnumbercolor">17.29</span>, <span class="jsnumbercolor">19.44</span>, <span class="jsnumbercolor">16.66</span>, <span class="jsnumbercolor">32.68</span>, <span class="jsnumbercolor">15.98</span>, <span class="jsnumbercolor">13.03</span>, <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">18.28</span>, <span class="jsnumbercolor">24.71</span>, <span class="jsnumbercolor">21.16</span>, <span class="jsnumbercolor">11.69</span>, <span class="jsnumbercolor">14.26</span>, <span class="jsnumbercolor">15.95</span>, <span class="jsnumbercolor">8.52</span>, <span class="jsnumbercolor">22.82</span>, <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">19.08</span>, <span class="jsnumbercolor">16.0</span>, <span class="jsnumbercolor">34.3</span>, <span class="jsnumbercolor">41.19</span>, <span class="jsnumbercolor">9.78</span>, <span class="jsnumbercolor">7.51</span>, <span class="jsnumbercolor">28.44</span>, <span class="jsnumbercolor">15.48</span>, <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">16.58</span>, <span class="jsnumbercolor">7.56</span>, <span class="jsnumbercolor">10.34</span>, <span class="jsnumbercolor">13.51</span>, <span class="jsnumbercolor">18.71</span>, <span class="jsnumbercolor">20.53</span> <br>
+                                        <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace3</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 9"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">0.4</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"positive"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Friday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">5.75</span>, <span class="jsnumbercolor">16.32</span>, <span class="jsnumbercolor">22.75</span>, <span class="jsnumbercolor">11.35</span>, <span class="jsnumbercolor">15.38</span>, <span class="jsnumbercolor">13.42</span>, <span class="jsnumbercolor">15.98</span>, <span class="jsnumbercolor">16.27</span>, <span class="jsnumbercolor">10.09</span> <br>
+                                        <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace4</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 10"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">-0.3</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"negative"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Friday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">28.97</span>, <span class="jsnumbercolor">22.49</span>, <span class="jsnumbercolor">40.17</span>, <span class="jsnumbercolor">27.28</span>, <span class="jsnumbercolor">12.03</span>, <span class="jsnumbercolor">21.01</span>, <span class="jsnumbercolor">12.46</span>, <span class="jsnumbercolor">12.16</span>, <span class="jsnumbercolor">8.58</span>, <span class="jsnumbercolor">13.42</span> <br>
+                                        <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace5</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 28"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">0.55</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"positive"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Saturday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">20.29</span>, <span class="jsnumbercolor">15.77</span>, <span class="jsnumbercolor">19.65</span>, <span class="jsnumbercolor">15.06</span>, <span class="jsnumbercolor">20.69</span>, <span class="jsnumbercolor">16.93</span>, <span class="jsnumbercolor">26.41</span>, <span class="jsnumbercolor">16.45</span>, <span class="jsnumbercolor">3.07</span>, <span class="jsnumbercolor">17.07</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">26.86</span>, <span class="jsnumbercolor">25.28</span>, <span class="jsnumbercolor">14.73</span>, <span class="jsnumbercolor">44.3</span>, <span class="jsnumbercolor">22.42</span>, <span class="jsnumbercolor">20.92</span>, <span class="jsnumbercolor">14.31</span>, <span class="jsnumbercolor">7.25</span>, <span class="jsnumbercolor">10.59</span>, <span class="jsnumbercolor">10.63</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">12.76</span>, <span class="jsnumbercolor">13.27</span>, <span class="jsnumbercolor">28.17</span>, <span class="jsnumbercolor">12.9</span>, <span class="jsnumbercolor">30.14</span>, <span class="jsnumbercolor">22.12</span>, <span class="jsnumbercolor">35.83</span>, <span class="jsnumbercolor">27.18</span> <br>
+                                        &nbsp;&nbsp;<span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace6</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 59"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">-1.1</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">true</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"negative"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Saturday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">20.65</span>, <span class="jsnumbercolor">17.92</span>, <span class="jsnumbercolor">39.42</span>, <span class="jsnumbercolor">19.82</span>, <span class="jsnumbercolor">17.81</span>, <span class="jsnumbercolor">13.37</span>, <span class="jsnumbercolor">12.69</span>, <span class="jsnumbercolor">21.7</span>, <span class="jsnumbercolor">9.55</span>, <span class="jsnumbercolor">18.35</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">17.78</span>, <span class="jsnumbercolor">24.06</span>, <span class="jsnumbercolor">16.31</span>, <span class="jsnumbercolor">18.69</span>, <span class="jsnumbercolor">31.27</span>, <span class="jsnumbercolor">16.04</span>, <span class="jsnumbercolor">38.01</span>, <span class="jsnumbercolor">11.24</span>, <span class="jsnumbercolor">48.27</span>, <span class="jsnumbercolor">20.29</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">13.81</span>, <span class="jsnumbercolor">11.02</span>, <span class="jsnumbercolor">18.29</span>, <span class="jsnumbercolor">17.59</span>, <span class="jsnumbercolor">20.08</span>, <span class="jsnumbercolor">20.23</span>, <span class="jsnumbercolor">15.01</span>, <span class="jsnumbercolor">12.02</span>, <span class="jsnumbercolor">10.51</span>, <span class="jsnumbercolor">17.92</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">15.36</span>, <span class="jsnumbercolor">20.49</span>, <span class="jsnumbercolor">25.21</span>, <span class="jsnumbercolor">18.24</span>, <span class="jsnumbercolor">14.0</span>, <span class="jsnumbercolor">50.81</span>, <span class="jsnumbercolor">15.81</span>, <span class="jsnumbercolor">26.59</span>, <span class="jsnumbercolor">38.73</span>, <span class="jsnumbercolor">24.27</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">30.06</span>, <span class="jsnumbercolor">25.89</span>, <span class="jsnumbercolor">48.33</span>, <span class="jsnumbercolor">28.15</span>, <span class="jsnumbercolor">11.59</span>, <span class="jsnumbercolor">7.74</span>, <span class="jsnumbercolor">20.45</span>, <span class="jsnumbercolor">13.28</span>, <span class="jsnumbercolor">24.01</span>, <span class="jsnumbercolor">15.69</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">11.61</span>, <span class="jsnumbercolor">10.77</span>, <span class="jsnumbercolor">15.53</span>, <span class="jsnumbercolor">10.07</span>, <span class="jsnumbercolor">12.6</span>, <span class="jsnumbercolor">32.83</span>, <span class="jsnumbercolor">29.03</span>, <span class="jsnumbercolor">22.67</span>, <span class="jsnumbercolor">17.82</span> <br>
+                                        <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace7</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 18"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">0.45</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"positive"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"F"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#bebada"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Sunday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">16.99</span>, <span class="jsnumbercolor">24.59</span>, <span class="jsnumbercolor">35.26</span>, <span class="jsnumbercolor">14.83</span>, <span class="jsnumbercolor">10.33</span>, <span class="jsnumbercolor">16.97</span>, <span class="jsnumbercolor">10.29</span>, <span class="jsnumbercolor">34.81</span>, <span class="jsnumbercolor">25.71</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">17.31</span>, <span class="jsnumbercolor">29.85</span>, <span class="jsnumbercolor">25.0</span>, <span class="jsnumbercolor">13.39</span>, <span class="jsnumbercolor">16.21</span>, <span class="jsnumbercolor">17.51</span>, <span class="jsnumbercolor">9.6</span>, <span class="jsnumbercolor">20.9</span>, <span class="jsnumbercolor">18.15</span> <br>
+                                        <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">trace8</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">text</span>: <span class="jsstringcolor">"sample length: 58"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hoveron</span>: <span class="jsstringcolor">"points+kde"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">meanline</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legendgroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalegroup</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">points</span>: <span class="jsstringcolor">"all"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">pointpos</span>: <span class="jsnumbercolor">-0.9</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">box</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">visible</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">jitter</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">scalemode</span>: <span class="jsstringcolor">"count"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">marker</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">2</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">symbol</span>: <span class="jsstringcolor">"line-ns"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">showlegend</span>: <span class="jskeywordcolor">false</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">side</span>: <span class="jsstringcolor">"negative"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">type</span>: <span class="jsstringcolor">"violin"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">name</span>: <span class="jsstringcolor">"M"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">span</span>: <span class="jsbracketcolor">[</span> <span class="jsnumbercolor">0</span> <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">line</span>: <span class="jsbracketcolor">{</span></p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">color</span>: <span class="jsstringcolor">"#8dd3c7"</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">y0</span>: <span class="jsstringcolor">"Sunday"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">x</span>: <span class="jsbracketcolor">[</span> <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">10.34</span>, <span class="jsnumbercolor">21.01</span>, <span class="jsnumbercolor">23.68</span>, <span class="jsnumbercolor">25.29</span>, <span class="jsnumbercolor">8.77</span>, <span class="jsnumbercolor">26.88</span>, <span class="jsnumbercolor">15.04</span>, <span class="jsnumbercolor">14.78</span>, <span class="jsnumbercolor">10.27</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">15.42</span>, <span class="jsnumbercolor">18.43</span>, <span class="jsnumbercolor">21.58</span>, <span class="jsnumbercolor">16.29</span>, <span class="jsnumbercolor">17.46</span>, <span class="jsnumbercolor">13.94</span>, <span class="jsnumbercolor">9.68</span>, <span class="jsnumbercolor">30.4</span>, <span class="jsnumbercolor">18.29</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">22.23</span>, <span class="jsnumbercolor">32.4</span>, <span class="jsnumbercolor">28.55</span>, <span class="jsnumbercolor">18.04</span>, <span class="jsnumbercolor">12.54</span>, <span class="jsnumbercolor">9.94</span>, <span class="jsnumbercolor">25.56</span>, <span class="jsnumbercolor">19.49</span>, <span class="jsnumbercolor">38.07</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">23.95</span>, <span class="jsnumbercolor">29.93</span>, <span class="jsnumbercolor">14.07</span>, <span class="jsnumbercolor">13.13</span>, <span class="jsnumbercolor">17.26</span>, <span class="jsnumbercolor">24.55</span>, <span class="jsnumbercolor">19.77</span>, <span class="jsnumbercolor">48.17</span>, <span class="jsnumbercolor">16.49</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">21.5</span>, <span class="jsnumbercolor">12.66</span>, <span class="jsnumbercolor">13.81</span>, <span class="jsnumbercolor">24.52</span>, <span class="jsnumbercolor">20.76</span>, <span class="jsnumbercolor">31.71</span>, <span class="jsnumbercolor">7.25</span>, <span class="jsnumbercolor">31.85</span>, <span class="jsnumbercolor">16.82</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">32.9</span>, <span class="jsnumbercolor">17.89</span>, <span class="jsnumbercolor">14.48</span>, <span class="jsnumbercolor">34.63</span>, <span class="jsnumbercolor">34.65</span>, <span class="jsnumbercolor">23.33</span>, <span class="jsnumbercolor">45.35</span>, <span class="jsnumbercolor">23.17</span>, <span class="jsnumbercolor">40.55</span>,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="jsnumbercolor">20.69</span>, <span class="jsnumbercolor">30.46</span>, <span class="jsnumbercolor">23.1</span>, <span class="jsnumbercolor">15.69</span> <br>
+                                        <span class="jsbracketcolor">]</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">orientation</span>: <span class="jsstringcolor">"h"</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">data</span> <span class="jsoperatorcolor">=</span> [<span class="jsvariablecolor">trace1</span>,<span class="jsvariablecolor">trace2</span>,<span class="jsvariablecolor">trace3</span>,<span class="jsvariablecolor">trace4</span>,<span class="jsvariablecolor">trace5</span>,<span class="jsvariablecolor">trace6</span>,<span class="jsvariablecolor">trace7</span>,<span class="jsvariablecolor">trace8</span>]</p>
+                                        <br>
+                                        <p><span class="jskeywordcolor">var</span> <span class="jsvariablecolor">layout</span> <span class="jsoperatorcolor">=</span> {</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">hovermode</span>: <span class="jsstringcolor">"closest"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">width</span>: <span class="jsnumbercolor">400</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">yaxis</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">showgrid</span>: <span class="jskeywordcolor">true</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">title</span>: <span class="jsstringcolor">"Total bill distribution&lt;br&gt;&lt;i&gt;scaled by number of bills per gender"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">legend</span>: {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">tracegroupgap</span>: <span class="jsnumbercolor">0</span></p>
+                                        <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">violingap</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">violingroupgap</span>: <span class="jsnumbercolor">0</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">violinmode</span>: <span class="jsstringcolor">"overlay"</span>,</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">height</span>: <span class="jsnumbercolor">700</span></p>
+                                        <p><span class="jsbracketcolor">}</span>;</p>
+                                        <br>
+                                        <p><span class="jspropertycolor">Plotly</span>.<span class="jspropertycolor">newPlot</span>(<span class="jsstringcolor">"demo"</span>, <span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">layout</span>)</p>
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa446" class="result"><span></span> </p>
+                            </div>
+                        </div>
+
+                        <h2>Scientific Charts</h2>
+                        <ul class="threeColumn" id="threeColumn32"></ul>
+                        <div id="childExample18" style="display: none;">
+                            <h6>Contour Plot</h6>
+                            <li>Contour Plots are used to display 3D data in a 2D format.</li>
+                            <li>It is used to display the relationship between two independent variables and a dependent variable</li>
+                            <div class="block-outer" dataresult-id="demoa447" data-result-function="complex328">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+
+                                    </div>
+                                    <div class="block-btn-cont">
+                                        <div class="block-run">
+                                            <button type="button" class="run-btn">Run ></button>
+                                        </div>
+                                        <div class="reset-btn" style="display: none;">
+                                            <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="demoa447" class="result"><span></span> </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

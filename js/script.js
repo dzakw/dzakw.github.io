@@ -4520,38 +4520,39 @@ const heroes = [
 ];
 
 const invoker = [
-    { date: new Date(2024, 8, 14), pickRate: 16.27, winRate: 46.99},
-    { date: new Date(2024, 8, 15), pickRate: 15.64, winRate: 47.22},
-    { date: new Date(2024, 8, 16), pickRate: 15.31, winRate: 47.41},
-    { date: new Date(2024, 8, 17), pickRate: 15.67, winRate: 47.78},
-    { date: new Date(2024, 8, 18), pickRate: 15.99, winRate: 47.84},
-    { date: new Date(2024, 8, 19), pickRate: 16.21, winRate: 47.56},
-    { date: new Date(2024, 8, 20), pickRate: 16.13, winRate: 47.98},
-    { date: new Date(2024, 8, 21), pickRate: 15.77, winRate: 47.58},
-    { date: new Date(2024, 8, 22), pickRate: 15.83, winRate: 47.84},
-    { date: new Date(2024, 8, 23), pickRate: 16.34, winRate: 48.22},
-    { date: new Date(2024, 8, 24), pickRate: 16.91, winRate: 48.34},
-    { date: new Date(2024, 8, 25), pickRate: 16.83, winRate: 48.28},
-    { date: new Date(2024, 8, 26), pickRate: 17.06, winRate: 48.39},
-    { date: new Date(2024, 8, 27), pickRate: 16.95, winRate: 48.31},
-    { date: new Date(2024, 8, 28), pickRate: 16.72, winRate: 47.96},
-    { date: new Date(2024, 8, 29), pickRate: 16.94, winRate: 48.09},
-    { date: new Date(2024, 8, 30), pickRate: 16.89, winRate: 48.57},
-    { date: new Date(2024, 9, 1), pickRate: 17.03, winRate: 48.46},
-    { date: new Date(2024, 9, 2), pickRate: 19.43, winRate: 47.03},
-    { date: new Date(2024, 9, 3), pickRate: 19.43, winRate: 47.21},
-    { date: new Date(2024, 9, 4), pickRate: 19.92, winRate: 46.75},
-    { date: new Date(2024, 9, 5), pickRate: 19.74, winRate: 46.95},
-    { date: new Date(2024, 9, 6), pickRate: 19.57, winRate: 47.28},
-    { date: new Date(2024, 9, 7), pickRate: 19.20, winRate: 47.51},
-    { date: new Date(2024, 9, 8), pickRate: 19.32, winRate: 47.74},
-    { date: new Date(2024, 9, 9), pickRate: 19.24, winRate: 47.65},
-    { date: new Date(2024, 9, 10), pickRate: 19.39, winRate: 47.76},
-    { date: new Date(2024, 9, 11), pickRate: 19.29, winRate: 47.63},
-    { date: new Date(2024, 9, 12), pickRate: 18.93, winRate: 47.77},
-    { date: new Date(2024, 9, 13), pickRate: 18.66, winRate: 47.36},
-    { date: new Date(2024, 9, 14), pickRate: 16.34, winRate: 48.40},
+    { date: new Date(2024, 8, 14), pickRate: 16.27, winRate: 46.99, variation: 0.156 },
+    { date: new Date(2024, 8, 15), pickRate: 15.64, winRate: 47.22, variation: 0.200 },
+    { date: new Date(2024, 8, 16), pickRate: 15.31, winRate: 47.41, variation: 0.245 },
+    { date: new Date(2024, 8, 17), pickRate: 15.67, winRate: 47.78, variation: 0.178 },
+    { date: new Date(2024, 8, 18), pickRate: 15.99, winRate: 47.84, variation: 0.222 },
+    { date: new Date(2024, 8, 19), pickRate: 16.21, winRate: 47.56, variation: 0.281 },
+    { date: new Date(2024, 8, 20), pickRate: 16.13, winRate: 47.98, variation: 0.162 },
+    { date: new Date(2024, 8, 21), pickRate: 15.77, winRate: 47.58, variation: 0.193 },
+    { date: new Date(2024, 8, 22), pickRate: 15.83, winRate: 47.84, variation: 0.213 },
+    { date: new Date(2024, 8, 23), pickRate: 16.34, winRate: 48.22, variation: 0.150 },
+    { date: new Date(2024, 8, 24), pickRate: 16.91, winRate: 48.34, variation: 0.200 },
+    { date: new Date(2024, 8, 25), pickRate: 16.83, winRate: 48.28, variation: 0.235 },
+    { date: new Date(2024, 8, 26), pickRate: 17.06, winRate: 48.39, variation: 0.180 },
+    { date: new Date(2024, 8, 27), pickRate: 16.95, winRate: 48.31, variation: 0.240 },
+    { date: new Date(2024, 8, 28), pickRate: 16.72, winRate: 47.96, variation: 0.170 },
+    { date: new Date(2024, 8, 29), pickRate: 16.94, winRate: 48.09, variation: 0.193 },
+    { date: new Date(2024, 8, 30), pickRate: 16.89, winRate: 48.57, variation: 0.225 },
+    { date: new Date(2024, 9, 1), pickRate: 17.03, winRate: 48.46, variation: 0.250 },
+    { date: new Date(2024, 9, 2), pickRate: 19.43, winRate: 47.03, variation: 0.162 },
+    { date: new Date(2024, 9, 3), pickRate: 19.43, winRate: 47.21, variation: 0.230 },
+    { date: new Date(2024, 9, 4), pickRate: 19.92, winRate: 46.75, variation: 0.180 },
+    { date: new Date(2024, 9, 5), pickRate: 19.74, winRate: 46.95, variation: 0.210 },
+    { date: new Date(2024, 9, 6), pickRate: 19.57, winRate: 47.28, variation: 0.260 },
+    { date: new Date(2024, 9, 7), pickRate: 19.20, winRate: 47.51, variation: 0.170 },
+    { date: new Date(2024, 9, 8), pickRate: 19.32, winRate: 47.74, variation: 0.200 },
+    { date: new Date(2024, 9, 9), pickRate: 19.24, winRate: 47.65, variation: 0.193 },
+    { date: new Date(2024, 9, 10), pickRate: 19.39, winRate: 47.76, variation: 0.240 },
+    { date: new Date(2024, 9, 11), pickRate: 19.29, winRate: 47.63, variation: 0.180 },
+    { date: new Date(2024, 9, 12), pickRate: 18.93, winRate: 47.77, variation: 0.250 },
+    { date: new Date(2024, 9, 13), pickRate: 18.66, winRate: 47.36, variation: 0.230 },
+    { date: new Date(2024, 9, 14), pickRate: 16.34, winRate: 48.40, variation: 0.160 }
 ];
+
 
 const ti2024 = [
     { hero: "Abaddon", played: 1, win: 0, lose: 1, radiantPlay: 0, radiantWin: 0, radiantLose: 0, direPlay: 1, direWin: 0, direLose: 1, bans: 0 },
@@ -4666,7 +4667,7 @@ function complex314() {
     heroes.forEach((hero) => {
         x.push(hero.winRate);
         y.push(hero.kda);
-        size.push(hero.pickRate * 25); // Increase the multiplier for larger bubbles
+        size.push(hero.pickRate * 25);
         text.push(hero.name);
     });
 
@@ -4678,7 +4679,7 @@ function complex314() {
             marker: {
                 size: size,
                 sizemode: 'area',
-                sizeref: 1, // Adjust the reference value to control bubble scaling
+                sizeref: 1,
                 color: y,
                 colorscale: 'YlGnBu',
                 showscale: false,
@@ -4722,15 +4723,13 @@ function complex314() {
 }
 
 function complex315() {
-    var x = [], y = [], text = []; // Added text array for formatted hero info
+    var x = [], y = [], text = [];
     heroes.forEach((hero) => {
         x.push(hero.kda);
         y.push(hero.winRate);
-        // Format the text for hover info
         text.push(`${hero.name}<br>KDA: ${hero.kda}<br>Win Rate: ${hero.winRate}%`);
     });
 
-    // Calculate linear regression
     const n = x.length;
     const sumX = x.reduce((a, b) => a + b, 0);
     const sumY = y.reduce((a, b) => a + b, 0);
@@ -4740,7 +4739,6 @@ function complex315() {
     const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
     const intercept = (sumY - slope * sumX) / n;
 
-    // Create data for the trend line
     var trendLineX = [Math.min(...x), Math.max(...x)];
     var trendLineY = trendLineX.map(xi => slope * xi + intercept);
 
@@ -4758,9 +4756,9 @@ function complex315() {
                     width: 0.5,
                 },
             },
-            name: 'Data Points', // Optional: name for the legend
-            text: text, // Assign formatted hero info to the text attribute
-            hoverinfo: 'text', // Show formatted info on hover
+            name: 'Data Points',
+            text: text,
+            hoverinfo: 'text',
         },
         {
             x: trendLineX,
@@ -4771,7 +4769,7 @@ function complex315() {
                 color: 'rgba(0, 0, 255, 1)',
                 width: 2,
             },
-            name: 'Trend Line' // Optional: name for the legend
+            name: 'Trend Line'
         }
     ];
 
@@ -4789,7 +4787,7 @@ function complex315() {
                     size: 18,
                 },
             },
-            range: [1.7, 4.7], // Adjust the range based on your data
+            range: [1.7, 4.7],
         },
         yaxis: {
             title: {
@@ -4798,10 +4796,10 @@ function complex315() {
                     size: 18,
                 },
             },
-            range: [42, 57], // Set a suitable range for win rate
+            range: [42, 57],
         },
-        width: 800, // Adjust width as needed
-        height: 600 // Optional: adjust the height if needed
+        width: 800,
+        height: 600
     };
 
     Plotly.newPlot('demoa434', data, layout);
@@ -4955,7 +4953,6 @@ function complex318() {
           "Australia - Rugby"
         ],
         outsidetextfont: {size: 20, color: "#377eb8"},
-        // leaf: {opacity: 0.4},
         marker: {line: {width: 2}},
       }];
       
@@ -4990,27 +4987,27 @@ function complex319() {
         },
         link: {
             source: [
-                0, 0, 0, 0, 0, // Invoker to each Radiant hero
-                1, 1, 1, 1, 1, // Phantom Assassin to each Radiant hero
-                2, 2, 2, 2, 2, // Magnus to each Radiant hero
-                3, 3, 3, 3, 3, // Witch Doctor to each Radiant hero
-                4, 4, 4, 4, 4  // Monkey King to each Radiant hero
+                0, 0, 0, 0, 0,
+                1, 1, 1, 1, 1,
+                2, 2, 2, 2, 2,
+                3, 3, 3, 3, 3,
+                4, 4, 4, 4, 4
             ],
             target: [
-                5, 6, 7, 8, 9, // Targets for Invoker
-                5, 6, 7, 8, 9, // Targets for Phantom Assassin
-                5, 6, 7, 8, 9, // Targets for Magnus
-                5, 6, 7, 8, 9, // Targets for Witch Doctor
-                5, 6, 7, 8, 9  // Targets for Monkey King
+                5, 6, 7, 8, 9,
+                5, 6, 7, 8, 9,
+                5, 6, 7, 8, 9,
+                5, 6, 7, 8, 9,
+                5, 6, 7, 8, 9
             ],
             value: [
-                4891, 3092, 7892, 2391, 1832, // Damage from Invoker (total ~12k)
-                4821, 1323, 6321, 3532, 2742, // Damage from Phantom Assassin (total ~18k)
-                983, 231, 1402, 2421, 3201, // Damage from Magnus (total ~8k)
-                6542, 2132, 5671, 2382, 4980, // Damage from Witch Doctor (total ~3.7k)
-                787, 109, 320, 902, 1302  // Damage from Monkey King (total ~11.7k)
+                4891, 3092, 7892, 2391, 1832,
+                4821, 1323, 6321, 3532, 2742,
+                983, 231, 1402, 2421, 3201,
+                6542, 2132, 5671, 2382, 4980,
+                787, 109, 320, 902, 1302
             ],
-            color: "rgba(100, 100, 100, 0.5)" // Link color
+            color: "rgba(100, 100, 100, 0.5)"
         }
     };
 
@@ -5025,15 +5022,14 @@ function complex319() {
 }
 
 function complex320() {
-    // Sample data for the point cloud chart
     var data = [{
-        x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // X-axis data
-        y: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], // Y-axis data
-        z: [1, 3, 2, 5, 4, 6, 8, 7, 9, 10], // Z-axis data
-        mode: 'markers', // Display as points
+        x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        y: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+        z: [1, 3, 2, 5, 4, 6, 8, 7, 9, 10],
+        mode: 'markers',
         marker: {
-            size: 10, // Size of the points
-            color: 'rgba(0, 176, 246, 0.8)', // Color of the points
+            size: 10,
+            color: 'rgba(0, 176, 246, 0.8)',
             opacity: 0.8,
             line: {
                 width: 0.5,
@@ -5042,7 +5038,6 @@ function complex320() {
         }
     }];
 
-    // Layout settings
     var layout = {
         title: 'Simple Point Cloud Chart',
         scene: {
@@ -5052,7 +5047,6 @@ function complex320() {
         }
     };
 
-    // Plot the chart
     Plotly.newPlot('demoa439', data, layout);
 }
 
@@ -5061,22 +5055,21 @@ function complex321() {
         type: "treemap",
         labels: ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
         parents: ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve"],
-        textinfo: "label+value", // Display label and value
+        textinfo: "label+value",
         marker: {
             line: {
-                width: 2 // Set border width for the rectangles
+                width: 2
             }
         }
     }];
 
-    // Layout settings
     const layout = {
-        height: 190, // Set the height of the treemap to 200 pixels
+        height: 190,
         margin: {
-            t: 4, // Top margin
-            b: 4, // Bottom margin
-            l: 10, // Left margin
-            r: 10  // Right margin
+            t: 4,
+            b: 4,
+            l: 10,
+            r: 10
         }
     };
 
@@ -5084,18 +5077,15 @@ function complex321() {
 }
 
 function complex322() {
-    // Sort the data by 'played' in descending order
     ti2024.sort((a, b) => b.played - a.played);
 
-    // Prepare table data
     const header = ['Hero', 'Played', 'Win', 'Lose', 'Bans'];
     const values = ti2024.map(hero => [hero.hero, hero.played, hero.win, hero.lose, hero.bans]);
 
-    // Create the table data structure
     const data = [{
         type: 'table',
         header: {
-            values: header.map(h => `<b>${h}</b>`), // Bold headers
+            values: header.map(h => `<b>${h}</b>`),
             align: 'center',
             line: { width: 1, color: 'black' },
             fill: { color: 'lightgrey' },
@@ -5105,18 +5095,645 @@ function complex322() {
             values: values[0].map((_, colIndex) => values.map(row => row[colIndex])),
             align: 'center',
             line: { color: 'black', width: 1 },
-            fill: { color: ['white', 'lightblue'] }, // Alternate row colors
+            fill: { color: ['white', 'lightblue'] },
             font: { family: 'Arial', size: 11, color: 'black' }
         }
     }];
 
-    // Layout settings
     const layout = {
         title: 'TI 2024 Hero Statistics',
         height: 400,
         margin: { l: 10, r: 10, t: 30, b: 10 }
     };
 
-    // Plot the table
     Plotly.newPlot('demoa441', data, layout);
+}
+
+function complex323() {
+    function formatDate(date) {
+        const options = { day: '2-digit', month: 'short' };
+        return date.toLocaleDateString('en-GB', options).replace(' ', ' ');
+    }
+
+    const dates = invoker.map(data => formatDate(data.date));
+    const winRates = invoker.map(data => data.winRate);
+    const errorValues = invoker.map(data => data.variation);
+
+    const trace = {
+        x: dates,
+        y: winRates,
+        type: 'scatter',
+        mode: 'lines+markers',
+        name: 'Win Rate',
+        line: { color: 'blue' },
+        error_y: {
+            type: 'data',
+            array: errorValues,
+            visible: true,
+            color: 'rgba(255, 0, 0, 0.4)'
+        },
+        marker: {
+            size: 6,
+            color: 'blue'
+        }
+    };
+
+    const layout = {
+        title: 'Invoker Win Rate Over Time with Error Bars',
+        xaxis: {
+            title: 'Date',
+            type: 'category'
+        },
+        yaxis: {
+            title: 'Win Rate (%)',
+            range: [46, 49]
+        },
+        width: 1000,
+        height: 500
+    };
+
+    Plotly.newPlot('demoa442', [trace], layout);
+}
+
+function complex324() {
+    var xData = ['Carmelo<br>Anthony', 'Dwyane<br>Wade',
+        'Deron<br>Williams', 'Brook<br>Lopez',
+        'Damian<br>Lillard', 'David<br>West',
+        'Blake<br>Griffin', 'David<br>Lee',
+        'Demar<br>Derozan'];
+  
+  function getrandom(num , mul) {
+      var value = [ ];
+      for ( i = 0; i <= num; i++ ) {
+          var rand = Math.random() * mul;
+          value.push(rand);
+      }
+      return value;
+  }
+  
+  var yData = [
+          getrandom(30 ,10),
+          getrandom(30, 20),
+          getrandom(30, 25),
+          getrandom(30, 40),
+          getrandom(30, 45),
+          getrandom(30, 30),
+          getrandom(30, 20),
+          getrandom(30, 15),
+          getrandom(30, 43),
+      ];
+  var colors = ['rgba(93, 164, 214, 0.5)', 'rgba(255, 144, 14, 0.5)', 'rgba(44, 160, 101, 0.5)', 'rgba(255, 65, 54, 0.5)', 'rgba(207, 114, 255, 0.5)', 'rgba(127, 96, 0, 0.5)', 'rgba(255, 140, 184, 0.5)', 'rgba(79, 90, 117, 0.5)', 'rgba(222, 223, 0, 0.5)'];
+  
+  var data = [];
+  
+  for ( var i = 0; i < xData.length; i ++ ) {
+      var result = {
+          type: 'box',
+          y: yData[i],
+          name: xData[i],
+          boxpoints: 'all',
+          jitter: 0.5,
+          whiskerwidth: 0.2,
+          fillcolor: 'cls',
+          marker: {
+              size: 2
+          },
+          line: {
+              width: 1
+          }
+      };
+      data.push(result);
+  };
+  
+  layout = {
+      title: 'Points Scored by the Top 9 Scoring NBA Players in 2012',
+      yaxis: {
+          autorange: true,
+          showgrid: true,
+          zeroline: true,
+          dtick: 5,
+          gridcolor: 'rgb(255, 255, 255)',
+          gridwidth: 1,
+          zerolinecolor: 'rgb(255, 255, 255)',
+          zerolinewidth: 2
+      },
+      margin: {
+          l: 40,
+          r: 30,
+          b: 80,
+          t: 100
+      },
+      paper_bgcolor: 'rgb(243, 243, 243)',
+      plot_bgcolor: 'rgb(243, 243, 243)',
+      showlegend: false
+  };
+  
+  Plotly.newPlot('demoa443', data, layout);
+}
+
+function complex325() {
+    var x1 = [];
+    var x2 = [];
+    var y1 = [];
+    var y2 = [];
+    for (var i = 1; i < 500; i++) 
+    {
+    k = Math.random();
+    x1.push(k*5);
+    x2.push(k*10);
+    y1.push(k);
+    y2.push(k*2);
+    }
+    var trace1 = {
+    x: x1,
+    y: y1,
+    name: 'control',
+    autobinx: false, 
+    histnorm: "count", 
+    marker: {
+        color: "rgba(255, 100, 102, 0.7)", 
+        line: {
+        color:  "rgba(255, 100, 102, 1)", 
+        width: 1
+        }
+    },  
+    opacity: 0.5, 
+    type: "histogram", 
+    xbins: {
+        end: 2.8, 
+        size: 0.06, 
+        start: .5
+    }
+    };
+    var trace2 = {
+    x: x2,
+    y: y2, 
+    autobinx: false, 
+    marker: {
+            color: "rgba(100, 200, 102, 0.7)",
+            line: {
+                color:  "rgba(100, 200, 102, 1)", 
+                width: 1
+        } 
+        }, 
+    name: "experimental", 
+    opacity: 0.75, 
+    type: "histogram", 
+    xbins: { 
+        end: 4, 
+        size: 0.06, 
+        start: -3.2
+
+    }
+    };
+    var data = [trace1, trace2];
+    var layout = {
+    bargap: 0.05, 
+    bargroupgap: 0.2, 
+    barmode: "overlay", 
+    title: "Sampled Results", 
+    xaxis: {title: "Value"}, 
+    yaxis: {title: "Count"}
+    };
+    Plotly.newPlot('demoa444', data, layout);
+}
+
+function complex326() {
+    function normal() {
+        var x = 0,
+            y = 0,
+            rds, c;
+        do {
+            x = Math.random() * 2 - 1;
+            y = Math.random() * 2 - 1;
+            rds = x * x + y * y;
+        } while (rds == 0 || rds > 1);
+        c = Math.sqrt(-2 * Math.log(rds) / rds); // Box-Muller transform
+        return x * c; // throw away extra sample y * c
+    }
+
+    var N = 2000,
+    a = -1,
+    b = 1.2;
+
+    var step = (b - a) / (N - 1);
+    var t = new Array(N), x = new Array(N), y = new Array(N);
+
+    for(var i = 0; i < N; i++){
+        t[i] = a + step * i;
+        x[i] = (Math.pow(t[i], 3)) + (0.3 * normal() );
+        y[i] = (Math.pow(t[i], 6)) + (0.3 * normal() );
+    }
+
+    var trace1 = {
+        x: x,
+        y: y,
+        mode: 'markers',
+        name: 'points',
+        marker: {
+            color: 'rgb(102,0,0)',
+            size: 2,
+            opacity: 0.4
+        },
+        type: 'scatter'
+    };
+    var trace2 = {
+        x: x,
+        y: y,
+        name: 'density',
+        ncontours: 20,
+        colorscale: 'Hot',
+        reversescale: true,
+        showscale: false,
+        type: 'histogram2dcontour'
+    };
+    var trace3 = {
+        x: x,
+        name: 'x density',
+        marker: {color: 'rgb(102,0,0)'},
+        yaxis: 'y2',
+        type: 'histogram'
+    };
+    var trace4 = {
+        y: y,
+        name: 'y density',
+        marker: {color: 'rgb(102,0,0)'},
+        xaxis: 'x2',
+        type: 'histogram'
+    };
+    var data = [trace1, trace2, trace3, trace4];
+    var layout = {
+        showlegend: false,
+        autosize: false,
+        width: 600,
+        height: 550,
+        margin: {t: 50},
+        hovermode: 'closest',
+        bargap: 0,
+        xaxis: {
+            domain: [0, 0.85],
+            showgrid: false,
+            zeroline: false
+        },
+        yaxis: {
+            domain: [0, 0.85],
+            showgrid: false,
+            zeroline: false
+        },
+        xaxis2: {
+            domain: [0.85, 1],
+            showgrid: false,
+            zeroline: false
+        },
+        yaxis2: {
+            domain: [0.85, 1],
+            showgrid: false,
+            zeroline: false
+        }
+    };
+    Plotly.newPlot('demoa445', data, layout);
+}
+
+function complex327() {
+    var trace1 = {
+        text: "sample length: 32",
+        hoveron: "points+kde",
+        meanline: {
+            visible: true
+        },
+        legendgroup: "F",
+        scalegroup: "F",
+        points: "all",
+        pointpos: 1,
+        box: {
+            visible: true
+        },
+        jitter: 0,
+        scalemode: "count",
+        marker: {
+            line: {
+                width: 2,
+                color: "#bebada"
+            },
+            symbol: "line-ns"
+        },
+        showlegend: false,
+        side: "positive",
+        type: "violin",
+        name: "F",
+        span: [
+            0
+        ],
+        line: {
+            color: "#bebada"
+        },
+        y0: "Thursday",
+        x: [10.07, 34.83, 10.65, 12.43, 24.08, 13.42, 12.48, 29.8, 14.52, 11.38, 20.27, 11.17, 12.26, 18.26, 8.51, 10.33, 14.15, 13.16, 17.47, 27.05, 16.43, 8.35, 18.64, 11.87, 19.81, 43.11, 13.0, 12.74, 13.0, 16.4, 16.47, 18.78],
+        orientation: "h"
+    }
+
+    var trace2 = {
+                text: "sample length: 30",
+                hoveron: "points+kde",
+                meanline: {
+                    visible: true
+                },
+                legendgroup: "M",
+                scalegroup: "M",
+                points: "all",
+                pointpos: -0.6,
+                box: {
+                    visible: true
+                },
+                jitter: 0,
+                scalemode: "count",
+                marker: {
+                    line: {
+                        width: 2,
+                        color: "#8dd3c7"
+                    },
+                    symbol: "line-ns"
+                },
+                showlegend: false,
+                side: "negative",
+                type: "violin",
+                name: "M",
+                span: [
+                    0
+                ],
+                line: {
+                    color: "#8dd3c7"
+                },
+                y0: "Thursday",
+                x: [27.2, 22.76, 17.29, 19.44, 16.66, 32.68, 15.98, 13.03, 18.28, 24.71, 21.16, 11.69, 14.26, 15.95, 8.52, 22.82, 19.08, 16.0, 34.3, 41.19, 9.78, 7.51, 28.44, 15.48, 16.58, 7.56, 10.34, 13.51, 18.71, 20.53],
+                orientation: "h"
+            }
+
+    var trace3 = {
+            text: "sample length: 9",
+            hoveron: "points+kde",
+            meanline: {
+                visible: true
+            },
+            legendgroup: "F",
+            scalegroup: "F",
+            points: "all",
+            pointpos: 0.4,
+            box: {
+                visible: true
+            },
+            jitter: 0,
+            scalemode: "count",
+            marker: {
+                line: {
+                    width: 2,
+                    color: "#bebada"
+                },
+                symbol: "line-ns"
+            },
+            showlegend: false,
+            side: "positive",
+            type: "violin",
+            name: "F",
+            span: [
+                0
+            ],
+            line: {
+                color: "#bebada"
+            },
+            y0: "Friday",
+            x: [5.75, 16.32, 22.75, 11.35, 15.38, 13.42, 15.98, 16.27, 10.09],
+            orientation: "h"
+        }
+
+
+    var trace4= {
+            text: "sample length: 10",
+            hoveron: "points+kde",
+            meanline: {
+                visible: true
+            },
+            legendgroup: "M",
+            scalegroup: "M",
+            points: "all",
+            pointpos: -0.3,
+            box: {
+                visible: true
+            },
+            jitter: 0,
+            scalemode: "count",
+            marker: {
+                line: {
+                    width: 2,
+                    color: "#8dd3c7"
+                },
+                symbol: "line-ns"
+            },
+            showlegend: false,
+            side: "negative",
+            type: "violin",
+            name: "M",
+            span: [
+                0
+            ],
+            line: {
+                color: "#8dd3c7"
+            },
+            y0: "Friday",
+            x: [28.97, 22.49, 40.17, 27.28, 12.03, 21.01, 12.46, 12.16, 8.58, 13.42],
+            orientation: "h"
+        }
+
+    var trace5 = {
+            text: "sample length: 28",
+            hoveron: "points+kde",
+            meanline: {
+                visible: true
+            },
+            legendgroup: "F",
+            scalegroup: "F",
+            points: "all",
+            pointpos: 0.55,
+            box: {
+                visible: true
+            },
+            jitter: 0,
+            scalemode: "count",
+            marker: {
+                line: {
+                    width: 2,
+                    color: "#bebada"
+                },
+                symbol: "line-ns"
+            },
+            showlegend: true,
+            side: "positive",
+            type: "violin",
+            name: "F",
+            span: [
+                0
+            ],
+            line: {
+                color: "#bebada"
+            },
+            y0: "Saturday",
+            x: [20.29, 15.77, 19.65, 15.06, 20.69, 16.93, 26.41, 16.45, 3.07, 17.07, 26.86, 25.28, 14.73, 44.3, 22.42, 20.92, 14.31, 7.25, 10.59, 10.63, 12.76, 13.27, 28.17, 12.9, 30.14, 22.12, 35.83, 27.18],
+            orientation: "h"
+        }
+
+    var trace6 = {
+            text: "sample length: 59",
+            hoveron: "points+kde",
+            meanline: {
+                visible: true
+            },
+            legendgroup: "M",
+            scalegroup: "M",
+            points: "all",
+            pointpos: -1.1,
+            box: {
+                visible: true
+            },
+            jitter: 0,
+            scalemode: "count",
+            marker: {
+                line: {
+                    width: 2,
+                    color: "#8dd3c7"
+                },
+                symbol: "line-ns"
+            },
+            showlegend: true,
+            side: "negative",
+            type: "violin",
+            name: "M",
+            span: [
+                0
+            ],
+            line: {
+                color: "#8dd3c7"
+            },
+            y0: "Saturday",
+            x: [20.65, 17.92, 39.42, 19.82, 17.81, 13.37, 12.69, 21.7, 9.55, 18.35, 17.78, 24.06, 16.31, 18.69, 31.27, 16.04, 38.01, 11.24, 48.27, 20.29, 13.81, 11.02, 18.29, 17.59, 20.08, 20.23, 15.01, 12.02, 10.51, 17.92, 15.36, 20.49, 25.21, 18.24, 14.0, 50.81, 15.81, 26.59, 38.73, 24.27, 30.06, 25.89, 48.33, 28.15, 11.59, 7.74, 20.45, 13.28, 24.01, 15.69, 11.61, 10.77, 15.53, 10.07, 12.6, 32.83, 29.03, 22.67, 17.82],
+            orientation: "h"
+        }
+
+    var trace7 = {
+            text: "sample length: 18",
+            hoveron: "points+kde",
+            meanline: {
+                visible: true
+            },
+            legendgroup: "F",
+            scalegroup: "F",
+            points: "all",
+            pointpos: 0.45,
+            box: {
+                visible: true
+            },
+            jitter: 0,
+            scalemode: "count",
+            marker: {
+                line: {
+                    width: 2,
+                    color: "#bebada"
+                },
+                symbol: "line-ns"
+            },
+            showlegend: false,
+            side: "positive",
+            type: "violin",
+            name: "F",
+            span: [
+                0
+            ],
+            line: {
+                color: "#bebada"
+            },
+            y0: "Sunday",
+            x: [16.99, 24.59, 35.26, 14.83, 10.33, 16.97, 10.29, 34.81, 25.71, 17.31, 29.85, 25.0, 13.39, 16.21, 17.51, 9.6, 20.9, 18.15],
+            orientation: "h"
+        }
+
+    var trace8 = {
+            text: "sample length: 58",
+            hoveron: "points+kde",
+            meanline: {
+                visible: true
+            },
+            legendgroup: "M",
+            scalegroup: "M",
+            points: "all",
+            pointpos: -0.9,
+            box: {
+                visible: true
+            },
+            jitter: 0,
+            scalemode: "count",
+            marker: {
+                line: {
+                    width: 2,
+                    color: "#8dd3c7"
+                },
+                symbol: "line-ns"
+            },
+            showlegend: false,
+            side: "negative",
+            type: "violin",
+            name: "M",
+            span: [
+                0
+            ],
+            line: {
+                color: "#8dd3c7"
+            },
+            y0: "Sunday",
+            x: [10.34,21.01,23.68,25.29,8.77,26.88,15.04,14.78,10.27,15.42,18.43,21.58,16.29,17.46,13.94,9.68,30.4,18.29,22.23,32.4,28.55,18.04,12.54,9.94,25.56,19.49,38.07,23.95,29.93,14.07,13.13,17.26,24.55,19.77,48.17,16.49,21.5,12.66,13.81,24.52,20.76,31.71,7.25,31.85,16.82,32.9,17.89,14.48,34.63,34.65,23.33,45.35,23.17,40.55,20.69,30.46,23.1,15.69],
+            orientation: "h"
+        }
+
+    var data = [trace1,trace2,trace3,trace4,trace5,trace6,trace7,trace8]
+
+    var layout = {
+        hovermode: "closest",
+        width: 400,
+        yaxis: {
+            showgrid: true
+        },
+        title: "Total bill distribution<br><i>scaled by number of bills per gender",
+        legend: {
+            tracegroupgap: 0
+        },
+        violingap: 0,
+        violingroupgap: 0,
+        violinmode: "overlay",
+        height: 700
+    }
+
+    Plotly.newPlot("demoa446", data, layout)
+}
+
+function complex328() {
+    var size = 100, x = new Array(size), y = new Array(size), z = new Array(size), i, j;
+
+    for(i = 0; i < size; i++) {
+        x[i] = y[i] = -2 * Math.PI + 4 * Math.PI * i / size;
+        z[i] = new Array(size);
+    }
+
+    for(i = 0; i < size; i++) {
+        for(j = 0; j < size; j++) {
+            var r2 = x[i]*x[i] + y[j]*y[j];
+            z[i][j] = Math.sin(x[i]) * Math.cos(y[j]) * Math.sin(r2) / Math.log(r2 + 1);
+        }
+    }
+
+    var data = [ {
+        z: z,
+        x: x,
+        y: y,
+        type: 'contour'
+    }];
+
+    Plotly.newPlot('demoa447', data);
 }
