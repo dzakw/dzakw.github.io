@@ -204,15 +204,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultElement = document.getElementById(resultId);
 
         if (runButton && resetButton && resultElement) {
-            runButton.addEventListener('click', () => {
+            runButton.addEventListener('click', async () => { // Make the event handler async
                 resultElement.querySelector('span').innerHTML = ''; // Clear previous result
                 resultElement.style.display = 'block'; // Show result area
-
+                const evaluatedResult = eval(resultValue);
+                resultElement.querySelector('span').innerHTML = evaluatedResult;
                 if (resultFunction && typeof window[resultFunction] === 'function') {
-                    // Call the function dynamically by name (e.g., complex1, complex296, etc.)
-                    const result = window[resultFunction]();
-                    if (typeof result !== 'undefined') {
-                        resultElement.querySelector('span').innerHTML = result;
+                    // Call the function dynamically by name (e.g., complex1, complex329, etc.)
+                    try {
+                        await window[resultFunction](); // Await the Promise
+                    } catch (error) {
+                        console.error("Error calling function:", error);
+                        resultElement.querySelector('span').innerHTML = 'Error rendering heatmap.';
                     }
                 } 
                 // Evaluate the result value if no function is specified
@@ -238,6 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -5736,4 +5740,940 @@ function complex328() {
     }];
 
     Plotly.newPlot('demoa447', data);
+}
+
+
+async function complex329() {
+    const response = await fetch('fourDigitPin.csv');
+    const csvText = await response.text();
+
+    const data = Array.from({ length: 100 }, () => Array(100).fill(0));
+
+    csvText.split('\n').forEach(line => {
+        const [pin, count] = line.split(',');
+        const pinCount = parseInt(count, 10);
+
+        if (pinCount < 0 || isNaN(pinCount)) {
+            return;
+        }
+
+        const xIndex = parseInt(pin.slice(0, 2), 10);
+        const yIndex = parseInt(pin.slice(2, 4), 10);
+
+        if (xIndex < 0 || xIndex > 99 || yIndex < 0 || yIndex > 99) {
+            return;
+        }
+
+        data[yIndex][xIndex] = pinCount;
+    });
+
+    const xLabels = Array.from({ length: 100 }, (_, i) => String(i).padStart(2, '0'));
+    const yLabels = Array.from({ length: 100 }, (_, i) => String(i).padStart(2, '0'));
+
+    const trace = {
+        z: data,
+        x: xLabels,
+        y: yLabels,
+        type: 'heatmap',
+        colorscale: 'YlOrRd',
+        hovertemplate: 'Pin: %{x}%{y}<br>Occurrence: %{z} times<br>',
+        showscale: true
+    };
+
+    const layout = {
+        title: '4-Digit PIN Heatmap',
+        xaxis: {
+            title: 'First Two Digits of PIN',
+            tickmode: 'array',
+            tickvals: Array.from({ length: 20 }, (_, i) => String(i * 5).padStart(2, '0')),
+            ticktext: Array.from({ length: 20 }, (_, i) => String(i * 5).padStart(2, '0')),
+            titlefont: { size: 16 },
+            tickfont: { size: 10 },
+            automargin: true
+        },
+        yaxis: {
+            title: 'Last Two Digits of PIN',
+            tickmode: 'array',
+            tickvals: Array.from({ length: 20 }, (_, i) => String(i * 5).padStart(2, '0')),
+            ticktext: Array.from({ length: 20 }, (_, i) => String(i * 5).padStart(2, '0')),
+            titlefont: { size: 16 },
+            tickfont: { size: 10 },
+            automargin: true
+        },
+        margin: {
+            l: 40,
+            r: 40,
+            b: 40,
+            t: 40,
+            pad: 4
+        },
+        autosize: false
+    };
+
+    const config = {
+        responsive: true,
+        width: 1200
+    };
+
+    Plotly.newPlot('demoa448', [trace], layout, config);
+}
+
+function complex330() {
+    var rawData = [
+        {journalist:75,developer:25,designer:0,label:'point 1'},
+        {journalist:70,developer:10,designer:20,label:'point 2'},
+        {journalist:75,developer:20,designer:5,label:'point 3'},
+        {journalist:5,developer:60,designer:35,label:'point 4'},
+        {journalist:10,developer:80,designer:10,label:'point 5'},
+        {journalist:10,developer:90,designer:0,label:'point 6'},
+        {journalist:20,developer:70,designer:10,label:'point 7'},
+        {journalist:10,developer:20,designer:70,label:'point 8'},
+        {journalist:15,developer:5,designer:80,label:'point 9'},
+        {journalist:10,developer:10,designer:80,label:'point 10'},
+        {journalist:20,developer:10,designer:70,label:'point 11'},
+    ];
+    
+    Plotly.newPlot('demoa449', [{
+        type: 'scatterternary',
+        mode: 'markers',
+        a: rawData.map(function(d) { return d.journalist; }),
+        b: rawData.map(function(d) { return d.developer; }),
+        c: rawData.map(function(d) { return d.designer; }),
+        text: rawData.map(function(d) { return d.label; }),
+        marker: {
+            symbol: 100,
+            color: '#DB7365',
+            size: 14,
+            line: { width: 2 }
+        },
+    }], {
+        ternary: {
+            sum: 100,
+            aaxis: makeAxis('Journalist', 0),
+            baxis: makeAxis('<br>Developer', 45),
+            caxis: makeAxis('<br>Designer', -45),
+            bgcolor: '#fff1e0'
+        },
+        annotations: [{
+          showarrow: false,
+          text: 'Replica of Tom Pearson\'s <a href="http://bl.ocks.org/tomgp/7674234">block</a>',
+            x: 1.0,
+            y: 1.3,
+            font: { size: 15 }
+        }],
+        paper_bgcolor: '#fff1e0',
+    });
+    
+    function makeAxis(title, tickangle) {
+        return {
+            title: {
+                text: title,
+                font: {
+                    size: 20
+                }
+            },
+            tickangle: tickangle,
+            tickfont: {
+                size: 15
+            },
+            tickcolor: 'rgba(0,0,0,0)',
+            ticklen: 5,
+            showline: true,
+            showgrid: true
+        };
+    }
+}
+
+function complex331() {
+    var data = [{
+        r: [77.5, 72.5, 70.0, 45.0, 22.5, 42.5, 40.0, 62.5],
+        theta: ["North", "N-E", "East", "S-E", "South", "S-W", "West", "N-W"],
+        name: "11-14 m/s",
+        marker: {color: "rgb(106,81,163)"},
+        type: "barpolar"
+      }, {
+        r: [57.5, 50.0, 45.0, 35.0, 20.0, 22.5, 37.5, 55.0],
+        theta: ["North", "N-E", "East", "S-E", "South", "S-W", "West", "N-W"],
+        name: "8-11 m/s",
+        marker: {color: "rgb(158,154,200)"},
+        type: "barpolar"
+      }, {
+        r: [40.0, 30.0, 30.0, 35.0, 7.5, 7.5, 32.5, 40.0],
+        theta: ["North", "N-E", "East", "S-E", "South", "S-W", "West", "N-W"],
+        name: "5-8 m/s",
+        marker: {color: "rgb(203,201,226)"},
+        type: "barpolar"
+      }, {
+        r: [20.0, 7.5, 15.0, 22.5, 2.5, 2.5, 12.5, 22.5],
+        theta: ["North", "N-E", "East", "S-E", "South", "S-W", "West", "N-W"],
+        name: "< 5 m/s",
+        marker: {color: "rgb(242,240,247)"},
+        type: "barpolar"
+      }]
+    var layout = {
+        title: "Wind Speed Distribution in Laurel, NE",
+        font: {size: 16},
+        legend: {font: {size: 16}},
+        polar: {
+          barmode: "overlay",
+          bargap: 0,
+          radialaxis: {ticksuffix: "%", angle: 45, dtick: 20},
+          angularaxis: {direction: "clockwise"}
+        }
+      }
+    
+    Plotly.newPlot("demoa450", data, layout)
+}
+
+function complex332() {
+    var data = [{
+        type: 'scatterpolar',
+        r: [7.8, 9.1, 1.1, 4.2, 2.2, 7.8],
+        theta: ['Fighting', 'Farming', 'Supporting', 'Pushing', 'Versatility', 'Fighting'],
+        fill: 'toself',
+        fillcolor: 'rgba(0, 128, 255, 0.4)',
+        line: {
+            color: 'rgba(0, 128, 255, 1)',
+            width: 3
+        }
+    }];
+
+    var layout = {
+        polar: {
+            gridshape: 'linear',
+            bgcolor: '#1A1A1A',
+            angularaxis: {
+                tickfont: { size: 14, color: 'white' },
+                linewidth: 2,
+                linecolor: 'gray',
+                gridcolor: 'gray',
+                rotation: 90,
+                direction: "clockwise",
+            },
+            radialaxis: {
+                visible: true,
+                range: [0, 10],
+                showticklabels: false,
+                gridcolor: 'gray',
+                linewidth: 2,
+                showline: true,
+                linecolor: 'gray',
+                ticks: ''
+            }
+        },
+        paper_bgcolor: '#1A1A1A',
+        showlegend: false,
+        margin: {
+            t: 50, b: 50, l: 50, r: 50
+        }
+    };
+
+    Plotly.newPlot('demoa451', data, layout);
+}
+
+function complex333() {
+    var data = [
+        {
+          type: "scatterpolar",
+          mode: "lines+markers",
+          r: [1,2,3,4,5],
+          theta: [0,90,180,360,0],
+          line: {
+            color: "#ff66ab"
+          },
+          marker: {
+            color: "#8090c7",
+            symbol: "square",
+            size: 8
+          },
+          subplot: "polar"
+        },
+        {
+          type: "scatterpolar",
+          mode: "lines+markers",
+          r: [1,2,3,4,5],
+          theta: [0,90,180,360,0],
+          line: {
+            color: "#ff66ab"
+          },
+          marker: {
+            color: "#8090c7",
+            symbol: "square",
+            size: 8
+          },
+          subplot: "polar2"
+        }
+      ]
+    
+    var layout = {
+        showlegend: false,
+        polar: {
+            sector: [145,215],
+          domain: {
+            x: [0,0.4],
+            y: [0,1]
+          },
+          radialaxis: {
+            tickfont: {
+              size: 8
+            }
+          },
+          angularaxis: {
+            tickfont: {
+              size: 8
+            }
+          }
+        },
+        polar2: {
+          domain: {
+            x: [0.6,1],
+            y: [0,1]
+          },
+          radialaxis: {
+            tickfont: {
+              size: 8
+            }
+          },
+          angularaxis: {
+            tickfont: {
+              size: 8
+            }
+          }
+        }
+      }
+    
+    Plotly.newPlot('demoa452', data, layout)
+}
+
+function complex334() {
+    var data = [
+        {
+            name: "2018",
+            type: "waterfall",
+            orientation: "v",
+            measure: [
+                "relative",
+                "relative",
+                "total",
+                "relative",
+                "relative",
+                "total"
+            ],
+            x: [
+                "Sales",
+                "Consulting",
+                "Net revenue",
+                "Purchases",
+                "Other expenses",
+                "Profit before tax"
+            ],
+            textposition: "outside",
+            text: [
+                "+60",
+                "+80",
+                "",
+                "-40",
+                "-20",
+                "Total"
+            ],          
+            y: [
+                60,
+                80,
+                0,
+                -40,
+                -20,
+                0
+            ],
+            connector: {
+              line: {
+                color: "rgb(63, 63, 63)"
+              }
+            },
+        }
+    ];
+    layout = {
+            title: {
+                text: "Profit and loss statement 2018"
+            },
+            xaxis: {
+                type: "category"
+            },
+            yaxis: {
+                type: "linear"
+            },
+            autosize: true,
+            showlegend: true
+        };
+    Plotly.newPlot('demoa453', data, layout);
+}
+
+function complex335() {
+    var data = [
+        {
+          type: "indicator",
+          mode: "number+delta",
+          value: 492,
+          delta: { reference: 512, valueformat: ".0f" },
+          domain: { y: [0, 1], x: [0.25, 0.75] },
+          title: { text: "Users online" }
+        },
+        {
+          y: [325, 324, 405, 400, 424, 404, 417, 432, 419, 394, 410, 426, 413, 419, 404, 408, 401, 377, 368, 361, 356, 359, 375, 397, 394, 418, 437, 450, 430, 442, 424, 443, 420, 418, 423, 423, 426, 440, 437, 436, 447, 460, 478, 472, 450, 456, 436, 418, 429, 412, 429, 442, 464, 447, 434, 457, 474, 480, 499, 497, 480, 502, 512, 492]
+        }
+    ];
+      
+    var layout = { width: 600, height: 450, xaxis: { range: [0, 62] } };
+    Plotly.newPlot('demoa454', data, layout);
+}
+
+function complex336() {
+    var trace1 = {
+  
+        x: ['2017-01-04', '2017-01-05', '2017-01-06', '2017-01-09', '2017-01-10', '2017-01-11', '2017-01-12', '2017-01-13', '2017-01-17', '2017-01-18', '2017-01-19', '2017-01-20', '2017-01-23', '2017-01-24', '2017-01-25', '2017-01-26', '2017-01-27', '2017-01-30', '2017-01-31', '2017-02-01', '2017-02-02', '2017-02-03', '2017-02-06', '2017-02-07', '2017-02-08', '2017-02-09', '2017-02-10', '2017-02-13', '2017-02-14', '2017-02-15'], 
+        
+        close: [116.019997, 116.610001, 117.910004, 118.989998, 119.110001, 119.75, 119.25, 119.040001, 120, 119.989998, 119.779999, 120, 120.080002, 119.970001, 121.879997, 121.940002, 121.949997, 121.629997, 121.349998, 128.75, 128.529999, 129.080002, 130.289993, 131.529999, 132.039993, 132.419998, 132.119995, 133.289993, 135.020004, 135.509995], 
+        
+        decreasing: {line: {color: '#7F7F7F'}}, 
+        
+        high: [116.510002, 116.860001, 118.160004, 119.43, 119.379997, 119.93, 119.300003, 119.620003, 120.239998, 120.5, 120.089996, 120.449997, 120.809998, 120.099998, 122.099998, 122.440002, 122.349998, 121.629997, 121.389999, 130.490005, 129.389999, 129.190002, 130.5, 132.089996, 132.220001, 132.449997, 132.940002, 133.820007, 135.089996, 136.270004], 
+        
+        increasing: {line: {color: '#17BECF'}}, 
+        
+        line: {color: 'rgba(31,119,180,1)'}, 
+        
+        low: [115.75, 115.809998, 116.470001, 117.940002, 118.300003, 118.599998, 118.209999, 118.809998, 118.220001, 119.709999, 119.370003, 119.730003, 119.769997, 119.5, 120.279999, 121.599998, 121.599998, 120.660004, 120.620003, 127.010002, 127.779999, 128.160004, 128.899994, 130.449997, 131.220001, 131.119995, 132.050003, 132.75, 133.25, 134.619995], 
+        
+        open: [115.849998, 115.919998, 116.779999, 117.949997, 118.769997, 118.739998, 118.900002, 119.110001, 118.339996, 120, 119.400002, 120.449997, 120, 119.550003, 120.419998, 121.669998, 122.139999, 120.93, 121.150002, 127.029999, 127.980003, 128.309998, 129.130005, 130.539993, 131.350006, 131.649994, 132.460007, 133.080002, 133.470001, 135.520004], 
+        
+        type: 'candlestick', 
+        xaxis: 'x', 
+        yaxis: 'y'
+      };
+      
+      var data = [trace1];
+      
+      var layout = {
+        dragmode: 'zoom', 
+        margin: {
+          r: 10, 
+          t: 25, 
+          b: 40, 
+          l: 60
+        }, 
+        showlegend: false, 
+        xaxis: {
+          autorange: true, 
+          domain: [0, 1], 
+          range: ['2017-01-03 12:00', '2017-02-15 12:00'], 
+          rangeslider: {range: ['2017-01-03 12:00', '2017-02-15 12:00']}, 
+          title: 'Date', 
+          type: 'date'
+        }, 
+        yaxis: {
+          autorange: true, 
+          domain: [0, 1], 
+          range: [114.609999778, 137.410004222], 
+          type: 'linear'
+        }
+      };
+      
+      Plotly.newPlot('demoa455', data, layout);
+}
+
+function complex337() {
+    d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+        .then(function(rows) {
+            // Define the unpack function
+            function unpack(rows, key) {
+                return rows.map(function(row) { return row[key]; });
+            }
+
+            // Create traces for the plot
+            var trace1 = {
+                type: "scatter",
+                mode: "lines",
+                name: 'AAPL High',
+                x: unpack(rows, 'Date'),
+                y: unpack(rows, 'AAPL.High'),
+                line: {color: '#17BECF'}
+            };
+
+            var trace2 = {
+                type: "scatter",
+                mode: "lines",
+                name: 'AAPL Low',
+                x: unpack(rows, 'Date'),
+                y: unpack(rows, 'AAPL.Low'),
+                line: {color: '#7F7F7F'}
+            };
+
+            var data = [trace1, trace2];
+
+            var layout = {
+                title: 'Basic Time Series',
+            };
+
+            // Render the plot
+            Plotly.newPlot('demoa456', data, layout);
+        })
+}
+
+function complex338() {
+    var data = [
+        {
+          type: "indicator",
+          mode: "number+gauge+delta",
+          value: 180,
+          delta: { reference: 200 },
+          domain: { x: [0.25, 1], y: [0.08, 0.25] },
+          title: { text: "Revenue" },
+          gauge: {
+            shape: "bullet",
+            axis: { range: [null, 300] },
+            threshold: {
+              line: { color: "black", width: 2 },
+              thickness: 0.75,
+              value: 170
+            },
+            steps: [
+              { range: [0, 150], color: "gray" },
+              {
+                range: [150, 250],
+                color: "lightgray"
+              }
+            ],
+            bar: { color: "black" }
+          }
+        },
+        {
+          type: "indicator",
+          mode: "number+gauge+delta",
+          value: 35,
+          delta: { reference: 200 },
+          domain: { x: [0.25, 1], y: [0.4, 0.6] },
+          title: { text: "Profit" },
+          gauge: {
+            shape: "bullet",
+            axis: { range: [null, 100] },
+            threshold: {
+              line: { color: "black", width: 2 },
+              thickness: 0.75,
+              value: 50
+            },
+            steps: [
+              { range: [0, 25], color: "gray" },
+              { range: [25, 75], color: "lightgray" }
+            ],
+            bar: { color: "black" }
+          }
+        },
+        {
+          type: "indicator",
+          mode: "number+gauge+delta",
+          value: 220,
+          delta: { reference: 200 },
+          domain: { x: [0.25, 1], y: [0.7, 0.9] },
+          title: { text: "Satisfaction" },
+          gauge: {
+            shape: "bullet",
+            axis: { range: [null, 300] },
+            threshold: {
+              line: { color: "black", width: 2 },
+              thickness: 0.75,
+              value: 210
+            },
+            steps: [
+              { range: [0, 150], color: "gray" },
+              { range: [150, 250], color: "lightgray" }
+            ],
+            bar: { color: "black" }
+          }
+        }
+      ];
+      
+      var layout = {
+        width: 600, height: 250,
+        margin: { t: 10, r: 25, l: 25, b: 10 }
+      };
+      Plotly.newPlot('demoa457', data, layout);      
+}
+
+function complex339() {
+    var url = "https://maplibre.org/maplibre-gl-js/docs/assets/significant-earthquakes-2015.geojson";
+
+    d3.json(url).then(raw => {
+      var lon = raw.features.map(f => f.geometry.coordinates[0]);
+      var lat = raw.features.map(f => f.geometry.coordinates[1]);
+      var z = raw.features.map(f => f.properties.mag);
+    
+      var data = [
+        {
+          type: "scattergeo",
+          lon: lon,
+          lat: lat,
+          marker: {
+            size: z.map(mag => mag * 2),
+            color: z,
+            colorscale: "YlOrRd",
+            cmin: 0,
+            cmax: 10,
+            colorbar: {
+              title: "Magnitude"
+            }
+          },
+          hoverinfo: "text",
+          text: z.map(mag => `Magnitude: ${mag}`)
+        }
+      ];
+    
+      var layout = {
+        geo: {
+          projection: {
+            type: "natural earth"
+          },
+          showland: true,
+          landcolor: "rgb(217, 217, 217)",
+          subunitcolor: "rgb(255, 255, 255)",
+          countrycolor: "rgb(255, 255, 255)"
+        },
+        margin: { t: 0, b: 0 }
+      };
+    
+      Plotly.newPlot('demoa458', data, layout);
+    })
+}
+
+function complex340() {
+    var data = [
+        {type: "densitymap", lon: [10, 20, 30], lat: [15, 25, 35], z: [1, 3, 2],
+         radius: 50, colorbar: {y: 1, yanchor: 'top', len: 0.45}},
+        {type: 'densitymap', lon: [-10, -20, -30], lat: [15, 25, 35],
+         radius: [50, 100, 10],  colorbar: {y: 0, yanchor: 'bottom', len: 0.45}
+        }
+    ];
+
+    var layout = {
+        map: {style: 'light', center: {lat: 20}},
+        width: 600,
+        height: 350,
+        margin: {l: 10, r: 10, t: 10, b: 10}
+    };
+
+    Plotly.newPlot('demoa459', data, layout);
+}
+
+function complex341() {
+    d3.csv('https://raw.githubusercontent.com/plotly/datasets/c34aaa0b1b3cddad335173cb7bc0181897201ee6/2011_february_aa_flight_paths.csv')
+        .then(function(rows) {
+            function unpack(rows, key) {
+                return rows.map(function(row) { return row[key]; });
+            }
+
+            function getMaxOfArray(numArray) {
+                return Math.max.apply(null, numArray);
+            }
+
+            var data = [];
+            var count = unpack(rows, 'cnt');
+            var startLongitude = unpack(rows, 'start_lon');
+            var endLongitude = unpack(rows, 'end_lon');
+            var startLat = unpack(rows, 'start_lat');
+            var endLat = unpack(rows, 'end_lat');
+
+            for (var i = 0; i < count.length; i++) {
+                var opacityValue = count[i] / getMaxOfArray(count);
+
+                var result = {
+                    type: 'scattergeo',
+                    locationmode: 'USA-states',
+                    lon: [startLongitude[i], endLongitude[i]],
+                    lat: [startLat[i], endLat[i]],
+                    mode: 'lines',
+                    line: {
+                        width: 1,
+                        color: 'red'
+                    },
+                    opacity: opacityValue
+                };
+
+                data.push(result);
+            }
+
+            var layout = {
+                title: 'Feb. 2011 American Airline flight paths',
+                showlegend: false,
+                geo: {
+                    scope: 'north america',
+                    projection: {
+                        type: 'azimuthal equal area'
+                    },
+                    showland: true,
+                    landcolor: 'rgb(243,243,243)',
+                    countrycolor: 'rgb(204,204,204)'
+                },
+                margin: {l: 20, r: 20, t: 40, b: 20} // Slimmer padding
+            };
+
+            Plotly.newPlot("demoa460", data, layout, { showLink: false });
+        })
+        .catch(function(error) {
+            console.error('Error loading or parsing CSV data:', error);
+        });
+}
+
+function complex342() {
+    d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_us_cities.csv')
+    .then(function(rows) {
+
+        function unpack(rows, key) {
+            return rows.map(function(row) { return row[key]; });
+        }
+
+        var cityName = unpack(rows, 'name'),
+            cityPop = unpack(rows, 'pop'),
+            cityLat = unpack(rows, 'lat'),
+            cityLon = unpack(rows, 'lon'),
+            citySize = [],
+            hoverText = [],
+            scale = 50000;
+
+        for (var i = 0; i < cityPop.length; i++) {
+            var currentSize = cityPop[i] / scale;
+            var currentText = cityName[i] + " pop: " + cityPop[i];
+            citySize.push(currentSize);
+            hoverText.push(currentText);
+        }
+
+        var data = [{
+            type: 'scattergeo',
+            locationmode: 'USA-states',
+            lat: cityLat,
+            lon: cityLon,
+            hoverinfo: 'text',
+            text: hoverText,
+            marker: {
+                size: citySize,
+                color: 'rgb(255,65,54)',
+                line: {
+                    color: 'black',
+                    width: 2
+                }
+            }
+        }];
+
+        var layout = {
+            title: '2014 US City Populations',
+            showlegend: false,
+            geo: {
+                scope: 'usa',
+                projection: {
+                    type: 'albers usa'
+                },
+                showland: true,
+                landcolor: 'rgb(217, 217, 217)',
+                subunitwidth: 1,
+                countrywidth: 1,
+                subunitcolor: 'rgb(255,255,255)',
+                countrycolor: 'rgb(255,255,255)'
+            },
+            margin: {l: 20, r: 20, t: 40, b: 20}
+        };
+
+        Plotly.newPlot("demoa461", data, layout, {showLink: false});
+    })
+    .catch(function(error) {
+        console.error('Error loading or parsing CSV data:', error);
+    });
+
+}
+
+function complex343() {
+    d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv')
+        .then(function(rows) {
+            function unpack(rows, key) {
+                return rows.map(function(row) { return row[key]; });
+            }
+
+            var data = [{
+                type: 'choropleth',
+                locations: unpack(rows, 'CODE'),
+                z: unpack(rows, 'GDP (BILLIONS)'),
+                text: unpack(rows, 'COUNTRY'),
+                colorscale: [
+                    [0, 'rgb(5, 10, 172)'], [0.35, 'rgb(40, 60, 190)'],
+                    [0.5, 'rgb(70, 100, 245)'], [0.6, 'rgb(90, 120, 245)'],
+                    [0.7, 'rgb(106, 137, 247)'], [1, 'rgb(220, 220, 220)']
+                ],
+                autocolorscale: false,
+                reversescale: true,
+                marker: {
+                    line: {
+                        color: 'rgb(180,180,180)',
+                        width: 0.5
+                    }
+                },
+                tick0: 0,
+                zmin: 0,
+                dtick: 1000,
+                colorbar: {
+                    autotic: false,
+                    tickprefix: '$',
+                    title: 'GDP<br>Billions US$'
+                }
+            }];
+
+            var layout = {
+                title: '2014 Global GDP<br>Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html"> CIA World Factbook</a>',
+                geo: {
+                    showframe: false,
+                    showcoastlines: false,
+                    projection: {
+                        type: 'mercator'
+                    }
+                },
+                margin: {l: 20, r: 20, t: 50, b: 20} // Optional: Slimmer padding
+            };
+
+            Plotly.newPlot("demoa462", data, layout, {showLink: false});
+        })
+        .catch(function(error) {
+            console.error('Error loading or parsing CSV data:', error);
+        });
+}
+
+function complex344() {
+    d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/3d-scatter.csv')
+        .then(function(rows) {
+            console.log(rows); // Log rows for debugging
+
+            function unpack(rows, key) {
+                return rows.map(function(row) {
+                    const value = row[key];
+                    return value ? Number(value) : 0; // Ensure values are numbers
+                });
+            }
+
+            var trace1 = {
+                x: unpack(rows, 'x1'),
+                y: unpack(rows, 'y1'),
+                z: unpack(rows, 'z1'),
+                mode: 'markers',
+                marker: {
+                    size: 12,
+                    line: {
+                        color: 'rgba(217, 217, 217, 0.14)',
+                        width: 0.5
+                    },
+                    opacity: 0.8
+                },
+                type: 'scatter3d'
+            };
+
+            var trace2 = {
+                x: unpack(rows, 'x2'),
+                y: unpack(rows, 'y2'),
+                z: unpack(rows, 'z2'),
+                mode: 'markers',
+                marker: {
+                    color: 'rgb(127, 127, 127)',
+                    size: 12,
+                    symbol: 'circle',
+                    line: {
+                        color: 'rgb(204, 204, 204)',
+                        width: 1
+                    },
+                    opacity: 0.8
+                },
+                type: 'scatter3d'
+            };
+
+            var data = [trace1, trace2];
+            var layout = {
+                margin: {
+                    l: 0,
+                    r: 0,
+                    b: 0,
+                    t: 0
+                }
+            };
+
+            Plotly.newPlot('demoa463', data, layout);
+        })
+        .catch(function(error) {
+            console.error('Error loading or parsing CSV data:', error);
+        });
+}
+
+function complex345() {
+    d3.json('https://raw.githubusercontent.com/plotly/datasets/master/3d-ribbon.json').then(function(figure) {
+
+        var trace1 = {
+          x: figure.data[0].x, y: figure.data[0].y, z: figure.data[0].z,
+          name: '',
+          colorscale: figure.data[0].colorscale,
+          type: 'surface',
+          showscale: false
+        }
+        var trace2 = {
+          x: figure.data[1].x, y: figure.data[1].y, z: figure.data[1].z,
+          name: '',
+          colorscale: figure.data[1].colorscale,
+          type: 'surface',
+          showscale: false
+        }
+        var data = [trace1, trace2];
+
+        var layout = {
+          title: 'Ribbon Plot',
+          showlegend: false,
+          autosize: true,
+          width: 600,
+          height: 600,
+          scene: {
+            xaxis: { title: 'Sample #' },
+            yaxis: { title: 'Wavelength' },
+            zaxis: { title: 'OD' }
+          }
+        };
+        Plotly.newPlot('demoa464', data, layout);
+    }).catch(function(error) {
+        console.log("Error loading the JSON data: ", error);
+    });
+}
+
+function complex346() {
+    d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv').then(function(rows) {
+        
+        function unpack(rows, key) {
+          return rows.map(function(row) { return row[key]; });
+        }
+        
+        var z_data = [];
+        for (i = 0; i < 24; i++) {
+          z_data.push(unpack(rows, i));
+        }
+        
+        var data = [{
+          z: z_data,
+          type: 'surface'
+        }];
+        
+        var layout = {
+          title: 'Mt Bruno Elevation',
+          autosize: false,
+          width: 500,
+          height: 500,
+          margin: {
+            l: 20,
+            r: 20,
+            b: 40,
+            t: 60
+          }
+        };
+        
+        Plotly.newPlot('demoa465', data, layout);
+        
+    }).catch(function(error) {
+        console.log("Error loading the CSV data: ", error);
+    });
 }

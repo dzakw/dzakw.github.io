@@ -502,7 +502,7 @@ function generateList32() {
 // Financial Charts
 function generateList33() {
     const methods = [
-        "Wterfall Charts", "Indicators", "Candlestick Charts", "Time Series", "Bullet Charts"
+        "Waterfall Charts", "Indicators", "Candlestick Charts", "Time Series", "Bullet Charts"
     ];
 
     const ul = document.getElementById('threeColumn33');
