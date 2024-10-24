@@ -442,7 +442,7 @@ function generateList28() {
 
 function generateList29() {
     const methods = [
-        "Plotly", "Chart.js", "Google Charts", "D3.js"
+        "Plotly", "Google Charts", "D3.js"
     ];
 
     const ul = document.getElementById('threeColumn29');

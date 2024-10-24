@@ -90,6 +90,7 @@
                     <li><a href="#subsec427" onclick="openSection('subsec427'); openSection('section4')">JavaScript Web API</a></li>
                     <li><a href="#subsec428" onclick="openSection('subsec428'); openSection('section4')">JavaScript AJAX</a></li>
                     <li><a href="#subsec429" onclick="openSection('subsec429'); openSection('section4')">JavaScript Graphics</a></li>
+                    <li><a href="#subsec430" onclick="openSection('subsec430'); openSection('section4')">JavaScript Example</a></li>
                 </ul>
             </ul>
         </div>
@@ -26366,8 +26367,375 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         </div>
 
                     </div>
+                    <div id="example4314" style="display: none;">
+                        <h6><a href="https://developers.google.com/chart" target="_blank">Google Chart</a></h6>
+                        <li>Google Chart is a free service that allows you to create a variety of charts online.</li>
+                        <li>Google Chart is alternative library to make charts.</li>
+                        <li>To Use Google Chart:</li>
+                        <ul>
+                            <li>Add a &lt;div&gt; element (with a unique id) in the HTML where you want to display the chart:</li>
+                            <div class="block-outer">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p>&lt;<span class="htmltagcolor">div</span> <span class="htmlpropertycolor">id</span>=<span class="htmlattrnamecolor">"myChart"</span> <span class="htmlpropertycolor">style</span>=<span class="htmlattrnamecolor">"max-width:700px; height:400px"</span>&gt;&lt;/<span class="htmltagcolor">div</span>&gt;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>Add a link to the charts loader:</li>
+                            <div class="block-outer">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p>&lt;<span class="htmltagcolor">script</span> <span class="htmlpropertycolor">src</span>=<span class="htmlattrnamecolor">"https://www.gstatic.com/charts/loader.js"</span>&gt;&lt;/<span class="htmltagcolor">script</span>&gt;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>Load the Graph API, and add the function to run when the API is loaded:</li>
+                            <div class="block-outer">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">google</span>.<span class="jspropertycolor">charts</span>.<span class="jspropertycolor">load</span>(<span class="jsstringcolor">'current'</span>, {<span class="jspropertycolor">packages</span>: [<span class="jsstringcolor">'corechart'</span>]});</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">google</span>.<span class="jspropertycolor">charts</span>.<span class="jspropertycolor">setOnLoadCallback</span>(<span class="jsfunctioncolor">drawChart</span>);</p>
+                                        <p>&lt;/<span class="htmltagcolor">script</span>&gt;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <li>Below are example usage of google chart:</li>
+                        <div class="block-outer" data-result-id="demoa466" data-result-function="complex347">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&nbsp;&nbsp;<span class="jsfunctioncolor">function</span> <span class="jsfunctioncolor">drawChart</span>() {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Set Data</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">data</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">google</span>.<span class="jspropertycolor">visualization</span>.<span class="jspropertycolor">arrayToDataTable</span>([</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="jsstringcolor">'Price'</span>, <span class="jsstringcolor">'Size'</span>],</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="jsnumbercolor">50</span>,<span class="jsnumbercolor">7</span>],[<span class="jsnumbercolor">60</span>,<span class="jsnumbercolor">8</span>],[<span class="jsnumbercolor">70</span>,<span class="jsnumbercolor">8</span>],[<span class="jsnumbercolor">80</span>,<span class="jsnumbercolor">9</span>],[<span class="jsnumbercolor">90</span>,<span class="jsnumbercolor">9</span>],[<span class="jsnumbercolor">100</span>,<span class="jsnumbercolor">9</span>],</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="jsnumbercolor">110</span>,<span class="jsnumbercolor">10</span>],[<span class="jsnumbercolor">120</span>,<span class="jsnumbercolor">11</span>],[<span class="jsnumbercolor">130</span>,<span class="jsnumbercolor">14</span>],[<span class="jsnumbercolor">140</span>,<span class="jsnumbercolor">14</span>],[<span class="jsnumbercolor">150</span>,<span class="jsnumbercolor">15</span>]</p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">]);</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jscommentcolor">// Set Options</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">options</span> <span class="jsoperatorcolor">=</span> {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">title</span>: <span class="jsstringcolor">'House Prices vs Size'</span>,</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">hAxis</span>: {<span class="jspropertycolor">title</span>: <span class="jsstringcolor">'Square Meters'</span>},</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">vAxis</span>: {<span class="jspropertycolor">title</span>: <span class="jsstringcolor">'Price in Millions'</span>},</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">legend</span>: <span class="jsstringcolor">'none'</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">};</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jscommentcolor">// Draw Chart</span></p>
+                                    <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">chart</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">new</span> <span class="jspropertycolor">google</span>.<span class="jspropertycolor">visualization</span>.<span class="jspropertycolor">LineChart</span>(<span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'myChart'</span>));</p>
+                                    <p>&nbsp;&nbsp;<span class="jsvariablecolor">chart</span>.<span class="jspropertycolor">draw</span>(<span class="jsvariablecolor">data</span>, <span class="jsvariablecolor">options</span>);</p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa466" class="result"><span></span> </p>
+                        </div>
+                    </div>
+                    <div id="example4315" style="display: none;">
+                        <h6><a href="https://d3js.org/" target="_blank">D3.js</a></h6>
+                        <li>D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers.</li>
+                        <li>D3.js is alternative library to make charts.</li>
+                        <li>To Use D3.js:</li>
+                        <ul>
+                            <li>Add a &lt;div&gt; element (with a unique id) in the HTML where you want to display the chart:</li>
+                            <div class="block-outer">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p>&lt;<span class="htmltagcolor">div</span> <span class="htmlpropertycolor">id</span>=<span class="htmlattrnamecolor">"myChart"</span> <span class="htmlpropertycolor">style</span>=<span class="htmlattrnamecolor">"max-width:700px; height:400px"</span>&gt;&lt;/<span class="htmltagcolor">div</span>&gt;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>Add a link to the D3.js library:</li>
+                            <div class="block-outer">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p>&lt;<span class="htmltagcolor">script</span> <span class="htmlpropertycolor">src</span>=<span class="htmlattrnamecolor">"https://d3js.org/d3.v7.js"</span>&gt;&lt;/<span class="htmltagcolor">script</span>&gt;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>Load the D3.js library, and add the function to run when the library is loaded:</li>
+                            <div class="block-outer">
+                                <div class="block-cont">
+                                    <div class="block-bl">
+                                        <p>&lt;<span class="htmltagcolor">script</span>&gt;</p>
+                                        <p>&nbsp;&nbsp;<span class="jspropertycolor">d3</span>.<span class="jspropertycolor">csv</span>(<span class="jsstringcolor">'https://raw.githubusercontent.com/plotly/datasets/master/3d-scatter.csv'</span>)</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.then</span>(<span class="jsfunctioncolor">makeChart</span>)</p>
+                                        <p>&lt;/<span class="htmltagcolor">script</span>&gt;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <li>Below are example usage of D3.js:</li>
+                        <div class="block-outer" data-result-id="demoa467" data-result-function="complex348">
+                            <div class="block-cont">
+                                <div class="block-bl">
+                                    <p>&nbsp;&nbsp;<span class="jsfunctioncolor">function</span> <span class="jsfunctioncolor">makeChart</span>(<span class="jsvariablecolor">rows</span>) {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Set Dimensions</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">xSize</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">500</span>; </p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">ySize</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">500</span>;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">margin</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">40</span>;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">xMax</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">xSize</span> <span class="jsoperatorcolor">-</span> <span class="jsvariablecolor">margin</span><span class="jsoperatorcolor">*</span><span class="jsnumbercolor">2</span>;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">yMax</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">ySize</span> <span class="jsoperatorcolor">-</span> <span class="jsvariablecolor">margin</span><span class="jsoperatorcolor">*</span><span class="jsnumbercolor">2</span>;</p>
+                                    <br>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Create Random Points</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">numPoints</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">100</span>;</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">data</span> <span class="jsoperatorcolor">=</span> [];</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">for</span> (<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span>; <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor"><</span> <span class="jsvariablecolor">numPoints</span>; <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span>) {</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">data</span>.<span class="jsfunctioncolor">push</span>([<span class="jspropertycolor">Math</span>.<span class="jspropertycolor">random</span>() <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">xMax</span>, <span class="jspropertycolor">Math</span>.<span class="jspropertycolor">random</span>() <span class="jsoperatorcolor">*</span> <span class="jsvariablecolor">yMax</span>]);</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                    <br>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Append SVG Object to the Page</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">svg</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">d3</span>.<span class="jspropertycolor">select</span>(<span class="jsstringcolor">"#demo"</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.append</span>(<span class="jsstringcolor">'svg'</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.append</span>(<span class="jsstringcolor">'g'</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.attr</span>(<span class="jsstringcolor">'transform'</span>,<span class="jsstringcolor">"translate("</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">margin</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">","</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">margin</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">")"</span>);</p>
+                                    <br>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// X Axis</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">x</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">d3</span>.<span class="jspropertycolor">scaleLinear</span>()</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.domain</span>([<span class="jsnumbercolor">0</span>, <span class="jsnumbercolor">500</span>])</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.range</span>([<span class="jsnumbercolor">0</span>, <span class="jsvariablecolor">xMax</span>]);</p>
+                                    <br>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">svg</span>.<span class="jspropertycolor">append</span>(<span class="jsstringcolor">'g'</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.attr</span>(<span class="jsstringcolor">'transform'</span>, <span class="jsstringcolor">"translate(0,"</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">yMax</span> <span class="jsstringcolor">")"</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.call</span>(<span class="jspropertycolor">d3</span>.<span class="jspropertycolor">axisBottom</span>(<span class="jsvariablecolor">x</span>));</p>
+                                    <br>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Y Axis</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">y</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">d3</span>.<span class="jspropertycolor">scaleLinear</span>()</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.domain</span>([<span class="jsnumbercolor">0</span>, <span class="jsnumbercolor">500</span>])</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.range</span>([ <span class="jsvariablecolor">yMax</span>, <span class="jsnumbercolor">0</span>]);</p>
+                                    <br>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">svg</span>.<span class="jspropertycolor">append</span>(<span class="jsstringcolor">'g'</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.call</span>(<span class="jspropertycolor">d3</span>.<span class="jspropertycolor">axisLeft</span>(<span class="jsvariablecolor">y</span>));</p>
+                                    <br>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jscommentcolor">// Dots</span></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">svg</span>.<span class="jspropertycolor">append</span>(<span class="jsstringcolor">'g'</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.selectAll</span>(<span class="jsstringcolor">"dot"</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.data</span>(<span class="jsvariablecolor">data</span>).<span class="jspropertycolor">enter</span>()</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.append</span>(<span class="jsstringcolor">'circle'</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.attr</span>(<span class="jsstringcolor">'cx'</span>, <span class="jsfunctioncolor">function</span> (<span class="jsvariablecolor">d</span>) { <span class="jskeywordcolor">return</span> <span class="jsvariablecolor">d</span>[<span class="jsnumbercolor">0</span>] } )</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.attr</span>(<span class="jsstringcolor">'cy'</span>, <span class="jsfunctioncolor">function</span> (<span class="jsvariablecolor">d</span>) { <span class="jskeywordcolor">return</span> <span class="jsvariablecolor">d</span>[<span class="jsnumbercolor">1</span>] } )</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.attr</span>(<span class="jsstringcolor">'r'</span>, <span class="jsnumbercolor">3</span>)</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">.style</span>(<span class="jsstringcolor">'fill'</span>, <span class="jsstringcolor">'Red'</span>);</p>
+                                    <p>&nbsp;&nbsp;<span class="jsbracketcolor">}</span></p>
+                                </div>
+                                <div class="block-btn-cont">
+                                    <div class="block-run">
+                                        <button type="button" class="run-btn">Run ></button>
+                                    </div>
+                                    <div class="reset-btn" style="display: none;">
+                                        <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="demoa467" class="result"><span></span> </p>
+                        </div>
+                    </div>
                 </div>
 
+            </ul>
+        </div>
+        <hr>
+
+        <h3 class="subsection" id="subsec430" onclick="toggleSection('subsec430')">JavaScript Example</h3>
+        <div class="subsection" id="subsec430Content" style="display: none;">
+            <ul>
+                <li>JavaScript can be used to do a lot of things, including creating and manipulating HTML elements, handling events, and much more.</li>
+                <li>Below are some use case of JavaScript:</li>
+                <div class="block-outer" data-result-id="demoa468" data-result-value="'Hello World!'">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'demo'</span>).<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Hello World!'</span>;</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa468" class="result"><span></span> </p>
+                </div>
+                <br>
+                <div class="block-outer" data-result-id="demoa469" data-result-value="'This document loaded from: ' + document.domain">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// display the domain name of the server that loaded this document</span>
+                            <p><span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'demo'</span>).<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">domain</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa469" class="result"><span></span> </p>
+                </div>
+                <br>
+                <div class="block-outer" data-result-id="demoa470" data-result-value="'This document was last modified at: ' + document.lastModified">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="commentcolor">// display the date and time the document was last modified</span>
+                            <p><span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'demo'</span>).<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">lastModified</span></p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa470" class="result"><span></span> </p>
+                </div>
+                <li>By using the <code>document.getElementById</code>, it is possible to manipulate both HTML content and CSS styles dynamically.</li>
+                <li>This can be done by first defining the default behavior of an HTML or CSS element, and then creating a function that defines the new behavior.</li>
+                <li>JavaScript can modify an element's inner content using <code>element.innerHTML</code> or <code>element.textContent</code> for text-based updates.</li>
+                <li>To manipulate CSS, you can change styles using <code>element.style</code>, like <code>element.style.color = 'blue';</code> to update an element's appearance directly.</li>
+                <li>Multiple elements can be targeted by their class or tag name using methods like <code>document.getElementsByClassName</code> or <code>document.getElementsByTagName</code>.</li>
+                <li>Event listeners, such as <code>element.addEventListener</code>, allow JavaScript to respond to user interactions like clicks, key presses, or form submissions, enabling dynamic updates to HTML and CSS.</li>
+                <li>JavaScript libraries, like jQuery, can simplify these manipulations with shorter, more readable code.</li>
+                <li>For more complex behavior, JavaScript can create, remove, or replace entire elements in the DOM using methods like <code>document.createElement</code>, <code>element.remove</code>, or <code>element.replaceChild</code>.</li>
+                <h2>Changing Text and Style on Button Click</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">changeText</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">element</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'text'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">element</span>.<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Text has been changed!'</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">element</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">backgroundColor</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'lightblue'</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">element</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">fontSize</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'20px'</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex349()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="demoa471" style="background-color: lightgray; padding: 10px; margin: 0;">This is the original text.</p>
+                </div>
+                <h2>Toggling Visibility of an Element</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">toggleVisibility</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">box</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'box'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> (<span class="jsvariablecolor">box</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">display</span> <span class="jsoperatorcolor">===</span> <span class="jsstringcolor">'none'</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">box</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">display</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'block'</span>;</p>
+                            <p>&nbsp;&nbsp;} <span class="jskeywordcolor">else</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">box</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">display</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'none'</span>;</p>
+                            <p>&nbsp;&nbsp;}</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex350()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="demoa472" style="width: 200px; height: 200px; background-color: coral; display: block;"></div>
+                </div>
+                <h2>Changing Multiple Elements with the Same Class</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">changeItems</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">items</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementsByClassName</span>(<span class="jsstringcolor">'item'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">for</span> (<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span>; <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">items</span>.<span class="jspropertycolor">length</span>; <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">items</span>[<span class="jsvariablecolor">i</span>].<span class="jspropertycolor">style</span>.<span class="jspropertycolor">backgroundColor</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'lightblue'</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">items</span>[<span class="jsvariablecolor">i</span>].<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Updated Item '</span> <span class="jsoperatorcolor">+</span> (<span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">+</span> <span class="jsnumbercolor">1</span>);</p>
+                            <p>&nbsp;&nbsp;}</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex351()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: block;">
+                        <div class="demoa473">Item 1</div>
+                        <div class="demoa473">Item 2</div>
+                        <div class="demoa473">Item 3</div>
+                    </div>
+                </div>
+                <h2>Dynamic Creation of HTML Elements</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">addItem</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">ul</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'list'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">li</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">createElement</span>(<span class="jsstringcolor">'li'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">li</span>.<span class="jspropertycolor">textContent</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'New Item'</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">ul</span>.<span class="jspropertycolor">appendChild</span>(<span class="jsvariablecolor">li</span>);</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex352()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="demoa474">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                    </ul>
+                </div>
+                <h2>Animating CSS Properties</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">animateBox</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">box</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'box'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">position</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">interval</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">setInterval</span>(<span class="jsfunctioncolor">frame</span>, <span class="jsnumbercolor">10</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">frame</span>() {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">if</span> (<span class="jsvariablecolor">position</span> <span class="jsoperatorcolor">===</span> <span class="jsnumbercolor">350</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jspropertycolor">clearInterval</span>(<span class="jsvariablecolor">interval</span>);</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;} <span class="jskeywordcolor">else</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">position</span><span class="jsoperatorcolor">++</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">box</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">left</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">position</span> <span class="jsoperatorcolor">+</span> <span class="jsstringcolor">'px'</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                            <p>&nbsp;&nbsp;}</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex353()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="demoa475" style="width: 100px; height: 100px; background-color: teal; position: relative; display: block;"></div>
+                </div>
+                
+                
+                
             </ul>
         </div>
         <hr>
@@ -26378,6 +26746,7 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
     <script src="js/d3.v7.js"></script>
     <script src="js/d3js.js"></script>
     <script src="js/plotly-2.35.2.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
 
 </body>
 </html>

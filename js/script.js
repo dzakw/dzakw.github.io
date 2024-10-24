@@ -6677,3 +6677,94 @@ function complex346() {
         console.log("Error loading the CSV data: ", error);
     });
 }
+
+function complex348() {
+    const xSize = 500; 
+    const ySize = 500;
+    const margin = 40;
+    const xMax = xSize - margin * 2;
+    const yMax = ySize - margin * 2;
+
+    const numPoints = 100;
+    const data = [];
+    for (let i = 0; i < numPoints; i++) {
+        data.push([Math.random() * xMax, Math.random() * yMax]);
+    }
+
+    const svg = d3.select("#demoa467")
+        .append("svg")
+        .attr("width", xSize)
+        .attr("height", ySize)
+        .append("g")
+        .attr("transform","translate(" + margin + "," + margin + ")");
+
+    const x = d3.scaleLinear()
+        .domain([0, 500])
+        .range([0, xMax]);
+
+    svg.append("g")
+        .attr("transform", "translate(0," + yMax + ")")
+        .call(d3.axisBottom(x));
+
+    const y = d3.scaleLinear()
+        .domain([0, 500])
+        .range([yMax, 0]);
+
+    svg.append("g")
+        .call(d3.axisLeft(y));
+
+    svg.append('g')
+        .selectAll("dot")
+        .data(data).enter()
+        .append("circle")
+        .attr("cx", function (d) { return d[0]; })
+        .attr("cy", function (d) { return d[1]; })
+        .attr("r", 3)
+        .style("fill", "Red");
+}
+
+function complex349() {
+    const element = document.getElementById('demoa471');
+    element.innerHTML = "Text has been changed!";
+    element.style.backgroundColor = "lightblue";
+    element.style.fontSize = "20px";
+}
+
+function complex350() {
+    const box = document.getElementById('demoa472');
+    if (box.style.display === "none") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+
+function complex351() {
+    const items = document.getElementsByClassName('demoa473');
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.backgroundColor = "lightblue";
+        items[i].innerHTML = `Updated Item ${i + 1}`;
+    }
+}
+
+function complex352() {
+    const ul = document.getElementById('demoa474');
+    const li = document.createElement('li');
+    li.textContent = "New Item";
+    ul.appendChild(li);
+}
+
+function complex353() {
+    const box = document.getElementById('demoa475');
+    let position = 0;
+    const interval = setInterval(frame, 10);
+
+    function frame() {
+        if (position === 350) {
+            clearInterval(interval);
+        } else {
+            position++;
+            box.style.left = position + 'px';
+        }
+    }
+}
