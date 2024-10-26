@@ -26733,7 +26733,327 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                     </div>
                     <div id="demoa475" style="width: 100px; height: 100px; background-color: teal; position: relative; display: block;"></div>
                 </div>
-                
+                <h2>Creating a Row in a Table</h2>
+                <div class="block-outer" data-result-id="tableza1" data-result-function="complex354">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">addRow</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">table</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'table'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">row</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">table</span>.<span class="jspropertycolor">insertRow</span>();</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">cell1</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">row</span>.<span class="jspropertycolor">insertCell</span>(<span class="jsnumbercolor">0</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">cell2</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">row</span>.<span class="jspropertycolor">insertCell</span>(<span class="jsnumbercolor">1</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">cell1</span>.<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'name'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">cell2</span>.<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'age'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex355()" type="button" class="run-btn">Run ></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza1" class="result">
+                        <div style="display: flex; flex-direction: column;">
+                            <input type="text" id="namesta" placeholder="Enter Name">
+                            <input type="number" id="agesta" placeholder="Enter Age" style="margin-bottom: 8px;">
+                            <button onclick="complex354()" style="height: 32px;">Add Row</button>
+                        </div>
+                        <table border="1" style="width: 100%;" id="tableza2">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h2>Editing a Row in a Table</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">editRow</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">table</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'table'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">rowIndex</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'rowIndex'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">row</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">table</span>.<span class="jspropertycolor">rows</span>[<span class="jsvariablecolor">rowIndex</span>];</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">row</span>.<span class="jspropertycolor">cells</span>[<span class="jsnumbercolor">0</span>].<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'editName'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">row</span>.<span class="jspropertycolor">cells</span>[<span class="jsnumbercolor">1</span>].<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'editAge'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex356()" type="button" class="run-btn">Run ></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza3" class="result">
+                        <div style="display: flex; flex-direction: column;">
+                            <input type="number" id="rowIndex" placeholder="Row Index">
+                            <input type="text" id="editName" placeholder="Edit Name">
+                            <input type="text" id="editAge" placeholder="Edit Age">
+                            <button onclick="complex357()">Edit Row</button>
+                        </div>
+                        <table id="tableza4" border="1">
+                            <tr>
+                                <th>Index</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Paijo</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Paiman</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tukiman</td>
+                                <td>30</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h2>Deleting a Row from a Table</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">deleteRow</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">table</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'table'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">rowIndex</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'deleteIndex'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">table</span>.<span class="jspropertycolor">deleteRow</span>(<span class="jsvariablecolor">rowIndex</span>);</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex358()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza5" class="result">
+                        <div style="display: flex; flex-direction: column;">
+                            <input type="number" id="deleteIndex" placeholder="Row Index to Delete">
+                            <button onclick="complex359()">Delete Row</button>
+                        </div>
+                        <table id="tableza6" border="1">
+                            <tr>
+                                <th>Index</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Paijo</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Paiman</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tukiman</td>
+                                <td>30</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h2>Changing Text on Mouse Hover</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">hoverChangeText</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">element</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'hoverText'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">element</span>.<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'You hovered over me!'</span>;</p>
+                            <p>}</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">resetText</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">element</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'hoverText'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">element</span>.<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Hover over me!'</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex360()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza7" class="result">
+                        <p style="margin-top: 0;" id="tableza8" onmouseover="complex361()" onmouseout="complex362()">Hover over me!</p>
+                    </div>
+                </div>            
+                <h2>Changing Style on Double Click</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">changeStyleOnDblClick</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">element</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'dblClickText'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">element</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">color</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'red'</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">element</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">fontSize</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'24px'</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex364()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza10" class="result">
+                        <p style="margin-top: 0;" id="tableza9" ondblclick="complex363()">Double click me to change my style!</p>
+                    </div>
+                </div>
+                <h2>Storing and Retrieving Data using localStorage</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">storeLocalData</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'localName'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jspropertycolor">localStorage</span>.<span class="jspropertycolor">setItem</span>(<span class="jsstringcolor">'userName'</span>, <span class="jsvariablecolor">name</span>);</p>
+                            <p>}</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">retrieveLocalData</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">storedName</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">localStorage</span>.<span class="jspropertycolor">getItem</span>(<span class="jsstringcolor">'userName'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'localOutput'</span>).<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">storedName</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex365()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza11" class="result">
+                        <input type="text" id="tableza12" placeholder="Enter your name">
+                        <button onclick="complex366()">Save to localStorage</button>
+                        <button onclick="complex367()">Retrieve from localStorage</button>
+                        <p id="tableza14"></p>
+                    </div>
+                </div>
+                <h2>Storing and Retrieving Data using sessionStorage</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">storeSessionData</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">age</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'sessionAge'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jspropertycolor">sessionStorage</span>.<span class="jspropertycolor">setItem</span>(<span class="jsstringcolor">'userAge'</span>, <span class="jsvariablecolor">age</span>);</p>
+                            <p>}</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">retrieveSessionData</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">storedAge</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">sessionStorage</span>.<span class="jspropertycolor">getItem</span>(<span class="jsstringcolor">'userAge'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'sessionOutput'</span>).<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">storedAge</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex368()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza15" class="result">
+                        <input type="number" id="tableza16" placeholder="Enter your age">
+                        <button onclick="complex369()">Save to sessionStorage</button>
+                        <button onclick="complex370()">Retrieve from sessionStorage</button>
+                        <p id="tableza17"></p>
+                    </div>
+                </div>
+                <h2>Move Box on Click</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">moveBox</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">box</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'box'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">box</span>.<span class="jspropertycolor">style</span>.<span class="jspropertycolor">transform</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'translateX(200px)'</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex371()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza19" class="result">
+                        <div id="tableza20" style="width: 50px; height: 50px; background-color: blue; transition: transform 0.5s;"></div>
+                        <button onclick="complex372()">Move Box</button>
+                    </div>
+                </div>
+                <h2>Fetch Data from API</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">async function</span> <span class="jsfunctioncolor">fetchData</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">response</span> <span class="jsoperatorcolor">=</span> <span class="jskeywordcolor">await</span> <span class="jspropertycolor">fetch</span>(<span class="jsstringcolor">'https://jsonplaceholder.typicode.com/posts/1'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">data</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">await</span> <span class="jsresponsecolor">response</span>.<span class="jspropertycolor">json</span>();</p>
+                            <p>&nbsp;&nbsp;<span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'fetchOutput'</span>).<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Title: '</span> <span class="jsoperatorcolor">+</span> <span class="jsvariablecolor">data</span>.<span class="jspropertycolor">title</span>;</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex373()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza21" class="result">
+                        <button onclick="complex374()">Fetch Data</button>
+                        <p id="tableza22" style="margin-top: 10px;">API data will appear here.</p>
+                    </div>
+                </div>
+                <h2>Draw Circle on Canvas</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">drawCircle</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">canvas</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'canvasElement'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">ctx</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">canvas</span>.<span class="jspropertycolor">getContext</span>(<span class="jsstringcolor">'2d'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">ctx</span>.<span class="jspropertycolor">beginPath</span>();</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">ctx</span>.<span class="jspropertycolor">arc</span>(<span class="jsnumbercolor">75</span>, <span class="jsnumbercolor">75</span>, <span class="jsnumbercolor">50</span>, <span class="jsnumbercolor">0</span>, <span class="jsnumbercolor">2</span> * <span class="jspropertycolor">Math.PI</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">ctx</span>.<span class="jspropertycolor">fillStyle</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'purple'</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">ctx</span>.<span class="jspropertycolor">fill</span>();</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex375()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza23" class="result">
+                        <canvas id="tableza24" width="150" height="150" style="border:1px solid #000000; margin-top: 10px;"></canvas>
+                        <button onclick="complex376()">Draw Circle</button>
+                    </div>
+                </div>
                 
                 
             </ul>

@@ -6768,3 +6768,153 @@ function complex353() {
         }
     }
 }
+
+function complex354() {
+    const table = document.getElementById('tableza2');
+    let rowz = table.insertRow();
+    let cell1 = rowz.insertCell(0);
+    let cell2 = rowz.insertCell(1);
+    
+    cell1.innerHTML = document.getElementById('namesta').value;
+    cell2.innerHTML = document.getElementById('agesta').value;
+}
+
+function complex355() {
+    const element = document.querySelector('#tableza1.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex356() {
+    const element = document.querySelector('#tableza3.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex357() {
+    const table = document.getElementById('tableza4');
+    const rowIndex = document.getElementById('rowIndex').value;
+    const row = table.rows[rowIndex];
+    row.cells[1].innerHTML = document.getElementById('editName').value;
+    row.cells[2].innerHTML = document.getElementById('editAge').value;
+}
+
+function complex358() {
+    const element = document.querySelector('#tableza5.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex359() {
+    const table = document.getElementById('tableza6');
+    const rowIndex = document.getElementById('deleteIndex').value;
+    table.deleteRow(rowIndex);
+}
+
+function complex360() {
+    const element = document.querySelector('#tableza7.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex361() {
+    const element = document.getElementById('tableza8');
+    element.innerHTML = 'You hovered over me!';
+}
+  
+function complex362() {
+    const element = document.getElementById('tableza8');
+    element.innerHTML = 'Hover over me!';
+}
+
+function complex363() {
+    const element = document.getElementById('tableza9');
+    element.style.color = 'red';
+    element.style.fontSize = '24px';
+}
+
+function complex364() {
+    const element = document.querySelector('#tableza10.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex365() {
+    const element = document.querySelector('#tableza11.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex366() {
+    const name = document.getElementById('tableza12').value;
+    localStorage.setItem('tableza13', name);
+}
+  
+function complex367() {
+    const storedName = localStorage.getItem('tableza13');
+    document.getElementById('tableza14').innerHTML = storedName;
+}
+
+function complex368() {
+    const element = document.querySelector('#tableza15.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex369() {
+    const age = document.getElementById('tableza16').value;
+    sessionStorage.setItem('tableza18', age);
+}
+  
+function complex370() {
+    const storedAge = sessionStorage.getItem('tableza18');
+    document.getElementById('tableza17').innerHTML = storedAge;
+}
+
+function complex371() {
+    const element = document.querySelector('#tableza19.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex372() {
+    const tableza20 = document.getElementById('tableza20');
+    tableza20.style.transform = 'translateX(200px)';
+}
+
+function complex373() {
+    const element = document.querySelector('#tableza21.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+async function complex374() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const data = await response.json();
+    document.getElementById('tableza22').innerHTML = 'Title: ' + data.title;
+}
+
+function complex375() {
+    const element = document.querySelector('#tableza23.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex376() {
+    const canvas = document.getElementById('tableza24');
+    const ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(75, 75, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = 'purple';
+    ctx.fill();
+}
