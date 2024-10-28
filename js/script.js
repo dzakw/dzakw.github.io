@@ -6918,3 +6918,58 @@ function complex376() {
     ctx.fillStyle = 'purple';
     ctx.fill();
 }
+
+function complex377() {
+    const element = document.querySelector('#tableza25.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+  }
+  
+function drag(event) {
+    event.dataTransfer.setData('text', event.target.id);
+}
+function drop(event) {
+    event.preventDefault();
+    const data = event.dataTransfer.getData('text');
+    event.target.appendChild(document.getElementById(data));
+}
+
+function complex378() {
+    const element = document.querySelector('#tableza26.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function complex379() {
+    const name = document.getElementById('nameInput').value;
+    const error = document.getElementById('errorMessage');
+    if (name.length < 3) {
+      error.innerHTML = 'Name must be at least 3 characters.';
+      return false;
+    } else {
+      error.innerHTML = '';
+      alert('Form submitted successfully!');
+    }
+}
+
+function complex380() {
+    const element = document.querySelector('#tableza27.result');
+    if (element) {
+        element.style.display = 'block';
+    }
+}
+
+function filterItems() {
+    const filter = document.getElementById('filterInput99').value.toLowerCase();
+    const items = document.getElementById('itemList99').getElementsByTagName('li');
+    for (let i = 0; i < items.length; i++) {
+      const txtValue = items[i].textContent.toLowerCase();
+      items[i].style.display = txtValue.includes(filter) ? '' : 'none';
+    }
+}

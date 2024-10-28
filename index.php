@@ -92,6 +92,7 @@
                     <li><a href="#subsec429" onclick="openSection('subsec429'); openSection('section4')">JavaScript Graphics</a></li>
                     <li><a href="#subsec430" onclick="openSection('subsec430'); openSection('section4')">JavaScript Example</a></li>
                 </ul>
+                <li><a href="#section5" onclick="window.open('http://10.6.6.74:5173/', '_blank')">Section 5: Vue.js</a></li>
             </ul>
         </div>
     </div>
@@ -27054,12 +27055,111 @@ document.getElementById("demod").innerHTML = "Hasil dari " + x + " + " + y + " a
                         <button onclick="complex376()">Draw Circle</button>
                     </div>
                 </div>
-                
+                <h2>Drag and Drop Interface</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">allowDrop</span>(<span class="jsvariablecolor">event</span>) {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">event</span>.<span class="jspropertycolor">preventDefault</span>();</p>
+                            <p>}</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">drag</span>(<span class="jsvariablecolor">event</span>) {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">event</span>.<span class="jspropertycolor">dataTransfer</span>.<span class="jspropertycolor">setData</span>(<span class="jsstringcolor">'text'</span>, <span class="jsvariablecolor">event</span>.<span class="jspropertycolor">target</span>.<span class="jspropertycolor">id</span>);</p>
+                            <p>}</p>
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">drop</span>(<span class="jsvariablecolor">event</span>) {</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">event</span>.<span class="jspropertycolor">preventDefault</span>();</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">data</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">event</span>.<span class="jspropertycolor">dataTransfer</span>.<span class="jspropertycolor">getData</span>(<span class="jsstringcolor">'text'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jsvariablecolor">event</span>.<span class="jspropertycolor">target</span>.<span class="jspropertycolor">appendChild</span>(<span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsvariablecolor">data</span>));</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex377()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza25" class="result" style="gap: 20px; margin-top: 10px;">
+                        <div id="dragItem" draggable="true" ondragstart="drag(event)" style="width: 50px; height: 50px; background-color: orange;">Drag Me</div>
+                        <div id="dropZone" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 100px; height: 100px; border: 1px solid black;">Drop Here</div>
+                    </div>
+                </div>
+                <h2>Form Validation with Custom Error Handling</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">validateForm</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">name</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'nameInput'</span>).<span class="jspropertycolor">value</span>;</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">error</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'errorMessage'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">if</span> (<span class="jsvariablecolor">name</span>.<span class="jspropertycolor">length</span> <span class="jsoperatorcolor"> &lt; </span> <span class="jsnumbercolor">3</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">error</span>.<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">'Name must be at least 3 characters.'</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">return</span> <span class="jsbooleancolor">false</span>;</p>
+                            <p>&nbsp;&nbsp;} <span class="jskeywordcolor">else</span> {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">error</span>.<span class="jspropertycolor">innerHTML</span> <span class="jsoperatorcolor">=</span> <span class="jsstringcolor">''</span>;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jskeywordcolor">alert</span>(<span class="jsstringcolor">'Form submitted successfully!'</span>);</p>
+                            <p>&nbsp;&nbsp;}</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex378()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza26" class="result">
+                        <form onsubmit="return complex379()" style="margin-top: 10px;">
+                            <input type="text" id="nameInput" placeholder="Enter your name">
+                            <p id="errorMessage" style="color: red;"></p>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <h2>Content Filtering</h2>
+                <div class="block-outer">
+                    <div class="block-cont">
+                        <div class="block-bl">
+                            <p><span class="jskeywordcolor">function</span> <span class="jsfunctioncolor">filterItems</span>() {</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">filter</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'filterInput'</span>).<span class="jspropertycolor">value</span>.<span class="jspropertycolor">toLowerCase</span>();</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">const</span> <span class="jsvariablecolor">items</span> <span class="jsoperatorcolor">=</span> <span class="jspropertycolor">document</span>.<span class="jspropertycolor">getElementById</span>(<span class="jsstringcolor">'itemList'</span>).<span class="jspropertycolor">getElementsByTagName</span>(<span class="jsstringcolor">'li'</span>);</p>
+                            <p>&nbsp;&nbsp;<span class="jskeywordcolor">for</span> (<span class="jskeywordcolor">let</span> <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">=</span> <span class="jsnumbercolor">0</span>; <span class="jsvariablecolor">i</span> <span class="jsoperatorcolor">&lt;</span> <span class="jsvariablecolor">items</span>.<span class="jspropertycolor">length</span>; <span class="jsvariablecolor">i</span><span class="jsoperatorcolor">++</span>) {</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">const</span> <span class="jsvariablecolor">txtValue</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">items</span>[<span class="jsvariablecolor">i</span>].<span class="jspropertycolor">textContent</span>.<span class="jspropertycolor">toLowerCase</span>();</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jsvariablecolor">items</span>[<span class="jsvariablecolor">i</span>].<span class="jspropertycolor">style</span>.<span class="jspropertycolor">display</span> <span class="jsoperatorcolor">=</span> <span class="jsvariablecolor">txtValue</span>.<span class="jspropertycolor">includes</span>(<span class="jsvariablecolor">filter</span>) <span class="jsoperatorcolor">?</span> <span class="jsstringcolor">''</span> <span class="jsoperatorcolor">:</span> <span class="jsstringcolor">'none'</span>;</p>
+                            <p>&nbsp;&nbsp;}</p>
+                            <p>}</p>
+                        </div>
+                        <div class="block-btn-cont">
+                            <div class="block-run">
+                                <button onclick="complex380()" type="button" class="run-btn">Run ></button>
+                            </div>
+                            <div class="reset-btn" style="display: none;">
+                                <img src="media/reset.svg" alt="arrow" class="reset-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tableza27" class="result">
+                        <input type="text" id="filterInput99" onkeyup="filterItems()" placeholder="Filter items">
+                        <ul id="itemList99">
+                            <li>Apple</li>
+                            <li>Banana</li>
+                            <li>Cherry</li>
+                            <li>Dragonfruit</li>
+                            <li>Elderberry</li>
+                        </ul>
+                    </div>
+                </div>
+                          
                 
             </ul>
         </div>
         <hr>
+    </div>
+    <hr>
 
+    <h2 class="section" id="section5" onclick="window.open('http://10.6.6.74:5173/', '_blank')">Section 5: Vue.js</h2>
 
     <script src="js/script.js"></script>
     <script src="js/ul.js"></script> <!-- This is how to link external JavaScript file -->
